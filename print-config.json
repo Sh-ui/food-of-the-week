@@ -23,8 +23,8 @@
     "instructionsMarginTop": "8pt"
   },
   "grocery": {
-    "categoryMarginBottom": "10pt",
-    "itemMarginBottom": "3pt",
+    "categoryMarginBottom": "4pt",
+    "itemMarginBottom": "1pt",
     "checkboxSize": "11pt"
   }
 }
