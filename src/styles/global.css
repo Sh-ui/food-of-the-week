@@ -1,12 +1,12 @@
 :root {
-  --color-primary: #2c5f2d;
-  --color-secondary: #97bc62;
-  --color-accent: #ff6b35;
-  --color-text: #2d3748;
-  --color-text-light: #718096;
-  --color-bg: #ffffff;
-  --color-bg-alt: #f7fafc;
-  --color-border: #e2e8f0;
+  --color-primary: #494331;
+  --color-secondary: #F3CA40;
+  --color-accent: #F08A4B;
+  --color-text: #3F3F37;
+  --color-text-light: #6b6a62;
+  --color-bg: #FAF8F3;
+  --color-bg-alt: #F5F2EB;
+  --color-border: #E8E3D8;
   
   --spacing-xs: 0.25rem;
   --spacing-sm: 0.5rem;
