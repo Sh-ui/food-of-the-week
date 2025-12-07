@@ -1,0 +1,236 @@
+---
+description: Print Section Detection and Button Placement
+globs: ["src/**/*.astro", "src/**/*.ts", "src/**/*.js", "README.md"]
+alwaysApply: true
+---
+
+# Print Sections
+
+Rules for how printable sections are detected from README.md and how print buttons are implemented.
+
+<rule>
+name: print-sections
+description: Defines print button behavior and section detection logic for the Astro site
+
+detection_logic:
+  principle: "H2 headings automatically define printable sections"
+  
+  heading_levels:
+    h2: "## - Defines a printable section boundary"
+    h3_below: "### and below - Included within parent H2 section"
+  
+  section_types:
+    grocery_list:
+      pattern: "## Grocery List"
+      behavior: "Special formatting for print (checklist style)"
+      print_button: "Print Grocery List"
+      
+    meals:
+      pattern: "## Meal [N]: [Name]"
+      pattern_regex: "^## Meal \\d+:"
+      behavior: "Each meal prints as standalone recipe"
+      print_button: "Print This Meal"
+    
+    full_week:
+      scope: "Entire README content"
+      behavior: "All sections with page breaks between meals"
+      print_button: "Print Full Week"
+
+print_button_placement:
+  strategy: "Automatically generate based on H2 detection"
+  
+  locations:
+    top_of_page:
+      button: "Print Full Week"
+      position: "Above all content, highly visible"
+      style: "Primary button"
+    
+    grocery_list_section:
+      button: "Print Grocery List"
+      position: "Within or immediately after ## Grocery List heading"
+      style: "Secondary button"
+    
+    each_meal_section:
+      button: "Print This Meal"
+      position: "Within or immediately after each ## Meal heading"
+      style: "Secondary button"
+
+implementation_details:
+  astro_components:
+    parser_responsibility:
+      - "Read README.md at build time"
+      - "Identify all H2 headings"
+      - "Extract section content (H2 to next H2)"
+      - "Generate section IDs for targeting"
+    
+    print_button_component:
+      file: "src/components/PrintButton.astro"
+      props:
+        target: "Section ID or 'all'"
+        label: "Button text"
+        variant: "primary | secondary"
+      
+      behavior: "Triggers print with CSS to show only target section"
+    
+    section_wrapping:
+      requirement: "Each H2 section wrapped in div with unique ID"
+      id_format: "print-section-[slug]"
+      examples:
+        - "print-section-grocery-list"
+        - "print-section-meal-1"
+        - "print-section-meal-2"
+
+print_css_behavior:
+  media_query: "@media print"
+  
+  hide_by_default:
+    selectors: [".print-button", "nav", "header", "footer"]
+    rule: "display: none"
+  
+  show_target_section:
+    mechanism: "Body class or data attribute set by print button click"
+    example: "body.printing[data-print-target='grocery-list']"
+    
+    rules:
+      - "Hide all .print-section elements"
+      - "Show only .print-section matching data-print-target"
+      - "If data-print-target='all', show all sections"
+  
+  page_breaks:
+    between_meals: "page-break-after: always"
+    avoid_within: "page-break-inside: avoid"
+    
+    application:
+      - "Each meal section gets page break after"
+      - "Grocery list stays on own page(s)"
+      - "Avoid breaking within meal instructions"
+  
+  formatting:
+    grocery_list:
+      - "Checkboxes visible as □"
+      - "Clear category headings"
+      - "Compact spacing for one-page fit if possible"
+    
+    meals:
+      - "Title prominent"
+      - "Protein/Ingredients/Description clearly separated"
+      - "Instructions readable with good line spacing"
+    
+    fonts:
+      family: "System serif or clean sans-serif"
+      size: "12-14pt for body, larger for headings"
+
+javascript_behavior:
+  print_button_onclick:
+    steps:
+      1: "Set body data attribute: data-print-target='[section-id]'"
+      2: "Call window.print()"
+      3: "On afterprint event, remove data attribute"
+    
+    example_code: |
+      function printSection(sectionId) {
+        document.body.setAttribute('data-print-target', sectionId);
+        window.print();
+        window.addEventListener('afterprint', () => {
+          document.body.removeAttribute('data-print-target');
+        }, { once: true });
+      }
+
+parsing_requirements:
+  markdown_to_sections:
+    input: "README.md raw markdown"
+    
+    process:
+      1: "Parse markdown to AST or HTML"
+      2: "Identify H2 headings"
+      3: "Group content between H2 headings into sections"
+      4: "Generate slug from H2 text for section ID"
+      5: "Detect section type (grocery-list vs meal-N)"
+    
+    output: |
+      [
+        {
+          id: 'grocery-list',
+          type: 'grocery',
+          title: 'Grocery List',
+          content: '...',
+          printable: true
+        },
+        {
+          id: 'meal-1',
+          type: 'meal',
+          title: 'Meal 1: One Pot Pasta',
+          content: '...',
+          printable: true
+        },
+        ...
+      ]
+
+actions:
+  - type: enforce
+    when: "Building Astro components"
+    do:
+      - "Parse README to detect H2 sections"
+      - "Wrap each H2 section in div with print-section class and unique ID"
+      - "Generate print buttons for grocery list and each meal"
+      - "Include print-all button at top"
+  
+  - type: implement
+    when: "Creating print CSS"
+    do:
+      - "Hide all UI elements (buttons, nav) in print media query"
+      - "Show only section matching data-print-target"
+      - "Add page breaks between meals"
+      - "Format grocery list as clean checklist"
+  
+  - type: implement
+    when: "Creating print button JavaScript"
+    do:
+      - "Set data-print-target attribute on body"
+      - "Trigger window.print()"
+      - "Clean up attribute after print dialog closes"
+
+examples:
+  - correct_section_wrap: |
+      <div id="print-section-grocery-list" class="print-section" data-section-type="grocery">
+        <h2>Grocery List</h2>
+        <!-- content -->
+      </div>
+  
+  - correct_button: |
+      <PrintButton target="grocery-list" label="Print Grocery List" variant="secondary" />
+  
+  - correct_print_css: |
+      @media print {
+        .print-button, nav { display: none; }
+        
+        body:not([data-print-target="all"]) .print-section {
+          display: none;
+        }
+        
+        body[data-print-target="grocery-list"] #print-section-grocery-list,
+        body[data-print-target="meal-1"] #print-section-meal-1,
+        body[data-print-target="all"] .print-section {
+          display: block;
+        }
+        
+        .print-section.meal {
+          page-break-after: always;
+        }
+      }
+
+validation:
+  checklist:
+    - "H2 headings correctly detected from README"
+    - "Each section wrapped with unique ID"
+    - "Print buttons generated for grocery + each meal + full week"
+    - "Print CSS hides/shows correct sections"
+    - "JavaScript sets data attribute and triggers print"
+    - "Page breaks between meals in print output"
+
+metadata:
+  priority: high
+  version: 1.0
+  scope: Print functionality and section detection
+
+</rule>

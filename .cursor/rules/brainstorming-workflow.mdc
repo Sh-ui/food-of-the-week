@@ -1,0 +1,119 @@
+---
+description: Brainstorming Folder Workflow
+globs: brainstorming/**
+alwaysApply: true
+---
+
+# Brainstorming Workflow
+
+Rules for using the `brainstorming/` folder during weekly meal planning sessions.
+
+<rule>
+name: brainstorming-workflow
+description: Standards for how the brainstorming folder is used in the weekly planning cycle
+
+workflow:
+  purpose: "Free-form weekly planning and ideation space"
+  
+  process:
+    1: "Each week, brainstorming starts in the `brainstorming/` folder"
+    2: "Files can be any format (.md, .txt, or other) for maximum flexibility"
+    3: "This week's work stays in `brainstorming/` until finalized"
+    4: "Once finalized, content is structured and moved to `README.md`"
+    5: "Old brainstorming files can be kept for reference or cleared week-to-week"
+
+folder_structure:
+  location: "PROJECT_ROOT/brainstorming/"
+  
+  file_naming:
+    flexibility: "Any naming convention works - prioritize clarity"
+    examples:
+      - "grocery-list.md"
+      - "meal-plan.md"
+      - "ideas-dec-7.txt"
+      - "this-week-notes.md"
+  
+  file_formats:
+    markdown: "Preferred for structured content"
+    text: "Good for quick notes and freeform thinking"
+    other: "Any format that helps thinking process"
+
+usage_patterns:
+  during_brainstorming:
+    - "Capture raw ideas and ingredient lists"
+    - "Sketch out meal combinations"
+    - "Note proteins available and needed"
+    - "Draft grocery lists"
+    - "Experiment with recipe structures"
+  
+  state: "Work-in-progress, informal, exploratory"
+  audience: "User and AI assistant only"
+
+finalization_process:
+  trigger: "When weekly plan is decided and ready to publish"
+  
+  steps:
+    - "Structure content according to README standards"
+    - "Format grocery list with proper categories"
+    - "Write meal descriptions in final form"
+    - "Move finalized content to README.md"
+    - "Optionally clean up or archive brainstorming files"
+
+maintenance:
+  weekly_cleanup:
+    options:
+      keep: "Retain files for historical reference"
+      clear: "Delete to start fresh next week"
+      archive: "Move to a timestamped subfolder if desired"
+    
+    recommendation: "User preference - no strict rule"
+
+actions:
+  - type: encourage
+    when: "User starts weekly planning"
+    do:
+      - "Create files in brainstorming/ for ideation"
+      - "Keep format loose and conversational"
+      - "Focus on capturing ideas, not perfect formatting"
+  
+  - type: guide
+    when: "User is finalizing the week"
+    do:
+      - "Help structure brainstorming content for README"
+      - "Ensure all required sections are present"
+      - "Apply proper formatting standards"
+  
+  - type: inform
+    when: "User asks about file organization"
+    do:
+      - "Explain brainstorming/ is for work-in-progress"
+      - "README.md is for finalized, published content"
+      - "Archive/ is for historical weekly plans"
+
+examples:
+  - scenario: "Starting a new week"
+    action: |
+      User: "Let's plan this week's meals"
+      
+      AI Creates/Updates:
+      - brainstorming/grocery-list.md (ingredient ideas)
+      - brainstorming/meal-plan.md (meal sketches)
+      
+      Format: Loose, conversational, exploratory
+  
+  - scenario: "Finalizing the week"
+    action: |
+      User: "This looks good, let's publish it"
+      
+      AI Actions:
+      - Format content according to README standards
+      - Structure grocery list with categories
+      - Write final meal descriptions
+      - Update README.md with complete plan
+
+metadata:
+  priority: medium
+  version: 1.0
+  scope: Weekly planning workflow
+
+</rule>

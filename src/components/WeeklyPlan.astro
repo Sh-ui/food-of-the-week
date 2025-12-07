@@ -1,0 +1,83 @@
+---
+import GroceryList from './GroceryList.astro';
+import MealCard from './MealCard.astro';
+import PrintButton from './PrintButton.astro';
+import type { WeekPlan } from '../utils/readmeParser';
+
+interface Props {
+  weekPlan: WeekPlan;
+}
+
+const { weekPlan } = Astro.props;
+---
+
+<div class="weekly-plan container">
+  <header class="page-header">
+    <h1>{weekPlan.weekTitle}</h1>
+    <div class="print-buttons">
+      <PrintButton target="all" label="🖨️ Print Full Week" variant="primary" />
+    </div>
+  </header>
+  
+  {weekPlan.groceryList.length > 0 && (
+    <GroceryList 
+      categories={weekPlan.groceryList} 
+      weekTitle={weekPlan.weekTitle}
+    />
+  )}
+  
+  <div class="meals-container">
+    {weekPlan.meals.map((meal) => (
+      <MealCard meal={meal} />
+    ))}
+  </div>
+  
+  {weekPlan.meals.length === 0 && weekPlan.groceryList.length === 0 && (
+    <div class="empty-state section">
+      <h2>No meal plan available</h2>
+      <p>Check back later for this week's meal plan, or add content to README.md to get started.</p>
+    </div>
+  )}
+</div>
+
+<style>
+  .weekly-plan {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .page-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .page-header h1 {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .page-header .print-buttons {
+    justify-content: center;
+  }
+
+  .meals-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+  }
+
+  .empty-state {
+    text-align: center;
+    padding: var(--spacing-xl);
+    background: var(--color-bg-alt);
+  }
+
+  .empty-state h2 {
+    margin-top: 0;
+    color: var(--color-text-light);
+  }
+
+  .empty-state p {
+    color: var(--color-text-light);
+    margin-bottom: 0;
+  }
+</style>
+

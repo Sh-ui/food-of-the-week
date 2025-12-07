@@ -1,0 +1,216 @@
+---
+description: README Structure for Current Week
+globs: README.md
+alwaysApply: true
+---
+
+# README Current Week Structure
+
+Standards for how `README.md` serves as the source of truth for the current week's meal plan.
+
+<rule>
+name: readme-current-week
+description: Defines the structure and lifecycle of README.md as the live meal plan document
+
+purpose:
+  primary: "README.md is the single source of truth for the website"
+  visibility: "Content is published to the live Astro site"
+  audience: "Family members viewing the meal plan"
+
+required_structure:
+  order:
+    1: "Week heading (# Week of [Date Range])"
+    2: "Grocery List section (## Grocery List)"
+    3: "Meal sections (## Meal 1: [Name], ## Meal 2: [Name], etc.)"
+  
+  heading_levels:
+    week_title: "# (H1) - Only one per README"
+    major_sections: "## (H2) - For Grocery List and each Meal"
+    grocery_categories: "### (H3) - For Produce, Staples, etc."
+    meal_subsections: "### (H3) - Optional for Instructions, Notes, etc."
+
+grocery_list_format:
+  section_heading: "## Grocery List"
+  
+  required_categories:
+    - name: "Produce"
+      heading: "### Produce"
+    - name: "Staples"
+      heading: "### Staples"
+    - name: "Dairy"
+      heading: "### Dairy"
+    - name: "Protein"
+      heading: "### Protein"
+    - name: "Frozens"
+      heading: "### Frozens"
+  
+  item_format:
+    unchecked: "- [ ] Item name - quantity/details"
+    example: "- [ ] Organic red onion - 1 (est. 0.53 lb)"
+    
+  notes:
+    - "Use markdown task list syntax for checkbox functionality"
+    - "Include quantities and specifications where helpful"
+    - "Optional: Add prices if tracking costs"
+
+meal_format:
+  section_heading: "## Meal [N]: [Descriptive Name]"
+  
+  required_fields:
+    protein:
+      label: "**Protein:**"
+      format: "Bold label followed by protein(s) used"
+      example: "**Protein:** Ground pork"
+    
+    ingredients:
+      label: "**Ingredients:**"
+      format: "Bold label followed by comma-separated list"
+      example: "**Ingredients:** Brown udon rice noodles, tomato paste, San Marzano tomatoes"
+    
+    description:
+      label: "**Description:**"
+      format: "Bold label followed by 1-2 sentence overview"
+      example: "**Description:** One pot pasta with pork and vegetables"
+  
+  optional_fields:
+    instructions:
+      label: "**Instructions:**"
+      format: "Chef-to-chef sketch style, not rigid steps"
+    
+    notes:
+      label: "**Notes:**"
+      format: "Timing, delegation, or prep tips"
+    
+    cook_time:
+      label: "**Cook Time:**"
+      format: "Approximate active and total time"
+
+  numbering:
+    style: "Sequential (Meal 1, Meal 2, Meal 3, etc.)"
+    range: "4-5 meals per week typically"
+
+template:
+  full_structure: |
+    # Week of [Month DD - DD, YYYY]
+    
+    ## Grocery List
+    
+    ### Produce
+    - [ ] Item 1
+    - [ ] Item 2
+    
+    ### Staples
+    - [ ] Item 1
+    - [ ] Item 2
+    
+    ### Dairy
+    - [ ] Item 1
+    
+    ### Protein
+    - [ ] Item 1
+    - [ ] Item 2
+    
+    ### Frozens
+    - [ ] Item 1
+    
+    ## Meal 1: [Descriptive Name]
+    **Protein:** [Protein used]
+    **Ingredients:** [List of main ingredients]
+    **Description:** [Brief overview]
+    
+    **Instructions:**
+    [Chef-style sketch of how to make it]
+    
+    ## Meal 2: [Descriptive Name]
+    **Protein:** [Protein used]
+    **Ingredients:** [List of main ingredients]
+    **Description:** [Brief overview]
+    
+    **Instructions:**
+    [Chef-style sketch of how to make it]
+    
+    ## Meal 3: [Descriptive Name]
+    ...
+    
+    ## Meal 4: [Descriptive Name]
+    ...
+
+lifecycle:
+  active_period: "One week (typically Sunday to Sunday or Monday to Saturday)"
+  
+  archiving_process:
+    when: "After the week ends"
+    manual_step: true
+    
+    steps:
+      1: "Copy entire README.md content"
+      2: "Create new file: archive/YYYYMMDDsummary.md"
+      3: "Paste content into archive file"
+      4: "Update README.md with next week's content"
+    
+    filename_format:
+      pattern: "YYYYMMDDsummary.md"
+      date_meaning: "Start date of the week"
+      examples:
+        - "20251207summary.md (Week starting December 7, 2025)"
+        - "20251214summary.md (Week starting December 14, 2025)"
+
+actions:
+  - type: enforce
+    when: "Creating or updating README.md"
+    do:
+      - "Use standardized heading structure"
+      - "Include all required grocery categories"
+      - "Number meals sequentially"
+      - "Use consistent field labels for meals"
+      - "Maintain markdown task list format for grocery items"
+  
+  - type: guide
+    when: "User is ready to finalize weekly plan"
+    do:
+      - "Structure content according to template"
+      - "Ensure week date is clear in H1"
+      - "Verify all categories present in grocery list"
+      - "Format meals with required fields"
+  
+  - type: remind
+    when: "Week is ending"
+    do:
+      - "Suggest archiving current README"
+      - "Provide correct filename format (YYYYMMDDsummary.md)"
+      - "Confirm archive/ folder location"
+
+validation:
+  checklist:
+    - "H1 heading with week date range present"
+    - "Grocery List section with all 5 categories"
+    - "4-5 meal sections with H2 headings"
+    - "Each meal has Protein, Ingredients, Description"
+    - "Markdown task list syntax used for grocery items"
+
+examples:
+  - correct_meal: |
+      ## Meal 1: One Pot Pasta
+      **Protein:** Ground pork
+      **Ingredients:** Brown udon rice noodles, tomato paste, San Marzano tomatoes, frozen mixed mushrooms, frozen three pepper blend
+      **Description:** One pot pasta with pork and vegetables
+      
+      **Instructions:**
+      Brown the pork with aromatics, add tomato paste and tomatoes, simmer. Add frozen veg and noodles, cook until noodles are tender. Season to taste.
+  
+  - correct_grocery_category: |
+      ### Produce
+      - [ ] Organic red onion - 1 (est. 0.53 lb)
+      - [ ] Organic green cabbage - 1 (est. 2.56 lb)
+      - [ ] Purple asparagus - 1 bunch
+  
+  - correct_filename: "archive/20251207summary.md"
+  
+  - incorrect_filename: "archive/week-of-dec-7.md"
+
+metadata:
+  priority: high
+  version: 1.0
+  scope: README.md structure and lifecycle
+
+</rule>

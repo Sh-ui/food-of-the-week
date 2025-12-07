@@ -1,0 +1,250 @@
+/* Print Styles for Food of the Week */
+/* Settings are configurable in print-config.json at the project root */
+
+@media print {
+  /* Hide all interactive and navigation elements */
+  .print-button,
+  .print-buttons,
+  button {
+    display: none !important;
+  }
+
+  /* Reset page styles for print - uses CSS variables from print-config.json */
+  body {
+    margin: 0;
+    padding: 0;
+    background: white;
+    color: black;
+    font-size: var(--print-font-size, 12pt);
+    line-height: var(--print-line-height, 1.4);
+  }
+
+  /* Hide all sections by default when printing specific sections */
+  body:not([data-print-target="all"]) .print-section {
+    display: none !important;
+  }
+
+  /* Show only the targeted section */
+  body[data-print-target="grocery-list"] #print-section-grocery-list,
+  body[data-print-target="meal-1"] #print-section-meal-1,
+  body[data-print-target="meal-2"] #print-section-meal-2,
+  body[data-print-target="meal-3"] #print-section-meal-3,
+  body[data-print-target="meal-4"] #print-section-meal-4,
+  body[data-print-target="meal-5"] #print-section-meal-5 {
+    display: block !important;
+  }
+
+  /* Show all sections when printing full week */
+  body[data-print-target="all"] .print-section {
+    display: block !important;
+  }
+
+  /* Page breaks */
+  .print-section.meal {
+    page-break-after: always;
+    page-break-inside: avoid;
+  }
+
+  /* Don't break after the last meal */
+  .print-section.meal:last-of-type {
+    page-break-after: auto;
+  }
+
+  /* Grocery list on its own page when printing all */
+  body[data-print-target="all"] #print-section-grocery-list {
+    page-break-after: always;
+  }
+
+  /* Avoid breaking within key elements */
+  .meal-details,
+  .meal-instructions,
+  .grocery-category {
+    page-break-inside: avoid;
+  }
+
+  /* Typography adjustments */
+  h1 {
+    font-size: 24pt;
+    margin-bottom: 12pt;
+    line-height: var(--print-heading-line-height, 1.2);
+    color: #000;
+  }
+
+  h2 {
+    font-size: 18pt;
+    margin-top: var(--print-heading-margin-top, 8pt);
+    margin-bottom: var(--print-heading-margin-bottom, 10pt);
+    line-height: var(--print-heading-line-height, 1.2);
+    color: #000;
+  }
+
+  h3 {
+    font-size: 14pt;
+    margin-top: var(--print-heading-margin-top, 8pt);
+    margin-bottom: var(--print-heading-margin-bottom, 8pt);
+    line-height: var(--print-heading-line-height, 1.2);
+    color: #000;
+  }
+
+  p {
+    margin-bottom: var(--print-paragraph-margin-bottom, 8pt);
+  }
+
+  /* Remove backgrounds and borders */
+  .section {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin-bottom: var(--print-section-margin-bottom, 0);
+  }
+
+  .meal-details {
+    background: transparent;
+    border: 1px solid #ccc;
+    padding: var(--print-meal-details-padding, 10pt);
+    margin-bottom: var(--print-section-margin-bottom, 10pt);
+  }
+
+  .grocery-category {
+    background: transparent;
+    padding: 0;
+    margin-bottom: var(--print-grocery-category-margin-bottom, 12pt);
+  }
+
+  /* Checkbox styling for print */
+  input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: var(--print-checkbox-size, 12pt);
+    height: var(--print-checkbox-size, 12pt);
+    border: 1pt solid #000;
+    margin-right: 6pt;
+    position: relative;
+    top: 2pt;
+  }
+
+  input[type="checkbox"]:checked::after {
+    content: "✓";
+    position: absolute;
+    top: -2pt;
+    left: 2pt;
+    font-size: calc(var(--print-checkbox-size, 12pt) - 2pt);
+  }
+
+  /* Grocery list formatting */
+  .grocery-items {
+    margin-left: 0;
+  }
+
+  .grocery-item {
+    margin-bottom: var(--print-grocery-item-margin-bottom, 4pt);
+  }
+
+  .grocery-item label {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .item-text {
+    flex: 1;
+  }
+
+  /* Meal formatting */
+  .meal-field {
+    margin-bottom: var(--print-paragraph-margin-bottom, 6pt);
+  }
+
+  .meal-field strong {
+    font-weight: bold;
+  }
+
+  /* Ensure good spacing */
+  .meal-header {
+    margin-bottom: var(--print-section-margin-bottom, 10pt);
+  }
+
+  .meal-instructions {
+    margin-top: var(--print-meal-instructions-margin-top, 10pt);
+  }
+
+  /* List formatting */
+  ul, ol {
+    margin-left: 20pt;
+    margin-bottom: var(--print-section-margin-bottom, 8pt);
+  }
+
+  li {
+    margin-bottom: var(--print-list-item-margin-bottom, 4pt);
+  }
+
+  /* Hide section headers when printing single section */
+  body[data-print-target="grocery-list"] .page-header,
+  body[data-print-target^="meal-"] .page-header {
+    display: none;
+  }
+
+  /* Container adjustments */
+  .container {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .weekly-plan {
+    padding: 0;
+  }
+
+  /* Ensure meals container doesn't add extra space */
+  .meals-container {
+    gap: 0;
+  }
+
+  /* Links */
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  /* Print-specific title for single sections */
+  body[data-print-target="grocery-list"] #print-section-grocery-list::before {
+    content: "Grocery List";
+    display: block;
+    font-size: 24pt;
+    font-weight: bold;
+    margin-bottom: 12pt;
+  }
+
+  body[data-print-target="grocery-list"] #print-section-grocery-list h2 {
+    display: none;
+  }
+
+  /* Page margins - configurable via print-config.json */
+  @page {
+    margin-top: var(--print-margin-top, 0.5in);
+    margin-right: var(--print-margin-right, 0.5in);
+    margin-bottom: var(--print-margin-bottom, 0.5in);
+    margin-left: var(--print-margin-left, 0.5in);
+  }
+
+  /* Force text to stay black */
+  * {
+    color: #000 !important;
+  }
+
+  /* Keep semantic colors for borders only */
+  .meal-details {
+    border-color: #666 !important;
+  }
+}
+
+/* Print preview styles (optional - helps during development) */
+@media screen {
+  .print-preview {
+    max-width: 8.5in;
+    margin: 0 auto;
+    padding: 0.5in;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+}
+

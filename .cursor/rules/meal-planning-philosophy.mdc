@@ -1,0 +1,198 @@
+---
+description: Meal Planning Philosophy and Recipe Generation Guidelines
+globs: 
+alwaysApply: true
+---
+
+# Meal Planning Philosophy
+
+Guidelines for generating weekly meal plans that match the household's cooking style, constraints, and preferences.
+
+<rule>
+name: meal-planning-philosophy
+description: Core principles for brainstorming and generating weekly meal plans for a household of 5
+
+context:
+  household_size: 5 people
+  primary_cook: User (with family helpers available)
+  cooking_time: Weeknight constraints - narrow time window, split attention
+  helpers: Dad (chopping), sister (rice/simple tasks)
+  meal_frequency: Typically 4-5 meals per week
+
+constraints:
+  timing:
+    - Weeknight meals must be quick (under 45 minutes active time)
+    - Ideal: one-pan, one-pot, or minimal-mess flows
+    - Exception: "set it and forget it" dishes (braises, slow cooker, sheet-pan roasts)
+  
+  delegation:
+    - Recipes must anticipate partial delegation
+    - Prep can be offloaded, final assembly stays with primary cook
+    - Instructions should be clear enough for family members to follow
+  
+  ingredients:
+    - Seasonal and improvisational approach
+    - Flexible pantry core assumed (aromatics, Asian pantry items, basic vegetables)
+    - Frozen proteins are common and must be accommodated
+
+cooking_philosophy:
+  style: "Chef-to-chef conversation"
+  format: "Structured sketches, not rigid procedures"
+  
+  priorities:
+    - One-pot or simple flows, fewer dishes
+    - Big flavors from a few key ingredients
+    - Minimal chopping unless delegated
+    - Speed without sacrificing personality
+  
+  conceptual_approach:
+    - Focus on "what does this dish want to feel like?"
+    - Recipes emerge from intersections, not strict tradition
+    - Examples: "deconstructed Midwestern broiler dinner", "power-salad leveraging specialty vinegars"
+
+meal_plan_structure:
+  recipe_count: 4-5 recipes per week
+  characteristics: Simple but flavorful, weeknight-appropriate, ideally leave leftovers
+  
+  grocery_list_required: true
+  grocery_categories:
+    - Produce
+    - Staples
+    - Dairy
+    - Protein
+    - Frozens
+  
+  recipe_format:
+    style: "Concise but not sterile"
+    instructions: "Sketch-like, followable by another cook"
+    descriptions: "Intuitive, relational descriptions of ingredient combinations"
+    step_by_step: "Only when explicitly requested"
+
+meal_patterns:
+  description: "Treat recipes as modular patterns that plug in seasonal ingredients"
+  
+  core_patterns:
+    sheet_pan:
+      description: "Protein + veg + dressed roast"
+      benefits: "Great for frozen proteins, minimal mess, scalable"
+    
+    one_pot_noodle_broth:
+      description: "Rice noodles, aromatics, broth, quick protein, veg"
+      benefits: "High speed, flexible, low prep, universally liked"
+    
+    warm_power_salad:
+      description: "Greens or shredded veg + roasted/pan-seared protein + bold dressing + crunchy accent"
+      benefits: "Incorporates specialty oils/vinegars"
+    
+    skillet_braise:
+      description: "Shallow liquids, sear then low simmer, aromatic broth reduction"
+      benefits: "Good for steaks, chops, lamb, fish"
+    
+    fritters_patties:
+      description: "Masa fritters, veggie pancakes, salmon cakes"
+      benefits: "Flexible for leftover veg or squash"
+    
+    stir_fry_saute:
+      description: "Fast, high heat, minimal chopping"
+      benefits: "Pairs well with rice"
+    
+    roasted_veg_centerpiece:
+      description: "Sweet potato halves, celeriac steaks, cabbage wedges with punchy dressing"
+      benefits: "Veg-forward but hearty"
+
+protein_handling:
+  common_proteins:
+    - Tilapia (frozen)
+    - Salmon (frozen)
+    - Scallops (frozen)
+    - Ground lamb (frozen)
+    - Pork chops (frozen)
+    - Flat-iron steak (frozen)
+  
+  strategies:
+    - Pick proteins that thaw quickly
+    - Select meals suited for frozen-to-pan or rapid-thaw methods
+    - Consider thaw time when sequencing the week
+
+ingredient_tendencies:
+  aromatics_always_available: [garlic, ginger, onion]
+  vegetables_common: [cabbage, bok choy, carrots, potatoes, green beans]
+  pantry_staples: [rice noodles, soy sauce, vinegars, oils, spices, broth]
+  
+  flavor_anchors:
+    description: "Specialty oils and vinegars should be featured intentionally"
+    examples: [jalapeño olive oil, white pineapple balsamic]
+  
+  three_movers_principle:
+    flavor_base: "Aromatics, fats"
+    structural_ingredient: "Noodles, veg, protein"
+    finishing_accent: "Acid, herb, crunchy element"
+
+weekly_narrative_shape:
+  description: "Week's menu should have alternating variety"
+  
+  ideal_mix:
+    - A couple of warm bowls
+    - A roast-centered plate
+    - One big-flavor salad
+    - A stir-fry or noodle thing
+    - A wildcard (fritters, braise, or fusion experiment)
+  
+  goal: "Avoid monotony through pattern variation"
+
+dietary_preferences:
+  carbs: "Substantial but not carb-heavy is often ideal"
+  vegetables: "Veg-forward dinners welcome if they feel hearty"
+  common_veg: [cabbage, bok choy, rice noodles, potatoes, carrots, green beans]
+
+actions:
+  - type: guide
+    when: "User is brainstorming weekly meals"
+    do:
+      - Suggest 4-5 meal ideas using different patterns
+      - Ensure frozen protein handling is considered
+      - Include specialty oil/vinegar usage where appropriate
+      - Maintain sketch-style recipe format
+      - Create complete grocery list in specified categories
+      - Verify weekly shape has variety
+  
+  - type: guide
+    when: "User asks for recipe details"
+    do:
+      - Use chef-to-chef conversational tone
+      - Provide intuitive, relational descriptions
+      - Avoid rigid step-by-step unless requested
+      - Highlight delegation opportunities
+      - Note timing and weeknight feasibility
+  
+  - type: guide
+    when: "User discusses ingredients on hand"
+    do:
+      - Work within flexible pantry assumption
+      - Suggest subset-based meal ideas (not everything-at-once)
+      - Consider thaw times for frozen proteins
+      - Respect the three movers principle
+
+examples:
+  - input: "I have bok choy, cabbage, carrots, frozen tilapia, and rice noodles"
+    output: |
+      Great pantry! Here are 3 quick weeknight ideas:
+      
+      1. **Ginger-Garlic Bok Choy Stir-Fry** (one-pot noodle pattern)
+         Bok choy + carrots, garlic/ginger, rice noodles, quick-thawed tilapia
+         Soy-sesame dressing, serve in bowls
+      
+      2. **Sheet-Pan Tilapia with Roasted Cabbage** (sheet-pan pattern)
+         Cabbage wedges + carrots, tilapia fillets
+         Roast together with olive oil and spices
+      
+      3. **Warm Cabbage Slaw with Pan-Seared Tilapia** (power salad pattern)
+         Shredded cabbage/carrots sautéed briefly, tilapia seared separately
+         Toss with your jalapeño olive oil + rice vinegar
+
+metadata:
+  priority: high
+  version: 1.0
+  scope: Weekly meal planning and recipe brainstorming
+
+</rule>

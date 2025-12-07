@@ -1,0 +1,13 @@
+---
+import Layout from '../layouts/Layout.astro';
+import WeeklyPlan from '../components/WeeklyPlan.astro';
+import { parseReadme } from '../utils/readmeParser';
+
+// Parse the README at build time
+const weekPlan = await parseReadme();
+---
+
+<Layout title={weekPlan.weekTitle}>
+  <WeeklyPlan weekPlan={weekPlan} />
+</Layout>
+

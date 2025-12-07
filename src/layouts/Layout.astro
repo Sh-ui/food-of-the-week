@@ -1,0 +1,36 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+
+// Import styles directly so Astro processes them
+import '../styles/global.css';
+import '../styles/print.css';
+
+// Import print config
+import { generatePrintCSSVars } from '../utils/printConfig';
+const printCSSVars = generatePrintCSSVars();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Weekly meal planning for the family" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <style set:html={`
+      :root {
+        ${printCSSVars}
+      }
+    `}></style>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+

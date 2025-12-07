@@ -1,0 +1,68 @@
+---
+interface Props {
+  target: string;
+  label?: string;
+  variant?: 'primary' | 'secondary' | 'accent';
+}
+
+const { 
+  target, 
+  label = 'Print', 
+  variant = 'primary' 
+} = Astro.props;
+
+const buttonClass = `button button-${variant} print-button`;
+---
+
+<button 
+  class={buttonClass}
+  data-print-target={target}
+  type="button"
+>
+  {label}
+</button>
+
+<script>
+  /**
+   * Initialize print buttons
+   */
+  function initializePrintButtons(): void {
+    const printButtons = document.querySelectorAll<HTMLButtonElement>('.print-button');
+    
+    printButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const target = button.dataset.printTarget;
+        if (target) {
+          printSection(target);
+        }
+      });
+    });
+  }
+
+  /**
+   * Print a specific section or the entire page
+   */
+  function printSection(sectionId: string): void {
+    // Set the target section
+    document.body.setAttribute('data-print-target', sectionId);
+    
+    // Trigger print dialog
+    window.print();
+    
+    // Clean up after print dialog closes
+    const cleanup = () => {
+      document.body.removeAttribute('data-print-target');
+      window.removeEventListener('afterprint', cleanup);
+    };
+    
+    window.addEventListener('afterprint', cleanup);
+  }
+
+  // Initialize on page load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializePrintButtons);
+  } else {
+    initializePrintButtons();
+  }
+</script>
+
