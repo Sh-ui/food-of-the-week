@@ -1,4 +1,5 @@
 import { marked } from 'marked';
+import type { Tokens, Token } from 'marked';
 import fs from 'fs';
 import path from 'path';
 
@@ -119,7 +120,7 @@ export async function parseReadme(): Promise<WeekPlan> {
     if (token.type === 'list') {
       if (currentSection === 'grocery' && currentCategory) {
         // Extract grocery items
-        const items = extractListItems(token);
+        const items = extractListItems(token as Tokens.List);
         currentCategory.items.push(...items);
       }
     }
@@ -170,7 +171,7 @@ export async function parseReadme(): Promise<WeekPlan> {
 /**
  * Extract text items from a list token
  */
-function extractListItems(token: marked.Tokens.List): string[] {
+function extractListItems(token: Tokens.List): string[] {
   const items: string[] = [];
   
   for (const item of token.items) {
@@ -189,7 +190,7 @@ function extractListItems(token: marked.Tokens.List): string[] {
 /**
  * Convert a token back to markdown
  */
-function tokenToMarkdown(token: marked.Token): string {
+function tokenToMarkdown(token: Token): string {
   // Use marked to convert back to HTML/text
   // For simplicity, we'll just extract text content
   
@@ -198,12 +199,12 @@ function tokenToMarkdown(token: marked.Token): string {
   }
   
   if (token.type === 'heading') {
-    const prefix = '#'.repeat((token as marked.Tokens.Heading).depth);
+    const prefix = '#'.repeat((token as Tokens.Heading).depth);
     return `${prefix} ${token.text}\n\n`;
   }
   
   if (token.type === 'list') {
-    const listToken = token as marked.Tokens.List;
+    const listToken = token as Tokens.List;
     let result = '';
     for (const item of listToken.items) {
       result += `- ${item.text}\n`;
@@ -212,7 +213,7 @@ function tokenToMarkdown(token: marked.Token): string {
   }
   
   if (token.type === 'code') {
-    const codeToken = token as marked.Tokens.Code;
+    const codeToken = token as Tokens.Code;
     return `\`\`\`${codeToken.lang || ''}\n${codeToken.text}\n\`\`\`\n\n`;
   }
   
