@@ -1,0 +1,37 @@
+START
+|
+|---> Is the food from the grocery store?  
+|       |  
+|       |---> Yes: Does it consist of raw ingredients?  
+|       |       |  
+|       |       |---> Yes: Who will prepare it?  
+|       |       |       |  
+|       |       |       |---> Me (pre-prep needed for easy assembly/reheat)  
+|       |       |       |       |  
+|       |       |       |       |---> Can I reliably prep in advance?  
+|       |       |       |       |       |  
+|       |       |       |       |       |---> Yes: Meals are prepped for easy assembly (e.g., meat + carb + sauce) ✅  
+|       |       |       |       |       |  
+|       |       |       |       |       |---> No: Unviable solution ❌  
+|       |       |       |  
+|       |       |       |---> Mom (primary available cook)  
+|       |       |       |       |  
+|       |       |       |       |---> Will she reliably cook/assemble meals?  
+|       |       |       |       |       |  
+|       |       |       |       |       |---> Yes: Meals can be based on simple prep (e.g., pasta + protein) ✅  
+|       |       |       |       |       |  
+|       |       |       |       |       |---> No: More complexity = More friction = Unviable solution ❌  
+|       |       |  
+|       |       |---> No: Pre-packaged/easy food = Expensive (close to fast food cost) ❌  
+|  
+|---> No: Is it pre-packaged or a meal kit?  
+|       |  
+|       |---> Yes: Is it cost-effective long term?  
+|       |       |  
+|       |       |---> Yes: Viable solution ✅  
+|       |       |  
+|       |       |---> No: Not sustainable financially ❌  
+|  
+|---> No: Fast food = Expensive (fallback option but not ideal) ❌  
+
+END
