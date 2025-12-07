@@ -165,7 +165,26 @@ const { categories } = Astro.props;
     .section-header {
       flex-direction: column;
       align-items: flex-start;
-      gap: var(--spacing-sm);
+      gap: var(--spacing-md);
+    }
+    
+    .grocery-category {
+      padding: var(--spacing-lg);
+    }
+    
+    .grocery-category h3 {
+      font-size: 1.5rem;
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .grocery-item label {
+      padding: var(--spacing-sm) var(--spacing-xs);
+      font-size: 1.125rem;
+    }
+    
+    .item-text {
+      font-size: 1.125rem;
+      line-height: 1.6;
     }
   }
 </style>

@@ -229,11 +229,46 @@ const { meal } = Astro.props;
     .meal-header {
       flex-direction: column;
       align-items: flex-start;
+      gap: var(--spacing-md);
+    }
+    
+    .meal-header h2 {
+      font-size: 1.75rem;
+    }
+
+    .meal-field {
+      font-size: 1.125rem;
+      line-height: 1.7;
     }
 
     .meal-field strong {
       display: block;
       margin-bottom: var(--spacing-xs);
+      font-size: 1.25rem;
+    }
+    
+    .instruction-phase {
+      padding: var(--spacing-lg);
+    }
+    
+    .instruction-phase h3 {
+      font-size: 1.25rem;
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .instruction-phase li,
+    .phase-content p {
+      font-size: 1.125rem;
+      line-height: 1.7;
+    }
+    
+    .meal-instructions h3 {
+      font-size: 1.375rem;
+    }
+    
+    .instructions-content p {
+      font-size: 1.125rem;
+      line-height: 1.7;
     }
   }
 </style>

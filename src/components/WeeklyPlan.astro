@@ -79,5 +79,19 @@ const { weekPlan } = Astro.props;
     color: var(--color-text-light);
     margin-bottom: 0;
   }
+  
+  @media (max-width: 768px) {
+    .weekly-plan {
+      padding: var(--spacing-md) var(--spacing-sm);
+    }
+    
+    .page-header {
+      margin-bottom: var(--spacing-lg);
+    }
+    
+    .meals-container {
+      gap: var(--spacing-lg);
+    }
+  }
 </style>
 
