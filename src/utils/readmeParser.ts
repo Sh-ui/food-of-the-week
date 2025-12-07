@@ -51,6 +51,8 @@ export async function parseReadme(): Promise<WeekPlan> {
   let currentCategory: GroceryCategory | null = null;
   let currentMeal: Meal | null = null;
   let mealContent: string[] = [];
+  let capturingInstructions = false;
+  let instructionsContent: string[] = [];
   
   for (let i = 0; i < tokens.length; i++) {
     const token = tokens[i];
@@ -65,10 +67,15 @@ export async function parseReadme(): Promise<WeekPlan> {
     if (token.type === 'heading' && token.depth === 2) {
       // Save previous meal if exists
       if (currentMeal) {
+        if (instructionsContent.length > 0) {
+          currentMeal.instructions = instructionsContent.join('\n\n');
+        }
         currentMeal.content = mealContent.join('\n');
         meals.push(currentMeal);
         currentMeal = null;
         mealContent = [];
+        instructionsContent = [];
+        capturingInstructions = false;
       }
       
       const heading = token.text;
@@ -93,6 +100,8 @@ export async function parseReadme(): Promise<WeekPlan> {
           fullTitle: heading,
           content: ''
         };
+        capturingInstructions = false;
+        instructionsContent = [];
         continue;
       }
       
@@ -142,7 +151,11 @@ export async function parseReadme(): Promise<WeekPlan> {
         } else if (text.startsWith('**Description:**')) {
           currentMeal.description = text.replace(/^\*\*Description:\*\*\s*/, '').trim();
         } else if (text.startsWith('**Instructions:**')) {
-          currentMeal.instructions = text.replace(/^\*\*Instructions:\*\*\s*/, '').trim();
+          capturingInstructions = true;
+          // Don't add the label itself, just start capturing subsequent content
+        } else if (capturingInstructions) {
+          // Capture all paragraphs after Instructions label
+          instructionsContent.push(text);
         }
       }
       
@@ -157,6 +170,9 @@ export async function parseReadme(): Promise<WeekPlan> {
   
   // Save final meal
   if (currentMeal) {
+    if (instructionsContent.length > 0) {
+      currentMeal.instructions = instructionsContent.join('\n\n');
+    }
     currentMeal.content = mealContent.join('\n');
     meals.push(currentMeal);
   }

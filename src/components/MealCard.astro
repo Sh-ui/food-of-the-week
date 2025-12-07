@@ -1,6 +1,5 @@
 ---
 import type { Meal } from '../utils/readmeParser';
-import { marked } from 'marked';
 
 interface Props {
   meal: Meal;
@@ -43,7 +42,11 @@ const { meal } = Astro.props;
   {meal.instructions && (
     <div class="meal-instructions">
       <h3>Instructions</h3>
-      <div set:html={marked.parse(meal.instructions)} />
+      <div class="instructions-content">
+        {meal.instructions.split('\n\n').map((paragraph: string) => (
+          <p>{paragraph}</p>
+        ))}
+      </div>
     </div>
   )}
 </div>
@@ -94,6 +97,11 @@ const { meal } = Astro.props;
   .meal-instructions h3 {
     color: var(--color-primary);
     margin-bottom: var(--spacing-md);
+  }
+
+  .instructions-content p {
+    margin-bottom: var(--spacing-md);
+    line-height: 1.6;
   }
 
   .meal-instructions :global(p) {
