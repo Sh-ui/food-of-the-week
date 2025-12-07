@@ -96,11 +96,11 @@ p {
 
 .button-secondary {
   background-color: var(--color-secondary);
-  color: white;
+  color: var(--color-text);
 }
 
 .button-secondary:hover {
-  background-color: #7da84d;
+  background-color: #d9b130;
 }
 
 .button-accent {
