@@ -32,7 +32,18 @@
 
 **Instructions:**
 
-[Chef-style sketch of how to make the dish. Keep it conversational and intuitive, not rigid step-by-step. Include timing, delegation opportunities, and key techniques.]
+**Already Prepped:**
+
+ - [Item prepared in advance - e.g., vacuum sealed, pre-cooked sous vide, thawed]
+ - [Another prepped item]
+
+**Sous Chef - Prep:**
+
+[What family members do before primary cook arrives. Include timing, temperatures (if remote-controlled), and specific cutting/prep instructions.]
+
+**Chef - Finishing & Plating:**
+
+[Final cooking techniques by primary cook. Include searing, sauce-making, charring, and plating composition.]
 
 ## Meal 2: [Descriptive Name]
 
@@ -44,7 +55,17 @@
 
 **Instructions:**
 
-[Instructions...]
+**Already Prepped:**
+
+ - [Item prepared in advance]
+
+**Sous Chef - Prep:**
+
+[Delegation instructions]
+
+**Chef - Finishing & Plating:**
+
+[Finishing instructions]
 
 ## Meal 3: [Descriptive Name]
 
@@ -56,7 +77,17 @@
 
 **Instructions:**
 
-[Instructions...]
+**Already Prepped:**
+
+ - [Item prepared in advance]
+
+**Sous Chef - Prep:**
+
+[Delegation instructions]
+
+**Chef - Finishing & Plating:**
+
+[Finishing instructions]
 
 ## Meal 4: [Descriptive Name]
 
@@ -68,7 +99,17 @@
 
 **Instructions:**
 
-[Instructions...]
+**Already Prepped:**
+
+ - [Item prepared in advance]
+
+**Sous Chef - Prep:**
+
+[Delegation instructions]
+
+**Chef - Finishing & Plating:**
+
+[Finishing instructions]
 
 ## Meal 5: [Descriptive Name] (Optional)
 
@@ -80,5 +121,15 @@
 
 **Instructions:**
 
-[Instructions...]
+**Already Prepped:**
+
+ - [Item prepared in advance]
+
+**Sous Chef - Prep:**
+
+[Delegation instructions]
+
+**Chef - Finishing & Plating:**
+
+[Finishing instructions]
 
