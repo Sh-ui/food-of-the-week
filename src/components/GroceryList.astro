@@ -124,7 +124,7 @@ const { categories } = Astro.props;
     margin-top: 0;
     margin-bottom: var(--spacing-md);
     color: var(--color-primary);
-    font-size: 1.25rem;
+    font-size: 1.35rem;
   }
 
   .grocery-items {
@@ -143,9 +143,11 @@ const { categories } = Astro.props;
     align-items: center;
     cursor: pointer;
     width: 100%;
-    padding: var(--spacing-xs);
+    padding: calc(var(--spacing-xs) + 2px);
     border-radius: 4px;
     transition: background-color 0.2s ease;
+    font-size: 1.05rem;
+    line-height: 1.65;
   }
 
   .grocery-item label:hover {
@@ -173,18 +175,18 @@ const { categories } = Astro.props;
     }
     
     .grocery-category h3 {
-      font-size: 1.5rem;
+      font-size: 1.65rem;
       margin-bottom: var(--spacing-md);
     }
     
     .grocery-item label {
       padding: var(--spacing-sm) var(--spacing-xs);
-      font-size: 1.125rem;
+      font-size: 1.25rem;
     }
     
     .item-text {
-      font-size: 1.125rem;
-      line-height: 1.6;
+      font-size: 1.25rem;
+      line-height: 1.7;
     }
   }
 </style>
