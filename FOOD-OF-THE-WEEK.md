@@ -31,7 +31,42 @@
 - [ ] 365 Organic Three Pepper Blend - 1 (16 oz)
 - [ ] 365 Organic Mixed Mushrooms - 1 (10 oz)
 
-## Meal 1: One Pot Pasta
+## Meal 1: Stir Fry
+
+**Protein:** Sirloin flap steak
+
+**Ingredients:** Purple asparagus, bok choy microgreens, shallot, brown rice (at home)
+
+**Description:** Quick stir fry with tender sirloin flap steak, purple asparagus, and aromatic shallot, finished with delicate bok choy microgreens. Served over brown rice.
+
+**Instructions:**
+
+**Already Prepped:**
+
+ - Sirloin flap steak is thawed.
+
+**Sous Chef - Prep:**
+
+Start the brown rice cooking according to package directions (or use a rice cooker).
+
+Slice the sirloin flap steak thinly against the grain. Season with salt and pepper. You can marinate briefly in soy sauce, a touch of cornstarch, and sesame oil if you have 10 minutes.
+
+Trim the woody ends off the asparagus and cut into 2-inch pieces. Slice the shallot thinly.
+
+**Chef - Finishing & Plating:**
+
+Heat a wok or large skillet over high heat. Add oil with a high smoke point (vegetable, grapeseed, or peanut oil).
+
+Stir fry the beef in batches to avoid crowding—you want a good sear. Set aside on a plate.
+
+In the same pan, add a bit more oil if needed. Stir fry the shallot for 30 seconds until fragrant, then add the asparagus. Cook for 2-3 minutes, tossing frequently, until bright and tender-crisp.
+
+Return the beef to the pan. Add a quick sauce: soy sauce, a splash of rice vinegar or rice wine, maybe a touch of honey or sugar, and garlic/ginger if you have them. Toss everything together for about 30 seconds.
+
+Plate over the brown rice. Top with a generous handful of the bok choy microgreens—they'll wilt slightly from the heat and add a fresh, peppery finish.
+
+
+## Meal 2: One Pot Pasta
 
 **Protein:** Ground pork
 
@@ -61,7 +96,7 @@ Season with salt, pepper, and a pinch of red pepper flakes. Finish with fresh he
 
 Serve in bowls. Top with grated Parmesan if available.
 
-## Meal 2: Sous Vide Steak Dinner
+## Meal 3: Sous Vide Steak Dinner
 
 **Protein:** Flat iron steak
 
@@ -103,41 +138,8 @@ Slice the steak against the grain.
 
 To plate: Arrange the roasted onions and sweet potato chunks on the plate. Fan the sliced steak over the top. Place the charred cabbage wedge alongside. Drizzle the reduced pan glaze over the steak and cabbage.
 
-## Meal 3: Stir Fry
 
-**Protein:** Sirloin flap steak
-
-**Ingredients:** Purple asparagus, bok choy microgreens, shallot, brown rice (at home)
-
-**Description:** Quick stir fry with tender sirloin flap steak, purple asparagus, and aromatic shallot, finished with delicate bok choy microgreens. Served over brown rice.
-
-**Instructions:**
-
-**Already Prepped:**
-
- - Sirloin flap steak is thawed.
-
-**Sous Chef - Prep:**
-
-Start the brown rice cooking according to package directions (or use a rice cooker).
-
-Slice the sirloin flap steak thinly against the grain. Season with salt and pepper. You can marinate briefly in soy sauce, a touch of cornstarch, and sesame oil if you have 10 minutes.
-
-Trim the woody ends off the asparagus and cut into 2-inch pieces. Slice the shallot thinly.
-
-**Chef - Finishing & Plating:**
-
-Heat a wok or large skillet over high heat. Add oil with a high smoke point (vegetable, grapeseed, or peanut oil).
-
-Stir fry the beef in batches to avoid crowding—you want a good sear. Set aside on a plate.
-
-In the same pan, add a bit more oil if needed. Stir fry the shallot for 30 seconds until fragrant, then add the asparagus. Cook for 2-3 minutes, tossing frequently, until bright and tender-crisp.
-
-Return the beef to the pan. Add a quick sauce: soy sauce, a splash of rice vinegar or rice wine, maybe a touch of honey or sugar, and garlic/ginger if you have them. Toss everything together for about 30 seconds.
-
-Plate over the brown rice. Top with a generous handful of the bok choy microgreens—they'll wilt slightly from the heat and add a fresh, peppery finish.
-
-## Meal 4: Roasted Chicken
+## Meal 5: Roasted Chicken
 
 **Protein:** Whole chicken
 
