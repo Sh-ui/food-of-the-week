@@ -7,9 +7,6 @@ interface Props {
 }
 
 const { meal } = Astro.props;
-
-// Convert markdown content to HTML for rendering
-const contentHtml = marked.parse(meal.content);
 ---
 
 <div id={`print-section-${meal.id}`} class="print-section section meal" data-section-type="meal">
@@ -49,8 +46,6 @@ const contentHtml = marked.parse(meal.content);
       <div set:html={marked.parse(meal.instructions)} />
     </div>
   )}
-  
-  <div class="meal-content" set:html={contentHtml} />
 </div>
 
 <style>
@@ -101,26 +96,18 @@ const contentHtml = marked.parse(meal.content);
     margin-bottom: var(--spacing-md);
   }
 
-  .meal-content {
-    color: var(--color-text);
-  }
-
-  .meal-content :global(p) {
+  .meal-instructions :global(p) {
     margin-bottom: var(--spacing-md);
   }
 
-  .meal-content :global(ul),
-  .meal-content :global(ol) {
+  .meal-instructions :global(ul),
+  .meal-instructions :global(ol) {
     margin-left: var(--spacing-lg);
     margin-bottom: var(--spacing-md);
   }
 
-  .meal-content :global(li) {
+  .meal-instructions :global(li) {
     margin-bottom: var(--spacing-sm);
-  }
-
-  .meal-content :global(strong) {
-    color: var(--color-primary);
   }
 
   @media (max-width: 768px) {
