@@ -12,7 +12,6 @@
 - [ ] Organic Collard Green - 1 bunch
 - [ ] Organic Red Beets - 1.00 lb
 - [ ] Organic Golden Beets - 3 (est. 2.07 lb)
-- [ ] TESTING teSTING TESTING
 
 ### Staples
 - [ ] 365 Tomato Paste, Double Concentrated - 1 (5 oz)
@@ -42,7 +41,13 @@
 
 **Instructions:**
 
-Brown the ground pork in a large pot or deep skillet with a drizzle of oil. Break it up as it cooks. Once browned, add aromatics (garlic, onion if you have them). Stir in the tomato paste and let it caramelize for a minute or two.
+**Already Prepped:**
+
+ - Ground pork is thawed.
+
+**Sous Chef - Cooking:**
+
+Brown the ground pork in a large pot or deep skillet with a drizzle of oil. Break it up as it cooks. Once browned, add aromatics (garlic, onion if available). Stir in the tomato paste and let it caramelize for a minute or two.
 
 Add the San Marzano tomatoes, crushing them with your hands or a wooden spoon as you add them. Fill one of the empty cans halfway with water and add that too. Bring to a simmer.
 
@@ -50,31 +55,51 @@ Add the frozen mushrooms and frozen pepper blend directly from the freezer. Let 
 
 Add the udon noodles directly to the pot. Cook according to package directions, stirring occasionally, until the noodles are tender and have absorbed some of the sauce. If it gets too thick, add a splash of water.
 
-Season with salt, pepper, and maybe a pinch of red pepper flakes. Finish with fresh herbs if you have them (basil, parsley). Serve in bowls with grated Parmesan if available.
+Season with salt, pepper, and a pinch of red pepper flakes. Finish with fresh herbs if available (basil, parsley).
 
-## Meal 2: Broiled Steak Dinner
+**Chef - Finishing & Plating:**
+
+Serve in bowls. Top with grated Parmesan if available.
+
+## Meal 2: Sous Vide Steak Dinner
 
 **Protein:** Flat iron steak
 
-**Ingredients:** White sweet potatoes, green cabbage, red onion, Italian dressing marinade (at home)
+**Ingredients:** White sweet potatoes, green cabbage, red onion
 
-**Description:** Marinated broiled flat iron steak served with roasted sweet potatoes and charred cabbage wedges. The vegetables cook alongside the steak under the broiler.
+**Description:** Sous vide flat iron steak finished with torch, served with warm sweet potatoes and charred cabbage wedges.
 
 **Instructions:**
 
-Marinate the flat iron steak in Italian dressing (or make a quick marinade with olive oil, red wine vinegar, garlic, herbs, salt, and pepper) for at least 30 minutes, or up to a few hours in the fridge.
+**Already Prepped:**
 
-Cut the white sweet potatoes into 1-inch cubes. Toss with olive oil, salt, and pepper. Spread on a sheet pan.
+ - Flat iron steaks have been seasoned and vacuum sealed. Stored in fridge.
+ 
+ - White sweet potatoes have been vacuum sealed and cooked to perfect temperature. Stored in fridge ready to warm.
 
-Cut the cabbage into thick wedges (through the core so they hold together). Slice the red onion into thick rings. Toss both with olive oil, salt, and pepper. Arrange on the same sheet pan or a second one if needed.
+**Sous Chef - Prep:**
 
-Roast the vegetables at 425°F for about 20-25 minutes until the sweet potatoes are tender and starting to caramelize.
+Drop the vacuum-sealed steaks into the sous vide bath set to steak temperature (Chef will set temperature remotely from the app, typically 130-135°F for medium-rare).
 
-While vegetables are roasting, heat your broiler to high. Place the marinated steak on a broiler pan or oven-safe skillet. Broil 4-6 inches from the heat for 3-5 minutes per side, depending on thickness and desired doneness. Aim for medium-rare to medium.
+Drop the vacuum-sealed sweet potatoes into the same sous vide bath alongside the steaks to gently warm them.
 
-In the last few minutes of steak cooking, you can slide the vegetable pan under the broiler too to get some char on the cabbage.
+Slice the red onion into rings (about ½-inch thick).
 
-Let the steak rest for 5 minutes, then slice against the grain. Serve with the roasted vegetables.
+Cut the cabbage into thick wedges, cutting through the core/root end so each wedge holds together. This is important - the core keeps the leaves from falling apart.
+
+Preheat oven to 500°F. Spread the sliced onion rings on a baking sheet with the white sweet potatoes from the bag. Toss everything with grapeseed oil and black pepper. Roast until caramelized and getting good color, about 15-20 minutes.
+
+**Chef - Finishing & Plating:**
+
+While vegetables roast, heat a large skillet over medium-high heat. Char the cabbage wedges on both sides until deeply golden and crispy, about 3-4 minutes per side. Remove and set aside.
+
+Remove steaks from sous vide bag, reserving ALL the juices. Pat steaks completely dry. Using a kitchen torch, sear all sides until a nice crust forms.
+
+In the same skillet used for cabbage, pour in the reserved steak bag juices. Reduce over medium-high heat until thickened into a glaze, scraping up any browned bits from the cabbage.
+
+Slice the steak against the grain.
+
+To plate: Arrange the roasted onions and sweet potato chunks on the plate. Fan the sliced steak over the top. Place the charred cabbage wedge alongside. Drizzle the reduced pan glaze over the steak and cabbage.
 
 ## Meal 3: Stir Fry
 
@@ -86,11 +111,19 @@ Let the steak rest for 5 minutes, then slice against the grain. Serve with the r
 
 **Instructions:**
 
-Start the brown rice cooking according to package directions (or use a rice cooker). Your sister can handle this.
+**Already Prepped:**
 
-Slice the sirloin flap steak thinly against the grain. Season with salt and pepper. You can marinate briefly in soy sauce, a touch of cornstarch, and sesame oil if you have 10 minutes.
+ - Sirloin flap steak is thawed.
+
+**Sous Chef - Prep:**
+
+Start the brown rice cooking according to package directions (or use a rice cooker).
+
+Slice the sirloin flap steak thinly against the grain. Season with salt and pepper.
 
 Trim the woody ends off the asparagus and cut into 2-inch pieces. Slice the shallot thinly.
+
+**Chef - Finishing & Plating:**
 
 Heat a wok or large skillet over high heat. Add oil with a high smoke point (vegetable, grapeseed, or peanut oil).
 
@@ -106,19 +139,49 @@ Plate over the brown rice. Top with a generous handful of the bok choy microgree
 
 **Protein:** Whole chicken
 
-**Ingredients:** Collard greens, golden beets, red beets, pomegranate
+**Ingredients:** Collard greens, gold & red beets, pomegranate
 
-**Description:** Classic roasted whole chicken served with braised collard greens, roasted beets, and garnished with bright pomegranate seeds. A satisfying, colorful meal.
+**Description:** Chicken Fricassée served with braised collard greens, roasted beets, and garnished with bright pomegranate seeds. A satisfying, colorful meal.
 
 **Instructions:**
 
-Roast the chicken: Preheat oven to 425°F. Pat the chicken dry, season generously with salt, pepper, and any herbs you like (thyme, rosemary). Rub with olive oil or butter. Place in a roasting pan breast-side up. Roast for about 1 hour to 1 hour 15 minutes, until the internal temperature reaches 165°F in the thickest part of the thigh. Let rest for 10-15 minutes before carving.
+**Already Prepped:**
 
-Roast the beets: Wrap the golden and red beets separately in foil packets with a drizzle of olive oil and a pinch of salt. Roast alongside the chicken for about 45-60 minutes until tender when pierced with a knife. Once cool enough to handle, peel and cut into wedges or slices.
+ - Chicken has been spatchcocked, seasoned, and vacuum sealed flat with legs and thighs scored. Stored in fridge.
 
-Braise the collard greens: While the chicken roasts, wash and stem the collard greens. Chop roughly. In a large pot or skillet, heat some olive oil or bacon fat if you have it. Sauté a chopped onion (if available) until soft, then add the collards. Add a cup or two of chicken broth or water, season with salt, pepper, and a splash of vinegar or hot sauce if you like. Cover and simmer for 30-40 minutes until tender.
+ -  Golden and red beets have been vacuum sealed and cooked to perfect temperature. Stored in fridge ready to warm.
 
-Open the pomegranates and extract the seeds (arils). This can be done by cutting the pomegranate in half and tapping the back with a wooden spoon over a bowl.
+ - Homemade wheat dough is resting in the fridge.
 
-To serve: Carve the chicken and plate with the braised collard greens and roasted beets. Scatter pomegranate seeds over the top for a burst of color and sweetness.
+**Sous Chef - Prep:**
+
+Put the wheat dough into the oven following the [King Arthur No-Knead Rustic Whole Wheat Bread Instructions](https://www.kingarthurbaking.com/recipes/no-knead-rustic-whole-wheat-bread-recipe). Let cool for 1-2 hours.
+
+Drop the vacuum-sealed chicken into the sous vide bath set to chicken temperature (Chef will set temperature remotely from the app).
+
+Drop the vacuum-sealed beets into the same sous vide bath alongside the chicken to gently warm them.
+
+Wash, stem, and chop the collard greens roughly. Set aside.
+
+Prep a single pomegranate for the garnish.
+
+Preheat the air fryer oven to 475°F.
+
+**Chef - Finishing & Plating:**
+
+With the air fryer oven now hot at 475°F. Spread the chopped collard greens in a roasting pan as a bed.
+
+Remove chicken from sous vide bag, reserve all the juices from the bag; pat the chicken all dry and then carve off the breasts and set them aside for now. Place the remaining dark meat + carcass skin-side up on the collard green bed.
+
+Roast the dark meat on the collard bed for 15 minutes until skin is golden and crispy. In the last 10 minutes, add the breasts back on top, so they can get crispy and hot as well
+
+While chicken roasts, make the sauce: Pour the reserved sous vide chicken juices into a small saucepan. Add mustard, white wine, and Worcestershire sauce to taste.
+
+To plate: Remove chicken from oven. Shred the dark meat (legs and thighs) off the bones and mix it into the wilted collard greens. Spread this mixture as the bed on the serving platter.
+
+Slice the breast meat. Nestle the breast slices and warm beet chunks on top of the collard-dark meat bed.
+
+Drizzle the warm mustard vinaigrette over everything and scatter pomegranate seeds on top for color and brightness.
+
+Serve it with the homemade wheat bread and some butter.
 
