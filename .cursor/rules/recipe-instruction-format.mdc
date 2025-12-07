@@ -183,6 +183,6 @@ examples:
 metadata:
   priority: high
   version: 1.0
-  scope: All recipe instructions in README.md and brainstorming files
+  scope: All recipe instructions in FOOD-OF-THE-WEEK.md and brainstorming files
 
 </rule>

@@ -1,12 +1,12 @@
 ---
 description: Print Section Detection and Button Placement
-globs: ["src/**/*.astro", "src/**/*.ts", "src/**/*.js", "README.md"]
+globs: ["src/**/*.astro", "src/**/*.ts", "src/**/*.js", "FOOD-OF-THE-WEEK.md"]
 alwaysApply: true
 ---
 
 # Print Sections
 
-Rules for how printable sections are detected from README.md and how print buttons are implemented.
+Rules for how printable sections are detected from FOOD-OF-THE-WEEK.md and how print buttons are implemented.
 
 <rule>
 name: print-sections
@@ -58,7 +58,7 @@ print_button_placement:
 implementation_details:
   astro_components:
     parser_responsibility:
-      - "Read README.md at build time"
+      - "Read FOOD-OF-THE-WEEK.md at build time"
       - "Identify all H2 headings"
       - "Extract section content (H2 to next H2)"
       - "Generate section IDs for targeting"
@@ -138,7 +138,7 @@ javascript_behavior:
 
 parsing_requirements:
   markdown_to_sections:
-    input: "README.md raw markdown"
+    input: "FOOD-OF-THE-WEEK.md raw markdown"
     
     process:
       1: "Parse markdown to AST or HTML"
@@ -170,7 +170,7 @@ actions:
   - type: enforce
     when: "Building Astro components"
     do:
-      - "Parse README to detect H2 sections"
+      - "Parse FOOD-OF-THE-WEEK.md to detect H2 sections"
       - "Wrap each H2 section in div with print-section class and unique ID"
       - "Generate print buttons for grocery list and each meal"
       - "Include print-all button at top"
@@ -221,7 +221,7 @@ examples:
 
 validation:
   checklist:
-    - "H2 headings correctly detected from README"
+    - "H2 headings correctly detected from FOOD-OF-THE-WEEK.md"
     - "Each section wrapped with unique ID"
     - "Print buttons generated for grocery + each meal + full week"
     - "Print CSS hides/shows correct sections"

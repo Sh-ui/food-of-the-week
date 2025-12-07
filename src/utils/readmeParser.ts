@@ -30,10 +30,10 @@ export interface WeekPlan {
 }
 
 /**
- * Parse README.md and extract structured weekly meal plan data
+ * Parse FOOD-OF-THE-WEEK.md and extract structured weekly meal plan data
  */
 export async function parseReadme(): Promise<WeekPlan> {
-  const readmePath = path.join(process.cwd(), 'README.md');
+  const readmePath = path.join(process.cwd(), 'FOOD-OF-THE-WEEK.md');
   
   if (!fs.existsSync(readmePath)) {
     return {

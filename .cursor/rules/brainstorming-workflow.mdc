@@ -19,7 +19,7 @@ workflow:
     1: "Each week, brainstorming starts in the `brainstorming/` folder"
     2: "Files can be any format (.md, .txt, or other) for maximum flexibility"
     3: "This week's work stays in `brainstorming/` until finalized"
-    4: "Once finalized, content is structured and moved to `README.md`"
+    4: "Once finalized, content is structured and moved to `FOOD-OF-THE-WEEK.md`"
     5: "Old brainstorming files can be kept for reference or cleared week-to-week"
 
 folder_structure:
@@ -53,10 +53,10 @@ finalization_process:
   trigger: "When weekly plan is decided and ready to publish"
   
   steps:
-    - "Structure content according to README standards"
+    - "Structure content according to FOOD-OF-THE-WEEK.md standards"
     - "Format grocery list with proper categories"
     - "Write meal descriptions in final form"
-    - "Move finalized content to README.md"
+    - "Move finalized content to FOOD-OF-THE-WEEK.md"
     - "Optionally clean up or archive brainstorming files"
 
 maintenance:
@@ -79,7 +79,7 @@ actions:
   - type: guide
     when: "User is finalizing the week"
     do:
-      - "Help structure brainstorming content for README"
+      - "Help structure brainstorming content for FOOD-OF-THE-WEEK.md"
       - "Ensure all required sections are present"
       - "Apply proper formatting standards"
   
@@ -87,8 +87,9 @@ actions:
     when: "User asks about file organization"
     do:
       - "Explain brainstorming/ is for work-in-progress"
-      - "README.md is for finalized, published content"
+      - "FOOD-OF-THE-WEEK.md is for finalized, published content"
       - "Archive/ is for historical weekly plans"
+      - "README.md is for project documentation"
 
 examples:
   - scenario: "Starting a new week"
@@ -106,10 +107,10 @@ examples:
       User: "This looks good, let's publish it"
       
       AI Actions:
-      - Format content according to README standards
+      - Format content according to FOOD-OF-THE-WEEK.md standards
       - Structure grocery list with categories
       - Write final meal descriptions
-      - Update README.md with complete plan
+      - Update FOOD-OF-THE-WEEK.md with complete plan
 
 metadata:
   priority: medium
