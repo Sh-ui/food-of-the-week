@@ -89,9 +89,11 @@ Cut the cabbage into thick wedges, cutting through the core/root end so each wed
 
 Preheat oven to 500°F. Spread the sliced onion rings on a baking sheet with the white sweet potatoes from the bag. Toss everything with grapeseed oil and black pepper. Roast until caramelized and getting good color, about 15-20 minutes.
 
+Once they look roasted, change the oven temp to warm, and add the plates to the oven alongside the veggies to keep them both warm until the chef gets home.
+
 **Chef - Finishing & Plating:**
 
-While vegetables roast, heat a large skillet over medium-high heat. Char the cabbage wedges on both sides until deeply golden and crispy, about 3-4 minutes per side. Remove and set aside.
+Heat a large skillet over medium-high heat. Char the cabbage wedges on both sides until deeply golden and crispy, about 3-4 minutes per side. Remove and set aside.
 
 Remove steaks from sous vide bag, reserving ALL the juices. Pat steaks completely dry. Using a kitchen torch, sear all sides until a nice crust forms.
 
@@ -119,7 +121,7 @@ To plate: Arrange the roasted onions and sweet potato chunks on the plate. Fan t
 
 Start the brown rice cooking according to package directions (or use a rice cooker).
 
-Slice the sirloin flap steak thinly against the grain. Season with salt and pepper.
+Slice the sirloin flap steak thinly against the grain. Season with salt and pepper. You can marinate briefly in soy sauce, a touch of cornstarch, and sesame oil if you have 10 minutes.
 
 Trim the woody ends off the asparagus and cut into 2-inch pieces. Slice the shallot thinly.
 

@@ -17,6 +17,9 @@ export interface Meal {
   ingredients?: string;
   description?: string;
   instructions?: string;
+  alreadyPrepped?: string[];
+  sousChef?: string;
+  chefFinishing?: string;
   content: string;
 }
 
@@ -53,6 +56,10 @@ export async function parseReadme(): Promise<WeekPlan> {
   let mealContent: string[] = [];
   let capturingInstructions = false;
   let instructionsContent: string[] = [];
+  let currentPhase: 'none' | 'already-prepped' | 'sous-chef' | 'chef-finishing' = 'none';
+  let alreadyPreppedItems: string[] = [];
+  let sousChefContent: string[] = [];
+  let chefFinishingContent: string[] = [];
   
   for (let i = 0; i < tokens.length; i++) {
     const token = tokens[i];
@@ -70,12 +77,25 @@ export async function parseReadme(): Promise<WeekPlan> {
         if (instructionsContent.length > 0) {
           currentMeal.instructions = instructionsContent.join('\n\n');
         }
+        if (alreadyPreppedItems.length > 0) {
+          currentMeal.alreadyPrepped = alreadyPreppedItems;
+        }
+        if (sousChefContent.length > 0) {
+          currentMeal.sousChef = sousChefContent.join('\n\n');
+        }
+        if (chefFinishingContent.length > 0) {
+          currentMeal.chefFinishing = chefFinishingContent.join('\n\n');
+        }
         currentMeal.content = mealContent.join('\n');
         meals.push(currentMeal);
         currentMeal = null;
         mealContent = [];
         instructionsContent = [];
         capturingInstructions = false;
+        currentPhase = 'none';
+        alreadyPreppedItems = [];
+        sousChefContent = [];
+        chefFinishingContent = [];
       }
       
       const heading = token.text;
@@ -102,6 +122,10 @@ export async function parseReadme(): Promise<WeekPlan> {
         };
         capturingInstructions = false;
         instructionsContent = [];
+        currentPhase = 'none';
+        alreadyPreppedItems = [];
+        sousChefContent = [];
+        chefFinishingContent = [];
         continue;
       }
       
@@ -153,10 +177,26 @@ export async function parseReadme(): Promise<WeekPlan> {
         } else if (text.startsWith('**Instructions:**')) {
           capturingInstructions = true;
           // Don't add the label itself, just start capturing subsequent content
-        } else if (capturingInstructions) {
-          // Capture all paragraphs after Instructions label
+        } else if (text.startsWith('**Already Prepped:**')) {
+          currentPhase = 'already-prepped';
+        } else if (text.startsWith('**Sous Chef')) {
+          currentPhase = 'sous-chef';
+        } else if (text.startsWith('**Chef - Finishing')) {
+          currentPhase = 'chef-finishing';
+        } else if (capturingInstructions && currentPhase === 'none') {
+          // Legacy format: Capture all paragraphs after Instructions label
           instructionsContent.push(text);
+        } else if (currentPhase === 'sous-chef') {
+          sousChefContent.push(text);
+        } else if (currentPhase === 'chef-finishing') {
+          chefFinishingContent.push(text);
         }
+      }
+      
+      // Process list items for Already Prepped phase
+      if (token.type === 'list' && currentPhase === 'already-prepped') {
+        const items = extractListItems(token as Tokens.List);
+        alreadyPreppedItems.push(...items);
       }
       
       mealContent.push(tokenMarkdown);
@@ -172,6 +212,15 @@ export async function parseReadme(): Promise<WeekPlan> {
   if (currentMeal) {
     if (instructionsContent.length > 0) {
       currentMeal.instructions = instructionsContent.join('\n\n');
+    }
+    if (alreadyPreppedItems.length > 0) {
+      currentMeal.alreadyPrepped = alreadyPreppedItems;
+    }
+    if (sousChefContent.length > 0) {
+      currentMeal.sousChef = sousChefContent.join('\n\n');
+    }
+    if (chefFinishingContent.length > 0) {
+      currentMeal.chefFinishing = chefFinishingContent.join('\n\n');
     }
     currentMeal.content = mealContent.join('\n');
     meals.push(currentMeal);

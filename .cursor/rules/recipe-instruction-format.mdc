@@ -1,0 +1,188 @@
+---
+description: Recipe Instruction Format - Three-Phase Workflow
+globs: README.md, brainstorming/**
+alwaysApply: true
+---
+
+# Recipe Instruction Format
+
+Guidelines for structuring recipe instructions in the three-phase workflow format that matches the household's actual cooking process.
+
+<rule>
+name: recipe-instruction-format
+description: Three-phase instruction structure for meal recipes
+
+philosophy:
+  context: "Recipes should reflect the real workflow - what's prepped ahead, what helpers do, and what the primary cook finishes"
+  goal: "Clear delegation and timing for efficient weeknight cooking"
+
+instruction_structure:
+  phases:
+    already_prepped:
+      label: "**Already Prepped:**"
+      format: "Bulleted list with ' - ' prefix"
+      purpose: "Items prepared in advance (often sous vide, vacuum sealed, or batch prepped)"
+      examples:
+        - "Proteins: vacuum sealed and seasoned"
+        - "Vegetables: pre-cooked sous vide and ready to warm"
+        - "Dough: resting in fridge"
+        - "Components: sauces made ahead, items thawed"
+    
+    sous_chef:
+      label: "**Sous Chef - Prep:**" or "**Sous Chef - Cooking:**"
+      format: "Paragraph instructions"
+      purpose: "Tasks family members can do before primary cook arrives"
+      timing: "Done while primary cook is at work or occupied"
+      examples:
+        - "Starting sous vide baths with remote temperature control"
+        - "Chopping vegetables"
+        - "Starting rice or bread baking"
+        - "Basic cooking tasks for simple dishes"
+      delegation_notes:
+        - "Instructions should be clear enough for any family member"
+        - "Use specific measurements and timing"
+        - "Note when Chef will set temperature remotely"
+    
+    chef_finishing:
+      label: "**Chef - Finishing & Plating:**"
+      format: "Paragraph instructions"
+      purpose: "Final cooking, searing, sauce-making, and plating"
+      timing: "Done by primary cook when home"
+      techniques:
+        - "Torch-searing sous vide proteins"
+        - "High-heat finishing (charring, crisping)"
+        - "Sauce reduction and glazing"
+        - "Final assembly and plating"
+
+formatting_rules:
+  already_prepped:
+    - "Use bulleted list format"
+    - "Start each item with ' - ' (space, dash, space)"
+    - "Be specific about storage location and state"
+    - "Example: ' - Flat iron steaks have been seasoned and vacuum sealed. Stored in fridge.'"
+  
+  sous_chef:
+    - "Use clear, actionable paragraphs"
+    - "Specify temperatures when using sous vide"
+    - "Note when Chef will control remotely"
+    - "Be explicit about cutting techniques (e.g., 'through the core so wedges hold together')"
+    - "Include timing when relevant"
+  
+  chef_finishing:
+    - "Write in active, direct style"
+    - "Include sensory cues (golden, crispy, reduced, thickened)"
+    - "Describe plating composition"
+    - "Note any saucing or garnishing"
+
+recipe_patterns:
+  sous_vide_protein:
+    already_prepped: "Protein vacuum sealed and seasoned"
+    sous_chef: "Drop in sous vide bath (temperature set remotely), prep vegetables"
+    chef: "Torch-sear protein, char vegetables, make sauce from bag juices, plate"
+  
+  one_pot_meal:
+    already_prepped: "Proteins thawed"
+    sous_chef: "Complete cooking of entire dish"
+    chef: "Final seasoning check, serve/plate"
+  
+  complex_plate:
+    already_prepped: "Multiple components pre-cooked or prepped"
+    sous_chef: "Warm components, prep fresh elements, start breads/grains"
+    chef: "Final cooking techniques, sauce making, composed plating"
+
+technique_vocabulary:
+  sous_vide:
+    - "Drop vacuum-sealed [item] into sous vide bath"
+    - "Chef will set temperature remotely from the app"
+    - "Remove from bag, reserve juices"
+    - "Pat completely dry before searing"
+  
+  finishing:
+    - "Using a kitchen torch, sear until crust forms"
+    - "Char on both sides until deeply golden"
+    - "Reduce over medium-high heat until thickened into a glaze"
+    - "Scraping up browned bits"
+  
+  plating:
+    - "Arrange as a bed/base"
+    - "Nestle [item] alongside/on top"
+    - "Fan sliced [protein]"
+    - "Drizzle [sauce] over"
+    - "Scatter [garnish] on top"
+
+linking_external_recipes:
+  when: "For complex sub-recipes (bread, specialty techniques)"
+  format: "[Recipe Name](URL)"
+  example: "[King Arthur No-Knead Rustic Whole Wheat Bread Instructions](https://www.kingarthurbaking.com/recipes/)"
+  placement: "Within Sous Chef section where timing is relevant"
+
+special_notes:
+  cutting_instructions:
+    importance: "Be specific about technique when structure matters"
+    examples:
+      - "Cut through the core/root end so each wedge holds together"
+      - "Slice against the grain"
+      - "½-inch thick rings"
+  
+  remote_control:
+    sous_vide_apps: "Note when Chef sets temperature remotely"
+    timing: "Allows sous chef to focus on prep without worrying about settings"
+
+actions:
+  - type: enforce
+    when: "Writing or editing meal instructions"
+    do:
+      - "Use all three phases for every recipe"
+      - "Format Already Prepped as bulleted list"
+      - "Format Sous Chef and Chef sections as paragraphs"
+      - "Be specific about delegation boundaries"
+      - "Include sensory and visual cues"
+  
+  - type: guide
+    when: "Brainstorming new recipes"
+    do:
+      - "Think through the workflow first"
+      - "Identify what can be prepped ahead"
+      - "Consider what family members can handle"
+      - "Reserve final techniques for primary cook"
+      - "Plan for minimal equipment/dish usage"
+  
+  - type: suggest
+    when: "User describes a recipe conversationally"
+    do:
+      - "Parse the workflow into three phases"
+      - "Clarify delegation points"
+      - "Add specific timing and temperatures"
+      - "Format according to standards"
+
+examples:
+  minimal_delegation:
+    name: "One Pot Pasta"
+    already_prepped: "Just thawed protein"
+    sous_chef: "Complete cooking"
+    chef: "Serve and plate"
+  
+  moderate_delegation:
+    name: "Stir Fry"
+    already_prepped: "Thawed protein"
+    sous_chef: "Start rice, prep all ingredients (slice, chop)"
+    chef: "High-heat cooking, saucing, plating"
+  
+  advanced_delegation:
+    name: "Sous Vide Steak Dinner"
+    already_prepped: "Steaks and vegetables vacuum sealed and pre-cooked"
+    sous_chef: "Start sous vide baths, roast vegetables, prep garnishes"
+    chef: "Torch-sear protein, char vegetables, make sauce, composed plating"
+  
+  complex_multitasking:
+    name: "Chicken Fricassée"
+    already_prepped: "Spatchcocked chicken, cooked beets, bread dough"
+    sous_chef: "Sous vide proteins, bake bread, chop greens, prep garnish"
+    chef: "Roast chicken to crisp skin, make sauce, shred meat, composed plating"
+
+metadata:
+  priority: high
+  version: 1.0
+  scope: All recipe instructions in README.md and brainstorming files
+
+</rule>

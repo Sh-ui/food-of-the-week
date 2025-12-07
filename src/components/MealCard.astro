@@ -39,7 +39,43 @@ const { meal } = Astro.props;
     )}
   </div>
   
-  {meal.instructions && (
+  {/* Three-Phase Instructions */}
+  {(meal.alreadyPrepped || meal.sousChef || meal.chefFinishing) ? (
+    <div class="meal-instructions-phased">
+      {meal.alreadyPrepped && meal.alreadyPrepped.length > 0 && (
+        <div class="instruction-phase already-prepped">
+          <h3>Already Prepped</h3>
+          <ul>
+            {meal.alreadyPrepped.map((item: string) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+      
+      {meal.sousChef && (
+        <div class="instruction-phase sous-chef">
+          <h3>Sous Chef - Prep</h3>
+          <div class="phase-content">
+            {meal.sousChef.split('\n\n').map((paragraph: string) => (
+              <p>{paragraph}</p>
+            ))}
+          </div>
+        </div>
+      )}
+      
+      {meal.chefFinishing && (
+        <div class="instruction-phase chef-finishing">
+          <h3>Chef - Finishing & Plating</h3>
+          <div class="phase-content">
+            {meal.chefFinishing.split('\n\n').map((paragraph: string) => (
+              <p>{paragraph}</p>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  ) : meal.instructions && (
     <div class="meal-instructions">
       <h3>Instructions</h3>
       <div class="instructions-content">
@@ -94,6 +130,7 @@ const { meal } = Astro.props;
     margin-top: var(--spacing-lg);
   }
 
+  /* Legacy instructions format */
   .meal-instructions h3 {
     color: var(--color-primary);
     margin-bottom: var(--spacing-md);
@@ -116,6 +153,76 @@ const { meal } = Astro.props;
 
   .meal-instructions :global(li) {
     margin-bottom: var(--spacing-sm);
+  }
+
+  /* Three-phase instructions format */
+  .meal-instructions-phased {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-lg);
+  }
+
+  .instruction-phase {
+    padding: var(--spacing-md);
+    border-radius: 6px;
+    border-left: 4px solid;
+  }
+
+  .instruction-phase h3 {
+    margin-top: 0;
+    margin-bottom: var(--spacing-md);
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  .instruction-phase ul {
+    list-style: disc;
+    margin-left: var(--spacing-lg);
+  }
+
+  .instruction-phase li {
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.6;
+  }
+
+  .phase-content p {
+    margin-bottom: var(--spacing-md);
+    line-height: 1.6;
+  }
+
+  .phase-content p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Already Prepped - Blue/Info style */
+  .already-prepped {
+    background: #e3f2fd;
+    border-left-color: #1976d2;
+  }
+
+  .already-prepped h3 {
+    color: #1565c0;
+  }
+
+  /* Sous Chef - Purple/Delegation style */
+  .sous-chef {
+    background: #f3e5f5;
+    border-left-color: #7b1fa2;
+  }
+
+  .sous-chef h3 {
+    color: #6a1b9a;
+  }
+
+  /* Chef Finishing - Green/Active style */
+  .chef-finishing {
+    background: #e8f5e9;
+    border-left-color: #388e3c;
+  }
+
+  .chef-finishing h3 {
+    color: #2e7d32;
   }
 
   @media (max-width: 768px) {
