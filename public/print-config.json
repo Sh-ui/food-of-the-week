@@ -1,0 +1,47 @@
+{
+  "page": {
+    "margins": {
+      "top": "0.5in",
+      "right": "0.5in",
+      "bottom": "0.5in",
+      "left": "0.5in"
+    }
+  },
+  "typography": {
+    "bodyFontFamily": "Work Sans, -apple-system, sans-serif",
+    "headingFontFamily": "Aleo, Georgia, serif",
+    "bodyFontSize": "11pt",
+    "lineHeight": 1.5,
+    "h1Size": "24pt",
+    "h2Size": "18pt",
+    "h3Size": "14pt"
+  },
+  "spacing": {
+    "sectionGap": "16pt",
+    "paragraphGap": "8pt",
+    "listItemGap": "4pt",
+    "categoryGap": "12pt"
+  },
+  "colors": {
+    "text": "#000000",
+    "border": "#cccccc",
+    "mutedText": "#666666",
+    "headingColor": "#333333"
+  },
+  "checkbox": {
+    "size": "12pt",
+    "borderWidth": "1pt",
+    "checkedSymbol": "✓",
+    "globalCheckedSymbol": "●"
+  },
+  "groceryList": {
+    "columns": 1,
+    "showCategories": true,
+    "categoryHeadingSize": "14pt"
+  },
+  "meals": {
+    "pageBreakBetween": true,
+    "showPhaseColors": false,
+    "instructionIndent": "0pt"
+  }
+}

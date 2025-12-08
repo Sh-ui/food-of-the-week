@@ -23,6 +23,371 @@ const buttonClass = `button button-${variant} print-button`;
 </button>
 
 <script>
+  interface PrintConfig {
+    page: {
+      margins: { top: string; right: string; bottom: string; left: string };
+    };
+    typography: {
+      bodyFontFamily: string;
+      headingFontFamily: string;
+      bodyFontSize: string;
+      lineHeight: number;
+      h1Size: string;
+      h2Size: string;
+      h3Size: string;
+    };
+    spacing: {
+      sectionGap: string;
+      paragraphGap: string;
+      listItemGap: string;
+      categoryGap: string;
+    };
+    colors: {
+      text: string;
+      border: string;
+      mutedText: string;
+      headingColor: string;
+    };
+    checkbox: {
+      size: string;
+      borderWidth: string;
+      checkedSymbol: string;
+      globalCheckedSymbol: string;
+    };
+    groceryList: {
+      columns: number;
+      showCategories: boolean;
+      categoryHeadingSize: string;
+    };
+    meals: {
+      pageBreakBetween: boolean;
+      showPhaseColors: boolean;
+      instructionIndent: string;
+    };
+  }
+
+  interface GroceryItem {
+    text: string;
+    globallyChecked: boolean;
+  }
+
+  interface GroceryCategory {
+    name: string;
+    items: GroceryItem[];
+  }
+
+  interface Meal {
+    id: string;
+    number: number;
+    title: string;
+    fullTitle: string;
+    cooked: boolean;
+    protein?: string;
+    ingredients?: string;
+    description?: string;
+    instructions?: string;
+    alreadyPrepped?: string[];
+    sousChef?: string;
+    chefFinishing?: string;
+  }
+
+  interface WeekPlan {
+    weekTitle: string;
+    groceryList: GroceryCategory[];
+    meals: Meal[];
+  }
+
+  let printConfig: PrintConfig | null = null;
+
+  /**
+   * Load print configuration
+   */
+  async function loadPrintConfig(): Promise<PrintConfig> {
+    if (printConfig) return printConfig;
+    
+    try {
+      const baseUrl = document.querySelector('link[rel="icon"]')?.getAttribute('href')?.replace('favicon.svg', '') || '/';
+      const response = await fetch(`${baseUrl}print-config.json`);
+      printConfig = await response.json();
+      return printConfig!;
+    } catch (error) {
+      console.warn('Could not load print config, using defaults');
+      return getDefaultConfig();
+    }
+  }
+
+  function getDefaultConfig(): PrintConfig {
+    return {
+      page: { margins: { top: '0.5in', right: '0.5in', bottom: '0.5in', left: '0.5in' } },
+      typography: {
+        bodyFontFamily: 'Work Sans, sans-serif',
+        headingFontFamily: 'Aleo, Georgia, serif',
+        bodyFontSize: '11pt',
+        lineHeight: 1.5,
+        h1Size: '24pt',
+        h2Size: '18pt',
+        h3Size: '14pt'
+      },
+      spacing: { sectionGap: '16pt', paragraphGap: '8pt', listItemGap: '4pt', categoryGap: '12pt' },
+      colors: { text: '#000000', border: '#cccccc', mutedText: '#666666', headingColor: '#333333' },
+      checkbox: { size: '12pt', borderWidth: '1pt', checkedSymbol: '✓', globalCheckedSymbol: '●' },
+      groceryList: { columns: 1, showCategories: true, categoryHeadingSize: '14pt' },
+      meals: { pageBreakBetween: true, showPhaseColors: false, instructionIndent: '0pt' }
+    };
+  }
+
+  /**
+   * Get week plan data from the page
+   */
+  function getWeekPlanData(): WeekPlan {
+    const weekTitle = document.querySelector('h1')?.textContent || 'Weekly Meal Plan';
+    
+    // Extract grocery list data from DOM data attributes
+    const groceryList: GroceryCategory[] = [];
+    const grocerySection = document.querySelector('#print-section-grocery-list');
+    if (grocerySection) {
+      const categories = grocerySection.querySelectorAll('.grocery-category');
+      categories.forEach(cat => {
+        const name = cat.querySelector('h3')?.textContent || '';
+        const items: GroceryItem[] = [];
+        cat.querySelectorAll('.grocery-item').forEach(item => {
+          const checkbox = item.querySelector('input[type="checkbox"]') as HTMLInputElement;
+          const text = item.querySelector('.item-text')?.textContent || '';
+          const globallyChecked = checkbox?.dataset.globallyChecked === 'true';
+          items.push({ text, globallyChecked });
+        });
+        groceryList.push({ name, items });
+      });
+    }
+
+    // Extract meal data from DOM
+    const meals: Meal[] = [];
+    const mealSections = document.querySelectorAll('.meal[data-section-type="meal"]');
+    mealSections.forEach(mealSection => {
+      const id = mealSection.id.replace('print-section-', '');
+      const cooked = mealSection.getAttribute('data-cooked') === 'true';
+      const fullTitle = mealSection.querySelector('h2')?.textContent || '';
+      const match = fullTitle.match(/^Meal (\d+):\s*(.+)$/);
+      const number = match ? parseInt(match[1], 10) : 0;
+      const title = match ? match[2] : fullTitle;
+
+      // Extract fields
+      const fields = mealSection.querySelectorAll('.meal-field');
+      let protein = '', ingredients = '', description = '';
+      fields.forEach(field => {
+        const label = field.querySelector('strong')?.textContent || '';
+        const text = field.textContent?.replace(label, '').trim() || '';
+        if (label.includes('Protein')) protein = text;
+        if (label.includes('Ingredients')) ingredients = text;
+        if (label.includes('Description')) description = text;
+      });
+
+      // Extract instructions
+      const alreadyPrepped: string[] = [];
+      const preppedList = mealSection.querySelector('.already-prepped ul');
+      if (preppedList) {
+        preppedList.querySelectorAll('li').forEach(li => {
+          alreadyPrepped.push(li.textContent || '');
+        });
+      }
+
+      let sousChef = '';
+      const sousChefSection = mealSection.querySelector('.sous-chef .phase-content');
+      if (sousChefSection) {
+        const paragraphs: string[] = [];
+        sousChefSection.querySelectorAll('p').forEach(p => paragraphs.push(p.textContent || ''));
+        sousChef = paragraphs.join('\n\n');
+      }
+
+      let chefFinishing = '';
+      const chefSection = mealSection.querySelector('.chef-finishing .phase-content');
+      if (chefSection) {
+        const paragraphs: string[] = [];
+        chefSection.querySelectorAll('p').forEach(p => paragraphs.push(p.textContent || ''));
+        chefFinishing = paragraphs.join('\n\n');
+      }
+
+      meals.push({
+        id, number, title, fullTitle, cooked, protein, ingredients, description,
+        alreadyPrepped: alreadyPrepped.length > 0 ? alreadyPrepped : undefined,
+        sousChef: sousChef || undefined,
+        chefFinishing: chefFinishing || undefined
+      });
+    });
+
+    return { weekTitle, groceryList, meals };
+  }
+
+  /**
+   * Generate print-ready HTML for grocery list
+   */
+  function generateGroceryListHTML(groceryList: GroceryCategory[], config: PrintConfig): string {
+    let html = `<div class="print-grocery-list">
+      <h2 style="font-family: ${config.typography.headingFontFamily}; font-size: ${config.typography.h2Size}; color: ${config.colors.headingColor}; margin-bottom: ${config.spacing.sectionGap};">Grocery List</h2>`;
+    
+    groceryList.forEach(category => {
+      html += `<div class="print-category" style="margin-bottom: ${config.spacing.categoryGap};">`;
+      if (config.groceryList.showCategories) {
+        html += `<h3 style="font-family: ${config.typography.headingFontFamily}; font-size: ${config.groceryList.categoryHeadingSize}; color: ${config.colors.headingColor}; margin-bottom: ${config.spacing.listItemGap};">${category.name}</h3>`;
+      }
+      html += `<ul style="list-style: none; margin: 0; padding: 0;">`;
+      category.items.forEach(item => {
+        const checkboxStyle = `display: inline-block; width: ${config.checkbox.size}; height: ${config.checkbox.size}; border: ${config.checkbox.borderWidth} solid ${config.colors.text}; margin-right: 8pt; vertical-align: middle; text-align: center; line-height: ${config.checkbox.size};`;
+        const symbol = item.globallyChecked ? config.checkbox.globalCheckedSymbol : '';
+        const textStyle = item.globallyChecked ? `color: ${config.colors.mutedText};` : `color: ${config.colors.text};`;
+        html += `<li style="margin-bottom: ${config.spacing.listItemGap}; ${textStyle}">
+          <span style="${checkboxStyle}">${symbol}</span>
+          ${item.text}
+        </li>`;
+      });
+      html += `</ul></div>`;
+    });
+    
+    html += `</div>`;
+    return html;
+  }
+
+  /**
+   * Generate print-ready HTML for a meal
+   */
+  function generateMealHTML(meal: Meal, config: PrintConfig): string {
+    const textColor = meal.cooked ? config.colors.mutedText : config.colors.text;
+    const headingColor = meal.cooked ? config.colors.mutedText : config.colors.headingColor;
+    
+    let html = `<div class="print-meal" style="color: ${textColor}; ${config.meals.pageBreakBetween ? 'page-break-after: always;' : ''}">
+      <h2 style="font-family: ${config.typography.headingFontFamily}; font-size: ${config.typography.h2Size}; color: ${headingColor}; margin-bottom: ${config.spacing.sectionGap};">${meal.fullTitle}</h2>
+      <div class="meal-details" style="border: 1px solid ${config.colors.border}; padding: 10pt; margin-bottom: ${config.spacing.sectionGap};">`;
+    
+    if (meal.protein) {
+      html += `<p style="margin-bottom: ${config.spacing.listItemGap};"><strong>Protein:</strong> ${meal.protein}</p>`;
+    }
+    if (meal.ingredients) {
+      html += `<p style="margin-bottom: ${config.spacing.listItemGap};"><strong>Ingredients:</strong> ${meal.ingredients}</p>`;
+    }
+    if (meal.description) {
+      html += `<p style="margin-bottom: 0;"><strong>Description:</strong> ${meal.description}</p>`;
+    }
+    
+    html += `</div>`;
+
+    // Instructions
+    if (meal.alreadyPrepped && meal.alreadyPrepped.length > 0) {
+      html += `<div style="margin-bottom: ${config.spacing.sectionGap};">
+        <h3 style="font-family: ${config.typography.headingFontFamily}; font-size: ${config.typography.h3Size}; color: ${headingColor}; margin-bottom: ${config.spacing.listItemGap};">Already Prepped</h3>
+        <ul style="margin-left: 20pt;">`;
+      meal.alreadyPrepped.forEach(item => {
+        html += `<li style="margin-bottom: ${config.spacing.listItemGap};">${item}</li>`;
+      });
+      html += `</ul></div>`;
+    }
+
+    if (meal.sousChef) {
+      html += `<div style="margin-bottom: ${config.spacing.sectionGap};">
+        <h3 style="font-family: ${config.typography.headingFontFamily}; font-size: ${config.typography.h3Size}; color: ${headingColor}; margin-bottom: ${config.spacing.listItemGap};">Sous Chef - Prep</h3>`;
+      meal.sousChef.split('\n\n').forEach(p => {
+        html += `<p style="margin-bottom: ${config.spacing.paragraphGap};">${p}</p>`;
+      });
+      html += `</div>`;
+    }
+
+    if (meal.chefFinishing) {
+      html += `<div style="margin-bottom: ${config.spacing.sectionGap};">
+        <h3 style="font-family: ${config.typography.headingFontFamily}; font-size: ${config.typography.h3Size}; color: ${headingColor}; margin-bottom: ${config.spacing.listItemGap};">Chef - Finishing & Plating</h3>`;
+      meal.chefFinishing.split('\n\n').forEach(p => {
+        html += `<p style="margin-bottom: ${config.spacing.paragraphGap};">${p}</p>`;
+      });
+      html += `</div>`;
+    }
+
+    html += `</div>`;
+    return html;
+  }
+
+  /**
+   * Generate full print document
+   */
+  function generatePrintDocument(weekPlan: WeekPlan, config: PrintConfig, target: string): string {
+    const { margins } = config.page;
+    const pageStyle = `@page { margin: ${margins.top} ${margins.right} ${margins.bottom} ${margins.left}; }`;
+    
+    let content = '';
+    
+    if (target === 'all') {
+      content += `<h1 style="font-family: ${config.typography.headingFontFamily}; font-size: ${config.typography.h1Size}; color: ${config.colors.headingColor}; margin-bottom: ${config.spacing.sectionGap}; text-align: center;">${weekPlan.weekTitle}</h1>`;
+      content += generateGroceryListHTML(weekPlan.groceryList, config);
+      content += `<div style="page-break-after: always;"></div>`;
+      weekPlan.meals.forEach(meal => {
+        content += generateMealHTML(meal, config);
+      });
+    } else if (target === 'grocery-list') {
+      content += `<h1 style="font-family: ${config.typography.headingFontFamily}; font-size: ${config.typography.h1Size}; color: ${config.colors.headingColor}; margin-bottom: ${config.spacing.sectionGap};">${weekPlan.weekTitle}</h1>`;
+      content += generateGroceryListHTML(weekPlan.groceryList, config);
+    } else if (target.startsWith('meal-')) {
+      const mealNumber = parseInt(target.replace('meal-', ''), 10);
+      const meal = weekPlan.meals.find(m => m.number === mealNumber);
+      if (meal) {
+        content += generateMealHTML(meal, config);
+      }
+    }
+
+    return `<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Print - ${weekPlan.weekTitle}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    ${pageStyle}
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: ${config.typography.bodyFontFamily};
+      font-size: ${config.typography.bodyFontSize};
+      line-height: ${config.typography.lineHeight};
+      color: ${config.colors.text};
+      padding: 0;
+    }
+    strong { font-weight: 600; }
+    .print-meal:last-child { page-break-after: auto; }
+  </style>
+</head>
+<body>
+  ${content}
+</body>
+</html>`;
+  }
+
+  /**
+   * Print using a new window
+   */
+  async function printSection(sectionId: string): Promise<void> {
+    const config = await loadPrintConfig();
+    const weekPlan = getWeekPlanData();
+    const printHTML = generatePrintDocument(weekPlan, config, sectionId);
+    
+    // Open print window
+    const printWindow = window.open('', '_blank', 'width=800,height=600');
+    if (!printWindow) {
+      console.error('Could not open print window. Please allow popups.');
+      // Fallback to old method
+      document.body.setAttribute('data-print-target', sectionId);
+      window.print();
+      return;
+    }
+    
+    printWindow.document.write(printHTML);
+    printWindow.document.close();
+    
+    // Wait for fonts to load then print
+    printWindow.onload = () => {
+      setTimeout(() => {
+        printWindow.print();
+        printWindow.close();
+      }, 250);
+    };
+  }
+
   /**
    * Initialize print buttons
    */
@@ -39,25 +404,6 @@ const buttonClass = `button button-${variant} print-button`;
     });
   }
 
-  /**
-   * Print a specific section or the entire page
-   */
-  function printSection(sectionId: string): void {
-    // Set the target section
-    document.body.setAttribute('data-print-target', sectionId);
-    
-    // Trigger print dialog
-    window.print();
-    
-    // Clean up after print dialog closes
-    const cleanup = () => {
-      document.body.removeAttribute('data-print-target');
-      window.removeEventListener('afterprint', cleanup);
-    };
-    
-    window.addEventListener('afterprint', cleanup);
-  }
-
   // Initialize on page load
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initializePrintButtons);
@@ -65,4 +411,3 @@ const buttonClass = `button button-${variant} print-button`;
     initializePrintButtons();
   }
 </script>
-

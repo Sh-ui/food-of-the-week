@@ -1,4 +1,6 @@
 /* Print Styles for Food of the Week */
+/* Note: Primary print styling is now handled by PrintButton.astro using print-config.json */
+/* This CSS serves as a fallback for browsers that block popups */
 
 @media print {
   /* Hide all interactive and navigation elements */
@@ -6,8 +8,8 @@
   .print-buttons,
   button,
   nav,
-  header,
-  footer {
+  .site-footer,
+  .cooked-indicator {
     display: none !important;
   }
 
@@ -17,9 +19,16 @@
     padding: 0;
     background: white;
     color: black;
+    font-family: 'Work Sans', -apple-system, sans-serif;
     font-size: 11pt;
-    line-height: 1.4;
+    line-height: 1.5;
     width: 100%;
+  }
+
+  /* Headings use Aleo */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Aleo', Georgia, serif;
+    color: #333 !important;
   }
 
   /* Hide all sections by default when printing specific sections */
@@ -33,7 +42,8 @@
   body[data-print-target="meal-2"] #print-section-meal-2,
   body[data-print-target="meal-3"] #print-section-meal-3,
   body[data-print-target="meal-4"] #print-section-meal-4,
-  body[data-print-target="meal-5"] #print-section-meal-5 {
+  body[data-print-target="meal-5"] #print-section-meal-5,
+  body[data-print-target="meal-6"] #print-section-meal-6 {
     display: block !important;
   }
 
@@ -61,6 +71,8 @@
   /* Avoid breaking within key elements */
   .meal-details,
   .meal-instructions,
+  .meal-instructions-phased,
+  .instruction-phase,
   .grocery-category {
     page-break-inside: avoid;
   }
@@ -70,7 +82,6 @@
     font-size: 24pt;
     margin-bottom: 12pt;
     line-height: 1.2;
-    color: #000;
   }
 
   h2 {
@@ -78,7 +89,6 @@
     margin-top: 8pt;
     margin-bottom: 10pt;
     line-height: 1.2;
-    color: #000;
   }
 
   h3 {
@@ -86,7 +96,6 @@
     margin-top: 8pt;
     margin-bottom: 8pt;
     line-height: 1.2;
-    color: #000;
   }
 
   p {
@@ -114,7 +123,7 @@
     margin-bottom: 12pt;
   }
 
-  /* Checkbox styling for print */
+  /* Checkbox styling for print - base */
   input[type="checkbox"] {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -125,14 +134,49 @@
     margin-right: 6pt;
     position: relative;
     top: 2pt;
+    background: white;
   }
 
-  input[type="checkbox"]:checked::after {
+  /* Local checkbox - checked with checkmark */
+  .grocery-item.locally-checked input[type="checkbox"]::after {
     content: "✓";
     position: absolute;
     top: -2pt;
     left: 2pt;
     font-size: 10pt;
+    color: #000;
+  }
+
+  /* Global checkbox - filled circle inside */
+  .grocery-item.globally-checked input[type="checkbox"]::after {
+    content: "●";
+    position: absolute;
+    top: -1pt;
+    left: 2pt;
+    font-size: 8pt;
+    color: #666;
+  }
+
+  /* Global checkbox text - greyed but not crossed out */
+  .grocery-item.globally-checked .item-text {
+    color: #666 !important;
+    text-decoration: none !important;
+  }
+
+  /* Local checkbox text - crossed out */
+  .grocery-item.locally-checked .item-text {
+    text-decoration: line-through;
+    color: #666 !important;
+  }
+
+  /* Cooked meals - greyed out */
+  .meal-cooked,
+  .meal-cooked * {
+    color: #888 !important;
+  }
+
+  .meal-cooked .meal-details {
+    border-color: #ccc !important;
   }
 
   /* Grocery list formatting */
@@ -172,8 +216,21 @@
     margin-bottom: 10pt;
   }
 
-  .meal-instructions {
+  .meal-instructions,
+  .meal-instructions-phased {
     margin-top: 10pt;
+  }
+
+  /* Instruction phases - remove colors for print */
+  .instruction-phase {
+    background: transparent !important;
+    border-left: 2pt solid #666 !important;
+    padding: 8pt;
+    margin-bottom: 10pt;
+  }
+
+  .instruction-phase h3 {
+    color: #333 !important;
   }
 
   /* List formatting */
@@ -218,6 +275,7 @@
   body[data-print-target="grocery-list"] #print-section-grocery-list::before {
     content: "Grocery List";
     display: block;
+    font-family: 'Aleo', Georgia, serif;
     font-size: 24pt;
     font-weight: bold;
     margin-bottom: 12pt;
@@ -230,11 +288,6 @@
   /* Page margins */
   @page {
     margin: 0.5in;
-  }
-
-  /* Force text to stay black */
-  * {
-    color: #000 !important;
   }
 
   /* Keep semantic colors for borders only */

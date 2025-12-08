@@ -4,9 +4,15 @@
   --color-accent: #F08A4B;
   --color-text: #3F3F37;
   --color-text-light: #6b6a62;
+  --color-text-muted: #9a9a91;
   --color-bg: #FAF8F3;
   --color-bg-alt: #F5F2EB;
   --color-border: #E8E3D8;
+  
+  /* Cooked meal states - muted versions of the palette */
+  --color-cooked-bg: #f0ede6;
+  --color-cooked-text: #8a887f;
+  --color-cooked-border: #d8d4c9;
   
   --spacing-xs: 0.25rem;
   --spacing-sm: 0.5rem;
@@ -14,8 +20,9 @@
   --spacing-lg: 1.5rem;
   --spacing-xl: 2rem;
   
-  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  --font-serif: Georgia, 'Times New Roman', serif;
+  --font-sans: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-heading: 'Aleo', Georgia, 'Times New Roman', serif;
+  --font-serif: 'Aleo', Georgia, 'Times New Roman', serif;
 }
 
 * {
@@ -42,6 +49,10 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   position: relative;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
 }
 
 h1 {
@@ -145,6 +156,8 @@ input[type="checkbox"] {
   margin-right: 0.65rem;
   cursor: pointer;
   accent-color: var(--color-primary);
+  position: relative;
+  border-radius: 3px;
 }
 
 /* Print button container */

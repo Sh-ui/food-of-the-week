@@ -2,6 +2,7 @@
 import GroceryList from './GroceryList.astro';
 import MealCard from './MealCard.astro';
 import PrintButton from './PrintButton.astro';
+import Footer from './Footer.astro';
 import type { WeekPlan } from '../utils/readmeParser';
 
 interface Props {
@@ -38,6 +39,8 @@ const { weekPlan } = Astro.props;
       <p>Check back later for this week's meal plan, or add content to README.md to get started.</p>
     </div>
   )}
+
+  <Footer />
 </div>
 
 <style>

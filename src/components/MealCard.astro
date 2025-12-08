@@ -8,8 +8,11 @@ interface Props {
 const { meal } = Astro.props;
 ---
 
-<div id={`print-section-${meal.id}`} class="print-section section meal" data-section-type="meal">
+<div id={`print-section-${meal.id}`} class={`print-section section meal ${meal.cooked ? 'meal-cooked' : ''}`} data-section-type="meal" data-cooked={meal.cooked ? 'true' : 'false'}>
   <div class="meal-header">
+    <span class={`cooked-indicator ${meal.cooked ? 'is-cooked' : ''}`} aria-label={meal.cooked ? 'Meal has been cooked' : 'Meal not yet cooked'}>
+      {meal.cooked ? '✓' : ''}
+    </span>
     <h2>{meal.fullTitle}</h2>
     <button 
       class="button button-secondary print-button" 
@@ -103,6 +106,74 @@ const { meal } = Astro.props;
   .meal-header h2 {
     margin: 0;
     flex: 1;
+  }
+
+  /* Cooked indicator - circular button next to heading */
+  .cooked-indicator {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.75rem;
+    height: 1.75rem;
+    border: 2px solid var(--color-text-light, #6b6a62);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 0.25rem;
+    font-size: 0.9rem;
+    color: transparent;
+    cursor: default;
+    user-select: none;
+  }
+
+  .cooked-indicator.is-cooked {
+    background: var(--color-cooked-text, #8a887f);
+    border-color: var(--color-cooked-text, #8a887f);
+    color: white;
+  }
+
+  /* Greyed-out styling for cooked meals */
+  .meal-cooked {
+    background: var(--color-cooked-bg, #f0ede6);
+    border-color: var(--color-cooked-border, #d8d4c9);
+  }
+
+  .meal-cooked .meal-header h2 {
+    color: var(--color-cooked-text, #8a887f);
+  }
+
+  .meal-cooked .meal-details {
+    background: var(--color-cooked-bg, #f0ede6);
+    border-left-color: var(--color-cooked-border, #d8d4c9);
+  }
+
+  .meal-cooked .meal-field {
+    color: var(--color-cooked-text, #8a887f);
+  }
+
+  .meal-cooked .meal-field strong {
+    color: var(--color-cooked-text, #8a887f);
+  }
+
+  .meal-cooked .instruction-phase {
+    background: var(--color-cooked-bg, #f0ede6);
+    border-left-color: var(--color-cooked-border, #d8d4c9);
+  }
+
+  .meal-cooked .instruction-phase h3 {
+    color: var(--color-cooked-text, #8a887f);
+  }
+
+  .meal-cooked .instruction-phase li,
+  .meal-cooked .phase-content p {
+    color: var(--color-cooked-text, #8a887f);
+  }
+
+  .meal-cooked .meal-instructions h3 {
+    color: var(--color-cooked-text, #8a887f);
+  }
+
+  .meal-cooked .instructions-content p {
+    color: var(--color-cooked-text, #8a887f);
   }
 
   .meal-details {
@@ -233,6 +304,12 @@ const { meal } = Astro.props;
       flex-direction: column;
       align-items: flex-start;
       gap: var(--spacing-md);
+    }
+
+    .cooked-indicator {
+      width: 2rem;
+      height: 2rem;
+      font-size: 1rem;
     }
     
     .meal-header h2 {

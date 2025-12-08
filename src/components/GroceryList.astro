@@ -23,16 +23,19 @@ const { categories } = Astro.props;
         <h3>{category.name}</h3>
         <ul class="grocery-items">
           {category.items.map((item, index) => (
-            <li class="grocery-item">
+            <li class={`grocery-item ${item.globallyChecked ? 'globally-checked' : ''}`}>
               <label>
                 <input
                   type="checkbox"
-                  class="grocery-checkbox"
+                  class={`grocery-checkbox ${item.globallyChecked ? 'global-checkbox' : 'local-checkbox'}`}
                   data-category={category.name}
                   data-index={index}
-                  data-item={item}
+                  data-item={item.text}
+                  data-globally-checked={item.globallyChecked ? 'true' : 'false'}
+                  checked={item.globallyChecked}
+                  disabled={item.globallyChecked}
                 />
-                <span class="item-text">{item}</span>
+                <span class="item-text">{item.text}</span>
               </label>
             </li>
           ))}
@@ -72,21 +75,27 @@ const { categories } = Astro.props;
   // Initialize checkboxes from storage
   function initializeCheckboxes(): void {
     const checked = loadCheckedItems();
-    const checkboxes = document.querySelectorAll<HTMLInputElement>('.grocery-checkbox');
+    // Only initialize local checkboxes (not globally checked ones)
+    const checkboxes = document.querySelectorAll<HTMLInputElement>('.grocery-checkbox.local-checkbox');
     
     checkboxes.forEach((checkbox) => {
       const itemKey = getItemKey(checkbox);
       if (checked.has(itemKey)) {
         checkbox.checked = true;
+        // Add locally-checked class to parent for styling
+        checkbox.closest('.grocery-item')?.classList.add('locally-checked');
       }
       
-      // Add change listener
+      // Add change listener for local checkboxes only
       checkbox.addEventListener('change', () => {
         const currentChecked = loadCheckedItems();
+        const parentItem = checkbox.closest('.grocery-item');
         if (checkbox.checked) {
           currentChecked.add(itemKey);
+          parentItem?.classList.add('locally-checked');
         } else {
           currentChecked.delete(itemKey);
+          parentItem?.classList.remove('locally-checked');
         }
         saveCheckedItems(currentChecked);
       });
@@ -158,9 +167,63 @@ const { categories } = Astro.props;
     flex: 1;
   }
 
-  .grocery-checkbox:checked + .item-text {
+  /* Local checkbox - checked with strikethrough (shopper behavior) */
+  .grocery-item.locally-checked .item-text {
     text-decoration: line-through;
     color: var(--color-text-light);
+  }
+
+  /* Global checkbox - circle dot inside square, greyed out but NOT crossed out */
+  .grocery-item.globally-checked .item-text {
+    color: var(--color-text-muted, #9a9a91);
+  }
+
+  .grocery-item.globally-checked label {
+    cursor: default;
+  }
+
+  .grocery-item.globally-checked label:hover {
+    background-color: transparent;
+  }
+
+  /* Global checkbox visual style - circle with dot inside */
+  .global-checkbox {
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: var(--color-bg);
+    border: 2px solid var(--color-text-muted, #9a9a91);
+    cursor: default;
+  }
+
+  .global-checkbox::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background: var(--color-text-muted, #9a9a91);
+    border-radius: 50%;
+  }
+
+  /* Local checkbox styling */
+  .local-checkbox:checked {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+
+  .local-checkbox:checked::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
   }
 
   @media (max-width: 768px) {

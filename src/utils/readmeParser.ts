@@ -3,9 +3,14 @@ import type { Tokens, Token } from 'marked';
 import fs from 'fs';
 import path from 'path';
 
+export interface GroceryItem {
+  text: string;
+  globallyChecked: boolean; // from markdown [x]
+}
+
 export interface GroceryCategory {
   name: string;
-  items: string[];
+  items: GroceryItem[];
 }
 
 export interface Meal {
@@ -13,6 +18,7 @@ export interface Meal {
   number: number;
   title: string;
   fullTitle: string;
+  cooked: boolean; // from [x] in heading
   protein?: string;
   ingredients?: string;
   description?: string;
@@ -107,17 +113,19 @@ export async function parseReadme(): Promise<WeekPlan> {
         continue;
       }
       
-      // Check if it's a Meal section
-      const mealMatch = heading.match(/^Meal (\d+):\s*(.+)$/);
+      // Check if it's a Meal section (with optional [x] for cooked status)
+      const mealMatch = heading.match(/^Meal (\d+):\s*(.+?)(?:\s*\[([xX])\])?$/);
       if (mealMatch) {
         currentSection = 'meal';
         const mealNumber = parseInt(mealMatch[1], 10);
-        const mealTitle = mealMatch[2];
+        const mealTitle = mealMatch[2].trim();
+        const isCooked = mealMatch[3] !== undefined; // [x] or [X] present
         currentMeal = {
           id: `meal-${mealNumber}`,
           number: mealNumber,
           title: mealTitle,
-          fullTitle: heading,
+          fullTitle: `Meal ${mealNumber}: ${mealTitle}`, // Clean title without [x]
+          cooked: isCooked,
           content: ''
         };
         capturingInstructions = false;
@@ -152,8 +160,8 @@ export async function parseReadme(): Promise<WeekPlan> {
     // Process list items
     if (token.type === 'list') {
       if (currentSection === 'grocery' && currentCategory) {
-        // Extract grocery items
-        const items = extractListItems(token as Tokens.List);
+        // Extract grocery items with checked state
+        const items = extractGroceryItems(token as Tokens.List);
         currentCategory.items.push(...items);
       }
     }
@@ -234,19 +242,29 @@ export async function parseReadme(): Promise<WeekPlan> {
 }
 
 /**
- * Extract text items from a list token
+ * Extract text items from a list token (for grocery items with checked state)
+ */
+function extractGroceryItems(token: Tokens.List): GroceryItem[] {
+  const items: GroceryItem[] = [];
+  
+  for (const item of token.items) {
+    items.push({
+      text: item.text,
+      globallyChecked: item.checked === true // marked sets checked to true/false for task lists
+    });
+  }
+  
+  return items;
+}
+
+/**
+ * Extract plain text items from a list token (for non-grocery lists)
  */
 function extractListItems(token: Tokens.List): string[] {
   const items: string[] = [];
   
   for (const item of token.items) {
-    if (item.task !== undefined) {
-      // Task list item (checkbox)
-      items.push(item.text);
-    } else {
-      // Regular list item
-      items.push(item.text);
-    }
+    items.push(item.text);
   }
   
   return items;
