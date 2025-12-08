@@ -3,33 +3,33 @@
 ## Grocery List
 
 ### Produce
-- [ ] Organic Red Onion - 1 (est. 0.53 lb)
-- [ ] Organic Green Cabbage - 1 (est. 2.56 lb)
-- [ ] Organic White Sweet Potato - 4 (est. 2.04 lb)
-- [ ] Organic Shallot - 2 (est. 0.20 lb)
-- [ ] Purple Asparagus - 1 bunch (est. 1.25 lb)
-- [ ] Organic Pomegranate - 3
-- [ ] Organic Collard Green - 1 bunch
-- [ ] Organic Red Beets - 1.00 lb
-- [ ] Organic Golden Beets - 3 (est. 2.07 lb)
+- [x] Organic Red Onion - 1 (est. 0.53 lb)
+- [x] Organic Green Cabbage - 1 (est. 2.56 lb)
+- [x] Organic White Sweet Potato - 4 (est. 2.04 lb)
+- [x] Organic Shallot - 2 (est. 0.20 lb)
+- [x] Purple Asparagus - 1 bunch (est. 1.25 lb)
+- [x] Organic Pomegranate - 3
+- [x] Organic Collard Green - 1 bunch
+- [x] Organic Red Beets - 1.00 lb
+- [x] Organic Golden Beets - 3 (est. 2.07 lb)
 
 ### Staples
-- [ ] 365 Tomato Paste, Double Concentrated - 1 (5 oz)
-- [ ] Cento San Marzano Whole Peeled Tomatoes - 2 (28 oz)
-- [ ] Lotus Foods Organic Brown Udon Rice Noodles - 2 (8 oz)
+- [x] 365 Tomato Paste, Double Concentrated - 1 (5 oz)
+- [x] Cento San Marzano Whole Peeled Tomatoes - 2 (28 oz)
+- [x] Lotus Foods Organic Brown Udon Rice Noodles - 2 (8 oz)
 
 ### Dairy
-- [ ] None this week
+- [x] None this week
 
 ### Protein
-- [ ] Ground pork - 1 lb (at home)
-- [ ] Flat iron steak - 1 lb (at home)
-- [ ] Sirloin flap steak - 1 lb (at home)
-- [ ] Whole chicken - 1 (at home)
+- [x] Ground pork - 1 lb (at home)
+- [x] Flat iron steak - 1 lb (at home)
+- [x] Sirloin flap steak - 1 lb (at home)
+- [x] Whole chicken - 1 (at home)
 
 ### Frozens
-- [ ] 365 Organic Three Pepper Blend - 1 (16 oz)
-- [ ] 365 Organic Mixed Mushrooms - 1 (10 oz)
+- [x] 365 Organic Three Pepper Blend - 1 (16 oz)
+- [x] 365 Organic Mixed Mushrooms - 1 (10 oz)
 
 ## Meal 1: ~~Stir Fry~~
 

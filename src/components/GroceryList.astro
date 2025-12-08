@@ -209,7 +209,17 @@ const { categories } = Astro.props;
     border-radius: 50%;
   }
 
-  /* Local checkbox styling */
+  /* Local checkbox styling - custom appearance */
+  .local-checkbox {
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: var(--color-bg);
+    border: 2px solid var(--color-border);
+    cursor: pointer;
+  }
+
   .local-checkbox:checked {
     background: var(--color-primary);
     border-color: var(--color-primary);
@@ -222,8 +232,9 @@ const { categories } = Astro.props;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 0.75rem;
-    font-weight: bold;
+    font-size: 0.85rem;
+    font-weight: 600;
+    line-height: 1;
   }
 
   @media (max-width: 768px) {
