@@ -15,13 +15,12 @@ interface Props {
 const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
 ---
 
-<header class="sticky-header" id="sticky-header" data-scrolled="false">
+<header class="sticky-header" id="sticky-header">
   <!-- Desktop/Tablet Navigation -->
   <nav class="header-nav desktop-nav">
-    <a href="#top" class="header-week-title" data-full-title={weekTitle} data-short-title={shortTitle}>
-      <span class="title-full">{weekTitle}</span>
-      <span class="title-short">{shortTitle}</span>
-    </a>
+    <span class="header-week-title" data-visible="false">
+      {shortTitle}
+    </span>
     
     <div class="nav-links">
       {hasGroceryList && (
@@ -43,7 +42,7 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
       <a href="#site-footer" class="nav-link nav-link-info">Links</a>
     </div>
     
-    <button class="header-print-btn print-button" data-print-target="all" type="button">
+    <button class="header-print-btn print-button" data-print-target="all" data-visible="false" type="button">
       <span class="print-text-full">Print Full Week</span>
       <span class="print-text-short">Print</span>
       <svg class="print-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -56,7 +55,7 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
   
   <!-- Mobile Header -->
   <div class="header-mobile">
-    <a href="#top" class="mobile-week-title">{shortTitle}</a>
+    <span class="mobile-week-title" data-visible="false">{shortTitle}</span>
     
     <button class="hamburger-btn" aria-label="Open menu" aria-expanded="false">
       <svg class="hamburger-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -129,72 +128,66 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
   </div>
 </header>
 
+<!-- Spacer to account for fixed header -->
+<div class="header-spacer"></div>
+
 <style>
-  /* Base Sticky Header */
+  /* Fixed Header - more reliable than sticky with overflow issues */
   .sticky-header {
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 100;
     background: var(--color-bg);
     border-bottom: 1px solid var(--color-border);
-    transition: box-shadow 0.3s ease, padding 0.3s ease;
+    transition: box-shadow 0.3s ease;
   }
 
   .sticky-header[data-scrolled="true"] {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
 
+  /* Spacer to push content below fixed header */
+  .header-spacer {
+    height: 60px;
+  }
+
   /* Desktop Navigation */
   .header-nav {
     display: flex;
     align-items: center;
-    gap: var(--spacing-sm);
-    padding: var(--spacing-md);
+    padding: var(--spacing-sm) var(--spacing-md);
     max-width: 1200px;
     margin: 0 auto;
   }
 
+  /* Week title - hidden by default, snapped to left */
   .header-week-title {
     font-family: var(--font-heading);
     font-weight: 700;
+    font-size: 1.1rem;
     color: var(--color-primary);
-    text-decoration: none;
     white-space: nowrap;
-    transition: font-size 0.3s ease;
+    margin-right: var(--spacing-md);
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, width 0.3s ease;
   }
 
-  .title-full {
-    font-size: 1.5rem;
+  .header-week-title[data-visible="true"] {
+    opacity: 1;
+    width: auto;
   }
 
-  .title-short {
-    display: none;
-    font-size: 1.25rem;
-  }
-
-  .sticky-header[data-scrolled="true"] .title-full {
-    display: none;
-  }
-
-  .sticky-header[data-scrolled="true"] .title-short {
-    display: inline;
-  }
-
+  /* Nav links - centered */
   .nav-links {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: var(--spacing-xs);
     flex: 1;
-    justify-content: center;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-  
-  .nav-links::-webkit-scrollbar {
-    display: none;
   }
 
   .nav-link {
@@ -231,7 +224,7 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     margin-left: auto;
   }
 
-  /* Header Print Button */
+  /* Header Print Button - hidden by default */
   .header-print-btn {
     display: inline-flex;
     align-items: center;
@@ -244,8 +237,18 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     font-size: 0.9rem;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease, opacity 0.3s ease, width 0.3s ease;
     white-space: nowrap;
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .header-print-btn[data-visible="true"] {
+    opacity: 1;
+    width: auto;
+    padding: var(--spacing-xs) var(--spacing-md);
   }
 
   .header-print-btn:hover {
@@ -261,7 +264,6 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
   .header-mobile {
     display: none;
     align-items: center;
-    justify-content: space-between;
     padding: var(--spacing-sm) var(--spacing-md);
   }
 
@@ -270,8 +272,12 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     font-weight: 700;
     font-size: 1.1rem;
     color: var(--color-primary);
-    text-decoration: none;
-    flex: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .mobile-week-title[data-visible="true"] {
+    opacity: 1;
   }
 
   .hamburger-btn {
@@ -427,10 +433,6 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
       font-size: 0.85rem;
       padding: var(--spacing-xs);
     }
-
-    .title-full {
-      font-size: 1.25rem;
-    }
   }
 
   /* Mobile: < 600px */
@@ -441,6 +443,10 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
 
     .header-mobile {
       display: flex;
+    }
+
+    .header-spacer {
+      height: 50px;
     }
   }
 </style>
@@ -466,18 +472,82 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
   const hamburgerBtn = document.querySelector('.hamburger-btn') as HTMLButtonElement;
   const hamburgerDropdown = document.querySelector('.hamburger-dropdown') as HTMLElement;
   const mobileSectionHeader = document.querySelector('.mobile-section-header') as HTMLElement;
-  const sectionTitle = document.querySelector('.section-title') as HTMLElement;
+  const sectionTitleEl = document.querySelector('.section-title') as HTMLElement;
   const sectionPrintBtn = document.querySelector('.section-print-btn') as HTMLButtonElement;
-  const headerPrintBtns = document.querySelectorAll('.header-print-btn') as NodeListOf<HTMLButtonElement>;
+  const headerPrintBtn = document.querySelector('.header-nav .header-print-btn') as HTMLButtonElement;
+  const weekTitleEl = document.querySelector('.header-week-title') as HTMLElement;
+  const mobileWeekTitleEl = document.querySelector('.mobile-week-title') as HTMLElement;
   const navLinks = document.querySelectorAll('.nav-link[data-section], .dropdown-link[data-section]') as NodeListOf<HTMLAnchorElement>;
 
-  let currentSection = 'all';
+  let currentSection = '';
+  let currentPrintTarget = '';
   let isMobile = window.innerWidth < 600;
+  let heroScrolledPast = false;
+  let firstPrintButtonScrolledPast = false;
 
-  // Scroll detection for header state
+  // Check if an element has been scrolled past
+  function hasScrolledPast(element: Element | null): boolean {
+    if (!element) return false;
+    const rect = element.getBoundingClientRect();
+    return rect.bottom < 0;
+  }
+
+  // Update scroll state
   function updateScrollState(): void {
-    const scrolled = window.scrollY > 100;
+    const scrolled = window.scrollY > 50;
     header.dataset.scrolled = scrolled ? 'true' : 'false';
+
+    // Check if hero section title has been scrolled past
+    const heroTitle = document.querySelector('.hero-title');
+    const wasHeroScrolledPast = heroScrolledPast;
+    heroScrolledPast = hasScrolledPast(heroTitle);
+
+    // Show/hide week title based on hero visibility
+    if (weekTitleEl) {
+      weekTitleEl.dataset.visible = heroScrolledPast ? 'true' : 'false';
+    }
+    if (mobileWeekTitleEl) {
+      mobileWeekTitleEl.dataset.visible = heroScrolledPast ? 'true' : 'false';
+    }
+
+    // Check for print buttons that have been scrolled past
+    checkPrintButtons();
+  }
+
+  // Check which print button has been scrolled past
+  function checkPrintButtons(): void {
+    const printButtons = document.querySelectorAll('.print-section .print-button, .hero-section .print-button');
+    let lastScrolledPastTarget = '';
+    let lastScrolledPastTitle = '';
+
+    // Find the last print button that has been scrolled past
+    printButtons.forEach(btn => {
+      if (hasScrolledPast(btn)) {
+        const target = (btn as HTMLButtonElement).dataset.printTarget || 'all';
+        lastScrolledPastTarget = target;
+        
+        // Get section title
+        const section = btn.closest('.print-section');
+        if (section) {
+          const heading = section.querySelector('h2');
+          lastScrolledPastTitle = heading?.textContent?.trim() || '';
+        } else if (btn.closest('.hero-section')) {
+          lastScrolledPastTitle = '';
+        }
+      }
+    });
+
+    // Update header print button
+    if (lastScrolledPastTarget && lastScrolledPastTarget !== currentPrintTarget) {
+      currentPrintTarget = lastScrolledPastTarget;
+      updateHeaderPrintButton(lastScrolledPastTarget);
+      updateMobileSectionHeader(lastScrolledPastTarget, lastScrolledPastTitle);
+    }
+
+    // Show/hide header print button
+    if (headerPrintBtn) {
+      headerPrintBtn.dataset.visible = lastScrolledPastTarget ? 'true' : 'false';
+    }
   }
 
   // Update active nav link
@@ -492,32 +562,26 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     });
   }
 
-  // Update print button text and target
-  function updatePrintButton(sectionId: string): void {
-    const label = sectionLabels[sectionId] || 'Print';
-    const shortLabel = sectionId === 'all' ? 'Print' : 'Print';
+  // Update header print button text and target
+  function updateHeaderPrintButton(sectionId: string): void {
+    if (!headerPrintBtn) return;
     
-    headerPrintBtns.forEach(btn => {
-      btn.dataset.printTarget = sectionId;
-      const fullText = btn.querySelector('.print-text-full');
-      const shortText = btn.querySelector('.print-text-short');
-      if (fullText) fullText.textContent = label;
-      if (shortText) shortText.textContent = shortLabel;
-    });
-
-    // Update mobile section print button
-    if (sectionPrintBtn) {
-      sectionPrintBtn.dataset.printTarget = sectionId;
-    }
+    const label = sectionLabels[sectionId] || 'Print';
+    
+    headerPrintBtn.dataset.printTarget = sectionId;
+    const fullText = headerPrintBtn.querySelector('.print-text-full');
+    const shortText = headerPrintBtn.querySelector('.print-text-short');
+    if (fullText) fullText.textContent = label;
+    if (shortText) shortText.textContent = 'Print';
   }
 
   // Update mobile section header
   function updateMobileSectionHeader(sectionId: string, title: string): void {
-    if (!mobileSectionHeader || !sectionTitle) return;
+    if (!mobileSectionHeader || !sectionTitleEl) return;
     
-    if (isMobile && sectionId !== 'all') {
+    if (isMobile && sectionId && title) {
       mobileSectionHeader.hidden = false;
-      sectionTitle.textContent = title;
+      sectionTitleEl.textContent = title;
       if (sectionPrintBtn) {
         sectionPrintBtn.dataset.printTarget = sectionId;
       }
@@ -526,25 +590,13 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     }
   }
 
-  // Get section title from nav link or heading
-  function getSectionTitle(sectionId: string): string {
-    if (sectionId === 'grocery-list') return 'Grocery List';
-    
-    const navLink = document.querySelector(`.nav-link[data-section="${sectionId}"]`);
-    if (navLink) return navLink.textContent?.trim() || sectionId;
-    
-    const section = document.getElementById(`print-section-${sectionId}`);
-    const heading = section?.querySelector('h2');
-    return heading?.textContent?.trim() || sectionId;
-  }
-
-  // Intersection Observer for section tracking
+  // Intersection Observer for section tracking (for nav highlighting)
   function setupIntersectionObserver(): void {
     const sections = document.querySelectorAll('.print-section');
     
     const observerOptions: IntersectionObserverInit = {
       root: null,
-      rootMargin: '-20% 0px -60% 0px', // Trigger when section is in upper portion of viewport
+      rootMargin: '-30% 0px -50% 0px',
       threshold: 0
     };
 
@@ -553,30 +605,12 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
         if (entry.isIntersecting) {
           const sectionId = entry.target.id.replace('print-section-', '');
           currentSection = sectionId;
-          
           updateActiveLink(sectionId);
-          updatePrintButton(sectionId);
-          updateMobileSectionHeader(sectionId, getSectionTitle(sectionId));
         }
       });
     }, observerOptions);
 
     sections.forEach(section => observer.observe(section));
-
-    // Also observe when we scroll back to top (before any section)
-    const topObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && entry.boundingClientRect.top >= 0) {
-          currentSection = 'all';
-          updateActiveLink('');
-          updatePrintButton('all');
-          updateMobileSectionHeader('all', '');
-        }
-      });
-    }, { threshold: 0.5 });
-
-    const topElement = document.getElementById('top');
-    if (topElement) topObserver.observe(topElement);
   }
 
   // Hamburger menu toggle
@@ -617,13 +651,20 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
 
   // Handle resize
   function handleResize(): void {
+    const wasDesktop = !isMobile;
     isMobile = window.innerWidth < 600;
-    updateMobileSectionHeader(currentSection, getSectionTitle(currentSection));
     
     // Close hamburger menu on resize to desktop
-    if (!isMobile && hamburgerBtn && hamburgerDropdown) {
+    if (wasDesktop !== !isMobile && !isMobile && hamburgerBtn && hamburgerDropdown) {
       hamburgerBtn.setAttribute('aria-expanded', 'false');
       hamburgerDropdown.hidden = true;
+    }
+
+    // Update mobile section header visibility
+    if (currentPrintTarget) {
+      const section = document.getElementById(`print-section-${currentPrintTarget}`);
+      const title = section?.querySelector('h2')?.textContent?.trim() || '';
+      updateMobileSectionHeader(currentPrintTarget, title);
     }
   }
 
@@ -642,6 +683,14 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
           }
         }
       });
+    });
+
+    // Week title click scrolls to top
+    weekTitleEl?.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    mobileWeekTitleEl?.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
 

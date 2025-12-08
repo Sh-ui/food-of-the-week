@@ -86,7 +86,7 @@ Brown the ground pork in a large pot or deep skillet with a drizzle of oil. Brea
 
 Add the San Marzano tomatoes, crushing them with your hands or a wooden spoon as you add them. Fill one of the empty cans halfway with water and add that too. Bring to a simmer.
 
-Add the frozen mushrooms and frozen pepper blend directly from the freezer. Let everything simmer for 10-15 minutes to meld the flavors.
+Add the frozen mushrooms and frozen pepper mix directly from the freezer. Add umami boosters to taste; like soy sauce, fish sauce, msg, a pinch of sugar. Let everything simmer for 10-15 minutes to meld the flavors.
 
 Add the udon noodles directly to the pot. Cook according to package directions, stirring occasionally, until the noodles are tender and have absorbed some of the sauce. If it gets too thick, add a splash of water.
 
