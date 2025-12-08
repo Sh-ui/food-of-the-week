@@ -82,7 +82,7 @@ Plate over the brown rice. Top with a generous handful of the bok choy microgree
 
 **Sous Chef - Cooking:**
 
-Brown the ground pork in a large pot or deep skillet with a drizzle of oil. Break it up as it cooks. Once browned, add aromatics (garlic, onion if available). Stir in the tomato paste and let it caramelize for a minute or two.
+Brown the ground pork in a large pot or deep skillet with a drizzle of oil. Break it up as it cooks. Once browned, add chopped garlic and onion + rimalicious seasoning. Stir in the tomato paste and let it caramelize for a minute or two.
 
 Add the San Marzano tomatoes, crushing them with your hands or a wooden spoon as you add them. Fill one of the empty cans halfway with water and add that too. Bring to a simmer.
 

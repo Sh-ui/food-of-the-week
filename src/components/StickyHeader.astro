@@ -39,7 +39,7 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
         </a>
       ))}
       
-      <a href="#site-footer" class="nav-link nav-link-info">Links</a>
+      <a href="#site-footer" class="nav-link">Links</a>
     </div>
     
     <button class="header-print-btn print-button" data-print-target="all" data-visible="false" type="button">
@@ -115,7 +115,7 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     </a>
   </div>
   
-  <!-- Mobile Section Header (replaces as you scroll) -->
+  <!-- Mobile Section Header (shows current section + full print button) -->
   <div class="mobile-section-header" hidden>
     <span class="section-title"></span>
     <button class="section-print-btn print-button" data-print-target="" type="button">
@@ -124,6 +124,7 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
         <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
         <rect x="6" y="14" width="12" height="8"></rect>
       </svg>
+      <span class="section-print-text">Print</span>
     </button>
   </div>
 </header>
@@ -157,6 +158,7 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
   .header-nav {
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: var(--spacing-sm) var(--spacing-md);
     max-width: 1200px;
     margin: 0 auto;
@@ -164,21 +166,22 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
 
   /* Week title - hidden by default, snapped to left */
   .header-week-title {
+    position: absolute;
+    left: var(--spacing-md);
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: 1.1rem;
     color: var(--color-primary);
     white-space: nowrap;
-    margin-right: var(--spacing-md);
     opacity: 0;
-    width: 0;
-    overflow: hidden;
-    transition: opacity 0.3s ease, width 0.3s ease;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
   }
 
   .header-week-title[data-visible="true"] {
     opacity: 1;
-    width: auto;
+    pointer-events: auto;
   }
 
   /* Nav links - centered */
@@ -187,7 +190,6 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     align-items: center;
     justify-content: center;
     gap: var(--spacing-xs);
-    flex: 1;
   }
 
   .nav-link {
@@ -220,12 +222,10 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     background: var(--color-cooked-bg);
   }
 
-  .nav-link-info {
-    margin-left: auto;
-  }
-
-  /* Header Print Button - hidden by default */
+  /* Header Print Button - hidden by default, positioned to the right */
   .header-print-btn {
+    position: absolute;
+    right: var(--spacing-md);
     display: inline-flex;
     align-items: center;
     gap: var(--spacing-xs);
@@ -237,18 +237,15 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     font-size: 0.9rem;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.2s ease, opacity 0.3s ease, width 0.3s ease;
+    transition: background-color 0.2s ease, opacity 0.3s ease;
     white-space: nowrap;
     opacity: 0;
-    width: 0;
-    overflow: hidden;
-    padding: 0;
+    pointer-events: none;
   }
 
   .header-print-btn[data-visible="true"] {
     opacity: 1;
-    width: auto;
-    padding: var(--spacing-xs) var(--spacing-md);
+    pointer-events: auto;
   }
 
   .header-print-btn:hover {
@@ -274,6 +271,7 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     color: var(--color-primary);
     opacity: 0;
     transition: opacity 0.3s ease;
+    cursor: pointer;
   }
 
   .mobile-week-title[data-visible="true"] {
@@ -378,7 +376,7 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     flex-shrink: 0;
   }
 
-  /* Mobile Section Header */
+  /* Mobile Section Header - full width with verbose print button */
   .mobile-section-header {
     display: none;
     align-items: center;
@@ -397,30 +395,46 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     font-weight: 600;
     font-size: 0.95rem;
     color: var(--color-primary);
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .section-print-btn {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    width: 36px;
-    height: 36px;
-    padding: 0;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-xs) var(--spacing-sm);
     background: var(--color-secondary);
     border: none;
     border-radius: 4px;
     cursor: pointer;
     color: var(--color-text);
+    font-size: 0.85rem;
+    font-weight: 600;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .section-print-btn:hover {
+    background: #d9b130;
   }
 
   .section-print-btn .print-icon {
     display: block;
+    flex-shrink: 0;
+  }
+
+  .section-print-text {
+    display: inline;
   }
 
   /* Responsive Breakpoints */
   
-  /* Tablet: 600px - 900px */
-  @media (max-width: 900px) {
+  /* Tablet: 800px - 1000px - show shorter print text */
+  @media (max-width: 1000px) {
     .print-text-full {
       display: none;
     }
@@ -435,8 +449,8 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     }
   }
 
-  /* Mobile: < 600px */
-  @media (max-width: 600px) {
+  /* Mobile: < 800px - switch to hamburger menu */
+  @media (max-width: 800px) {
     .desktop-nav {
       display: none;
     }
@@ -452,6 +466,8 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
 </style>
 
 <script>
+  const MOBILE_BREAKPOINT = 800;
+
   // Section data mapping for print labels
   const sectionLabels: Record<string, string> = {
     'all': 'Print Full Week',
@@ -474,6 +490,7 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
   const mobileSectionHeader = document.querySelector('.mobile-section-header') as HTMLElement;
   const sectionTitleEl = document.querySelector('.section-title') as HTMLElement;
   const sectionPrintBtn = document.querySelector('.section-print-btn') as HTMLButtonElement;
+  const sectionPrintText = document.querySelector('.section-print-text') as HTMLElement;
   const headerPrintBtn = document.querySelector('.header-nav .header-print-btn') as HTMLButtonElement;
   const weekTitleEl = document.querySelector('.header-week-title') as HTMLElement;
   const mobileWeekTitleEl = document.querySelector('.mobile-week-title') as HTMLElement;
@@ -481,9 +498,8 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
 
   let currentSection = '';
   let currentPrintTarget = '';
-  let isMobile = window.innerWidth < 600;
+  let isMobile = window.innerWidth < MOBILE_BREAKPOINT;
   let heroScrolledPast = false;
-  let firstPrintButtonScrolledPast = false;
 
   // Check if an element has been scrolled past
   function hasScrolledPast(element: Element | null): boolean {
@@ -499,7 +515,6 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
 
     // Check if hero section title has been scrolled past
     const heroTitle = document.querySelector('.hero-title');
-    const wasHeroScrolledPast = heroScrolledPast;
     heroScrolledPast = hasScrolledPast(heroTitle);
 
     // Show/hide week title based on hero visibility
@@ -538,7 +553,7 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     });
 
     // Update header print button
-    if (lastScrolledPastTarget && lastScrolledPastTarget !== currentPrintTarget) {
+    if (lastScrolledPastTarget !== currentPrintTarget) {
       currentPrintTarget = lastScrolledPastTarget;
       updateHeaderPrintButton(lastScrolledPastTarget);
       updateMobileSectionHeader(lastScrolledPastTarget, lastScrolledPastTitle);
@@ -575,15 +590,20 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     if (shortText) shortText.textContent = 'Print';
   }
 
-  // Update mobile section header
+  // Update mobile section header with verbose print button
   function updateMobileSectionHeader(sectionId: string, title: string): void {
     if (!mobileSectionHeader || !sectionTitleEl) return;
     
     if (isMobile && sectionId && title) {
       mobileSectionHeader.hidden = false;
       sectionTitleEl.textContent = title;
+      
+      // Update print button with full label
       if (sectionPrintBtn) {
         sectionPrintBtn.dataset.printTarget = sectionId;
+      }
+      if (sectionPrintText) {
+        sectionPrintText.textContent = sectionLabels[sectionId] || 'Print';
       }
     } else {
       mobileSectionHeader.hidden = true;
@@ -652,7 +672,7 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
   // Handle resize
   function handleResize(): void {
     const wasDesktop = !isMobile;
-    isMobile = window.innerWidth < 600;
+    isMobile = window.innerWidth < MOBILE_BREAKPOINT;
     
     // Close hamburger menu on resize to desktop
     if (wasDesktop !== !isMobile && !isMobile && hamburgerBtn && hamburgerDropdown) {
