@@ -113,18 +113,22 @@ export async function parseReadme(): Promise<WeekPlan> {
         continue;
       }
       
-      // Check if it's a Meal section (with optional [x] for cooked status)
-      const mealMatch = heading.match(/^Meal (\d+):\s*(.+?)(?:\s*\[([xX])\])?$/);
+      // Check if it's a Meal section (strikethrough indicates cooked)
+      // Strikethrough format: ## ~~Meal 1: Stir Fry~~
+      const strikethroughMatch = heading.match(/^~~Meal (\d+):\s*(.+?)~~$/);
+      const normalMatch = heading.match(/^Meal (\d+):\s*(.+)$/);
+      
+      const mealMatch = strikethroughMatch || normalMatch;
       if (mealMatch) {
         currentSection = 'meal';
         const mealNumber = parseInt(mealMatch[1], 10);
         const mealTitle = mealMatch[2].trim();
-        const isCooked = mealMatch[3] !== undefined; // [x] or [X] present
+        const isCooked = strikethroughMatch !== null; // Strikethrough means cooked
         currentMeal = {
           id: `meal-${mealNumber}`,
           number: mealNumber,
           title: mealTitle,
-          fullTitle: `Meal ${mealNumber}: ${mealTitle}`, // Clean title without [x]
+          fullTitle: `Meal ${mealNumber}: ${mealTitle}`, // Clean title without strikethrough
           cooked: isCooked,
           content: ''
         };
