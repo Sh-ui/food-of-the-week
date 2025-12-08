@@ -1,8 +1,8 @@
 ---
 import GroceryList from './GroceryList.astro';
 import MealCard from './MealCard.astro';
-import PrintButton from './PrintButton.astro';
 import Footer from './Footer.astro';
+import StickyHeader from './StickyHeader.astro';
 import type { WeekPlan } from '../utils/readmeParser';
 
 interface Props {
@@ -10,15 +10,30 @@ interface Props {
 }
 
 const { weekPlan } = Astro.props;
+
+// Derive short title: "Week of December 7-13, 2025" → "Dec 7-13"
+const shortTitle = weekPlan.weekTitle
+  .replace(/Week of /, '')
+  .replace(/(\w+)\s+(\d+-\d+),\s+\d+/, (_, month, days) => 
+    `${month.slice(0, 3)} ${days}`
+  );
+
+// Prepare meals for header navigation
+const mealsForNav = weekPlan.meals.map(meal => ({
+  id: meal.id,
+  title: meal.title,
+  cooked: meal.cooked
+}));
 ---
 
-<div class="weekly-plan container">
-  <header class="page-header">
-    <h1>{weekPlan.weekTitle}</h1>
-    <div class="print-buttons">
-      <PrintButton target="all" label="Print Full Week" variant="primary" />
-    </div>
-  </header>
+<StickyHeader 
+  weekTitle={weekPlan.weekTitle}
+  shortTitle={shortTitle}
+  meals={mealsForNav}
+  hasGroceryList={weekPlan.groceryList.length > 0}
+/>
+
+<div class="weekly-plan container" id="top">
   
   {weekPlan.groceryList.length > 0 && (
     <GroceryList 
@@ -46,19 +61,7 @@ const { weekPlan } = Astro.props;
 <style>
   .weekly-plan {
     padding: var(--spacing-lg) var(--spacing-md);
-  }
-
-  .page-header {
-    text-align: center;
-    margin-bottom: var(--spacing-xl);
-  }
-
-  .page-header h1 {
-    margin-bottom: var(--spacing-md);
-  }
-
-  .page-header .print-buttons {
-    justify-content: center;
+    padding-top: var(--spacing-md);
   }
 
   .meals-container {
@@ -85,20 +88,12 @@ const { weekPlan } = Astro.props;
   
   @media (max-width: 768px) {
     .weekly-plan {
-    padding: var(--spacing-md) var(--spacing-sm);
-    }
-    
-    .page-header {
-      margin-bottom: var(--spacing-lg);
+      padding: var(--spacing-md) var(--spacing-sm);
     }
     
     .meals-container {
       gap: var(--spacing-lg);
     }
-  
-  .page-header h1 {
-    font-size: 2.2rem;
-  }
   }
 </style>
 

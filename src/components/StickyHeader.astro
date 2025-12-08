@@ -1,0 +1,648 @@
+---
+interface MealNavItem {
+  id: string;
+  title: string;
+  cooked: boolean;
+}
+
+interface Props {
+  weekTitle: string;
+  shortTitle: string;
+  meals: MealNavItem[];
+  hasGroceryList: boolean;
+}
+
+const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
+---
+
+<header class="sticky-header" id="sticky-header" data-scrolled="false">
+  <!-- Desktop/Tablet Navigation -->
+  <nav class="header-nav desktop-nav">
+    <a href="#top" class="header-week-title" data-full-title={weekTitle} data-short-title={shortTitle}>
+      <span class="title-full">{weekTitle}</span>
+      <span class="title-short">{shortTitle}</span>
+    </a>
+    
+    <div class="nav-links">
+      {hasGroceryList && (
+        <a href="#print-section-grocery-list" class="nav-link" data-section="grocery-list">
+          Grocery
+        </a>
+      )}
+      
+      {meals.map((meal) => (
+        <a 
+          href={`#print-section-${meal.id}`} 
+          class={`nav-link ${meal.cooked ? 'cooked' : ''}`}
+          data-section={meal.id}
+        >
+          {meal.title}
+        </a>
+      ))}
+      
+      <a href="#site-footer" class="nav-link nav-link-info">Links</a>
+    </div>
+    
+    <button class="header-print-btn print-button" data-print-target="all" type="button">
+      <span class="print-text-full">Print Full Week</span>
+      <span class="print-text-short">Print</span>
+      <svg class="print-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 6 2 18 2 18 9"></polyline>
+        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+        <rect x="6" y="14" width="12" height="8"></rect>
+      </svg>
+    </button>
+  </nav>
+  
+  <!-- Mobile Header -->
+  <div class="header-mobile">
+    <a href="#top" class="mobile-week-title">{shortTitle}</a>
+    
+    <button class="hamburger-btn" aria-label="Open menu" aria-expanded="false">
+      <svg class="hamburger-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+      <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    
+    <button class="header-print-btn mobile-print-btn print-button" data-print-target="all" type="button">
+      <span class="print-text-short">Print</span>
+      <svg class="print-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 6 2 18 2 18 9"></polyline>
+        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+        <rect x="6" y="14" width="12" height="8"></rect>
+      </svg>
+    </button>
+  </div>
+  
+  <!-- Hamburger Dropdown Menu -->
+  <div class="hamburger-dropdown" hidden>
+    <a href="#top" class="dropdown-link">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="19" x2="12" y2="5"></line>
+        <polyline points="5 12 12 5 19 12"></polyline>
+      </svg>
+      Back to Top
+    </a>
+    
+    {hasGroceryList && (
+      <a href="#print-section-grocery-list" class="dropdown-link" data-section="grocery-list">
+        Grocery List
+      </a>
+    )}
+    
+    {meals.map((meal) => (
+      <a 
+        href={`#print-section-${meal.id}`} 
+        class={`dropdown-link ${meal.cooked ? 'cooked' : ''}`}
+        data-section={meal.id}
+      >
+        {meal.cooked ? '✓ ' : ''}{meal.title}
+      </a>
+    ))}
+    
+    <a href="#site-footer" class="dropdown-link">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" y1="16" x2="12" y2="12"></line>
+        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+      </svg>
+      Links & Info
+    </a>
+  </div>
+  
+  <!-- Mobile Section Header (replaces as you scroll) -->
+  <div class="mobile-section-header" hidden>
+    <span class="section-title"></span>
+    <button class="section-print-btn print-button" data-print-target="" type="button">
+      <svg class="print-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 6 2 18 2 18 9"></polyline>
+        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+        <rect x="6" y="14" width="12" height="8"></rect>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<style>
+  /* Base Sticky Header */
+  .sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+    transition: box-shadow 0.3s ease, padding 0.3s ease;
+  }
+
+  .sticky-header[data-scrolled="true"] {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Desktop Navigation */
+  .header-nav {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .header-week-title {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--color-primary);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: font-size 0.3s ease;
+  }
+
+  .title-full {
+    font-size: 1.5rem;
+  }
+
+  .title-short {
+    display: none;
+    font-size: 1.25rem;
+  }
+
+  .sticky-header[data-scrolled="true"] .title-full {
+    display: none;
+  }
+
+  .sticky-header[data-scrolled="true"] .title-short {
+    display: inline;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    flex: 1;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .nav-link {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .nav-link:hover {
+    background: var(--color-bg-alt);
+  }
+
+  .nav-link.active {
+    background: var(--color-secondary);
+    color: var(--color-text);
+  }
+
+  .nav-link.cooked {
+    color: var(--color-cooked-text);
+    opacity: 0.7;
+  }
+
+  .nav-link.cooked.active {
+    background: var(--color-cooked-border);
+  }
+
+  .nav-link-info {
+    margin-left: auto;
+  }
+
+  /* Header Print Button */
+  .header-print-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-xs) var(--spacing-md);
+    background: var(--color-secondary);
+    color: var(--color-text);
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .header-print-btn:hover {
+    background: #d9b130;
+  }
+
+  .print-text-short,
+  .print-icon {
+    display: none;
+  }
+
+  /* Mobile Header */
+  .header-mobile {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  .mobile-week-title {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  .hamburger-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text);
+  }
+
+  .hamburger-btn .close-icon {
+    display: none;
+  }
+
+  .hamburger-btn[aria-expanded="true"] .hamburger-icon {
+    display: none;
+  }
+
+  .hamburger-btn[aria-expanded="true"] .close-icon {
+    display: block;
+  }
+
+  .mobile-print-btn {
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+
+  .mobile-print-btn .print-text-full {
+    display: none;
+  }
+
+  .mobile-print-btn .print-text-short {
+    display: inline;
+  }
+
+  /* Hamburger Dropdown */
+  .hamburger-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: var(--spacing-sm);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+
+  .hamburger-dropdown[hidden] {
+    display: none;
+  }
+
+  .dropdown-link {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+  }
+
+  .dropdown-link:hover {
+    background: var(--color-bg-alt);
+  }
+
+  .dropdown-link.active {
+    background: var(--color-secondary);
+  }
+
+  .dropdown-link.cooked {
+    color: var(--color-cooked-text);
+  }
+
+  .dropdown-link svg {
+    flex-shrink: 0;
+  }
+
+  /* Mobile Section Header */
+  .mobile-section-header {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-xs) var(--spacing-md);
+    background: var(--color-bg-alt);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .mobile-section-header:not([hidden]) {
+    display: flex;
+  }
+
+  .section-title {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--color-primary);
+  }
+
+  .section-print-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    background: var(--color-secondary);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: var(--color-text);
+  }
+
+  .section-print-btn .print-icon {
+    display: block;
+  }
+
+  /* Responsive Breakpoints */
+  
+  /* Tablet: 600px - 900px */
+  @media (max-width: 900px) {
+    .print-text-full {
+      display: none;
+    }
+
+    .print-text-short {
+      display: inline;
+    }
+
+    .nav-link {
+      font-size: 0.85rem;
+      padding: var(--spacing-xs);
+    }
+
+    .title-full {
+      font-size: 1.25rem;
+    }
+  }
+
+  /* Mobile: < 600px */
+  @media (max-width: 600px) {
+    .desktop-nav {
+      display: none;
+    }
+
+    .header-mobile {
+      display: flex;
+    }
+
+    .print-text-short {
+      display: none;
+    }
+
+    .print-icon {
+      display: block;
+    }
+
+    .mobile-print-btn {
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+</style>
+
+<script>
+  // Section data mapping for print labels
+  const sectionLabels: Record<string, string> = {
+    'all': 'Print Full Week',
+    'grocery-list': 'Print Grocery List',
+  };
+
+  // Build meal labels from DOM
+  document.querySelectorAll('.nav-link[data-section^="meal-"]').forEach(link => {
+    const section = link.getAttribute('data-section');
+    const title = link.textContent?.trim() || 'Meal';
+    if (section) {
+      sectionLabels[section] = `Print ${title}`;
+    }
+  });
+
+  // Elements
+  const header = document.getElementById('sticky-header') as HTMLElement;
+  const hamburgerBtn = document.querySelector('.hamburger-btn') as HTMLButtonElement;
+  const hamburgerDropdown = document.querySelector('.hamburger-dropdown') as HTMLElement;
+  const mobileSectionHeader = document.querySelector('.mobile-section-header') as HTMLElement;
+  const sectionTitle = document.querySelector('.section-title') as HTMLElement;
+  const sectionPrintBtn = document.querySelector('.section-print-btn') as HTMLButtonElement;
+  const headerPrintBtns = document.querySelectorAll('.header-print-btn') as NodeListOf<HTMLButtonElement>;
+  const navLinks = document.querySelectorAll('.nav-link[data-section], .dropdown-link[data-section]') as NodeListOf<HTMLAnchorElement>;
+
+  let currentSection = 'all';
+  let isMobile = window.innerWidth < 600;
+
+  // Scroll detection for header state
+  function updateScrollState(): void {
+    const scrolled = window.scrollY > 100;
+    header.dataset.scrolled = scrolled ? 'true' : 'false';
+  }
+
+  // Update active nav link
+  function updateActiveLink(sectionId: string): void {
+    navLinks.forEach(link => {
+      const linkSection = link.getAttribute('data-section');
+      if (linkSection === sectionId) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  }
+
+  // Update print button text and target
+  function updatePrintButton(sectionId: string): void {
+    const label = sectionLabels[sectionId] || 'Print';
+    const shortLabel = sectionId === 'all' ? 'Print' : 'Print';
+    
+    headerPrintBtns.forEach(btn => {
+      btn.dataset.printTarget = sectionId;
+      const fullText = btn.querySelector('.print-text-full');
+      const shortText = btn.querySelector('.print-text-short');
+      if (fullText) fullText.textContent = label;
+      if (shortText) shortText.textContent = shortLabel;
+    });
+
+    // Update mobile section print button
+    if (sectionPrintBtn) {
+      sectionPrintBtn.dataset.printTarget = sectionId;
+    }
+  }
+
+  // Update mobile section header
+  function updateMobileSectionHeader(sectionId: string, title: string): void {
+    if (!mobileSectionHeader || !sectionTitle) return;
+    
+    if (isMobile && sectionId !== 'all') {
+      mobileSectionHeader.hidden = false;
+      sectionTitle.textContent = title;
+      if (sectionPrintBtn) {
+        sectionPrintBtn.dataset.printTarget = sectionId;
+      }
+    } else {
+      mobileSectionHeader.hidden = true;
+    }
+  }
+
+  // Get section title from nav link or heading
+  function getSectionTitle(sectionId: string): string {
+    if (sectionId === 'grocery-list') return 'Grocery List';
+    
+    const navLink = document.querySelector(`.nav-link[data-section="${sectionId}"]`);
+    if (navLink) return navLink.textContent?.trim() || sectionId;
+    
+    const section = document.getElementById(`print-section-${sectionId}`);
+    const heading = section?.querySelector('h2');
+    return heading?.textContent?.trim() || sectionId;
+  }
+
+  // Intersection Observer for section tracking
+  function setupIntersectionObserver(): void {
+    const sections = document.querySelectorAll('.print-section');
+    
+    const observerOptions: IntersectionObserverInit = {
+      root: null,
+      rootMargin: '-20% 0px -60% 0px', // Trigger when section is in upper portion of viewport
+      threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const sectionId = entry.target.id.replace('print-section-', '');
+          currentSection = sectionId;
+          
+          updateActiveLink(sectionId);
+          updatePrintButton(sectionId);
+          updateMobileSectionHeader(sectionId, getSectionTitle(sectionId));
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach(section => observer.observe(section));
+
+    // Also observe when we scroll back to top (before any section)
+    const topObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && entry.boundingClientRect.top >= 0) {
+          currentSection = 'all';
+          updateActiveLink('');
+          updatePrintButton('all');
+          updateMobileSectionHeader('all', '');
+        }
+      });
+    }, { threshold: 0.5 });
+
+    const topElement = document.getElementById('top');
+    if (topElement) topObserver.observe(topElement);
+  }
+
+  // Hamburger menu toggle
+  function setupHamburgerMenu(): void {
+    if (!hamburgerBtn || !hamburgerDropdown) return;
+
+    hamburgerBtn.addEventListener('click', () => {
+      const isExpanded = hamburgerBtn.getAttribute('aria-expanded') === 'true';
+      hamburgerBtn.setAttribute('aria-expanded', (!isExpanded).toString());
+      hamburgerDropdown.hidden = isExpanded;
+    });
+
+    // Close on link click
+    hamburgerDropdown.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburgerBtn.setAttribute('aria-expanded', 'false');
+        hamburgerDropdown.hidden = true;
+      });
+    });
+
+    // Close on outside click
+    document.addEventListener('click', (e) => {
+      if (!header.contains(e.target as Node)) {
+        hamburgerBtn.setAttribute('aria-expanded', 'false');
+        hamburgerDropdown.hidden = true;
+      }
+    });
+  }
+
+  // Handle resize
+  function handleResize(): void {
+    isMobile = window.innerWidth < 600;
+    updateMobileSectionHeader(currentSection, getSectionTitle(currentSection));
+    
+    // Close hamburger menu on resize to desktop
+    if (!isMobile && hamburgerBtn && hamburgerDropdown) {
+      hamburgerBtn.setAttribute('aria-expanded', 'false');
+      hamburgerDropdown.hidden = true;
+    }
+  }
+
+  // Smooth scroll for nav links
+  function setupSmoothScroll(): void {
+    document.querySelectorAll('.nav-link, .dropdown-link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const href = (link as HTMLAnchorElement).getAttribute('href');
+        if (href?.startsWith('#')) {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            const headerHeight = header.offsetHeight;
+            const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight - 20;
+            window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+          }
+        }
+      });
+    });
+  }
+
+  // Initialize
+  function init(): void {
+    updateScrollState();
+    setupIntersectionObserver();
+    setupHamburgerMenu();
+    setupSmoothScroll();
+
+    window.addEventListener('scroll', updateScrollState, { passive: true });
+    window.addEventListener('resize', handleResize, { passive: true });
+  }
+
+  // Run on DOM ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+</script>
