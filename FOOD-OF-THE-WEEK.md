@@ -96,7 +96,7 @@ Season with salt, pepper, and a pinch of red pepper flakes. Finish with fresh he
 
 Serve in bowls. Top with grated Parmesan if available.
 
-## Meal 3: Sous Vide Steak Dinner
+## Meal 3: Marinated Steak 
 
 **Protein:** Flat iron steak
 
@@ -139,13 +139,13 @@ Slice the steak against the grain.
 To plate: Arrange the roasted onions and sweet potato chunks on the plate. Fan the sliced steak over the top. Place the charred cabbage wedge alongside. Drizzle the reduced pan glaze over the steak and cabbage.
 
 
-## Meal 5: Roasted Chicken
+## Meal 5: Chicken Fricassée
 
 **Protein:** Whole chicken
 
 **Ingredients:** Collard greens, gold & red beets, pomegranate
 
-**Description:** Chicken Fricassée served with braised collard greens, roasted beets, and garnished with bright pomegranate seeds. A satisfying, colorful meal.
+**Description:** Chicken Fricassée (deconstructed whole chicken) served with braised collard greens, roasted beets, and garnished with pomegranate seeds and mustard vinaigrette; a satisfying, colorful meal.
 
 **Instructions:**
 
