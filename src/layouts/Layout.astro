@@ -7,14 +7,18 @@ const { title } = Astro.props;
 import '../styles/global.css';
 import '../styles/print.css';
 
-const faviconHref = import.meta.env.BASE_URL === '/' ? '/favicon.svg' : import.meta.env.BASE_URL + 'favicon.svg';
+// Ensure proper path joining for favicon (BASE_URL may or may not have trailing slash)
+const baseUrl = import.meta.env.BASE_URL.endsWith('/') 
+  ? import.meta.env.BASE_URL 
+  : import.meta.env.BASE_URL + '/';
+const faviconHref = baseUrl + 'favicon.svg';
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, viewport-fit=cover" />
     <meta name="description" content="Weekly meal planning for the family" />
     <link rel="icon" type="image/svg+xml" href={faviconHref} />
     <meta name="generator" content={Astro.generator} />
