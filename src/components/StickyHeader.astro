@@ -69,15 +69,6 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
         <line x1="6" y1="6" x2="18" y2="18"></line>
       </svg>
     </button>
-    
-    <button class="header-print-btn mobile-print-btn print-button" data-print-target="all" type="button">
-      <span class="print-text-short">Print</span>
-      <svg class="print-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="6 9 6 2 18 2 18 9"></polyline>
-        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
-        <rect x="6" y="14" width="12" height="8"></rect>
-      </svg>
-    </button>
   </div>
   
   <!-- Hamburger Dropdown Menu -->
@@ -89,6 +80,15 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
       </svg>
       Back to Top
     </a>
+    
+    <button class="dropdown-print-btn print-button" data-print-target="all" type="button">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 6 2 18 2 18 9"></polyline>
+        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+        <rect x="6" y="14" width="12" height="8"></rect>
+      </svg>
+      Print Full Week
+    </button>
     
     {hasGroceryList && (
       <a href="#print-section-grocery-list" class="dropdown-link" data-section="grocery-list">
@@ -132,6 +132,7 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
 <style>
   /* Base Sticky Header */
   .sticky-header {
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -186,7 +187,14 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     gap: var(--spacing-xs);
     flex: 1;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  
+  .nav-links::-webkit-scrollbar {
+    display: none;
   }
 
   .nav-link {
@@ -205,8 +213,9 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
   }
 
   .nav-link.active {
-    background: var(--color-secondary);
-    color: var(--color-text);
+    background: var(--color-bg-alt);
+    color: var(--color-primary);
+    font-weight: 600;
   }
 
   .nav-link.cooked {
@@ -215,7 +224,7 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
   }
 
   .nav-link.cooked.active {
-    background: var(--color-cooked-border);
+    background: var(--color-cooked-bg);
   }
 
   .nav-link-info {
@@ -262,6 +271,7 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     font-size: 1.1rem;
     color: var(--color-primary);
     text-decoration: none;
+    flex: 1;
   }
 
   .hamburger-btn {
@@ -274,6 +284,7 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     border: none;
     cursor: pointer;
     color: var(--color-text);
+    margin-left: auto;
   }
 
   .hamburger-btn .close-icon {
@@ -286,18 +297,6 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
 
   .hamburger-btn[aria-expanded="true"] .close-icon {
     display: block;
-  }
-
-  .mobile-print-btn {
-    padding: var(--spacing-xs) var(--spacing-sm);
-  }
-
-  .mobile-print-btn .print-text-full {
-    display: none;
-  }
-
-  .mobile-print-btn .print-text-short {
-    display: inline;
   }
 
   /* Hamburger Dropdown */
@@ -336,7 +335,8 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
   }
 
   .dropdown-link.active {
-    background: var(--color-secondary);
+    background: var(--color-bg-alt);
+    font-weight: 600;
   }
 
   .dropdown-link.cooked {
@@ -344,6 +344,31 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
   }
 
   .dropdown-link svg {
+    flex-shrink: 0;
+  }
+
+  /* Dropdown Print Button */
+  .dropdown-print-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: var(--color-secondary);
+    color: var(--color-text);
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+  }
+
+  .dropdown-print-btn:hover {
+    background: #d9b130;
+  }
+
+  .dropdown-print-btn svg {
     flex-shrink: 0;
   }
 
@@ -416,23 +441,6 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
 
     .header-mobile {
       display: flex;
-    }
-
-    .print-text-short {
-      display: none;
-    }
-
-    .print-icon {
-      display: block;
-    }
-
-    .mobile-print-btn {
-      width: 40px;
-      height: 40px;
-      padding: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
   }
 </style>
@@ -588,6 +596,15 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
         hamburgerDropdown.hidden = true;
       });
     });
+
+    // Close on dropdown print button click
+    const dropdownPrintBtn = hamburgerDropdown.querySelector('.dropdown-print-btn');
+    if (dropdownPrintBtn) {
+      dropdownPrintBtn.addEventListener('click', () => {
+        hamburgerBtn.setAttribute('aria-expanded', 'false');
+        hamburgerDropdown.hidden = true;
+      });
+    }
 
     // Close on outside click
     document.addEventListener('click', (e) => {

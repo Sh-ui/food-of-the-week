@@ -1,6 +1,7 @@
 ---
 import GroceryList from './GroceryList.astro';
 import MealCard from './MealCard.astro';
+import PrintButton from './PrintButton.astro';
 import Footer from './Footer.astro';
 import StickyHeader from './StickyHeader.astro';
 import type { WeekPlan } from '../utils/readmeParser';
@@ -33,7 +34,14 @@ const mealsForNav = weekPlan.meals.map(meal => ({
   hasGroceryList={weekPlan.groceryList.length > 0}
 />
 
-<div class="weekly-plan container" id="top">
+<div class="weekly-plan container">
+  <!-- Hero Section -->
+  <section class="hero-section" id="top">
+    <h1 class="hero-title">{weekPlan.weekTitle}</h1>
+    <div class="hero-actions">
+      <PrintButton target="all" label="Print Full Week" variant="primary" />
+    </div>
+  </section>
   
   {weekPlan.groceryList.length > 0 && (
     <GroceryList 
@@ -61,7 +69,32 @@ const mealsForNav = weekPlan.meals.map(meal => ({
 <style>
   .weekly-plan {
     padding: var(--spacing-lg) var(--spacing-md);
-    padding-top: var(--spacing-md);
+    padding-top: 0;
+  }
+
+  .hero-section {
+    text-align: center;
+    padding: var(--spacing-xl) var(--spacing-md);
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-lg);
+  }
+
+  .hero-title {
+    margin-bottom: 0;
+  }
+
+  .hero-actions {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-actions .button {
+    padding: var(--spacing-md) var(--spacing-xl);
+    font-size: 1.1rem;
   }
 
   .meals-container {
@@ -89,6 +122,12 @@ const mealsForNav = weekPlan.meals.map(meal => ({
   @media (max-width: 768px) {
     .weekly-plan {
       padding: var(--spacing-md) var(--spacing-sm);
+      padding-top: 0;
+    }
+    
+    .hero-section {
+      min-height: 30vh;
+      padding: var(--spacing-lg) var(--spacing-sm);
     }
     
     .meals-container {
