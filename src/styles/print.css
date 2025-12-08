@@ -241,15 +241,3 @@
     border-color: #666 !important;
   }
 }
-
-/* Print preview styles (optional - helps during development) */
-@media screen {
-  .print-preview {
-    max-width: 8.5in;
-    margin: 0 auto;
-    padding: 0.5in;
-    background: white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-}
-
