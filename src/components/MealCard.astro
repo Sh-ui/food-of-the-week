@@ -6,6 +6,12 @@ interface Props {
 }
 
 const { meal } = Astro.props;
+
+// Helper function to render markdown links to HTML
+function renderMarkdown(text: string): string {
+  // Convert markdown links [text](url) to HTML links
+  return text.trim().replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+}
 ---
 
 <div id={`print-section-${meal.id}`} class={`print-section section meal ${meal.cooked ? 'meal-cooked' : ''}`} data-section-type="meal" data-cooked={meal.cooked ? 'true' : 'false'}>
@@ -50,7 +56,7 @@ const { meal } = Astro.props;
           <h3>Already Prepped</h3>
           <ul>
             {meal.alreadyPrepped.map((item: string) => (
-              <li>{item}</li>
+              <li set:html={renderMarkdown(item)} />
             ))}
           </ul>
         </div>
@@ -61,7 +67,7 @@ const { meal } = Astro.props;
           <h3>Sous Chef - Prep</h3>
           <div class="phase-content">
             {meal.sousChef.split('\n\n').map((paragraph: string) => (
-              <p>{paragraph}</p>
+              <p set:html={renderMarkdown(paragraph)} />
             ))}
           </div>
         </div>
@@ -72,7 +78,7 @@ const { meal } = Astro.props;
           <h3>Chef - Finishing & Plating</h3>
           <div class="phase-content">
             {meal.chefFinishing.split('\n\n').map((paragraph: string) => (
-              <p>{paragraph}</p>
+              <p set:html={renderMarkdown(paragraph)} />
             ))}
           </div>
         </div>
@@ -83,7 +89,7 @@ const { meal } = Astro.props;
       <h3>Instructions</h3>
       <div class="instructions-content">
         {meal.instructions.split('\n\n').map((paragraph: string) => (
-          <p>{paragraph}</p>
+          <p set:html={renderMarkdown(paragraph)} />
         ))}
       </div>
     </div>
@@ -267,6 +273,30 @@ const { meal } = Astro.props;
 
   .phase-content p:last-child {
     margin-bottom: 0;
+  }
+
+  /* Style markdown links */
+  .phase-content :global(a),
+  .instructions-content :global(a),
+  .instruction-phase :global(a) {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-decoration-color: var(--color-accent);
+    text-underline-offset: 2px;
+    transition: color 0.2s ease;
+  }
+
+  .phase-content :global(a):hover,
+  .instructions-content :global(a):hover,
+  .instruction-phase :global(a):hover {
+    color: var(--color-accent);
+  }
+
+  .meal-cooked .phase-content :global(a),
+  .meal-cooked .instructions-content :global(a),
+  .meal-cooked .instruction-phase :global(a) {
+    color: var(--color-cooked-text);
+    text-decoration-color: var(--color-cooked-text);
   }
 
   /* Already Prepped - Sweet Salmon (soft reference) */
