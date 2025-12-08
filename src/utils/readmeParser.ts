@@ -273,7 +273,7 @@ function extractListItems(token: Tokens.List): string[] {
   const items: string[] = [];
   
   for (const item of token.items) {
-    items.push(item.text);
+      items.push(item.text);
   }
   
   return items;
