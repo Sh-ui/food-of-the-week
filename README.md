@@ -2,7 +2,7 @@
 
 > Weekly meal planning system for a household of 5
 
-**[View or Edit This Week's Plan →](FOOD-OF-THE-WEEK.md)** | [Live Site](https://sh-ui.github.io/food-of-the-week)
+**[View or Edit This Week's Plan](FOOD-OF-THE-WEEK.md)** ⇒ [Live Site at food.schuepbach.work](https://sh-ui.github.io/food-of-the-week)
 
 ## About
 
@@ -33,7 +33,7 @@ This is a weekly meal planning system built with Astro that transforms structure
 
 ## Weekly Workflow
 
-1. **Brainstorm** - Plan meals in the `brainstorming/` folder with AI assistance
+1. **Brainstorm** - Plan meals in the `brainstorming/` folder
 2. **Finalize** - Structure the plan in `FOOD-OF-THE-WEEK.md` with all required sections
 3. **Deploy** - Push to GitHub, site auto-deploys in 2-3 minutes
 4. **Shop** - Use the mobile-friendly site with persistent checkbox grocery list
@@ -45,7 +45,7 @@ This is a weekly meal planning system built with Astro that transforms structure
 - **`brainstorming/`** - Free-form weekly planning workspace
 - **`archive/`** - Past weekly plans in YYYYMMDDsummary.md format
 - **`.cursor/rules/`** - AI assistant guidelines for meal planning philosophy
-- **`print-config.json`** - Customize print layout (margins, spacing, fonts)
+- **`public/print-config.json`** - Customize print layout (margins, spacing, fonts)
 - **`src/`** - Astro website components, styles, and utilities
 - **`rule-basis/`** - Reference philosophy documents
 
@@ -59,9 +59,9 @@ This is a weekly meal planning system built with Astro that transforms structure
 
 ## Print Configuration
 
-Edit `print-config.json` at the project root to adjust print layout settings including page margins, typography, and spacing. Changes take effect after restarting the dev server.
+Edit `print-config.json` in the `public/` folder to adjust print layout settings including page margins, typography, and spacing.
 
-## Technologies
+## Stack
 
 - **Astro** - Static site generation
 - **GitHub Pages** - Hosting
