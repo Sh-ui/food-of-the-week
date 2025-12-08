@@ -19,7 +19,7 @@
 - [x] Lotus Foods Organic Brown Udon Rice Noodles - 2 (8 oz)
 
 ### Dairy
-- [x] None this week
+- [ ] None this week
 
 ### Protein
 - [x] Ground pork - 1 lb (at home)
