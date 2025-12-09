@@ -1,4 +1,4 @@
----
+--- 
 interface MealNavItem {
   id: string;
   title: string;
@@ -35,7 +35,7 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
           class={`nav-link ${meal.cooked ? 'cooked' : ''}`}
           data-section={meal.id}
         >
-          {meal.title}
+          {meal.cooked ? '✓ ' : ''}{meal.title}
         </a>
       ))}
       
@@ -201,6 +201,8 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     font-weight: 500;
     transition: background-color 0.2s ease, color 0.2s ease;
     white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
   }
 
   .nav-link:hover {
@@ -477,7 +479,9 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
   // Build meal labels from DOM
   document.querySelectorAll('.nav-link[data-section^="meal-"]').forEach(link => {
     const section = link.getAttribute('data-section');
-    const title = link.textContent?.trim() || 'Meal';
+    // strip any leading check mark that we render visually (e.g. "✓ ")
+    const raw = link.textContent?.trim() || 'Meal';
+    const title = raw.replace(/^[✓\u2713]\s*/, '');
     if (section) {
       sectionLabels[section] = `Print ${title}`;
     }
