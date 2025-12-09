@@ -66,7 +66,7 @@ Return the beef to the pan. Add a quick sauce: soy sauce, a splash of rice vineg
 Plate over the brown rice. Top with a generous handful of the bok choy microgreens—they'll wilt slightly from the heat and add a fresh, peppery finish.
 
 
-## Meal 2: One Pot Pasta
+## Meal 2: ~~One Pot Pasta~~
 
 **Protein:** Ground pork
 
