@@ -6,11 +6,11 @@ This document serves as the single source of truth for all planned features and 
 
 ## Phase 1: Foundation and Housekeeping
 
-- [x] Add open source license (MIT or similar)
-- [ ] Configure Dependabot for dependency security
-- [ ] Audit offline functionality
-- [ ] Clean up project documentation
-- [ ] Review and update README with current features
+- [x] Add open source license (AGPL-3.0)
+- [x] Configure Dependabot for dependency security (`.github/dependabot.yml`)
+- [x] Audit offline functionality ([audit results](.cursor/plans/offline-functionality-audit.plan.md))
+- [x] Clean up project documentation
+- [x] Review and update README with current features
 
 ---
 
@@ -181,7 +181,6 @@ This document serves as the single source of truth for all planned features and 
 - [ ] Add "Meet Cheffy" section to README with animated GIF
   - [ ] Embed GIF with descriptive alt text
   - [ ] Brief description of Cheffy's features
-  - [ ] Link to live demo
 
 ---
 
