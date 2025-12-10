@@ -20,12 +20,6 @@ function renderMarkdown(text: string): string {
       {meal.cooked ? '✓' : ''}
     </span>
     <h2>{meal.fullTitle}</h2>
-    <button 
-      class="button button-secondary print-button" 
-      data-print-target={meal.id}
-    >
-      Print This Meal
-    </button>
   </div>
   
   <div class="meal-details">

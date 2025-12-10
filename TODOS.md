@@ -16,26 +16,32 @@ This document serves as the single source of truth for all planned features and 
 
 ## Phase 2: UI/UX Polish (Header and Navigation)
 
-### Header Button Normalization
+### Header Redesign (Unified Header)
 
-- [ ] Match print button styling to header meal name buttons
-- [ ] Implement responsive breakpoints:
-  - [ ] Mobile: print icon only
-  - [ ] Tablet: icon + meal name
-  - [ ] Desktop: "Print" + meal name
-- [ ] Add intermediate breakpoint where subheader hidden but print = icon only
+- [x] Remove hamburger menu and mobile sub-header in favor of unified header
+- [x] Remove section print buttons from grocery list and meal cards
+- [x] Match print button styling to header meal name buttons
+- [x] Implement responsive breakpoints:
+  - [x] Mobile (≤950px): print icon only (beefier padding)
+  - [x] Tablet (950-1000px): icon + meal name
+  - [x] Desktop (>1000px): "Print" + meal name
+- [x] Add section selector dropdown with animated caret for mobile
+- [x] Dropdown shows "Menu" when open, section name when closed
+- [x] Print button uses brown/primary color (matches brand)
 
-### Hamburger Menu Polish
+### Desktop Scroll Behavior
 
-- [ ] Match "Print Full Week" button color to hero version
-- [ ] Implement side-by-side layout for "Back to Top" and "Print Week" buttons.
+- [x] Nav buttons start centered, slide left on scroll to align right of date
+- [x] Left side shows grayed "Menu" before scroll, week title after scroll
+- [x] Print button always visible, updates to current section on scroll
+- [ ] Print button fades between sections (75% visibility threshold)
 
 ### Scroll Position States
 
-- [ ] Add blank buffer zone at page top (no button highlighted until scroll)
-- [ ] Add blank buffer zone at page bottom (Links button highlights at true bottom)
-- [ ] Implement inter-section buffer (no highlight when two sections visible)
-- [ ] Sync print button fade transition with scroll position
+- [x] Buffer zone at page top (shows "Full Week" until scroll past threshold)
+- [x] Section highlighting based on 25%+ visibility
+- [ ] Fine-tune inter-section buffer (no highlight when two sections equally visible)
+- [ ] Add fade transition to print button label changes
 
 ---
 
