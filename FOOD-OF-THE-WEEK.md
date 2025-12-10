@@ -122,7 +122,7 @@ Slice the red onion into rings (about ½-inch thick).
 
 Cut the cabbage into thick wedges, cutting through the core/root end so each wedge holds together. This is important - the core keeps the leaves from falling apart.
 
-Preheat oven to 500°F. Spread the sliced onion rings on a baking sheet with the white sweet potatoes from the bag. Toss everything with grapeseed oil and black pepper. Roast until caramelized and getting good color, about 15-20 minutes.
+Preheat oven to 500°F. Spread the sliced onion rings on a baking sheet with the white sweet potatoes from the bag. Toss everything with grapeseed oil and black pepper. Roast until caramelized and getting good color, about 10 minutes.
 
 Once they look roasted, change the oven temp to warm, and add the plates to the oven alongside the veggies to keep them both warm until the chef gets home.
 
