@@ -6,7 +6,7 @@ This document serves as the single source of truth for all planned features and 
 
 ## Phase 1: Foundation and Housekeeping
 
-- [ ] Add open source license (MIT or similar)
+- [x] Add open source license (MIT or similar)
 - [ ] Configure Dependabot for dependency security
 - [ ] Audit offline functionality
 - [ ] Clean up project documentation
