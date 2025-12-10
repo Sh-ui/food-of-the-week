@@ -68,3 +68,9 @@ Edit `print-config.json` in the `public/` folder to adjust print layout settings
 - **GitHub Actions** - Auto-deployment
 - **TypeScript** - Type-safe code
 - **CSS** - Custom print media queries
+
+## License
+
+This project is licensed under the [GNU Affero General Public License v3.0 (AGPL-3.0)](LICENSE).
+
+This means you're free to use, modify, and share this software, but if you run a modified version as a web service, you must make your source code available. This prevents companies from taking this open-source project and selling access to it behind a paywall without contributing back to the community.
