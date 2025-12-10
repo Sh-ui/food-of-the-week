@@ -28,7 +28,7 @@ This document serves as the single source of truth for all planned features and 
 ### Hamburger Menu Polish
 
 - [ ] Match "Print Full Week" button color to hero version
-- [ ] Implement side-by-side layout for "Back to Top" and "Print Week" buttons
+- [ ] Implement side-by-side layout for "Back to Top" and "Print Week" buttons.
 
 ### Scroll Position States
 
