@@ -670,9 +670,59 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
   const navCenter = document.querySelector('.nav-center') as HTMLElement;
   const headerLeft = document.querySelector('.header-left') as HTMLElement;
 
+  // ============================================
+  // SECTION POSITION TRACKING
+  // ============================================
+
+  interface SectionData {
+    id: string;
+    displayName: string;
+    top: number;
+    bottom: number;
+    isSection: boolean;
+  }
+
+  let sectionCache: SectionData[] = [];
   let currentSection = '';
   let isScrolled = false;
-  let scrollTimeout: ReturnType<typeof setTimeout> | null = null;
+
+  // Easing function: ease-in-out cubic for smooth fade curve
+  function easeInOutCubic(t: number): number {
+    return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+  }
+
+  // Get display name for a section ID
+  function getDisplayName(sectionId: string): string {
+    if (sectionId === 'all') return 'Full Week';
+    if (sectionId === 'grocery-list') return 'Grocery List';
+    if (sectionId === 'footer') return 'Links & Info';
+    if (sectionId.startsWith('meal-')) {
+      const mealLink = document.querySelector(`.nav-link[data-section="${sectionId}"]`);
+      if (mealLink) {
+        const raw = mealLink.textContent?.trim() || 'Meal';
+        return raw.replace(/^[✓\u2713]\s*/, '');
+      }
+    }
+    return sectionId;
+  }
+
+  // Cache section positions (call on load and resize)
+  function cacheSectionPositions(): void {
+    sectionCache = [];
+    const scrollY = window.scrollY;
+    
+    document.querySelectorAll('.print-section').forEach(el => {
+      const rect = el.getBoundingClientRect();
+      const id = el.id.replace('print-section-', '');
+      sectionCache.push({
+        id,
+        displayName: getDisplayName(id),
+        top: rect.top + scrollY,
+        bottom: rect.bottom + scrollY,
+        isSection: true
+      });
+    });
+  }
 
   // Calculate nav left margin based on week title width
   function updateNavLeftMargin(): void {
@@ -686,80 +736,134 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     }
   }
 
-  // Get all sections in DOM order
-  function getSectionsInOrder(): { id: string; element: Element }[] {
-    const sections: { id: string; element: Element }[] = [];
-    document.querySelectorAll('.print-section').forEach(el => {
-      sections.push({ id: el.id.replace('print-section-', ''), element: el });
-    });
-    return sections;
-  }
-
-  // Find the first section that has entered the viewport (top is above 60% of viewport)
-  function findActiveSection(): string | null {
-    const sections = getSectionsInOrder();
-    const threshold = window.innerHeight * 0.6; // Section top must be in upper 60% of viewport
+  // Find current section and transition progress based on scroll position
+  function calculateSectionState(): { current: SectionData | null; next: SectionData | null; progress: number } {
+    const scrollY = window.scrollY;
+    const viewportHeight = window.innerHeight;
+    // Trigger point: 40% down from top of viewport
+    const triggerPoint = scrollY + (viewportHeight * 0.4);
     
-    for (let i = sections.length - 1; i >= 0; i--) {
-      const rect = sections[i].element.getBoundingClientRect();
-      // Section is active if its top is above the threshold (meaning it's scrolled into view enough)
-      if (rect.top < threshold) {
-        return sections[i].id;
+    let current: SectionData | null = null;
+    let next: SectionData | null = null;
+    let progress = 0;
+
+    for (let i = 0; i < sectionCache.length; i++) {
+      const section = sectionCache[i];
+      
+      if (triggerPoint >= section.top && triggerPoint < section.bottom) {
+        current = section;
+        next = sectionCache[i + 1] || null;
+        
+        // Calculate transition progress in the last 150px of the section
+        const transitionZoneSize = 150;
+        const transitionStart = section.bottom - transitionZoneSize;
+        
+        if (triggerPoint > transitionStart && next) {
+          // We're in the transition zone
+          const rawProgress = (triggerPoint - transitionStart) / transitionZoneSize;
+          progress = Math.min(1, Math.max(0, rawProgress));
+        }
+        break;
       }
     }
-    return null;
+
+    // If no section found but we have sections, check if we're before the first
+    if (!current && sectionCache.length > 0 && triggerPoint < sectionCache[0].top) {
+      // Before first section - treat as approaching it
+      next = sectionCache[0];
+      const distanceToFirst = sectionCache[0].top - triggerPoint;
+      if (distanceToFirst < 150) {
+        progress = 1 - (distanceToFirst / 150);
+      }
+    }
+
+    return { current, next, progress };
   }
 
-  // Update scroll state (debounced for stability)
+  // Update scroll state - no debounce, position-based
   function updateScrollState(): void {
     const scrolled = window.scrollY > 100;
     const wasScrolled = isScrolled;
     isScrolled = scrolled;
     header.dataset.scrolled = scrolled ? 'true' : 'false';
-    
+
     // Update nav position when scroll state changes
     if (scrolled && !wasScrolled) {
       updateNavLeftMargin();
     }
 
-    // Clear any pending update
-    if (scrollTimeout) {
-      clearTimeout(scrollTimeout);
+    if (!scrolled) {
+      // At top of page - show Full Week with no transition
+      if (currentSection !== '') {
+        currentSection = '';
+        updateSectionDisplay('all', 'Full Week', false, 1);
+        navLinks.forEach(link => link.classList.remove('active'));
+      }
+      return;
     }
 
-    // Debounce the section detection for stability
-    scrollTimeout = setTimeout(() => {
-      if (!scrolled) {
-        // At top of page - show Full Week
-        if (currentSection !== '') {
-          currentSection = '';
-          updateSectionDisplay('all', 'Full Week', false);
-          navLinks.forEach(link => link.classList.remove('active'));
+    // Calculate current section based on scroll position
+    const { current, next, progress } = calculateSectionState();
+    
+    if (current) {
+      // Apply eased opacity for smooth transition
+      const easedProgress = easeInOutCubic(progress);
+      const opacity = 1 - (easedProgress * 0.6); // Fade to 40% at transition midpoint
+      
+      // Update if section changed
+      if (current.id !== currentSection) {
+        currentSection = current.id;
+        updateNavHighlight(current.id);
+      }
+      
+      // Always update display with current opacity
+      updateSectionDisplay(current.id, current.displayName, current.isSection, opacity);
+      
+      // If past midpoint of transition, show next section instead
+      if (progress > 0.5 && next) {
+        const fadeInOpacity = easeInOutCubic((progress - 0.5) * 2); // 0 to 1 for second half
+        updateSectionDisplay(next.id, next.displayName, next.isSection, 0.4 + (fadeInOpacity * 0.6));
+      }
+    } else if (sectionCache.length > 0) {
+      // We're between hero and first section
+      const first = sectionCache[0];
+      const scrollY = window.scrollY;
+      const viewportHeight = window.innerHeight;
+      const triggerPoint = scrollY + (viewportHeight * 0.4);
+      const distanceToFirst = first.top - triggerPoint;
+      
+      if (distanceToFirst < 200 && distanceToFirst > 0) {
+        // Approaching first section - fade from Full Week to first section
+        const approachProgress = 1 - (distanceToFirst / 200);
+        const easedProgress = easeInOutCubic(approachProgress);
+        
+        if (approachProgress < 0.5) {
+          // Still showing Full Week, fading out
+          updateSectionDisplay('all', 'Full Week', false, 1 - (easedProgress * 0.6));
+        } else {
+          // Showing first section, fading in
+          const fadeInOpacity = 0.4 + (easeInOutCubic((approachProgress - 0.5) * 2) * 0.6);
+          updateSectionDisplay(first.id, first.displayName, first.isSection, fadeInOpacity);
+          if (currentSection !== first.id) {
+            currentSection = first.id;
+            updateNavHighlight(first.id);
+          }
+        }
+      } else if (distanceToFirst <= 0) {
+        // At or past first section
+        if (currentSection !== first.id) {
+          currentSection = first.id;
+          updateSectionDisplay(first.id, first.displayName, first.isSection, 1);
+          updateNavHighlight(first.id);
         }
       } else {
-        // Find and display active section
-        const activeSection = findActiveSection();
-        if (activeSection && activeSection !== currentSection) {
-          currentSection = activeSection;
-          updateNavHighlight(activeSection);
-          
-          // Get display name
-          let displayName = 'Grocery List';
-          if (activeSection === 'grocery-list') {
-            displayName = 'Grocery List';
-          } else if (activeSection === 'footer') {
-            displayName = 'Links & Info';
-          } else if (activeSection.startsWith('meal-')) {
-            const mealLink = document.querySelector(`.nav-link[data-section="${activeSection}"]`);
-            if (mealLink) {
-              const raw = mealLink.textContent?.trim() || 'Meal';
-              displayName = raw.replace(/^[✓\u2713]\s*/, '');
-            }
-          }
-          updateSectionDisplay(activeSection, displayName, true);
+        // Far from first section, show Full Week
+        if (currentSection !== '') {
+          currentSection = '';
+          updateSectionDisplay('all', 'Full Week', false, 1);
         }
       }
-    }, 50); // 50ms debounce
+    }
   }
 
   // Update nav link highlighting
@@ -774,8 +878,8 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     });
   }
 
-  // Update section display (selector + print button)
-  function updateSectionDisplay(sectionId: string, displayName: string, isSection: boolean): void {
+  // Update section display (selector + print button) with opacity for transitions
+  function updateSectionDisplay(sectionId: string, displayName: string, isSection: boolean, opacity: number = 1): void {
     // Update section selector
     if (currentSectionName) {
       currentSectionName.textContent = displayName;
@@ -785,6 +889,8 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     if (headerPrintBtn) {
       headerPrintBtn.dataset.printTarget = sectionId;
       headerPrintBtn.dataset.isSection = isSection ? 'true' : 'false';
+      headerPrintBtn.style.opacity = opacity.toString();
+      
       const sectionNameEl = headerPrintBtn.querySelector('.print-section-name');
       if (sectionNameEl) {
         sectionNameEl.textContent = displayName;
@@ -867,18 +973,24 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
 
   // Initialize
   function init(): void {
+    // Cache section positions after layout is ready
+    setTimeout(() => {
+      cacheSectionPositions();
+      updateNavLeftMargin();
+    }, 100);
+
     // Set initial state
-    updateSectionDisplay('all', 'Full Week', false);
+    updateSectionDisplay('all', 'Full Week', false, 1);
     updateScrollState();
     setupSectionDropdown();
     setupSmoothScroll();
     setupPrintButton();
 
-    // Calculate margin after a short delay to ensure layout is ready
-    setTimeout(updateNavLeftMargin, 100);
-
     window.addEventListener('scroll', updateScrollState, { passive: true });
-    window.addEventListener('resize', updateNavLeftMargin, { passive: true });
+    window.addEventListener('resize', () => {
+      cacheSectionPositions();
+      updateNavLeftMargin();
+    }, { passive: true });
   }
 
   // Run on DOM ready

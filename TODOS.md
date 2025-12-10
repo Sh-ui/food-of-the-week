@@ -40,7 +40,6 @@ This document serves as the single source of truth for all planned features and 
 
 - [x] Buffer zone at page top (shows "Full Week" until scroll past threshold)
 - [x] Section highlighting based on 25%+ visibility
-- [ ] Fine-tune inter-section buffer (no highlight when two sections equally visible)
 - [ ] Add fade transition to print button label changes
 
 ---
