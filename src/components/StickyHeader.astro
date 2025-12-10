@@ -140,6 +140,12 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     margin: 0 auto;
     position: relative;
     min-height: 40px;
+    transition: justify-content 0.4s ease;
+  }
+
+  /* When scrolled, align nav to the left */
+  .sticky-header[data-scrolled="true"] .header-nav {
+    justify-content: flex-start;
   }
 
   /* Left side container */
@@ -665,24 +671,46 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
   const headerLeft = document.querySelector('.header-left') as HTMLElement;
 
   let currentSection = '';
-  let currentPrintTarget = 'all';
   let isScrolled = false;
+  let scrollTimeout: ReturnType<typeof setTimeout> | null = null;
 
   // Calculate nav left margin based on week title width
   function updateNavLeftMargin(): void {
     if (weekTitleEl && navCenter && headerLeft) {
-      // Get the left position + width of the header-left container
       const leftRect = headerLeft.getBoundingClientRect();
       const navRect = header.querySelector('.header-nav')?.getBoundingClientRect();
       if (navRect) {
-        // Calculate the margin needed to position nav just after the title
-        const margin = leftRect.right - navRect.left + 16; // 16px gap
+        const margin = leftRect.right - navRect.left + 16;
         navCenter.style.setProperty('--nav-left-margin', `${margin}px`);
       }
     }
   }
 
-  // Update scroll state
+  // Get all sections in DOM order
+  function getSectionsInOrder(): { id: string; element: Element }[] {
+    const sections: { id: string; element: Element }[] = [];
+    document.querySelectorAll('.print-section').forEach(el => {
+      sections.push({ id: el.id.replace('print-section-', ''), element: el });
+    });
+    return sections;
+  }
+
+  // Find the first section that has entered the viewport (top is above 60% of viewport)
+  function findActiveSection(): string | null {
+    const sections = getSectionsInOrder();
+    const threshold = window.innerHeight * 0.6; // Section top must be in upper 60% of viewport
+    
+    for (let i = sections.length - 1; i >= 0; i--) {
+      const rect = sections[i].element.getBoundingClientRect();
+      // Section is active if its top is above the threshold (meaning it's scrolled into view enough)
+      if (rect.top < threshold) {
+        return sections[i].id;
+      }
+    }
+    return null;
+  }
+
+  // Update scroll state (debounced for stability)
   function updateScrollState(): void {
     const scrolled = window.scrollY > 100;
     const wasScrolled = isScrolled;
@@ -694,82 +722,56 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
       updateNavLeftMargin();
     }
 
-    // If not scrolled, show Full Week
-    if (!scrolled) {
-      updateSectionDisplay('all', 'Full Week', false);
-      // Clear active states on nav links
-      navLinks.forEach(link => link.classList.remove('active'));
-    } else {
-      // Update active section based on scroll position
-      updateActiveSection();
+    // Clear any pending update
+    if (scrollTimeout) {
+      clearTimeout(scrollTimeout);
     }
+
+    // Debounce the section detection for stability
+    scrollTimeout = setTimeout(() => {
+      if (!scrolled) {
+        // At top of page - show Full Week
+        if (currentSection !== '') {
+          currentSection = '';
+          updateSectionDisplay('all', 'Full Week', false);
+          navLinks.forEach(link => link.classList.remove('active'));
+        }
+      } else {
+        // Find and display active section
+        const activeSection = findActiveSection();
+        if (activeSection && activeSection !== currentSection) {
+          currentSection = activeSection;
+          updateNavHighlight(activeSection);
+          
+          // Get display name
+          let displayName = 'Grocery List';
+          if (activeSection === 'grocery-list') {
+            displayName = 'Grocery List';
+          } else if (activeSection === 'footer') {
+            displayName = 'Links & Info';
+          } else if (activeSection.startsWith('meal-')) {
+            const mealLink = document.querySelector(`.nav-link[data-section="${activeSection}"]`);
+            if (mealLink) {
+              const raw = mealLink.textContent?.trim() || 'Meal';
+              displayName = raw.replace(/^[✓\u2713]\s*/, '');
+            }
+          }
+          updateSectionDisplay(activeSection, displayName, true);
+        }
+      }
+    }, 50); // 50ms debounce
   }
 
-  // Get section visibility percentage
-  function getSectionVisibility(section: Element): number {
-    const rect = section.getBoundingClientRect();
-    const viewportHeight = window.innerHeight;
-    
-    if (rect.bottom < 0 || rect.top > viewportHeight) {
-      return 0;
-    }
-    
-    const visibleTop = Math.max(0, rect.top);
-    const visibleBottom = Math.min(viewportHeight, rect.bottom);
-    const visibleHeight = visibleBottom - visibleTop;
-    
-    return visibleHeight / viewportHeight;
-  }
-
-  // Update active nav link and section selector
-  function updateActiveSection(): void {
-    const sections = document.querySelectorAll('.print-section');
-    let activeSection = '';
-    let maxVisibility = 0;
-    
-    sections.forEach(section => {
-      const visibility = getSectionVisibility(section);
-      // Require 25% visibility
-      if (visibility > maxVisibility && visibility > 0.25) {
-        maxVisibility = visibility;
-        activeSection = section.id.replace('print-section-', '');
+  // Update nav link highlighting
+  function updateNavHighlight(activeSection: string): void {
+    navLinks.forEach(link => {
+      const linkSection = link.getAttribute('data-section');
+      if (linkSection === activeSection) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
       }
     });
-
-    // If no section meets threshold, keep current or default
-    if (!activeSection) {
-      return;
-    }
-
-    if (activeSection !== currentSection) {
-      currentSection = activeSection;
-      
-      // Update nav links
-      navLinks.forEach(link => {
-        const linkSection = link.getAttribute('data-section');
-        if (linkSection === activeSection) {
-          link.classList.add('active');
-        } else {
-          link.classList.remove('active');
-        }
-      });
-
-      // Get display name
-      let displayName = 'Full Week';
-      if (activeSection === 'grocery-list') {
-        displayName = 'Grocery List';
-      } else if (activeSection === 'footer') {
-        displayName = 'Links & Info';
-      } else if (activeSection.startsWith('meal-')) {
-        const mealLink = document.querySelector(`.nav-link[data-section="${activeSection}"]`);
-        if (mealLink) {
-          const raw = mealLink.textContent?.trim() || 'Meal';
-          displayName = raw.replace(/^[✓\u2713]\s*/, '');
-        }
-      }
-
-      updateSectionDisplay(activeSection, displayName, true);
-    }
   }
 
   // Update section display (selector + print button)
@@ -788,8 +790,6 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
         sectionNameEl.textContent = displayName;
       }
     }
-
-    currentPrintTarget = sectionId;
   }
 
   // Close section dropdown helper
