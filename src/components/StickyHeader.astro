@@ -17,9 +17,8 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
 
 <header class="sticky-header" id="sticky-header" data-scrolled="false">
   <nav class="header-nav">
-    <!-- Left: Menu label (desktop only, before scroll) / Week Title (after scroll) -->
+    <!-- Left: Week Title (visible after scroll) -->
     <div class="header-left">
-      <span class="menu-label-left">Menu</span>
       <span class="header-week-title">{shortTitle}</span>
     </div>
     
@@ -53,7 +52,6 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
             <polyline points="6 9 12 15 18 9"></polyline>
           </svg>
           <span class="current-section-name">Full Week</span>
-          <span class="menu-label">Menu</span>
         </button>
         
         <!-- Dropdown menu -->
@@ -153,19 +151,8 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     height: 36px;
   }
 
-  /* Menu label (desktop, before scroll) */
-  .menu-label-left {
-    color: var(--color-text-light);
-    font-size: 0.9rem;
-    font-weight: 500;
-    opacity: 1;
-    transition: opacity 0.3s ease;
-  }
-
   /* Week title - hidden initially, shown on scroll */
   .header-week-title {
-    position: absolute;
-    left: 0;
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: 1.1rem;
@@ -179,12 +166,6 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     transform: translateY(2px);
   }
 
-  /* When scrolled: hide menu label, show week title */
-  .sticky-header[data-scrolled="true"] .menu-label-left {
-    opacity: 0;
-    pointer-events: none;
-  }
-
   .sticky-header[data-scrolled="true"] .header-week-title {
     opacity: 1;
     pointer-events: auto;
@@ -195,7 +176,7 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.4s ease;
+    transition: transform 0.4s ease, margin-left 0.4s ease;
   }
 
   /* Desktop: Nav links visible, centered initially */
@@ -206,9 +187,11 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     gap: var(--spacing-xs);
   }
 
-  /* When scrolled: shift nav links to align with left side */
+  /* When scrolled: shift nav links to left, positioned after the date */
   .sticky-header[data-scrolled="true"] .nav-center {
-    transform: translateX(calc(-50% + var(--nav-shift-offset, 80px)));
+    justify-content: flex-start;
+    margin-left: var(--nav-left-margin, 120px);
+    transform: translateX(0);
   }
 
   .nav-link {
@@ -293,20 +276,6 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     transition: opacity 0.15s ease;
   }
 
-  /* Menu label - hidden by default, shown when dropdown open */
-  .menu-label {
-    display: none;
-    color: var(--color-text-light);
-    font-weight: 500;
-  }
-
-  .section-selector-btn[aria-expanded="true"] .current-section-name {
-    display: none;
-  }
-
-  .section-selector-btn[aria-expanded="true"] .menu-label {
-    display: inline;
-  }
 
   /* Section Dropdown */
   .section-dropdown {
@@ -361,7 +330,7 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     opacity: 0.6;
   }
 
-  /* Header Print Button - always visible, brown/primary style */
+  /* Header Print Button - always visible */
   .header-print-btn {
     position: absolute;
     right: var(--spacing-md);
@@ -382,13 +351,23 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     cursor: pointer;
     margin: 0;
     box-sizing: border-box;
-    transition: background-color 0.2s ease, opacity 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
     height: 36px;
     min-width: 36px;
   }
 
   .header-print-btn:hover {
     background: #3a3626;
+  }
+
+  /* Yellow/secondary style for section-specific print buttons */
+  .header-print-btn[data-is-section="true"] {
+    background: var(--color-secondary);
+    color: var(--color-text);
+  }
+
+  .header-print-btn[data-is-section="true"]:hover {
+    background: #d9b130;
   }
 
   /* Desktop: Show "Print" prefix + section name, hide icon */
@@ -440,13 +419,10 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
       display: block;
     }
 
-    .menu-label-left {
-      display: none;
-    }
-
     /* Don't shift nav on mobile */
     .sticky-header[data-scrolled="true"] .nav-center {
       transform: none;
+      margin-left: 0;
     }
 
     /* Print button: icon only, beefier */
@@ -489,7 +465,195 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
 </style>
 
 <script>
-  // Elements
+  // ============================================
+  // PRINT FUNCTIONALITY
+  // ============================================
+
+  interface PrintConfig {
+    page: { margins: { top: string; right: string; bottom: string; left: string } };
+    typography: {
+      bodyFontFamily: string; headingFontFamily: string; bodyFontSize: string;
+      lineHeight: number; h1Size: string; h2Size: string; h3Size: string;
+    };
+    spacing: { sectionGap: string; paragraphGap: string; listItemGap: string; categoryGap: string };
+    colors: { text: string; border: string; mutedText: string; headingColor: string };
+    checkbox: { size: string; borderWidth: string; checkedSymbol: string; globalCheckedSymbol: string };
+    groceryList: { columns: number; showCategories: boolean; categoryHeadingSize: string };
+    meals: { pageBreakBetween: boolean; showPhaseColors: boolean; instructionIndent: string };
+  }
+
+  interface GroceryItem { text: string; globallyChecked: boolean; }
+  interface GroceryCategory { name: string; items: GroceryItem[]; }
+  interface Meal {
+    id: string; number: number; title: string; fullTitle: string; cooked: boolean;
+    protein?: string; ingredients?: string; description?: string;
+    alreadyPrepped?: string[]; sousChef?: string; chefFinishing?: string;
+  }
+  interface WeekPlan { weekTitle: string; groceryList: GroceryCategory[]; meals: Meal[]; }
+
+  let printConfig: PrintConfig | null = null;
+
+  function getDefaultPrintConfig(): PrintConfig {
+    return {
+      page: { margins: { top: '0.5in', right: '0.5in', bottom: '0.5in', left: '0.5in' } },
+      typography: {
+        bodyFontFamily: 'Work Sans, sans-serif', headingFontFamily: 'Aleo, Georgia, serif',
+        bodyFontSize: '11pt', lineHeight: 1.5, h1Size: '24pt', h2Size: '18pt', h3Size: '14pt'
+      },
+      spacing: { sectionGap: '16pt', paragraphGap: '8pt', listItemGap: '4pt', categoryGap: '12pt' },
+      colors: { text: '#000000', border: '#cccccc', mutedText: '#666666', headingColor: '#333333' },
+      checkbox: { size: '12pt', borderWidth: '1pt', checkedSymbol: '✓', globalCheckedSymbol: '●' },
+      groceryList: { columns: 1, showCategories: true, categoryHeadingSize: '14pt' },
+      meals: { pageBreakBetween: true, showPhaseColors: false, instructionIndent: '0pt' }
+    };
+  }
+
+  async function loadPrintConfig(): Promise<PrintConfig> {
+    if (printConfig) return printConfig;
+    try {
+      const baseUrl = document.querySelector('link[rel="icon"]')?.getAttribute('href')?.replace('favicon.svg', '') || '/';
+      const response = await fetch(`${baseUrl}print-config.json`);
+      printConfig = await response.json();
+      return printConfig!;
+    } catch { return getDefaultPrintConfig(); }
+  }
+
+  function getWeekPlanData(): WeekPlan {
+    const weekTitle = document.querySelector('h1')?.textContent || 'Weekly Meal Plan';
+    const groceryList: GroceryCategory[] = [];
+    const grocerySection = document.querySelector('#print-section-grocery-list');
+    if (grocerySection) {
+      grocerySection.querySelectorAll('.grocery-category').forEach(cat => {
+        const name = cat.querySelector('h3')?.textContent || '';
+        const items: GroceryItem[] = [];
+        cat.querySelectorAll('.grocery-item').forEach(item => {
+          const checkbox = item.querySelector('input[type="checkbox"]') as HTMLInputElement;
+          const text = item.querySelector('.item-text')?.textContent || '';
+          items.push({ text, globallyChecked: checkbox?.dataset.globallyChecked === 'true' });
+        });
+        groceryList.push({ name, items });
+      });
+    }
+    const meals: Meal[] = [];
+    document.querySelectorAll('.meal[data-section-type="meal"]').forEach(mealSection => {
+      const id = mealSection.id.replace('print-section-', '');
+      const cooked = mealSection.getAttribute('data-cooked') === 'true';
+      const fullTitle = mealSection.querySelector('h2')?.textContent || '';
+      const match = fullTitle.match(/^Meal (\d+):\s*(.+)$/);
+      const number = match ? parseInt(match[1], 10) : 0;
+      const title = match ? match[2] : fullTitle;
+      let protein = '', ingredients = '', description = '';
+      mealSection.querySelectorAll('.meal-field').forEach(field => {
+        const label = field.querySelector('strong')?.textContent || '';
+        const text = field.textContent?.replace(label, '').trim() || '';
+        if (label.includes('Protein')) protein = text;
+        if (label.includes('Ingredients')) ingredients = text;
+        if (label.includes('Description')) description = text;
+      });
+      const alreadyPrepped: string[] = [];
+      mealSection.querySelector('.already-prepped ul')?.querySelectorAll('li').forEach(li => alreadyPrepped.push(li.textContent || ''));
+      let sousChef = '';
+      const sousChefSection = mealSection.querySelector('.sous-chef .phase-content');
+      if (sousChefSection) {
+        const p: string[] = []; sousChefSection.querySelectorAll('p').forEach(el => p.push(el.textContent || '')); sousChef = p.join('\n\n');
+      }
+      let chefFinishing = '';
+      const chefSection = mealSection.querySelector('.chef-finishing .phase-content');
+      if (chefSection) {
+        const p: string[] = []; chefSection.querySelectorAll('p').forEach(el => p.push(el.textContent || '')); chefFinishing = p.join('\n\n');
+      }
+      meals.push({ id, number, title, fullTitle, cooked, protein, ingredients, description,
+        alreadyPrepped: alreadyPrepped.length > 0 ? alreadyPrepped : undefined,
+        sousChef: sousChef || undefined, chefFinishing: chefFinishing || undefined });
+    });
+    return { weekTitle, groceryList, meals };
+  }
+
+  function generateGroceryListHTML(list: GroceryCategory[], cfg: PrintConfig): string {
+    let html = `<div class="print-grocery-list"><h2 style="font-family:${cfg.typography.headingFontFamily};font-size:${cfg.typography.h2Size};color:${cfg.colors.headingColor};margin-bottom:${cfg.spacing.sectionGap};">Grocery List</h2>`;
+    list.forEach(cat => {
+      html += `<div style="margin-bottom:${cfg.spacing.categoryGap};">`;
+      if (cfg.groceryList.showCategories) html += `<h3 style="font-family:${cfg.typography.headingFontFamily};font-size:${cfg.groceryList.categoryHeadingSize};color:${cfg.colors.headingColor};margin-bottom:${cfg.spacing.listItemGap};">${cat.name}</h3>`;
+      html += `<ul style="list-style:none;margin:0;padding:0;">`;
+      cat.items.forEach(item => {
+        const cbStyle = `display:inline-block;width:${cfg.checkbox.size};height:${cfg.checkbox.size};border:${cfg.checkbox.borderWidth} solid ${cfg.colors.text};margin-right:8pt;vertical-align:middle;text-align:center;line-height:${cfg.checkbox.size};`;
+        const sym = item.globallyChecked ? cfg.checkbox.globalCheckedSymbol : '';
+        const txtStyle = item.globallyChecked ? `color:${cfg.colors.mutedText};` : `color:${cfg.colors.text};`;
+        html += `<li style="margin-bottom:${cfg.spacing.listItemGap};${txtStyle}"><span style="${cbStyle}">${sym}</span>${item.text}</li>`;
+      });
+      html += `</ul></div>`;
+    });
+    return html + `</div>`;
+  }
+
+  function generateMealHTML(meal: Meal, cfg: PrintConfig): string {
+    const tc = meal.cooked ? cfg.colors.mutedText : cfg.colors.text;
+    const hc = meal.cooked ? cfg.colors.mutedText : cfg.colors.headingColor;
+    let html = `<div class="print-meal" style="color:${tc};${cfg.meals.pageBreakBetween?'page-break-after:always;':''}">
+      <h2 style="font-family:${cfg.typography.headingFontFamily};font-size:${cfg.typography.h2Size};color:${hc};margin-bottom:${cfg.spacing.sectionGap};">${meal.fullTitle}</h2>
+      <div style="border:1px solid ${cfg.colors.border};padding:10pt;margin-bottom:${cfg.spacing.sectionGap};">`;
+    if (meal.protein) html += `<p style="margin-bottom:${cfg.spacing.listItemGap};"><strong>Protein:</strong> ${meal.protein}</p>`;
+    if (meal.ingredients) html += `<p style="margin-bottom:${cfg.spacing.listItemGap};"><strong>Ingredients:</strong> ${meal.ingredients}</p>`;
+    if (meal.description) html += `<p style="margin-bottom:0;"><strong>Description:</strong> ${meal.description}</p>`;
+    html += `</div>`;
+    if (meal.alreadyPrepped?.length) {
+      html += `<div style="margin-bottom:${cfg.spacing.sectionGap};"><h3 style="font-family:${cfg.typography.headingFontFamily};font-size:${cfg.typography.h3Size};color:${hc};margin-bottom:${cfg.spacing.listItemGap};">Already Prepped</h3><ul style="margin-left:20pt;">`;
+      meal.alreadyPrepped.forEach(i => html += `<li style="margin-bottom:${cfg.spacing.listItemGap};">${i}</li>`);
+      html += `</ul></div>`;
+    }
+    if (meal.sousChef) {
+      html += `<div style="margin-bottom:${cfg.spacing.sectionGap};"><h3 style="font-family:${cfg.typography.headingFontFamily};font-size:${cfg.typography.h3Size};color:${hc};margin-bottom:${cfg.spacing.listItemGap};">Sous Chef - Prep</h3>`;
+      meal.sousChef.split('\n\n').forEach(p => html += `<p style="margin-bottom:${cfg.spacing.paragraphGap};">${p}</p>`);
+      html += `</div>`;
+    }
+    if (meal.chefFinishing) {
+      html += `<div style="margin-bottom:${cfg.spacing.sectionGap};"><h3 style="font-family:${cfg.typography.headingFontFamily};font-size:${cfg.typography.h3Size};color:${hc};margin-bottom:${cfg.spacing.listItemGap};">Chef - Finishing & Plating</h3>`;
+      meal.chefFinishing.split('\n\n').forEach(p => html += `<p style="margin-bottom:${cfg.spacing.paragraphGap};">${p}</p>`);
+      html += `</div>`;
+    }
+    return html + `</div>`;
+  }
+
+  function generatePrintDocument(plan: WeekPlan, cfg: PrintConfig, target: string): string {
+    const { margins } = cfg.page;
+    let content = '';
+    if (target === 'all') {
+      content += `<h1 style="font-family:${cfg.typography.headingFontFamily};font-size:${cfg.typography.h1Size};color:${cfg.colors.headingColor};margin-bottom:${cfg.spacing.sectionGap};text-align:center;">${plan.weekTitle}</h1>`;
+      content += generateGroceryListHTML(plan.groceryList, cfg);
+      content += `<div style="page-break-after:always;"></div>`;
+      plan.meals.forEach(m => content += generateMealHTML(m, cfg));
+    } else if (target === 'grocery-list') {
+      content += `<h1 style="font-family:${cfg.typography.headingFontFamily};font-size:${cfg.typography.h1Size};color:${cfg.colors.headingColor};margin-bottom:${cfg.spacing.sectionGap};">${plan.weekTitle}</h1>`;
+      content += generateGroceryListHTML(plan.groceryList, cfg);
+    } else if (target.startsWith('meal-')) {
+      const num = parseInt(target.replace('meal-', ''), 10);
+      const meal = plan.meals.find(m => m.number === num);
+      if (meal) content += generateMealHTML(meal, cfg);
+    }
+    return `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Print - ${plan.weekTitle}</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+      <style>@page{margin:${margins.top} ${margins.right} ${margins.bottom} ${margins.left};}*{box-sizing:border-box;margin:0;padding:0;}
+      body{font-family:${cfg.typography.bodyFontFamily};font-size:${cfg.typography.bodyFontSize};line-height:${cfg.typography.lineHeight};color:${cfg.colors.text};padding:0;}
+      strong{font-weight:600;}.print-meal:last-child{page-break-after:auto;}</style>
+      </head><body>${content}</body></html>`;
+  }
+
+  async function printSection(sectionId: string): Promise<void> {
+    const cfg = await loadPrintConfig();
+    const plan = getWeekPlanData();
+    const html = generatePrintDocument(plan, cfg, sectionId);
+    const win = window.open('', '_blank', 'width=800,height=600');
+    if (!win) { console.error('Could not open print window'); return; }
+    win.document.write(html);
+    win.document.close();
+    win.onload = () => { setTimeout(() => { win.print(); win.close(); }, 250); };
+  }
+
+  // ============================================
+  // HEADER NAVIGATION
+  // ============================================
+
   const header = document.getElementById('sticky-header') as HTMLElement;
   const sectionSelectorBtn = document.querySelector('.section-selector-btn') as HTMLButtonElement;
   const sectionDropdown = document.querySelector('.section-dropdown') as HTMLElement;
@@ -498,27 +662,46 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
   const weekTitleEl = document.querySelector('.header-week-title') as HTMLElement;
   const navLinks = document.querySelectorAll('.nav-link[data-section], .dropdown-link[data-section]') as NodeListOf<HTMLAnchorElement>;
   const navCenter = document.querySelector('.nav-center') as HTMLElement;
+  const headerLeft = document.querySelector('.header-left') as HTMLElement;
 
   let currentSection = '';
   let currentPrintTarget = 'all';
+  let isScrolled = false;
 
-  // Calculate nav shift offset based on week title width
-  function updateNavShiftOffset(): void {
-    if (weekTitleEl && navCenter) {
-      // Measure the week title width + some padding
-      const titleWidth = weekTitleEl.offsetWidth + 24;
-      navCenter.style.setProperty('--nav-shift-offset', `${titleWidth}px`);
+  // Calculate nav left margin based on week title width
+  function updateNavLeftMargin(): void {
+    if (weekTitleEl && navCenter && headerLeft) {
+      // Get the left position + width of the header-left container
+      const leftRect = headerLeft.getBoundingClientRect();
+      const navRect = header.querySelector('.header-nav')?.getBoundingClientRect();
+      if (navRect) {
+        // Calculate the margin needed to position nav just after the title
+        const margin = leftRect.right - navRect.left + 16; // 16px gap
+        navCenter.style.setProperty('--nav-left-margin', `${margin}px`);
+      }
     }
   }
 
   // Update scroll state
   function updateScrollState(): void {
     const scrolled = window.scrollY > 100;
+    const wasScrolled = isScrolled;
+    isScrolled = scrolled;
     header.dataset.scrolled = scrolled ? 'true' : 'false';
     
-    // Update nav shift offset when scrolled
-    if (scrolled) {
-      updateNavShiftOffset();
+    // Update nav position when scroll state changes
+    if (scrolled && !wasScrolled) {
+      updateNavLeftMargin();
+    }
+
+    // If not scrolled, show Full Week
+    if (!scrolled) {
+      updateSectionDisplay('all', 'Full Week', false);
+      // Clear active states on nav links
+      navLinks.forEach(link => link.classList.remove('active'));
+    } else {
+      // Update active section based on scroll position
+      updateActiveSection();
     }
   }
 
@@ -546,20 +729,19 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     
     sections.forEach(section => {
       const visibility = getSectionVisibility(section);
-      // Require 25% visibility (75% threshold means at least 25% visible at top)
+      // Require 25% visibility
       if (visibility > maxVisibility && visibility > 0.25) {
         maxVisibility = visibility;
         activeSection = section.id.replace('print-section-', '');
       }
     });
 
-    // If no section meets threshold and we're at the top, show "Full Week"
-    if (!activeSection && window.scrollY < 200) {
-      updateSectionDisplay('all', 'Full Week');
+    // If no section meets threshold, keep current or default
+    if (!activeSection) {
       return;
     }
 
-    if (activeSection && activeSection !== currentSection) {
+    if (activeSection !== currentSection) {
       currentSection = activeSection;
       
       // Update nav links
@@ -586,12 +768,12 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
         }
       }
 
-      updateSectionDisplay(activeSection, displayName);
+      updateSectionDisplay(activeSection, displayName, true);
     }
   }
 
   // Update section display (selector + print button)
-  function updateSectionDisplay(sectionId: string, displayName: string): void {
+  function updateSectionDisplay(sectionId: string, displayName: string, isSection: boolean): void {
     // Update section selector
     if (currentSectionName) {
       currentSectionName.textContent = displayName;
@@ -600,6 +782,7 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     // Update print button
     if (headerPrintBtn) {
       headerPrintBtn.dataset.printTarget = sectionId;
+      headerPrintBtn.dataset.isSection = isSection ? 'true' : 'false';
       const sectionNameEl = headerPrintBtn.querySelector('.print-section-name');
       if (sectionNameEl) {
         sectionNameEl.textContent = displayName;
@@ -668,20 +851,30 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     });
   }
 
+  // Setup print button
+  function setupPrintButton(): void {
+    if (headerPrintBtn) {
+      headerPrintBtn.addEventListener('click', () => {
+        const target = headerPrintBtn.dataset.printTarget || 'all';
+        printSection(target);
+      });
+    }
+  }
+
   // Initialize
   function init(): void {
+    // Set initial state
+    updateSectionDisplay('all', 'Full Week', false);
     updateScrollState();
-    updateActiveSection();
     setupSectionDropdown();
     setupSmoothScroll();
-    updateNavShiftOffset();
+    setupPrintButton();
 
-    window.addEventListener('scroll', () => {
-      updateScrollState();
-      updateActiveSection();
-    }, { passive: true });
+    // Calculate margin after a short delay to ensure layout is ready
+    setTimeout(updateNavLeftMargin, 100);
 
-    window.addEventListener('resize', updateNavShiftOffset, { passive: true });
+    window.addEventListener('scroll', updateScrollState, { passive: true });
+    window.addEventListener('resize', updateNavLeftMargin, { passive: true });
   }
 
   // Run on DOM ready
