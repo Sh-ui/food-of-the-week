@@ -1,4 +1,6 @@
---- 
+---
+import Button from './Button.astro';
+
 interface MealNavItem {
   id: string;
   title: string;
@@ -43,13 +45,13 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     </div>
     
     <button class="header-print-btn print-button" data-print-target="all" data-visible="false" type="button">
-      <span class="print-text-full">Print Full Week</span>
-      <span class="print-text-short">Print</span>
-      <svg class="print-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <svg class="print-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <polyline points="6 9 6 2 18 2 18 9"></polyline>
         <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
         <rect x="6" y="14" width="12" height="8"></rect>
       </svg>
+      <span class="print-prefix">Print</span>
+      <span class="print-section-name">Full Week</span>
     </button>
   </nav>
   
@@ -224,23 +226,29 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     background: var(--color-cooked-bg);
   }
 
-  /* Header Print Button - hidden by default, positioned to the right */
+  /* Header Print Button - styled to match nav-link exactly */
   .header-print-btn {
     position: absolute;
     right: var(--spacing-md);
-    display: inline-flex;
-    align-items: center;
-    gap: var(--spacing-xs);
-    padding: var(--spacing-xs) var(--spacing-md);
-    background: var(--color-secondary);
-    color: var(--color-text);
-    border: none;
+    /* Match nav-link base styles exactly */
+    padding: var(--spacing-xs) var(--spacing-sm);
     border-radius: 4px;
     font-size: 0.9rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.2s ease, opacity 0.3s ease;
+    font-weight: 500;
     white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    /* Button-specific resets */
+    border: none;
+    background: var(--color-secondary);
+    color: var(--color-text);
+    font-family: inherit;
+    line-height: inherit;
+    cursor: pointer;
+    margin: 0;
+    box-sizing: border-box;
+    /* Fade transition */
+    transition: background-color 0.2s ease, opacity 0.3s ease;
     opacity: 0;
     pointer-events: none;
   }
@@ -254,9 +262,20 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     background: #d9b130;
   }
 
-  .print-text-short,
-  .print-icon {
+  /* Desktop: Show "Print" prefix + section name, hide icon */
+  .header-print-btn .print-icon {
     display: none;
+    flex-shrink: 0;
+  }
+
+  .header-print-btn .print-prefix,
+  .header-print-btn .print-section-name {
+    display: inline;
+  }
+
+  /* Add space between "Print" and section name */
+  .header-print-btn .print-prefix::after {
+    content: ' ';
   }
 
   /* Mobile Header */
@@ -429,19 +448,25 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     flex-shrink: 0;
   }
 
+  /* Mobile section header: icon only */
   .section-print-text {
-    display: inline;
+    display: none;
   }
 
   /* Responsive Breakpoints */
   
-  /* Tablet: 800px - 1000px - show shorter print text */
+  /* Tablet: 800px - 1000px - show icon + section name, hide "Print" prefix */
   @media (max-width: 1000px) {
-    .print-text-full {
+    .header-print-btn .print-icon {
+      display: inline;
+      margin-right: 6px;
+    }
+
+    .header-print-btn .print-prefix {
       display: none;
     }
 
-    .print-text-short {
+    .header-print-btn .print-section-name {
       display: inline;
     }
 
@@ -585,13 +610,25 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
   function updateHeaderPrintButton(sectionId: string): void {
     if (!headerPrintBtn) return;
     
-    const label = sectionLabels[sectionId] || 'Print';
-    
     headerPrintBtn.dataset.printTarget = sectionId;
-    const fullText = headerPrintBtn.querySelector('.print-text-full');
-    const shortText = headerPrintBtn.querySelector('.print-text-short');
-    if (fullText) fullText.textContent = label;
-    if (shortText) shortText.textContent = 'Print';
+    
+    // Get section name (without "Print " prefix)
+    const sectionNameEl = headerPrintBtn.querySelector('.print-section-name');
+    if (sectionNameEl) {
+      // Get the display name for the section
+      let sectionName = 'Full Week';
+      if (sectionId === 'grocery-list') {
+        sectionName = 'Grocery List';
+      } else if (sectionId.startsWith('meal-')) {
+        // Get meal title from nav links
+        const mealLink = document.querySelector(`.nav-link[data-section="${sectionId}"]`);
+        if (mealLink) {
+          const raw = mealLink.textContent?.trim() || 'Meal';
+          sectionName = raw.replace(/^[✓\u2713]\s*/, '');
+        }
+      }
+      sectionNameEl.textContent = sectionName;
+    }
   }
 
   // Update mobile section header with verbose print button
