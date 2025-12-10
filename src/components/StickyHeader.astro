@@ -792,6 +792,14 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     currentPrintTarget = sectionId;
   }
 
+  // Close section dropdown helper
+  function closeSectionDropdown(): void {
+    if (sectionSelectorBtn && sectionDropdown) {
+      sectionSelectorBtn.setAttribute('aria-expanded', 'false');
+      sectionDropdown.hidden = true;
+    }
+  }
+
   // Section dropdown toggle
   function setupSectionDropdown(): void {
     if (!sectionSelectorBtn || !sectionDropdown) return;
@@ -805,25 +813,20 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
 
     // Close on link click
     sectionDropdown.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        sectionSelectorBtn.setAttribute('aria-expanded', 'false');
-        sectionDropdown.hidden = true;
-      });
+      link.addEventListener('click', closeSectionDropdown);
     });
 
     // Close on outside click
     document.addEventListener('click', (e) => {
       if (!sectionSelectorBtn.contains(e.target as Node) && !sectionDropdown.contains(e.target as Node)) {
-        sectionSelectorBtn.setAttribute('aria-expanded', 'false');
-        sectionDropdown.hidden = true;
+        closeSectionDropdown();
       }
     });
 
     // Close on escape key
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
-        sectionSelectorBtn.setAttribute('aria-expanded', 'false');
-        sectionDropdown.hidden = true;
+        closeSectionDropdown();
       }
     });
   }
@@ -855,6 +858,7 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
   function setupPrintButton(): void {
     if (headerPrintBtn) {
       headerPrintBtn.addEventListener('click', () => {
+        closeSectionDropdown();
         const target = headerPrintBtn.dataset.printTarget || 'all';
         printSection(target);
       });
