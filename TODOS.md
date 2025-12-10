@@ -57,6 +57,16 @@ This document serves as the single source of truth for all planned features and 
 - [ ] Add notification dot indicator
 - [ ] Position Cheffy in corner with click-to-expand panel
 
+### Animated Demo Loop
+
+- [ ] Create animated SVG demonstration loop for README
+  - [ ] Blink animation
+  - [ ] Look left animation
+  - [ ] Look right animation
+  - [ ] Return to neutral/idle
+  - [ ] 2-3 second pause before loop restart
+- [ ] Save as `src/assets/cheffy-animated.svg` with SMIL animations
+
 ### State Machine
 
 - [ ] Implement idle state (default)
@@ -154,6 +164,24 @@ This document serves as the single source of truth for all planned features and 
 - [ ] Set up automated PR for dependency updates
 - [ ] Review and enhance GitHub Actions workflow
 - [ ] Add automated testing (if not already present)
+
+### Cheffy Demo GIF Automation
+
+- [ ] Create GitHub Actions workflow to auto-generate demo GIF
+  - [ ] Install dependencies (chromium-browser, ffmpeg, puppeteer)
+  - [ ] Create Node script to render SVG animation in headless browser
+  - [ ] Record 3-second video of animation loop
+  - [ ] Convert video to optimized GIF (400px wide, 30fps)
+  - [ ] Auto-commit generated GIF to `assets/cheffy-demo.gif`
+  - [ ] Trigger on changes to `src/assets/cheffy-animated.svg`
+- [ ] Optimize GIF output
+  - [ ] Use gifsicle for compression (< 500KB target)
+  - [ ] Set infinite loop flag
+  - [ ] Limit color palette to 256 colors
+- [ ] Add "Meet Cheffy" section to README with animated GIF
+  - [ ] Embed GIF with descriptive alt text
+  - [ ] Brief description of Cheffy's features
+  - [ ] Link to live demo
 
 ---
 
