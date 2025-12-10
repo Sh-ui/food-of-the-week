@@ -116,8 +116,6 @@ Serve in bowls. Top with grated Parmesan if available.
 
 Drop the vacuum-sealed steaks into the sous vide bath set to steak temperature (Chef will set temperature remotely from the app, typically 130-135°F for medium-rare).
 
-Drop the vacuum-sealed sweet potatoes into the same sous vide bath alongside the steaks to gently warm them.
-
 Slice the red onion into rings (about ½-inch thick).
 
 Cut the cabbage into thick wedges, cutting through the core/root end so each wedge holds together. This is important - the core keeps the leaves from falling apart.
