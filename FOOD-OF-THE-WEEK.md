@@ -96,7 +96,7 @@ Season with salt, pepper, and a pinch of red pepper flakes. Finish with fresh he
 
 Serve in bowls. Top with grated Parmesan if available.
 
-## Meal 3: Marinated Steak 
+## Meal 3: ~~Marinated Steak~~ 
 
 **Protein:** Flat iron steak
 
@@ -151,27 +151,25 @@ To plate: Arrange the roasted onions and sweet potato chunks on the plate. Fan t
 
  - Chicken has been spatchcocked, seasoned, and vacuum sealed flat with legs and thighs scored. Stored in fridge.
 
- -  Golden and red beets have been vacuum sealed and cooked to perfect temperature. Stored in fridge ready to warm.
+ - Golden and red beets have been vacuum sealed and cooked to perfect temperature. Stored in fridge ready to warm.
 
  - Homemade wheat dough is resting in the fridge.
 
 **Sous Chef - Prep:**
 
-Put the wheat dough into the oven following the [King Arthur No-Knead Rustic Whole Wheat Bread Instructions](https://www.kingarthurbaking.com/recipes/no-knead-rustic-whole-wheat-bread-recipe). Let cool for 1-2 hours.
+Prepare the bread according to [King Arthur No-Knead Rustic Whole Wheat Bread Instructions](https://www.kingarthurbaking.com/recipes/no-knead-rustic-whole-wheat-bread-recipe) give yourself enough time in the day to alot 2 hours for bread to counter rise, 30 minutes to cook and 2 hours to cool.
 
-Drop the vacuum-sealed chicken into the sous vide bath set to chicken temperature (Chef will set temperature remotely from the app).
-
-Drop the vacuum-sealed beets into the same sous vide bath alongside the chicken to gently warm them.
+At 3:30pm Drop the vacuum-sealed chicken into the sous vide bath set to chicken temperature (Chef will set temperature remotely from the app). Drop the vacuum-sealed gold and red beets into the same sous vide bath alongside the chicken to gently warm them.
 
 Wash, stem, and chop the collard greens roughly. Set aside.
 
 Prep a single pomegranate for the garnish.
 
-Preheat the air fryer oven to 475°F.
+at 5:30 Preheat the air fryer oven to 475°F.
 
 **Chef - Finishing & Plating:**
 
-With the air fryer oven now hot at 475°F. Spread the chopped collard greens in a roasting pan as a bed.
+With the air fryer oven now hot at 475°F. Spread the chopped collard greens in the small black roasting pan as a bed.
 
 Remove chicken from sous vide bag, reserve all the juices from the bag; pat the chicken all dry and then carve off the breasts and set them aside for now. Place the remaining dark meat + carcass skin-side up on the collard green bed.
 
