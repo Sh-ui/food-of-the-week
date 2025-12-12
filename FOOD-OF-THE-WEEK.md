@@ -137,7 +137,7 @@ Slice the steak against the grain.
 To plate: Arrange the roasted onions and sweet potato chunks on the plate. Fan the sliced steak over the top. Place the charred cabbage wedge alongside. Drizzle the reduced pan glaze over the steak and cabbage.
 
 
-## Meal 5: Chicken Fricassée
+## Meal 5: ~~Chicken Fricassée~~
 
 **Protein:** Whole chicken
 
