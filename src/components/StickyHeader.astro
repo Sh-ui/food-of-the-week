@@ -514,6 +514,8 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
 
   // Update scroll state
   function updateScrollState(): void {
+    if (!header) return;
+    
     const scrolled = window.scrollY > 50;
     header.dataset.scrolled = scrolled ? 'true' : 'false';
 
@@ -701,7 +703,7 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
           e.preventDefault();
           const target = document.querySelector(href);
           if (target) {
-            const headerHeight = header.offsetHeight;
+            const headerHeight = header?.offsetHeight ?? 60;
             const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight - 20;
             window.scrollTo({ top: targetPosition, behavior: 'smooth' });
           }
