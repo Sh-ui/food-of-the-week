@@ -182,7 +182,7 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.4s ease;
+    transition: transform 0.6s ease-out;
   }
 
   /* Desktop: Nav links visible, centered initially */
@@ -723,29 +723,34 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
 
   // Calculate nav translateX to slide from center to left-aligned after the date
   function updateNavTranslateX(): void {
-    if (weekTitleEl && navCenter && headerLeft) {
+    if (weekTitleEl && navCenter) {
       const headerNav = header.querySelector('.header-nav') as HTMLElement;
       if (!headerNav) return;
       
-      const headerRect = headerNav.getBoundingClientRect();
-      const leftRect = headerLeft.getBoundingClientRect();
+      // Use getBoundingClientRect for accurate visual measurements
+      const headerNavRect = headerNav.getBoundingClientRect();
+      const weekTitleRect = weekTitleEl.getBoundingClientRect();
+      const navCenterRect = navCenter.getBoundingClientRect();
       
-      // Get nav width (unaffected by transform)
-      const navWidth = navCenter.offsetWidth;
+      // Current position: where is the nav's left edge now (when centered)?
+      // Since justify-content: center, it's naturally centered
+      const currentNavLeft = navCenterRect.left - headerNavRect.left;
       
-      // Calculate where the nav CENTER is when in natural centered position
-      // (header width / 2 relative to header left)
-      const centeredCenterX = headerRect.width / 2;
+      // Target position: where should the nav's left edge be?
+      // Right after the week title + 16px gap
+      const weekTitleRight = weekTitleRect.right - headerNavRect.left;
+      const targetNavLeft = weekTitleRight + 16;
       
-      // Target: nav LEFT edge should be right after the date title + gap
-      const targetLeftEdge = leftRect.right - headerRect.left + 16; // 16px gap
+      // How far to move (will be negative, moving left)
+      const translateX = targetNavLeft - currentNavLeft;
       
-      // Target center position
-      const targetCenterX = targetLeftEdge + (navWidth / 2);
-      
-      // Translation needed: move from centered to left-aligned
-      // Negative value = move left
-      const translateX = targetCenterX - centeredCenterX;
+      console.log('Nav positioning:', {
+        headerNavWidth: headerNavRect.width,
+        weekTitleRight,
+        currentNavLeft,
+        targetNavLeft,
+        translateX
+      });
       
       navCenter.style.setProperty('--nav-translate-x', `${translateX}px`);
     }
