@@ -4,7 +4,7 @@ import MealCard from './MealCard.astro';
 import PrintButton from './PrintButton.astro';
 import Footer from './Footer.astro';
 import StickyHeader from './StickyHeader.astro';
-import type { WeekPlan } from '../utils/readmeParser';
+import type { WeekPlan } from '../utils/weekParser';
 
 interface Props {
   weekPlan: WeekPlan;
@@ -59,7 +59,7 @@ const mealsForNav = weekPlan.meals.map(meal => ({
   {weekPlan.meals.length === 0 && weekPlan.groceryList.length === 0 && (
     <div class="empty-state section">
       <h2>No meal plan available</h2>
-      <p>Check back later for this week's meal plan, or add content to README.md to get started.</p>
+      <p>Check back later for this week's meal plan, or add content to FOOD-OF-THE-WEEK.md to get started.</p>
     </div>
   )}
 

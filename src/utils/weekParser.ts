@@ -36,12 +36,13 @@ export interface WeekPlan {
 }
 
 /**
- * Parse FOOD-OF-THE-WEEK.md and extract structured weekly meal plan data
+ * Parse a markdown file and extract structured weekly meal plan data
+ * @param filename - The markdown file to parse (defaults to FOOD-OF-THE-WEEK.md)
  */
-export async function parseReadme(): Promise<WeekPlan> {
-  const readmePath = path.join(process.cwd(), 'FOOD-OF-THE-WEEK.md');
+export async function parseWeekPlan(filename: string = 'FOOD-OF-THE-WEEK.md'): Promise<WeekPlan> {
+  const filePath = path.join(process.cwd(), filename);
   
-  if (!fs.existsSync(readmePath)) {
+  if (!fs.existsSync(filePath)) {
     return {
       weekTitle: 'No meal plan available',
       groceryList: [],
@@ -49,7 +50,7 @@ export async function parseReadme(): Promise<WeekPlan> {
     };
   }
   
-  const content = fs.readFileSync(readmePath, 'utf-8');
+  const content = fs.readFileSync(filePath, 'utf-8');
   const tokens = marked.lexer(content);
   
   let weekTitle = 'Weekly Meal Plan';
@@ -327,4 +328,3 @@ export function slugify(text: string): string {
     .replace(/-+/g, '-')
     .trim();
 }
-

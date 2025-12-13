@@ -3,11 +3,10 @@ import Layout from '../layouts/Layout.astro';
 import WeeklyPlan from '../components/WeeklyPlan.astro';
 import { parseWeekPlan } from '../utils/weekParser';
 
-// Parse FOOD-OF-THE-WEEK.md at build time
-const weekPlan = await parseWeekPlan();
+// Parse WEEKEND.md at build time
+const weekPlan = await parseWeekPlan('WEEKEND.md');
 ---
 
 <Layout title={weekPlan.weekTitle}>
   <WeeklyPlan weekPlan={weekPlan} />
 </Layout>
-
