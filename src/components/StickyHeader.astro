@@ -744,14 +744,6 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
       // How far to move (will be negative, moving left)
       const translateX = targetNavLeft - currentNavLeft;
       
-      console.log('Nav positioning:', {
-        headerNavWidth: headerNavRect.width,
-        weekTitleRight,
-        currentNavLeft,
-        targetNavLeft,
-        translateX
-      });
-      
       navCenter.style.setProperty('--nav-translate-x', `${translateX}px`);
     }
   }
@@ -807,9 +799,20 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     isScrolled = scrolled;
     header.dataset.scrolled = scrolled ? 'true' : 'false';
 
-    // Update nav position when scroll state changes
-    if (scrolled && !wasScrolled) {
-      updateNavTranslateX();
+    // Update nav position when scroll state changes - fade out, reposition, fade in
+    if (scrolled !== wasScrolled) {
+      // Fade out
+      navCenter.style.opacity = '0';
+      
+      // After fade out, update position and fade in
+      setTimeout(() => {
+        if (scrolled) {
+          updateNavTranslateX();
+        } else {
+          navCenter.style.removeProperty('--nav-translate-x');
+        }
+        navCenter.style.opacity = '1';
+      }, 200);
     }
 
     if (!scrolled) {
