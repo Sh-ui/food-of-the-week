@@ -690,6 +690,7 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
   let sectionCache: SectionData[] = [];
   let currentSection = '';
   let isScrolled = false;
+  let isResizing = false;
 
   // Easing function: ease-in-out cubic for smooth fade curve
   function easeInOutCubic(t: number): number {
@@ -1031,9 +1032,18 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     setupPrintButton();
 
     window.addEventListener('scroll', updateScrollState, { passive: true });
+    
+    // Debounced resize handler to prevent flicker
+    let resizeTimeout: number | null = null;
     window.addEventListener('resize', () => {
-      cacheSectionPositions();
-      updateNavTranslateX();
+      if (resizeTimeout) clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        cacheSectionPositions();
+        // Only update nav position if scrolled, and do it without animation
+        if (isScrolled) {
+          updateNavTranslateX();
+        }
+      }, 100);
     }, { passive: true });
   }
 
