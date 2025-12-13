@@ -1,5 +1,5 @@
 import { marked } from 'marked';
-import type { Tokens, Token } from 'marked';
+import type { Tokens } from 'marked';
 import fs from 'fs';
 import path from 'path';
 
@@ -36,13 +36,14 @@ export interface ListSection {
 
 /**
  * A subsection within a content section.
- * Subsections are detected by bold labels: **Label:**
+ * Subsections are detected by bold labels: **Label**
  */
 export interface Subsection {
-  title: string;              // The bold label text (without ** and :)
+  title: string;              // The bold label text (without **)
   content: string;            // Paragraph content that follows
   items: string[];            // List items if content includes a bulleted list
-  isGroupedWithPrevious: boolean;  // True if no newline before this subsection
+  isGroupedWithPrevious: boolean;  // True if should be grouped with previous subsection
+  hasInlineContent: boolean;  // True if label had content on the same line
 }
 
 /**
@@ -239,14 +240,19 @@ function parseMarkdownContent(content: string): PagePlan {
     
     // Content section processing
     if (currentSection === 'content' && currentContentSection) {
-      // Check for bold label pattern: **Label:**
+      // Check for bold label pattern: **Label**
       if (token.type === 'paragraph') {
         const text = token.text;
-        const boldLabelMatch = text.match(/^\*\*([^*]+):\*\*(.*)$/);
+        const boldLabelMatch = text.match(/^\*\*([^*]+)\*\*(.*)$/);
         
         if (boldLabelMatch) {
           const label = boldLabelMatch[1].trim();
           const inlineContent = boldLabelMatch[2].trim();
+          
+          // Key distinction: does this label have inline content?
+          // - Inline content (text on same line as label) = should group with other inline items
+          // - No inline content (empty after label) = starts a new ungrouped section
+          const hasInlineContent = inlineContent.length > 0;
           
           // Save previous subsection if exists
           if (currentSubsection) {
@@ -254,14 +260,17 @@ function parseMarkdownContent(content: string): PagePlan {
           }
           
           // Determine if this should be grouped with previous
-          // Grouped = no space token before this paragraph AND there was a previous subsection
-          const isGrouped = !lastTokenWasSpace && currentContentSection.subsections.length > 0;
+          // Grouped if: this has inline content AND previous subsection also had inline content
+          const previousSub = currentContentSection.subsections[currentContentSection.subsections.length - 1];
+          const previousHadInlineContent = previousSub?.hasInlineContent ?? false;
+          const isGrouped = hasInlineContent && previousHadInlineContent;
           
           currentSubsection = {
             title: label,
             content: inlineContent,
             items: [],
             isGroupedWithPrevious: isGrouped,
+            hasInlineContent: hasInlineContent,
           };
         } else if (currentSubsection) {
           // Regular paragraph - add to current subsection content

@@ -13,24 +13,26 @@ interface Props {
 const { weekPlan } = Astro.props;
 
 // Derive short title: "Week of December 7-13, 2025" → "Dec 7-13"
+// Also handle "Weekend of ..." format
 const shortTitle = weekPlan.weekTitle
   .replace(/Week of /, '')
+  .replace(/Weekend of /, '')
   .replace(/(\w+)\s+(\d+-\d+),\s+\d+/, (_, month, days) => 
     `${month.slice(0, 3)} ${days}`
   );
 
-// Prepare meals for header navigation
-const mealsForNav = weekPlan.meals.map(meal => ({
-  id: meal.id,
-  title: meal.title,
-  cooked: meal.cooked
+// Prepare content sections for header navigation
+const sectionsForNav = weekPlan.meals.map(section => ({
+  id: section.id,
+  title: section.title,
+  cooked: section.cooked
 }));
 ---
 
 <StickyHeader 
   weekTitle={weekPlan.weekTitle}
   shortTitle={shortTitle}
-  meals={mealsForNav}
+  meals={sectionsForNav}
   hasGroceryList={weekPlan.groceryList.length > 0}
 />
 
@@ -51,8 +53,8 @@ const mealsForNav = weekPlan.meals.map(meal => ({
   )}
   
   <div class="meals-container">
-    {weekPlan.meals.map((meal) => (
-      <MealCard meal={meal} />
+    {weekPlan.meals.map((section) => (
+      <MealCard section={section} />
     ))}
   </div>
   

@@ -29,29 +29,27 @@
 - [ ] Water roll buns - 4-6
 - [ ] Tostadas - 1 package
 
-## Meal 1: Water Burgers with Rustic Potato Salad
+## Water Burgers + Potato Salad
 
-**Day:** Saturday
+**Day** Saturday
 
-**Protein:** Frozen burger patties
+**Protein** Frozen burger patties
 
-**Ingredients:** Swiss cheese, water roll buns, mushrooms, white onion (at home), new potatoes, whole grain mustard, green onion, cornichons, mixed greens
+**Ingredients** Swiss cheese, water roll buns, mushrooms, white onion (at home), new potatoes, whole grain mustard, green onion, cornichons, mixed greens
 
-**Description:** Classic water burgers with melted Swiss and sautéed mushrooms and onions, served alongside a rustic whole grain mustard potato salad and simply dressed greens.
+**Description** Classic water burgers with melted Swiss and sautéed mushrooms and onions, served alongside a rustic whole grain mustard potato salad and simply dressed greens.
 
-**Instructions:**
-
-**Already Prepped:**
+**Already Prepped**
 
  - Burger patties are in the freezer.
 
-**Potato Salad (can make ahead):**
+**Potato Salad (can make ahead)**
 
 Boil new potatoes whole until fork-tender, about 15-20 minutes. Drain and let cool slightly, then cut into quarters or halves.
 
 While still warm, toss with: whole grain mustard, olive oil, sliced green onion, capers, salt, and pepper. The warm potatoes will absorb the dressing. Serve at room temperature.
 
-**Burgers:**
+**Burgers**
 
 Slice the white onion into rings. Slice the mushrooms.
 
@@ -65,7 +63,7 @@ Lay slices of Swiss cheese over the patties while still in the pan, then stack t
 
 To serve, use a spatula to lift each cheesy patty along with a generous pile of the onions, mushrooms, and some of the reduced umami broth directly onto the bottom bun. Top with the bun and serve immediately.
 
-**Plating:**
+**Plating**
 
 Dress the mixed greens lightly with olive oil and lemon or a simple vinaigrette.
 
@@ -74,23 +72,21 @@ Assemble burgers: bun, patty with melted Swiss, pile of mushrooms and onions, to
 Serve with potato salad and dressed greens on the side.
 
 
-## Meal 2: Gringo Taco Tostadas
+## Gringo Taco Tostadas
 
-**Day:** Sunday
+**Day** Sunday
 
-**Protein:** Frozen gringo taco meat
+**Protein** Frozen gringo taco meat
 
-**Ingredients:** Tostadas, refried beans, shredded cheddar, sour cream (at home), cilantro, limes (at home), iceberg lettuce, plum tomatoes
+**Ingredients** Tostadas, refried beans, shredded cheddar, sour cream (at home), cilantro, limes (at home), iceberg lettuce, plum tomatoes
 
-**Description:** Crispy tostadas layered with warm refried beans and seasoned taco meat, topped with fresh iceberg, tomatoes, sour cream, and cilantro. Simple, satisfying, hands-on eating.
+**Description** Crispy tostadas layered with warm refried beans and seasoned taco meat, topped with fresh iceberg, tomatoes, sour cream, and cilantro. Simple, satisfying, hands-on eating.
 
-**Instructions:**
-
-**Already Prepped:**
+**Already Prepped**
 
  - Gringo taco meat is in the freezer.
 
-**Prep:**
+**Prep**
 
 Thaw and reheat the gringo taco meat in a skillet.
 
@@ -98,7 +94,7 @@ Warm the refried beans in a small pot or microwave.
 
 Shred the iceberg lettuce into thin strips. Dice the plum tomatoes. Roughly chop the cilantro. Cut limes into wedges.
 
-**Assembly:**
+**Assembly**
 
 Spread a layer of warm refried beans on each tostada.
 
@@ -107,3 +103,27 @@ Top with a generous portion of the taco meat, then a handful of shredded cheddar
 Add shredded iceberg, diced tomatoes, a dollop of sour cream, and fresh cilantro.
 
 Squeeze lime over the top and serve immediately.
+
+**Plating**
+
+Spread a layer of warm refried beans on each tostada.
+
+Top with a generous portion of the taco meat, then a handful of shredded cheddar.
+
+Add shredded iceberg, diced tomatoes, a dollop of sour cream, and fresh cilantro.
+
+Squeeze lime over the top and serve immediately.
+
+**Eating**
+
+Spread a layer of warm refried beans on each tostada.
+
+Top with a generous portion of the taco meat, then a handful of shredded cheddar.
+
+Add shredded iceberg, diced tomatoes, a dollop of sour cream, and fresh cilantro.
+
+Squeeze lime over the top and serve immediately.
+
+**Digesting**
+
+Relax and sit back with a cold beer or glass of wine.

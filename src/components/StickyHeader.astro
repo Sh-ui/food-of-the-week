@@ -476,11 +476,12 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     'grocery-list': 'Print Grocery List',
   };
 
-  // Build meal labels from DOM
-  document.querySelectorAll('.nav-link[data-section^="meal-"]').forEach(link => {
+  // Build section labels from DOM (for print buttons)
+  // Matches any section that isn't grocery-list
+  document.querySelectorAll('.nav-link[data-section]:not([data-section="grocery-list"])').forEach(link => {
     const section = link.getAttribute('data-section');
     // strip any leading check mark that we render visually (e.g. "✓ ")
-    const raw = link.textContent?.trim() || 'Meal';
+    const raw = link.textContent?.trim() || 'Section';
     const title = raw.replace(/^[✓\u2713]\s*/, '');
     if (section) {
       sectionLabels[section] = `Print ${title}`;

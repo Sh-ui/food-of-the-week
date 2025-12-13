@@ -1,11 +1,16 @@
 ---
-import type { Meal } from '../utils/weekParser';
+import type { ContentSection } from '../utils/weekParser';
+import { groupSubsections } from '../utils/weekParser';
+import { sectionColors, getInstructionColor } from '../config/colors';
 
 interface Props {
-  meal: Meal;
+  section: ContentSection;
 }
 
-const { meal } = Astro.props;
+const { section } = Astro.props;
+
+// Group subsections for rendering
+const groups = groupSubsections(section.subsections);
 
 // Helper function to render markdown links to HTML
 function renderMarkdown(text: string): string {
@@ -14,84 +19,78 @@ function renderMarkdown(text: string): string {
 }
 ---
 
-<div id={`print-section-${meal.id}`} class={`print-section section meal ${meal.cooked ? 'meal-cooked' : ''}`} data-section-type="meal" data-cooked={meal.cooked ? 'true' : 'false'}>
+<div 
+  id={`print-section-${section.id}`} 
+  class={`print-section section meal ${section.cooked ? 'meal-cooked' : ''}`} 
+  data-section-type="meal" 
+  data-cooked={section.cooked ? 'true' : 'false'}
+>
   <div class="meal-header">
-    <span class={`cooked-indicator ${meal.cooked ? 'is-cooked' : ''}`} aria-label={meal.cooked ? 'Meal has been cooked' : 'Meal not yet cooked'}>
-      {meal.cooked ? '✓' : ''}
+    <span 
+      class={`cooked-indicator ${section.cooked ? 'is-cooked' : ''}`} 
+      aria-label={section.cooked ? 'Meal has been cooked' : 'Meal not yet cooked'}
+    >
+      {section.cooked ? '✓' : ''}
     </span>
-    <h2>{meal.fullTitle}</h2>
+    <h2>{section.title}</h2>
     <button 
       class="button button-secondary print-button" 
-      data-print-target={meal.id}
+      data-print-target={section.id}
     >
       Print This Meal
     </button>
   </div>
   
-  <div class="meal-details">
-    {meal.protein && (
-      <div class="meal-field">
-        <strong>Protein:</strong> {meal.protein}
-      </div>
-    )}
+  {/* Render subsection groups */}
+  {groups.map((group, groupIndex) => {
+    // First group uses firstSubsection colors (meal info)
+    // Subsequent groups use cycling instruction colors
+    const isFirstGroup = groupIndex === 0;
+    const colors = isFirstGroup 
+      ? sectionColors.firstSubsection 
+      : getInstructionColor(groupIndex - 1);
     
-    {meal.ingredients && (
-      <div class="meal-field">
-        <strong>Ingredients:</strong> {meal.ingredients}
-      </div>
-    )}
-    
-    {meal.description && (
-      <div class="meal-field">
-        <strong>Description:</strong> {meal.description}
-      </div>
-    )}
-  </div>
-  
-  {/* Three-Phase Instructions */}
-  {(meal.alreadyPrepped || meal.sousChef || meal.chefFinishing) ? (
-    <div class="meal-instructions-phased">
-      {meal.alreadyPrepped && meal.alreadyPrepped.length > 0 && (
-        <div class="instruction-phase already-prepped">
-          <h3>Already Prepped</h3>
-          <ul>
-            {meal.alreadyPrepped.map((item: string) => (
-              <li set:html={renderMarkdown(item)} />
-            ))}
-          </ul>
-        </div>
-      )}
-      
-      {meal.sousChef && (
-        <div class="instruction-phase sous-chef">
-          <h3>Sous Chef - Prep</h3>
-          <div class="phase-content">
-            {meal.sousChef.split('\n\n').map((paragraph: string) => (
-              <p set:html={renderMarkdown(paragraph)} />
-            ))}
+    return (
+      <div 
+        class={`subsection-group ${isFirstGroup ? 'info-group' : 'instruction-group'}`}
+        style={`--group-bg: ${colors.bg}; --group-border: ${colors.border}; --group-heading: ${colors.heading};`}
+      >
+        {group.map((sub) => (
+          <div class="subsection">
+            {/* For grouped items, show as labeled fields */}
+            {isFirstGroup ? (
+              <div class="subsection-field">
+                <strong>{sub.title}:</strong> {sub.content}
+              </div>
+            ) : (
+              <>
+                <h3>{sub.title}</h3>
+                {sub.items && sub.items.length > 0 && (
+                  <ul>
+                    {sub.items.map((item: string) => (
+                      <li set:html={renderMarkdown(item)} />
+                    ))}
+                  </ul>
+                )}
+                {sub.content && (
+                  <div class="subsection-content">
+                    {sub.content.split('\n\n').map((paragraph: string) => (
+                      <p set:html={renderMarkdown(paragraph)} />
+                    ))}
+                  </div>
+                )}
+              </>
+            )}
           </div>
-        </div>
-      )}
-      
-      {meal.chefFinishing && (
-        <div class="instruction-phase chef-finishing">
-          <h3>Chef - Finishing & Plating</h3>
-          <div class="phase-content">
-            {meal.chefFinishing.split('\n\n').map((paragraph: string) => (
-              <p set:html={renderMarkdown(paragraph)} />
-            ))}
-          </div>
-        </div>
-      )}
-    </div>
-  ) : meal.instructions && (
-    <div class="meal-instructions">
-      <h3>Instructions</h3>
-      <div class="instructions-content">
-        {meal.instructions.split('\n\n').map((paragraph: string) => (
-          <p set:html={renderMarkdown(paragraph)} />
         ))}
       </div>
+    );
+  })}
+  
+  {/* Empty state */}
+  {groups.length === 0 && (
+    <div class="empty-state">
+      <p>No content available for this section.</p>
     </div>
   )}
 </div>
@@ -147,138 +146,102 @@ function renderMarkdown(text: string): string {
     color: var(--color-cooked-text, #8a887f);
   }
 
-  .meal-cooked .meal-details {
-    background: var(--color-cooked-bg, #f0ede6);
-    border-left-color: var(--color-cooked-border, #d8d4c9);
+  .meal-cooked .subsection-group {
+    background: var(--color-cooked-bg, #f0ede6) !important;
+    border-left-color: var(--color-cooked-border, #d8d4c9) !important;
   }
 
-  .meal-cooked .meal-field {
+  .meal-cooked .subsection-field {
     color: var(--color-cooked-text, #8a887f);
   }
 
-  .meal-cooked .meal-field strong {
+  .meal-cooked .subsection-field strong {
     color: var(--color-cooked-text, #8a887f);
   }
 
-  .meal-cooked .instruction-phase {
-    background: var(--color-cooked-bg, #f0ede6);
-    border-left-color: var(--color-cooked-border, #d8d4c9);
+  .meal-cooked .subsection h3 {
+    color: var(--color-cooked-text, #8a887f) !important;
   }
 
-  .meal-cooked .instruction-phase h3 {
+  .meal-cooked .subsection li,
+  .meal-cooked .subsection-content p {
     color: var(--color-cooked-text, #8a887f);
   }
 
-  .meal-cooked .instruction-phase li,
-  .meal-cooked .phase-content p {
-    color: var(--color-cooked-text, #8a887f);
+  .meal-cooked .subsection-content :global(a),
+  .meal-cooked .subsection :global(a) {
+    color: var(--color-cooked-text);
+    text-decoration-color: var(--color-cooked-text);
   }
 
-  .meal-cooked .meal-instructions h3 {
-    color: var(--color-cooked-text, #8a887f);
+  /* Subsection groups - styled via CSS custom properties */
+  .subsection-group {
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-md);
+    border-radius: 6px;
+    border-left: 4px solid var(--group-border);
+    background: var(--group-bg);
   }
 
-  .meal-cooked .instructions-content p {
-    color: var(--color-cooked-text, #8a887f);
+  .subsection-group:last-child {
+    margin-bottom: 0;
   }
 
-  .meal-details {
+  /* Info group (first group - meal details) */
+  .info-group {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-md);
-    margin-bottom: var(--spacing-lg);
-    padding: var(--spacing-md);
-    background: var(--color-bg-alt);
-    border-radius: 6px;
-    border-left: 4px solid var(--color-secondary);
   }
 
-  .meal-field {
-  line-height: 1.68;
-  font-size: 1.1rem;
+  .subsection-field {
+    line-height: 1.68;
+    font-size: 1.1rem;
   }
 
-  .meal-field strong {
+  .subsection-field strong {
     color: var(--color-primary);
     display: inline-block;
     min-width: 120px;
   }
 
-  .meal-instructions {
+  /* Instruction groups */
+  .instruction-group {
     margin-top: var(--spacing-lg);
   }
 
-  /* Legacy instructions format */
-  .meal-instructions h3 {
-    color: var(--color-primary);
-    margin-bottom: var(--spacing-md);
-  }
-
-  .instructions-content p {
-    margin-bottom: var(--spacing-md);
-    line-height: 1.6;
-  }
-
-  .meal-instructions :global(p) {
-    margin-bottom: var(--spacing-md);
-  }
-
-  .meal-instructions :global(ul),
-  .meal-instructions :global(ol) {
-    margin-left: var(--spacing-lg);
-    margin-bottom: var(--spacing-md);
-  }
-
-  .meal-instructions :global(li) {
-    margin-bottom: var(--spacing-sm);
-  }
-
-  /* Three-phase instructions format */
-  .meal-instructions-phased {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-xl);
-    margin-top: var(--spacing-lg);
-  }
-
-  .instruction-phase {
-    padding: var(--spacing-md);
-    border-radius: 6px;
-    border-left: 4px solid;
-  }
-
-  .instruction-phase h3 {
+  .instruction-group h3 {
     margin-top: 0;
     margin-bottom: var(--spacing-md);
-  font-size: 1.25rem;
+    font-size: 1.25rem;
     font-weight: 600;
+    color: var(--group-heading);
   }
 
-  .instruction-phase ul {
+  .instruction-group ul {
     list-style: disc;
     margin-left: var(--spacing-lg);
   }
 
-  .instruction-phase li {
-  margin-bottom: var(--spacing-sm);
-  line-height: 1.68;
-  font-size: 1.1rem;
+  .instruction-group li {
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.68;
+    font-size: 1.1rem;
   }
 
-  .phase-content p {
-  margin-bottom: var(--spacing-md);
-  line-height: 1.68;
-  font-size: 1.1rem;
+  .subsection-content p {
+    margin-bottom: var(--spacing-md);
+    line-height: 1.68;
+    font-size: 1.1rem;
   }
 
-  .phase-content p:last-child {
+  .subsection-content p:last-child {
     margin-bottom: 0;
   }
 
   /* Style markdown links */
-  .phase-content :global(a),
-  .instructions-content :global(a),
-  .instruction-phase :global(a) {
+  .subsection-content :global(a),
+  .instruction-group :global(a) {
     color: var(--color-primary);
     text-decoration: underline;
     text-decoration-color: var(--color-accent);
@@ -286,47 +249,14 @@ function renderMarkdown(text: string): string {
     transition: color 0.2s ease;
   }
 
-  .phase-content :global(a):hover,
-  .instructions-content :global(a):hover,
-  .instruction-phase :global(a):hover {
+  .subsection-content :global(a):hover,
+  .instruction-group :global(a):hover {
     color: var(--color-accent);
   }
 
-  .meal-cooked .phase-content :global(a),
-  .meal-cooked .instructions-content :global(a),
-  .meal-cooked .instruction-phase :global(a) {
-    color: var(--color-cooked-text);
-    text-decoration-color: var(--color-cooked-text);
-  }
-
-  /* Already Prepped - Sweet Salmon (soft reference) */
-  .already-prepped {
-    background: #fef5f2;
-    border-left-color: #D78A76;
-  }
-
-  .already-prepped h3 {
-    color: #b86d5c;
-  }
-
-  /* Sous Chef - Tuscan Sun (bright prep work) */
-  .sous-chef {
-    background: #fef9e8;
-    border-left-color: #F3CA40;
-  }
-
-  .sous-chef h3 {
-    color: #c9a22d;
-  }
-
-  /* Chef Finishing - Tangerine Dream (bold action) */
-  .chef-finishing {
-    background: #fff5ef;
-    border-left-color: #F08A4B;
-  }
-
-  .chef-finishing h3 {
-    color: #d16d2f;
+  .empty-state {
+    color: var(--color-text-light);
+    font-style: italic;
   }
 
   @media (max-width: 768px) {
@@ -343,43 +273,33 @@ function renderMarkdown(text: string): string {
     }
     
     .meal-header h2 {
-    font-size: 2rem;
+      font-size: 2rem;
     }
 
-    .meal-field {
-    font-size: 1.25rem;
-    line-height: 1.75;
+    .subsection-field {
+      font-size: 1.25rem;
+      line-height: 1.75;
     }
 
-    .meal-field strong {
+    .subsection-field strong {
       display: block;
       margin-bottom: var(--spacing-xs);
       font-size: 1.25rem;
     }
     
-    .instruction-phase {
+    .subsection-group {
       padding: var(--spacing-lg);
     }
     
-    .instruction-phase h3 {
-    font-size: 1.3rem;
+    .instruction-group h3 {
+      font-size: 1.3rem;
       margin-bottom: var(--spacing-md);
     }
     
-    .instruction-phase li,
-    .phase-content p {
-    font-size: 1.25rem;
-    line-height: 1.75;
-    }
-    
-    .meal-instructions h3 {
-      font-size: 1.375rem;
-    }
-    
-    .instructions-content p {
-    font-size: 1.25rem;
-    line-height: 1.75;
+    .instruction-group li,
+    .subsection-content p {
+      font-size: 1.25rem;
+      line-height: 1.75;
     }
   }
 </style>
-
