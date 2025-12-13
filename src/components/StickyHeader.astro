@@ -179,18 +179,18 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     pointer-events: auto;
   }
 
-  /* Center area */
+  /* Center area - two states: centered or left-aligned */
   .nav-center {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: opacity 0.12s ease;
+    opacity: 1;
+    transition: opacity 0.15s ease, transform 0.15s ease;
   }
 
-  /* Hidden state during transition */
-  .nav-center.transitioning {
-    opacity: 0;
-    visibility: hidden;
+  /* When scrolled: move to left-aligned position */
+  .sticky-header[data-scrolled="true"] .nav-center {
+    transform: translateX(var(--nav-translate-x, 0));
   }
 
   /* Desktop: Nav links visible, centered initially */
@@ -199,11 +199,6 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     align-items: center;
     justify-content: center;
     gap: var(--spacing-xs);
-  }
-
-  /* When scrolled: slide nav links left using transform */
-  .sticky-header[data-scrolled="true"] .nav-center {
-    transform: translateX(var(--nav-translate-x, 0));
   }
 
   .nav-link {
