@@ -182,7 +182,7 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.4s ease, margin-left 0.4s ease;
+    transition: transform 0.4s ease;
   }
 
   /* Desktop: Nav links visible, centered initially */
@@ -193,11 +193,9 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     gap: var(--spacing-xs);
   }
 
-  /* When scrolled: shift nav links to left, positioned after the date */
+  /* When scrolled: slide nav links left using transform */
   .sticky-header[data-scrolled="true"] .nav-center {
-    justify-content: flex-start;
-    margin-left: var(--nav-left-margin, 120px);
-    transform: translateX(0);
+    transform: translateX(var(--nav-translate-x, 0));
   }
 
   .nav-link {
@@ -427,8 +425,7 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
 
     /* Don't shift nav on mobile */
     .sticky-header[data-scrolled="true"] .nav-center {
-      transform: none;
-      margin-left: 0;
+      transform: none !important;
     }
 
     /* Print button: icon only, beefier */
@@ -724,15 +721,33 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     });
   }
 
-  // Calculate nav left margin based on week title width
-  function updateNavLeftMargin(): void {
+  // Calculate nav translateX to slide from center to left-aligned after the date
+  function updateNavTranslateX(): void {
     if (weekTitleEl && navCenter && headerLeft) {
+      const headerNav = header.querySelector('.header-nav') as HTMLElement;
+      if (!headerNav) return;
+      
+      const headerRect = headerNav.getBoundingClientRect();
       const leftRect = headerLeft.getBoundingClientRect();
-      const navRect = header.querySelector('.header-nav')?.getBoundingClientRect();
-      if (navRect) {
-        const margin = leftRect.right - navRect.left + 16;
-        navCenter.style.setProperty('--nav-left-margin', `${margin}px`);
-      }
+      
+      // Get nav width (unaffected by transform)
+      const navWidth = navCenter.offsetWidth;
+      
+      // Calculate where the nav CENTER is when in natural centered position
+      // (header width / 2 relative to header left)
+      const centeredCenterX = headerRect.width / 2;
+      
+      // Target: nav LEFT edge should be right after the date title + gap
+      const targetLeftEdge = leftRect.right - headerRect.left + 16; // 16px gap
+      
+      // Target center position
+      const targetCenterX = targetLeftEdge + (navWidth / 2);
+      
+      // Translation needed: move from centered to left-aligned
+      // Negative value = move left
+      const translateX = targetCenterX - centeredCenterX;
+      
+      navCenter.style.setProperty('--nav-translate-x', `${translateX}px`);
     }
   }
 
@@ -789,7 +804,7 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
 
     // Update nav position when scroll state changes
     if (scrolled && !wasScrolled) {
-      updateNavLeftMargin();
+      updateNavTranslateX();
     }
 
     if (!scrolled) {
@@ -982,7 +997,7 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     // Cache section positions after layout is ready
     setTimeout(() => {
       cacheSectionPositions();
-      updateNavLeftMargin();
+      updateNavTranslateX();
     }, 100);
 
     // Set initial state
@@ -996,7 +1011,7 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     window.addEventListener('scroll', updateScrollState, { passive: true });
     window.addEventListener('resize', () => {
       cacheSectionPositions();
-      updateNavLeftMargin();
+      updateNavTranslateX();
     }, { passive: true });
   }
 
