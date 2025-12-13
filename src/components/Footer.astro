@@ -1,6 +1,7 @@
 ---
 // Footer component with links to GitHub repository
 const repoBase = 'https://github.com/sh-ui/food-of-the-week';
+const base = import.meta.env.BASE_URL;
 ---
 
 <footer class="site-footer" id="site-footer">
@@ -21,7 +22,7 @@ const repoBase = 'https://github.com/sh-ui/food-of-the-week';
       This Week's Plan
     </a>
     <span class="divider">|</span>
-    <a href="/weekend">
+    <a href={`${base}weekend`}>
       Weekend
     </a>
   </nav>

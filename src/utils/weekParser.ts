@@ -201,13 +201,14 @@ export async function parseWeekPlan(filename: string = 'FOOD-OF-THE-WEEK.md'): P
           currentPhase = 'sous-chef';
         } else if (text.startsWith('**Chef - Finishing')) {
           currentPhase = 'chef-finishing';
-        } else if (capturingInstructions && currentPhase === 'none') {
-          // Legacy format: Capture all paragraphs after Instructions label
-          instructionsContent.push(text);
         } else if (currentPhase === 'sous-chef') {
           sousChefContent.push(text);
         } else if (currentPhase === 'chef-finishing') {
           chefFinishingContent.push(text);
+        } else if (capturingInstructions) {
+          // Freeform instructions - capture any paragraph after **Instructions:**
+          // that doesn't match a specific phase header
+          instructionsContent.push(text);
         }
       }
       
