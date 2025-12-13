@@ -3,257 +3,316 @@ import type { Tokens, Token } from 'marked';
 import fs from 'fs';
 import path from 'path';
 
+/**
+ * Flex Parser - Position-based markdown parsing for meal planning
+ * 
+ * This parser works with any markdown structure following the template pattern:
+ * - H1 = Page title
+ * - First H2 = List section (grocery categories with checklist items)
+ * - Other H2s = Content sections (meals with subsections)
+ * 
+ * No keyword detection - everything is position-based.
+ */
+
+// ============================================================================
+// Interfaces
+// ============================================================================
+
 export interface GroceryItem {
   text: string;
-  globallyChecked: boolean; // from markdown [x]
+  globallyChecked: boolean;
 }
 
-export interface GroceryCategory {
+export interface ListCategory {
   name: string;
   items: GroceryItem[];
 }
 
-export interface Meal {
+export interface ListSection {
   id: string;
-  number: number;
   title: string;
-  fullTitle: string;
-  cooked: boolean; // from [x] in heading
-  protein?: string;
-  ingredients?: string;
-  description?: string;
-  instructions?: string;
-  alreadyPrepped?: string[];
-  sousChef?: string;
-  chefFinishing?: string;
-  content: string;
-}
-
-export interface WeekPlan {
-  weekTitle: string;
-  groceryList: GroceryCategory[];
-  meals: Meal[];
+  categories: ListCategory[];
 }
 
 /**
- * Parse a markdown file and extract structured weekly meal plan data
+ * A subsection within a content section.
+ * Subsections are detected by bold labels: **Label:**
+ */
+export interface Subsection {
+  title: string;              // The bold label text (without ** and :)
+  content: string;            // Paragraph content that follows
+  items: string[];            // List items if content includes a bulleted list
+  isGroupedWithPrevious: boolean;  // True if no newline before this subsection
+}
+
+/**
+ * A content section (typically a meal).
+ * Contains subsections parsed from bold labels.
+ */
+export interface ContentSection {
+  id: string;
+  title: string;              // H2 heading text (used for nav/print)
+  cooked: boolean;            // From ~~strikethrough~~ on title
+  subsections: Subsection[];
+}
+
+/**
+ * Top-level page structure returned by the parser.
+ */
+export interface PagePlan {
+  pageTitle: string;
+  listSection: ListSection | null;
+  contentSections: ContentSection[];
+}
+
+// Legacy interface for backwards compatibility during transition
+export interface WeekPlan {
+  weekTitle: string;
+  groceryList: ListCategory[];
+  meals: ContentSection[];
+}
+
+// ============================================================================
+// Main Parser Function
+// ============================================================================
+
+/**
+ * Parse a markdown file and extract structured page data.
+ * Uses position-based logic - no keyword detection.
+ * 
  * @param filename - The markdown file to parse (defaults to FOOD-OF-THE-WEEK.md)
  */
 export async function parseWeekPlan(filename: string = 'FOOD-OF-THE-WEEK.md'): Promise<WeekPlan> {
-  const filePath = path.join(process.cwd(), filename);
+  const pagePlan = await parsePagePlan(filename);
   
-  if (!fs.existsSync(filePath)) {
-    return {
-      weekTitle: 'No meal plan available',
-      groceryList: [],
-      meals: []
-    };
-  }
-  
-  const content = fs.readFileSync(filePath, 'utf-8');
-  const tokens = marked.lexer(content);
-  
-  let weekTitle = 'Weekly Meal Plan';
-  const groceryList: GroceryCategory[] = [];
-  const meals: Meal[] = [];
-  
-  let currentSection: 'none' | 'grocery' | 'meal' = 'none';
-  let currentCategory: GroceryCategory | null = null;
-  let currentMeal: Meal | null = null;
-  let mealContent: string[] = [];
-  let capturingInstructions = false;
-  let instructionsContent: string[] = [];
-  let currentPhase: 'none' | 'already-prepped' | 'sous-chef' | 'chef-finishing' = 'none';
-  let alreadyPreppedItems: string[] = [];
-  let sousChefContent: string[] = [];
-  let chefFinishingContent: string[] = [];
-  
-  for (let i = 0; i < tokens.length; i++) {
-    const token = tokens[i];
-    
-    // Extract week title (H1)
-    if (token.type === 'heading' && token.depth === 1) {
-      weekTitle = token.text;
-      continue;
-    }
-    
-    // Detect H2 sections
-    if (token.type === 'heading' && token.depth === 2) {
-      // Save previous meal if exists
-      if (currentMeal) {
-        if (instructionsContent.length > 0) {
-          currentMeal.instructions = instructionsContent.join('\n\n');
-        }
-        if (alreadyPreppedItems.length > 0) {
-          currentMeal.alreadyPrepped = alreadyPreppedItems;
-        }
-        if (sousChefContent.length > 0) {
-          currentMeal.sousChef = sousChefContent.join('\n\n');
-        }
-        if (chefFinishingContent.length > 0) {
-          currentMeal.chefFinishing = chefFinishingContent.join('\n\n');
-        }
-        currentMeal.content = mealContent.join('\n');
-        meals.push(currentMeal);
-        currentMeal = null;
-        mealContent = [];
-        instructionsContent = [];
-        capturingInstructions = false;
-        currentPhase = 'none';
-        alreadyPreppedItems = [];
-        sousChefContent = [];
-        chefFinishingContent = [];
-      }
-      
-      const heading = token.text;
-      
-      // Check if it's Grocery List section
-      if (heading === 'Grocery List') {
-        currentSection = 'grocery';
-        currentCategory = null;
-        continue;
-      }
-      
-      // Check if it's a Meal section (strikethrough on title indicates cooked)
-      // Strikethrough format: ## Meal 1: ~~Stir Fry~~ (tildes around the title only)
-      const mealMatch = heading.match(/^Meal (\d+):\s*(.+)$/);
-      if (mealMatch) {
-        currentSection = 'meal';
-        const mealNumber = parseInt(mealMatch[1], 10);
-        let mealTitle = mealMatch[2].trim();
-        
-        // Check if title is wrapped in strikethrough (~~title~~)
-        const isCooked = mealTitle.startsWith('~~') && mealTitle.endsWith('~~');
-        
-        // Remove strikethrough markers from title for clean display
-        if (isCooked) {
-          mealTitle = mealTitle.slice(2, -2).trim();
-        }
-        
-        currentMeal = {
-          id: `meal-${mealNumber}`,
-          number: mealNumber,
-          title: mealTitle,
-          fullTitle: `Meal ${mealNumber}: ${mealTitle}`, // Clean title without strikethrough
-          cooked: isCooked,
-          content: ''
-        };
-        capturingInstructions = false;
-        instructionsContent = [];
-        currentPhase = 'none';
-        alreadyPreppedItems = [];
-        sousChefContent = [];
-        chefFinishingContent = [];
-        continue;
-      }
-      
-      currentSection = 'none';
-      continue;
-    }
-    
-    // Process H3 headings within sections
-    if (token.type === 'heading' && token.depth === 3) {
-      if (currentSection === 'grocery') {
-        // Save previous category
-        if (currentCategory) {
-          groceryList.push(currentCategory);
-        }
-        // Start new category
-        currentCategory = {
-          name: token.text,
-          items: []
-        };
-      }
-      continue;
-    }
-    
-    // Process list items
-    if (token.type === 'list') {
-      if (currentSection === 'grocery' && currentCategory) {
-        // Extract grocery items with checked state
-        const items = extractGroceryItems(token as Tokens.List);
-        currentCategory.items.push(...items);
-      }
-    }
-    
-    // Process meal content
-    if (currentSection === 'meal' && currentMeal) {
-      // Convert token back to markdown for content
-      const tokenMarkdown = tokenToMarkdown(token);
-      
-      // Extract specific fields from paragraphs
-      if (token.type === 'paragraph') {
-        const text = token.text;
-        
-        // Extract bold fields
-        if (text.startsWith('**Protein:**')) {
-          currentMeal.protein = text.replace(/^\*\*Protein:\*\*\s*/, '').trim();
-        } else if (text.startsWith('**Ingredients:**')) {
-          currentMeal.ingredients = text.replace(/^\*\*Ingredients:\*\*\s*/, '').trim();
-        } else if (text.startsWith('**Description:**')) {
-          currentMeal.description = text.replace(/^\*\*Description:\*\*\s*/, '').trim();
-        } else if (text.startsWith('**Instructions:**')) {
-          capturingInstructions = true;
-          // Don't add the label itself, just start capturing subsequent content
-        } else if (text.startsWith('**Already Prepped:**')) {
-          currentPhase = 'already-prepped';
-        } else if (text.startsWith('**Sous Chef')) {
-          currentPhase = 'sous-chef';
-        } else if (text.startsWith('**Chef - Finishing')) {
-          currentPhase = 'chef-finishing';
-        } else if (currentPhase === 'sous-chef') {
-          sousChefContent.push(text);
-        } else if (currentPhase === 'chef-finishing') {
-          chefFinishingContent.push(text);
-        } else if (capturingInstructions) {
-          // Freeform instructions - capture any paragraph after **Instructions:**
-          // that doesn't match a specific phase header
-          instructionsContent.push(text);
-        }
-      }
-      
-      // Process list items for Already Prepped phase
-      if (token.type === 'list' && currentPhase === 'already-prepped') {
-        const items = extractListItems(token as Tokens.List);
-        alreadyPreppedItems.push(...items);
-      }
-      
-      mealContent.push(tokenMarkdown);
-    }
-  }
-  
-  // Save final category
-  if (currentCategory) {
-    groceryList.push(currentCategory);
-  }
-  
-  // Save final meal
-  if (currentMeal) {
-    if (instructionsContent.length > 0) {
-      currentMeal.instructions = instructionsContent.join('\n\n');
-    }
-    if (alreadyPreppedItems.length > 0) {
-      currentMeal.alreadyPrepped = alreadyPreppedItems;
-    }
-    if (sousChefContent.length > 0) {
-      currentMeal.sousChef = sousChefContent.join('\n\n');
-    }
-    if (chefFinishingContent.length > 0) {
-      currentMeal.chefFinishing = chefFinishingContent.join('\n\n');
-    }
-    currentMeal.content = mealContent.join('\n');
-    meals.push(currentMeal);
-  }
-  
+  // Convert to legacy WeekPlan format for backwards compatibility
   return {
-    weekTitle,
-    groceryList,
-    meals
+    weekTitle: pagePlan.pageTitle,
+    groceryList: pagePlan.listSection?.categories || [],
+    meals: pagePlan.contentSections,
   };
 }
 
 /**
- * Extract text items from a list token (for grocery items with checked state)
+ * Parse a markdown file into the new PagePlan structure.
+ */
+export async function parsePagePlan(filename: string = 'FOOD-OF-THE-WEEK.md'): Promise<PagePlan> {
+  const filePath = path.join(process.cwd(), filename);
+  
+  if (!fs.existsSync(filePath)) {
+    return {
+      pageTitle: 'No content available',
+      listSection: null,
+      contentSections: [],
+    };
+  }
+  
+  const content = fs.readFileSync(filePath, 'utf-8');
+  return parseMarkdownContent(content);
+}
+
+/**
+ * Parse raw markdown content into PagePlan structure.
+ */
+function parseMarkdownContent(content: string): PagePlan {
+  const tokens = marked.lexer(content);
+  
+  let pageTitle = 'Page Title';
+  let listSection: ListSection | null = null;
+  const contentSections: ContentSection[] = [];
+  
+  let h2Count = 0;
+  let currentSection: 'none' | 'list' | 'content' = 'none';
+  
+  // For list section parsing
+  let currentCategory: ListCategory | null = null;
+  let listCategories: ListCategory[] = [];
+  let listSectionTitle = '';
+  let listSectionId = '';
+  
+  // For content section parsing
+  let currentContentSection: ContentSection | null = null;
+  let currentSubsection: Subsection | null = null;
+  let lastTokenWasSpace = false;
+  
+  for (let i = 0; i < tokens.length; i++) {
+    const token = tokens[i];
+    
+    // Track space tokens for grouping logic
+    if (token.type === 'space') {
+      lastTokenWasSpace = true;
+      continue;
+    }
+    
+    // H1 = Page title
+    if (token.type === 'heading' && token.depth === 1) {
+      pageTitle = token.text;
+      lastTokenWasSpace = false;
+      continue;
+    }
+    
+    // H2 = Section boundary
+    if (token.type === 'heading' && token.depth === 2) {
+      // Save previous section
+      if (currentSection === 'list') {
+        if (currentCategory) {
+          listCategories.push(currentCategory);
+        }
+        listSection = {
+          id: listSectionId,
+          title: listSectionTitle,
+          categories: listCategories,
+        };
+      } else if (currentSection === 'content' && currentContentSection) {
+        if (currentSubsection) {
+          currentContentSection.subsections.push(currentSubsection);
+        }
+        contentSections.push(currentContentSection);
+      }
+      
+      h2Count++;
+      const heading = token.text;
+      
+      if (h2Count === 1) {
+        // First H2 = List section
+        currentSection = 'list';
+        listSectionTitle = heading;
+        listSectionId = slugify(heading);
+        listCategories = [];
+        currentCategory = null;
+      } else {
+        // All other H2s = Content sections
+        currentSection = 'content';
+        
+        // Check for strikethrough (cooked indicator)
+        let title = heading;
+        let cooked = false;
+        
+        // Check if entire title is wrapped in strikethrough
+        if (title.startsWith('~~') && title.endsWith('~~')) {
+          cooked = true;
+          title = title.slice(2, -2).trim();
+        }
+        
+        // Also check for partial strikethrough (e.g., "Meal 1: ~~Title~~")
+        const partialMatch = title.match(/^(.+?):\s*~~(.+)~~$/);
+        if (partialMatch) {
+          cooked = true;
+          title = `${partialMatch[1]}: ${partialMatch[2]}`;
+        }
+        
+        currentContentSection = {
+          id: `section-${h2Count - 1}`,
+          title: title,
+          cooked: cooked,
+          subsections: [],
+        };
+        currentSubsection = null;
+      }
+      
+      lastTokenWasSpace = false;
+      continue;
+    }
+    
+    // H3 = Category in list section
+    if (token.type === 'heading' && token.depth === 3) {
+      if (currentSection === 'list') {
+        if (currentCategory) {
+          listCategories.push(currentCategory);
+        }
+        currentCategory = {
+          name: token.text,
+          items: [],
+        };
+      }
+      lastTokenWasSpace = false;
+      continue;
+    }
+    
+    // List in list section = category items
+    if (token.type === 'list' && currentSection === 'list' && currentCategory) {
+      const items = extractGroceryItems(token as Tokens.List);
+      currentCategory.items.push(...items);
+      lastTokenWasSpace = false;
+      continue;
+    }
+    
+    // Content section processing
+    if (currentSection === 'content' && currentContentSection) {
+      // Check for bold label pattern: **Label:**
+      if (token.type === 'paragraph') {
+        const text = token.text;
+        const boldLabelMatch = text.match(/^\*\*([^*]+):\*\*(.*)$/);
+        
+        if (boldLabelMatch) {
+          const label = boldLabelMatch[1].trim();
+          const inlineContent = boldLabelMatch[2].trim();
+          
+          // Save previous subsection if exists
+          if (currentSubsection) {
+            currentContentSection.subsections.push(currentSubsection);
+          }
+          
+          // Determine if this should be grouped with previous
+          // Grouped = no space token before this paragraph AND there was a previous subsection
+          const isGrouped = !lastTokenWasSpace && currentContentSection.subsections.length > 0;
+          
+          currentSubsection = {
+            title: label,
+            content: inlineContent,
+            items: [],
+            isGroupedWithPrevious: isGrouped,
+          };
+        } else if (currentSubsection) {
+          // Regular paragraph - add to current subsection content
+          if (currentSubsection.content) {
+            currentSubsection.content += '\n\n' + text;
+          } else {
+            currentSubsection.content = text;
+          }
+        }
+      }
+      
+      // List in content section - add to current subsection
+      if (token.type === 'list' && currentSubsection) {
+        const items = extractListItems(token as Tokens.List);
+        currentSubsection.items.push(...items);
+      }
+    }
+    
+    lastTokenWasSpace = false;
+  }
+  
+  // Save final section
+  if (currentSection === 'list') {
+    if (currentCategory) {
+      listCategories.push(currentCategory);
+    }
+    listSection = {
+      id: listSectionId,
+      title: listSectionTitle,
+      categories: listCategories,
+    };
+  } else if (currentSection === 'content' && currentContentSection) {
+    if (currentSubsection) {
+      currentContentSection.subsections.push(currentSubsection);
+    }
+    contentSections.push(currentContentSection);
+  }
+  
+  return {
+    pageTitle,
+    listSection,
+    contentSections,
+  };
+}
+
+// ============================================================================
+// Helper Functions
+// ============================================================================
+
+/**
+ * Extract grocery items from a list token with checked state.
  */
 function extractGroceryItems(token: Tokens.List): GroceryItem[] {
   const items: GroceryItem[] = [];
@@ -261,7 +320,7 @@ function extractGroceryItems(token: Tokens.List): GroceryItem[] {
   for (const item of token.items) {
     items.push({
       text: item.text,
-      globallyChecked: item.checked === true // marked sets checked to true/false for task lists
+      globallyChecked: item.checked === true,
     });
   }
   
@@ -269,57 +328,20 @@ function extractGroceryItems(token: Tokens.List): GroceryItem[] {
 }
 
 /**
- * Extract plain text items from a list token (for non-grocery lists)
+ * Extract plain text items from a list token.
  */
 function extractListItems(token: Tokens.List): string[] {
   const items: string[] = [];
   
   for (const item of token.items) {
-      items.push(item.text);
+    items.push(item.text);
   }
   
   return items;
 }
 
 /**
- * Convert a token back to markdown
- */
-function tokenToMarkdown(token: Token): string {
-  // Use marked to convert back to HTML/text
-  // For simplicity, we'll just extract text content
-  
-  if (token.type === 'paragraph') {
-    return token.text + '\n\n';
-  }
-  
-  if (token.type === 'heading') {
-    const prefix = '#'.repeat((token as Tokens.Heading).depth);
-    return `${prefix} ${token.text}\n\n`;
-  }
-  
-  if (token.type === 'list') {
-    const listToken = token as Tokens.List;
-    let result = '';
-    for (const item of listToken.items) {
-      result += `- ${item.text}\n`;
-    }
-    return result + '\n';
-  }
-  
-  if (token.type === 'code') {
-    const codeToken = token as Tokens.Code;
-    return `\`\`\`${codeToken.lang || ''}\n${codeToken.text}\n\`\`\`\n\n`;
-  }
-  
-  if (token.type === 'blockquote') {
-    return `> ${token.text}\n\n`;
-  }
-  
-  return '';
-}
-
-/**
- * Generate a slug from text
+ * Generate a URL-safe slug from text.
  */
 export function slugify(text: string): string {
   return text
@@ -328,4 +350,40 @@ export function slugify(text: string): string {
     .replace(/\s+/g, '-')
     .replace(/-+/g, '-')
     .trim();
+}
+
+// ============================================================================
+// Rendering Helpers
+// ============================================================================
+
+/**
+ * Group subsections for rendering.
+ * Consecutive subsections with isGroupedWithPrevious=true are grouped together.
+ * 
+ * @returns Array of subsection groups. First group uses firstSubsection colors,
+ *          subsequent groups use cycling instruction colors.
+ */
+export function groupSubsections(subsections: Subsection[]): Subsection[][] {
+  const groups: Subsection[][] = [];
+  let currentGroup: Subsection[] = [];
+  
+  for (const sub of subsections) {
+    if (sub.isGroupedWithPrevious && currentGroup.length > 0) {
+      // Add to current group
+      currentGroup.push(sub);
+    } else {
+      // Start new group
+      if (currentGroup.length > 0) {
+        groups.push(currentGroup);
+      }
+      currentGroup = [sub];
+    }
+  }
+  
+  // Push final group
+  if (currentGroup.length > 0) {
+    groups.push(currentGroup);
+  }
+  
+  return groups;
 }
