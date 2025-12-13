@@ -724,17 +724,28 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
 
   // Calculate nav translateX to slide from center to left-aligned after the date
   function updateNavTranslateX(): void {
-    if (weekTitleEl && navCenter) {
+    if (weekTitleEl && navCenter && headerLeft) {
       const headerNav = header.querySelector('.header-nav') as HTMLElement;
       if (!headerNav) return;
       
-      // Use getBoundingClientRect for accurate visual measurements
+      // Temporarily make week title visible for accurate measurement
+      const originalOpacity = weekTitleEl.style.opacity;
+      weekTitleEl.style.opacity = '1';
+      weekTitleEl.style.visibility = 'visible';
+      
+      // Force layout recalculation
+      void weekTitleEl.offsetHeight;
+      
+      // Measure everything
       const headerNavRect = headerNav.getBoundingClientRect();
       const weekTitleRect = weekTitleEl.getBoundingClientRect();
       const navCenterRect = navCenter.getBoundingClientRect();
       
+      // Restore original state
+      weekTitleEl.style.opacity = originalOpacity;
+      weekTitleEl.style.visibility = '';
+      
       // Current position: where is the nav's left edge now (when centered)?
-      // Since justify-content: center, it's naturally centered
       const currentNavLeft = navCenterRect.left - headerNavRect.left;
       
       // Target position: where should the nav's left edge be?
@@ -742,8 +753,17 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
       const weekTitleRight = weekTitleRect.right - headerNavRect.left;
       const targetNavLeft = weekTitleRight + 16;
       
-      // How far to move (will be negative, moving left)
+      // How far to move
       const translateX = targetNavLeft - currentNavLeft;
+      
+      console.log('Nav alignment calculation:', {
+        weekTitleWidth: weekTitleRect.width,
+        weekTitleRight,
+        currentNavLeft,
+        targetNavLeft,
+        translateX,
+        gap: 16
+      });
       
       navCenter.style.setProperty('--nav-translate-x', `${translateX}px`);
     }
