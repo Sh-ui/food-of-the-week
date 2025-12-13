@@ -157,7 +157,7 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     height: 36px;
   }
 
-  /* Week title - hidden initially, controlled via JS for sync */
+  /* Week title - hidden initially, shown on scroll */
   .header-week-title {
     font-family: var(--font-heading);
     font-weight: 700;
@@ -165,17 +165,15 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     color: var(--color-primary);
     white-space: nowrap;
     opacity: 0;
-    visibility: hidden;
     pointer-events: none;
-    transition: opacity 0.12s ease;
+    transition: opacity 0.15s ease;
     cursor: pointer;
     line-height: 1;
     transform: translateY(2px);
   }
 
-  .header-week-title.visible {
+  .sticky-header[data-scrolled="true"] .header-week-title {
     opacity: 1;
-    visibility: visible;
     pointer-events: auto;
   }
 
@@ -685,7 +683,6 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
   let sectionCache: SectionData[] = [];
   let currentSection = '';
   let isScrolled = false;
-  let isResizing = false;
 
   // Easing function: ease-in-out cubic for smooth fade curve
   function easeInOutCubic(t: number): number {
@@ -796,34 +793,14 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     return { current, next, progress };
   }
 
-  // Update scroll state - no debounce, position-based
+  // Update scroll state - simple toggle
   function updateScrollState(): void {
     const scrolled = window.scrollY > 100;
     const wasScrolled = isScrolled;
     isScrolled = scrolled;
+    
+    // Toggle data attribute - CSS handles the transition
     header.dataset.scrolled = scrolled ? 'true' : 'false';
-
-    // Update nav position when scroll state changes - instant hide, reposition, show
-    if (scrolled !== wasScrolled) {
-      // Hide everything instantly
-      navCenter.classList.add('transitioning');
-      if (weekTitleEl) weekTitleEl.classList.remove('visible');
-      
-      // Reposition on next frame (ensures visibility:hidden is applied first)
-      requestAnimationFrame(() => {
-        if (scrolled) {
-          updateNavTranslateX();
-        } else {
-          navCenter.style.removeProperty('--nav-translate-x');
-        }
-        
-        // Show everything on the frame after repositioning
-        requestAnimationFrame(() => {
-          navCenter.classList.remove('transitioning');
-          if (scrolled && weekTitleEl) weekTitleEl.classList.add('visible');
-        });
-      });
-    }
 
     if (!scrolled) {
       // At top of page - show Full Week
@@ -1012,10 +989,10 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
 
   // Initialize
   function init(): void {
-    // Cache section positions after layout is ready
+    // Calculate nav position after layout is ready
     setTimeout(() => {
-      cacheSectionPositions();
       updateNavTranslateX();
+      cacheSectionPositions();
     }, 100);
 
     // Set initial state
@@ -1027,18 +1004,9 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     setupPrintButton();
 
     window.addEventListener('scroll', updateScrollState, { passive: true });
-    
-    // Debounced resize handler to prevent flicker
-    let resizeTimeout: number | null = null;
     window.addEventListener('resize', () => {
-      if (resizeTimeout) clearTimeout(resizeTimeout);
-      resizeTimeout = setTimeout(() => {
-        cacheSectionPositions();
-        // Only update nav position if scrolled, and do it without animation
-        if (isScrolled) {
-          updateNavTranslateX();
-        }
-      }, 100);
+      updateNavTranslateX();
+      cacheSectionPositions();
     }, { passive: true });
   }
 
