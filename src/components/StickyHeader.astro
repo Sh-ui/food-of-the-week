@@ -723,29 +723,32 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
 
   // Calculate nav translateX to slide from center to left-aligned after the date
   function updateNavTranslateX(): void {
-    if (weekTitleEl && navCenter) {
+    if (weekTitleEl && navCenter && headerLeft) {
       const headerNav = header.querySelector('.header-nav') as HTMLElement;
       if (!headerNav) return;
       
-      // Use getBoundingClientRect for accurate visual measurements
-      const headerNavRect = headerNav.getBoundingClientRect();
-      const weekTitleRect = weekTitleEl.getBoundingClientRect();
-      const navCenterRect = navCenter.getBoundingClientRect();
+      // Use offsetWidth/offsetLeft for measurements unaffected by transforms/transitions
+      const headerWidth = headerNav.offsetWidth;
+      const navWidth = navCenter.offsetWidth;
+      const weekTitleWidth = weekTitleEl.offsetWidth;
       
-      // Current position: where is the nav's left edge now (when centered)?
-      // Since justify-content: center, it's naturally centered
-      const currentNavLeft = navCenterRect.left - headerNavRect.left;
+      // Week title position: headerLeft is absolutely positioned at --spacing-md (16px)
+      const headerLeftPos = 16; // var(--spacing-md)
+      const weekTitleRight = headerLeftPos + weekTitleWidth;
       
-      // Target position: where should the nav's left edge be?
-      // Right after the week title + 16px gap
-      const weekTitleRight = weekTitleRect.right - headerNavRect.left;
+      // Current nav position when centered (mathematical, not measured)
+      const currentNavLeft = (headerWidth - navWidth) / 2;
+      
+      // Target nav position: right after week title + gap
       const targetNavLeft = weekTitleRight + 16;
       
-      // How far to move (will be negative, moving left)
+      // Translation (negative = move left)
       const translateX = targetNavLeft - currentNavLeft;
       
       console.log('Nav positioning:', {
-        headerNavWidth: headerNavRect.width,
+        headerWidth,
+        navWidth,
+        weekTitleWidth,
         weekTitleRight,
         currentNavLeft,
         targetNavLeft,
@@ -805,12 +808,13 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     const scrolled = window.scrollY > 100;
     const wasScrolled = isScrolled;
     isScrolled = scrolled;
-    header.dataset.scrolled = scrolled ? 'true' : 'false';
-
-    // Update nav position when scroll state changes
+    
+    // Update nav position BEFORE setting data-scrolled to avoid measuring during transition
     if (scrolled && !wasScrolled) {
       updateNavTranslateX();
     }
+    
+    header.dataset.scrolled = scrolled ? 'true' : 'false';
 
     if (!scrolled) {
       // At top of page - show Full Week

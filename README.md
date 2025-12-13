@@ -169,5 +169,3 @@ This project is licensed under the [GNU Affero General Public License v3.0 (AGPL
 - Make your source code available if you run a modified version as a web service
 - Keep the same AGPL-3.0 license
 - Credit the original project
-
-This prevents companies from taking this open-source project and selling access to it behind a paywall without contributing back to the community.
