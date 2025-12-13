@@ -793,12 +793,14 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     }
 
     if (!scrolled) {
-      // At top of page - show Full Week with no transition
-      if (currentSection !== '') {
-        currentSection = '';
-        updateSectionDisplay('all', 'Full Week', false, 1);
+      // At top of page - show Full Week
+      if (currentSection !== 'all') {
+        currentSection = 'all';
+        transitionToSection('all', 'Full Week', false);
         navLinks.forEach(link => link.classList.remove('active'));
       }
+      // Ensure full opacity at top
+      if (headerPrintBtn) headerPrintBtn.style.opacity = '1';
       return;
     }
 
@@ -806,23 +808,21 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     const { current, next, progress } = calculateSectionState();
     
     if (current) {
-      // Apply eased opacity for smooth transition
-      const easedProgress = easeInOutCubic(progress);
-      const opacity = 1 - (easedProgress * 0.6); // Fade to 40% at transition midpoint
-      
-      // Update if section changed
+      // Check if we need to transition to a new section
       if (current.id !== currentSection) {
         currentSection = current.id;
         updateNavHighlight(current.id);
+        transitionToSection(current.id, current.displayName, current.isSection);
       }
       
-      // Always update display with current opacity
-      updateSectionDisplay(current.id, current.displayName, current.isSection, opacity);
-      
-      // If past midpoint of transition, show next section instead
-      if (progress > 0.5 && next) {
-        const fadeInOpacity = easeInOutCubic((progress - 0.5) * 2); // 0 to 1 for second half
-        updateSectionDisplay(next.id, next.displayName, next.isSection, 0.4 + (fadeInOpacity * 0.6));
+      // Apply fade-out as we approach section boundary
+      if (progress > 0 && next) {
+        // Fade out: 1.0 → 0.15 using eased curve
+        const fadeOutOpacity = 1 - (easeInOutCubic(progress) * 0.85);
+        if (headerPrintBtn) headerPrintBtn.style.opacity = fadeOutOpacity.toString();
+      } else {
+        // Not in transition zone, ensure full opacity
+        if (headerPrintBtn) headerPrintBtn.style.opacity = '1';
       }
     } else if (sectionCache.length > 0) {
       // We're between hero and first section
@@ -832,36 +832,62 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
       const triggerPoint = scrollY + (viewportHeight * 0.4);
       const distanceToFirst = first.top - triggerPoint;
       
-      if (distanceToFirst < 200 && distanceToFirst > 0) {
-        // Approaching first section - fade from Full Week to first section
-        const approachProgress = 1 - (distanceToFirst / 200);
-        const easedProgress = easeInOutCubic(approachProgress);
-        
-        if (approachProgress < 0.5) {
-          // Still showing Full Week, fading out
-          updateSectionDisplay('all', 'Full Week', false, 1 - (easedProgress * 0.6));
-        } else {
-          // Showing first section, fading in
-          const fadeInOpacity = 0.4 + (easeInOutCubic((approachProgress - 0.5) * 2) * 0.6);
-          updateSectionDisplay(first.id, first.displayName, first.isSection, fadeInOpacity);
-          if (currentSection !== first.id) {
-            currentSection = first.id;
-            updateNavHighlight(first.id);
-          }
-        }
-      } else if (distanceToFirst <= 0) {
-        // At or past first section
+      if (distanceToFirst <= 0) {
+        // Crossed into first section
         if (currentSection !== first.id) {
           currentSection = first.id;
-          updateSectionDisplay(first.id, first.displayName, first.isSection, 1);
+          transitionToSection(first.id, first.displayName, first.isSection);
           updateNavHighlight(first.id);
+        }
+      } else if (distanceToFirst < 150) {
+        // Approaching first section - fade out Full Week
+        const fadeOutProgress = 1 - (distanceToFirst / 150);
+        const fadeOutOpacity = 1 - (easeInOutCubic(fadeOutProgress) * 0.85);
+        if (headerPrintBtn) headerPrintBtn.style.opacity = fadeOutOpacity.toString();
+        
+        // Keep showing Full Week until we cross
+        if (currentSection !== 'all') {
+          currentSection = 'all';
+          updateButtonContent('all', 'Full Week', false);
         }
       } else {
         // Far from first section, show Full Week
-        if (currentSection !== '') {
-          currentSection = '';
-          updateSectionDisplay('all', 'Full Week', false, 1);
+        if (currentSection !== 'all') {
+          currentSection = 'all';
+          transitionToSection('all', 'Full Week', false);
         }
+      }
+    }
+  }
+
+  // Transition to a new section with fade-in animation
+  function transitionToSection(sectionId: string, displayName: string, isSection: boolean): void {
+    if (!headerPrintBtn) return;
+    
+    // Disable CSS transition, set opacity to 0
+    headerPrintBtn.style.transition = 'none';
+    headerPrintBtn.style.opacity = '0';
+    
+    // Update content
+    updateButtonContent(sectionId, displayName, isSection);
+    
+    // Force reflow, then enable transition and fade in
+    headerPrintBtn.offsetHeight; // Force reflow
+    headerPrintBtn.style.transition = 'opacity 0.2s ease-out';
+    headerPrintBtn.style.opacity = '1';
+  }
+
+  // Update button content without animation
+  function updateButtonContent(sectionId: string, displayName: string, isSection: boolean): void {
+    if (currentSectionName) {
+      currentSectionName.textContent = displayName;
+    }
+    if (headerPrintBtn) {
+      headerPrintBtn.dataset.printTarget = sectionId;
+      headerPrintBtn.dataset.isSection = isSection ? 'true' : 'false';
+      const sectionNameEl = headerPrintBtn.querySelector('.print-section-name');
+      if (sectionNameEl) {
+        sectionNameEl.textContent = displayName;
       }
     }
   }
@@ -876,26 +902,6 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
         link.classList.remove('active');
       }
     });
-  }
-
-  // Update section display (selector + print button) with opacity for transitions
-  function updateSectionDisplay(sectionId: string, displayName: string, isSection: boolean, opacity: number = 1): void {
-    // Update section selector
-    if (currentSectionName) {
-      currentSectionName.textContent = displayName;
-    }
-
-    // Update print button
-    if (headerPrintBtn) {
-      headerPrintBtn.dataset.printTarget = sectionId;
-      headerPrintBtn.dataset.isSection = isSection ? 'true' : 'false';
-      headerPrintBtn.style.opacity = opacity.toString();
-      
-      const sectionNameEl = headerPrintBtn.querySelector('.print-section-name');
-      if (sectionNameEl) {
-        sectionNameEl.textContent = displayName;
-      }
-    }
   }
 
   // Close section dropdown helper
@@ -980,7 +986,8 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     }, 100);
 
     // Set initial state
-    updateSectionDisplay('all', 'Full Week', false, 1);
+    currentSection = 'all';
+    updateButtonContent('all', 'Full Week', false);
     updateScrollState();
     setupSectionDropdown();
     setupSmoothScroll();
