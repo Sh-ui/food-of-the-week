@@ -2,7 +2,7 @@
 
 > Weekly meal planning system for a household of 5
 
-**Version:** `1.3.7` | **[View or Edit This Week's Plan](FOOD-OF-THE-WEEK.md)** ⇒ [Live Site at food.schuepbach.work](https://sh-ui.github.io/food-of-the-week)
+**[View or Edit This Week's Plan](FOOD-OF-THE-WEEK.md)** ⇒ [Live Site at food.schuepbach.work](https://sh-ui.github.io/food-of-the-week)
 
 ![Version](https://img.shields.io/badge/version-1.3.7-blue.svg)
 ![Status](https://img.shields.io/badge/status-active-success.svg)
