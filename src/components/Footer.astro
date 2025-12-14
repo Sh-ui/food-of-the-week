@@ -1,81 +1,71 @@
 ---
-// Footer component with links to GitHub repository
+// Footer component with links
 const repoBase = 'https://github.com/sh-ui/food-of-the-week';
+const githubProfile = 'https://github.com/sh-ui';
 const base = import.meta.env.BASE_URL;
+const currentYear = new Date().getFullYear();
+
+// Detect if on main page or subpage
+const currentPath = Astro.url.pathname;
+const isMainPage = currentPath === base || currentPath === `${base}index.html` || currentPath === '/';
 ---
 
-<footer class="site-footer" id="site-footer">
-  <nav class="footer-links">
-    <a href={repoBase} target="_blank" rel="noopener noreferrer">
-      Repository
-    </a>
-    <span class="divider">|</span>
-    <a href={`${repoBase}/blob/master/README.md`} target="_blank" rel="noopener noreferrer">
-      README
-    </a>
-    <span class="divider">|</span>
-    <a href={`${repoBase}/tree/master/archive`} target="_blank" rel="noopener noreferrer">
-      Archive
-    </a>
-    <span class="divider">|</span>
-    <a href={`${repoBase}/blob/master/FOOD-OF-THE-WEEK.md`} target="_blank" rel="noopener noreferrer">
-      This Week's Plan
-    </a>
-    <span class="divider">|</span>
-    <a href={`${base}weekend`}>
-      Weekend
-    </a>
-  </nav>
+<footer class="mt-xl py-xl px-md border border-solid border-border rounded-lg" id="site-footer">
+  <div class="max-w-container mx-auto flex flex-col gap-lg">
+    <!-- Navigation Links -->
+    <nav class="flex justify-center items-center gap-md flex-wrap mobile:flex-col mobile:gap-md">
+      {isMainPage ? (
+        <a href="#top" class="footer-link">
+          ↑ Back to Top
+        </a>
+      ) : (
+        <a href={base} class="footer-link">
+          ← This Week
+        </a>
+      )}
+      <span class="text-border select-none mobile:hidden">·</span>
+      <a href={`${base}weekend`} class="footer-link">
+        Weekend
+      </a>
+      <span class="text-border select-none mobile:hidden">·</span>
+      <a href={`${repoBase}/tree/master/archive`} target="_blank" rel="noopener noreferrer" class="footer-link">
+        Archive
+      </a>
+    </nav>
+
+    <!-- GitHub & Copyright -->
+    <div class="flex justify-center items-center gap-lg text-text-muted text-[0.85rem] mobile:flex-col mobile:gap-md mobile:text-[0.95rem]">
+      <a href={repoBase} target="_blank" rel="noopener noreferrer" class="flex items-center gap-xs text-text-muted no-underline transition-colors hover:text-primary" aria-label="View source on GitHub">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+        </svg>
+        <span>View Source</span>
+      </a>
+      <span class="text-border select-none mobile:hidden">·</span>
+      <span>© {currentYear} Ian Schuepbach</span>
+      <span class="text-border select-none mobile:hidden">·</span>
+      <a href={`${repoBase}/blob/master/LICENSE.md`} target="_blank" rel="noopener noreferrer" class="text-text-muted no-underline transition-colors hover:text-primary">
+        AGPL-3.0
+      </a>
+    </div>
+  </div>
 </footer>
 
 <style>
-  .site-footer {
-    margin-top: var(--spacing-xl);
-    padding: var(--spacing-lg) var(--spacing-md);
-    border-top: 1px solid var(--color-border);
-    text-align: center;
-  }
-
-  .footer-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: var(--spacing-sm);
-    flex-wrap: wrap;
-  }
-
-  .footer-links a {
+  .footer-link {
     color: var(--color-text-light);
     text-decoration: none;
     font-size: 0.95rem;
     transition: color 0.2s ease;
   }
 
-  .footer-links a:hover {
+  .footer-link:hover {
     color: var(--color-primary);
     text-decoration: underline;
   }
 
-  .divider {
-    color: var(--color-border);
-    user-select: none;
-  }
-
-  @media (max-width: 768px) {
-    .site-footer {
-      padding: var(--spacing-lg) var(--spacing-sm);
-    }
-
-    .footer-links {
-      flex-direction: column;
-      gap: var(--spacing-md);
-    }
-
-    .divider {
-      display: none;
-    }
-
-    .footer-links a {
+  @media screen(mobile) {
+    .footer-link {
       font-size: 1.1rem;
       padding: var(--spacing-xs) 0;
     }

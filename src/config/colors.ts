@@ -1,8 +1,21 @@
 /**
- * Centralized color configuration for section styling.
+ * Instruction section color cycling configuration.
  * 
- * This file controls the colors used for subsections within content sections (meals).
- * Colors are applied by position, allowing flexible markdown without keyword dependencies.
+ * IMPORTANT: All color values reference tailwind.config.mjs as master source.
+ * To customize colors, edit tailwind.config.mjs (NOT this file).
+ * 
+ * This file handles the CYCLING LOGIC only - which colors go where.
+ * The actual hex values come from Tailwind config.
+ * 
+ * HOW CYCLING WORKS:
+ * - First subsection group (Protein, Ingredients) uses `firstSubsection` colors
+ * - Instruction sections (Already Prepped, Sous Chef, etc.) cycle through `instructionSequence`
+ * - If you have 5 instructions but 3 colors: [0,1,2,0,1] (wraps around)
+ * 
+ * TO CUSTOMIZE:
+ * 1. Edit hex values in tailwind.config.mjs theme.extend.colors
+ * 2. Add more color sets to instructionSequence array (change cycling pattern)
+ * 3. Use positionOverrides to force specific positions to specific colors
  */
 
 export interface SectionColorScheme {
@@ -25,21 +38,25 @@ export interface SectionColors {
   listCategory: SectionColorScheme;
 }
 
+// Import Tailwind config to get actual color values
+import tailwindConfig from '../../tailwind.config.mjs';
+
+// Extract color values from Tailwind config (single source of truth)
+const colors = tailwindConfig.theme.extend.colors;
+
 export const sectionColors: SectionColors = {
-  // First subsection group in each content section (meal info)
-  // This is the grouped box with Protein, Ingredients, Description, etc.
+  // First subsection group (meal info: Protein, Ingredients, Description)
   firstSubsection: {
-    bg: '#F5F2EB',      // Warm cream background
-    border: '#F3CA40',  // Gold left border (Tuscan Sun)
-    heading: '#494331', // Dark primary heading color
+    bg: colors['bg-alt'],
+    border: colors['secondary'],
+    heading: colors['primary'],
   },
   
-  // Instruction sequence - cycles through these for instruction sections
-  // These are the individual colored boxes for Already Prepped, Sous Chef, Chef, etc.
+  // Instruction sequence - cycles through for instruction sections
   instructionSequence: [
-    { bg: '#fef5f2', border: '#D78A76', heading: '#b86d5c' },  // Salmon (Sweet Salmon)
-    { bg: '#fef9e8', border: '#F3CA40', heading: '#c9a22d' },  // Yellow (Tuscan Sun)
-    { bg: '#fff5ef', border: '#F08A4B', heading: '#d16d2f' },  // Orange (Tangerine Dream)
+    { bg: colors['instruction-salmon-bg'], border: colors['instruction-salmon'], heading: colors['instruction-salmon-heading'] },
+    { bg: colors['instruction-yellow-bg'], border: colors['instruction-yellow'], heading: colors['instruction-yellow-heading'] },
+    { bg: colors['instruction-orange-bg'], border: colors['instruction-orange'], heading: colors['instruction-orange-heading'] },
   ],
   
   // Optional: Override specific instruction positions (0-indexed)

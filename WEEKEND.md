@@ -29,7 +29,7 @@
 - [ ] Water roll buns - 4-6
 - [ ] Tostadas - 1 package
 
-## Water Burgers + Potato Salad
+## ~~Water Burgers + Potato Salad~~
 
 **Day** Saturday
 
@@ -113,17 +113,3 @@ Top with a generous portion of the taco meat, then a handful of shredded cheddar
 Add shredded iceberg, diced tomatoes, a dollop of sour cream, and fresh cilantro.
 
 Squeeze lime over the top and serve immediately.
-
-**Eating**
-
-Spread a layer of warm refried beans on each tostada.
-
-Top with a generous portion of the taco meat, then a handful of shredded cheddar.
-
-Add shredded iceberg, diced tomatoes, a dollop of sour cream, and fresh cilantro.
-
-Squeeze lime over the top and serve immediately.
-
-**Digesting**
-
-Relax and sit back with a cold beer or glass of wine.

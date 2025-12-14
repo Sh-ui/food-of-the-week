@@ -1,0 +1,464 @@
+---
+alwaysApply: false
+---
+# Code Review Mode
+
+Systematic, comprehensive code review framework based on industry best practices and project standards.
+
+**Activation**: Only activated when user @ mentions this rule.
+
+<rule>
+name: code-review-mode
+description: Deep codebase audit with structured analysis across 14 critical dimensions
+
+activation:
+  trigger: "User @ mentions this rule or explicitly requests code review"
+  scope: "Entire codebase from root to every subdirectory"
+  context_strategy: "Max out context window, prioritize critical paths first"
+
+principle: "Thorough, systematic review that catches bugs, security issues, performance problems, and maintainability concerns before they reach production"
+
+review_methodology:
+  phase_1_discovery:
+    name: "Codebase Mapping & Context Loading"
+    actions:
+      - "List all source files recursively (find src -type f)"
+      - "Identify critical paths: components, utils, parsers, configs"
+      - "Map dependencies and imports"
+      - "Load project-specific rules and standards from .cursor/rules/"
+      - "Check git status and recent changes"
+    
+    context_optimization:
+      priority_order:
+        1: "Entry points (pages/, index files)"
+        2: "Core utilities (parsers, configs)"
+        3: "Components (in dependency order)"
+        4: "Styles and assets"
+        5: "Configuration files"
+      
+      batching_strategy: "Read related files together (component + its styles + its tests)"
+  
+  phase_2_structured_analysis:
+    name: "14-Criteria Evaluation"
+    
+    criteria:
+      1_architecture_design:
+        focus: "System design, modularity, separation of concerns"
+        check:
+          - "Are components properly separated?"
+          - "Is business logic separated from presentation?"
+          - "Are there circular dependencies?"
+          - "Does architecture match project patterns?"
+        project_specific:
+          - "Parser (weekParser.ts) should be pure and modular"
+          - "Colors centralized in src/config/colors.ts"
+          - "Components follow Astro best practices"
+      
+      2_code_complexity:
+        focus: "Cognitive load, cyclomatic complexity, readability"
+        check:
+          - "Are functions too long (>50 lines)?"
+          - "Deeply nested logic (>3 levels)?"
+          - "Complex conditionals that need extraction?"
+          - "Magic numbers or unclear variable names?"
+        thresholds:
+          max_function_length: 50
+          max_nesting_depth: 3
+          max_parameters: 5
+      
+      3_functionality_correctness:
+        focus: "Logic errors, edge cases, broken features"
+        check:
+          - "Do all code paths handle errors?"
+          - "Are edge cases covered (empty arrays, null, undefined)?"
+          - "Off-by-one errors in loops?"
+          - "Incorrect boolean logic?"
+        project_specific:
+          - "Print functionality works for all sections"
+          - "Parser handles all markdown structures"
+          - "Color cycling works with any number of sections"
+      
+      4_readability_maintainability:
+        focus: "Code clarity, self-documentation, comments"
+        check:
+          - "Are variable/function names descriptive?"
+          - "Is complex logic commented?"
+          - "Consistent code style?"
+          - "No commented-out code blocks?"
+        standards:
+          - "No TODO/FIXME/HACK comments without context"
+          - "TypeScript types for all public APIs"
+          - "Clear component interfaces"
+      
+      5_best_practices:
+        focus: "Language idioms, framework patterns, community standards"
+        check:
+          - "Following TypeScript best practices?"
+          - "Proper React/Astro patterns?"
+          - "Avoiding anti-patterns?"
+          - "Using modern language features appropriately?"
+        project_specific:
+          - "Astro components use proper prop typing"
+          - "CSS uses custom properties from design system"
+          - "No inline styles except for dynamic values"
+      
+      6_test_coverage:
+        focus: "Test existence, quality, coverage"
+        check:
+          - "Are critical paths tested?"
+          - "Do tests actually test behavior?"
+          - "Are edge cases tested?"
+          - "Test naming clear and descriptive?"
+        note: "If no tests exist, note critical areas needing coverage"
+      
+      7_error_handling:
+        focus: "Graceful failures, error messages, recovery"
+        check:
+          - "Try-catch blocks where needed?"
+          - "User-friendly error messages?"
+          - "Errors logged appropriately?"
+          - "No silent failures?"
+        patterns:
+          - "Parser should gracefully handle malformed markdown"
+          - "Print should fallback if config fails to load"
+          - "Component should show empty state if no data"
+      
+      8_security_vulnerabilities:
+        focus: "XSS, injection, sensitive data, authentication"
+        check:
+          - "User input sanitized?"
+          - "No hardcoded secrets/tokens?"
+          - "Proper authentication/authorization?"
+          - "Dependencies up to date?"
+        critical:
+          - "Markdown rendering safe from XSS (using set:html carefully)"
+          - "No sensitive data in client-side code"
+          - "External links have rel='noopener noreferrer'"
+      
+      9_performance_optimization:
+        focus: "Efficiency, resource usage, bottlenecks"
+        check:
+          - "Unnecessary re-renders or re-computations?"
+          - "Large loops or O(n²) algorithms?"
+          - "Memory leaks (event listeners not cleaned up)?"
+          - "Bundle size bloat?"
+        optimizations:
+          - "Parser runs at build time (good)"
+          - "Static generation for all pages"
+          - "CSS/JS properly bundled and minified"
+      
+      10_consistency:
+        focus: "Naming, structure, patterns across codebase"
+        check:
+          - "Consistent naming conventions?"
+          - "File structure matches conventions?"
+          - "Component patterns consistent?"
+          - "Import paths consistent (absolute vs relative)?"
+        project_patterns:
+          - "Components use ContentSection/Meal interfaces"
+          - "All pages use WeeklyPlan component"
+          - "Utilities in src/utils/, configs in src/config/"
+      
+      11_documentation:
+        focus: "README, API docs, inline docs, examples"
+        check:
+          - "README up to date and accurate?"
+          - "Complex functions documented?"
+          - "Public APIs have JSDoc comments?"
+          - "Setup/deployment instructions clear?"
+        required_docs:
+          - "README.md (project overview)"
+          - "TODOS.md (development roadmap)"
+          - "LICENSE.md (licensing)"
+          - "Component interfaces documented"
+      
+      12_accessibility:
+        focus: "ARIA, keyboard nav, screen readers, color contrast"
+        check:
+          - "Semantic HTML used?"
+          - "ARIA labels where needed?"
+          - "Keyboard navigation works?"
+          - "Color contrast WCAG AA compliant?"
+        requirements:
+          - "Print buttons keyboard accessible"
+          - "Navigation links have proper ARIA"
+          - "Forms have labels"
+      
+      13_scalability:
+        focus: "Growth readiness, performance at scale"
+        check:
+          - "Can handle 10x current load?"
+          - "Database queries efficient?"
+          - "Caching where appropriate?"
+          - "Build times reasonable?"
+        considerations:
+          - "Parser handles files with 50+ meals"
+          - "Color system handles unlimited instruction sections"
+          - "Build time scales linearly with content"
+      
+      14_code_duplication:
+        focus: "DRY principle, reusable abstractions"
+        check:
+          - "Repeated code blocks?"
+          - "Similar functions that could be unified?"
+          - "Magic numbers/strings repeated?"
+          - "Copy-pasted components?"
+        project_specific:
+          - "NO duplicate print logic (StickyHeader only)"
+          - "Color schemes centralized in config"
+          - "Parser logic not duplicated across components"
+
+  phase_3_cross_reference:
+    name: "Project Standards Compliance"
+    
+    check_against_rules:
+      cross_branch_fixes:
+        verify: "No reinvented wheels - existing solutions referenced"
+        check: "Git history shows proper cross-branch learning"
+      
+      foodoftheweek_structure:
+        verify: "FOOD-OF-THE-WEEK.md follows required format"
+        check: "H1 week title, H2 sections, proper subsection structure"
+      
+      recipe_format:
+        verify: "Meal sections follow three-phase format"
+        check: "Already Prepped, Sous Chef, Chef Finishing where applicable"
+      
+      print_sections:
+        verify: "Print functionality matches specifications"
+        check: "Sections printable individually and as full week"
+      
+      parser_requirements:
+        verify: "Position-based parsing (no keywords)"
+        check: "Parser detects H2 boundaries, groups subsections correctly"
+
+  phase_4_reporting:
+    name: "Comprehensive Report Generation"
+    
+    report_structure:
+      executive_summary:
+        - "Overall code health score (1-10)"
+        - "Critical issues count"
+        - "Major improvements recommended"
+        - "Positive highlights"
+      
+      issues_by_severity:
+        critical:
+          definition: "Blocks deployment, security risk, data loss potential"
+          format: "🔴 CRITICAL: [Issue] - [Location] - [Impact]"
+          required: "Immediate fix suggestion with code example"
+        
+        major:
+          definition: "Significant bugs, performance issues, maintainability problems"
+          format: "🟠 MAJOR: [Issue] - [Location] - [Impact]"
+          required: "Fix suggestion with rationale"
+        
+        minor:
+          definition: "Code smells, style issues, optimization opportunities"
+          format: "🟡 MINOR: [Issue] - [Location]"
+          required: "Improvement suggestion"
+        
+        nitpick:
+          definition: "Personal preference, minor inconsistencies"
+          format: "⚪ NITPICK: [Issue]"
+          optional: "Only if it improves code significantly"
+      
+      detailed_findings:
+        format: |
+          ### [Criterion]: [Subscore/10]
+          
+          #### Issues Found:
+          - [Severity] [Location]:[Line] - [Description]
+            - **Impact**: [Why this matters]
+            - **Suggestion**: [How to fix]
+            - **Example**: 
+              ```[language]
+              [Fixed code example]
+              ```
+          
+          #### Positive Observations:
+          - [What's done well in this area]
+      
+      actionable_recommendations:
+        immediate: "Must fix before merge/deploy"
+        short_term: "Should fix within next sprint"
+        long_term: "Consider for future refactoring"
+      
+      code_health_metrics:
+        - "Total lines of code"
+        - "Technical debt estimate (hours to fix all issues)"
+        - "Test coverage percentage (if applicable)"
+        - "Build warnings/errors count"
+        - "Dependency vulnerabilities"
+      
+      positive_highlights:
+        purpose: "Reinforce good practices"
+        examples:
+          - "Excellent separation of concerns in [Component]"
+          - "Clean, self-documenting code in [File]"
+          - "Great error handling in [Function]"
+          - "Well-structured and performant [Feature]"
+
+review_execution_strategy:
+  context_window_management:
+    approach: "Divide and conquer with memory"
+    
+    technique:
+      1: "Map entire codebase structure first (file tree)"
+      2: "Identify critical paths and dependencies"
+      3: "Review in logical chunks (feature by feature)"
+      4: "Maintain running notes of issues found"
+      5: "Cross-reference findings at end"
+    
+    chunk_definitions:
+      - name: "Parser & Data Layer"
+        file_patterns: ["**/parser*.ts", "**/data*.ts", "**/config*.ts"]
+        focus: "Data integrity, type safety, performance"
+      
+      - name: "Components - Core"
+        file_patterns: ["**/components/*.[jt]sx", "**/components/*.[jt]s", "**/components/*.[aj]stro"]
+        focus: "Rendering logic, props, consistency"
+      
+      - name: "Components - Infrastructure"
+        file_patterns: ["**/components/Sticky*", "**/components/Footer*"]
+        focus: "Navigation, shared functionality, UX"
+      
+      - name: "Pages & Layouts"
+        file_patterns: ["**/pages/**/*", "**/layouts/**/*"]
+        focus: "Routing, data fetching, SEO"
+      
+      - name: "Styles & Config"
+        file_patterns: ["**/styles/*.css", "**/tailwind*.js", "**/tailwind*.mjs", "**/astro*.js", "**/astro*.mjs"]
+        focus: "Theming, print styles, build config"
+  
+  tools_to_use:
+    read: "For reading source files"
+    grep: "For searching patterns across codebase"
+    glob: "For finding files by pattern"
+    shell: "For running builds, tests, linters"
+    semantic_search: "For finding how features work across codebase"
+  
+  efficiency_techniques:
+    batch_reads: "Read multiple related files in parallel"
+    targeted_grep: "Search for specific patterns (TODO, FIXME, console.log, any)"
+    build_verification: "Run build once at start to catch compilation errors"
+    lint_check: "Check for existing linter warnings"
+
+communication_style:
+  tone: "Professional but friendly, thorough but concise"
+  
+  structure:
+    opening: "Brief summary of review scope and approach"
+    body: "Organized by severity and category"
+    closing: "Actionable next steps and positive reinforcement"
+  
+  formatting:
+    - "Use emojis for severity (🔴🟠🟡⚪)"
+    - "Code blocks with file paths for all examples"
+    - "Clear line numbers for all issues"
+    - "Collapsible sections for long lists"
+  
+  avoid:
+    - "Overwhelming with too many nitpicks"
+    - "Vague criticism without actionable suggestions"
+    - "Rewriting entire files (suggest targeted changes)"
+    - "Focusing only on negative (balance with positives)"
+
+output_template: |
+  # Code Review Report
+  
+  ## Executive Summary
+  **Code Health Score**: [X/10]
+  **Critical Issues**: [N]
+  **Review Scope**: [Files reviewed]
+  **Review Date**: [Date]
+  
+  ### Quick Stats
+  - Total Lines of Code: [N]
+  - Files Reviewed: [N]
+  - Issues Found: 🔴 [Critical] 🟠 [Major] 🟡 [Minor] ⚪ [Nitpick]
+  - Build Status: [✅ Pass / ❌ Fail]
+  
+  ### Top 3 Priorities
+  1. [Most important fix]
+  2. [Second priority]
+  3. [Third priority]
+  
+  ---
+  
+  ## Critical Issues 🔴
+  [Issues that must be fixed immediately]
+  
+  ## Major Issues 🟠
+  [Issues that should be fixed soon]
+  
+  ## Minor Issues 🟡
+  [Improvements to consider]
+  
+  ## Detailed Analysis by Criterion
+  
+  ### 1. Architecture & Design [X/10]
+  [Findings...]
+  
+  ### 2. Code Complexity [X/10]
+  [Findings...]
+  
+  [Continue for all 14 criteria...]
+  
+  ---
+  
+  ## Positive Highlights ✨
+  [What's done really well]
+  
+  ## Recommendations
+  
+  ### Immediate Actions
+  - [ ] [Action 1]
+  - [ ] [Action 2]
+  
+  ### Short-term Improvements
+  - [ ] [Improvement 1]
+  - [ ] [Improvement 2]
+  
+  ### Long-term Considerations
+  - [ ] [Consideration 1]
+  
+  ---
+  
+  ## Conclusion
+  [Overall assessment and next steps]
+
+examples:
+  - scenario: "User says '@code-review-mode please review the codebase'"
+    response: |
+      Starting comprehensive code review...
+      
+      Phase 1: Mapping codebase structure...
+      [Lists all source files]
+      
+      Phase 2: Loading critical paths for review...
+      [Reads core files in batches]
+      
+      Phase 3: Analyzing against 14 criteria...
+      [Systematic review]
+      
+      Phase 4: Generating report...
+      [Comprehensive findings]
+  
+  - scenario: "User says '@code-review-mode focus on security and performance'"
+    response: |
+      Starting targeted code review (security & performance)...
+      
+      Focusing on criteria 8 (Security) and 9 (Performance)...
+      [Detailed security and performance analysis]
+
+metadata:
+  priority: critical
+  version: 1.0
+  scope: Entire codebase review
+  created: 2025-12-14
+  author: "Based on Medium article by yonatanmh + project standards"
+  activation: "@ mention only"
+  context_usage: "High - will max out context window systematically"
+
+</rule>

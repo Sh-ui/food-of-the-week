@@ -41,30 +41,216 @@ This is a weekly meal planning system built with Astro that transforms structure
 
 ## Project Structure
 
-- **`FOOD-OF-THE-WEEK.md`** - Current week's meal plan (data source for website)
-- **`brainstorming/`** - Free-form weekly planning workspace
-- **`archive/`** - Past weekly plans in YYYYMMDDsummary.md format
-- **`.cursor/rules/`** - AI assistant guidelines for meal planning philosophy
-- **`public/print-config.json`** - Customize print layout (margins, spacing, fonts)
-- **`src/`** - Astro website components, styles, and utilities
-- **`rule-basis/`** - Reference philosophy documents
+```
+GroceryPlanning/
+├── FOOD-OF-THE-WEEK.md          # Current week's meal plan (content source)
+├── WEEKEND.md                   # Weekend meal planning (separate page)
+├── README.md                    # This file - project overview
+├── TODOS.md                     # Development roadmap
+├── LICENSE.md                   # AGPL-3.0 license
+├── .github/
+│   ├── dependabot.yml           # Automated dependency updates
+│   └── workflows/deploy.yml     # GitHub Pages deployment
+├── brainstorming/               # Free-form weekly planning workspace
+├── archive/                     # Past weekly plans (YYYYMMDDsummary.md)
+├── src/
+│   ├── components/              # Astro components
+│   │   ├── GroceryList.astro    # Interactive grocery list with localStorage
+│   │   ├── MealCard.astro       # Meal display with flex-parsing
+│   │   ├── StickyHeader.astro   # Navigation + print functionality
+│   │   ├── WeeklyPlan.astro     # Main layout orchestrator
+│   │   └── Footer.astro         # Site footer with links
+│   ├── config/
+│   │   ├── colors.ts            # Color cycling logic (references Tailwind)
+│   │   └── breakpoints.ts       # Scroll thresholds for header behavior
+│   ├── layouts/
+│   │   └── Layout.astro         # Base HTML layout
+│   ├── pages/
+│   │   ├── index.astro          # Main page (FOOD-OF-THE-WEEK.md)
+│   │   └── weekend.astro        # Weekend page (WEEKEND.md)
+│   ├── styles/
+│   │   ├── global.css           # Main styles with CSS custom properties
+│   │   └── print.css            # Print-specific styles
+│   └── utils/
+│       ├── weekParser.ts        # Position-based markdown parser
+│       └── printGenerator.ts    # Print layout generation from config
+├── public/
+│   ├── favicon.svg
+│   └── print-config.json        # Customize print layout
+├── tailwind.config.mjs          # ⭐ Single source of truth for colors, spacing, breakpoints
+├── astro.config.mjs             # Astro build configuration
+├── .cursor/
+│   └── rules/                   # AI assistant guidelines
+└── rule-basis/                  # Reference philosophy documents
+```
 
 ## Features
 
-- **Interactive Grocery Lists** - Checkboxes save to browser localStorage
-- **Three-Phase Instructions** - Color-coded sections (Already Prepped, Sous Chef, Chef Finishing)
-- **Print Functionality** - Print full week, grocery list only, or individual meals
-- **Mobile-Friendly** - Responsive design for shopping and cooking
-- **Auto-Deployment** - Push to GitHub, site updates automatically
+### Current Features
 
-## Print Configuration
+- **Interactive Grocery Lists** - Checkboxes persist in browser localStorage with week-specific keys
+- **Weekend Planning** - Dedicated weekend page with separate meal plans (`/weekend` route)
+- **Flexible Markdown Parsing** - Position-based parser works with any markdown structure (no keyword dependencies)
+- **Themeable Color System** - Centralized colors with automatic cycling for instruction sections
+- **Three-Phase Instructions** - Color-coded workflow sections (Already Prepped, Sous Chef, Chef Finishing)
+- **Print Functionality** - Print full week, grocery list only, or individual meals with config-driven formatting
+- **Mobile-Friendly** - Responsive design optimized for shopping and cooking on any device
+- **Auto-Deployment** - Push to GitHub, site rebuilds and deploys automatically via GitHub Actions
+- **Persistent State** - Grocery list checkbox states saved per week, survives browser refresh
+- **Static Site Generation** - Fast, secure, and hostable anywhere (currently on GitHub Pages)
 
-Edit `print-config.json` in the `public/` folder to adjust print layout settings including page margins, typography, and spacing.
+### Coming Soon
 
-## Stack
+See [TODOS.md](TODOS.md) for the complete development roadmap including:
+- **Cheffy** - Interactive assistant character for notifications, calendar sync, and archive navigation
+- **PWA Support** - Install as app, offline access, and background sync
+- **Archive Search** - Full-text search across past meal plans
+- **Recipe Timeline** - Extract cooking timelines and export to calendar
 
-- **Astro** - Static site generation
-- **GitHub Pages** - Hosting
-- **GitHub Actions** - Auto-deployment
-- **TypeScript** - Type-safe code
-- **CSS** - Custom print media queries
+## Customization
+
+### Color Theming
+
+The site uses a centralized color system with **Tailwind CSS as the single source of truth**.
+
+**Architecture:**
+```
+tailwind.config.mjs     ← Define ALL colors here (hex values)
+        ↓
+src/config/colors.ts    ← References Tailwind colors, handles cycling logic
+        ↓
+Components              ← Use Tailwind utilities OR colors.ts for dynamic styling
+```
+
+**To change the color palette:**
+
+1. **Edit `tailwind.config.mjs`** - All hex values are defined in `theme.extend.colors`:
+   ```js
+   colors: {
+     'primary': '#494331',        // Headings, buttons
+     'secondary': '#F3CA40',      // Gold accent (first subsection border)
+     'accent': '#F08A4B',         // Orange highlights
+     'bg': '#FAF8F3',             // Page background
+     'bg-alt': '#F5F2EB',         // Subsection backgrounds
+     'border': '#E8E3D8',         // Card borders
+     // Instruction section cycling colors
+     'instruction-salmon': '#D78A76',
+     'instruction-yellow': '#F3CA40',
+     'instruction-orange': '#F08A4B',
+     // ... (each has -bg and -heading variants)
+   }
+   ```
+
+2. **Subsection color cycling** is configured in `src/config/colors.ts`:
+   - `firstSubsection` - The meal info section (Protein, Ingredients, Description) - uses gold border
+   - `instructionSequence` - Subsequent sections cycle through: salmon → yellow → orange → repeat
+   - `positionOverrides` - Optional: force specific positions to use specific colors
+
+**Example customizations:**
+
+| Goal | Edit |
+|------|------|
+| Change gold accent to blue | `'secondary': '#3B82F6'` in tailwind.config.mjs |
+| Add a 4th cycling color | Add new color set to `instructionSequence` array in colors.ts |
+| Make 2nd instruction always green | Add `positionOverrides: { 1: {...} }` in colors.ts |
+| Darken page background | Change `'bg': '#FAF8F3'` to a darker value |
+
+**Note:** CSS custom properties in `global.css` mirror Tailwind colors for backwards compatibility with scoped component styles.
+
+
+### Print Configuration
+
+The print layout is fully customizable via `public/print-config.json`:
+
+**What you can customize:**
+- **Page margins** - Adjust print margins (top, right, bottom, left)
+- **Typography** - Font families, sizes, line heights for headings and body text
+- **Spacing** - Gaps between sections, paragraphs, and list items
+- **Checkbox style** - Size, symbols for checked/unchecked items
+- **Layout options** - Page breaks between meals, category headings visibility
+
+**How it works:**
+1. Edit `public/print-config.json` with your preferred settings
+2. StickyHeader print functionality reads this config at runtime
+3. Generated print documents use your custom layout
+4. No code changes needed - just edit the JSON file
+
+**Example:** To make print text larger, change `"bodyFontSize": "11pt"` to `"12pt"` in print-config.json.
+
+## Tech Stack
+
+- **[Astro](https://astro.build)** v5.16+ - Static site generation with zero-JS by default
+- **[TypeScript](https://www.typescriptlang.org/)** - Type-safe parsing and utilities
+- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS with centralized config as single source of truth
+- **[marked](https://marked.js.org/)** - Markdown parser for structured content
+- **GitHub Pages** - Free static hosting with custom domain support
+- **GitHub Actions** - Automated CI/CD pipeline for deployment
+- **localStorage** - Client-side persistence for grocery list state
+
+### Tailwind Integration
+
+This project uses Tailwind CSS with `applyBaseStyles: false` (custom typography preserved). Key points:
+
+- **All design tokens** (colors, spacing, breakpoints) defined in `tailwind.config.mjs`
+- **Utilities first** - Use Tailwind classes for layout, spacing, colors where possible
+- **Scoped CSS** - Only for complex styling (pseudo-elements, semantic states like `.meal-cooked`)
+- **Important:** When using borders, always include `border-solid` (base styles not applied)
+- **CSS variables** in `global.css` mirror Tailwind config for scoped component styles
+
+## Development
+
+### Quick Start
+
+```bash
+# Install dependencies
+npm install
+
+# Start dev server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+The site will be available at `http://localhost:4321`
+
+### Dependencies
+
+All dependencies are managed via npm and automatically kept up-to-date using Dependabot:
+- Production dependencies checked weekly
+- Security patches applied automatically
+- GitHub Actions dependencies checked monthly
+
+---
+
+## Contributing
+
+This is a personal meal planning system, but contributions are welcome! If you'd like to:
+
+- Report a bug or suggest a feature → [Open an issue](https://github.com/sh-ui/food-of-the-week/issues)
+- Contribute code → Fork the repo and submit a pull request
+- Adapt for your own use → Fork and customize (see License below)
+
+See [TODOS.md](TODOS.md) for planned features and development roadmap.
+
+## License
+
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
+
+This project is licensed under the [GNU Affero General Public License v3.0 (AGPL-3.0)](LICENSE.md).
+
+### What this means:
+
+✅ **You can:**
+- Use this software for free
+- Modify it for your own needs
+- Share it with others
+- Run your own instance
+
+⚠️ **You must:**
+- Make your source code available if you run a modified version as a web service
+- Keep the same AGPL-3.0 license
+- Credit the original project

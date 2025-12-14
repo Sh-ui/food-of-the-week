@@ -21,24 +21,18 @@ function renderMarkdown(text: string): string {
 
 <div 
   id={`print-section-${section.id}`} 
-  class={`print-section section meal ${section.cooked ? 'meal-cooked' : ''}`} 
+  class={`print-section meal ${section.cooked ? 'meal-cooked' : ''}`}
   data-section-type="meal" 
   data-cooked={section.cooked ? 'true' : 'false'}
 >
   <div class="meal-header">
     <span 
-      class={`cooked-indicator ${section.cooked ? 'is-cooked' : ''}`} 
+      class={`cooked-indicator ${section.cooked ? 'is-cooked' : ''}`}
       aria-label={section.cooked ? 'Meal has been cooked' : 'Meal not yet cooked'}
     >
       {section.cooked ? '✓' : ''}
     </span>
     <h2>{section.title}</h2>
-    <button 
-      class="button button-secondary print-button" 
-      data-print-target={section.id}
-    >
-      Print This Meal
-    </button>
   </div>
   
   {/* Render subsection groups */}
@@ -52,30 +46,30 @@ function renderMarkdown(text: string): string {
     
     return (
       <div 
-        class={`subsection-group ${isFirstGroup ? 'info-group' : 'instruction-group'}`}
-        style={`--group-bg: ${colors.bg}; --group-border: ${colors.border}; --group-heading: ${colors.heading};`}
+        class={`subsection-group mb-lg p-md rounded-md border-0 border-solid border-l-4 last:mb-0 ${isFirstGroup ? 'info-group flex flex-col gap-md' : 'instruction-group mt-lg'}`}
+        style={`background: ${colors.bg}; border-left-color: ${colors.border};`}
       >
         {group.map((sub) => (
           <div class="subsection">
             {/* For grouped items, show as labeled fields */}
             {isFirstGroup ? (
-              <div class="subsection-field">
-                <strong>{sub.title}:</strong> {sub.content}
+              <div class="subsection-field leading-relaxed text-[1.1rem] mobile:text-[1.25rem] mobile:leading-extra-loose">
+                <strong class="text-primary inline-block min-w-[120px]">{sub.title}:</strong> {sub.content}
               </div>
             ) : (
               <>
-                <h3>{sub.title}</h3>
+                <h3 class="mt-0 mb-md text-[1.25rem] font-semibold mobile:text-[1.3rem] mobile:mb-md" style={`color: ${colors.heading};`}>{sub.title}</h3>
                 {sub.items && sub.items.length > 0 && (
-                  <ul>
+                  <ul class="list-disc ml-lg">
                     {sub.items.map((item: string) => (
-                      <li set:html={renderMarkdown(item)} />
+                      <li class="mb-sm leading-relaxed text-[1.1rem] mobile:text-[1.25rem] mobile:leading-extra-loose" set:html={renderMarkdown(item)} />
                     ))}
                   </ul>
                 )}
                 {sub.content && (
                   <div class="subsection-content">
                     {sub.content.split('\n\n').map((paragraph: string) => (
-                      <p set:html={renderMarkdown(paragraph)} />
+                      <p class="mb-md leading-relaxed text-[1.1rem] last:mb-0 mobile:text-[1.25rem] mobile:leading-extra-loose" set:html={renderMarkdown(paragraph)} />
                     ))}
                   </div>
                 )}
@@ -96,13 +90,21 @@ function renderMarkdown(text: string): string {
 </div>
 
 <style>
+  /* Meal card wrapper - main container styling */
   .meal {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+    width: 100%;
     break-inside: avoid;
   }
 
+  /* Meal header - title and indicator layout */
   .meal-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
     margin-bottom: var(--spacing-lg);
     gap: var(--spacing-md);
@@ -113,14 +115,14 @@ function renderMarkdown(text: string): string {
     flex: 1;
   }
 
-  /* Cooked indicator - circular button next to heading */
+  /* Cooked indicator - circular checkbox next to heading */
   .cooked-indicator {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 1.75rem;
     height: 1.75rem;
-    border: 2px solid var(--color-text-light, #6b6a62);
+    border: 2px solid var(--color-text-light);
     border-radius: 50%;
     flex-shrink: 0;
     margin-top: 0.25rem;
@@ -136,13 +138,13 @@ function renderMarkdown(text: string): string {
     color: white;
   }
 
-  /* Greyed-out styling for cooked meals */
+  /* Cooked meal state overrides - semantic state styling */
   .meal-cooked {
-    background: var(--color-cooked-bg, #f0ede6);
-    border-color: var(--color-cooked-border, #d8d4c9);
+    background: var(--color-cooked-bg, #f0ede6) !important;
+    border-color: var(--color-cooked-border, #d8d4c9) !important;
   }
 
-  .meal-cooked .meal-header h2 {
+  .meal-cooked h2 {
     color: var(--color-cooked-text, #8a887f);
   }
 
@@ -151,95 +153,25 @@ function renderMarkdown(text: string): string {
     border-left-color: var(--color-cooked-border, #d8d4c9) !important;
   }
 
-  .meal-cooked .subsection-field {
-    color: var(--color-cooked-text, #8a887f);
-  }
-
-  .meal-cooked .subsection-field strong {
-    color: var(--color-cooked-text, #8a887f);
-  }
-
-  .meal-cooked .subsection h3 {
+  .meal-cooked strong {
     color: var(--color-cooked-text, #8a887f) !important;
   }
 
-  .meal-cooked .subsection li,
-  .meal-cooked .subsection-content p {
+  .meal-cooked h3 {
+    color: var(--color-cooked-text, #8a887f) !important;
+  }
+
+  .meal-cooked li,
+  .meal-cooked p {
     color: var(--color-cooked-text, #8a887f);
   }
 
-  .meal-cooked .subsection-content :global(a),
-  .meal-cooked .subsection :global(a) {
+  .meal-cooked :global(a) {
     color: var(--color-cooked-text);
     text-decoration-color: var(--color-cooked-text);
   }
 
-  /* Subsection groups - styled via CSS custom properties */
-  .subsection-group {
-    margin-bottom: var(--spacing-lg);
-    padding: var(--spacing-md);
-    border-radius: 6px;
-    border-left: 4px solid var(--group-border);
-    background: var(--group-bg);
-  }
-
-  .subsection-group:last-child {
-    margin-bottom: 0;
-  }
-
-  /* Info group (first group - meal details) */
-  .info-group {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-md);
-  }
-
-  .subsection-field {
-    line-height: 1.68;
-    font-size: 1.1rem;
-  }
-
-  .subsection-field strong {
-    color: var(--color-primary);
-    display: inline-block;
-    min-width: 120px;
-  }
-
-  /* Instruction groups */
-  .instruction-group {
-    margin-top: var(--spacing-lg);
-  }
-
-  .instruction-group h3 {
-    margin-top: 0;
-    margin-bottom: var(--spacing-md);
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--group-heading);
-  }
-
-  .instruction-group ul {
-    list-style: disc;
-    margin-left: var(--spacing-lg);
-  }
-
-  .instruction-group li {
-    margin-bottom: var(--spacing-sm);
-    line-height: 1.68;
-    font-size: 1.1rem;
-  }
-
-  .subsection-content p {
-    margin-bottom: var(--spacing-md);
-    line-height: 1.68;
-    font-size: 1.1rem;
-  }
-
-  .subsection-content p:last-child {
-    margin-bottom: 0;
-  }
-
-  /* Style markdown links */
+  /* Markdown link styling */
   .subsection-content :global(a),
   .instruction-group :global(a) {
     color: var(--color-primary);
@@ -254,12 +186,8 @@ function renderMarkdown(text: string): string {
     color: var(--color-accent);
   }
 
-  .empty-state {
-    color: var(--color-text-light);
-    font-style: italic;
-  }
-
-  @media (max-width: 768px) {
+  /* Mobile responsive adjustments */
+  @media screen(mobile) {
     .meal-header {
       flex-direction: column;
       align-items: flex-start;
@@ -271,35 +199,14 @@ function renderMarkdown(text: string): string {
       height: 2rem;
       font-size: 1rem;
     }
-    
+
     .meal-header h2 {
       font-size: 2rem;
-    }
-
-    .subsection-field {
-      font-size: 1.25rem;
-      line-height: 1.75;
     }
 
     .subsection-field strong {
       display: block;
       margin-bottom: var(--spacing-xs);
-      font-size: 1.25rem;
-    }
-    
-    .subsection-group {
-      padding: var(--spacing-lg);
-    }
-    
-    .instruction-group h3 {
-      font-size: 1.3rem;
-      margin-bottom: var(--spacing-md);
-    }
-    
-    .instruction-group li,
-    .subsection-content p {
-      font-size: 1.25rem;
-      line-height: 1.75;
     }
   }
 </style>

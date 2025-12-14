@@ -6,25 +6,23 @@ interface MealNavItem {
 }
 
 interface Props {
-  weekTitle: string;
   shortTitle: string;
   meals: MealNavItem[];
   hasGroceryList: boolean;
 }
 
-const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
+const { shortTitle, meals, hasGroceryList } = Astro.props;
 ---
 
-<header class="sticky-header" id="sticky-header">
-  <!-- Desktop/Tablet Navigation -->
-  <nav class="header-nav desktop-nav">
-    <span class="header-week-title" data-visible="false">
-      {shortTitle}
-    </span>
-    
-    <div class="nav-links">
+<header class="sticky-header" id="sticky-header" data-scrolled="false">
+  <nav class="header-nav">
+    <!-- All nav buttons in one container - order matters -->
+    <div class="nav-buttons">
+      <!-- Date range button - only visible when scrolled -->
+      <a href="#top" class="nav-btn date-btn">{shortTitle}</a>
+      
       {hasGroceryList && (
-        <a href="#print-section-grocery-list" class="nav-link" data-section="grocery-list">
+        <a href="#print-section-grocery-list" class="nav-btn" data-section="grocery-list">
           Grocery
         </a>
       )}
@@ -32,46 +30,29 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
       {meals.map((meal) => (
         <a 
           href={`#print-section-${meal.id}`} 
-          class={`nav-link ${meal.cooked ? 'cooked' : ''}`}
+          class={`nav-btn ${meal.cooked ? 'cooked' : ''}`}
           data-section={meal.id}
         >
           {meal.cooked ? '✓ ' : ''}{meal.title}
         </a>
       ))}
       
-      <a href="#site-footer" class="nav-link">Links</a>
+      <a href="#site-footer" class="nav-btn" data-section="footer">Links</a>
     </div>
     
-    <button class="header-print-btn print-button" data-print-target="all" data-visible="false" type="button">
-      <span class="print-text-full">Print Full Week</span>
-      <span class="print-text-short">Print</span>
-      <svg class="print-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="6 9 6 2 18 2 18 9"></polyline>
-        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
-        <rect x="6" y="14" width="12" height="8"></rect>
-      </svg>
-    </button>
-  </nav>
+    <!-- Mobile: Date button (separate from desktop, appears on scroll) -->
+    <a href="#top" class="mobile-date-btn">{shortTitle}</a>
   
-  <!-- Mobile Header -->
-  <div class="header-mobile">
-    <span class="mobile-week-title" data-visible="false">{shortTitle}</span>
-    
-    <button class="hamburger-btn" aria-label="Open menu" aria-expanded="false">
-      <svg class="hamburger-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="3" y1="12" x2="21" y2="12"></line>
-        <line x1="3" y1="6" x2="21" y2="6"></line>
-        <line x1="3" y1="18" x2="21" y2="18"></line>
+      <!-- Mobile: Section selector with dropdown -->
+      <div class="section-selector">
+        <button class="section-selector-btn" aria-expanded="false" aria-haspopup="true">
+          <svg class="dropdown-caret" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
       </svg>
-      <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="18" y1="6" x2="6" y2="18"></line>
-        <line x1="6" y1="6" x2="18" y2="18"></line>
-      </svg>
+          <span class="current-section-name">Full Week</span>
     </button>
-  </div>
   
-  <!-- Hamburger Dropdown Menu -->
-  <div class="hamburger-dropdown" hidden>
+        <div class="section-dropdown" hidden>
     <a href="#top" class="dropdown-link">
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <line x1="12" y1="19" x2="12" y2="5"></line>
@@ -79,15 +60,6 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
       </svg>
       Back to Top
     </a>
-    
-    <button class="dropdown-print-btn print-button" data-print-target="all" type="button">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="6 9 6 2 18 2 18 9"></polyline>
-        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
-        <rect x="6" y="14" width="12" height="8"></rect>
-      </svg>
-      Print Full Week
-    </button>
     
     {hasGroceryList && (
       <a href="#print-section-grocery-list" class="dropdown-link" data-section="grocery-list">
@@ -105,7 +77,7 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
       </a>
     ))}
     
-    <a href="#site-footer" class="dropdown-link">
+          <a href="#site-footer" class="dropdown-link" data-section="footer">
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="12" cy="12" r="10"></circle>
         <line x1="12" y1="16" x2="12" y2="12"></line>
@@ -113,27 +85,25 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
       </svg>
       Links & Info
     </a>
+      </div>
   </div>
   
-  <!-- Mobile Section Header (shows current section + full print button) -->
-  <div class="mobile-section-header" hidden>
-    <span class="section-title"></span>
-    <button class="section-print-btn print-button" data-print-target="" type="button">
+    <!-- Print Button -->
+    <button class="header-print-btn print-button" data-print-target="all" type="button">
       <svg class="print-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <polyline points="6 9 6 2 18 2 18 9"></polyline>
         <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
         <rect x="6" y="14" width="12" height="8"></rect>
       </svg>
-      <span class="section-print-text">Print</span>
+      <span class="print-prefix">Print</span>
+      <span class="print-section-name">Full Week</span>
     </button>
-  </div>
+  </nav>
 </header>
 
-<!-- Spacer to account for fixed header -->
 <div class="header-spacer"></div>
 
 <style>
-  /* Fixed Header - more reliable than sticky with overflow issues */
   .sticky-header {
     position: fixed;
     top: 0;
@@ -142,19 +112,16 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     z-index: 100;
     background: var(--color-bg);
     border-bottom: 1px solid var(--color-border);
-    transition: box-shadow 0.3s ease;
   }
 
   .sticky-header[data-scrolled="true"] {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
 
-  /* Spacer to push content below fixed header */
   .header-spacer {
-    height: 60px;
+    height: 56px;
   }
 
-  /* Desktop Navigation */
   .header-nav {
     display: flex;
     align-items: center;
@@ -162,165 +129,179 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     padding: var(--spacing-sm) var(--spacing-md);
     max-width: 1200px;
     margin: 0 auto;
+    min-height: 40px;
+    position: relative;
   }
 
-  /* Week title - hidden by default, snapped to left */
-  .header-week-title {
-    position: absolute;
-    left: var(--spacing-md);
-    font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: 1.1rem;
-    color: var(--color-primary);
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-    cursor: pointer;
+  /* When scrolled, align to left */
+  .sticky-header[data-scrolled="true"] .header-nav {
+    justify-content: flex-start;
   }
 
-  .header-week-title[data-visible="true"] {
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  /* Nav links - centered */
-  .nav-links {
+  /* ============================================
+     NAV BUTTONS CONTAINER - Two states
+     ============================================ */
+  .nav-buttons {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: var(--spacing-xs);
+    transition: opacity 0.2s ease;
   }
 
-  .nav-link {
-    padding: var(--spacing-xs) var(--spacing-sm);
+  /* ============================================
+     NAV BUTTONS - All buttons share base style
+     ============================================ */
+  .nav-btn {
+    padding: 8px 12px;
+    height: 36px;
     border-radius: 4px;
     text-decoration: none;
     color: var(--color-text);
     font-size: 0.9rem;
     font-weight: 500;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    line-height: 1;
     white-space: nowrap;
     display: inline-flex;
     align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease, color 0.2s ease;
   }
 
-  .nav-link:hover {
+  .nav-btn:hover {
     background: var(--color-bg-alt);
   }
 
-  .nav-link.active {
+  .nav-btn.active {
     background: var(--color-bg-alt);
     color: var(--color-primary);
     font-weight: 600;
   }
 
-  .nav-link.cooked {
+  .nav-btn.cooked {
     color: var(--color-cooked-text);
     opacity: 0.7;
   }
 
-  .nav-link.cooked.active {
+  .nav-btn.cooked.active {
     background: var(--color-cooked-bg);
   }
 
-  /* Header Print Button - hidden by default, positioned to the right */
-  .header-print-btn {
-    position: absolute;
-    right: var(--spacing-md);
-    display: inline-flex;
-    align-items: center;
-    gap: var(--spacing-xs);
-    padding: var(--spacing-xs) var(--spacing-md);
-    background: var(--color-secondary);
-    color: var(--color-text);
-    border: none;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.2s ease, opacity 0.3s ease;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  .header-print-btn[data-visible="true"] {
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  .header-print-btn:hover {
-    background: #d9b130;
-  }
-
-  .print-text-short,
-  .print-icon {
-    display: none;
-  }
-
-  /* Mobile Header */
-  .header-mobile {
-    display: none;
-    align-items: center;
-    padding: var(--spacing-sm) var(--spacing-md);
-  }
-
-  .mobile-week-title {
+  /* ============================================
+     DATE BUTTON - Same as nav buttons, just bigger font
+     ============================================ */
+  .date-btn {
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: 1.1rem;
     color: var(--color-primary);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    cursor: pointer;
+    /* Hidden when not scrolled */
+    display: none;
   }
 
-  .mobile-week-title[data-visible="true"] {
-    opacity: 1;
+  /* Show date button when scrolled */
+  .sticky-header[data-scrolled="true"] .date-btn {
+    display: inline-flex;
   }
 
-  .hamburger-btn {
-    display: flex;
+  /* ============================================
+     MOBILE DATE BUTTON - Separate from desktop
+     ============================================ */
+  .mobile-date-btn {
+    display: none;
+    position: absolute;
+    left: var(--spacing-md);
+    padding: 8px 12px;
+    height: 36px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--color-primary);
+    line-height: 1;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .mobile-date-btn:hover {
+    background: var(--color-bg-alt);
+  }
+
+  /* ============================================
+     FADE TRANSITION BETWEEN STATES
+     ============================================ */
+  .sticky-header[data-scrolled="fading"] .nav-buttons {
+    opacity: 0;
+  }
+
+  /* ============================================
+     SECTION SELECTOR (Mobile dropdown)
+     ============================================ */
+  .section-selector {
+    display: none;
+    position: relative;
+  }
+
+  .section-selector-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 12px;
+    height: 36px;
     background: transparent;
     border: none;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-primary);
     cursor: pointer;
-    color: var(--color-text);
-    margin-left: auto;
+    transition: background-color 0.2s ease;
+    line-height: 1;
   }
 
-  .hamburger-btn .close-icon {
-    display: none;
+  .section-selector-btn:hover {
+    background: var(--color-bg-alt);
   }
 
-  .hamburger-btn[aria-expanded="true"] .hamburger-icon {
-    display: none;
+  .dropdown-caret {
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
   }
 
-  .hamburger-btn[aria-expanded="true"] .close-icon {
-    display: block;
+  .section-selector-btn[aria-expanded="true"] .dropdown-caret {
+    transform: rotate(180deg);
   }
 
-  /* Hamburger Dropdown */
-  .hamburger-dropdown {
+  .current-section-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+  }
+
+  .section-dropdown {
     position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 280px;
     background: var(--color-bg);
-    border-bottom: 1px solid var(--color-border);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    padding: var(--spacing-sm);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+    padding: 10px;
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-xs);
+    gap: 4px;
+    z-index: 10;
   }
 
-  .hamburger-dropdown[hidden] {
+  .section-dropdown[hidden] {
     display: none;
   }
 
@@ -328,11 +309,11 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     display: flex;
     align-items: center;
     gap: var(--spacing-sm);
-    padding: var(--spacing-sm) var(--spacing-md);
+    padding: 14px 18px;
     text-decoration: none;
     color: var(--color-text);
-    font-size: 1rem;
-    border-radius: 4px;
+    font-size: 1.1rem;
+    border-radius: 8px;
     transition: background-color 0.2s ease;
   }
 
@@ -343,6 +324,7 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
   .dropdown-link.active {
     background: var(--color-bg-alt);
     font-weight: 600;
+    color: var(--color-primary);
   }
 
   .dropdown-link.cooked {
@@ -351,232 +333,363 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
 
   .dropdown-link svg {
     flex-shrink: 0;
+    opacity: 0.6;
   }
 
-  /* Dropdown Print Button */
-  .dropdown-print-btn {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-sm);
-    padding: var(--spacing-sm) var(--spacing-md);
-    background: var(--color-secondary);
-    color: var(--color-text);
-    border: none;
+  /* ============================================
+     PRINT BUTTON
+     ============================================ */
+  .header-print-btn {
+    position: absolute;
+    right: var(--spacing-md);
+    padding: 8px 14px;
     border-radius: 4px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    width: 100%;
-    text-align: left;
-  }
-
-  .dropdown-print-btn:hover {
-    background: #d9b130;
-  }
-
-  .dropdown-print-btn svg {
-    flex-shrink: 0;
-  }
-
-  /* Mobile Section Header - full width with verbose print button */
-  .mobile-section-header {
-    display: none;
-    align-items: center;
-    justify-content: space-between;
-    padding: var(--spacing-xs) var(--spacing-md);
-    background: var(--color-bg-alt);
-    border-bottom: 1px solid var(--color-border);
-  }
-
-  .mobile-section-header:not([hidden]) {
-    display: flex;
-  }
-
-  .section-title {
-    font-family: var(--font-heading);
-    font-weight: 600;
-    font-size: 0.95rem;
-    color: var(--color-primary);
-    flex: 1;
-    min-width: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    font-size: 0.9rem;
+    font-weight: 500;
     white-space: nowrap;
-  }
-
-  .section-print-btn {
     display: inline-flex;
     align-items: center;
-    gap: var(--spacing-xs);
-    padding: var(--spacing-xs) var(--spacing-sm);
-    background: var(--color-secondary);
+    justify-content: center;
+    gap: 6px;
     border: none;
-    border-radius: 4px;
+    background: var(--color-primary);
+    color: white;
+    font-family: inherit;
+    line-height: 1;
     cursor: pointer;
+    height: 36px;
+    min-width: 36px;
+  }
+
+  .header-print-btn:hover {
+    background: var(--color-primary-hover);
+  }
+
+  .header-print-btn[data-is-section="true"] {
+    background: var(--color-secondary);
     color: var(--color-text);
-    font-size: 0.85rem;
-    font-weight: 600;
-    white-space: nowrap;
+  }
+
+  .header-print-btn[data-is-section="true"]:hover {
+    background: var(--color-secondary-hover);
+  }
+
+  .header-print-btn .print-icon {
+    display: none;
     flex-shrink: 0;
   }
 
-  .section-print-btn:hover {
-    background: #d9b130;
-  }
-
-  .section-print-btn .print-icon {
-    display: block;
-    flex-shrink: 0;
-  }
-
-  .section-print-text {
+  .header-print-btn .print-prefix,
+  .header-print-btn .print-section-name {
     display: inline;
   }
 
-  /* Responsive Breakpoints */
-  
-  /* Tablet: 800px - 1000px - show shorter print text */
-  @media (max-width: 1000px) {
-    .print-text-full {
-      display: none;
-    }
+  .header-print-btn .print-prefix::after {
+    content: ' ';
+  }
 
-    .print-text-short {
+  /* ============================================
+     TABLET - 1000px (defined in tailwind.config.mjs screens.desktop)
+     ============================================ */
+  @media screen(desktop) {
+    .header-print-btn .print-icon {
       display: inline;
     }
 
-    .nav-link {
-      font-size: 0.85rem;
-      padding: var(--spacing-xs);
-    }
-  }
-
-  /* Mobile: < 800px - switch to hamburger menu */
-  @media (max-width: 800px) {
-    .desktop-nav {
+    .header-print-btn .print-prefix {
       display: none;
     }
 
-    .header-mobile {
-      display: flex;
+    .nav-btn {
+      font-size: 0.85rem;
+      padding: 8px 10px;
     }
 
-    .header-spacer {
-      height: 50px;
+    .date-btn {
+      font-size: 1rem;
+    }
+  }
+
+  /* ============================================
+     MOBILE - 950px (defined in tailwind.config.mjs screens.tablet)
+     ============================================ */
+  @media screen(tablet) {
+    /* Mobile header stays centered - no left-align on scroll */
+    .sticky-header[data-scrolled="true"] .header-nav {
+      justify-content: center;
+    }
+
+    .nav-buttons {
+      display: none;
+    }
+
+    .section-selector {
+      display: block;
+  }
+
+    /* Mobile date button - show the element, but keep invisible until scrolled */
+    .mobile-date-btn {
+      display: inline-flex;
+    }
+
+    /* Fade in mobile date button when scrolled */
+    .sticky-header[data-scrolled="true"] .mobile-date-btn {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .header-print-btn {
+      padding: 8px 20px;
+      min-width: 52px;
+    }
+
+    .header-print-btn .print-prefix,
+    .header-print-btn .print-section-name {
+      display: none;
+    }
+
+    .header-print-btn .print-icon {
+      display: inline;
+    }
+  }
+
+  /* ============================================
+     SMALL MOBILE - 500px (defined in tailwind.config.mjs screens.sm-mobile)
+     ============================================ */
+  @media screen(sm-mobile) {
+    .header-print-btn {
+      padding: 8px 16px;
+      min-width: 48px;
+    }
+
+    .current-section-name {
+      max-width: 140px;
+    }
+
+    .section-selector-btn {
+      padding: 8px 10px;
     }
   }
 </style>
 
 <script>
-  const MOBILE_BREAKPOINT = 800;
+  import { printSection } from '../utils/printGenerator';
+  import { scrollThresholds } from '../config/breakpoints';
 
-  // Section data mapping for print labels
-  const sectionLabels: Record<string, string> = {
-    'all': 'Print Full Week',
-    'grocery-list': 'Print Grocery List',
-  };
+  // ============================================
+  // HEADER STATE MANAGEMENT - Simple two-state toggle
+  // ============================================
 
-  // Build section labels from DOM (for print buttons)
-  // Matches any section that isn't grocery-list
-  document.querySelectorAll('.nav-link[data-section]:not([data-section="grocery-list"])').forEach(link => {
-    const section = link.getAttribute('data-section');
-    // strip any leading check mark that we render visually (e.g. "✓ ")
-    const raw = link.textContent?.trim() || 'Section';
-    const title = raw.replace(/^[✓\u2713]\s*/, '');
-    if (section) {
-      sectionLabels[section] = `Print ${title}`;
-    }
-  });
-
-  // Elements
   const header = document.getElementById('sticky-header') as HTMLElement;
-  const hamburgerBtn = document.querySelector('.hamburger-btn') as HTMLButtonElement;
-  const hamburgerDropdown = document.querySelector('.hamburger-dropdown') as HTMLElement;
-  const mobileSectionHeader = document.querySelector('.mobile-section-header') as HTMLElement;
-  const sectionTitleEl = document.querySelector('.section-title') as HTMLElement;
-  const sectionPrintBtn = document.querySelector('.section-print-btn') as HTMLButtonElement;
-  const sectionPrintText = document.querySelector('.section-print-text') as HTMLElement;
-  const headerPrintBtn = document.querySelector('.header-nav .header-print-btn') as HTMLButtonElement;
-  const weekTitleEl = document.querySelector('.header-week-title') as HTMLElement;
-  const mobileWeekTitleEl = document.querySelector('.mobile-week-title') as HTMLElement;
-  const navLinks = document.querySelectorAll('.nav-link[data-section], .dropdown-link[data-section]') as NodeListOf<HTMLAnchorElement>;
+  const navButtons = document.querySelector('.nav-buttons') as HTMLElement;
+  const sectionSelectorBtn = document.querySelector('.section-selector-btn') as HTMLButtonElement;
+  const sectionDropdown = document.querySelector('.section-dropdown') as HTMLElement;
+  const currentSectionName = document.querySelector('.current-section-name') as HTMLElement;
+  const headerPrintBtn = document.querySelector('.header-print-btn') as HTMLButtonElement;
+  const navBtns = document.querySelectorAll('.nav-btn[data-section], .dropdown-link[data-section]') as NodeListOf<HTMLAnchorElement>;
 
-  let currentSection = '';
-  let currentPrintTarget = '';
-  let isMobile = window.innerWidth < MOBILE_BREAKPOINT;
-  let heroScrolledPast = false;
+  // Constants from centralized config
+  const SCROLL_THRESHOLD = scrollThresholds.HEADER_ACTIVATION;
+  const FADE_OUT_START = scrollThresholds.FADE_OUT_START;
+  
+  let isScrolled = false;
+  let currentSection = 'all';
+  let isFadingIn = false;
 
-  // Check if an element has been scrolled past
-  function hasScrolledPast(element: Element | null): boolean {
-    if (!element) return false;
-    const rect = element.getBoundingClientRect();
-    return rect.bottom < 0;
-  }
-
-  // Update scroll state
+  // Simple scroll detection - toggle between two states
   function updateScrollState(): void {
-    if (!header) return;
+    const scrolled = window.scrollY > SCROLL_THRESHOLD;
     
-    const scrolled = window.scrollY > 50;
+    if (scrolled !== isScrolled) {
+      isScrolled = scrolled;
+
+      // Fade out
+      if (navButtons) {
+        navButtons.style.opacity = '0';
+      }
+
+      // After fade, switch state and fade back in
+      setTimeout(() => {
     header.dataset.scrolled = scrolled ? 'true' : 'false';
 
-    // Check if hero section title has been scrolled past
-    const heroTitle = document.querySelector('.hero-title');
-    heroScrolledPast = hasScrolledPast(heroTitle);
-
-    // Show/hide week title based on hero visibility
-    if (weekTitleEl) {
-      weekTitleEl.dataset.visible = heroScrolledPast ? 'true' : 'false';
+        setTimeout(() => {
+          if (navButtons) {
+            navButtons.style.opacity = '1';
+          }
+        }, 50);
+      }, 150);
     }
-    if (mobileWeekTitleEl) {
-      mobileWeekTitleEl.dataset.visible = heroScrolledPast ? 'true' : 'false';
-    }
-
-    // Check for print buttons that have been scrolled past
-    checkPrintButtons();
+    
+    // Update active section based on scroll position
+    updateActiveSection();
   }
 
-  // Check which print button has been scrolled past
-  function checkPrintButtons(): void {
-    const printButtons = document.querySelectorAll('.print-section .print-button, .hero-section .print-button');
-    let lastScrolledPastTarget = '';
-    let lastScrolledPastTitle = '';
+  // Helper: Build section data from DOM
+  function buildSectionData(scrollY: number): { id: string; top: number; bottom: number; height: number; }[] {
+    const sections: { id: string; top: number; bottom: number; height: number; }[] = [];
+    document.querySelectorAll('.print-section').forEach(el => {
+      const rect = el.getBoundingClientRect();
+      sections.push({
+        id: el.id.replace('print-section-', ''),
+        top: rect.top + scrollY,
+        bottom: rect.bottom + scrollY,
+        height: rect.height
+      });
+    });
+    return sections;
+  }
 
-    // Find the last print button that has been scrolled past
-    printButtons.forEach(btn => {
-      if (hasScrolledPast(btn)) {
-        const target = (btn as HTMLButtonElement).dataset.printTarget || 'all';
-        lastScrolledPastTarget = target;
-        
-        // Get section title
-        const section = btn.closest('.print-section');
-        if (section) {
-          const heading = section.querySelector('h2');
-          lastScrolledPastTitle = heading?.textContent?.trim() || '';
-        } else if (btn.closest('.hero-section')) {
-          lastScrolledPastTitle = '';
+  // Helper: Check if footer section is active
+  function checkFooterSection(viewportMidpoint: number, scrollY: number, viewportHeight: number): { id: string; top: number; bottom: number; height: number; } | null {
+    const footer = document.getElementById('site-footer');
+    if (!footer) return null;
+
+    const footerRect = footer.getBoundingClientRect();
+    const footerTop = footerRect.top + scrollY;
+    const footerBottom = footerRect.bottom + scrollY;
+    
+    // Check if viewport midpoint is in footer
+    if (viewportMidpoint >= footerTop && viewportMidpoint < footerBottom) {
+      return {
+        id: 'footer',
+        top: footerTop,
+        bottom: footerBottom,
+        height: footerRect.height
+      };
+    }
+
+    // Check if footer is visible in viewport (within 100px of viewport bottom)
+    const viewportBottom = scrollY + viewportHeight;
+    if (viewportBottom >= footerTop + 100) {
+      return {
+        id: 'footer',
+        top: footerTop,
+        bottom: footerBottom,
+        height: footerRect.height
+      };
+    }
+
+    // Also check if at very bottom of page
+    const maxScroll = document.documentElement.scrollHeight - viewportHeight;
+    if (scrollY >= maxScroll - 10) {
+      return {
+        id: 'footer',
+        top: footerTop,
+        bottom: footerBottom,
+        height: footerRect.height
+      };
+    }
+
+    return null;
+  }
+
+  // Helper: Handle fade-out in last 15% of section
+  function handleSectionFadeOut(foundSectionData: { top: number; height: number; }, viewportMidpoint: number): void {
+    if (!headerPrintBtn || isFadingIn) return;
+
+    const positionInSection = viewportMidpoint - foundSectionData.top;
+    const sectionProgress = positionInSection / foundSectionData.height;
+
+    // Last 15% of section = fade out zone
+    if (sectionProgress > FADE_OUT_START) {
+      const fadeProgress = (sectionProgress - FADE_OUT_START) / (1 - FADE_OUT_START);
+      const opacity = Math.max(0, 1 - fadeProgress);
+      headerPrintBtn.style.transition = 'none';
+      headerPrintBtn.style.opacity = opacity.toString();
+    } else {
+      // Outside fade zone, ensure full opacity
+      headerPrintBtn.style.transition = 'none';
+      headerPrintBtn.style.opacity = '1';
+    }
+  }
+
+  // Track which section is in view with proper opacity handling
+  function updateActiveSection(): void {
+    const scrollY = window.scrollY;
+    const viewportHeight = window.innerHeight;
+    const viewportMidpoint = scrollY + (viewportHeight * 0.5);
+
+    // At top of page, always show Full Week
+    if (scrollY <= SCROLL_THRESHOLD) {
+      if (currentSection !== 'all') {
+        currentSection = 'all';
+        updateNavHighlight('all');
+        updateMobileSelector('all');
+        fadeInPrintButton('all');
+      } else if (headerPrintBtn) {
+        headerPrintBtn.style.opacity = '1';
+      }
+      return;
+    }
+    
+    // Build section data from DOM
+    const sections = buildSectionData(scrollY);
+    
+    // Check footer FIRST - if footer is significantly visible, prioritize it
+    const footerData = checkFooterSection(viewportMidpoint, scrollY, viewportHeight);
+    
+    let foundSection: string | null = null;
+    let foundSectionData: { id: string; top: number; bottom: number; height: number; } | null = null;
+    
+    if (footerData) {
+      // Footer is visible enough - use it
+      foundSection = footerData.id;
+      foundSectionData = footerData;
+    } else {
+      // Find which section viewport midpoint is in
+      for (const section of sections) {
+        if (viewportMidpoint >= section.top && viewportMidpoint < section.bottom) {
+          foundSection = section.id;
+          foundSectionData = section;
+          break;
         }
       }
-    });
-
-    // Update header print button
-    if (lastScrolledPastTarget !== currentPrintTarget) {
-      currentPrintTarget = lastScrolledPastTarget;
-      updateHeaderPrintButton(lastScrolledPastTarget);
-      updateMobileSectionHeader(lastScrolledPastTarget, lastScrolledPastTitle);
+    }
+    
+    // If no section found, don't change anything
+    if (foundSection === null) {
+      return;
     }
 
-    // Show/hide header print button
-    if (headerPrintBtn) {
-      headerPrintBtn.dataset.visible = lastScrolledPastTarget ? 'true' : 'false';
+    // If section changed, fade in new content
+    if (foundSection !== currentSection) {
+      currentSection = foundSection;
+      updateNavHighlight(foundSection);
+      updateMobileSelector(foundSection);
+      fadeInPrintButton(foundSection);
+      return;
     }
+    
+    // Still in same section - handle fade-out in last 15%
+    if (foundSectionData) {
+      handleSectionFadeOut(foundSectionData, viewportMidpoint);
+    }
+    }
+
+  // Fade in the print button with new section content
+  function fadeInPrintButton(sectionId: string): void {
+    if (!headerPrintBtn) return;
+    
+    isFadingIn = true;
+    
+    // Force opacity to 0, update content
+    headerPrintBtn.style.transition = 'none';
+    headerPrintBtn.style.opacity = '0';
+    updatePrintButton(sectionId);
+    
+    // Force reflow, then fade in
+    headerPrintBtn.offsetHeight;
+    headerPrintBtn.style.transition = 'opacity 0.2s ease-out';
+    headerPrintBtn.style.opacity = '1';
+    
+    // Reset flag after animation completes
+    setTimeout(() => { isFadingIn = false; }, 200);
   }
 
-  // Update active nav link
-  function updateActiveLink(sectionId: string): void {
-    navLinks.forEach(link => {
+  function updateNavHighlight(activeSection: string): void {
+    navBtns.forEach(link => {
       const linkSection = link.getAttribute('data-section');
-      if (linkSection === sectionId) {
+      if (linkSection === activeSection) {
         link.classList.add('active');
       } else {
         link.classList.remove('active');
@@ -584,155 +697,123 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
     });
   }
 
-  // Update header print button text and target
-  function updateHeaderPrintButton(sectionId: string): void {
+  function updatePrintButton(sectionId: string): void {
     if (!headerPrintBtn) return;
     
-    const label = sectionLabels[sectionId] || 'Print';
+    // Footer section has nothing to print - default to Full Week
+    const printTarget = sectionId === 'footer' ? 'all' : sectionId;
+    const displayName = getDisplayName(printTarget);
+    const isSection = printTarget !== 'all';
     
-    headerPrintBtn.dataset.printTarget = sectionId;
-    const fullText = headerPrintBtn.querySelector('.print-text-full');
-    const shortText = headerPrintBtn.querySelector('.print-text-short');
-    if (fullText) fullText.textContent = label;
-    if (shortText) shortText.textContent = 'Print';
+    headerPrintBtn.dataset.printTarget = printTarget;
+      headerPrintBtn.dataset.isSection = isSection ? 'true' : 'false';
+    
+      const sectionNameEl = headerPrintBtn.querySelector('.print-section-name');
+      if (sectionNameEl) {
+        sectionNameEl.textContent = displayName;
   }
+    }
 
-  // Update mobile section header with verbose print button
-  function updateMobileSectionHeader(sectionId: string, title: string): void {
-    if (!mobileSectionHeader || !sectionTitleEl) return;
-    
-    if (isMobile && sectionId && title) {
-      mobileSectionHeader.hidden = false;
-      sectionTitleEl.textContent = title;
-      
-      // Update print button with full label
-      if (sectionPrintBtn) {
-        sectionPrintBtn.dataset.printTarget = sectionId;
-      }
-      if (sectionPrintText) {
-        sectionPrintText.textContent = sectionLabels[sectionId] || 'Print';
-      }
-    } else {
-      mobileSectionHeader.hidden = true;
+  function updateMobileSelector(sectionId: string): void {
+    if (currentSectionName) {
+      currentSectionName.textContent = getDisplayName(sectionId);
     }
   }
 
-  // Intersection Observer for section tracking (for nav highlighting)
-  function setupIntersectionObserver(): void {
-    const sections = document.querySelectorAll('.print-section');
-    
-    const observerOptions: IntersectionObserverInit = {
-      root: null,
-      rootMargin: '-30% 0px -50% 0px',
-      threshold: 0
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const sectionId = entry.target.id.replace('print-section-', '');
-          currentSection = sectionId;
-          updateActiveLink(sectionId);
-        }
-      });
-    }, observerOptions);
-
-    sections.forEach(section => observer.observe(section));
+  function getDisplayName(sectionId: string): string {
+    if (sectionId === 'all') return 'Full Week';
+    if (sectionId === 'grocery-list') return 'Grocery List';
+    if (sectionId === 'footer') return 'Links & Info';
+    if (sectionId.startsWith('meal-')) {
+      const mealLink = document.querySelector(`.nav-btn[data-section="${sectionId}"]`);
+      if (mealLink) {
+        const raw = mealLink.textContent?.trim() || 'Meal';
+        return raw.replace(/^[✓\u2713]\s*/, '');
+      }
+    }
+    return sectionId;
   }
 
-  // Hamburger menu toggle
-  function setupHamburgerMenu(): void {
-    if (!hamburgerBtn || !hamburgerDropdown) return;
-
-    hamburgerBtn.addEventListener('click', () => {
-      const isExpanded = hamburgerBtn.getAttribute('aria-expanded') === 'true';
-      hamburgerBtn.setAttribute('aria-expanded', (!isExpanded).toString());
-      hamburgerDropdown.hidden = isExpanded;
-    });
-
-    // Close on link click
-    hamburgerDropdown.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburgerBtn.setAttribute('aria-expanded', 'false');
-        hamburgerDropdown.hidden = true;
-      });
-    });
-
-    // Close on dropdown print button click
-    const dropdownPrintBtn = hamburgerDropdown.querySelector('.dropdown-print-btn');
-    if (dropdownPrintBtn) {
-      dropdownPrintBtn.addEventListener('click', () => {
-        hamburgerBtn.setAttribute('aria-expanded', 'false');
-        hamburgerDropdown.hidden = true;
-      });
+  // Close section dropdown
+  function closeSectionDropdown(): void {
+    if (sectionSelectorBtn && sectionDropdown) {
+      sectionSelectorBtn.setAttribute('aria-expanded', 'false');
+      sectionDropdown.hidden = true;
     }
+  }
 
-    // Close on outside click
+  // Section dropdown toggle
+  function setupSectionDropdown(): void {
+    if (!sectionSelectorBtn || !sectionDropdown) return;
+
+    sectionSelectorBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isExpanded = sectionSelectorBtn.getAttribute('aria-expanded') === 'true';
+      sectionSelectorBtn.setAttribute('aria-expanded', (!isExpanded).toString());
+      sectionDropdown.hidden = isExpanded;
+    });
+
+    sectionDropdown.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeSectionDropdown);
+    });
+
     document.addEventListener('click', (e) => {
-      if (!header.contains(e.target as Node)) {
-        hamburgerBtn.setAttribute('aria-expanded', 'false');
-        hamburgerDropdown.hidden = true;
+      if (!sectionSelectorBtn.contains(e.target as Node) && !sectionDropdown.contains(e.target as Node)) {
+        closeSectionDropdown();
       }
     });
-  }
 
-  // Handle resize
-  function handleResize(): void {
-    const wasDesktop = !isMobile;
-    isMobile = window.innerWidth < MOBILE_BREAKPOINT;
-    
-    // Close hamburger menu on resize to desktop
-    if (wasDesktop !== !isMobile && !isMobile && hamburgerBtn && hamburgerDropdown) {
-      hamburgerBtn.setAttribute('aria-expanded', 'false');
-      hamburgerDropdown.hidden = true;
-    }
-
-    // Update mobile section header visibility
-    if (currentPrintTarget) {
-      const section = document.getElementById(`print-section-${currentPrintTarget}`);
-      const title = section?.querySelector('h2')?.textContent?.trim() || '';
-      updateMobileSectionHeader(currentPrintTarget, title);
-    }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeSectionDropdown();
+    });
   }
 
   // Smooth scroll for nav links
   function setupSmoothScroll(): void {
-    document.querySelectorAll('.nav-link, .dropdown-link').forEach(link => {
+    document.querySelectorAll('.nav-btn, .dropdown-link, .mobile-date-btn').forEach(link => {
       link.addEventListener('click', (e) => {
         const href = (link as HTMLAnchorElement).getAttribute('href');
         if (href?.startsWith('#')) {
           e.preventDefault();
+          
+          if (href === '#top') {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            return;
+          }
+          
           const target = document.querySelector(href);
           if (target) {
-            const headerHeight = header?.offsetHeight ?? 60;
+            const headerHeight = header.offsetHeight;
             const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight - 20;
             window.scrollTo({ top: targetPosition, behavior: 'smooth' });
           }
         }
       });
     });
+  }
 
-    // Week title click scrolls to top
-    weekTitleEl?.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+  // Print button handler
+  function setupPrintButton(): void {
+    if (headerPrintBtn) {
+      headerPrintBtn.addEventListener('click', () => {
+        closeSectionDropdown();
+        const target = headerPrintBtn.dataset.printTarget || 'all';
+        printSection(target);
     });
-    mobileWeekTitleEl?.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+    }
   }
 
   // Initialize
   function init(): void {
+    header.dataset.scrolled = 'false';
     updateScrollState();
-    setupIntersectionObserver();
-    setupHamburgerMenu();
+    setupSectionDropdown();
     setupSmoothScroll();
+    setupPrintButton();
 
     window.addEventListener('scroll', updateScrollState, { passive: true });
-    window.addEventListener('resize', handleResize, { passive: true });
   }
 
-  // Run on DOM ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {
