@@ -1,0 +1,334 @@
+---
+description: Tailwind CSS Implementation Standards
+alwaysApply: true
+---
+# Tailwind CSS Implementation Standards
+
+Comprehensive guidelines for proper Tailwind CSS usage to ensure coherent implementation throughout the codebase.
+
+<rule>
+name: tailwind-implementation
+description: Standards for implementing Tailwind CSS correctly with single source of truth
+
+principle: "Tailwind config is the master source of truth for all design tokens (colors, spacing, breakpoints). No duplicate definitions. No hardcoded values where Tailwind can be used."
+
+core_concepts:
+  single_source_of_truth:
+    master: "tailwind.config.mjs theme.extend"
+    derived: "All components, utilities, and configuration files"
+    rule: "Define values ONCE in Tailwind config, reference everywhere else"
+    violation: "Hardcoded hex colors, duplicate spacing definitions, separate color systems"
+  
+  utility_first:
+    principle: "Use Tailwind utilities for common patterns, custom CSS only for complex/unique styling"
+    use_tailwind_for:
+      - "Layout: flex, grid, display"
+      - "Spacing: p-*, m-*, gap-*"
+      - "Typography: text-*, font-*, leading-*"
+      - "Borders: border, rounded"
+      - "Colors: bg-*, text-*, border-*"
+      - "Responsive: mobile:, tablet:, desktop:"
+    
+    use_custom_css_for:
+      - "Complex pseudo-elements (::before, ::after)"
+      - "Semantic state classes (meal-cooked, locally-checked)"
+      - "Component-specific animations"
+      - "Print-specific styles"
+  
+  proper_integration:
+    required_directives:
+      - "@tailwind components; // In global.css"
+      - "@tailwind utilities;  // In global.css"
+      note: "Without these, Tailwind utilities won't be generated!"
+    
+    astro_config:
+      - "Import: import tailwind from '@astrojs/tailwind';"
+      - "Integration: integrations: [tailwind({ applyBaseStyles: false })]"
+      - "applyBaseStyles: false allows custom typography while using utilities"
+
+tailwind_config_structure:
+  colors:
+    requirement: "Define ALL colors used in the site"
+    format: |
+      colors: {
+        'primary': '#hex',
+        'text': '#hex',
+        'bg': '#hex',
+        'bg-alt': '#hex',
+        'border': '#hex',
+        // Include ALL variants (hover, cooked, instruction-*)
+      }
+    
+    why: "Creates utilities like bg-primary, text-text, border-border"
+    do_not: "Use arbitrary values like bg-[var(--color-bg)] when color is static"
+    exception: "Arbitrary values OK for truly dynamic colors injected via style="
+  
+  spacing:
+    requirement: "Define spacing scale matching design system"
+    format: |
+      spacing: {
+        'xs': '0.25rem',  // Creates p-xs, m-xs, gap-xs
+        'sm': '0.5rem',
+        'md': '1rem',
+        'lg': '1.5rem',
+        'xl': '2rem',
+      }
+    
+    why: "Semantic names (p-md) instead of numbers (p-4)"
+    do_not: "Use var(--spacing-md) in config - Tailwind needs static values"
+    note: "Can keep CSS variables in :root for backwards compatibility"
+  
+  screens:
+    requirement: "Define all responsive breakpoints"
+    format: |
+      screens: {
+        'mobile': { max: '768px' },
+        'tablet': { max: '950px' },
+        'desktop': { max: '1000px' },
+      }
+    
+    usage_in_css: "@screen mobile { ... }"
+    usage_in_html: "mobile:text-xl, tablet:hidden"
+    do_not: "Use @media (max-width: 768px) when screen defined"
+  
+  other_extensions:
+    line_height: "Custom line heights (relaxed, extra-loose)"
+    border_radius: "Custom radius values"
+    max_width: "Container widths"
+    font_family: "Custom font stacks"
+
+component_implementation:
+  importing_values:
+    when: "Server-side components need color values (colors.ts)"
+    how: "import tailwindConfig from '../../tailwind.config.mjs'"
+    use: "const colors = tailwindConfig.theme.extend.colors;"
+    access: "colors['primary'], colors['bg-alt']"
+    why: "Ensures colors.ts uses Tailwind config as source, not duplicates"
+  
+  using_utilities:
+    layout: |
+      <!-- Tailwind utilities -->
+      <div class="flex flex-col gap-md p-lg">
+      
+      <!-- NOT custom CSS -->
+      <div class="my-container">
+      <style>.my-container { display: flex; flex-direction: column; }</style>
+    
+    spacing: |
+      <!-- Use Tailwind spacing scale -->
+      <div class="mb-lg p-md gap-sm">
+      
+      <!-- NOT var() unless truly dynamic -->
+      <div class="mb-[var(--spacing-lg)]">
+    
+    colors: |
+      <!-- Use Tailwind color utilities -->
+      <div class="bg-primary text-text border-border">
+      
+      <!-- Use arbitrary for dynamic/inline only -->
+      <div style={`background: ${dynamicColor};`}>
+      
+      <!-- NOT for static colors -->
+      <div class="bg-[var(--color-primary)]">
+    
+    responsive: |
+      <!-- Use screen modifiers -->
+      <div class="text-base mobile:text-lg tablet:text-xl">
+      
+      <!-- In CSS -->
+      @screen mobile { ... }
+      
+      <!-- NOT hardcoded breakpoints -->
+      @media (max-width: 768px) { ... }
+
+  semantic_classes:
+    requirement: "Keep semantic classes for functionality"
+    examples:
+      - ".meal (for print extraction)"
+      - ".grocery-category (for DOM queries)"
+      - ".info-group, .instruction-group (for print)"
+      - ".locally-checked, .meal-cooked (for state)"
+    
+    rule: "Semantic classes can coexist with Tailwind utilities"
+    pattern: 'class="grocery-category bg-bg-alt p-md rounded"'
+    why: "Semantic for functionality, Tailwind for styling"
+
+common_pitfalls:
+  - issue: "Defining colors in multiple places"
+    wrong: "Hex values in tailwind.config AND colors.ts"
+    right: "Hex values ONLY in tailwind.config, colors.ts imports"
+    
+  - issue: "Missing @tailwind directives"
+    symptom: "Classes in HTML but no styles applied"
+    fix: "Add @tailwind utilities; to global.css"
+    
+  - issue: "Using CSS variables in Tailwind config"
+    wrong: "spacing: { 'md': 'var(--spacing-md)' }"
+    right: "spacing: { 'md': '1rem' }"
+    why: "Tailwind needs static values at build time"
+    
+  - issue: "Hardcoded breakpoints in CSS"
+    wrong: "@media (max-width: 768px)"
+    right: "@screen mobile"
+    why: "Single source in Tailwind config"
+    
+  - issue: "Removing semantic classes during migration"
+    wrong: "Replace ALL classes with Tailwind"
+    right: "Keep functional classes, add Tailwind for styling"
+    example: 'class="grocery-category bg-bg-alt p-md" (both semantic + utility)'
+  
+  - issue: "Arbitrary values for static colors"
+    wrong: 'bg-[var(--color-primary)]'
+    right: 'bg-primary'
+    when_ok: 'style={`background: ${dynamicColorFromJS};`}'
+  
+  - issue: "Custom CSS for simple layouts"
+    wrong: ".container { display: flex; gap: 1rem; }"
+    right: 'class="flex gap-md"'
+    threshold: "If it's 3 lines or less of CSS, use Tailwind"
+
+verification_checklist:
+  before_commit:
+    - "Are all colors defined in tailwind.config.mjs?"
+    - "Does colors.ts import from Tailwind config (not duplicate hex values)?"
+    - "Are @tailwind directives in global.css?"
+    - "Do Tailwind utilities actually exist in build output?"
+    - "Are semantic classes preserved (meal, grocery-category, etc.)?"
+    - "Is spacing defined in Tailwind config (not CSS variables in config)?"
+    - "Are breakpoints used via @screen or mobile: modifiers?"
+  
+  visual_parity:
+    - "Build and inspect actual rendered site"
+    - "Compare with previous working version"
+    - "Check if Tailwind utilities are applying (inspect element)"
+    - "Verify print functionality still works"
+
+actions:
+  - type: enforce
+    when: "Adding or modifying colors"
+    do:
+      - "Add to tailwind.config.mjs theme.extend.colors ONLY"
+      - "If colors.ts needs it, import from config"
+      - "Never duplicate hex values"
+      - "Update both base color AND variants (hover, cooked, instruction-*)"
+  
+  - type: enforce
+    when: "Writing layout/spacing code"
+    do:
+      - "Use Tailwind utilities: flex, grid, p-md, mb-lg"
+      - "Check if utility exists for what you're doing"
+      - "Only write custom CSS for complex scenarios"
+      - "Use semantic spacing names from config (xs, sm, md, lg, xl)"
+  
+  - type: enforce
+    when: "Working with responsive design"
+    do:
+      - "Use mobile:, tablet:, desktop: modifiers"
+      - "Use @screen mobile in CSS"
+      - "Never hardcode breakpoint pixels"
+      - "All breakpoints defined in tailwind.config screens"
+  
+  - type: verify
+    when: "After Tailwind changes"
+    do:
+      - "Run npm run build"
+      - "Check dist/*.css contains expected utilities (.flex, .p-md)"
+      - "Inspect rendered site, not just code"
+      - "Test print functionality"
+      - "Verify visual parity with screenshots"
+  
+  - type: document
+    when: "Making Tailwind config changes"
+    do:
+      - "Update README.md Customization section"
+      - "Explain what values do and how to change them"
+      - "Show examples of the utilities created"
+
+migration_strategy:
+  when_adding_tailwind_to_existing:
+    step_1: "Add @tailwind directives to global.css"
+    step_2: "Define ALL design tokens in tailwind.config.mjs"
+    step_3: "Replace custom CSS with utilities component-by-component"
+    step_4: "Keep semantic/functional classes"
+    step_5: "Verify visual parity at each step"
+    step_6: "Test all features (print, navigation, etc.)"
+  
+  never:
+    - "Migrate everything at once without testing"
+    - "Remove classes without understanding their purpose"
+    - "Assume it works without visual verification"
+
+examples:
+  - correct_color_definition: |
+      // tailwind.config.mjs
+      colors: {
+        'primary': '#494331',
+        'primary-hover': '#3a3626',
+      }
+      
+      // src/config/colors.ts
+      import tailwindConfig from '../../tailwind.config.mjs';
+      const colors = tailwindConfig.theme.extend.colors;
+      export const myColors = {
+        brand: colors['primary'],  // Reference, not duplicate
+      };
+      
+      // Component
+      <div class="bg-primary hover:bg-primary-hover">
+  
+  - correct_spacing_usage: |
+      // tailwind.config.mjs
+      spacing: { 'md': '1rem' }
+      
+      // Component
+      <div class="p-md mb-lg gap-sm">
+      
+      // NOT this:
+      <div class="p-[var(--spacing-md)]">
+  
+  - correct_responsive: |
+      // tailwind.config.mjs
+      screens: { 'mobile': { max: '768px' } }
+      
+      // HTML
+      <div class="text-base mobile:text-lg">
+      
+      // CSS
+      @screen mobile { .something { ... } }
+      
+      // NOT this:
+      @media (max-width: 768px) { ... }
+  
+  - semantic_with_utility: |
+      <!-- CORRECT: Semantic class + Tailwind utilities -->
+      <div class="grocery-category bg-bg-alt p-md rounded">
+      
+      <!-- WRONG: Remove semantic class -->
+      <div class="bg-bg-alt p-md rounded">
+      <!-- Print extraction breaks! -->
+
+troubleshooting:
+  utilities_not_applying:
+    check: "Are @tailwind directives in CSS?"
+    check: "Is Tailwind integration in astro.config.mjs?"
+    check: "Did you clean build? (rm -rf .astro dist && npm run build)"
+    check: "Inspect element - do classes have CSS rules?"
+  
+  colors_not_updating:
+    check: "Did you edit tailwind.config.mjs (not colors.ts)?"
+    check: "Did you rebuild after config change?"
+    check: "Does colors.ts import from config?"
+  
+  print_broken:
+    check: "Are semantic classes present? (.grocery-category, .info-group)"
+    check: "Did migration remove functional classes?"
+    check: "Does printGenerator.ts query match component classes?"
+
+metadata:
+  priority: critical
+  version: 1.0
+  scope: All Tailwind CSS usage
+  created: 2025-12-14
+  rationale: "Prevent duplicate color systems, ensure coherent implementation, catch mistakes early"
+
+</rule>
