@@ -1,4 +1,4 @@
----
+--- 
 interface MealNavItem {
   id: string;
   title: string;
@@ -21,73 +21,73 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
       <!-- Date range button - only visible when scrolled -->
       <a href="#top" class="nav-btn date-btn">{shortTitle}</a>
       
-        {hasGroceryList && (
+      {hasGroceryList && (
         <a href="#print-section-grocery-list" class="nav-btn" data-section="grocery-list">
-            Grocery
-          </a>
-        )}
-        
-        {meals.map((meal) => (
-          <a 
-            href={`#print-section-${meal.id}`} 
+          Grocery
+        </a>
+      )}
+      
+      {meals.map((meal) => (
+        <a 
+          href={`#print-section-${meal.id}`} 
           class={`nav-btn ${meal.cooked ? 'cooked' : ''}`}
-            data-section={meal.id}
-          >
-            {meal.cooked ? '✓ ' : ''}{meal.title}
-          </a>
-        ))}
-        
+          data-section={meal.id}
+        >
+          {meal.cooked ? '✓ ' : ''}{meal.title}
+        </a>
+      ))}
+      
       <a href="#site-footer" class="nav-btn" data-section="footer">Links</a>
-      </div>
+    </div>
     
     <!-- Mobile: Date button (separate from desktop, appears on scroll) -->
     <a href="#top" class="mobile-date-btn">{shortTitle}</a>
-      
+  
       <!-- Mobile: Section selector with dropdown -->
       <div class="section-selector">
         <button class="section-selector-btn" aria-expanded="false" aria-haspopup="true">
           <svg class="dropdown-caret" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="6 9 12 15 18 9"></polyline>
-          </svg>
+      </svg>
           <span class="current-section-name">Full Week</span>
-        </button>
-        
+    </button>
+  
         <div class="section-dropdown" hidden>
-          <a href="#top" class="dropdown-link">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="12" y1="19" x2="12" y2="5"></line>
-              <polyline points="5 12 12 5 19 12"></polyline>
-            </svg>
-            Back to Top
-          </a>
-          
-          {hasGroceryList && (
-            <a href="#print-section-grocery-list" class="dropdown-link" data-section="grocery-list">
-              Grocery List
-            </a>
-          )}
-          
-          {meals.map((meal) => (
-            <a 
-              href={`#print-section-${meal.id}`} 
-              class={`dropdown-link ${meal.cooked ? 'cooked' : ''}`}
-              data-section={meal.id}
-            >
-              {meal.cooked ? '✓ ' : ''}{meal.title}
-            </a>
-          ))}
-          
-          <a href="#site-footer" class="dropdown-link" data-section="footer">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="12" y1="16" x2="12" y2="12"></line>
-              <line x1="12" y1="8" x2="12.01" y2="8"></line>
-            </svg>
-            Links & Info
-          </a>
-      </div>
-    </div>
+    <a href="#top" class="dropdown-link">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="19" x2="12" y2="5"></line>
+        <polyline points="5 12 12 5 19 12"></polyline>
+      </svg>
+      Back to Top
+    </a>
     
+    {hasGroceryList && (
+      <a href="#print-section-grocery-list" class="dropdown-link" data-section="grocery-list">
+        Grocery List
+      </a>
+    )}
+    
+    {meals.map((meal) => (
+      <a 
+        href={`#print-section-${meal.id}`} 
+        class={`dropdown-link ${meal.cooked ? 'cooked' : ''}`}
+        data-section={meal.id}
+      >
+        {meal.cooked ? '✓ ' : ''}{meal.title}
+      </a>
+    ))}
+    
+          <a href="#site-footer" class="dropdown-link" data-section="footer">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" y1="16" x2="12" y2="12"></line>
+        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+      </svg>
+      Links & Info
+    </a>
+      </div>
+  </div>
+  
     <!-- Print Button -->
     <button class="header-print-btn print-button" data-print-target="all" type="button">
       <svg class="print-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -401,7 +401,7 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     }
 
     .nav-btn {
-      font-size: 0.85rem;
+    font-size: 0.85rem;
       padding: 8px 10px;
     }
 
@@ -417,20 +417,20 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     /* Mobile header stays centered - no left-align on scroll */
     .sticky-header[data-scrolled="true"] .header-nav {
       justify-content: center;
-    }
+  }
 
     .nav-buttons {
       display: none;
     }
 
     .section-selector {
-      display: block;
+    display: block;
     }
 
     /* Mobile date button - show the element, but keep invisible until scrolled */
     .mobile-date-btn {
       display: inline-flex;
-    }
+  }
 
     /* Fade in mobile date button when scrolled */
     .sticky-header[data-scrolled="true"] .mobile-date-btn {
@@ -695,8 +695,8 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
 
       // After fade, switch state and fade back in
       setTimeout(() => {
-        header.dataset.scrolled = scrolled ? 'true' : 'false';
-        
+    header.dataset.scrolled = scrolled ? 'true' : 'false';
+
         setTimeout(() => {
           if (navButtons) {
             navButtons.style.opacity = '1';
@@ -714,7 +714,7 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     const scrollY = window.scrollY;
     const viewportHeight = window.innerHeight;
     const viewportMidpoint = scrollY + (viewportHeight * 0.5);
-    
+
     // At top of page (not scrolled), always show Full Week
     if (scrollY <= 100) {
       if (currentSection !== 'all') {
@@ -804,7 +804,7 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     if (foundSectionData && !isFadingIn && headerPrintBtn) {
       const positionInSection = viewportMidpoint - foundSectionData.top;
       const sectionProgress = positionInSection / foundSectionData.height;
-      
+
       // Last 15% of section = fade out zone
       if (sectionProgress > 0.85) {
         // Map 0.85-1.0 to 1.0-0.0
@@ -818,7 +818,7 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
         headerPrintBtn.style.opacity = '1';
       }
     }
-  }
+    }
 
   // Fade in the print button with new section content
   function fadeInPrintButton(sectionId: string): void {
@@ -865,7 +865,7 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
       const sectionNameEl = headerPrintBtn.querySelector('.print-section-name');
       if (sectionNameEl) {
         sectionNameEl.textContent = displayName;
-      }
+  }
     }
 
   function updateMobileSelector(sectionId: string): void {
@@ -953,7 +953,7 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
         closeSectionDropdown();
         const target = headerPrintBtn.dataset.printTarget || 'all';
         printSection(target);
-      });
+    });
     }
   }
 
