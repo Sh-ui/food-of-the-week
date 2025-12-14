@@ -12,7 +12,7 @@
   "dependencies": {
     "@astrojs/tailwind": "^6.0.2",
     "astro": "^5.16.5",
-    "marked": "^13.0.0",
+    "marked": "^17.0.1",
     "tailwindcss": "^3.4.19"
   },
   "devDependencies": {
