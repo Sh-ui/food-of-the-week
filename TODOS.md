@@ -1,6 +1,7 @@
 # TODOS
 
-A simple place to track possible features and improvements we're discussing.
+## Needs Done
+ - [ ] fix appearance of checked items in print view
 
 ## Possible Features
 
@@ -19,4 +20,4 @@ A simple place to track possible features and improvements we're discussing.
 
 ---
 
-**Note:** Keeping it simple for now on the master branch. See [TODOS on getting-cheffy branch](https://github.com/sh-ui/food-of-the-week/blob/getting-cheffy/TODOS.md) for a more ambitious feature roadmap. 
+**Note:** Keeping it simple for now on the master branch. See [TODOS on getting-cheffy branch](https://github.com/sh-ui/food-of-the-week/blob/getting-cheffy/TODOS.md) for the more ambitious feature roadmap. 
