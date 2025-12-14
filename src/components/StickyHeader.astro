@@ -551,26 +551,34 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
       const match = fullTitle.match(/^Meal (\d+):\s*(.+)$/);
       const number = match ? parseInt(match[1], 10) : 0;
       const title = match ? match[2] : fullTitle;
+      // Extract from flex-parsing structure
       let protein = '', ingredients = '', description = '';
-      mealSection.querySelectorAll('.meal-field').forEach(field => {
-        const label = field.querySelector('strong')?.textContent || '';
-        const text = field.textContent?.replace(label, '').trim() || '';
-        if (label.includes('Protein')) protein = text;
-        if (label.includes('Ingredients')) ingredients = text;
-        if (label.includes('Description')) description = text;
-      });
+      // First group (.info-group) contains meal info
+      const infoGroup = mealSection.querySelector('.info-group');
+      if (infoGroup) {
+        infoGroup.querySelectorAll('.subsection-field').forEach(field => {
+          const label = field.querySelector('strong')?.textContent?.replace(':', '') || '';
+          const text = field.textContent?.replace(label + ':', '').trim() || '';
+          if (label.toLowerCase().includes('protein')) protein = text;
+          if (label.toLowerCase().includes('ingredients')) ingredients = text;
+          if (label.toLowerCase().includes('description')) description = text;
+        });
+      }
+      // Instruction groups contain subsections
       const alreadyPrepped: string[] = [];
-      mealSection.querySelector('.already-prepped ul')?.querySelectorAll('li').forEach(li => alreadyPrepped.push(li.textContent || ''));
       let sousChef = '';
-      const sousChefSection = mealSection.querySelector('.sous-chef .phase-content');
-      if (sousChefSection) {
-        const p: string[] = []; sousChefSection.querySelectorAll('p').forEach(el => p.push(el.textContent || '')); sousChef = p.join('\n\n');
-      }
       let chefFinishing = '';
-      const chefSection = mealSection.querySelector('.chef-finishing .phase-content');
-      if (chefSection) {
-        const p: string[] = []; chefSection.querySelectorAll('p').forEach(el => p.push(el.textContent || '')); chefFinishing = p.join('\n\n');
-      }
+      mealSection.querySelectorAll('.instruction-group').forEach(group => {
+        const h3 = group.querySelector('h3');
+        const sectionTitle = h3?.textContent?.toLowerCase() || '';
+        if (sectionTitle.includes('already') && sectionTitle.includes('prep')) {
+          group.querySelectorAll('li').forEach(li => alreadyPrepped.push(li.textContent || ''));
+        } else if (sectionTitle.includes('sous') && sectionTitle.includes('chef')) {
+          const p: string[] = []; group.querySelectorAll('.subsection-content p').forEach(el => p.push(el.textContent || '')); sousChef = p.join('\n\n');
+        } else if (sectionTitle.includes('chef') && sectionTitle.includes('finish')) {
+          const p: string[] = []; group.querySelectorAll('.subsection-content p').forEach(el => p.push(el.textContent || '')); chefFinishing = p.join('\n\n');
+        }
+      });
       meals.push({ id, number, title, fullTitle, cooked, protein, ingredients, description,
         alreadyPrepped: alreadyPrepped.length > 0 ? alreadyPrepped : undefined,
         sousChef: sousChef || undefined, chefFinishing: chefFinishing || undefined });
