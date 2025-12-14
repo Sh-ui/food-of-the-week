@@ -96,7 +96,7 @@ Fluff the garlic couscous and spread as a bed on each plate. Nestle the roasted 
 
 Roughly chop fresh parsley and scatter generously over everything. Finish with a generous drizzle of good extra virgin olive oil and a squeeze of fresh lemon if needed.
 
-## Pork Sweet Curry
+## Sweet Pork Curry
 
 **Protein:** Frozen ground pork
 
