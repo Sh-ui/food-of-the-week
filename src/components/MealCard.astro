@@ -46,14 +46,14 @@ function renderMarkdown(text: string): string {
     
     return (
       <div 
-        class={`mb-lg p-md rounded-md border-l-4 last:mb-0 ${isFirstGroup ? 'flex flex-col gap-md' : 'mt-lg'}`}
+        class={`subsection-group mb-lg p-md rounded-md border-l-4 last:mb-0 ${isFirstGroup ? 'info-group flex flex-col gap-md' : 'instruction-group mt-lg'}`}
         style={`background: ${colors.bg}; border-left-color: ${colors.border};`}
       >
         {group.map((sub) => (
           <div class="subsection">
             {/* For grouped items, show as labeled fields */}
             {isFirstGroup ? (
-              <div class="leading-relaxed text-[1.1rem] mobile:text-[1.25rem] mobile:leading-extra-loose">
+              <div class="subsection-field leading-relaxed text-[1.1rem] mobile:text-[1.25rem] mobile:leading-extra-loose">
                 <strong class="text-[var(--color-primary)] inline-block min-w-[120px]">{sub.title}:</strong> {sub.content}
               </div>
             ) : (

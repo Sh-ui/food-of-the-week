@@ -15,9 +15,9 @@ const { categories } = Astro.props;
   
   <div class="grid gap-lg">
     {categories.map((category) => (
-      <div class="bg-[var(--color-bg-alt)] p-md rounded-md mobile:p-lg">
+      <div class="grocery-category bg-[var(--color-bg-alt)] p-md rounded-md mobile:p-lg">
         <h3 class="mt-0 mb-md text-[var(--color-primary)] text-[1.4rem] mobile:text-[1.75rem] mobile:mb-md">{category.name}</h3>
-        <ul class="flex flex-col gap-sm">
+        <ul class="grocery-items flex flex-col gap-sm">
           {category.items.map((item, index) => (
             <li class={`flex items-center grocery-item ${item.globallyChecked ? 'globally-checked' : ''}`}>
               <label class="flex items-center cursor-pointer w-full p-[calc(var(--spacing-xs)+2px)] rounded transition-colors hover:bg-[rgba(44,95,45,0.05)] text-[1.1rem] leading-relaxed mobile:p-sm mobile:text-[1.3rem]">
