@@ -556,7 +556,18 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
         bottom: footerBottom,
         height: footerRect.height
       };
-  }
+    }
+
+    // Check if footer is visible in viewport (within 100px of viewport bottom)
+    const viewportBottom = scrollY + viewportHeight;
+    if (viewportBottom >= footerTop + 100) {
+      return {
+        id: 'footer',
+        top: footerTop,
+        bottom: footerBottom,
+        height: footerRect.height
+      };
+    }
 
     // Also check if at very bottom of page
     const maxScroll = document.documentElement.scrollHeight - viewportHeight;
@@ -614,24 +625,24 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     // Build section data from DOM
     const sections = buildSectionData(scrollY);
     
-    // Find which section viewport midpoint is in
+    // Check footer FIRST - if footer is significantly visible, prioritize it
+    const footerData = checkFooterSection(viewportMidpoint, scrollY, viewportHeight);
+    
     let foundSection: string | null = null;
     let foundSectionData: { id: string; top: number; bottom: number; height: number; } | null = null;
     
-    for (const section of sections) {
-      if (viewportMidpoint >= section.top && viewportMidpoint < section.bottom) {
-        foundSection = section.id;
-        foundSectionData = section;
-        break;
-      }
-    }
-
-    // Check footer section if not found in print sections
-    if (!foundSection) {
-      const footerData = checkFooterSection(viewportMidpoint, scrollY, viewportHeight);
-      if (footerData) {
-        foundSection = footerData.id;
-        foundSectionData = footerData;
+    if (footerData) {
+      // Footer is visible enough - use it
+      foundSection = footerData.id;
+      foundSectionData = footerData;
+    } else {
+      // Find which section viewport midpoint is in
+      for (const section of sections) {
+        if (viewportMidpoint >= section.top && viewportMidpoint < section.bottom) {
+          foundSection = section.id;
+          foundSectionData = section;
+          break;
+        }
       }
     }
     
