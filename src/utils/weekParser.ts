@@ -134,21 +134,18 @@ function parseMarkdownContent(content: string): PagePlan {
   // For content section parsing
   let currentContentSection: ContentSection | null = null;
   let currentSubsection: Subsection | null = null;
-  let lastTokenWasSpace = false;
   
   for (let i = 0; i < tokens.length; i++) {
     const token = tokens[i];
     
-    // Track space tokens for grouping logic
+    // Skip space tokens
     if (token.type === 'space') {
-      lastTokenWasSpace = true;
       continue;
     }
     
     // H1 = Page title
     if (token.type === 'heading' && token.depth === 1) {
       pageTitle = token.text;
-      lastTokenWasSpace = false;
       continue;
     }
     
@@ -211,7 +208,6 @@ function parseMarkdownContent(content: string): PagePlan {
         currentSubsection = null;
       }
       
-      lastTokenWasSpace = false;
       continue;
     }
     
@@ -226,7 +222,6 @@ function parseMarkdownContent(content: string): PagePlan {
           items: [],
         };
       }
-      lastTokenWasSpace = false;
       continue;
     }
     
@@ -234,7 +229,6 @@ function parseMarkdownContent(content: string): PagePlan {
     if (token.type === 'list' && currentSection === 'list' && currentCategory) {
       const items = extractGroceryItems(token as Tokens.List);
       currentCategory.items.push(...items);
-      lastTokenWasSpace = false;
       continue;
     }
     
@@ -285,11 +279,9 @@ function parseMarkdownContent(content: string): PagePlan {
       // List in content section - add to current subsection
       if (token.type === 'list' && currentSubsection) {
         const items = extractListItems(token as Tokens.List);
-        currentSubsection.items.push(...items);
+        currentSubsection.        items.push(...items);
       }
     }
-    
-    lastTokenWasSpace = false;
   }
   
   // Save final section

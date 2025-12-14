@@ -127,3 +127,11 @@ Squeeze lime over the top and serve immediately.
 **Digesting**
 
 Relax and sit back with a cold beer or glass of wine.
+
+**Aftermath**
+
+Clean up the dishes.
+
+Tidy up the kitchen.
+
+Take out the trash.

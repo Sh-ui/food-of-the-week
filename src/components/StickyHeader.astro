@@ -6,13 +6,12 @@ interface MealNavItem {
 }
 
 interface Props {
-  weekTitle: string;
   shortTitle: string;
   meals: MealNavItem[];
   hasGroceryList: boolean;
 }
 
-const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
+const { shortTitle, meals, hasGroceryList } = Astro.props;
 ---
 
 <header class="sticky-header" id="sticky-header" data-scrolled="false">
