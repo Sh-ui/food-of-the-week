@@ -425,7 +425,7 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
 
     .section-selector {
       display: block;
-    }
+  }
 
     /* Mobile date button - show the element, but keep invisible until scrolled */
     .mobile-date-btn {
@@ -510,7 +510,7 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
 
       // After fade, switch state and fade back in
       setTimeout(() => {
-        header.dataset.scrolled = scrolled ? 'true' : 'false';
+    header.dataset.scrolled = scrolled ? 'true' : 'false';
 
         setTimeout(() => {
           if (navButtons) {
@@ -556,7 +556,7 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
         bottom: footerBottom,
         height: footerRect.height
       };
-    }
+  }
 
     // Also check if at very bottom of page
     const maxScroll = document.documentElement.scrollHeight - viewportHeight;
@@ -653,7 +653,7 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     if (foundSectionData) {
       handleSectionFadeOut(foundSectionData, viewportMidpoint);
     }
-  }
+    }
 
   // Fade in the print button with new section content
   function fadeInPrintButton(sectionId: string): void {
@@ -700,7 +700,7 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
       const sectionNameEl = headerPrintBtn.querySelector('.print-section-name');
       if (sectionNameEl) {
         sectionNameEl.textContent = displayName;
-      }
+  }
     }
 
   function updateMobileSelector(sectionId: string): void {
@@ -788,7 +788,7 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
         closeSectionDropdown();
         const target = headerPrintBtn.dataset.printTarget || 'all';
         printSection(target);
-      });
+    });
     }
   }
 

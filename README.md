@@ -109,35 +109,7 @@ See [TODOS.md](TODOS.md) for the complete development roadmap including:
 
 ### Color Theming
 
-The site uses TWO color systems that work together:
-
-**1. Site-Wide Colors** (defined in `tailwind.config.mjs`):
-```javascript
-colors: {
-  'primary': '#494331',     // Main brand color (headings, accents)
-  'bg': '#FAF8F3',          // Page background
-  'bg-alt': '#F5F2EB',      // Section backgrounds
-  'border': '#E8E3D8',      // Border colors
-  'text': '#3F3F37',        // Body text
-  'text-light': '#6b6a62',  // Muted text
-  // ... and more
-}
-```
-
-Change these hex values in `tailwind.config.mjs` → entire site updates automatically.  
-Used for: page layout, containers, buttons, general UI elements.
-
-**2. Instruction Section Colors** (defined in `src/config/colors.ts`):
-```typescript
-instructionSequence: [
-  { bg: '#fef5f2', border: '#D78A76', heading: '#b86d5c' },  // Salmon
-  { bg: '#fef9e8', border: '#F3CA40', heading: '#c9a22d' },  // Yellow
-  { bg: '#fff5ef', border: '#F08A4B', heading: '#d16d2f' },  // Orange
-]
-```
-
-Change these to customize the cycling colored boxes in meal instructions.  
-Used for: Already Prepped, Sous Chef, Chef Finishing sections (auto-cycles through colors).
+... TODO: Add color theming documentation 
 
 ### Print Configuration
 
