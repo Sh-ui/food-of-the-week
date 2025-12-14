@@ -544,13 +544,12 @@ const { weekTitle, shortTitle, meals, hasGroceryList } = Astro.props;
       });
     }
     const meals: Meal[] = [];
-    document.querySelectorAll('.meal[data-section-type="meal"]').forEach(mealSection => {
+    document.querySelectorAll('.meal[data-section-type="meal"]').forEach((mealSection, index) => {
       const id = mealSection.id.replace('print-section-', '');
       const cooked = mealSection.getAttribute('data-cooked') === 'true';
       const fullTitle = mealSection.querySelector('h2')?.textContent || '';
-      const match = fullTitle.match(/^Meal (\d+):\s*(.+)$/);
-      const number = match ? parseInt(match[1], 10) : 0;
-      const title = match ? match[2] : fullTitle;
+      const number = index + 1; // Use index, not parsed from title
+      const title = fullTitle;
       // Extract from flex-parsing structure
       let protein = '', ingredients = '', description = '';
       // First group (.info-group) contains meal info
