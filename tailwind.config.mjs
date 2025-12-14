@@ -21,15 +21,15 @@ export default {
         'tablet': { max: '950px' },
         'desktop': { max: '1000px' },
       },
-      // Spacing scale - REFERENCES CSS VARIABLES (single source of truth in global.css)
-      // Change :root in global.css, Tailwind utilities update automatically
+      // Spacing scale - MASTER SOURCE OF TRUTH (Tailwind way)
+      // Change these values here → entire site updates automatically
       // Creates utilities: p-xs, mb-md, gap-lg, etc.
       spacing: {
-        'xs': 'var(--spacing-xs)',   // 0.25rem / 4px
-        'sm': 'var(--spacing-sm)',   // 0.5rem / 8px
-        'md': 'var(--spacing-md)',   // 1rem / 16px
-        'lg': 'var(--spacing-lg)',   // 1.5rem / 24px
-        'xl': 'var(--spacing-xl)',   // 2rem / 32px
+        'xs': '0.25rem',   // 4px
+        'sm': '0.5rem',    // 8px
+        'md': '1rem',      // 16px
+        'lg': '1.5rem',    // 24px
+        'xl': '2rem',      // 32px
       },
       // Line heights for our typography
       lineHeight: {

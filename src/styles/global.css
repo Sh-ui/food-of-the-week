@@ -1,3 +1,7 @@
+/* Tailwind directives - inject utility classes */
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --color-primary: #494331;
   --color-secondary: #F3CA40;
@@ -18,6 +22,7 @@
   --color-primary-hover: #3a3626;
   --color-secondary-hover: #d9b130;
   
+  /* Spacing defined in tailwind.config.mjs - kept here for backwards compatibility */
   --spacing-xs: 0.25rem;
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;

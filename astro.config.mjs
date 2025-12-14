@@ -9,9 +9,11 @@ export default defineConfig({
   output: 'static',
   integrations: [
     tailwind({
-      // Use existing CSS alongside Tailwind - don't replace base styles
+      // Keep applyBaseStyles false to preserve our custom typography
+      // But Tailwind WILL generate utilities (flex, p-md, etc.)
       applyBaseStyles: false,
+      // Make sure config file is used
+      configFile: './tailwind.config.mjs',
     }),
   ],
 });
-
