@@ -123,6 +123,7 @@ function parseMarkdownContent(content: string): PagePlan {
   const contentSections: ContentSection[] = [];
   
   let h2Count = 0;
+  let contentSectionCount = 0; // Track content sections independently
   let currentSection: 'none' | 'list' | 'content' = 'none';
   
   // For list section parsing
@@ -181,6 +182,7 @@ function parseMarkdownContent(content: string): PagePlan {
       } else {
         // All other H2s = Content sections
         currentSection = 'content';
+        contentSectionCount++; // Increment content section counter
         
         // Check for strikethrough (cooked indicator)
         let title = heading;
@@ -200,7 +202,7 @@ function parseMarkdownContent(content: string): PagePlan {
         }
         
         currentContentSection = {
-          id: `meal-${h2Count - 1}`,
+          id: `meal-${contentSectionCount}`, // Use independent counter
           title: title,
           cooked: cooked,
           subsections: [],
