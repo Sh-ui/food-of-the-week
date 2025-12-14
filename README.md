@@ -61,7 +61,8 @@ GroceryPlanning/
 │   │   ├── WeeklyPlan.astro     # Main layout orchestrator
 │   │   └── Footer.astro         # Site footer with links
 │   ├── config/
-│   │   └── colors.ts            # Centralized color theming system
+│   │   ├── colors.ts            # Color cycling logic (references Tailwind)
+│   │   └── breakpoints.ts       # Scroll thresholds for header behavior
 │   ├── layouts/
 │   │   └── Layout.astro         # Base HTML layout
 │   ├── pages/
@@ -71,11 +72,12 @@ GroceryPlanning/
 │   │   ├── global.css           # Main styles with CSS custom properties
 │   │   └── print.css            # Print-specific styles
 │   └── utils/
-│       └── weekParser.ts        # Position-based markdown parser
+│       ├── weekParser.ts        # Position-based markdown parser
+│       └── printGenerator.ts    # Print layout generation from config
 ├── public/
 │   ├── favicon.svg
 │   └── print-config.json        # Customize print layout
-├── tailwind.config.mjs          # Tailwind CSS configuration
+├── tailwind.config.mjs          # ⭐ Single source of truth for colors, spacing, breakpoints
 ├── astro.config.mjs             # Astro build configuration
 ├── .cursor/
 │   └── rules/                   # AI assistant guidelines
@@ -109,7 +111,52 @@ See [TODOS.md](TODOS.md) for the complete development roadmap including:
 
 ### Color Theming
 
-... TODO: Add color theming documentation 
+The site uses a centralized color system with **Tailwind CSS as the single source of truth**.
+
+**Architecture:**
+```
+tailwind.config.mjs     ← Define ALL colors here (hex values)
+        ↓
+src/config/colors.ts    ← References Tailwind colors, handles cycling logic
+        ↓
+Components              ← Use Tailwind utilities OR colors.ts for dynamic styling
+```
+
+**To change the color palette:**
+
+1. **Edit `tailwind.config.mjs`** - All hex values are defined in `theme.extend.colors`:
+   ```js
+   colors: {
+     'primary': '#494331',        // Headings, buttons
+     'secondary': '#F3CA40',      // Gold accent (first subsection border)
+     'accent': '#F08A4B',         // Orange highlights
+     'bg': '#FAF8F3',             // Page background
+     'bg-alt': '#F5F2EB',         // Subsection backgrounds
+     'border': '#E8E3D8',         // Card borders
+     // Instruction section cycling colors
+     'instruction-salmon': '#D78A76',
+     'instruction-yellow': '#F3CA40',
+     'instruction-orange': '#F08A4B',
+     // ... (each has -bg and -heading variants)
+   }
+   ```
+
+2. **Subsection color cycling** is configured in `src/config/colors.ts`:
+   - `firstSubsection` - The meal info section (Protein, Ingredients, Description) - uses gold border
+   - `instructionSequence` - Subsequent sections cycle through: salmon → yellow → orange → repeat
+   - `positionOverrides` - Optional: force specific positions to use specific colors
+
+**Example customizations:**
+
+| Goal | Edit |
+|------|------|
+| Change gold accent to blue | `'secondary': '#3B82F6'` in tailwind.config.mjs |
+| Add a 4th cycling color | Add new color set to `instructionSequence` array in colors.ts |
+| Make 2nd instruction always green | Add `positionOverrides: { 1: {...} }` in colors.ts |
+| Darken page background | Change `'bg': '#FAF8F3'` to a darker value |
+
+**Note:** CSS custom properties in `global.css` mirror Tailwind colors for backwards compatibility with scoped component styles.
+
 
 ### Print Configuration
 
@@ -134,12 +181,21 @@ The print layout is fully customizable via `public/print-config.json`:
 
 - **[Astro](https://astro.build)** v5.16+ - Static site generation with zero-JS by default
 - **[TypeScript](https://www.typescriptlang.org/)** - Type-safe parsing and utilities
-- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework (used alongside custom CSS)
+- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS with centralized config as single source of truth
 - **[marked](https://marked.js.org/)** - Markdown parser for structured content
 - **GitHub Pages** - Free static hosting with custom domain support
 - **GitHub Actions** - Automated CI/CD pipeline for deployment
-- **CSS Custom Properties** - Design system with centralized color theming
 - **localStorage** - Client-side persistence for grocery list state
+
+### Tailwind Integration
+
+This project uses Tailwind CSS with `applyBaseStyles: false` (custom typography preserved). Key points:
+
+- **All design tokens** (colors, spacing, breakpoints) defined in `tailwind.config.mjs`
+- **Utilities first** - Use Tailwind classes for layout, spacing, colors where possible
+- **Scoped CSS** - Only for complex styling (pseudo-elements, semantic states like `.meal-cooked`)
+- **Important:** When using borders, always include `border-solid` (base styles not applied)
+- **CSS variables** in `global.css` mirror Tailwind config for scoped component styles
 
 ## Development
 
