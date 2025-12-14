@@ -55,24 +55,24 @@ function renderMarkdown(text: string): string {
             {isFirstGroup ? (
               <div class="subsection-field">
                 <strong>{sub.title}:</strong> {sub.content}
-      </div>
+              </div>
             ) : (
               <>
                 <h3>{sub.title}</h3>
                 {sub.items && sub.items.length > 0 && (
                   <ul>
                     {sub.items.map((item: string) => (
-              <li set:html={renderMarkdown(item)} />
-            ))}
-          </ul>
-      )}
+                      <li set:html={renderMarkdown(item)} />
+                    ))}
+                  </ul>
+                )}
                 {sub.content && (
                   <div class="subsection-content">
                     {sub.content.split('\n\n').map((paragraph: string) => (
-              <p set:html={renderMarkdown(paragraph)} />
-            ))}
-          </div>
-      )}
+                      <p set:html={renderMarkdown(paragraph)} />
+                    ))}
+                  </div>
+                )}
               </>
             )}
           </div>
@@ -189,8 +189,8 @@ function renderMarkdown(text: string): string {
   }
 
   .subsection-field {
-  line-height: 1.68;
-  font-size: 1.1rem;
+    line-height: 1.68;
+    font-size: 1.1rem;
   }
 
   .subsection-field strong {
@@ -207,7 +207,7 @@ function renderMarkdown(text: string): string {
   .instruction-group h3 {
     margin-top: 0;
     margin-bottom: var(--spacing-md);
-  font-size: 1.25rem;
+    font-size: 1.25rem;
     font-weight: 600;
     color: var(--group-heading);
   }
@@ -218,15 +218,15 @@ function renderMarkdown(text: string): string {
   }
 
   .instruction-group li {
-  margin-bottom: var(--spacing-sm);
-  line-height: 1.68;
-  font-size: 1.1rem;
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.68;
+    font-size: 1.1rem;
   }
 
   .subsection-content p {
-  margin-bottom: var(--spacing-md);
-  line-height: 1.68;
-  font-size: 1.1rem;
+    margin-bottom: var(--spacing-md);
+    line-height: 1.68;
+    font-size: 1.1rem;
   }
 
   .subsection-content p:last-child {
@@ -267,12 +267,12 @@ function renderMarkdown(text: string): string {
     }
     
     .meal-header h2 {
-    font-size: 2rem;
+      font-size: 2rem;
     }
 
     .subsection-field {
-    font-size: 1.25rem;
-    line-height: 1.75;
+      font-size: 1.25rem;
+      line-height: 1.75;
     }
 
     .subsection-field strong {
@@ -286,14 +286,14 @@ function renderMarkdown(text: string): string {
     }
     
     .instruction-group h3 {
-    font-size: 1.3rem;
+      font-size: 1.3rem;
       margin-bottom: var(--spacing-md);
     }
     
     .instruction-group li,
     .subsection-content p {
-    font-size: 1.25rem;
-    line-height: 1.75;
+      font-size: 1.25rem;
+      line-height: 1.75;
     }
   }
 </style>

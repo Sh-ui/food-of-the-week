@@ -14,6 +14,10 @@
   --color-cooked-text: #8a887f;
   --color-cooked-border: #d8d4c9;
   
+  /* Hover states for interactive elements */
+  --color-primary-hover: #3a3626;
+  --color-secondary-hover: #d9b130;
+  
   --spacing-xs: 0.25rem;
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
@@ -130,7 +134,7 @@ p {
 }
 
 .button-secondary:hover {
-  background-color: #d9b130;
+  background-color: var(--color-secondary-hover);
 }
 
 .button-accent {

@@ -44,38 +44,44 @@ This is a weekly meal planning system built with Astro that transforms structure
 ```
 GroceryPlanning/
 ├── FOOD-OF-THE-WEEK.md          # Current week's meal plan (content source)
-├── README.md                     # This file - project overview
-├── TODOS.md                      # Development roadmap
-├── LICENSE                       # AGPL-3.0 license
+├── WEEKEND.md                   # Weekend meal planning (separate page)
+├── README.md                    # This file - project overview
+├── TODOS.md                     # Development roadmap
+├── LICENSE.md                   # AGPL-3.0 license
 ├── .github/
 │   ├── dependabot.yml           # Automated dependency updates
 │   └── workflows/deploy.yml     # GitHub Pages deployment
 ├── brainstorming/               # Free-form weekly planning workspace
-│   ├── grocery-list.md
-│   └── meal-plan.md
+│   ├── stuff-coming.txt         # Ingredients to use soon
+│   └── stuff-we-have.txt        # Current pantry inventory
 ├── archive/                     # Past weekly plans (YYYYMMDDsummary.md)
 ├── src/
 │   ├── components/              # Astro components
-│   │   ├── GroceryList.astro   # Interactive grocery list with localStorage
-│   │   ├── MealCard.astro      # Individual meal display
-│   │   ├── PrintButton.astro   # Section-specific print functionality
-│   │   └── ...
+│   │   ├── GroceryList.astro    # Interactive grocery list with localStorage
+│   │   ├── MealCard.astro       # Meal display with flex-parsing
+│   │   ├── StickyHeader.astro   # Navigation + print functionality
+│   │   ├── WeeklyPlan.astro     # Main layout orchestrator
+│   │   └── Footer.astro         # Site footer with links
+│   ├── config/
+│   │   └── colors.ts            # Centralized color theming system
 │   ├── layouts/
-│   │   └── Layout.astro        # Base HTML layout
+│   │   └── Layout.astro         # Base HTML layout
 │   ├── pages/
-│   │   └── index.astro         # Main page (parses FOOD-OF-THE-WEEK.md)
+│   │   ├── index.astro          # Main page (FOOD-OF-THE-WEEK.md)
+│   │   └── weekend.astro        # Weekend page (WEEKEND.md)
 │   ├── styles/
-│   │   ├── global.css          # Main styles
-│   │   └── print.css           # Print-specific styles
+│   │   ├── global.css           # Main styles with CSS custom properties
+│   │   └── print.css            # Print-specific styles
 │   └── utils/
-│       └── readmeParser.ts     # Markdown parser for structured data
+│       └── weekParser.ts        # Position-based markdown parser
 ├── public/
 │   ├── favicon.svg
-│   └── print-config.json       # Customize print layout
+│   └── print-config.json        # Customize print layout
+├── tailwind.config.mjs          # Tailwind CSS configuration
+├── astro.config.mjs             # Astro build configuration
 ├── .cursor/
-│   ├── rules/                  # AI assistant guidelines
-│   └── plans/                  # Planning and audit documents
-└── rule-basis/                 # Reference philosophy documents
+│   └── rules/                   # AI assistant guidelines
+└── rule-basis/                  # Reference philosophy documents
 ```
 
 ## Features
@@ -83,8 +89,11 @@ GroceryPlanning/
 ### Current Features
 
 - **Interactive Grocery Lists** - Checkboxes persist in browser localStorage with week-specific keys
+- **Weekend Planning** - Dedicated weekend page with separate meal plans (`/weekend` route)
+- **Flexible Markdown Parsing** - Position-based parser works with any markdown structure (no keyword dependencies)
+- **Themeable Color System** - Centralized colors with automatic cycling for instruction sections
 - **Three-Phase Instructions** - Color-coded workflow sections (Already Prepped, Sous Chef, Chef Finishing)
-- **Print Functionality** - Print full week, grocery list only, or individual meals with optimized layouts
+- **Print Functionality** - Print full week, grocery list only, or individual meals with config-driven formatting
 - **Mobile-Friendly** - Responsive design optimized for shopping and cooking on any device
 - **Auto-Deployment** - Push to GitHub, site rebuilds and deploys automatically via GitHub Actions
 - **Persistent State** - Grocery list checkbox states saved per week, survives browser refresh
@@ -106,10 +115,11 @@ Edit `print-config.json` in the `public/` folder to adjust print layout settings
 
 - **[Astro](https://astro.build)** v5.16+ - Static site generation with zero-JS by default
 - **[TypeScript](https://www.typescriptlang.org/)** - Type-safe parsing and utilities
+- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework (used alongside custom CSS)
 - **[marked](https://marked.js.org/)** - Markdown parser for structured content
 - **GitHub Pages** - Free static hosting with custom domain support
 - **GitHub Actions** - Automated CI/CD pipeline for deployment
-- **CSS** - Custom styles with print media queries and responsive breakpoints
+- **CSS Custom Properties** - Design system with centralized color theming
 - **localStorage** - Client-side persistence for grocery list state
 
 ## Development

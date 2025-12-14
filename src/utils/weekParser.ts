@@ -96,10 +96,17 @@ export async function parseWeekPlan(filename: string = 'FOOD-OF-THE-WEEK.md'): P
 
 /**
  * Parse a markdown file into the new PagePlan structure.
+ * 
+ * EDGE CASES HANDLED:
+ * - Missing file: Returns empty structure with friendly message
+ * - No grocery list: First H2 still treated as list section (may be empty)
+ * - No meals: Returns empty contentSections array
+ * - Empty sections: Gracefully handled, no subsections created
  */
 export async function parsePagePlan(filename: string = 'FOOD-OF-THE-WEEK.md'): Promise<PagePlan> {
   const filePath = path.join(process.cwd(), filename);
   
+  // EDGE CASE: File doesn't exist - return safe empty structure
   if (!fs.existsSync(filePath)) {
     return {
       pageTitle: 'No content available',
@@ -173,16 +180,19 @@ function parseMarkdownContent(content: string): PagePlan {
       const heading = token.text;
       
       if (h2Count === 1) {
-        // First H2 = List section
+        // First H2 = List section (typically "Grocery List")
+        // EDGE CASE: Even if no H3 categories or items follow, this structure ensures
+        // content sections always start at meal-1 (see contentSectionCount below)
         currentSection = 'list';
         listSectionTitle = heading;
         listSectionId = slugify(heading);
         listCategories = [];
         currentCategory = null;
       } else {
-        // All other H2s = Content sections
+        // All other H2s = Content sections (meals)
         currentSection = 'content';
-        contentSectionCount++; // Increment content section counter
+        contentSectionCount++; // CRITICAL: Independent counter ensures meal-1, meal-2, etc.
+                               // even if no grocery list exists (h2Count would be off by 1)
         
         // Check for strikethrough (cooked indicator)
         let title = heading;

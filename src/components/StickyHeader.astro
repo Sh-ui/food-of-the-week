@@ -362,7 +362,7 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
   }
 
   .header-print-btn:hover {
-    background: #3a3626;
+    background: var(--color-primary-hover);
   }
 
   .header-print-btn[data-is-section="true"] {
@@ -371,7 +371,7 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
   }
 
   .header-print-btn[data-is-section="true"]:hover {
-    background: #d9b130;
+    background: var(--color-secondary-hover);
   }
 
   .header-print-btn .print-icon {
@@ -401,7 +401,7 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     }
 
     .nav-btn {
-    font-size: 0.85rem;
+      font-size: 0.85rem;
       padding: 8px 10px;
     }
 
@@ -417,20 +417,20 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     /* Mobile header stays centered - no left-align on scroll */
     .sticky-header[data-scrolled="true"] .header-nav {
       justify-content: center;
-  }
+    }
 
     .nav-buttons {
       display: none;
     }
 
     .section-selector {
-    display: block;
+      display: block;
     }
 
     /* Mobile date button - show the element, but keep invisible until scrolled */
     .mobile-date-btn {
       display: inline-flex;
-  }
+    }
 
     /* Fade in mobile date button when scrolled */
     .sticky-header[data-scrolled="true"] .mobile-date-btn {
@@ -585,73 +585,178 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
   }
 
   function generateGroceryListHTML(list: GroceryCategory[], cfg: PrintConfig): string {
-    let html = `<div class="print-grocery-list"><h2 style="font-family:${cfg.typography.headingFontFamily};font-size:${cfg.typography.h2Size};color:${cfg.colors.headingColor};margin-bottom:${cfg.spacing.sectionGap};">Grocery List</h2>`;
+    let html = `
+      <div class="print-grocery-list">
+        <h2 style="font-family:${cfg.typography.headingFontFamily};font-size:${cfg.typography.h2Size};color:${cfg.colors.headingColor};margin-bottom:${cfg.spacing.sectionGap};">
+          Grocery List
+        </h2>`;
+    
     list.forEach(cat => {
       html += `<div style="margin-bottom:${cfg.spacing.categoryGap};">`;
-      if (cfg.groceryList.showCategories) html += `<h3 style="font-family:${cfg.typography.headingFontFamily};font-size:${cfg.groceryList.categoryHeadingSize};color:${cfg.colors.headingColor};margin-bottom:${cfg.spacing.listItemGap};">${cat.name}</h3>`;
+      
+      if (cfg.groceryList.showCategories) {
+        html += `
+          <h3 style="font-family:${cfg.typography.headingFontFamily};font-size:${cfg.groceryList.categoryHeadingSize};color:${cfg.colors.headingColor};margin-bottom:${cfg.spacing.listItemGap};">
+            ${cat.name}
+          </h3>`;
+      }
+      
       html += `<ul style="list-style:none;margin:0;padding:0;">`;
+      
       cat.items.forEach(item => {
         const cbStyle = `display:inline-block;width:${cfg.checkbox.size};height:${cfg.checkbox.size};border:${cfg.checkbox.borderWidth} solid ${cfg.colors.text};margin-right:8pt;vertical-align:middle;text-align:center;line-height:${cfg.checkbox.size};`;
         const sym = item.globallyChecked ? cfg.checkbox.globalCheckedSymbol : '';
         const txtStyle = item.globallyChecked ? `color:${cfg.colors.mutedText};` : `color:${cfg.colors.text};`;
-        html += `<li style="margin-bottom:${cfg.spacing.listItemGap};${txtStyle}"><span style="${cbStyle}">${sym}</span>${item.text}</li>`;
+        html += `
+          <li style="margin-bottom:${cfg.spacing.listItemGap};${txtStyle}">
+            <span style="${cbStyle}">${sym}</span>${item.text}
+          </li>`;
       });
+      
       html += `</ul></div>`;
     });
+    
     return html + `</div>`;
   }
 
   function generateMealHTML(meal: Meal, cfg: PrintConfig): string {
-    const tc = meal.cooked ? cfg.colors.mutedText : cfg.colors.text;
-    const hc = meal.cooked ? cfg.colors.mutedText : cfg.colors.headingColor;
-    let html = `<div class="print-meal" style="color:${tc};${cfg.meals.pageBreakBetween?'page-break-after:always;':''}">
-      <h2 style="font-family:${cfg.typography.headingFontFamily};font-size:${cfg.typography.h2Size};color:${hc};margin-bottom:${cfg.spacing.sectionGap};">${meal.fullTitle}</h2>
-      <div style="border:1px solid ${cfg.colors.border};padding:10pt;margin-bottom:${cfg.spacing.sectionGap};">`;
-    if (meal.protein) html += `<p style="margin-bottom:${cfg.spacing.listItemGap};"><strong>Protein:</strong> ${meal.protein}</p>`;
-    if (meal.ingredients) html += `<p style="margin-bottom:${cfg.spacing.listItemGap};"><strong>Ingredients:</strong> ${meal.ingredients}</p>`;
-    if (meal.description) html += `<p style="margin-bottom:0;"><strong>Description:</strong> ${meal.description}</p>`;
+    const textColor = meal.cooked ? cfg.colors.mutedText : cfg.colors.text;
+    const headingColor = meal.cooked ? cfg.colors.mutedText : cfg.colors.headingColor;
+    const pageBreak = cfg.meals.pageBreakBetween ? 'page-break-after:always;' : '';
+    
+    let html = `
+      <div class="print-meal" style="color:${textColor};${pageBreak}">
+        <h2 style="font-family:${cfg.typography.headingFontFamily};font-size:${cfg.typography.h2Size};color:${headingColor};margin-bottom:${cfg.spacing.sectionGap};">
+          ${meal.fullTitle}
+        </h2>
+        <div style="border:1px solid ${cfg.colors.border};padding:10pt;margin-bottom:${cfg.spacing.sectionGap};">`;
+    
+    if (meal.protein) {
+      html += `
+          <p style="margin-bottom:${cfg.spacing.listItemGap};">
+            <strong>Protein:</strong> ${meal.protein}
+          </p>`;
+    }
+    if (meal.ingredients) {
+      html += `
+          <p style="margin-bottom:${cfg.spacing.listItemGap};">
+            <strong>Ingredients:</strong> ${meal.ingredients}
+          </p>`;
+    }
+    if (meal.description) {
+      html += `
+          <p style="margin-bottom:0;">
+            <strong>Description:</strong> ${meal.description}
+          </p>`;
+    }
+    
     html += `</div>`;
+    
     if (meal.alreadyPrepped?.length) {
-      html += `<div style="margin-bottom:${cfg.spacing.sectionGap};"><h3 style="font-family:${cfg.typography.headingFontFamily};font-size:${cfg.typography.h3Size};color:${hc};margin-bottom:${cfg.spacing.listItemGap};">Already Prepped</h3><ul style="margin-left:20pt;">`;
-      meal.alreadyPrepped.forEach(i => html += `<li style="margin-bottom:${cfg.spacing.listItemGap};">${i}</li>`);
-      html += `</ul></div>`;
+      html += `
+        <div style="margin-bottom:${cfg.spacing.sectionGap};">
+          <h3 style="font-family:${cfg.typography.headingFontFamily};font-size:${cfg.typography.h3Size};color:${headingColor};margin-bottom:${cfg.spacing.listItemGap};">
+            Already Prepped
+          </h3>
+          <ul style="margin-left:20pt;">`;
+      
+      meal.alreadyPrepped.forEach(item => {
+        html += `
+            <li style="margin-bottom:${cfg.spacing.listItemGap};">${item}</li>`;
+      });
+      
+      html += `
+          </ul>
+        </div>`;
     }
+    
     if (meal.sousChef) {
-      html += `<div style="margin-bottom:${cfg.spacing.sectionGap};"><h3 style="font-family:${cfg.typography.headingFontFamily};font-size:${cfg.typography.h3Size};color:${hc};margin-bottom:${cfg.spacing.listItemGap};">Sous Chef - Prep</h3>`;
-      meal.sousChef.split('\n\n').forEach(p => html += `<p style="margin-bottom:${cfg.spacing.paragraphGap};">${p}</p>`);
-      html += `</div>`;
+      html += `
+        <div style="margin-bottom:${cfg.spacing.sectionGap};">
+          <h3 style="font-family:${cfg.typography.headingFontFamily};font-size:${cfg.typography.h3Size};color:${headingColor};margin-bottom:${cfg.spacing.listItemGap};">
+            Sous Chef - Prep
+          </h3>`;
+      
+      meal.sousChef.split('\n\n').forEach(paragraph => {
+        html += `
+          <p style="margin-bottom:${cfg.spacing.paragraphGap};">${paragraph}</p>`;
+      });
+      
+      html += `
+        </div>`;
     }
+    
     if (meal.chefFinishing) {
-      html += `<div style="margin-bottom:${cfg.spacing.sectionGap};"><h3 style="font-family:${cfg.typography.headingFontFamily};font-size:${cfg.typography.h3Size};color:${hc};margin-bottom:${cfg.spacing.listItemGap};">Chef - Finishing & Plating</h3>`;
-      meal.chefFinishing.split('\n\n').forEach(p => html += `<p style="margin-bottom:${cfg.spacing.paragraphGap};">${p}</p>`);
-      html += `</div>`;
+      html += `
+        <div style="margin-bottom:${cfg.spacing.sectionGap};">
+          <h3 style="font-family:${cfg.typography.headingFontFamily};font-size:${cfg.typography.h3Size};color:${headingColor};margin-bottom:${cfg.spacing.listItemGap};">
+            Chef - Finishing & Plating
+          </h3>`;
+      
+      meal.chefFinishing.split('\n\n').forEach(paragraph => {
+        html += `
+          <p style="margin-bottom:${cfg.spacing.paragraphGap};">${paragraph}</p>`;
+      });
+      
+      html += `
+        </div>`;
     }
+    
     return html + `</div>`;
   }
 
   function generatePrintDocument(plan: WeekPlan, cfg: PrintConfig, target: string): string {
     const { margins } = cfg.page;
     let content = '';
+    
+    // Generate content based on print target
     if (target === 'all') {
-      content += `<h1 style="font-family:${cfg.typography.headingFontFamily};font-size:${cfg.typography.h1Size};color:${cfg.colors.headingColor};margin-bottom:${cfg.spacing.sectionGap};text-align:center;">${plan.weekTitle}</h1>`;
+      content += `
+        <h1 style="font-family:${cfg.typography.headingFontFamily};font-size:${cfg.typography.h1Size};color:${cfg.colors.headingColor};margin-bottom:${cfg.spacing.sectionGap};text-align:center;">
+          ${plan.weekTitle}
+        </h1>`;
       content += generateGroceryListHTML(plan.groceryList, cfg);
       content += `<div style="page-break-after:always;"></div>`;
-      plan.meals.forEach(m => content += generateMealHTML(m, cfg));
+      plan.meals.forEach(meal => content += generateMealHTML(meal, cfg));
     } else if (target === 'grocery-list') {
-      content += `<h1 style="font-family:${cfg.typography.headingFontFamily};font-size:${cfg.typography.h1Size};color:${cfg.colors.headingColor};margin-bottom:${cfg.spacing.sectionGap};">${plan.weekTitle}</h1>`;
+      content += `
+        <h1 style="font-family:${cfg.typography.headingFontFamily};font-size:${cfg.typography.h1Size};color:${cfg.colors.headingColor};margin-bottom:${cfg.spacing.sectionGap};">
+          ${plan.weekTitle}
+        </h1>`;
       content += generateGroceryListHTML(plan.groceryList, cfg);
     } else if (target.startsWith('meal-')) {
-      const num = parseInt(target.replace('meal-', ''), 10);
-      const meal = plan.meals.find(m => m.number === num);
-      if (meal) content += generateMealHTML(meal, cfg);
+      const mealNumber = parseInt(target.replace('meal-', ''), 10);
+      const meal = plan.meals.find(m => m.number === mealNumber);
+      if (meal) {
+        content += generateMealHTML(meal, cfg);
+      }
     }
-    return `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Print - ${plan.weekTitle}</title>
-      <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-      <style>@page{margin:${margins.top} ${margins.right} ${margins.bottom} ${margins.left};}*{box-sizing:border-box;margin:0;padding:0;}
-      body{font-family:${cfg.typography.bodyFontFamily};font-size:${cfg.typography.bodyFontSize};line-height:${cfg.typography.lineHeight};color:${cfg.colors.text};padding:0;}
-      strong{font-weight:600;}.print-meal:last-child{page-break-after:auto;}</style>
-      </head><body>${content}</body></html>`;
+    
+    // Return complete HTML document
+    return `<!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="UTF-8">
+        <title>Print - ${plan.weekTitle}</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+        <style>
+          @page { margin: ${margins.top} ${margins.right} ${margins.bottom} ${margins.left}; }
+          * { box-sizing: border-box; margin: 0; padding: 0; }
+          body {
+            font-family: ${cfg.typography.bodyFontFamily};
+            font-size: ${cfg.typography.bodyFontSize};
+            line-height: ${cfg.typography.lineHeight};
+            color: ${cfg.colors.text};
+            padding: 0;
+          }
+          strong { font-weight: 600; }
+          .print-meal:last-child { page-break-after: auto; }
+        </style>
+      </head>
+      <body>${content}</body>
+    </html>`;
   }
 
   async function printSection(sectionId: string): Promise<void> {
@@ -659,7 +764,10 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     const plan = getWeekPlanData();
     const html = generatePrintDocument(plan, cfg, sectionId);
     const win = window.open('', '_blank', 'width=800,height=600');
-    if (!win) { console.error('Could not open print window'); return; }
+    if (!win) { 
+      console.error('Print failed: Could not open print window. Please check if pop-ups are blocked in your browser settings.'); 
+      return; 
+    }
     win.document.write(html);
     win.document.close();
     win.onload = () => { setTimeout(() => { win.print(); win.close(); }, 250); };
@@ -677,13 +785,17 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
   const headerPrintBtn = document.querySelector('.header-print-btn') as HTMLButtonElement;
   const navBtns = document.querySelectorAll('.nav-btn[data-section], .dropdown-link[data-section]') as NodeListOf<HTMLAnchorElement>;
 
+  // Constants
+  const SCROLL_THRESHOLD = 100; // Show header features after scrolling past hero section
+  const FADE_OUT_START = 0.85;  // Start fading print button in last 15% of section
+  
   let isScrolled = false;
   let currentSection = 'all';
   let isFadingIn = false;
 
   // Simple scroll detection - toggle between two states
   function updateScrollState(): void {
-    const scrolled = window.scrollY > 100;
+    const scrolled = window.scrollY > SCROLL_THRESHOLD;
     
     if (scrolled !== isScrolled) {
       isScrolled = scrolled;
@@ -691,11 +803,11 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
       // Fade out
       if (navButtons) {
         navButtons.style.opacity = '0';
-  }
+      }
 
       // After fade, switch state and fade back in
       setTimeout(() => {
-    header.dataset.scrolled = scrolled ? 'true' : 'false';
+        header.dataset.scrolled = scrolled ? 'true' : 'false';
 
         setTimeout(() => {
           if (navButtons) {
@@ -709,29 +821,9 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     updateActiveSection();
   }
 
-  // Track which section is in view with proper opacity handling
-  function updateActiveSection(): void {
-    const scrollY = window.scrollY;
-    const viewportHeight = window.innerHeight;
-    const viewportMidpoint = scrollY + (viewportHeight * 0.5);
-
-    // At top of page (not scrolled), always show Full Week
-    if (scrollY <= 100) {
-      if (currentSection !== 'all') {
-        currentSection = 'all';
-        updateNavHighlight('all');
-        updateMobileSelector('all');
-        fadeInPrintButton('all');
-      } else if (headerPrintBtn) {
-        // Ensure full opacity when at top
-        headerPrintBtn.style.opacity = '1';
-      }
-      return;
-    }
-    
-    // Build section data
-    interface SectionData { id: string; top: number; bottom: number; height: number; }
-    const sections: SectionData[] = [];
+  // Helper: Build section data from DOM
+  function buildSectionData(scrollY: number): { id: string; top: number; bottom: number; height: number; }[] {
+    const sections: { id: string; top: number; bottom: number; height: number; }[] = [];
     document.querySelectorAll('.print-section').forEach(el => {
       const rect = el.getBoundingClientRect();
       sections.push({
@@ -741,10 +833,87 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
         height: rect.height
       });
     });
+    return sections;
+  }
+
+  // Helper: Check if footer section is active
+  function checkFooterSection(viewportMidpoint: number, scrollY: number, viewportHeight: number): { id: string; top: number; bottom: number; height: number; } | null {
+    const footer = document.getElementById('site-footer');
+    if (!footer) return null;
+
+    const footerRect = footer.getBoundingClientRect();
+    const footerTop = footerRect.top + scrollY;
+    const footerBottom = footerRect.bottom + scrollY;
     
-    // Find which section the viewport midpoint is in
+    // Check if viewport midpoint is in footer
+    if (viewportMidpoint >= footerTop && viewportMidpoint < footerBottom) {
+      return {
+        id: 'footer',
+        top: footerTop,
+        bottom: footerBottom,
+        height: footerRect.height
+      };
+    }
+
+    // Also check if at very bottom of page
+    const maxScroll = document.documentElement.scrollHeight - viewportHeight;
+    if (scrollY >= maxScroll - 10) {
+      return {
+        id: 'footer',
+        top: footerTop,
+        bottom: footerBottom,
+        height: footerRect.height
+      };
+    }
+
+    return null;
+  }
+
+  // Helper: Handle fade-out in last 15% of section
+  function handleSectionFadeOut(foundSectionData: { top: number; height: number; }, viewportMidpoint: number): void {
+    if (!headerPrintBtn || isFadingIn) return;
+
+    const positionInSection = viewportMidpoint - foundSectionData.top;
+    const sectionProgress = positionInSection / foundSectionData.height;
+
+    // Last 15% of section = fade out zone
+    if (sectionProgress > FADE_OUT_START) {
+      const fadeProgress = (sectionProgress - FADE_OUT_START) / (1 - FADE_OUT_START);
+      const opacity = Math.max(0, 1 - fadeProgress);
+      headerPrintBtn.style.transition = 'none';
+      headerPrintBtn.style.opacity = opacity.toString();
+    } else {
+      // Outside fade zone, ensure full opacity
+      headerPrintBtn.style.transition = 'none';
+      headerPrintBtn.style.opacity = '1';
+    }
+  }
+
+  // Track which section is in view with proper opacity handling
+  function updateActiveSection(): void {
+    const scrollY = window.scrollY;
+    const viewportHeight = window.innerHeight;
+    const viewportMidpoint = scrollY + (viewportHeight * 0.5);
+
+    // At top of page, always show Full Week
+    if (scrollY <= SCROLL_THRESHOLD) {
+      if (currentSection !== 'all') {
+        currentSection = 'all';
+        updateNavHighlight('all');
+        updateMobileSelector('all');
+        fadeInPrintButton('all');
+      } else if (headerPrintBtn) {
+        headerPrintBtn.style.opacity = '1';
+      }
+      return;
+    }
+    
+    // Build section data from DOM
+    const sections = buildSectionData(scrollY);
+    
+    // Find which section viewport midpoint is in
     let foundSection: string | null = null;
-    let foundSectionData: SectionData | null = null;
+    let foundSectionData: { id: string; top: number; bottom: number; height: number; } | null = null;
     
     for (const section of sections) {
       if (viewportMidpoint >= section.top && viewportMidpoint < section.bottom) {
@@ -754,44 +923,21 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
       }
     }
 
-    // Check for footer section (doesn't have .print-section class)
-    const footer = document.getElementById('site-footer');
-    if (footer) {
-      const footerRect = footer.getBoundingClientRect();
-      const footerTop = footerRect.top + scrollY;
-      const footerBottom = footerRect.bottom + scrollY;
-      
-      if (viewportMidpoint >= footerTop && viewportMidpoint < footerBottom) {
-        foundSection = 'footer';
-        foundSectionData = {
-          id: 'footer',
-          top: footerTop,
-          bottom: footerBottom,
-          height: footerRect.height
-        };
+    // Check footer section if not found in print sections
+    if (!foundSection) {
+      const footerData = checkFooterSection(viewportMidpoint, scrollY, viewportHeight);
+      if (footerData) {
+        foundSection = footerData.id;
+        foundSectionData = footerData;
       }
-  }
-
-    // Also check if we're at the very bottom of the page
-    const maxScroll = document.documentElement.scrollHeight - viewportHeight;
-    if (scrollY >= maxScroll - 10 && footer) {
-      foundSection = 'footer';
-      const footerRect = footer.getBoundingClientRect();
-      foundSectionData = {
-        id: 'footer',
-        top: footerRect.top + scrollY,
-        bottom: footerRect.bottom + scrollY,
-        height: footerRect.height
-      };
     }
     
-    // If no section found (in a gap between sections), don't change anything
-    // The button stays at its current opacity (faded out from previous section)
+    // If no section found, don't change anything
     if (foundSection === null) {
       return;
     }
 
-    // If section changed, do fade-in animation
+    // If section changed, fade in new content
     if (foundSection !== currentSection) {
       currentSection = foundSection;
       updateNavHighlight(foundSection);
@@ -800,25 +946,11 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
       return;
     }
     
-    // Still in same section - handle scroll-mapped fade-out in last 15%
-    if (foundSectionData && !isFadingIn && headerPrintBtn) {
-      const positionInSection = viewportMidpoint - foundSectionData.top;
-      const sectionProgress = positionInSection / foundSectionData.height;
-
-      // Last 15% of section = fade out zone
-      if (sectionProgress > 0.85) {
-        // Map 0.85-1.0 to 1.0-0.0
-        const fadeProgress = (sectionProgress - 0.85) / 0.15;
-        const opacity = Math.max(0, 1 - fadeProgress);
-        headerPrintBtn.style.transition = 'none';
-        headerPrintBtn.style.opacity = opacity.toString();
-      } else {
-        // Outside fade zone, ensure full opacity (no transition to avoid lag)
-        headerPrintBtn.style.transition = 'none';
-        headerPrintBtn.style.opacity = '1';
-      }
+    // Still in same section - handle fade-out in last 15%
+    if (foundSectionData) {
+      handleSectionFadeOut(foundSectionData, viewportMidpoint);
     }
-    }
+  }
 
   // Fade in the print button with new section content
   function fadeInPrintButton(sectionId: string): void {
@@ -865,7 +997,7 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
       const sectionNameEl = headerPrintBtn.querySelector('.print-section-name');
       if (sectionNameEl) {
         sectionNameEl.textContent = displayName;
-  }
+      }
     }
 
   function updateMobileSelector(sectionId: string): void {
@@ -953,7 +1085,7 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
         closeSectionDropdown();
         const target = headerPrintBtn.dataset.printTarget || 'all';
         printSection(target);
-    });
+      });
     }
   }
 

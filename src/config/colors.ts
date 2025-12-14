@@ -3,6 +3,22 @@
  * 
  * This file controls the colors used for subsections within content sections (meals).
  * Colors are applied by position, allowing flexible markdown without keyword dependencies.
+ * 
+ * HOW IT WORKS:
+ * - First subsection group (meal info like Protein, Ingredients) uses `firstSubsection` colors
+ * - Subsequent subsection groups (Already Prepped, Sous Chef, etc.) cycle through `instructionSequence`
+ * - If you have 5 instruction sections but only 3 colors, it cycles: [0,1,2,0,1]
+ * 
+ * CUSTOMIZATION:
+ * - To change colors: Edit the hex values in `sectionColors` below
+ * - To add more colors: Add more entries to `instructionSequence` array
+ * - To override a specific position: Use `positionOverrides` (e.g., always make section 2 purple)
+ * - All changes automatically apply across the entire site
+ * 
+ * EXAMPLES:
+ * - 3 instruction sections with 3 colors: Salmon, Yellow, Orange
+ * - 5 instruction sections with 3 colors: Salmon, Yellow, Orange, Salmon, Yellow
+ * - Override position 1 to always be green: positionOverrides: { 1: {...} }
  */
 
 export interface SectionColorScheme {
