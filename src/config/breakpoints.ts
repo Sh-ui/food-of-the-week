@@ -1,37 +1,21 @@
 /**
- * Centralized responsive breakpoint configuration.
+ * Centralized configuration for scroll behavior and responsive breakpoints.
  * 
- * All breakpoints are defined here for consistency across components and styles.
- * Update these values to adjust responsive behavior site-wide.
+ * RESPONSIVE BREAKPOINTS:
+ * Breakpoints are now defined in tailwind.config.mjs (theme.extend.screens)
+ * - Import from Tailwind config if needed in components
+ * - Use @screen directives in CSS
+ * - Reference: https://tailwindcss.com/docs/screens
  * 
- * USAGE IN COMPONENTS:
- * ```typescript
- * import { breakpoints } from '../config/breakpoints';
- * const isMobile = window.innerWidth < breakpoints.tablet;
- * ```
- * 
- * USAGE IN CSS:
- * ```css
- * @media (max-width: 768px) { ... }  // Use breakpoints.mobile value
- * ```
+ * Defined breakpoints:
+ * - sm-mobile: 500px (small mobile devices)
+ * - mobile: 768px (mobile devices)
+ * - tablet: 950px (switch to mobile nav)
+ * - desktop: 1000px (abbreviated text)
  */
 
-export const breakpoints = {
-  /** Small mobile devices: 500px and below */
-  smallMobile: 500,
-  
-  /** Mobile devices: 768px and below */
-  mobile: 768,
-  
-  /** Tablet devices: 950px and below (switch to mobile nav) */
-  tablet: 950,
-  
-  /** Desktop devices: 1000px and below (show abbreviated text) */
-  desktop: 1000,
-} as const;
-
 /**
- * Scroll behavior thresholds
+ * Scroll behavior thresholds (not CSS breakpoints)
  */
 export const scrollThresholds = {
   /** Minimum scroll distance before showing header features (date, print button changes) */
@@ -43,5 +27,3 @@ export const scrollThresholds = {
   /** Fade-out zone at end of section */
   FADE_OUT_START: 0.85, // 85% - Start fading print button in last 15% of section
 } as const;
-
-export type Breakpoint = keyof typeof breakpoints;

@@ -389,9 +389,9 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
   }
 
   /* ============================================
-     TABLET - 1000px (see src/config/breakpoints.ts)
+     TABLET - 1000px (defined in tailwind.config.mjs screens.desktop)
      ============================================ */
-  @media (max-width: 1000px) {
+  @media screen(desktop) {
     .header-print-btn .print-icon {
       display: inline;
     }
@@ -411,9 +411,9 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
   }
 
   /* ============================================
-     MOBILE - 950px (see src/config/breakpoints.ts)
+     MOBILE - 950px (defined in tailwind.config.mjs screens.tablet)
      ============================================ */
-  @media (max-width: 950px) {
+  @media screen(tablet) {
     /* Mobile header stays centered - no left-align on scroll */
     .sticky-header[data-scrolled="true"] .header-nav {
       justify-content: center;
@@ -454,9 +454,9 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
   }
 
   /* ============================================
-     SMALL MOBILE - 500px (see src/config/breakpoints.ts)
+     SMALL MOBILE - 500px (defined in tailwind.config.mjs screens.sm-mobile)
      ============================================ */
-  @media (max-width: 500px) {
+  @media screen(sm-mobile) {
     .header-print-btn {
       padding: 8px 16px;
       min-width: 48px;

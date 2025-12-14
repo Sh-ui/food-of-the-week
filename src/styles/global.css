@@ -169,7 +169,7 @@ input[type="checkbox"] {
   flex-wrap: wrap;
 }
 
-@media (max-width: 768px) {
+@media screen(mobile) {
   body {
     padding: 0;
     font-size: clamp(18px, 4vw, 20px);
