@@ -3,8 +3,7 @@ export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
-      // Colors are primarily managed via CSS custom properties set by components
-      // This keeps the color logic in src/config/colors.ts as the source of truth
+      // Colors reference CSS custom properties for dynamic theming
       colors: {
         primary: '#494331',
         secondary: '#F3CA40',
@@ -15,12 +14,37 @@ export default {
         heading: ['Aleo', 'Georgia', 'Times New Roman', 'serif'],
         serif: ['Aleo', 'Georgia', 'Times New Roman', 'serif'],
       },
-      // Responsive breakpoints - single source of truth for entire site
+      // Responsive breakpoints - single source of truth
       screens: {
-        'sm-mobile': { max: '500px' },   // Small mobile devices
-        'mobile': { max: '768px' },       // Mobile devices
-        'tablet': { max: '950px' },       // Tablet (switch to mobile nav)
-        'desktop': { max: '1000px' },     // Desktop (abbreviated text)
+        'sm-mobile': { max: '500px' },
+        'mobile': { max: '768px' },
+        'tablet': { max: '950px' },
+        'desktop': { max: '1000px' },
+      },
+      // Spacing scale matching our design system
+      spacing: {
+        'xs': '0.25rem',  // 4px - var(--spacing-xs)
+        'sm': '0.5rem',   // 8px - var(--spacing-sm)
+        'md': '1rem',     // 16px - var(--spacing-md)
+        'lg': '1.5rem',   // 24px - var(--spacing-lg)
+        'xl': '2rem',     // 32px - var(--spacing-xl)
+      },
+      // Line heights for our typography
+      lineHeight: {
+        'relaxed': '1.68',
+        'loose': '1.72',
+        'extra-loose': '1.75',
+        'extra-tight': '1.2',
+      },
+      // Border radius matching our design
+      borderRadius: {
+        'DEFAULT': '6px',
+        'lg': '8px',
+        'xl': '12px',
+      },
+      // Max widths
+      maxWidth: {
+        'container': '1000px',
       },
     },
   },

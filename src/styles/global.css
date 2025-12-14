@@ -89,68 +89,7 @@ p {
   margin-bottom: var(--spacing-md);
 }
 
-.container {
-  max-width: 1000px;
-  width: 100%;
-  margin: 0 auto;
-  overflow-x: hidden;
-}
-
-.section {
-  background: var(--color-bg);
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
-  padding: var(--spacing-lg);
-  margin-bottom: var(--spacing-xl);
-  width: 100%;
-}
-
-.button {
-  display: inline-block;
-  padding: var(--spacing-sm) var(--spacing-lg);
-  font-size: 1.05rem;
-  font-weight: 600;
-  text-align: center;
-  text-decoration: none;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  min-height: 46px;
-}
-
-.button-primary {
-  background-color: var(--color-primary);
-  color: white;
-}
-
-.button-primary:hover {
-  background-color: #234d24;
-}
-
-.button-secondary {
-  background-color: var(--color-secondary);
-  color: var(--color-text);
-}
-
-.button-secondary:hover {
-  background-color: var(--color-secondary-hover);
-}
-
-.button-accent {
-  background-color: var(--color-accent);
-  color: white;
-}
-
-.button-accent:hover {
-  background-color: #e55a2a;
-}
-
-ul {
-  list-style: none;
-}
-
-/* Checkbox styling */
+/* Checkbox styling - complex enough to warrant custom CSS */
 input[type="checkbox"] {
   width: 1.5rem;
   height: 1.5rem;
@@ -161,66 +100,10 @@ input[type="checkbox"] {
   border-radius: 3px;
 }
 
-/* Print button container */
-.print-buttons {
-  display: flex;
-  gap: var(--spacing-sm);
-  margin-bottom: var(--spacing-lg);
-  flex-wrap: wrap;
-}
-
 @media screen(mobile) {
-  body {
-    padding: 0;
-    font-size: clamp(18px, 4vw, 20px);
-    line-height: 1.76;
-  }
-  
-  h1 {
-    font-size: clamp(2.3rem, 6vw, 2.6rem);
-    margin-bottom: var(--spacing-md);
-  }
-  
-  h2 {
-    font-size: clamp(1.8rem, 5vw, 2.1rem);
-    margin-top: var(--spacing-lg);
-    margin-bottom: var(--spacing-md);
-  }
-  
-  h3 {
-    font-size: clamp(1.4rem, 4.5vw, 1.7rem);
-    margin-top: var(--spacing-md);
-    margin-bottom: var(--spacing-sm);
-  }
-  
-  .section {
-    padding: var(--spacing-lg);
-    margin-bottom: var(--spacing-lg);
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  .button {
-    padding: var(--spacing-md) var(--spacing-lg);
-    font-size: 1.05rem;
-    min-height: 46px;
-    width: 100%; /* Make buttons full width on mobile for better touch targets */
-    margin-bottom: var(--spacing-xs);
-  }
-  
   input[type="checkbox"] {
     width: 1.6rem;
     height: 1.6rem;
     margin-right: var(--spacing-md);
-  }
-  
-  .container {
-    max-width: 100%;
-    width: 100%;
-  }
-  
-  .print-buttons {
-    flex-direction: column;
-    width: 100%;
   }
 }

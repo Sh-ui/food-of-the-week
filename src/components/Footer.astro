@@ -4,80 +4,30 @@ const repoBase = 'https://github.com/sh-ui/food-of-the-week';
 const base = import.meta.env.BASE_URL;
 ---
 
-<footer class="site-footer" id="site-footer">
-  <nav class="footer-links">
-    <a href={repoBase} target="_blank" rel="noopener noreferrer">
+<footer class="mt-xl py-lg px-md border-t border-[var(--color-border)] text-center" id="site-footer">
+  <nav class="flex justify-center items-center gap-sm flex-wrap mobile:flex-col mobile:gap-md">
+    <a href={repoBase} target="_blank" rel="noopener noreferrer" class="text-[var(--color-text-light)] no-underline text-[0.95rem] transition-colors hover:text-[var(--color-primary)] hover:underline mobile:text-[1.1rem] mobile:py-xs">
       Repository
     </a>
-    <span class="divider">|</span>
-    <a href={`${repoBase}/blob/master/README.md`} target="_blank" rel="noopener noreferrer">
+    <span class="text-[var(--color-border)] select-none mobile:hidden">|</span>
+    <a href={`${repoBase}/blob/master/README.md`} target="_blank" rel="noopener noreferrer" class="text-[var(--color-text-light)] no-underline text-[0.95rem] transition-colors hover:text-[var(--color-primary)] hover:underline mobile:text-[1.1rem] mobile:py-xs">
       README
     </a>
-    <span class="divider">|</span>
-    <a href={`${repoBase}/tree/master/archive`} target="_blank" rel="noopener noreferrer">
+    <span class="text-[var(--color-border)] select-none mobile:hidden">|</span>
+    <a href={`${repoBase}/tree/master/archive`} target="_blank" rel="noopener noreferrer" class="text-[var(--color-text-light)] no-underline text-[0.95rem] transition-colors hover:text-[var(--color-primary)] hover:underline mobile:text-[1.1rem] mobile:py-xs">
       Archive
     </a>
-    <span class="divider">|</span>
-    <a href={`${repoBase}/blob/master/FOOD-OF-THE-WEEK.md`} target="_blank" rel="noopener noreferrer">
+    <span class="text-[var(--color-border)] select-none mobile:hidden">|</span>
+    <a href={`${repoBase}/blob/master/FOOD-OF-THE-WEEK.md`} target="_blank" rel="noopener noreferrer" class="text-[var(--color-text-light)] no-underline text-[0.95rem] transition-colors hover:text-[var(--color-primary)] hover:underline mobile:text-[1.1rem] mobile:py-xs">
       This Week's Plan
     </a>
-    <span class="divider">|</span>
-    <a href={`${base}weekend`}>
+    <span class="text-[var(--color-border)] select-none mobile:hidden">|</span>
+    <a href={`${base}weekend`} class="text-[var(--color-text-light)] no-underline text-[0.95rem] transition-colors hover:text-[var(--color-primary)] hover:underline mobile:text-[1.1rem] mobile:py-xs">
       Weekend
     </a>
   </nav>
 </footer>
 
 <style>
-  .site-footer {
-    margin-top: var(--spacing-xl);
-    padding: var(--spacing-lg) var(--spacing-md);
-    border-top: 1px solid var(--color-border);
-    text-align: center;
-  }
-
-  .footer-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: var(--spacing-sm);
-    flex-wrap: wrap;
-  }
-
-  .footer-links a {
-    color: var(--color-text-light);
-    text-decoration: none;
-    font-size: 0.95rem;
-    transition: color 0.2s ease;
-  }
-
-  .footer-links a:hover {
-    color: var(--color-primary);
-    text-decoration: underline;
-  }
-
-  .divider {
-    color: var(--color-border);
-    user-select: none;
-  }
-
-  @media screen(mobile) {
-    .site-footer {
-      padding: var(--spacing-lg) var(--spacing-sm);
-    }
-
-    .footer-links {
-      flex-direction: column;
-      gap: var(--spacing-md);
-    }
-
-    .divider {
-      display: none;
-    }
-
-    .footer-links a {
-      font-size: 1.1rem;
-      padding: var(--spacing-xs) 0;
-    }
-  }
+  /* All layout/spacing now handled by Tailwind utilities */
 </style>

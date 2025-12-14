@@ -40,12 +40,12 @@ const faviconSrc = baseUrl + 'favicon.svg';
   hasGroceryList={weekPlan.groceryList.length > 0}
 />
 
-<div class="weekly-plan container">
+<div class="max-w-container w-full mx-auto overflow-x-hidden px-md pt-0 pb-lg mobile:px-sm">
   <!-- Hero Section -->
-  <section class="hero-section" id="top">
-    <h1 class="hero-title">{weekPlan.weekTitle}</h1>
-    <div class="hero-icon">
-      <img src={faviconSrc} alt="Food of the Week" class="hero-favicon" />
+  <section class="text-center px-md py-xl min-h-[40vh] flex flex-col items-center justify-center gap-lg mobile:min-h-[30vh] mobile:px-sm" id="top">
+    <h1 class="mb-0">{weekPlan.weekTitle}</h1>
+    <div class="flex justify-center">
+      <img src={faviconSrc} alt="Food of the Week" class="w-20 h-20 opacity-60" />
     </div>
   </section>
   
@@ -55,16 +55,16 @@ const faviconSrc = baseUrl + 'favicon.svg';
     />
   )}
   
-  <div class="meals-container">
+  <div class="flex flex-col gap-xl mobile:gap-lg">
     {weekPlan.meals.map((section) => (
       <MealCard section={section} />
     ))}
   </div>
   
   {weekPlan.meals.length === 0 && weekPlan.groceryList.length === 0 && (
-    <div class="empty-state section">
-      <h2>No meal plan available</h2>
-      <p>Check back later for this week's meal plan, or add content to FOOD-OF-THE-WEEK.md to get started.</p>
+    <div class="text-center p-xl bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-lg mb-xl">
+      <h2 class="mt-0 text-[var(--color-text-light)]">No meal plan available</h2>
+      <p class="text-[var(--color-text-light)] mb-0">Check back later for this week's meal plan, or add content to FOOD-OF-THE-WEEK.md to get started.</p>
     </div>
   )}
 
@@ -72,73 +72,7 @@ const faviconSrc = baseUrl + 'favicon.svg';
 </div>
 
 <style>
-  .weekly-plan {
-    padding: var(--spacing-lg) var(--spacing-md);
-    padding-top: 0;
-  }
-
-  .hero-section {
-    text-align: center;
-    padding: var(--spacing-xl) var(--spacing-md);
-    min-height: 40vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: var(--spacing-lg);
-  }
-
-  .hero-title {
-    margin-bottom: 0;
-  }
-
-  .hero-icon {
-    display: flex;
-    justify-content: center;
-  }
-
-  .hero-favicon {
-    width: 80px;
-    height: 80px;
-    opacity: 0.6;
-  }
-
-  .meals-container {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-xl);
-  }
-
-  .empty-state {
-    text-align: center;
-    padding: var(--spacing-xl);
-    background: var(--color-bg-alt);
-  }
-
-  .empty-state h2 {
-    margin-top: 0;
-    color: var(--color-text-light);
-  }
-
-  .empty-state p {
-    color: var(--color-text-light);
-    margin-bottom: 0;
-  }
-  
-  @media screen(mobile) {
-    .weekly-plan {
-    padding: var(--spacing-md) var(--spacing-sm);
-      padding-top: 0;
-    }
-    
-    .hero-section {
-      min-height: 30vh;
-      padding: var(--spacing-lg) var(--spacing-sm);
-    }
-    
-    .meals-container {
-      gap: var(--spacing-lg);
-  }
-  }
+  /* All layout/spacing now handled by Tailwind utilities */
+  /* Kept only for semantic class names used by other components */
 </style>
 
