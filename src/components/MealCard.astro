@@ -21,7 +21,7 @@ function renderMarkdown(text: string): string {
 
 <div 
   id={`print-section-${section.id}`} 
-  class={`print-section meal bg-[var(--color-bg)] border border-[var(--color-border)] rounded-lg p-lg mb-xl w-full break-inside-avoid ${section.cooked ? 'meal-cooked' : ''}`}
+  class={`print-section meal bg-bg border border-border rounded-lg p-lg mb-xl w-full break-inside-avoid ${section.cooked ? 'meal-cooked' : ''}`}
   data-section-type="meal" 
   data-cooked={section.cooked ? 'true' : 'false'}
 >
@@ -54,7 +54,7 @@ function renderMarkdown(text: string): string {
             {/* For grouped items, show as labeled fields */}
             {isFirstGroup ? (
               <div class="subsection-field leading-relaxed text-[1.1rem] mobile:text-[1.25rem] mobile:leading-extra-loose">
-                <strong class="text-[var(--color-primary)] inline-block min-w-[120px]">{sub.title}:</strong> {sub.content}
+                <strong class="text-primary inline-block min-w-[120px]">{sub.title}:</strong> {sub.content}
               </div>
             ) : (
               <>

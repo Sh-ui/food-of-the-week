@@ -8,15 +8,15 @@ interface Props {
 const { categories } = Astro.props;
 ---
 
-<div id="print-section-grocery-list" class="print-section bg-[var(--color-bg)] border border-[var(--color-border)] rounded-lg p-lg mb-xl w-full" data-section-type="grocery">
+<div id="print-section-grocery-list" class="print-section bg-bg border border-border rounded-lg p-lg mb-xl w-full" data-section-type="grocery">
   <div class="flex justify-between items-center mb-lg">
     <h2>Grocery List</h2>
   </div>
   
   <div class="grid gap-lg">
     {categories.map((category) => (
-      <div class="grocery-category bg-[var(--color-bg-alt)] p-md rounded-md mobile:p-lg">
-        <h3 class="mt-0 mb-md text-[var(--color-primary)] text-[1.4rem] mobile:text-[1.75rem] mobile:mb-md">{category.name}</h3>
+      <div class="grocery-category bg-bg-alt p-md rounded-md mobile:p-lg">
+        <h3 class="mt-0 mb-md text-primary text-[1.4rem] mobile:text-[1.75rem] mobile:mb-md">{category.name}</h3>
         <ul class="grocery-items flex flex-col gap-sm">
           {category.items.map((item, index) => (
             <li class={`flex items-center grocery-item ${item.globallyChecked ? 'globally-checked' : ''}`}>

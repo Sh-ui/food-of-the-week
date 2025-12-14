@@ -3,11 +3,21 @@ export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
-      // Colors reference CSS custom properties for dynamic theming
       colors: {
-        primary: '#494331',
-        secondary: '#F3CA40',
-        accent: '#F08A4B',
+        'primary': '#494331',
+        'primary-hover': '#3a3626',
+        'secondary': '#F3CA40',
+        'secondary-hover': '#d9b130',
+        'accent': '#F08A4B',
+        'text': '#3F3F37',
+        'text-light': '#6b6a62',
+        'text-muted': '#9a9a91',
+        'bg': '#FAF8F3',
+        'bg-alt': '#F5F2EB',
+        'border': '#E8E3D8',
+        'cooked-bg': '#f0ede6',
+        'cooked-text': '#8a887f',
+        'cooked-border': '#d8d4c9',
       },
       fontFamily: {
         sans: ['Work Sans', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
@@ -21,7 +31,6 @@ export default {
         'tablet': { max: '950px' },
         'desktop': { max: '1000px' },
       },
-      // Spacing scale - MASTER SOURCE OF TRUTH (Tailwind way)
       // Change these values here → entire site updates automatically
       // Creates utilities: p-xs, mb-md, gap-lg, etc.
       spacing: {
