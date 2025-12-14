@@ -21,13 +21,13 @@ function renderMarkdown(text: string): string {
 
 <div 
   id={`print-section-${section.id}`} 
-  class={`print-section bg-[var(--color-bg)] border border-[var(--color-border)] rounded-lg p-lg mb-xl w-full break-inside-avoid ${section.cooked ? 'meal-cooked' : ''}`}
+  class={`print-section meal bg-[var(--color-bg)] border border-[var(--color-border)] rounded-lg p-lg mb-xl w-full break-inside-avoid ${section.cooked ? 'meal-cooked' : ''}`}
   data-section-type="meal" 
   data-cooked={section.cooked ? 'true' : 'false'}
 >
-  <div class="flex justify-between items-start mb-lg gap-md mobile:flex-col mobile:items-start mobile:gap-md">
+  <div class="meal-header flex justify-between items-start mb-lg gap-md mobile:flex-col mobile:items-start mobile:gap-md">
     <span 
-      class={`inline-flex items-center justify-center w-7 h-7 border-2 border-[var(--color-text-light)] rounded-full flex-shrink-0 mt-1 text-[0.9rem] text-transparent select-none mobile:w-8 mobile:h-8 mobile:text-base cooked-indicator ${section.cooked ? 'is-cooked' : ''}`}
+      class={`cooked-indicator inline-flex items-center justify-center w-7 h-7 border-2 border-[var(--color-text-light)] rounded-full flex-shrink-0 mt-1 text-[0.9rem] select-none mobile:w-8 mobile:h-8 mobile:text-base ${section.cooked ? 'is-cooked' : ''}`}
       aria-label={section.cooked ? 'Meal has been cooked' : 'Meal not yet cooked'}
     >
       {section.cooked ? '✓' : ''}
@@ -90,7 +90,12 @@ function renderMarkdown(text: string): string {
 </div>
 
 <style>
-  /* Cooked indicator state - complex styling */
+  /* Cooked indicator - always visible circle, filled when cooked */
+  .cooked-indicator {
+    color: transparent;
+    cursor: default;
+  }
+  
   .cooked-indicator.is-cooked {
     background: var(--color-cooked-text, #8a887f);
     border-color: var(--color-cooked-text, #8a887f);
