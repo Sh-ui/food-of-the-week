@@ -4,20 +4,40 @@ export default {
   theme: {
     extend: {
       colors: {
+        // Base colors
         'primary': '#494331',
         'primary-hover': '#3a3626',
         'secondary': '#F3CA40',
         'secondary-hover': '#d9b130',
         'accent': '#F08A4B',
+        
+        // Text colors
         'text': '#3F3F37',
         'text-light': '#6b6a62',
         'text-muted': '#9a9a91',
+        
+        // Background colors
         'bg': '#FAF8F3',
         'bg-alt': '#F5F2EB',
+        
+        // Border colors
         'border': '#E8E3D8',
+        
+        // Cooked meal state colors
         'cooked-bg': '#f0ede6',
         'cooked-text': '#8a887f',
         'cooked-border': '#d8d4c9',
+        
+        // Instruction section colors (used by colors.ts for cycling)
+        'instruction-salmon': '#D78A76',
+        'instruction-salmon-bg': '#fef5f2',
+        'instruction-salmon-heading': '#b86d5c',
+        'instruction-yellow': '#F3CA40',
+        'instruction-yellow-bg': '#fef9e8',
+        'instruction-yellow-heading': '#c9a22d',
+        'instruction-orange': '#F08A4B',
+        'instruction-orange-bg': '#fff5ef',
+        'instruction-orange-heading': '#d16d2f',
       },
       fontFamily: {
         sans: ['Work Sans', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
