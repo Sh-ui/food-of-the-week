@@ -41,30 +41,131 @@ This is a weekly meal planning system built with Astro that transforms structure
 
 ## Project Structure
 
-- **`FOOD-OF-THE-WEEK.md`** - Current week's meal plan (data source for website)
-- **`brainstorming/`** - Free-form weekly planning workspace
-- **`archive/`** - Past weekly plans in YYYYMMDDsummary.md format
-- **`.cursor/rules/`** - AI assistant guidelines for meal planning philosophy
-- **`public/print-config.json`** - Customize print layout (margins, spacing, fonts)
-- **`src/`** - Astro website components, styles, and utilities
-- **`rule-basis/`** - Reference philosophy documents
+```
+GroceryPlanning/
+├── FOOD-OF-THE-WEEK.md          # Current week's meal plan (content source)
+├── README.md                     # This file - project overview
+├── TODOS.md                      # Development roadmap
+├── LICENSE                       # AGPL-3.0 license
+├── .github/
+│   ├── dependabot.yml           # Automated dependency updates
+│   └── workflows/deploy.yml     # GitHub Pages deployment
+├── brainstorming/               # Free-form weekly planning workspace
+│   ├── grocery-list.md
+│   └── meal-plan.md
+├── archive/                     # Past weekly plans (YYYYMMDDsummary.md)
+├── src/
+│   ├── components/              # Astro components
+│   │   ├── GroceryList.astro   # Interactive grocery list with localStorage
+│   │   ├── MealCard.astro      # Individual meal display
+│   │   ├── PrintButton.astro   # Section-specific print functionality
+│   │   └── ...
+│   ├── layouts/
+│   │   └── Layout.astro        # Base HTML layout
+│   ├── pages/
+│   │   └── index.astro         # Main page (parses FOOD-OF-THE-WEEK.md)
+│   ├── styles/
+│   │   ├── global.css          # Main styles
+│   │   └── print.css           # Print-specific styles
+│   └── utils/
+│       └── readmeParser.ts     # Markdown parser for structured data
+├── public/
+│   ├── favicon.svg
+│   └── print-config.json       # Customize print layout
+├── .cursor/
+│   ├── rules/                  # AI assistant guidelines
+│   └── plans/                  # Planning and audit documents
+└── rule-basis/                 # Reference philosophy documents
+```
 
 ## Features
 
-- **Interactive Grocery Lists** - Checkboxes save to browser localStorage
-- **Three-Phase Instructions** - Color-coded sections (Already Prepped, Sous Chef, Chef Finishing)
-- **Print Functionality** - Print full week, grocery list only, or individual meals
-- **Mobile-Friendly** - Responsive design for shopping and cooking
-- **Auto-Deployment** - Push to GitHub, site updates automatically
+### Current Features
+
+- **Interactive Grocery Lists** - Checkboxes persist in browser localStorage with week-specific keys
+- **Three-Phase Instructions** - Color-coded workflow sections (Already Prepped, Sous Chef, Chef Finishing)
+- **Print Functionality** - Print full week, grocery list only, or individual meals with optimized layouts
+- **Mobile-Friendly** - Responsive design optimized for shopping and cooking on any device
+- **Auto-Deployment** - Push to GitHub, site rebuilds and deploys automatically via GitHub Actions
+- **Persistent State** - Grocery list checkbox states saved per week, survives browser refresh
+- **Static Site Generation** - Fast, secure, and hostable anywhere (currently on GitHub Pages)
+
+### Coming Soon
+
+See [TODOS.md](TODOS.md) for the complete development roadmap including:
+- **Cheffy** - Interactive assistant character for notifications, calendar sync, and archive navigation
+- **PWA Support** - Install as app, offline access, and background sync
+- **Archive Search** - Full-text search across past meal plans
+- **Recipe Timeline** - Extract cooking timelines and export to calendar
 
 ## Print Configuration
 
 Edit `print-config.json` in the `public/` folder to adjust print layout settings including page margins, typography, and spacing.
 
-## Stack
+## Tech Stack
 
-- **Astro** - Static site generation
-- **GitHub Pages** - Hosting
-- **GitHub Actions** - Auto-deployment
-- **TypeScript** - Type-safe code
-- **CSS** - Custom print media queries
+- **[Astro](https://astro.build)** v5.16+ - Static site generation with zero-JS by default
+- **[TypeScript](https://www.typescriptlang.org/)** - Type-safe parsing and utilities
+- **[marked](https://marked.js.org/)** - Markdown parser for structured content
+- **GitHub Pages** - Free static hosting with custom domain support
+- **GitHub Actions** - Automated CI/CD pipeline for deployment
+- **CSS** - Custom styles with print media queries and responsive breakpoints
+- **localStorage** - Client-side persistence for grocery list state
+
+## Development
+
+### Quick Start
+
+```bash
+# Install dependencies
+npm install
+
+# Start dev server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+The site will be available at `http://localhost:4321`
+
+### Dependencies
+
+All dependencies are managed via npm and automatically kept up-to-date using Dependabot:
+- Production dependencies checked weekly
+- Security patches applied automatically
+- GitHub Actions dependencies checked monthly
+
+---
+
+## Contributing
+
+This is a personal meal planning system, but contributions are welcome! If you'd like to:
+
+- Report a bug or suggest a feature → [Open an issue](https://github.com/sh-ui/food-of-the-week/issues)
+- Contribute code → Fork the repo and submit a pull request
+- Adapt for your own use → Fork and customize (see License below)
+
+See [TODOS.md](TODOS.md) for planned features and development roadmap.
+
+## License
+
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
+
+This project is licensed under the [GNU Affero General Public License v3.0 (AGPL-3.0)](LICENSE.md).
+
+### What this means:
+
+✅ **You can:**
+- Use this software for free
+- Modify it for your own needs
+- Share it with others
+- Run your own instance
+
+⚠️ **You must:**
+- Make your source code available if you run a modified version as a web service
+- Keep the same AGPL-3.0 license
+- Credit the original project

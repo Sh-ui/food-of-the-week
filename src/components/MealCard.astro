@@ -33,12 +33,6 @@ function renderMarkdown(text: string): string {
       {section.cooked ? '✓' : ''}
     </span>
     <h2>{section.title}</h2>
-    <button 
-      class="button button-secondary print-button" 
-      data-print-target={section.id}
-    >
-      Print This Meal
-    </button>
   </div>
   
   {/* Render subsection groups */}

@@ -1,7 +1,6 @@
 ---
 import GroceryList from './GroceryList.astro';
 import MealCard from './MealCard.astro';
-import PrintButton from './PrintButton.astro';
 import Footer from './Footer.astro';
 import StickyHeader from './StickyHeader.astro';
 import type { WeekPlan } from '../utils/weekParser';
@@ -21,18 +20,24 @@ const shortTitle = weekPlan.weekTitle
     `${month.slice(0, 3)} ${days}`
   );
 
-// Prepare content sections for header navigation
-const sectionsForNav = weekPlan.meals.map(section => ({
-  id: section.id,
-  title: section.title,
-  cooked: section.cooked
+// Prepare meals for header navigation
+const mealsForNav = weekPlan.meals.map(meal => ({
+  id: meal.id,
+  title: meal.title,
+  cooked: meal.cooked
 }));
+
+// Build favicon path
+const baseUrl = import.meta.env.BASE_URL.endsWith('/') 
+  ? import.meta.env.BASE_URL 
+  : import.meta.env.BASE_URL + '/';
+const faviconSrc = baseUrl + 'favicon.svg';
 ---
 
 <StickyHeader 
   weekTitle={weekPlan.weekTitle}
   shortTitle={shortTitle}
-  meals={sectionsForNav}
+  meals={mealsForNav}
   hasGroceryList={weekPlan.groceryList.length > 0}
 />
 
@@ -40,8 +45,8 @@ const sectionsForNav = weekPlan.meals.map(section => ({
   <!-- Hero Section -->
   <section class="hero-section" id="top">
     <h1 class="hero-title">{weekPlan.weekTitle}</h1>
-    <div class="hero-actions">
-      <PrintButton target="all" label="Print Full Week" variant="primary" />
+    <div class="hero-icon">
+      <img src={faviconSrc} alt="Food of the Week" class="hero-favicon" />
     </div>
   </section>
   
@@ -89,14 +94,15 @@ const sectionsForNav = weekPlan.meals.map(section => ({
     margin-bottom: 0;
   }
 
-  .hero-actions {
+  .hero-icon {
     display: flex;
     justify-content: center;
   }
 
-  .hero-actions .button {
-    padding: var(--spacing-md) var(--spacing-xl);
-    font-size: 1.1rem;
+  .hero-favicon {
+    width: 80px;
+    height: 80px;
+    opacity: 0.6;
   }
 
   .meals-container {

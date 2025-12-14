@@ -4,18 +4,14 @@ import type { ListCategory } from '../utils/weekParser';
 interface Props {
   categories: ListCategory[];
   weekTitle: string;
-  sectionTitle?: string;
 }
 
-const { categories, sectionTitle = 'Grocery List' } = Astro.props;
+const { categories } = Astro.props;
 ---
 
 <div id="print-section-grocery-list" class="print-section section" data-section-type="grocery">
   <div class="section-header">
-    <h2>{sectionTitle}</h2>
-    <button class="button button-secondary print-button" data-print-target="grocery-list">
-      Print {sectionTitle}
-    </button>
+    <h2>Grocery List</h2>
   </div>
   
   <div class="grocery-categories">
