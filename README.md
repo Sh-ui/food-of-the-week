@@ -4,7 +4,8 @@
 
 **Version:** `1.3.7` | **[View or Edit This Week's Plan](FOOD-OF-THE-WEEK.md)** ⇒ [Live Site at food.schuepbach.work](https://sh-ui.github.io/food-of-the-week)
 
-**Version History:** `1.0.0` = new-foundation baseline (Dec 2025) → `1.3.7` = Tailwind enhancements, brainstorming structure, migration docs, dependency updates
+![Version](https://img.shields.io/badge/version-1.3.7-blue.svg)
+![Status](https://img.shields.io/badge/status-active-success.svg)
 
 ## About
 
