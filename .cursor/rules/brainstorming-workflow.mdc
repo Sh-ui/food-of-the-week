@@ -25,13 +25,34 @@ workflow:
 folder_structure:
   location: "PROJECT_ROOT/brainstorming/"
   
-  file_naming:
-    flexibility: "Any naming convention works - prioritize clarity"
-    examples:
-      - "grocery-list.md"
-      - "meal-plan.md"
-      - "ideas-dec-7.txt"
-      - "this-week-notes.md"
+  subdirectories:
+    idea_basis:
+      path: "brainstorming/idea-basis/"
+      purpose: "Reference documents containing meal planning paradigms, inspirations, and established patterns"
+      usage: "Consult these files when brainstorming to understand user's cooking style, preferences, and planning approach"
+      examples:
+        - "meal-planning.txt - Core planning principles"
+        - "f-word-inspo.txt - Flavor inspiration sources"
+        - "quick-meal.txt - Fast weeknight patterns"
+        - "RULE-FRAME.md - Planning framework"
+    
+    old_ideas:
+      path: "brainstorming/old-ideas/"
+      purpose: "Archive for completed week's brainstorming files"
+      usage: "Move files from brainstorming/ root to old-ideas/ when starting a new week to keep workspace clean"
+      cleanup: "Files can be kept for reference or deleted as needed"
+  
+  root_files:
+    description: "Free-form workspace for current week's brainstorming"
+    file_naming:
+      flexibility: "Any naming convention works - prioritize clarity"
+      examples:
+        - "grocery-list.md"
+        - "meal-plan.md"
+        - "ideas-dec-7.txt"
+        - "this-week-notes.md"
+        - "stuff-we-have.txt"
+        - "stuff-coming.txt"
   
   file_formats:
     markdown: "Preferred for structured content"
@@ -40,11 +61,20 @@ folder_structure:
 
 usage_patterns:
   during_brainstorming:
+    - "Review brainstorming/idea-basis/ files for context on user's planning paradigms and inspirations"
     - "Capture raw ideas and ingredient lists"
     - "Sketch out meal combinations"
     - "Note proteins available and needed"
     - "Draft grocery lists"
     - "Experiment with recipe structures"
+    - "Reference established patterns from idea-basis when suggesting meals"
+  
+  context_sources:
+    - "brainstorming/idea-basis/meal-planning.txt - Core planning principles"
+    - "brainstorming/idea-basis/f-word-inspo.txt - Flavor inspiration"
+    - "brainstorming/idea-basis/quick-meal.txt - Fast weeknight patterns"
+    - "brainstorming/idea-basis/RULE-FRAME.md - Planning framework"
+    - "Any other files in idea-basis/ that contain relevant paradigms"
   
   state: "Work-in-progress, informal, exploratory"
   audience: "User and AI assistant only"
@@ -59,20 +89,47 @@ finalization_process:
     - "Move finalized content to FOOD-OF-THE-WEEK.md"
     - "Optionally clean up or archive brainstorming files"
 
+archiving_process:
+  trigger: "When archiving FOOD-OF-THE-WEEK.md to archive/ folder"
+  
+  steps:
+    1: "Copy entire FOOD-OF-THE-WEEK.md content"
+    2: "Create new file: archive/YYYYMMDDsummary.md"
+    3: "Remove all strikethroughs from meal names (e.g., '~~Meal 1: Name~~' → 'Meal 1: Name')"
+    4: "Remove strikethroughs from any other content that may have been marked as completed"
+    5: "Paste cleaned content into archive file"
+    6: "Update FOOD-OF-THE-WEEK.md with next week's content"
+  
+  strikethrough_removal:
+    pattern: "~~text~~"
+    examples:
+      - "~~Meal 1: One Pot Pasta~~" → "Meal 1: One Pot Pasta"
+      - "## ~~Meal 2: Stir Fry~~" → "## Meal 2: Stir Fry"
+    scope: "All meal headings and any other strikethrough text in the document"
+    reason: "Archive files should preserve the final plan without completion markers"
+
 maintenance:
   weekly_cleanup:
-    options:
-      keep: "Retain files for historical reference"
-      clear: "Delete to start fresh next week"
-      archive: "Move to a timestamped subfolder if desired"
+    process:
+      1: "After finalizing week and moving content to FOOD-OF-THE-WEEK.md"
+      2: "Move completed brainstorming files from brainstorming/ root to brainstorming/old-ideas/"
+      3: "Keep idea-basis/ folder untouched (it's reference material, not weekly work)"
+      4: "Start fresh week's brainstorming in brainstorming/ root"
     
-    recommendation: "User preference - no strict rule"
+    options:
+      keep_in_old_ideas: "Retain files in old-ideas/ for historical reference"
+      delete_old_ideas: "Delete old-ideas/ contents to start completely fresh"
+      archive_old_ideas: "Move old-ideas/ to a timestamped archive if desired"
+    
+    recommendation: "Move to old-ideas/ by default, then user can decide to keep or delete"
 
 actions:
   - type: encourage
     when: "User starts weekly planning"
     do:
-      - "Create files in brainstorming/ for ideation"
+      - "Review brainstorming/idea-basis/ files for context on user's planning paradigms"
+      - "Reference established patterns and inspirations when suggesting meals"
+      - "Create files in brainstorming/ root for ideation (not in idea-basis or old-ideas)"
       - "Keep format loose and conversational"
       - "Focus on capturing ideas, not perfect formatting"
   
@@ -86,21 +143,37 @@ actions:
   - type: inform
     when: "User asks about file organization"
     do:
-      - "Explain brainstorming/ is for work-in-progress"
+      - "Explain brainstorming/ root is for current week's work-in-progress"
+      - "brainstorming/idea-basis/ contains reference paradigms and inspirations (not weekly work)"
+      - "brainstorming/old-ideas/ is for archiving completed week's brainstorming files"
       - "FOOD-OF-THE-WEEK.md is for finalized, published content"
-      - "Archive/ is for historical weekly plans"
+      - "archive/ is for historical weekly plans (archived FOOD-OF-THE-WEEK.md files)"
       - "README.md is for project documentation"
+  
+  - type: enforce
+    when: "Archiving FOOD-OF-THE-WEEK.md to archive/ folder"
+    do:
+      - "Remove all strikethroughs (~~text~~) from meal names and headings"
+      - "Remove strikethroughs from any other content marked as completed"
+      - "Create archive file with cleaned content (no completion markers)"
+      - "Preserve all other formatting and structure"
 
 examples:
   - scenario: "Starting a new week"
     action: |
       User: "Let's plan this week's meals"
       
-      AI Creates/Updates:
-      - brainstorming/grocery-list.md (ingredient ideas)
-      - brainstorming/meal-plan.md (meal sketches)
+      AI Actions:
+      1. Review brainstorming/idea-basis/ files for context on planning paradigms
+      2. Reference established patterns when suggesting meals
+      3. Create files in brainstorming/ root:
+         - brainstorming/grocery-list.md (ingredient ideas)
+         - brainstorming/meal-plan.md (meal sketches)
+         - brainstorming/stuff-we-have.txt (available ingredients)
+         - brainstorming/stuff-coming.txt (expected ingredients)
       
       Format: Loose, conversational, exploratory
+      Context: Use idea-basis/ files to understand user's cooking style and preferences
   
   - scenario: "Finalizing the week"
     action: |
@@ -111,6 +184,7 @@ examples:
       - Structure grocery list with categories
       - Write final meal descriptions
       - Update FOOD-OF-THE-WEEK.md with complete plan
+      - Suggest moving brainstorming/ root files to brainstorming/old-ideas/ for cleanup
 
 metadata:
   priority: medium

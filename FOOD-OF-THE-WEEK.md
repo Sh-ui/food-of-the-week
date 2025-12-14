@@ -31,7 +31,7 @@
 - [x] 365 Organic Three Pepper Blend - 1 (16 oz)
 - [x] 365 Organic Mixed Mushrooms - 1 (10 oz)
 
-## Stir Fry
+## ~~Stir Fry~~
 
 **Protein** Sirloin flap steak
 

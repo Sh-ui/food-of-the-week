@@ -556,7 +556,7 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
         bottom: footerBottom,
         height: footerRect.height
       };
-    }
+  }
 
     // Check if footer is visible in viewport (within 100px of viewport bottom)
     const viewportBottom = scrollY + viewportHeight;
@@ -637,12 +637,12 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
       foundSectionData = footerData;
     } else {
       // Find which section viewport midpoint is in
-      for (const section of sections) {
-        if (viewportMidpoint >= section.top && viewportMidpoint < section.bottom) {
-          foundSection = section.id;
-          foundSectionData = section;
-          break;
-        }
+    for (const section of sections) {
+      if (viewportMidpoint >= section.top && viewportMidpoint < section.bottom) {
+        foundSection = section.id;
+        foundSectionData = section;
+        break;
+      }
       }
     }
     

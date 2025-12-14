@@ -51,7 +51,10 @@ GroceryPlanning/
 ├── .github/
 │   ├── dependabot.yml           # Automated dependency updates
 │   └── workflows/deploy.yml     # GitHub Pages deployment
-├── brainstorming/               # Free-form weekly planning workspace
+├── brainstorming/               # Weekly planning workspace
+│   ├── idea-basis/              # Reference: planning paradigms, inspirations, patterns
+│   ├── old-ideas/               # Archive: completed week's brainstorming files
+│   └── [current week files]    # Free-form workspace for active planning
 ├── archive/                     # Past weekly plans (YYYYMMDDsummary.md)
 ├── src/
 │   ├── components/              # Astro components
@@ -79,9 +82,8 @@ GroceryPlanning/
 │   └── print-config.json        # Customize print layout
 ├── tailwind.config.mjs          # ⭐ Single source of truth for colors, spacing, breakpoints
 ├── astro.config.mjs             # Astro build configuration
-├── .cursor/
-│   └── rules/                   # AI assistant guidelines
-└── rule-basis/                  # Reference philosophy documents
+└── .cursor/
+    └── rules/                   # AI assistant guidelines
 ```
 
 ## Features

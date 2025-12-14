@@ -3,9 +3,6 @@ frozen chopped cabbage
 frozen tilapia
 frozen ground pork
 frozen ground lamb
-frozen gringo taco meat
 frozen mire poix
-frozen burger patties
 
-pantry red onion
-pantry white onion
+pantry single red onion
