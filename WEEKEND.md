@@ -3,22 +3,22 @@
 ## Grocery List
 
 ### Produce
-- [ ] New potatoes - 1.5 lb
-- [ ] Green onion - 1 bunch
-- [ ] Mushrooms (cremini or button) - 8 oz
-- [ ] Mixed greens - 1 container
-- [ ] Iceberg lettuce - 1 head
-- [ ] Plum tomatoes - 3-4
-- [ ] Cilantro - 1 bunch
+- [x] New potatoes - 1.5 lb
+- [x] Green onion - 1 bunch
+- [x] Mushrooms (cremini or button) - 8 oz
+- [x] Mixed greens - 1 container
+- [x] Iceberg lettuce - 1 head
+- [x] Plum tomatoes - 3-4
+- [x] Cilantro - 1 bunch
 
 ### Staples
-- [ ] Whole grain mustard - 1 jar (if needed)
-- [ ] Capers - small jar
-- [ ] Mayonnaise - Jar
+- [x] Whole grain mustard - 1 jar (if needed)
+- [x] Capers - small jar
+- [x] Mayonnaise - Jar
 
 ### Dairy
-- [ ] Swiss cheese slices - 8 oz
-- [ ] Shredded cheddar cheese - 8 oz
+- [x] Swiss cheese slices - 8 oz
+- [x] Shredded cheddar cheese - 8 oz
 - [x] Sour cream - (at home)
 
 ### Protein
@@ -26,8 +26,8 @@
 - [x] Frozen gringo taco meat - (at home)
 
 ### Bakery
-- [ ] Water roll buns - 4-6
-- [ ] Tostadas - 1 package
+- [x] Water roll buns - 4-6
+- [x] Tostadas - 1 package
 
 ## ~~Water Burgers + Potato Salad~~
 
