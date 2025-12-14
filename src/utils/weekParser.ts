@@ -203,7 +203,7 @@ function parseMarkdownContent(content: string): PagePlan {
         }
         
         currentContentSection = {
-          id: `section-${h2Count - 1}`,
+          id: `meal-${h2Count - 1}`,
           title: title,
           cooked: cooked,
           subsections: [],
