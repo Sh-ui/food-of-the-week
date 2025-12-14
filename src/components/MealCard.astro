@@ -21,18 +21,18 @@ function renderMarkdown(text: string): string {
 
 <div 
   id={`print-section-${section.id}`} 
-  class={`print-section meal bg-bg border border-border rounded-lg p-lg mb-xl w-full break-inside-avoid ${section.cooked ? 'meal-cooked' : ''}`}
+  class={`print-section meal ${section.cooked ? 'meal-cooked' : ''}`}
   data-section-type="meal" 
   data-cooked={section.cooked ? 'true' : 'false'}
 >
-  <div class="meal-header flex justify-between items-start mb-lg gap-md mobile:flex-col mobile:items-start mobile:gap-md">
+  <div class="meal-header">
     <span 
-      class={`cooked-indicator inline-flex items-center justify-center w-7 h-7 border-2 border-[var(--color-text-light)] rounded-full flex-shrink-0 mt-1 text-[0.9rem] select-none mobile:w-8 mobile:h-8 mobile:text-base ${section.cooked ? 'is-cooked' : ''}`}
+      class={`cooked-indicator ${section.cooked ? 'is-cooked' : ''}`}
       aria-label={section.cooked ? 'Meal has been cooked' : 'Meal not yet cooked'}
     >
       {section.cooked ? '✓' : ''}
     </span>
-    <h2 class="m-0 flex-1 mobile:text-[2rem]">{section.title}</h2>
+    <h2>{section.title}</h2>
   </div>
   
   {/* Render subsection groups */}
@@ -46,7 +46,7 @@ function renderMarkdown(text: string): string {
     
     return (
       <div 
-        class={`subsection-group mb-lg p-md rounded-md border-l-4 last:mb-0 ${isFirstGroup ? 'info-group flex flex-col gap-md' : 'instruction-group mt-lg'}`}
+        class={`subsection-group mb-lg p-md rounded-md border-0 border-solid border-l-4 last:mb-0 ${isFirstGroup ? 'info-group flex flex-col gap-md' : 'instruction-group mt-lg'}`}
         style={`background: ${colors.bg}; border-left-color: ${colors.border};`}
       >
         {group.map((sub) => (
@@ -90,12 +90,48 @@ function renderMarkdown(text: string): string {
 </div>
 
 <style>
-  /* Cooked indicator - always visible circle, filled when cooked */
+  /* Meal card wrapper - main container styling */
+  .meal {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+    width: 100%;
+    break-inside: avoid;
+  }
+
+  /* Meal header - title and indicator layout */
+  .meal-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-lg);
+    gap: var(--spacing-md);
+  }
+
+  .meal-header h2 {
+    margin: 0;
+    flex: 1;
+  }
+
+  /* Cooked indicator - circular checkbox next to heading */
   .cooked-indicator {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.75rem;
+    height: 1.75rem;
+    border: 2px solid var(--color-text-light);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 0.25rem;
+    font-size: 0.9rem;
     color: transparent;
     cursor: default;
+    user-select: none;
   }
-  
+
   .cooked-indicator.is-cooked {
     background: var(--color-cooked-text, #8a887f);
     border-color: var(--color-cooked-text, #8a887f);
@@ -150,8 +186,24 @@ function renderMarkdown(text: string): string {
     color: var(--color-accent);
   }
 
-  /* Mobile responsive adjustments for strong tags */
+  /* Mobile responsive adjustments */
   @media screen(mobile) {
+    .meal-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--spacing-md);
+    }
+
+    .cooked-indicator {
+      width: 2rem;
+      height: 2rem;
+      font-size: 1rem;
+    }
+
+    .meal-header h2 {
+      font-size: 2rem;
+    }
+
     .subsection-field strong {
       display: block;
       margin-bottom: var(--spacing-xs);
