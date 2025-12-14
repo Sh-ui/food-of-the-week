@@ -58,7 +58,7 @@ GroceryPlanning/
 ├── brainstorming/               # Weekly planning workspace
 │   ├── idea-basis/              # Reference: planning paradigms, inspirations, patterns
 │   ├── old-ideas/               # Archive: completed week's brainstorming files
-│   └── [current week files]    # Free-form workspace for active planning
+│   └── [current week files]     # Free-form workspace for active planning
 ├── archive/                     # Past weekly plans (YYYYMMDDsummary.md)
 ├── src/
 │   ├── components/              # Astro components
@@ -84,7 +84,7 @@ GroceryPlanning/
 ├── public/
 │   ├── favicon.svg
 │   └── print-config.json        # Customize print layout
-├── tailwind.config.mjs          # ⭐ Single source of truth for colors, spacing, breakpoints
+├── tailwind.config.mjs          # Single source of truth for colors, spacing, breakpoints
 ├── astro.config.mjs             # Astro build configuration
 └── .cursor/
     └── rules/                   # AI assistant guidelines

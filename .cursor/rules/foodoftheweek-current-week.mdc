@@ -21,7 +21,7 @@ required_structure:
   order:
     1: "Week heading (# Week of [Date Range])"
     2: "Grocery List section (## Grocery List)"
-    3: "Meal sections (## Meal 1: [Name], ## Meal 2: [Name], etc.)"
+    3: "Meal sections (## [Meal Name] - no numbering, no colon)"
   
   heading_levels:
     week_title: "# (H1) - Only one per FOOD-OF-THE-WEEK.md"
@@ -54,30 +54,31 @@ grocery_list_format:
     - "Optional: Add prices if tracking costs"
 
 meal_format:
-  section_heading: "## Meal [N]: [Descriptive Name]"
+  section_heading: "## [Meal Name]"
+  note: "No numbering (Meal 1, Meal 2) and no colon in heading"
   
   required_fields:
     protein:
-      label: "**Protein:**"
-      format: "Bold label followed by protein(s) used"
-      example: "**Protein:** Ground pork"
+      label: "**Protein**"
+      format: "Bold label (no colon) followed by protein(s) used"
+      example: "**Protein** Ground pork"
     
     ingredients:
-      label: "**Ingredients:**"
-      format: "Bold label followed by comma-separated list"
-      example: "**Ingredients:** Brown udon rice noodles, tomato paste, San Marzano tomatoes"
+      label: "**Ingredients**"
+      format: "Bold label (no colon) followed by comma-separated list"
+      example: "**Ingredients** Brown udon rice noodles, tomato paste, San Marzano tomatoes"
     
     description:
-      label: "**Description:**"
-      format: "Bold label followed by 1-2 sentence overview"
-      example: "**Description:** One pot pasta with pork and vegetables"
+      label: "**Description**"
+      format: "Bold label (no colon) followed by 1-2 sentence overview"
+      example: "**Description** One pot pasta with pork and vegetables"
   
   instruction_format:
     structure: "Three-phase format (see recipe-instruction-format.mdc)"
     phases:
-      - "**Already Prepped:** (bulleted list)"
-      - "**Sous Chef - Prep:** or **Sous Chef - Cooking:** (paragraphs)"
-      - "**Chef - Finishing & Plating:** (paragraphs)"
+      - "**Already Prepped** (bulleted list, no colon)"
+      - "**Sous Chef - Prep** or **Sous Chef - Cooking** (paragraphs, no colon)"
+      - "**Chef - Finishing & Plating** (paragraphs, no colon)"
 
   numbering:
     style: "Sequential (Meal 1, Meal 2, Meal 3, etc.)"
@@ -107,32 +108,30 @@ template:
     ### Frozens
     - [ ] Item 1
     
-    ## Meal 1: [Descriptive Name]
-    **Protein:** [Protein used]
-    **Ingredients:** [List of main ingredients]
-    **Description:** [Brief overview]
+    ## [Meal Name]
+    **Protein** [Protein used]
+    **Ingredients** [List of main ingredients]
+    **Description** [Brief overview]
     
-    **Instructions:**
-    
-    **Already Prepped:**
+    **Already Prepped**
     
      - [Item prepared in advance]
     
-    **Sous Chef - Prep:**
+    **Sous Chef - Prep**
     
     [Delegation instructions in paragraphs]
     
-    **Chef - Finishing & Plating:**
+    **Chef - Finishing & Plating**
     
     [Finishing instructions in paragraphs]
     
-    ## Meal 2: [Descriptive Name]
+    ## [Meal Name]
     ...
     
-    ## Meal 3: [Descriptive Name]
+    ## [Meal Name]
     ...
     
-    ## Meal 4: [Descriptive Name]
+    ## [Meal Name]
     ...
 
 lifecycle:
@@ -161,10 +160,11 @@ actions:
     do:
       - "Use standardized heading structure"
       - "Include all required grocery categories"
-      - "Number meals sequentially"
-      - "Use consistent field labels for meals"
+      - "Do NOT number meals (no 'Meal 1:', 'Meal 2:', etc.)"
+      - "Use descriptive meal names only (## [Meal Name])"
+      - "Use field labels WITHOUT colons (**Protein**, **Ingredients**, **Description**)"
       - "Maintain markdown task list format for grocery items"
-      - "Use three-phase instruction format"
+      - "Use three-phase instruction format (no colons in phase labels)"
   
   - type: guide
     when: "User is ready to finalize weekly plan"
@@ -186,29 +186,27 @@ validation:
   checklist:
     - "H1 heading with week date range present"
     - "Grocery List section with all 5 categories"
-    - "4-5 meal sections with H2 headings"
-    - "Each meal has Protein, Ingredients, Description"
+    - "4-5 meal sections with H2 headings (no numbering, no colons)"
+    - "Each meal has Protein, Ingredients, Description (no colons in labels)"
     - "Markdown task list syntax used for grocery items"
-    - "Instructions use three-phase format"
+    - "Instructions use three-phase format (no colons in phase labels)"
 
 examples:
   - correct_meal: |
-      ## Meal 1: One Pot Pasta
-      **Protein:** Ground pork
-      **Ingredients:** Brown udon rice noodles, tomato paste, San Marzano tomatoes, frozen mixed mushrooms, frozen three pepper blend
-      **Description:** One pot pasta with pork and vegetables
+      ## One Pot Pasta
+      **Protein** Ground pork
+      **Ingredients** Brown udon rice noodles, tomato paste, San Marzano tomatoes, frozen mixed mushrooms, frozen three pepper blend
+      **Description** One pot pasta with pork and vegetables
       
-      **Instructions:**
-      
-      **Already Prepped:**
+      **Already Prepped**
       
        - Ground pork is thawed.
       
-      **Sous Chef - Cooking:**
+      **Sous Chef - Cooking**
       
       Brown the pork with aromatics, add tomato paste and tomatoes, simmer. Add frozen veg and noodles, cook until noodles are tender. Season to taste.
       
-      **Chef - Finishing & Plating:**
+      **Chef - Finishing & Plating**
       
       Serve in bowls with Parmesan.
   
