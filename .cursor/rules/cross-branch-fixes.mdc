@@ -1,0 +1,181 @@
+---
+description: Cross-Branch Fix Strategy
+alwaysApply: false
+---
+# Cross-Branch Fix Strategy
+
+Rules for fixing features by referencing existing working code from other branches rather than re-inventing solutions.
+
+<rule>
+name: cross-branch-fixes
+description: When fixing broken features, always check other branches for working implementations before writing new code
+
+principle: "Don't reinvent the wheel - look at what already works"
+
+context:
+  scenario: "A feature works on branch A but is broken on branch B"
+  requirement: "Fix must use the working implementation from branch A, not create new code"
+  reasoning: "Existing working code has been tested, debugged, and proven to work"
+
+workflow:
+  when_feature_is_broken:
+    1: "Identify what feature is broken (e.g., print functionality, parser logic, styling)"
+    2: "Ask: 'Does this feature work on any other branch?'"
+    3: "If YES → Use cross-branch reference workflow"
+    4: "If NO → Only then write new code"
+
+  cross_branch_reference_workflow:
+    step_1:
+      action: "Identify branches where feature works"
+      tools: ["git branch -a", "git log --oneline --all"]
+      
+    step_2:
+      action: "Examine working implementation"
+      commands:
+        - "git show BRANCH:path/to/file"
+        - "git diff current-branch other-branch -- path/to/file"
+      goal: "Understand HOW it works, not just WHAT it does"
+      
+    step_3:
+      action: "Compare with broken implementation"
+      focus:
+        - "What's different?"
+        - "What changed between branches?"
+        - "Which approach is correct?"
+      
+    step_4:
+      action: "Implement fix using working code as reference"
+      requirement: "Copy/adapt working code, don't rewrite from scratch"
+      note: "Make minimal changes needed to transplant working solution"
+
+  prohibited_actions:
+    - "Writing new code when working code exists on another branch"
+    - "Guessing at implementation without checking existing branches"
+    - "Reinventing patterns that already exist elsewhere"
+    - "Assuming 'my way is better' without evidence"
+
+examples:
+  - scenario: "Print functionality broken"
+    wrong_approach: |
+      AI: "Let me rewrite the print logic from scratch..."
+      Result: ❌ New bugs, untested code, wasted time
+      
+    correct_approach: |
+      AI: "Let me check master and getting-cheffy branches..."
+      Command: git show master:src/utils/weekParser.ts | grep "id:"
+      Finding: "Master uses meal-N IDs, current uses section-N"
+      Fix: Change one line to match working implementation
+      Result: ✅ Fixed, tested, proven to work
+
+  - scenario: "Parser not detecting sections"
+    wrong_approach: |
+      AI: "Let me redesign the parsing algorithm..."
+      Result: ❌ Breaks other features, creates new issues
+      
+    correct_approach: |
+      AI: "How does master handle this?"
+      Command: git show master:src/utils/weekParser.ts
+      Finding: "Master uses position-based parsing with H2 detection"
+      Fix: Adopt master's proven approach
+      Result: ✅ Works exactly as tested
+
+  - scenario: "Styling inconsistent with design"
+    wrong_approach: |
+      AI: "Let me create new CSS..."
+      Result: ❌ Diverges from established patterns
+      
+    correct_approach: |
+      AI: "What colors does getting-cheffy use?"
+      Command: git show getting-cheffy:src/config/colors.ts
+      Finding: "Specific color palette with hex codes"
+      Fix: Use exact same colors
+      Result: ✅ Consistent with tested design
+
+git_commands:
+  essential_commands:
+    list_branches: "git branch -a"
+    show_file: "git show BRANCH:path/to/file"
+    compare_file: "git diff branch1 branch2 -- path/to/file"
+    find_differences: "git diff --name-status branch1 branch2"
+    view_commit: "git show COMMIT_HASH"
+    
+  common_patterns:
+    check_how_master_does_it: "git show master:src/path/to/file.ts"
+    compare_with_working_branch: "git diff HEAD getting-cheffy -- src/components/Component.astro"
+    find_when_feature_broke: "git log --oneline --all -- path/to/file"
+
+actions:
+  - type: enforce
+    when: "User reports feature is broken"
+    do:
+      - "Ask: 'Does this work on master or any other branch?'"
+      - "If yes: Use git show to examine working implementation"
+      - "Identify minimal diff needed to fix"
+      - "Apply working code, don't rewrite"
+      
+  - type: enforce
+    when: "Merging or porting features between branches"
+    do:
+      - "Compare implementations on both branches"
+      - "Preserve what works, fix what's broken"
+      - "Use git diff to understand exact changes"
+      - "Don't assume new is better without testing"
+      
+  - type: prohibit
+    when: "Working code exists elsewhere"
+    do_not:
+      - "Rewrite from scratch"
+      - "Guess at implementation"
+      - "Ignore proven solutions"
+      - "Reinvent established patterns"
+
+exceptions:
+  when_new_code_is_acceptable:
+    - "Feature doesn't exist on any branch (truly new)"
+    - "All existing implementations are broken/incorrect"
+    - "Requirements have fundamentally changed"
+    - "Performance/security issue requires redesign"
+  
+  but_still:
+    - "Check if similar patterns exist elsewhere"
+    - "Reuse utilities, helpers, and established patterns"
+    - "Match existing code style and architecture"
+
+validation:
+  before_implementing_fix:
+    questions:
+      - "Have I checked if this works on other branches?"
+      - "Have I examined the working implementation?"
+      - "Do I understand WHY it works there?"
+      - "Am I using the minimal fix needed?"
+    
+  red_flags:
+    - "Writing 50+ lines to fix a 1-line issue"
+    - "Creating new patterns when old ones work"
+    - "Not referencing any other branches"
+    - "Guessing instead of looking"
+
+communication:
+  when_user_reports_issue:
+    respond: "Let me check how this works on [working branch]..."
+    show_work: "I see on master it uses X, but here it uses Y"
+    explain: "The difference is [specific thing], I'll adopt the working approach"
+    
+  avoid_saying:
+    - "Let me rewrite this..."
+    - "I have a better way..."
+    - "I'll create new code for..."
+    
+  instead_say:
+    - "Let me see how master handles this..."
+    - "I'll check the working implementation..."
+    - "I'll adopt what already works..."
+
+metadata:
+  priority: critical
+  version: 1.0
+  scope: All feature fixes and cross-branch work
+  created: 2025-12-14
+  rationale: "Prevents wheel reinvention, reduces bugs, leverages tested code"
+
+</rule>
