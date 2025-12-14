@@ -66,6 +66,29 @@ export default {
         'loose': '1.72',
         'extra-loose': '1.75',
         'extra-tight': '1.2',
+        'heading-h2': '1.3',
+        'heading-h3': '1.4',
+      },
+      // Font sizes - using clamp for fluid typography
+      fontSize: {
+        'body': 'clamp(18px, 2.2vw, 20px)',
+        'h1': 'clamp(2.4rem, 5vw, 2.8rem)',
+        'h2': 'clamp(1.9rem, 4vw, 2.2rem)',
+        'h3': 'clamp(1.4rem, 3.4vw, 1.7rem)',
+      },
+      // Font weights
+      fontWeight: {
+        'heading-bold': '700',
+        'heading-semibold': '600',
+      },
+      // Specific sizes for form elements
+      width: {
+        'checkbox': '1.5rem',
+        'checkbox-mobile': '1.6rem',
+      },
+      height: {
+        'checkbox': '1.5rem',
+        'checkbox-mobile': '1.6rem',
       },
       // Border radius matching our design
       borderRadius: {
