@@ -37,7 +37,7 @@
 - [x] Frozen mire poix
 - [x] Frozen peas
 
-## Gringo Taco Tostadas
+## Gringo Tostadas
 
 **Protein** Frozen taco meat
 
@@ -57,13 +57,13 @@ Heat up the taco meat in a skillet. Warm the refried beans in the microwave. Shr
 
 Spread a layer of warm refried beans on each tostada. Top with shredded cheese, taco meat, iceberg lettuce, plum tomatoes, sour cream, and cilantro. Serve with that jar of roasted garlic salsa on the side. Add a lime wedge to each plate.
 
-## Lamb Meatballs & Veg
+## Lamb Patties & Veg
 
 **Protein** Ground lamb
 
 **Ingredients** Frozen mire poix, onion paste/puree, parsley,white wine, microgreens
 
-**Description** Tender lamb meatballs served on a bed of sous vide mire poix, finished with a rich pan sauce made from the mire poix bag juices and meatball fond  + wine. Topped with fresh microgreens for brightness.
+**Description** Tender lamb patties served on a bed of sous vide mire poix, finished with a rich pan sauce made from the mire poix bag juices and pattie fond  + wine. Topped with fresh microgreens for brightness.
 
 **Already Prepped**
 
@@ -74,19 +74,19 @@ Spread a layer of warm refried beans on each tostada. Top with shredded cheese, 
 
 At 4:00pm, start the sous vide mire poix in the sous vide bath (Chef will set temperature remotely from the app to around 183°F).
 
-At around 5:00pm, Make the lamb meatballs; Combine the thawed ground lamb with onion paste/puree, and chopped parsley. Season with salt and pepper. Form into even-sized meatballs, about 1.5 inches in diameter. They can be a bit flat and patty like. Put in the fridge to chill until chef arrives.
+At around 5:00pm, Make the lamb patties; Combine the thawed ground lamb with onion paste/puree, and chopped parsley. Season with salt and pepper. Form into even-sized patties, about 1.5 inches in diameter. They can be a bit flat and patty like. Put in the fridge to chill until chef arrives.
 
 **Chef - Finishing & Plating**
 
-Heat a large skillet over medium-high heat with a drizzle of oil. Brown the meatballs on all sides until they develop good color and are cooked through, about 8-10 minutes total. Remove meatballs and set aside.
+Heat a large skillet over medium-high heat with a drizzle of oil. Brown the patties on all sides until they develop good color and are cooked through, about 8-10 minutes total. Remove patties and set aside.
 
 Pour the reserved mire poix bag juices into the hot skillet, scraping up all the browned meatball fond. Add a generous splash of wine and reduce over medium-high heat until thickened into a glossy pan sauce, about 3-4 minutes. Taste and adjust seasoning.
 
-To plate: Spread the warm mire poix as a bed on each plate. Nestle the meatballs on top. Drizzle the pan sauce over everything. Top with a generous handful of fresh microgreens for a peppery, fresh finish.
+To plate: Spread the warm mire poix as a bed on each plate. Nestle the patties on top. Drizzle the pan sauce over everything. Top with a generous handful of fresh microgreens for a peppery, fresh finish.
 
 Serve with bread if you have it
 
-## Spiced Sheet Pan Fish
+## Spiced SheetPan Fish
 
 **Protein** Frozen tilapia
 
