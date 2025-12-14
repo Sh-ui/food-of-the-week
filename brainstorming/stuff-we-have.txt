@@ -4,5 +4,6 @@ frozen tilapia
 frozen ground pork
 frozen ground lamb
 frozen mire poix
+frozen peas
 
 pantry single red onion

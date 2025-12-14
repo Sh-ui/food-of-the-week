@@ -1,179 +1,133 @@
-# Week of December 7-13, 2025
+# Week of December 14-20, 2025
 
 ## Grocery List
 
 ### Produce
-- [x] Organic Red Onion - 1 (est. 0.53 lb)
-- [x] Organic Green Cabbage - 1 (est. 2.56 lb)
-- [x] Organic White Sweet Potato - 4 (est. 2.04 lb)
-- [x] Organic Shallot - 2 (est. 0.20 lb)
-- [x] Purple Asparagus - 1 bunch (est. 1.25 lb)
-- [x] Organic Pomegranate - 3
-- [x] Organic Collard Green - 1 bunch
-- [x] Organic Red Beets - 1.00 lb
-- [x] Organic Golden Beets - 3 (est. 2.07 lb)
+- [ ] Microgreens
+- [ ] Fresh parsley - 1 bunch
+- [ ] Cherry tomatoes - 1 pint
+- [ ] Red onion - 1 large
+- [ ] Yellow onion - 1 large
+- [ ] Carrots - 3-4 medium
+- [ ] Potatoes - 3-4 medium (Yukon Gold or russet)
+- [ ] American bagged salad
 
 ### Staples
-- [x] 365 Tomato Paste, Double Concentrated - 1 (5 oz)
-- [x] Cento San Marzano Whole Peeled Tomatoes - 2 (28 oz)
-- [x] Lotus Foods Organic Brown Udon Rice Noodles - 2 (8 oz)
+- [ ] Onion paste or puree
+- [ ] White cooking wine
+- [ ] Couscous
+- [ ] Harissa paste
+- [ ] Preserved lemon or fresh lemon
+- [ ] Pitted olives (Kalamata or green)
+- [x] Japanese curry cubes
+- [ ] Ginger paste
+- [x] Japanese rice (or short-grain white rice)
+- [x] Panko breadcrumbs
+- [ ] Japanese dressing (bottle)
 
 ### Dairy
-- [ ] None this week
+- [ ] None yet
 
 ### Protein
-- [x] Ground pork - 1 lb (at home)
-- [x] Flat iron steak - 1 lb (at home)
-- [x] Sirloin flap steak - 1 lb (at home)
-- [x] Whole chicken - 1 (at home)
+- [x] Ground lamb
+- [x] Frozen tilapia
+- [x] Frozen ground pork
 
 ### Frozens
-- [x] 365 Organic Three Pepper Blend - 1 (16 oz)
-- [x] 365 Organic Mixed Mushrooms - 1 (10 oz)
+- [x] Frozen mire poix
+- [x] Frozen peas
 
-## ~~Stir Fry~~
+## Lamb Meatballs & Veg
 
-**Protein** Sirloin flap steak
+**Protein:** Ground lamb
 
-**Ingredients** Purple asparagus, bok choy microgreens, shallot, brown rice (at home)
+**Ingredients:** Frozen mire poix, onion paste/puree, parsley,white wine, microgreens
 
-**Description** Quick stir fry with tender sirloin flap steak, purple asparagus, and aromatic shallot, finished with delicate bok choy microgreens. Served over brown rice.
+**Description:** Tender lamb meatballs served on a bed of sous vide mire poix, finished with a rich pan sauce made from the mire poix bag juices and meatball fond  + wine. Topped with fresh microgreens for brightness.
 
-**Already Prepped**
+**Already Prepped:**
 
- - Sirloin flap steak is thawed.
+- Ground lamb is thawed.
+- Frozen mire poix has been vacuum sealed and cooked sous vide to perfect tenderness. Stored in fridge ready to warm.
 
-**Sous Chef - Prep**
+**Sous Chef - Prep:**
 
-Start the brown rice cooking according to package directions (or use a rice cooker).
+Make the lamb meatballs: Combine the thawed ground lamb with onion paste/puree (this will mellow the lamb flavor and add moisture). Season with salt, pepper, and any herbs you have on hand (oregano, thyme, or parsley work well). Form into even-sized meatballs, about 1.5 inches in diameter.
 
-Slice the sirloin flap steak thinly against the grain. Season with salt and pepper. You can marinate briefly in soy sauce, a touch of cornstarch, and sesame oil if you have 10 minutes.
+At serving time, warm the sous vide mire poix gently in its bag by dropping it in warm water or microwaving briefly. Once warm, open the bag and reserve ALL the cooking liquid for the sauce.
 
-Trim the woody ends off the asparagus and cut into 2-inch pieces. Slice the shallot thinly.
+**Chef - Finishing & Plating:**
 
-**Chef - Finishing & Plating**
+Heat a large skillet over medium-high heat with a drizzle of oil. Brown the meatballs on all sides until they develop good color and are cooked through, about 8-10 minutes total. Remove meatballs and set aside.
 
-Heat a wok or large skillet over high heat. Add oil with a high smoke point (vegetable, grapeseed, or peanut oil).
+Pour the reserved mire poix bag juices into the hot skillet, scraping up all the browned meatball fond. Add a generous splash of wine and reduce over medium-high heat until thickened into a glossy pan sauce, about 3-4 minutes. Taste and adjust seasoning.
 
-Stir fry the beef in batches to avoid crowding—you want a good sear. Set aside on a plate.
+To plate: Spread the warm mire poix as a bed on each plate. Nestle the meatballs on top. Drizzle the pan sauce over everything. Top with a generous handful of fresh microgreens for a peppery, fresh finish.
 
-In the same pan, add a bit more oil if needed. Stir fry the shallot for 30 seconds until fragrant, then add the asparagus. Cook for 2-3 minutes, tossing frequently, until bright and tender-crisp.
+Serve with bread if you have it
 
-Return the beef to the pan. Add a quick sauce: soy sauce, a splash of rice vinegar or rice wine, maybe a touch of honey or sugar, and garlic/ginger if you have them. Toss everything together for about 30 seconds.
+## Spiced Sheet Pan Fish
 
-Plate over the brown rice. Top with a generous handful of the bok choy microgreens—they'll wilt slightly from the heat and add a fresh, peppery finish.
+**Protein:** Frozen tilapia
 
+**Ingredients:** Cherry tomatoes, red onion, garlic, harissa or warm spices, preserved or fresh lemon, olives (optional), couscous, parsley, extra virgin olive oil
 
-## ~~One Pot Pasta~~
+**Description:** Frozen tilapia roasted at high heat with cherry tomatoes, red onion wedges, and warm North African spices. Served over garlic couscous with a bright parsley and olive oil finish.
 
-**Protein** Ground pork
+**Already Prepped:**
 
-**Ingredients** Brown udon rice noodles, tomato paste, San Marzano tomatoes, frozen mixed mushrooms, frozen three pepper blend
+- Frozen tilapia fillets (no need to thaw)
 
-**Description** A hearty one-pot pasta that combines ground pork with rich tomato sauce, mushrooms, and peppers. Quick weeknight meal with minimal cleanup.
+**Sous Chef - Cooking:**
 
-**Already Prepped**
+Start the garlic couscous in the rice cooker: smash garlic cloves in the garlic press into the couscous, then add to rice cooker with water or chicken broth. Season it chicken boullion instead of salt, and some white pepper. Set to cook, let it stay on warm until ready to plate.
 
- - Ground pork is thawed.
+Preheat oven to 500°F. On a large sheet pan (don't overcrowd), arrange: frozen tilapia fillets, cherry tomatoes (whole or halved), red onion cut into thick wedges. Scatter olives around.
 
-**Sous Chef - Cooking**
+Season everything generously: drizzle with olive oil, add harissa paste, salt, and pepper. Add thin slices of preserved lemon or fresh lemon wedges tucked around the pan.
 
-Brown the ground pork in a large pot or deep skillet with a drizzle of oil. Break it up as it cooks. Once browned, add chopped garlic and onion + rimalicious seasoning. Stir in the tomato paste and let it caramelize for a minute or two.
+Roast for 15-18 minutes until tilapia is cooked through and tomatoes are bursting. The fish should flake easily and have golden edges (Z can poke test it?)
 
-Add the San Marzano tomatoes, crushing them with your hands or a wooden spoon as you add them. Fill one of the empty cans halfway with water and add that too. Bring to a simmer.
+When done, turn oven to warm (or lowest setting) and leave the sheet pan in the oven. Keep couscous on warm in the rice cooker. Everything stays warm until Chef arrives.
 
-Add the frozen mushrooms and frozen pepper mix directly from the freezer. Add umami boosters to taste; like soy sauce, fish sauce, msg, a pinch of sugar. Let everything simmer for 10-15 minutes to meld the flavors.
+**Chef - Finishing & Plating:**
 
-Add the udon noodles directly to the pot. Cook according to package directions, stirring occasionally, until the noodles are tender and have absorbed some of the sauce. If it gets too thick, add a splash of water.
+Fluff the garlic couscous and spread as a bed on each plate. Nestle the roasted tilapia on top, along with the roasted tomatoes, onions, and any pan juices.
 
-Season with salt, pepper, and a pinch of red pepper flakes. Finish with fresh herbs if available (basil, parsley).
+Roughly chop fresh parsley and scatter generously over everything. Finish with a generous drizzle of good extra virgin olive oil and a squeeze of fresh lemon if needed.
 
-**Chef - Finishing & Plating**
+## Sweet Pork Curry
 
-Serve in bowls. Top with grated Parmesan if available.
+**Protein:** Frozen ground pork
 
-## ~~Marinated Steak~~ 
+**Ingredients:** Potatoes, carrots, yellow onion, frozen peas, Japanese curry cubes + honey, ginger paste, panko breadcrumbs, Japanese rice, American bagged salad, Japanese dressing
 
-**Protein** Flat iron steak
+**Description:** A weeknight-friendly take on Japanese pork katsu curry—ground pork simmered in rich curry sauce with potatoes and carrots, topped with toasted breadcrumbs for that katsu crunch. Served with Japanese rice and a simple salad. The honey adds a sweet, soft flavor to the curry.
 
-**Ingredients** White sweet potatoes, green cabbage, red onion
+**Already Prepped:**
 
-**Description** Sous vide flat iron steak finished with torch, served with warm sweet potatoes and charred cabbage wedges.
+- Ground pork is thawed.
+- Potatoes, carrots, and onions are diced (1-inch cubes) and vacuum sealed together. Stored in fridge.
 
-**Already Prepped**
+**Sous Chef - Prep:**
 
- - Flat iron steaks have been seasoned and vacuum sealed. Stored in fridge.
- 
- - White sweet potatoes have been vacuum sealed and cooked to perfect temperature. Stored in fridge ready to warm.
+Drop the vacuum-sealed vegetables into the sous vide bath (Chef will set temperature remotely from the app to around 183°F for vegetables).
 
-**Sous Chef - Prep**
+Toast the panko breadcrumbs: In a dry nonstick skillet over medium heat, toast panko until golden brown, stirring frequently. Set aside—they'll stay crispy.
 
-Drop the vacuum-sealed steaks into the sous vide bath set to steak temperature (Chef will set temperature remotely from the app, typically 130-135°F for medium-rare).
+At 5:30pm, start the Japanese rice in the rice cooker.
 
-Slice the red onion into rings (about ½-inch thick).
+**Chef - Finishing & Plating:**
 
-Cut the cabbage into thick wedges, cutting through the core/root end so each wedge holds together. This is important - the core keeps the leaves from falling apart.
+In a large pot or Dutch oven over medium-high heat, brown the ground pork with a drizzle of oil, breaking it up as it cooks. Once browned, add ginger paste and onion paste/puree and honey and cook until fragrant.
 
-Preheat oven to 500°F. Spread the sliced onion rings on a baking sheet with the white sweet potatoes from the bag. Toss everything with grapeseed oil and black pepper. Roast until caramelized and getting good color, about 10 minutes.
+Deglaze with cooking sake and add water or broth (about 3-4 cups) then bring to a simmer. Break up the Japanese curry cubes and stir them into the liquid until completely dissolved and the sauce thickens.
 
-Once they look roasted, change the oven temp to warm, and add the plates to the oven alongside the veggies to keep them both warm until the chef gets home.
+Add the already-cooked sous vide vegetables (along with the cooking liquid) and frozen peas. Stir gently and let everything heat through for 2-3 minutes. Taste and adjust seasoning.
 
-**Chef - Finishing & Plating**
+Fluff the Japanese rice and serve in bowls. Ladle the curry over the rice generously.
 
-Heat a large skillet over medium-high heat. Char the cabbage wedges on both sides until deeply golden and crispy, about 3-4 minutes per side. Remove and set aside.
+Top each bowl with a generous sprinkle of the toasted panko breadcrumbs for that katsu crunch.
 
-Remove steaks from sous vide bag, reserving ALL the juices. Pat steaks completely dry. Using a kitchen torch, sear all sides until a nice crust forms.
-
-In the same skillet used for cabbage, pour in the reserved steak bag juices. Reduce over medium-high heat until thickened into a glaze, scraping up any browned bits from the cabbage.
-
-Slice the steak against the grain.
-
-To plate: Arrange the roasted onions and sweet potato chunks on the plate. Fan the sliced steak over the top. Place the charred cabbage wedge alongside. Drizzle the reduced pan glaze over the steak and cabbage.
-
-
-## ~~Chicken Fricassée~~
-
-**Protein** Whole chicken
-
-**Ingredients** Collard greens, gold & red beets, pomegranate
-
-**Description** Chicken Fricassée (deconstructed whole chicken) served with braised collard greens, roasted beets, and garnished with pomegranate seeds and mustard vinaigrette; a satisfying, colorful meal.
-
-**Already Prepped**
-
- - Chicken has been spatchcocked, seasoned, and vacuum sealed flat with legs and thighs scored. Stored in fridge.
-
- - Golden and red beets have been vacuum sealed and cooked to perfect temperature. Stored in fridge ready to warm.
-
- - Homemade wheat dough is resting in the fridge.
-
-**Sous Chef - Prep**
-
-Prepare the bread according to [King Arthur No-Knead Rustic Whole Wheat Bread Instructions](https://www.kingarthurbaking.com/recipes/no-knead-rustic-whole-wheat-bread-recipe) give yourself enough time in the day to alot 2 hours for bread to counter rise, 30 minutes to cook and 2 hours to cool.
-
-At 3:30pm Drop the vacuum-sealed chicken into the sous vide bath set to chicken temperature (Chef will set temperature remotely from the app). Drop the vacuum-sealed gold and red beets into the same sous vide bath alongside the chicken to gently warm them.
-
-Wash, stem, and chop the collard greens roughly. Set aside.
-
-Prep a single pomegranate for the garnish.
-
-at 5:30 Preheat the air fryer oven to 475°F.
-
-**Chef - Finishing & Plating**
-
-With the air fryer oven now hot at 475°F. Spread the chopped collard greens in the small black roasting pan as a bed.
-
-Remove chicken from sous vide bag, reserve all the juices from the bag; pat the chicken all dry and then carve off the breasts and set them aside for now. Place the remaining dark meat + carcass skin-side up on the collard green bed.
-
-Roast the dark meat on the collard bed for 15 minutes until skin is golden and crispy. In the last 10 minutes, add the breasts back on top, so they can get crispy and hot as well
-
-While chicken roasts, make the sauce: Pour the reserved sous vide chicken juices into a small saucepan. Add mustard, white wine, and Worcestershire sauce to taste.
-
-To plate: Remove chicken from oven. Shred the dark meat (legs and thighs) off the bones and mix it into the wilted collard greens. Spread this mixture as the bed on the serving platter.
-
-Slice the breast meat. Nestle the breast slices and warm beet chunks on top of the collard-dark meat bed.
-
-Drizzle the warm mustard vinaigrette over everything and scatter pomegranate seeds on top for color and brightness.
-
-Serve it with the homemade wheat bread and some butter.
+Serve the American bagged salad on the side, dressed with the Japanese dressing.
 

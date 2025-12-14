@@ -4,6 +4,9 @@
 
 **[View or Edit This Week's Plan](FOOD-OF-THE-WEEK.md)** ⇒ [Live Site at food.schuepbach.work](https://sh-ui.github.io/food-of-the-week)
 
+![Version](https://img.shields.io/badge/version-1.3.7-blue.svg)
+![Status](https://img.shields.io/badge/status-active-success.svg)
+
 ## About
 
 This is a weekly meal planning system built with Astro that transforms structured meal plans into a beautiful, printable website with interactive grocery lists. The system supports a three-phase cooking workflow (Already Prepped, Sous Chef, Chef Finishing) designed for efficient weeknight dinners with family delegation.
@@ -48,6 +51,7 @@ GroceryPlanning/
 ├── README.md                    # This file - project overview
 ├── TODOS.md                     # Development roadmap
 ├── LICENSE.md                   # AGPL-3.0 license
+├── MIGRATION.md                 # Dependency migration plans (Tailwind v4, Marked v17)
 ├── .github/
 │   ├── dependabot.yml           # Automated dependency updates
 │   └── workflows/deploy.yml     # GitHub Pages deployment
@@ -181,7 +185,7 @@ The print layout is fully customizable via `public/print-config.json`:
 
 ## Tech Stack
 
-- **[Astro](https://astro.build)** v5.16+ - Static site generation with zero-JS by default
+- **[Astro](https://astro.build)** v5.16.5 - Static site generation with zero-JS by default
 - **[TypeScript](https://www.typescriptlang.org/)** - Type-safe parsing and utilities
 - **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS with centralized config as single source of truth
 - **[marked](https://marked.js.org/)** - Markdown parser for structured content

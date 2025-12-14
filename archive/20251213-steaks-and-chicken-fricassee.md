@@ -31,7 +31,7 @@
 - [x] 365 Organic Three Pepper Blend - 1 (16 oz)
 - [x] 365 Organic Mixed Mushrooms - 1 (10 oz)
 
-## Meal 1: ~~Stir Fry~~
+## Meal 1: Stir Fry
 
 **Protein:** Sirloin flap steak
 
@@ -66,7 +66,7 @@ Return the beef to the pan. Add a quick sauce: soy sauce, a splash of rice vineg
 Plate over the brown rice. Top with a generous handful of the bok choy microgreens—they'll wilt slightly from the heat and add a fresh, peppery finish.
 
 
-## Meal 2: ~~One Pot Pasta~~
+## Meal 2: One Pot Pasta
 
 **Protein:** Ground pork
 
@@ -96,7 +96,7 @@ Season with salt, pepper, and a pinch of red pepper flakes. Finish with fresh he
 
 Serve in bowls. Top with grated Parmesan if available.
 
-## Meal 3: ~~Marinated Steak~~ 
+## Meal 3: Marinated Steak
 
 **Protein:** Flat iron steak
 
@@ -137,7 +137,7 @@ Slice the steak against the grain.
 To plate: Arrange the roasted onions and sweet potato chunks on the plate. Fan the sliced steak over the top. Place the charred cabbage wedge alongside. Drizzle the reduced pan glaze over the steak and cabbage.
 
 
-## Meal 5: ~~Chicken Fricassée~~
+## Meal 5: Chicken Fricassée
 
 **Protein:** Whole chicken
 
