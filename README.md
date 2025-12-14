@@ -2,7 +2,9 @@
 
 > Weekly meal planning system for a household of 5
 
-**[View or Edit This Week's Plan](FOOD-OF-THE-WEEK.md)** ⇒ [Live Site at food.schuepbach.work](https://sh-ui.github.io/food-of-the-week)
+**Version:** `1.3.7` | **[View or Edit This Week's Plan](FOOD-OF-THE-WEEK.md)** ⇒ [Live Site at food.schuepbach.work](https://sh-ui.github.io/food-of-the-week)
+
+**Version History:** `1.0.0` = new-foundation baseline (Dec 2025) → `1.3.7` = Tailwind enhancements, brainstorming structure, migration docs, dependency updates
 
 ## About
 
@@ -48,6 +50,7 @@ GroceryPlanning/
 ├── README.md                    # This file - project overview
 ├── TODOS.md                     # Development roadmap
 ├── LICENSE.md                   # AGPL-3.0 license
+├── MIGRATION.md                 # Dependency migration plans (Tailwind v4, Marked v17)
 ├── .github/
 │   ├── dependabot.yml           # Automated dependency updates
 │   └── workflows/deploy.yml     # GitHub Pages deployment
@@ -181,7 +184,7 @@ The print layout is fully customizable via `public/print-config.json`:
 
 ## Tech Stack
 
-- **[Astro](https://astro.build)** v5.16+ - Static site generation with zero-JS by default
+- **[Astro](https://astro.build)** v5.16.5 - Static site generation with zero-JS by default
 - **[TypeScript](https://www.typescriptlang.org/)** - Type-safe parsing and utilities
 - **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS with centralized config as single source of truth
 - **[marked](https://marked.js.org/)** - Markdown parser for structured content
