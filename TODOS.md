@@ -1,6 +1,8 @@
 # TODOS
 
 ## Needs Done
+ - [ ] fix scroll up animation for header print button
+   - _it fades out when scrolling down but it doesn't fade in properly when scrolling up_
  - [ ] fix appearance of checked items in print view
 
 ## Possible Features
@@ -16,7 +18,7 @@
 - [ ] Hero section redesign - something more appropriate (maybe non-animated cheffy hat face? Or save for getting-cheffy branch?)
 
 ### Stack Migration
-- [ ] Migrate to a new stack based on (MIGRATION.md)[MIGRATION.md]
+- [ ] Migrate to a new stack based on [MIGRATION.md](MIGRATION.md)
 
 ---
 
