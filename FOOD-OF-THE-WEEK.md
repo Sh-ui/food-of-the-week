@@ -51,9 +51,11 @@
 
 **Sous Chef - Prep**
 
-Heat up the taco meat in a skillet. Warm the refried beans in the microwave. Shred the iceberg lettuce into thin strips. Dice the plum tomatoes. Chop the cilantro. Cut limes into wedges.
+Shred the iceberg lettuce into thin strips. Dice the plum tomatoes. Chop the cilantro. Cut limes into wedges.
 
 **Chef - Finishing & Plating**
+
+Heat up the taco meat in a skillet. Warm the refried beans in the microwave.
 
 Spread a layer of warm refried beans on each tostada. Top with shredded cheese, taco meat, iceberg lettuce, plum tomatoes, sour cream, and cilantro. Serve with that jar of roasted garlic salsa on the side. Add a lime wedge to each plate.
 
