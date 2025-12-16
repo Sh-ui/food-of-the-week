@@ -4,6 +4,7 @@
  - [ ] fix scroll up animation for header print button
    - _it fades out when scrolling down but it doesn't fade in properly when scrolling up_
  - [ ] fix appearance of checked items in print view
+ - [ ] check if breakpoints.ts file is still needed
 
 ## Possible Features
 
