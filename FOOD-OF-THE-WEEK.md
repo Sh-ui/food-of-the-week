@@ -37,7 +37,7 @@
 - [x] Frozen mire poix
 - [x] Frozen peas
 
-## Gringo Tostadas
+## ~~Gringo Tostadas~~
 
 **Protein** Frozen taco meat
 
