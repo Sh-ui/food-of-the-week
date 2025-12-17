@@ -334,6 +334,7 @@ function parseMarkdownContent(content: string): PagePlan {
   
   return {
     pageTitle,
+    heroSummary,
     listSection,
     contentSections,
   };
