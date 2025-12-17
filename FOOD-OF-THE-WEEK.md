@@ -1,5 +1,10 @@
 # Week of December 14-20, 2025
 
+**Gringo Tostadas • Prep&Heat • cut toppings + heat stuff**
+**Lamb Patties & Veg • SousVidePrep • 4:00 mire poix + 5:00 patties**
+**Sweet Pork Curry • SousVidePrep+ • 3:30 veg + 5:30 rice + toast panko**
+**Spiced SheetPan Fish • SousChefDish • 5:30 Couscous + oven roast**
+
 ## Grocery List
 
 ### Produce
