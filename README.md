@@ -68,8 +68,7 @@ GroceryPlanning/
 │   │   ├── WeeklyPlan.astro     # Main layout orchestrator
 │   │   └── Footer.astro         # Site footer with links
 │   ├── config/
-│   │   ├── colors.ts            # Color cycling logic (references Tailwind)
-│   │   └── breakpoints.ts       # Scroll thresholds for header behavior
+│   │   └── colors.ts            # Palette-driven color system (references Tailwind)
 │   ├── layouts/
 │   │   └── Layout.astro         # Base HTML layout
 │   ├── pages/
@@ -84,9 +83,7 @@ GroceryPlanning/
 │   ├── favicon.svg
 │   └── print-config.json        # Customize print layout
 ├── tailwind.config.mjs          # Single source of truth for colors, spacing, breakpoints
-├── astro.config.mjs             # Astro build configuration
-└── .cursor/
-    └── rules/                   # AI assistant guidelines
+└── astro.config.mjs             # Astro build configuration
 ```
 
 ## Features
@@ -96,7 +93,7 @@ GroceryPlanning/
 - **Interactive Grocery Lists** - Checkboxes persist in browser localStorage with week-specific keys
 - **Weekend Planning** - Dedicated weekend page with separate meal plans (`/weekend` route)
 - **Flexible Markdown Parsing** - Position-based parser works with any markdown structure (no keyword dependencies)
-- **Themeable Color System** - Centralized colors with automatic cycling for instruction sections
+- **Flexible Color System** - Palette-driven theming with automatic variant derivation and cycling
 - **Three-Phase Instructions** - Color-coded workflow sections (Already Prepped, Sous Chef, Chef Finishing)
 - **Print Functionality** - Print full week, grocery list only, or individual meals with config-driven formatting
 - **Mobile-Friendly** - Responsive design optimized for shopping and cooking on any device
@@ -127,38 +124,56 @@ src/config/colors.ts    ← References Tailwind colors, handles cycling logic
 Components              ← Use Tailwind utilities OR colors.ts for dynamic styling
 ```
 
-**To change the color palette:**
+**To customize colors:**
 
-1. **Edit `tailwind.config.mjs`** - All hex values are defined in `theme.extend.colors`:
+1. **Base theme colors** - Edit `tailwind.config.mjs` under `theme.extend.colors`:
    ```js
    colors: {
      'primary': '#494331',        // Headings, buttons
-     'secondary': '#F3CA40',      // Gold accent (first subsection border)
-     'accent': '#F08A4B',         // Orange highlights
+     'secondary': '#F3CA40',      // Accent (info group border)
+     'accent': '#F08A4B',         // Highlights
      'bg': '#FAF8F3',             // Page background
      'bg-alt': '#F5F2EB',         // Subsection backgrounds
      'border': '#E8E3D8',         // Card borders
-     // Instruction section cycling colors
-     'instruction-salmon': '#D78A76',
-     'instruction-yellow': '#F3CA40',
-     'instruction-orange': '#F08A4B',
-     // ... (each has -bg and -heading variants)
+     // ... cooked state colors, text colors, etc.
    }
    ```
 
-2. **Subsection color cycling** is configured in `src/config/colors.ts`:
-   - `firstSubsection` - The meal info section (Protein, Ingredients, Description) - uses gold border
-   - `instructionSequence` - Subsequent sections cycle through: salmon → yellow → orange → repeat
-   - `positionOverrides` - Optional: force specific positions to use specific colors
+2. **Instruction palette** - Define cycling colors in `theme.extend.instructionPalette`:
+   ```js
+   instructionPalette: [
+     { name: 'salmon', color: '#D78A76' },
+     { name: 'yellow', color: '#F3CA40' },
+     { name: 'orange', color: '#F08A4B' },
+   ]
+   ```
+   The system automatically derives `bg` and `heading` variants from each base color. Add any number of palette entries - they cycle automatically.
+
+3. **Subsection overrides** - Configure info group and position-specific overrides in `theme.extend.instructionSubsections`:
+   ```js
+   instructionSubsections: {
+     info: { bg: 'bg-alt', border: 'secondary', heading: 'primary' },
+     overrides: {
+       0: { scheme: 'salmon' },           // Use palette entry by name
+       2: { border: '#81E3F6' },           // Or use explicit Tailwind keys/hex
+     },
+   }
+   ```
+
+**How it works:**
+- **Palette-driven**: Define base colors once, system derives variants automatically
+- **Automatic cycling**: Instruction sections cycle through palette entries (wraps if more sections than colors)
+- **Flexible overrides**: Break the cycle for specific positions using palette names or Tailwind tokens
+- **Single source of truth**: All configuration in `tailwind.config.mjs`, `colors.ts` handles derivation logic
 
 **Example customizations:**
 
 | Goal | Edit |
 |------|------|
-| Change gold accent to blue | `'secondary': '#3B82F6'` in tailwind.config.mjs |
-| Add a 4th cycling color | Add new color set to `instructionSequence` array in colors.ts |
-| Make 2nd instruction always green | Add `positionOverrides: { 1: {...} }` in colors.ts |
-| Darken page background | Change `'bg': '#FAF8F3'` to a darker value |
+| Add a 4th cycling color | Add `{ name: 'green', color: '#22C55E' }` to `instructionPalette` array |
+| Change info group colors | Edit `instructionSubsections.info` in tailwind.config.mjs |
+| Override 2nd instruction to use salmon | Add `0: { scheme: 'salmon' }` to `instructionSubsections.overrides` |
+| Use custom color for position 3 | Add `2: { bg: 'bg-alt', border: '#81E3F6', heading: 'primary' }` to overrides |
 
 **Note:** CSS custom properties in `global.css` mirror Tailwind colors for backwards compatibility with scoped component styles.
 
