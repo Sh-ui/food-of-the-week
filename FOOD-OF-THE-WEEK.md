@@ -88,36 +88,6 @@ To plate: Spread the warm mire poix as a bed on each plate. Nestle the patties o
 
 Serve with bread if you have it
 
-## Spiced SheetPan Fish
-
-**Protein** Frozen tilapia
-
-**Ingredients** Cherry tomatoes, red onion, garlic, harissa or warm spices, meyer lemons, olives (optional), couscous, parsley, extra virgin olive oil
-
-**Description** Frozen tilapia roasted at high heat with cherry tomatoes, chunky red onion, and warm North African spices. Served over garlic couscous with a bright parsley and olive oil finish.
-
-**Already Prepped**
-
-- Frozen tilapia fillets (no need to thaw)
-
-**Sous Chef - Cooking**
-
-Start the garlic couscous in the rice cooker: smash garlic cloves in the garlic press into the couscous, then add to rice cooker with water or chicken broth. Season it chicken boullion instead of salt, and some white pepper. Set to cook, let it stay on warm until ready to plate.
-
-Preheat oven to 500°F. On a large sheet pan (don't overcrowd), arrange: frozen tilapia fillets, cherry tomatoes (whole), red onion cut into petals. Scatter olives around.
-
-Season everything generously: drizzle with olive oil, add harissa paste, salt, and pepper (you can taste a raw veggie to gauge salt levels). Add slices of fresh meyer lemon wedges tucked around the pan.
-
-Roast for around 15 minutes until tilapia is cooked through and tomatoes are bursting. The fish should flake easily and have golden edges (Give it the poke test!)
-
-When done, turn oven to warm (or lowest setting) and leave the sheet pan in the oven. Keep couscous on warm in the rice cooker. Everything stays warm until Chef arrives.
-
-**Chef - Finishing & Plating**
-
-Fluff the garlic couscous and spread as a bed on each plate. Nestle the roasted tilapia on top, along with the roasted tomatoes, onions, and any pan juices.
-
-Roughly chop fresh parsley and scatter generously over everything. Finish with a generous drizzle of good extra virgin olive oil and a squeeze of the nearest roasted lemon if desired.
-
 ## Sweet Pork Curry
 
 **Protein** Frozen ground pork
@@ -150,4 +120,34 @@ Add the already-cooked sous vide vegetables (along with the cooking liquid) and 
 Serve on plates with rice in the center in rounded mound, use the back of a ladle to press a divet into one side of the rice mound (off center, turning the rice into a plump crescent moon shape), ladel the curry into this divet and put the dressed salad on the opposite side.
 
 Sprinkle the toasted panko breadcrumbs generously over the curry portions right before serving.
+
+## Spiced SheetPan Fish
+
+**Protein** Frozen tilapia
+
+**Ingredients** Cherry tomatoes, red onion, garlic, harissa or warm spices, meyer lemons, olives (optional), couscous, parsley, extra virgin olive oil
+
+**Description** Frozen tilapia roasted at high heat with cherry tomatoes, chunky red onion, and warm North African spices. Served over garlic couscous with a bright parsley and olive oil finish.
+
+**Already Prepped**
+
+- Frozen tilapia fillets (no need to thaw)
+
+**Sous Chef - Cooking**
+
+Start the garlic couscous in the rice cooker: smash garlic cloves in the garlic press into the couscous, then add to rice cooker with water or chicken broth. Season it chicken boullion instead of salt, and some white pepper. Set to cook, let it stay on warm until ready to plate.
+
+Preheat oven to 500°F. On a large sheet pan (don't overcrowd), arrange: frozen tilapia fillets, cherry tomatoes (whole), red onion cut into petals. Scatter olives around.
+
+Season everything generously: drizzle with olive oil, add harissa paste, salt, and pepper (you can taste a raw veggie to gauge salt levels). Add slices of fresh meyer lemon wedges tucked around the pan.
+
+Roast for around 15 minutes until tilapia is cooked through and tomatoes are bursting. The fish should flake easily and have golden edges (Give it the poke test!)
+
+When done, turn oven to warm (or lowest setting) and leave the sheet pan in the oven. Keep couscous on warm in the rice cooker. Everything stays warm until Chef arrives.
+
+**Chef - Finishing & Plating**
+
+Fluff the garlic couscous and spread as a bed on each plate. Nestle the roasted tilapia on top, along with the roasted tomatoes, onions, and any pan juices.
+
+Roughly chop fresh parsley and scatter generously over everything. Finish with a generous drizzle of good extra virgin olive oil and a squeeze of the nearest roasted lemon if desired.
 
