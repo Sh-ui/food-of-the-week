@@ -1,6 +1,5 @@
 ---
-description: Version Management and Semantic Versioning
-globs: package.json, README.md
+alwaysApply: true
 ---
 # Version Management and Semantic Versioning
 

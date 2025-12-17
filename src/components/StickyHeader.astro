@@ -474,7 +474,12 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
 
 <script>
   import { printSection } from '../utils/printGenerator';
-  import { scrollThresholds } from '../config/breakpoints';
+
+  const scrollThresholds = {
+    HEADER_ACTIVATION: 100,
+    SECTION_VISIBILITY: 0.25,
+    FADE_OUT_START: 0.85,
+  } as const;
 
   // ============================================
   // HEADER STATE MANAGEMENT - Simple two-state toggle
