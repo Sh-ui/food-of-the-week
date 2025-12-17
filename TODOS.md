@@ -1,6 +1,7 @@
 # TODOS
 
 ## Needs Done
+ - [ ] use index sequence override to setup info subsection specified theming and prune deprecated approach
  - [ ] integrate ko-fi
  - [ ] integrate goattracker
  - [ ] fix scroll up animation for header print button
