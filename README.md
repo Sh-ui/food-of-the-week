@@ -76,8 +76,7 @@ GroceryPlanning/
 │   │   ├── index.astro          # Main page (FOOD-OF-THE-WEEK.md)
 │   │   └── weekend.astro        # Weekend page (WEEKEND.md)
 │   ├── styles/
-│   │   ├── global.css           # Main styles with CSS custom properties
-│   │   └── print.css            # Print-specific styles
+│   │   └── global.css           # Main styles with CSS custom properties
 │   └── utils/
 │       ├── weekParser.ts        # Position-based markdown parser
 │       └── printGenerator.ts    # Print layout generation from config
