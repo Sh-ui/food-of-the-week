@@ -4,7 +4,9 @@
  - [ ] use index sequence override to setup info subsection specified theming and prune deprecated approach
  - [ ] fix license formatting in the repo for parity with standard approaches
  - [ ] integrate ko-fi
- - [ ] integrate goattracker
+ - [ ] integrate GoatCounter
+   - use script line embedded in `Layout.astro`
+   - use generated API key + github action/deployment to push a log periodically to my email
  - [ ] convert .mjs files to .ts files
  - [ ] fix scroll up animation for header print button
    - _it fades out when scrolling down but it doesn't fade in properly when scrolling up_
