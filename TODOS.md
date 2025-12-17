@@ -5,9 +5,11 @@
  - [ ] fix license formatting in the repo for parity with standard approaches
  - [ ] integrate ko-fi
  - [ ] integrate GoatCounter
-   - use script line embedded in `Layout.astro`
-   - use generated API key + github action/deployment to push a log periodically to my email
- - [ ] convert .mjs files to .ts files
+   - _use script line embedded in `Layout.astro`_
+   - _use generated API key + github action/deployment to push a log periodically to my email_
+ - [ ] convert .mjs files to .ts files _*this actually might be more involved_
+   - see about converting `astro.config.mjs` to `.ts`
+   - easiest way to get rid of `tailwind.config.mjs` would be a [MIGRATION](MIGRATION.md) to `v4` 
  - [ ] fix scroll up animation for header print button
    - _it fades out when scrolling down but it doesn't fade in properly when scrolling up_
  - [ ] fix appearance of checked items in print view
