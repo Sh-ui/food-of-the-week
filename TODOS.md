@@ -2,6 +2,7 @@
 
 ## Needs Done
  - [ ] use index sequence override to setup info subsection specified theming and prune deprecated approach
+ - [ ] fix license formatting in the repo for parity with standard approaches
  - [ ] integrate ko-fi
  - [ ] integrate goattracker
  - [ ] fix scroll up animation for header print button
