@@ -1,9 +1,7 @@
 ---
 description: Brainstorming Folder Workflow
-globs: brainstorming/**
-alwaysApply: true
+alwaysApply: false
 ---
-
 # Brainstorming Workflow
 
 Rules for using the `brainstorming/` folder during weekly meal planning sessions.

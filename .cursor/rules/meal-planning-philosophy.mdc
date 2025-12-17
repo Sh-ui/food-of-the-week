@@ -1,9 +1,7 @@
 ---
 description: Meal Planning Philosophy and Recipe Generation Guidelines
-globs: 
-alwaysApply: true
+alwaysApply: false
 ---
-
 # Meal Planning Philosophy
 
 Guidelines for generating weekly meal plans that match the household's cooking style, constraints, and preferences.

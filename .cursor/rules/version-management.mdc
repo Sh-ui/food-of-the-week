@@ -1,0 +1,319 @@
+---
+description: Version Management and Semantic Versioning
+globs: package.json, README.md
+---
+# Version Management and Semantic Versioning
+
+Guidelines for determining when version updates are warranted and how to execute them consistently across the codebase.
+
+<rule>
+name: version-management
+description: Standards for semantic versioning, version bump timing, and commit message formatting
+
+philosophy:
+  context: "Version numbers communicate the nature and impact of changes to users and maintainers"
+  goal: "Update versions deliberately when meaningful changes accumulate, not reactively for every commit"
+  principle: "Semantic versioning (MAJOR.MINOR.PATCH) signals compatibility and scope of changes"
+
+semantic_versioning:
+  format: "MAJOR.MINOR.PATCH"
+  
+  major_bump:
+    when: "Breaking changes to public APIs or user-facing behavior"
+    examples:
+      - "Removing or renaming exported functions/components"
+      - "Changing required configuration structure that breaks existing setups"
+      - "Removing features users depend on"
+      - "Changing data formats that require migration"
+    signal: "Users must take action to upgrade"
+  
+  minor_bump:
+    when: "New features or significant enhancements that maintain backwards compatibility"
+    examples:
+      - "Adding new configuration options with sensible defaults"
+      - "Introducing new components or utilities"
+      - "Refactoring internal architecture without changing external behavior"
+      - "Adding new capabilities users can opt into"
+    signal: "Users can upgrade safely and gain new functionality"
+  
+  patch_bump:
+    when: "Bug fixes and minor improvements that don't change functionality"
+    examples:
+      - "Fixing broken behavior"
+      - "Performance optimizations"
+      - "Documentation corrections"
+      - "Dependency updates (non-breaking)"
+    signal: "Users should upgrade for fixes"
+
+scope_definition:
+  infrastructure_changes:
+    description: "Changes to the website/application infrastructure that warrant versioning"
+    categories:
+      code_functionality:
+        - "Component logic changes"
+        - "Utility function additions/modifications"
+        - "Parser/processing logic updates"
+        - "State management changes"
+        - "Routing changes"
+      
+      configuration_structure:
+        - "Adding new configuration keys/sections"
+        - "Changing configuration schema/shape"
+        - "Removing configuration options"
+        - "Restructuring how config is consumed"
+      
+      build_deployment:
+        - "Build pipeline changes"
+        - "Dependency additions/removals"
+        - "Deployment configuration"
+        - "Environment setup changes"
+      
+      features_capabilities:
+        - "New user-facing features"
+        - "New developer-facing APIs"
+        - "Functional bug fixes"
+        - "Performance improvements to code"
+  
+  non_infrastructure_changes:
+    description: "Changes that don't affect infrastructure and should not trigger version bumps"
+    categories:
+      content_updates:
+        - "Weekly/periodic content refreshes (meal plans, schedules, data files)"
+        - "Markdown content updates that don't change site capabilities"
+        - "User-facing text changes that don't affect functionality"
+        - "Data file updates (JSON, YAML, etc. containing user content)"
+      
+      styling_value_tweaks:
+        - "Color hex value changes in theme config"
+        - "Font size adjustments"
+        - "Font family choices"
+        - "Spacing value tweaks (padding, margin values)"
+        - "Border radius adjustments"
+        - "Print configuration value changes (margins, fonts, sizes)"
+        - "Any change that only affects visual appearance without changing structure"
+      
+      documentation:
+        - "README clarifications (unless documenting new features)"
+        - "Comment improvements"
+        - "Example updates"
+        - "TODO list updates"
+      
+      development_workflow:
+        - "Cursor rules additions/changes"
+        - "Git ignore updates"
+        - "Editor configuration"
+        - ".env.example changes"
+      
+      trivial_fixes:
+        - "Typo corrections in UI strings"
+        - "Whitespace formatting"
+        - "Import reordering"
+  
+  distinguishing_configuration_changes:
+    structural_vs_values:
+      description: "Not all config file changes are infrastructure changes"
+      
+      infrastructure_worthy:
+        - "Adding a new top-level configuration key (e.g., instructionPalette array)"
+        - "Changing how config is structured (e.g., nested object becomes array)"
+        - "Renaming configuration keys"
+        - "Changing what types of values are accepted"
+      
+      not_infrastructure_worthy:
+        - "Changing color hex values within existing structure"
+        - "Adjusting numeric values (font sizes, spacing, margins)"
+        - "Reordering entries within arrays/objects"
+        - "Adding/removing palette entries without changing schema"
+      
+      test: "Ask: 'Does this change require code updates to handle it differently?' If yes, infrastructure. If no, styling."
+  
+  guidance: "Version only for infrastructure changes. Content and styling tweaks accumulate until an infrastructure change occurs."
+
+version_bump_triggers:
+  when_to_bump:
+    - "Completing a feature branch with new capabilities"
+    - "Finishing a refactoring that changes internal structure"
+    - "Fixing a significant bug"
+    - "Merging a PR that introduces notable changes"
+    - "Completing a milestone that represents a cohesive unit of work"
+  
+  when_not_to_bump:
+    - "After every individual commit"
+    - "For in-progress work on a feature branch"
+    - "For content/data updates unrelated to code capabilities"
+    - "During exploratory refactoring before completion"
+  
+  timing_principle: "Bump when a discrete unit of user-facing value is complete and ready to communicate"
+
+commit_message_format:
+  pattern: "Bump version to X.Y.Z - [concise rationale]"
+  
+  rationale_guidelines:
+    - "Focus on what changed, not how"
+    - "Use present tense, active voice"
+    - "Summarize the category of changes"
+    - "Keep under 10 words after the dash"
+  
+  examples:
+    good:
+      - "Bump version to 2.0.0 - breaking API restructure"
+      - "Bump version to 1.4.0 - flexible theming system"
+      - "Bump version to 1.3.8 - fix navigation bug"
+      - "Bump version to 1.5.0 - add export functionality"
+    
+    bad:
+      - "Bump version to 1.4.0 - changed colors.ts and tailwind.config.mjs and added palette support and..." (too verbose)
+      - "Bump version to 1.4.0 - stuff" (too vague)
+      - "Bump version to 1.4.0" (no rationale)
+      - "version bump" (doesn't specify version)
+
+version_bump_process:
+  steps:
+    1: "Determine appropriate version number based on changes since last bump"
+    2: "Update package.json version field"
+    3: "Update README.md version badge if present"
+    4: "Create standalone commit with version bump message"
+    5: "Do NOT bundle version bump with feature commits"
+  
+  files_to_update:
+    package_json:
+      path: "package.json"
+      field: "version"
+      format: "JSON string value"
+    
+    readme:
+      conditional: "Only if version badge exists"
+      patterns:
+        - "![Version](https://img.shields.io/badge/version-X.Y.Z-blue.svg)"
+        - "Version X.Y.Z"
+        - "## Version X.Y.Z"
+      action: "Update to new version number"
+  
+  commit_isolation:
+    principle: "Version bump commits should stand alone"
+    reasoning: "Makes version history clear and parseable by automation"
+    enforcement: "Never combine version bump with feature/fix changes in same commit"
+
+determining_version_change:
+  decision_tree:
+    step_1:
+      question: "Does this break existing functionality or APIs?"
+      yes: "MAJOR bump (X.0.0)"
+      no: "Continue to step 2"
+    
+    step_2:
+      question: "Does this add new features or significant internal changes?"
+      yes: "MINOR bump (0.X.0)"
+      no: "Continue to step 3"
+    
+    step_3:
+      question: "Does this fix bugs or make minor improvements?"
+      yes: "PATCH bump (0.0.X)"
+      no: "No version bump needed"
+  
+  context_gathering:
+    - "Review git log since last version bump commit"
+    - "Identify categories of changes (features, fixes, refactors, content)"
+    - "Assess cumulative impact on users"
+    - "Consider whether changes form a cohesive release unit"
+
+actions:
+  - type: evaluate
+    when: "Completing work on a branch or merging changes"
+    do:
+      - "Review commits since last version bump"
+      - "Categorize changes by semantic versioning impact"
+      - "Determine if version-worthy threshold is met"
+      - "If yes, proceed to version bump process"
+  
+  - type: execute
+    when: "Version bump is warranted"
+    do:
+      - "Calculate new version number using decision tree"
+      - "Draft concise commit message rationale"
+      - "Update package.json version field"
+      - "Update README.md version references if present"
+      - "Create standalone commit with version bump message"
+      - "Do not combine with other changes"
+  
+  - type: skip
+    when: "Changes are non-version-worthy"
+    do:
+      - "Continue normal development workflow"
+      - "Do not create version bump commit"
+      - "Track that changes will be included in next version-worthy bump"
+
+version_history_patterns:
+  learning_from_history:
+    - "Observe spacing between version bumps in git log"
+    - "Note what types of changes triggered previous bumps"
+    - "Match project's established versioning cadence"
+    - "Respect existing patterns unless explicitly changing strategy"
+  
+  consistency_principle: "Version bumps should feel consistent in scope and timing across project history"
+
+anti_patterns:
+  avoid:
+    - "Version bump after every feature branch merge (too frequent)"
+    - "Bundling months of changes into single bump (too infrequent)"
+    - "Skipping version bump for significant refactors (undervaluing internal improvements)"
+    - "Major bumps for minor breaking changes in alpha/beta projects"
+    - "Forgetting to update version after completing milestone"
+  
+  balance: "Find rhythm between 'every commit' and 'once a year' based on project velocity and user impact"
+
+examples:
+  scenario_1:
+    context: "Added flexible theming system with new config options, backwards compatible"
+    changes:
+      - "New instructionPalette array in config"
+      - "Refactored color derivation logic"
+      - "Added user-facing override system"
+    assessment: "New feature, backwards compatible, significant internal change"
+    decision: "MINOR bump (1.3.7 → 1.4.0)"
+    commit_message: "Bump version to 1.4.0 - flexible theming system"
+  
+  scenario_2:
+    context: "Fixed navigation link bug"
+    changes:
+      - "Corrected footer link with leading slash"
+    assessment: "Bug fix, no new features"
+    decision: "PATCH bump (1.4.0 → 1.4.1)"
+    commit_message: "Bump version to 1.4.1 - fix navigation bug"
+  
+  scenario_3:
+    context: "Updated weekly meal plan content and tweaked colors"
+    changes:
+      - "Replaced recipes in data file"
+      - "Updated grocery list"
+      - "Changed primary color from #494331 to #3a3626"
+      - "Adjusted h2 font size from 2.2rem to 2.3rem"
+    assessment: "Content update and styling value tweaks, no infrastructure changes"
+    decision: "No version bump"
+    action: "Continue normal workflow"
+  
+  scenario_4:
+    context: "Removed deprecated API, changed config structure"
+    changes:
+      - "Deleted old theme system"
+      - "Config now requires instructionPalette key"
+    assessment: "Breaking change, requires user migration"
+    decision: "MAJOR bump (1.4.0 → 2.0.0)"
+    commit_message: "Bump version to 2.0.0 - breaking config restructure"
+  
+  scenario_5:
+    context: "Tweaked print layout margins and updated README"
+    changes:
+      - "Changed print margins from 0.5in to 0.75in in print config"
+      - "Adjusted print font size from 11pt to 12pt"
+      - "Fixed typo in README"
+    assessment: "Print config value tweaks and documentation, no infrastructure changes"
+    decision: "No version bump"
+    action: "Continue normal workflow"
+
+metadata:
+  priority: high
+  version: 1.0
+  scope: Version management across project lifecycle
+
+</rule>
