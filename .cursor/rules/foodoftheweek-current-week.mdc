@@ -1,9 +1,7 @@
 ---
 description: FOOD-OF-THE-WEEK Structure for Current Week
-globs: FOOD-OF-THE-WEEK.md
-alwaysApply: true
+alwaysApply: false
 ---
-
 # FOOD-OF-THE-WEEK Current Week Structure
 
 Standards for how `FOOD-OF-THE-WEEK.md` serves as the source of truth for the current week's meal plan.

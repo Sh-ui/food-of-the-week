@@ -27,17 +27,19 @@ export default {
         'cooked-bg': '#f0ede6',
         'cooked-text': '#8a887f',
         'cooked-border': '#d8d4c9',
-        
-        // Instruction section colors (used by colors.ts for cycling)
-        'instruction-salmon': '#D78A76',
-        'instruction-salmon-bg': '#fef5f2',
-        'instruction-salmon-heading': '#b86d5c',
-        'instruction-yellow': '#F3CA40',
-        'instruction-yellow-bg': '#fef9e8',
-        'instruction-yellow-heading': '#c9a22d',
-        'instruction-orange': '#F08A4B',
-        'instruction-orange-bg': '#fff5ef',
-        'instruction-orange-heading': '#d16d2f',
+      },
+      instructionPalette: [
+        { name: 'salmon', color: '#D78A76' },
+        { name: 'yellow', color: '#F3CA40' },
+        { name: 'orange', color: '#F08A4B' },
+      ],
+      instructionSubsections: {
+        info: { bg: 'bg-alt', border: 'secondary', heading: 'primary' },
+        overrides: {
+          // 0: { scheme: 'salmon' },
+          // 2: { border: '#81E3F6' },
+          // 5: { bg: 'bg-alt', border: 'accent', heading: 'primary' },
+        },
       },
       fontFamily: {
         sans: ['Work Sans', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],

@@ -1,9 +1,7 @@
 ---
 description: Recipe Instruction Format - Three-Phase Workflow
-globs: README.md, brainstorming/**
-alwaysApply: true
+alwaysApply: false
 ---
-
 # Recipe Instruction Format
 
 Guidelines for structuring recipe instructions in the three-phase workflow format that matches the household's actual cooking process.
