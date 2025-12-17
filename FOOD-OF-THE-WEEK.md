@@ -74,7 +74,7 @@ Spread a layer of warm refried beans on each tostada. Top with shredded cheese, 
 
 **Sous Chef - Prep**
 
-At 4:00pm, start the sous vide mire poix in the sous vide bath (Chef will set temperature remotely from the app to around 183°F).
+At no later than 3:30pm, start the sous vide mire poix in the sous vide bath (Chef will set temperature remotely from the app to around 183°F).
 
 At around 5:00pm, Make the lamb patties; Combine the thawed ground lamb with the onion jam, and chopped parsley (half a bunch). Season with salt and pepper to taste (you can microwave a small chunk to check the seasoning). Form into even-sized stout little patties, like slightly flattened meatballs. Put in the fridge to chill until chef arrives.
 
