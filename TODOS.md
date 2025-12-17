@@ -5,6 +5,7 @@
  - [ ] fix license formatting in the repo for parity with standard approaches
  - [ ] integrate ko-fi
  - [ ] integrate goattracker
+ - [ ] convert .mjs files to .ts files
  - [ ] fix scroll up animation for header print button
    - _it fades out when scrolling down but it doesn't fade in properly when scrolling up_
  - [ ] fix appearance of checked items in print view
