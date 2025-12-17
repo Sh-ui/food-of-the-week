@@ -62,6 +62,7 @@ export interface ContentSection {
  */
 export interface PagePlan {
   pageTitle: string;
+  heroSummary: string[]; // Optional hero summary lines
   listSection: ListSection | null;
   contentSections: ContentSection[];
 }
@@ -69,6 +70,7 @@ export interface PagePlan {
 // Legacy interface for backwards compatibility during transition
 export interface WeekPlan {
   weekTitle: string;
+  heroSummary: string[]; // Optional hero summary lines
   groceryList: ListCategory[];
   meals: ContentSection[];
 }
@@ -89,6 +91,7 @@ export async function parseWeekPlan(filename: string = 'FOOD-OF-THE-WEEK.md'): P
   // Convert to legacy WeekPlan format for backwards compatibility
   return {
     weekTitle: pagePlan.pageTitle,
+    heroSummary: pagePlan.heroSummary,
     groceryList: pagePlan.listSection?.categories || [],
     meals: pagePlan.contentSections,
   };
@@ -110,6 +113,7 @@ export async function parsePagePlan(filename: string = 'FOOD-OF-THE-WEEK.md'): P
   if (!fs.existsSync(filePath)) {
     return {
       pageTitle: 'No content available',
+      heroSummary: [],
       listSection: null,
       contentSections: [],
     };
@@ -124,14 +128,16 @@ export async function parsePagePlan(filename: string = 'FOOD-OF-THE-WEEK.md'): P
  */
 function parseMarkdownContent(content: string): PagePlan {
   const tokens = marked.lexer(content);
-  
+
   let pageTitle = 'Page Title';
+  let heroSummary: string[] = [];
   let listSection: ListSection | null = null;
   const contentSections: ContentSection[] = [];
-  
+
   let h2Count = 0;
   let contentSectionCount = 0; // Track content sections independently
   let currentSection: 'none' | 'list' | 'content' = 'none';
+  let collectingHeroSummary = false;
   
   // For list section parsing
   let currentCategory: ListCategory | null = null;
@@ -154,11 +160,13 @@ function parseMarkdownContent(content: string): PagePlan {
     // H1 = Page title
     if (token.type === 'heading' && token.depth === 1) {
       pageTitle = token.text;
+      collectingHeroSummary = true; // Start collecting hero summary after H1
       continue;
     }
     
     // H2 = Section boundary
     if (token.type === 'heading' && token.depth === 2) {
+      collectingHeroSummary = false; // Stop collecting when we hit first H2
       // Save previous section
       if (currentSection === 'list') {
         if (currentCategory) {
@@ -244,6 +252,17 @@ function parseMarkdownContent(content: string): PagePlan {
       continue;
     }
     
+    // Collect hero summary lines (bold paragraphs after H1, before first H2)
+    if (collectingHeroSummary && token.type === 'paragraph') {
+      const text = token.text.trim();
+      // Look for bold text (markdown **text**)
+      const boldMatch = text.match(/^\*\*(.+)\*\*$/);
+      if (boldMatch) {
+        heroSummary.push(boldMatch[1]);
+      }
+      continue;
+    }
+
     // Content section processing
     if (currentSection === 'content' && currentContentSection) {
       // Check for bold label pattern: **Label**

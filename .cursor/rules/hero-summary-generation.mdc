@@ -15,6 +15,7 @@ context:
   user_problem: "Family users need quick mental model of meal workloads without reading full recipes"
   solution: "Generate structured summary bullets: 'Meal Name • Codename • Complementary details'"
   output_format: "Bullet points for hero section, auto-generated from parsed meal data"
+  source_location: "Hero summary should be added as bold lines immediately after the week title (H1) and before the first H2 section in FOOD-OF-THE-WEEK.md"
 
 meal_codenames:
   definition: "Sous chef-centric workload categories conveying effort level and role distribution"

@@ -47,6 +47,51 @@ const faviconSrc = baseUrl + 'favicon.svg';
     <div class="flex justify-center">
       <img src={faviconSrc} alt="Food of the Week" class="w-20 h-20 opacity-60" />
     </div>
+
+    {/* Hero Summary */}
+    {weekPlan.heroSummary.length > 0 && (
+      <div class="hero-summary flex flex-col gap-md items-center mt-lg">
+        {weekPlan.heroSummary.map((summaryLine) => {
+          // Parse: "Meal Name • Codename • Details"
+          const parts = summaryLine.split(' • ');
+          if (parts.length < 2) return null;
+
+          const mealName = parts[0];
+          const codename = parts[1];
+          const details = parts[2] || '';
+
+          // Get first palette color for codename
+          const paletteScheme = getInstructionColor(0); // First cycling color
+
+          return (
+            <div class="hero-summary-item flex items-center gap-sm px-md py-sm rounded-md bg-bg border border-border hover:bg-bg-alt transition-colors">
+              {/* Meal Name - styled like header buttons */}
+              <span class="meal-name px-sm py-xs rounded font-medium text-primary hover:bg-bg-alt cursor-pointer transition-colors">
+                {mealName}
+              </span>
+
+              {/* Codename - styled with first palette color */}
+              <span
+                class="codename px-sm py-xs rounded font-medium"
+                style={`background: ${paletteScheme.bg}; color: ${paletteScheme.heading}; border: 1px solid ${paletteScheme.border}`}
+              >
+                {codename}
+              </span>
+
+              {/* Details - styled like info subsection with gold underline */}
+              {details && (
+                <span
+                  class="details px-sm py-xs rounded font-medium bg-bg-alt border-b-2 border-secondary"
+                  style="border-bottom-color: var(--color-secondary);"
+                >
+                  {details}
+                </span>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    )}
   </section>
   
   {weekPlan.groceryList.length > 0 && (
