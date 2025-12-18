@@ -46,6 +46,11 @@ export interface Subsection {
   hasInlineContent: boolean;  // True if label had content on the same line
 }
 
+export interface QuickRead {
+  codename: string;
+  details: string;
+}
+
 /**
  * A content section (typically a meal).
  * Contains subsections parsed from bold labels.
@@ -54,6 +59,7 @@ export interface ContentSection {
   id: string;
   title: string;              // H2 heading text (used for nav/print)
   cooked: boolean;            // From ~~strikethrough~~ on title
+  quickRead?: QuickRead;
   subsections: Subsection[];
 }
 
@@ -254,17 +260,26 @@ function parseMarkdownContent(content: string): PagePlan {
     
     // Collect hero summary lines (paragraphs after H1, before first H2)
     if (collectingHeroSummary && token.type === 'paragraph') {
-      const raw = token.text.trim();
-      const text = raw.replace(/^\*\*(.+)\*\*$/, '$1').trim();
+      const lines = token.text
+        .split('\n')
+        .map((line: string) => line.trim())
+        .filter(Boolean);
 
-      if (text.includes('•')) {
-        heroSummary.push(text);
+      for (const line of lines) {
+        const text = line.replace(/^\*\*(.+)\*\*$/, '$1').trim();
+        if (text.includes('•')) heroSummary.push(text);
       }
       continue;
     }
 
     // Content section processing
     if (currentSection === 'content' && currentContentSection) {
+      if (token.type === 'blockquote' && !currentContentSection.quickRead) {
+        const quickRead = parseQuickReadFromBlockquote((token as Tokens.Blockquote).text ?? '');
+        if (quickRead) currentContentSection.quickRead = quickRead;
+        continue;
+      }
+
       // Check for bold label pattern: **Label**
       if (token.type === 'paragraph') {
         const text = token.text;
@@ -331,6 +346,16 @@ function parseMarkdownContent(content: string): PagePlan {
     }
     contentSections.push(currentContentSection);
   }
+
+  if (heroSummary.length === 0) {
+    heroSummary = contentSections
+      .filter(section => Boolean(section.quickRead?.codename))
+      .map(section => {
+        const codename = section.quickRead?.codename?.trim() ?? '';
+        const details = section.quickRead?.details?.trim() ?? '';
+        return details ? `${section.title} • ${codename} • ${details}` : `${section.title} • ${codename}`;
+      });
+  }
   
   return {
     pageTitle,
@@ -383,6 +408,22 @@ export function slugify(text: string): string {
     .replace(/\s+/g, '-')
     .replace(/-+/g, '-')
     .trim();
+}
+
+function parseQuickReadFromBlockquote(input: string): QuickRead | null {
+  const lines = input
+    .split('\n')
+    .map((line: string) => line.trim())
+    .filter(Boolean);
+
+  if (lines.length === 0) return null;
+
+  const [codenameRaw, ...detailParts] = lines;
+  const codename = codenameRaw.trim();
+  const details = detailParts.join(' ').trim();
+  if (!codename) return null;
+
+  return { codename, details };
 }
 
 // ============================================================================

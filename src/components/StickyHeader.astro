@@ -775,7 +775,7 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
 
   // Smooth scroll for nav links
   function setupSmoothScroll(): void {
-    document.querySelectorAll('.nav-btn, .dropdown-link, .mobile-date-btn').forEach(link => {
+    document.querySelectorAll('.nav-btn, .dropdown-link, .mobile-date-btn, .hero-summary-link').forEach(link => {
       link.addEventListener('click', (e) => {
         const href = (link as HTMLAnchorElement).getAttribute('href');
         if (href?.startsWith('#')) {

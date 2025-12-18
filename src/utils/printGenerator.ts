@@ -67,6 +67,8 @@ export interface Meal {
   alreadyPrepped?: string[];
   sousChef?: string;
   chefFinishing?: string;
+  quickReadCodename?: string;
+  quickReadDetails?: string;
 }
 
 export interface WeekPlan {
@@ -212,6 +214,10 @@ export function getWeekPlanData(): WeekPlan {
       }
     });
 
+    const quickReadEl = mealSection.querySelector('.meal-quick-read');
+    const quickReadCodename = quickReadEl?.querySelector('.quick-read-codename')?.textContent?.trim() || '';
+    const quickReadDetails = quickReadEl?.querySelector('.quick-read-details')?.textContent?.trim() || '';
+
     meals.push({
       id,
       number,
@@ -224,6 +230,8 @@ export function getWeekPlanData(): WeekPlan {
       alreadyPrepped: alreadyPrepped.length > 0 ? alreadyPrepped : undefined,
       sousChef: sousChef || undefined,
       chefFinishing: chefFinishing || undefined,
+      quickReadCodename: quickReadCodename || undefined,
+      quickReadDetails: quickReadDetails || undefined,
     });
   });
 
@@ -281,6 +289,16 @@ export function generateMealHTML(meal: Meal, cfg: PrintConfig): string {
       <h2 style="font-family:${cfg.typography.headingFontFamily};font-size:${cfg.typography.h2Size};color:${headingColor};margin-bottom:${cfg.spacing.sectionGap};">
         ${meal.fullTitle}
       </h2>
+      ${meal.quickReadCodename ? `
+      <div style="display:flex;flex-wrap:wrap;gap:8pt;margin-bottom:${cfg.spacing.listItemGap};">
+        <span style="background:${cfg.colors.border};color:${cfg.colors.headingColor};border:1px solid ${cfg.colors.border};border-radius:4px;padding:3pt 8pt;font-weight:600;">
+          ${meal.quickReadCodename}
+        </span>
+        ${meal.quickReadDetails ? `
+        <span style="background:${cfg.colors.border};color:${cfg.colors.text};border:1px solid ${cfg.colors.border};border-radius:4px;padding:3pt 8pt;">
+          ${meal.quickReadDetails}
+        </span>` : ''}
+      </div>` : ''}
       <div style="border:1px solid ${cfg.colors.border};padding:10pt;margin-bottom:${cfg.spacing.sectionGap};">`;
 
   if (meal.protein) {

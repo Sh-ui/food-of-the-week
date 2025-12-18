@@ -1,10 +1,5 @@
 # Week of December 14-20, 2025
 
-**Gringo Tostadas • Prep&Heat • cut toppings + heat stuff**
-**Lamb Patties & Veg • SousVidePrep • 4:00 mire poix + 5:00 patties**
-**Sweet Pork Curry • SousVidePrep+ • 3:30 veg + 5:30 rice + toast panko**
-**Spiced SheetPan Fish • SousChefDish • 5:30 Couscous + oven roast**
-
 ## Grocery List
 
 ### Produce
@@ -44,6 +39,10 @@
 
 ## ~~Gringo Tostadas~~
 
+> Prep&Heat
+>
+> cut toppings + heat stuff
+
 **Protein** Frozen taco meat
 
 **Ingredients** Tostadas, refried beans, shredded cheddar, sour cream, cilantro, limes, iceberg lettuce, plum tomatoes, roasted garlic salsa
@@ -65,6 +64,10 @@ Heat up the taco meat in a skillet. Warm the refried beans in the microwave.
 Spread a layer of warm refried beans on each tostada. Top with shredded cheese, taco meat, iceberg lettuce, plum tomatoes, sour cream, and cilantro. Serve with that jar of roasted garlic salsa on the side. Add a lime wedge to each plate.
 
 ## Lamb Patties & Veg
+
+> SousVidePrep
+>
+> 4:00 mire poix + 5:00 patties
 
 **Protein** Ground lamb
 
@@ -94,6 +97,10 @@ To plate: Spread the warm mire poix as a bed on each plate. Nestle the patties o
 Serve with bread if you have it
 
 ## Sweet Pork Curry
+
+> Prep&Heat+
+>
+> prep + toast panko + 5:30 rice
 
 **Protein** Frozen ground pork
 
@@ -127,6 +134,10 @@ Serve on plates with rice in the center in rounded mound, use the back of a ladl
 Sprinkle the toasted panko breadcrumbs generously over the curry portions right before serving.
 
 ## Spiced SheetPan Fish
+
+> SousChefDish
+>
+> 5:30 Couscous + oven roast
 
 **Protein** Frozen tilapia
 

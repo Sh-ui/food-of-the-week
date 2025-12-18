@@ -1,13 +1,17 @@
 ---
 import type { ContentSection } from '../utils/weekParser';
 import { groupSubsections } from '../utils/weekParser';
-import { sectionColors, getInstructionColor } from '../config/colors';
+import { getInstructionBadgeColor, getInstructionColor, sectionColors } from '../config/colors';
 
 interface Props {
   section: ContentSection;
 }
 
 const { section } = Astro.props;
+
+const mealIndex = Math.max(0, Number(section.id.split('-')[1] ?? '1') - 1);
+const quickReadCodenameScheme = getInstructionBadgeColor(mealIndex);
+const quickReadInfoScheme = sectionColors.firstSubsection;
 
 // Group subsections for rendering
 const groups = groupSubsections(section.subsections);
@@ -34,6 +38,25 @@ function renderMarkdown(text: string): string {
     </span>
     <h2>{section.title}</h2>
   </div>
+
+  {section.quickRead?.codename && (
+    <div class="meal-quick-read flex flex-wrap items-center gap-sm mb-lg text-[0.95rem] mobile:gap-xs">
+      <span
+        class="quick-read-codename px-sm py-xs rounded font-bold border"
+        style={`background: ${quickReadCodenameScheme.bg}; color: ${quickReadCodenameScheme.heading}; border-color: ${quickReadCodenameScheme.border}`}
+      >
+        {section.quickRead.codename}
+      </span>
+      {section.quickRead.details && (
+        <span
+          class="quick-read-details px-sm py-xs rounded font-medium border"
+          style={`background: ${quickReadInfoScheme.bg}; color: ${quickReadInfoScheme.heading}; border-color: ${quickReadInfoScheme.border}`}
+        >
+          {section.quickRead.details}
+        </span>
+      )}
+    </div>
+  )}
   
   {/* Render subsection groups */}
   {groups.map((group, groupIndex) => {
