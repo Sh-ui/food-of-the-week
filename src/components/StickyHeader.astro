@@ -15,10 +15,19 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
 ---
 
 <header class="sticky-header" id="sticky-header" data-scrolled="false">
+  <!-- Chef hat icon - visible when at top, centered decorative element -->
+  <div class="header-chef-hat">
+    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M19 19.002v1.998a1 1 0 0 1 -.883 .993l-.117 .007h-12a1 1 0 0 1 -1 -1v-1.994a1 1 0 0 1 1 -1l12 -.004a1 1 0 0 1 1 1"></path>
+      <path d="M12 2a5 5 0 0 1 4.533 2.888l.06 .137l.136 -.009a5 5 0 0 1 4.99 3.477l.063 .213a5 5 0 0 1 -2.696 5.831l-.087 .037v1.428a1 1 0 0 1 -1 1l-12 .004a1 1 0 0 1 -.993 -.883l-.007 -.117v-1.433l-.123 -.055a5 5 0 0 1 -2.6 -3.001l-.064 -.223a5 5 0 0 1 5.193 -6.27l.066 -.142a5 5 0 0 1 4.302 -2.877z"></path>
+    </svg>
+  </div>
+
+  <!-- Scrolled nav - visible when scrolled down -->
   <nav class="header-nav">
-    <!-- All nav buttons in one container - order matters -->
+    <!-- Nav buttons cluster (left side) -->
     <div class="nav-buttons">
-      <!-- Date range button - only visible when scrolled -->
       <a href="#top" class="nav-btn date-btn">{shortTitle}</a>
       
       {hasGroceryList && (
@@ -36,68 +45,77 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
           {meal.cooked ? '✓ ' : ''}{meal.title}
         </a>
       ))}
-      
-      <a href="#site-footer" class="nav-btn" data-section="footer">Links</a>
     </div>
     
     <!-- Mobile: Date button (separate from desktop, appears on scroll) -->
     <a href="#top" class="mobile-date-btn">{shortTitle}</a>
   
-      <!-- Mobile: Section selector with dropdown -->
-      <div class="section-selector">
-        <button class="section-selector-btn" aria-expanded="false" aria-haspopup="true">
-          <svg class="dropdown-caret" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="6 9 12 15 18 9"></polyline>
-      </svg>
-          <span class="current-section-name">Full Week</span>
-    </button>
+    <!-- Mobile: Section selector with dropdown -->
+    <div class="section-selector">
+      <button class="section-selector-btn" aria-expanded="false" aria-haspopup="true">
+        <svg class="dropdown-caret" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+        <span class="current-section-name">Full Week</span>
+      </button>
   
-        <div class="section-dropdown" hidden>
-    <a href="#top" class="dropdown-link">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="12" y1="19" x2="12" y2="5"></line>
-        <polyline points="5 12 12 5 19 12"></polyline>
-      </svg>
-      Back to Top
-    </a>
-    
-    {hasGroceryList && (
-      <a href="#print-section-grocery-list" class="dropdown-link" data-section="grocery-list">
-        Grocery List
-      </a>
-    )}
-    
-    {meals.map((meal) => (
-      <a 
-        href={`#print-section-${meal.id}`} 
-        class={`dropdown-link ${meal.cooked ? 'cooked' : ''}`}
-        data-section={meal.id}
-      >
-        {meal.cooked ? '✓ ' : ''}{meal.title}
-      </a>
-    ))}
-    
-          <a href="#site-footer" class="dropdown-link" data-section="footer">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="12" r="10"></circle>
-        <line x1="12" y1="16" x2="12" y2="12"></line>
-        <line x1="12" y1="8" x2="12.01" y2="8"></line>
-      </svg>
-      Links & Info
-    </a>
+      <div class="section-dropdown" hidden>
+        <a href="#top" class="dropdown-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+          </svg>
+          Back to Top
+        </a>
+        
+        {hasGroceryList && (
+          <a href="#print-section-grocery-list" class="dropdown-link" data-section="grocery-list">
+            Grocery List
+          </a>
+        )}
+        
+        {meals.map((meal) => (
+          <a 
+            href={`#print-section-${meal.id}`} 
+            class={`dropdown-link ${meal.cooked ? 'cooked' : ''}`}
+            data-section={meal.id}
+          >
+            {meal.cooked ? '✓ ' : ''}{meal.title}
+          </a>
+        ))}
+        
+        <a href="#site-footer" class="dropdown-link" data-section="footer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+          Links & Info
+        </a>
       </div>
-  </div>
-  
-    <!-- Print Button -->
-    <button class="header-print-btn print-button" data-print-target="all" type="button">
-      <svg class="print-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="6 9 6 2 18 2 18 9"></polyline>
-        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
-        <rect x="6" y="14" width="12" height="8"></rect>
-      </svg>
-      <span class="print-prefix">Print</span>
-      <span class="print-section-name">Full Week</span>
-    </button>
+    </div>
+    
+    <!-- Right side: Info icon button + Print button -->
+    <div class="header-right-buttons">
+      <!-- Info icon button - links to footer -->
+      <a href="#site-footer" class="header-info-btn" data-section="footer" aria-label="Links & Info">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="16" x2="12" y2="12"></line>
+          <line x1="12" y1="8" x2="12.01" y2="8"></line>
+        </svg>
+      </a>
+      
+      <!-- Print Button -->
+      <button class="header-print-btn print-button" data-print-target="all" type="button">
+        <svg class="print-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 6 2 18 2 18 9"></polyline>
+          <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+          <rect x="6" y="14" width="12" height="8"></rect>
+        </svg>
+        <span class="print-section-name">Grocery List</span>
+      </button>
+    </div>
   </nav>
 </header>
 
@@ -111,41 +129,76 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     right: 0;
     z-index: 100;
     background: var(--color-bg);
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
   }
 
-  .sticky-header[data-scrolled="true"] {
+  /* Shadow appears immediately on any scroll */
+  .sticky-header[data-has-shadow="true"] {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* When scrolled, show border */
+  .sticky-header[data-scrolled="true"] {
+    border-bottom-color: var(--color-border);
   }
 
   .header-spacer {
     height: 56px;
   }
 
-  .header-nav {
+  /* ============================================
+     CHEF HAT - Decorative icon at top
+     ============================================ */
+  .header-chef-hat {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: var(--spacing-sm) var(--spacing-md);
-    max-width: 1200px;
-    margin: 0 auto;
-    min-height: 40px;
-    position: relative;
+    height: 56px;
+    color: var(--color-text);
+    opacity: 1;
+    transition: opacity 0.3s ease;
   }
 
-  /* When scrolled, align to left */
-  .sticky-header[data-scrolled="true"] .header-nav {
-    justify-content: flex-start;
+  /* Fade out chef hat when scrolled */
+  .sticky-header[data-scrolled="true"] .header-chef-hat {
+    opacity: 0;
+    pointer-events: none;
   }
 
   /* ============================================
-     NAV BUTTONS CONTAINER - Two states
+     NAV - Hidden at top, visible when scrolled
+     ============================================ */
+  .header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 var(--spacing-md);
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 56px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  /* Fade in nav when scrolled */
+  .sticky-header[data-scrolled="true"] .header-nav {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* ============================================
+     NAV BUTTONS CONTAINER
      ============================================ */
   .nav-buttons {
     display: flex;
     align-items: center;
     gap: var(--spacing-xs);
-    transition: opacity 0.2s ease;
   }
 
   /* ============================================
@@ -187,24 +240,21 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
   }
 
   /* ============================================
-     DATE BUTTON - Same as nav buttons, just bigger font
+     DATE BUTTON
      ============================================ */
   .date-btn {
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: 1.1rem;
     color: var(--color-primary);
-    /* Hidden when not scrolled */
-    display: none;
-  }
-
-  /* Show date button when scrolled */
-  .sticky-header[data-scrolled="true"] .date-btn {
+    line-height: 1;
     display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 
   /* ============================================
-     MOBILE DATE BUTTON - Separate from desktop
+     MOBILE DATE BUTTON
      ============================================ */
   .mobile-date-btn {
     display: none;
@@ -221,20 +271,11 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     line-height: 1;
     align-items: center;
     justify-content: center;
-    transition: background-color 0.2s ease, opacity 0.2s ease;
-    opacity: 0;
-    pointer-events: none;
+    transition: background-color 0.2s ease;
   }
 
   .mobile-date-btn:hover {
     background: var(--color-bg-alt);
-  }
-
-  /* ============================================
-     FADE TRANSITION BETWEEN STATES
-     ============================================ */
-  .sticky-header[data-scrolled="fading"] .nav-buttons {
-    opacity: 0;
   }
 
   /* ============================================
@@ -337,11 +378,44 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
   }
 
   /* ============================================
+     RIGHT BUTTONS CONTAINER (Info + Print)
+     ============================================ */
+  .header-right-buttons {
+    position: absolute;
+    right: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+  }
+
+  /* ============================================
+     INFO ICON BUTTON
+     ============================================ */
+  .header-info-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 4px;
+    color: var(--color-text);
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  .header-info-btn:hover {
+    background: var(--color-bg-alt);
+  }
+
+  .header-info-btn.active {
+    background: var(--color-bg-alt);
+    color: var(--color-primary);
+  }
+
+  /* ============================================
      PRINT BUTTON
      ============================================ */
   .header-print-btn {
-    position: absolute;
-    right: var(--spacing-md);
     padding: 8px 14px;
     border-radius: 4px;
     font-size: 0.9rem;
@@ -352,8 +426,8 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     justify-content: center;
     gap: 6px;
     border: none;
-    background: var(--color-primary);
-    color: white;
+    background: var(--color-secondary);
+    color: var(--color-text);
     font-family: inherit;
     line-height: 1;
     cursor: pointer;
@@ -362,41 +436,22 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
   }
 
   .header-print-btn:hover {
-    background: var(--color-primary-hover);
-  }
-
-  .header-print-btn[data-is-section="true"] {
-    background: var(--color-secondary);
-    color: var(--color-text);
-  }
-
-  .header-print-btn[data-is-section="true"]:hover {
     background: var(--color-secondary-hover);
   }
 
   .header-print-btn .print-icon {
-    display: none;
     flex-shrink: 0;
   }
 
-  .header-print-btn .print-prefix,
   .header-print-btn .print-section-name {
     display: inline;
   }
 
-  .header-print-btn .print-prefix::after {
-    content: ' ';
-  }
-
   /* ============================================
-     TABLET - 1000px (defined in tailwind.config.mjs screens.desktop)
+     TABLET - 1000px
      ============================================ */
   @media screen(desktop) {
-    .header-print-btn .print-icon {
-      display: inline;
-    }
-
-    .header-print-btn .print-prefix {
+    .header-print-btn .print-section-name {
       display: none;
     }
 
@@ -411,10 +466,10 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
   }
 
   /* ============================================
-     MOBILE - 950px (defined in tailwind.config.mjs screens.tablet)
+     MOBILE - 950px
      ============================================ */
   @media screen(tablet) {
-    /* Mobile header stays centered - no left-align on scroll */
+    /* Mobile nav is centered */
     .sticky-header[data-scrolled="true"] .header-nav {
       justify-content: center;
     }
@@ -425,17 +480,10 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
 
     .section-selector {
       display: block;
-  }
-
-    /* Mobile date button - show the element, but keep invisible until scrolled */
-    .mobile-date-btn {
-      display: inline-flex;
     }
 
-    /* Fade in mobile date button when scrolled */
-    .sticky-header[data-scrolled="true"] .mobile-date-btn {
-      opacity: 1;
-      pointer-events: auto;
+    .mobile-date-btn {
+      display: inline-flex;
     }
 
     .header-print-btn {
@@ -443,18 +491,13 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
       min-width: 52px;
     }
 
-    .header-print-btn .print-prefix,
     .header-print-btn .print-section-name {
       display: none;
-    }
-
-    .header-print-btn .print-icon {
-      display: inline;
     }
   }
 
   /* ============================================
-     SMALL MOBILE - 500px (defined in tailwind.config.mjs screens.sm-mobile)
+     SMALL MOBILE - 500px
      ============================================ */
   @media screen(sm-mobile) {
     .header-print-btn {
@@ -482,54 +525,47 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
   } as const;
 
   // ============================================
-  // HEADER STATE MANAGEMENT - Simple two-state toggle
+  // HEADER STATE MANAGEMENT
   // ============================================
 
   const header = document.getElementById('sticky-header') as HTMLElement;
-  const navButtons = document.querySelector('.nav-buttons') as HTMLElement;
   const sectionSelectorBtn = document.querySelector('.section-selector-btn') as HTMLButtonElement;
   const sectionDropdown = document.querySelector('.section-dropdown') as HTMLElement;
   const currentSectionName = document.querySelector('.current-section-name') as HTMLElement;
   const headerPrintBtn = document.querySelector('.header-print-btn') as HTMLButtonElement;
+  const headerInfoBtn = document.querySelector('.header-info-btn') as HTMLAnchorElement;
   const navBtns = document.querySelectorAll('.nav-btn[data-section], .dropdown-link[data-section]') as NodeListOf<HTMLAnchorElement>;
 
-  // Constants from centralized config
   const SCROLL_THRESHOLD = scrollThresholds.HEADER_ACTIVATION;
   const FADE_OUT_START = scrollThresholds.FADE_OUT_START;
   
   let isScrolled = false;
+  let hasShadow = false;
   let currentSection = 'all';
   let isFadingIn = false;
 
-  // Simple scroll detection - toggle between two states
   function updateScrollState(): void {
-    const scrolled = window.scrollY > SCROLL_THRESHOLD;
+    const scrollY = window.scrollY;
+    const scrolled = scrollY > SCROLL_THRESHOLD;
+    const shouldHaveShadow = scrollY > 0;
     
-    if (scrolled !== isScrolled) {
-      isScrolled = scrolled;
-
-      // Fade out
-      if (navButtons) {
-        navButtons.style.opacity = '0';
-      }
-
-      // After fade, switch state and fade back in
-      setTimeout(() => {
-    header.dataset.scrolled = scrolled ? 'true' : 'false';
-
-        setTimeout(() => {
-          if (navButtons) {
-            navButtons.style.opacity = '1';
-          }
-        }, 50);
-      }, 150);
+    // Shadow appears immediately on any scroll
+    if (shouldHaveShadow !== hasShadow) {
+      hasShadow = shouldHaveShadow;
+      header.dataset.hasShadow = shouldHaveShadow ? 'true' : 'false';
     }
     
-    // Update active section based on scroll position
-    updateActiveSection();
+    // Nav appears at threshold
+    if (scrolled !== isScrolled) {
+      isScrolled = scrolled;
+      header.dataset.scrolled = scrolled ? 'true' : 'false';
+    }
+    
+    if (scrolled) {
+      updateActiveSection();
+    }
   }
 
-  // Helper: Build section data from DOM
   function buildSectionData(scrollY: number): { id: string; top: number; bottom: number; height: number; }[] {
     const sections: { id: string; top: number; bottom: number; height: number; }[] = [];
     document.querySelectorAll('.print-section').forEach(el => {
@@ -544,7 +580,6 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     return sections;
   }
 
-  // Helper: Check if footer section is active
   function checkFooterSection(viewportMidpoint: number, scrollY: number, viewportHeight: number): { id: string; top: number; bottom: number; height: number; } | null {
     const footer = document.getElementById('site-footer');
     if (!footer) return null;
@@ -553,110 +588,66 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     const footerTop = footerRect.top + scrollY;
     const footerBottom = footerRect.bottom + scrollY;
     
-    // Check if viewport midpoint is in footer
     if (viewportMidpoint >= footerTop && viewportMidpoint < footerBottom) {
-      return {
-        id: 'footer',
-        top: footerTop,
-        bottom: footerBottom,
-        height: footerRect.height
-      };
-  }
-
-    // Check if footer is visible in viewport (within 100px of viewport bottom)
-    const viewportBottom = scrollY + viewportHeight;
-    if (viewportBottom >= footerTop + 100) {
-      return {
-        id: 'footer',
-        top: footerTop,
-        bottom: footerBottom,
-        height: footerRect.height
-      };
+      return { id: 'footer', top: footerTop, bottom: footerBottom, height: footerRect.height };
     }
 
-    // Also check if at very bottom of page
+    const viewportBottom = scrollY + viewportHeight;
+    if (viewportBottom >= footerTop + 100) {
+      return { id: 'footer', top: footerTop, bottom: footerBottom, height: footerRect.height };
+    }
+
     const maxScroll = document.documentElement.scrollHeight - viewportHeight;
     if (scrollY >= maxScroll - 10) {
-      return {
-        id: 'footer',
-        top: footerTop,
-        bottom: footerBottom,
-        height: footerRect.height
-      };
+      return { id: 'footer', top: footerTop, bottom: footerBottom, height: footerRect.height };
     }
 
     return null;
   }
 
-  // Helper: Handle fade-out in last 15% of section
   function handleSectionFadeOut(foundSectionData: { top: number; height: number; }, viewportMidpoint: number): void {
     if (!headerPrintBtn || isFadingIn) return;
 
     const positionInSection = viewportMidpoint - foundSectionData.top;
     const sectionProgress = positionInSection / foundSectionData.height;
 
-    // Last 15% of section = fade out zone
     if (sectionProgress > FADE_OUT_START) {
       const fadeProgress = (sectionProgress - FADE_OUT_START) / (1 - FADE_OUT_START);
       const opacity = Math.max(0, 1 - fadeProgress);
       headerPrintBtn.style.transition = 'none';
       headerPrintBtn.style.opacity = opacity.toString();
     } else {
-      // Outside fade zone, ensure full opacity
       headerPrintBtn.style.transition = 'none';
       headerPrintBtn.style.opacity = '1';
     }
   }
 
-  // Track which section is in view with proper opacity handling
   function updateActiveSection(): void {
     const scrollY = window.scrollY;
     const viewportHeight = window.innerHeight;
     const viewportMidpoint = scrollY + (viewportHeight * 0.5);
 
-    // At top of page, always show Full Week
-    if (scrollY <= SCROLL_THRESHOLD) {
-      if (currentSection !== 'all') {
-        currentSection = 'all';
-        updateNavHighlight('all');
-        updateMobileSelector('all');
-        fadeInPrintButton('all');
-      } else if (headerPrintBtn) {
-        headerPrintBtn.style.opacity = '1';
-      }
-      return;
-    }
-    
-    // Build section data from DOM
     const sections = buildSectionData(scrollY);
-    
-    // Check footer FIRST - if footer is significantly visible, prioritize it
     const footerData = checkFooterSection(viewportMidpoint, scrollY, viewportHeight);
     
     let foundSection: string | null = null;
     let foundSectionData: { id: string; top: number; bottom: number; height: number; } | null = null;
     
     if (footerData) {
-      // Footer is visible enough - use it
       foundSection = footerData.id;
       foundSectionData = footerData;
     } else {
-      // Find which section viewport midpoint is in
-    for (const section of sections) {
-      if (viewportMidpoint >= section.top && viewportMidpoint < section.bottom) {
-        foundSection = section.id;
-        foundSectionData = section;
-        break;
-      }
+      for (const section of sections) {
+        if (viewportMidpoint >= section.top && viewportMidpoint < section.bottom) {
+          foundSection = section.id;
+          foundSectionData = section;
+          break;
+        }
       }
     }
     
-    // If no section found, don't change anything
-    if (foundSection === null) {
-      return;
-    }
+    if (foundSection === null) return;
 
-    // If section changed, fade in new content
     if (foundSection !== currentSection) {
       currentSection = foundSection;
       updateNavHighlight(foundSection);
@@ -665,59 +656,51 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
       return;
     }
     
-    // Still in same section - handle fade-out in last 15%
     if (foundSectionData) {
       handleSectionFadeOut(foundSectionData, viewportMidpoint);
     }
-    }
+  }
 
-  // Fade in the print button with new section content
   function fadeInPrintButton(sectionId: string): void {
     if (!headerPrintBtn) return;
     
     isFadingIn = true;
     
-    // Force opacity to 0, update content
     headerPrintBtn.style.transition = 'none';
     headerPrintBtn.style.opacity = '0';
     updatePrintButton(sectionId);
     
-    // Force reflow, then fade in
     headerPrintBtn.offsetHeight;
     headerPrintBtn.style.transition = 'opacity 0.2s ease-out';
     headerPrintBtn.style.opacity = '1';
     
-    // Reset flag after animation completes
     setTimeout(() => { isFadingIn = false; }, 200);
   }
 
   function updateNavHighlight(activeSection: string): void {
     navBtns.forEach(link => {
       const linkSection = link.getAttribute('data-section');
-      if (linkSection === activeSection) {
-        link.classList.add('active');
-      } else {
-        link.classList.remove('active');
-      }
+      link.classList.toggle('active', linkSection === activeSection);
     });
+    
+    if (headerInfoBtn) {
+      headerInfoBtn.classList.toggle('active', activeSection === 'footer');
+    }
   }
 
   function updatePrintButton(sectionId: string): void {
     if (!headerPrintBtn) return;
     
-    // Footer section has nothing to print - default to Full Week
     const printTarget = sectionId === 'footer' ? 'all' : sectionId;
     const displayName = getDisplayName(printTarget);
-    const isSection = printTarget !== 'all';
     
     headerPrintBtn.dataset.printTarget = printTarget;
-      headerPrintBtn.dataset.isSection = isSection ? 'true' : 'false';
     
-      const sectionNameEl = headerPrintBtn.querySelector('.print-section-name');
-      if (sectionNameEl) {
-        sectionNameEl.textContent = displayName;
-  }
+    const sectionNameEl = headerPrintBtn.querySelector('.print-section-name');
+    if (sectionNameEl) {
+      sectionNameEl.textContent = displayName;
     }
+  }
 
   function updateMobileSelector(sectionId: string): void {
     if (currentSectionName) {
@@ -739,7 +722,6 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     return sectionId;
   }
 
-  // Close section dropdown
   function closeSectionDropdown(): void {
     if (sectionSelectorBtn && sectionDropdown) {
       sectionSelectorBtn.setAttribute('aria-expanded', 'false');
@@ -747,7 +729,6 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     }
   }
 
-  // Section dropdown toggle
   function setupSectionDropdown(): void {
     if (!sectionSelectorBtn || !sectionDropdown) return;
 
@@ -773,9 +754,8 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     });
   }
 
-  // Smooth scroll for nav links
   function setupSmoothScroll(): void {
-    document.querySelectorAll('.nav-btn, .dropdown-link, .mobile-date-btn, .hero-summary-link').forEach(link => {
+    document.querySelectorAll('.nav-btn, .dropdown-link, .mobile-date-btn, .hero-summary-link, .header-info-btn, .hero-action-btn, .footer-link').forEach(link => {
       link.addEventListener('click', (e) => {
         const href = (link as HTMLAnchorElement).getAttribute('href');
         if (href?.startsWith('#')) {
@@ -797,24 +777,30 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     });
   }
 
-  // Print button handler
-  function setupPrintButton(): void {
+  function setupPrintButtons(): void {
     if (headerPrintBtn) {
       headerPrintBtn.addEventListener('click', () => {
         closeSectionDropdown();
         const target = headerPrintBtn.dataset.printTarget || 'all';
         printSection(target);
-    });
+      });
+    }
+    
+    const heroPrintBtn = document.getElementById('hero-print-full-week');
+    if (heroPrintBtn) {
+      heroPrintBtn.addEventListener('click', () => {
+        printSection('all');
+      });
     }
   }
 
-  // Initialize
   function init(): void {
     header.dataset.scrolled = 'false';
+    header.dataset.hasShadow = 'false';
     updateScrollState();
     setupSectionDropdown();
     setupSmoothScroll();
-    setupPrintButton();
+    setupPrintButtons();
 
     window.addEventListener('scroll', updateScrollState, { passive: true });
   }

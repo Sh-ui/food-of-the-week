@@ -1,0 +1,101 @@
+---
+/**
+ * ActionButton - Reusable button/link component with configurable variants
+ * 
+ * Variants:
+ * - primary: Solid background (primary color), white text - for main actions
+ * - secondary: Solid background (secondary color), dark text - for alternate actions  
+ * - ghost: Transparent background, shows on hover - for subtle actions
+ * - badge: Styled like quick-read capsules with custom colors
+ * 
+ * Can render as <button> or <a> depending on whether href is provided.
+ */
+
+interface Props {
+  variant?: 'primary' | 'secondary' | 'ghost' | 'badge';
+  href?: string;
+  type?: 'button' | 'submit';
+  size?: 'sm' | 'md';
+  iconPosition?: 'left' | 'right' | 'only';
+  class?: string;
+  id?: string;
+  dataAttributes?: Record<string, string>;
+  badgeColors?: {
+    bg: string;
+    text: string;
+    border: string;
+  };
+}
+
+const { 
+  variant = 'ghost', 
+  href, 
+  type = 'button',
+  size = 'md',
+  iconPosition = 'left',
+  class: className = '',
+  id,
+  dataAttributes = {},
+  badgeColors,
+} = Astro.props;
+
+const isLink = !!href;
+
+const sizeClasses = {
+  sm: 'px-sm py-xs text-[0.85rem] h-8 gap-xs',
+  md: 'px-md py-xs text-[0.9rem] h-9 gap-sm',
+};
+
+const variantClasses = {
+  primary: 'bg-primary text-white hover:bg-primary-hover border-transparent',
+  secondary: 'bg-secondary text-text hover:bg-secondary-hover border-transparent',
+  ghost: 'bg-transparent text-text hover:bg-bg-alt border-transparent',
+  badge: 'border',
+};
+
+const baseClasses = `
+  inline-flex items-center justify-center rounded-md font-medium
+  transition-colors cursor-pointer no-underline
+  ${sizeClasses[size]}
+  ${variantClasses[variant]}
+  ${className}
+`.trim().replace(/\s+/g, ' ');
+
+const badgeStyle = variant === 'badge' && badgeColors 
+  ? `background: ${badgeColors.bg}; color: ${badgeColors.text}; border-color: ${badgeColors.border};`
+  : '';
+
+const dataAttrs = Object.entries(dataAttributes).reduce((acc, [key, value]) => {
+  acc[`data-${key}`] = value;
+  return acc;
+}, {} as Record<string, string>);
+---
+
+{isLink ? (
+  <a 
+    href={href} 
+    class={baseClasses} 
+    id={id}
+    style={badgeStyle}
+    {...dataAttrs}
+  >
+    {iconPosition === 'left' && <slot name="icon" />}
+    {iconPosition !== 'only' && <slot />}
+    {iconPosition === 'right' && <slot name="icon" />}
+    {iconPosition === 'only' && <slot name="icon" />}
+  </a>
+) : (
+  <button 
+    type={type} 
+    class={baseClasses}
+    id={id}
+    style={badgeStyle}
+    {...dataAttrs}
+  >
+    {iconPosition === 'left' && <slot name="icon" />}
+    {iconPosition !== 'only' && <slot />}
+    {iconPosition === 'right' && <slot name="icon" />}
+    {iconPosition === 'only' && <slot name="icon" />}
+  </button>
+)}
+

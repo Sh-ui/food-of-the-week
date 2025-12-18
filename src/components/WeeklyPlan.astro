@@ -3,6 +3,7 @@ import GroceryList from './GroceryList.astro';
 import MealCard from './MealCard.astro';
 import Footer from './Footer.astro';
 import StickyHeader from './StickyHeader.astro';
+import ActionButton from './ActionButton.astro';
 import { getInstructionBadgeColor, sectionColors } from '../config/colors';
 import type { WeekPlan } from '../utils/weekParser';
 
@@ -86,14 +87,36 @@ const heroRows = heroRowsFromMeals.length > 0 ? heroRowsFromMeals : heroRowsFrom
   <!-- Hero Section -->
   <section class="text-center px-md py-xl min-h-[40vh] flex flex-col items-center justify-center gap-lg mobile:min-h-[30vh] mobile:px-sm" id="top">
     <h1 class="mb-0">{weekPlan.weekTitle}</h1>
-    <div class="flex items-center justify-center gap-sm text-text-muted opacity-70">
-      <span class="h-px w-16 bg-border"></span>
-      <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-        <path d="M19 19.002v1.998a1 1 0 0 1 -.883 .993l-.117 .007h-12a1 1 0 0 1 -1 -1v-1.994a1 1 0 0 1 1 -1l12 -.004a1 1 0 0 1 1 1"></path>
-        <path d="M12 2a5 5 0 0 1 4.533 2.888l.06 .137l.136 -.009a5 5 0 0 1 4.99 3.477l.063 .213a5 5 0 0 1 -2.696 5.831l-.087 .037v1.428a1 1 0 0 1 -1 1l-12 .004a1 1 0 0 1 -.993 -.883l-.007 -.117v-1.433l-.123 -.055a5 5 0 0 1 -2.6 -3.001l-.064 -.223a5 5 0 0 1 5.193 -6.27l.066 -.142a5 5 0 0 1 4.302 -2.877z"></path>
-      </svg>
-      <span class="h-px w-16 bg-border"></span>
+    <!-- Hero Action Bar: Links & Info + Print Full Week -->
+    <div class="hero-action-bar flex items-center justify-center gap-md">
+      <ActionButton 
+        variant="ghost" 
+        href="#site-footer" 
+        size="md"
+        class="hero-action-btn border border-border"
+      >
+        <svg slot="icon" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="16" x2="12" y2="12"></line>
+          <line x1="12" y1="8" x2="12.01" y2="8"></line>
+        </svg>
+        Links & Info
+      </ActionButton>
+      
+      <ActionButton 
+        variant="primary" 
+        size="md"
+        id="hero-print-full-week"
+        class="hero-action-btn"
+        dataAttributes={{ "print-target": "all" }}
+      >
+        <svg slot="icon" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 6 2 18 2 18 9"></polyline>
+          <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+          <rect x="6" y="14" width="12" height="8"></rect>
+        </svg>
+        Print Full Week
+      </ActionButton>
     </div>
 
     {/* Hero Summary */}
