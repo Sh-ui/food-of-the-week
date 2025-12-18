@@ -1,6 +1,7 @@
 # TODOS
 
 ## Needs Done
+ - [ ] make the checkboxes locally check-able even if globally checked indicator for non-family users
  - [ ] use index sequence override to setup info subsection specified theming and prune deprecated approach
  - [ ] fix license formatting in the repo for parity with standard approaches
  - [ ] integrate ko-fi
