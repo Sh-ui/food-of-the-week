@@ -252,13 +252,13 @@ function parseMarkdownContent(content: string): PagePlan {
       continue;
     }
     
-    // Collect hero summary lines (bold paragraphs after H1, before first H2)
+    // Collect hero summary lines (paragraphs after H1, before first H2)
     if (collectingHeroSummary && token.type === 'paragraph') {
-      const text = token.text.trim();
-      // Look for bold text (markdown **text**)
-      const boldMatch = text.match(/^\*\*(.+)\*\*$/);
-      if (boldMatch) {
-        heroSummary.push(boldMatch[1]);
+      const raw = token.text.trim();
+      const text = raw.replace(/^\*\*(.+)\*\*$/, '$1').trim();
+
+      if (text.includes('•')) {
+        heroSummary.push(text);
       }
       continue;
     }
