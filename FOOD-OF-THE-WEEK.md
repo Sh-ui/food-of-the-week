@@ -88,7 +88,7 @@ To plate: Spread the warm mire poix as a bed on each plate. Nestle the patties o
 
 Serve with bread if you have it
 
-## Sweet Pork Curry
+## ~~Sweet Pork Curry~~
 
 **Protein** Frozen ground pork
 
