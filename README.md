@@ -50,7 +50,7 @@ GroceryPlanning/
 ├── WEEKEND.md                   # Weekend meal planning (separate page)
 ├── README.md                    # This file - project overview
 ├── TODOS.md                     # Development roadmap
-├── LICENSE.md                   # AGPL-3.0 license
+├── LICENSE                      # AGPL-3.0 license
 ├── MIGRATION.md                 # Dependency migration plans (Tailwind v4, Marked v17)
 ├── .github/
 │   ├── dependabot.yml           # Automated dependency updates
@@ -260,7 +260,7 @@ See [TODOS.md](TODOS.md) for planned features and development roadmap.
 
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 
-This project is licensed under the [GNU Affero General Public License v3.0 (AGPL-3.0)](LICENSE.md).
+This project is licensed under the [GNU Affero General Public License v3.0 (AGPL-3.0)](LICENSE).
 
 ### What this means:
 
