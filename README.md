@@ -4,7 +4,7 @@
 
 **[View or Edit This Week's Plan](FOOD-OF-THE-WEEK.md)** ⇒ [Live Site at food.schuepbach.work](https://sh-ui.github.io/food-of-the-week)
 
-![Version](https://img.shields.io/badge/version-1.4.0-blue.svg)
+![Version](https://img.shields.io/badge/version-1.5.0-blue.svg)
 ![Status](https://img.shields.io/website?url=https://sh-ui.github.io/food-of-the-week&label=status&up_color=success&down_color=critical&up_message=active&down_message=down)
 
 ## About
@@ -38,9 +38,10 @@ This is a weekly meal planning system built with Astro that transforms structure
 
 1. **Brainstorm** - Plan meals in the `brainstorming/` folder
 2. **Finalize** - Structure the plan in `FOOD-OF-THE-WEEK.md` with all required sections
-3. **Deploy** - Push to GitHub, site auto-deploys in 2-3 minutes
-4. **Shop** - Use the mobile-friendly site with persistent checkbox grocery list
-5. **Archive** - At week's end, copy to `archive/YYYYMMDDsummary.md`
+3. **Add Quick Reads** - Add a blockquote under each meal heading with codename and timing details
+4. **Deploy** - Push to GitHub, site auto-deploys in 2-3 minutes
+5. **Shop** - Use the mobile-friendly site with persistent checkbox grocery list
+6. **Archive** - At week's end, copy to `archive/YYYYMMDDsummary.md`
 
 ## Project Structure
 
@@ -62,10 +63,11 @@ GroceryPlanning/
 ├── archive/                     # Past weekly plans (YYYYMMDDsummary.md)
 ├── src/
 │   ├── components/              # Astro components
+│   │   ├── ActionButton.astro   # Reusable button/link component with variants
 │   │   ├── GroceryList.astro    # Interactive grocery list with localStorage
-│   │   ├── MealCard.astro       # Meal display with flex-parsing
-│   │   ├── StickyHeader.astro   # Navigation + print functionality
-│   │   ├── WeeklyPlan.astro     # Main layout orchestrator
+│   │   ├── MealCard.astro       # Meal display with flex-parsing + quick read
+│   │   ├── StickyHeader.astro   # Two-state header with dynamic scroll behavior
+│   │   ├── WeeklyPlan.astro     # Main layout with hero summary rows
 │   │   └── Footer.astro         # Site footer with links
 │   ├── config/
 │   │   └── colors.ts            # Palette-driven color system (references Tailwind)
@@ -90,11 +92,13 @@ GroceryPlanning/
 
 ### Current Features
 
+- **Quick Read Hero Summary** - Glance-able meal overview with codename badges (Prep&Heat, SousVidePrep, etc.) and timing details parsed from blockquotes in each meal section
 - **Interactive Grocery Lists** - Checkboxes persist in browser localStorage with week-specific keys
 - **Weekend Planning** - Dedicated weekend page with separate meal plans (`/weekend` route)
 - **Flexible Markdown Parsing** - Position-based parser works with any markdown structure (no keyword dependencies)
 - **Flexible Color System** - Palette-driven theming with automatic variant derivation and cycling
 - **Three-Phase Instructions** - Color-coded workflow sections (Already Prepped, Sous Chef, Chef Finishing)
+- **Smart Sticky Header** - Two-state header: minimal chef-hat at top, full navigation with section buttons when scrolled
 - **Print Functionality** - Print full week, grocery list only, or individual meals with config-driven formatting
 - **Mobile-Friendly** - Responsive design optimized for shopping and cooking on any device
 - **Auto-Deployment** - Push to GitHub, site rebuilds and deploys automatically via GitHub Actions
