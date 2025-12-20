@@ -43,21 +43,23 @@
 >
 > cut toppings + heat stuff
 
-**Protein** Frozen taco meat
+#### Protein: 
+Frozen taco meat
 
-**Ingredients** Tostadas, refried beans, shredded cheddar, sour cream, cilantro, limes, iceberg lettuce, plum tomatoes, roasted garlic salsa
+#### Ingredients: 
+Tostadas, refried beans, shredded cheddar, sour cream, cilantro, limes, iceberg lettuce, plum tomatoes, roasted garlic salsa
 
-**Description** Crispy tostadas layered with warm refried beans and seasoned taco meat with cheese, topped with fresh iceberg, tomatoes, sour cream, and cilantro.
+#### Description: 
+Crispy tostadas layered with warm refried beans and seasoned taco meat with cheese, topped with fresh iceberg, tomatoes, sour cream, and cilantro.
 
-**Already Prepped**
-
+### Already Prepped 
 - Frozen taco meat is ready to go in the freezer.
 
-**Sous Chef - Prep**
+### Sous Chef - Prep 
 
 Shred the iceberg lettuce into thin strips. Dice the plum tomatoes. Chop the cilantro. Cut limes into wedges.
 
-**Chef - Finishing & Plating**
+### Chef - Finishing & Plating
 
 Heat up the taco meat in a skillet. Warm the refried beans in the microwave.
 
