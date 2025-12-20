@@ -23,8 +23,6 @@
 - [ ] Sweet Italian sausage - 1 lb (ground or links)
 - [ ] Ground beef (80/20) - 1 lb
 
-### Bakery
-
 ## Italian Lazy Meatballs
 
 **Day** Sunday
