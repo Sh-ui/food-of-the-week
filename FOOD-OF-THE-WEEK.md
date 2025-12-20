@@ -111,11 +111,11 @@ Serve with bread if you have it
 **Already Prepped**
 
 - Ground pork is thawed.
-- Potatoes, carrots, and onions are diced (1-inch cubes) and vacuum sealed together. Stored in fridge.
+- Potatoes and carrots are already chopped + cooked and vacuum sealed in bags. Stored in fridge.
 
 **Sous Chef - Prep** 
 
-At no later than 3:30pm Drop the vacuum-sealed vegetables into the sous vide bath (Chef will set temperature remotely from the app to around 183°F for vegetables).
+Dice 1 whole yellow onion
 
 Toast the panko breadcrumbs: In a dry nonstick skillet over medium heat, toast panko until golden brown, stirring frequently. Set aside—they'll stay crispy.
 
@@ -123,7 +123,7 @@ At 5:30pm, start the Japanese rice in the rice cooker.
 
 **Chef - Finishing & Plating**
 
-In a large pot or Dutch oven over medium-high heat, brown the ground pork with a drizzle of oil, breaking it up as it cooks. Once browned, add ginger paste and onion jam + honey and cook until fragrant.
+In a large pot or Dutch oven over medium-high heat, brown the ground pork, breaking it up as it cooks. Once browned, add ginger paste and onion jam + honey and cook until fragrant.
 
 Deglaze with cooking sake and add water or broth (about 3-4 cups) then bring to a simmer. Break up the Japanese curry cubes and stir them into the liquid until completely dissolved and the sauce thickens.
 
