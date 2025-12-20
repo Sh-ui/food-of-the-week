@@ -121,7 +121,7 @@ Serve on plates with rice in the center in rounded mound, use the back of a ladl
 
 Sprinkle the toasted panko breadcrumbs generously over the curry portions right before serving.
 
-## ~~Spiced SheetPan Fish~~
+## Spiced SheetPan Fish
 
 **Protein** Frozen tilapia
 

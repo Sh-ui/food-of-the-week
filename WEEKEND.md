@@ -1,72 +1,50 @@
-# Weekend of December 13-14, 2025
+# Weekend of December 21-22, 2025
 
 ## Grocery List
 
 ### Produce
-- [x] New potatoes - 1.5 lb
-- [x] Green onion - 1 bunch
-- [x] Mushrooms (cremini or button) - 8 oz
-- [x] Mixed greens - 1 container
-- [x] Iceberg lettuce - 1 head
-- [x] Plum tomatoes - 3-4
-- [x] Cilantro - 1 bunch
+- [ ] Fresh parsley
+- [ ] Garlic - 1 bulb
+- [ ] Italian bagged salad
+- [ ] Yukon gold potatoes
 
 ### Staples
-- [x] Whole grain mustard - 1 jar (if needed)
-- [x] Capers - small jar
-- [x] Mayonnaise - Jar
+- [ ] Dried Italian herbs (basil, oregano)
+- [ ] Italian Dressing Mix Packet
 
 ### Dairy
-- [x] Swiss cheese slices - 8 oz
-- [x] Shredded cheddar cheese - 8 oz
-- [x] Sour cream - (at home)
+- [ ] Parmigiano-Reggiano wedge
+- [ ] Low Moisture Mozzarella block
+- [ ] Heavy Cream
 
 ### Protein
-- [x] Frozen burger patties - (at home)
-- [x] Frozen gringo taco meat - (at home)
+- [ ] Sweet Italian sausage - 1 lb (ground or links)
+- [ ] Ground beef (80/20) - 1 lb
 
 ### Bakery
-- [x] Water roll buns - 4-6
-- [x] Tostadas - 1 package
 
-## ~~Water Burgers + Potato Salad~~
+## Italian Lazy Meatballs
 
-**Day** Saturday
+**Day** Sunday
 
-**Protein** Frozen burger patties
+**Protein** Sweet Italian sausage + ground beef
 
-**Ingredients** Swiss cheese, water roll buns, mushrooms, white onion (at home), new potatoes, whole grain mustard, green onion, cornichons, mixed greens
+**Ingredients** Sweet Italian sausage, ground beef, panko, fresh parsley, garlic, parmesan, egg, mozzarella, italian bagged salad, yukon gold potatoes, italian dressing, italian herbs, milk
 
-**Description** Classic water burgers with melted Swiss and sautéed mushrooms and onions, served alongside a rustic whole grain mustard potato salad and simply dressed greens.
+**Description** Italian-American meatballs halfway between meatloaf and meatballs - the kind that get baked large and topped with gooey melted mozzarella. Comfort food that bakes hands-off while you relax. Served with classic wedge salad and garlicky Tuscan mash.
 
-**Already Prepped**
+**Sous Chef - Prep**
 
- - Burger patties are in the freezer.
+Mix 1 lb sweet Italian sausage + 1 lb ground beef + 1 cup panko + chopped parsley + minced garlic + grated parmesan + egg + salt/pepper.
 
-**Potato Salad (can make ahead)**
+Form into 4-6 large balls (meatloaf-sized, not bite-sized) and place on a roasting sheet.
 
-Boil new potatoes whole until fork-tender, about 15-20 minutes. Drain and let cool slightly, then cut into quarters or halves.
+**Chef - Finishing & Plating**
 
-While still warm, toss with: whole grain mustard, olive oil, sliced green onion, capers, salt, and pepper. The warm potatoes will absorb the dressing. Serve at room temperature.
+Bake at 375°F for 25-30 minutes until mostly cooked through.
 
-**Burgers**
+Top each meatball generously with shredded mozzarella and bake another 10 minutes until cheese is melted and bubbly.
 
-Slice the white onion into rings. Slice the mushrooms.
+For the mash: yukon gold potatoes until tender, drain and mash with roasted garlic + chopped parsley + italian herbs + milk/cream + salt/pepper + parmesan.
 
-In a large skillet, combine the onions and mushrooms with a generous amount of butter. Sauté briefly, then add a few dashes of Worcestershire sauce, a sprinkle of beef bouillon powder (or a bouillon cube), and a pinch of MSG. Pour in plenty of water—enough to create a shallow broth the patties can poach in.
-
-Simmer until the mushrooms and onions are softened and the broth is rich and umami-packed, adding more water if needed. Taste and adjust seasoning.
-
-Nestle the frozen burger patties directly into the bubbling onion-mushroom broth. Poach the patties, flipping once, until cooked through and juicy.
-
-Lay slices of Swiss cheese over the patties while still in the pan, then stack the water roll buns (split-side down) over the cheese and patties to create a tall tower. Cover the skillet and let everything steam for a minute or two until the cheese is melted and the buns are pillowy and warm.
-
-To serve, use a spatula to lift each cheesy patty along with a generous pile of the onions, mushrooms, and some of the reduced umami broth directly onto the bottom bun. Top with the bun and serve immediately.
-
-**Plating**
-
-Dress the mixed greens lightly with olive oil and lemon or a simple vinaigrette.
-
-Assemble burgers: bun, patty with melted Swiss, pile of mushrooms and onions, top bun.
-
-Serve with potato salad and dressed greens on the side.
+For the salad: mix italian bagged salad + italian dressing.
