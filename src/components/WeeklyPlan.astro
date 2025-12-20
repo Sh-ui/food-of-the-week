@@ -3,6 +3,8 @@ import GroceryList from './GroceryList.astro';
 import MealCard from './MealCard.astro';
 import Footer from './Footer.astro';
 import StickyHeader from './StickyHeader.astro';
+import ActionButton from './ActionButton.astro';
+import { getInstructionBadgeColor, sectionColors } from '../config/colors';
 import type { WeekPlan } from '../utils/weekParser';
 
 interface Props {
@@ -10,6 +12,15 @@ interface Props {
 }
 
 const { weekPlan } = Astro.props;
+
+interface HeroRow {
+  id: string;
+  mealName: string;
+  codename: string;
+  details: string;
+  cooked: boolean;
+  colorIndex: number;
+}
 
 // Derive short title: "Week of December 7-13, 2025" → "Dec 7-13"
 // Also handle "Weekend of ..." format
@@ -27,11 +38,43 @@ const mealsForNav = weekPlan.meals.map(meal => ({
   cooked: meal.cooked
 }));
 
-// Build favicon path
-const baseUrl = import.meta.env.BASE_URL.endsWith('/') 
-  ? import.meta.env.BASE_URL 
-  : import.meta.env.BASE_URL + '/';
-const faviconSrc = baseUrl + 'favicon.svg';
+const heroRowsFromMeals: HeroRow[] = weekPlan.meals
+  .map((meal, idx) => {
+    if (!meal.quickRead?.codename) return null;
+    return {
+      id: meal.id,
+      mealName: meal.title,
+      codename: meal.quickRead.codename,
+      details: meal.quickRead.details ?? '',
+      cooked: meal.cooked,
+      colorIndex: idx,
+    };
+  })
+  .filter((row): row is HeroRow => row !== null);
+
+const mealLookup = new Map(
+  weekPlan.meals.map((meal, idx) => [meal.title.trim().toLowerCase(), { id: meal.id, cooked: meal.cooked, colorIndex: idx }])
+);
+
+const heroRowsFromLegacy: HeroRow[] = weekPlan.heroSummary
+  .map((summaryLine, idx) => {
+    const parts = summaryLine.split(/\s*•\s*/).map(p => p.trim()).filter(Boolean);
+    if (parts.length < 2) return null;
+    const match = mealLookup.get(parts[0].trim().toLowerCase());
+    return {
+      id: match?.id ?? '',
+      mealName: parts[0],
+      codename: parts[1],
+      details: parts[2] ?? '',
+      cooked: match?.cooked ?? false,
+      colorIndex: match?.colorIndex ?? idx,
+    };
+  })
+  .filter((row): row is HeroRow => row !== null);
+
+const heroRows = heroRowsFromMeals.length > 0 ? heroRowsFromMeals : heroRowsFromLegacy;
+
+ 
 ---
 
 <StickyHeader 
@@ -44,9 +87,74 @@ const faviconSrc = baseUrl + 'favicon.svg';
   <!-- Hero Section -->
   <section class="text-center px-md py-xl min-h-[40vh] flex flex-col items-center justify-center gap-lg mobile:min-h-[30vh] mobile:px-sm" id="top">
     <h1 class="mb-0">{weekPlan.weekTitle}</h1>
-    <div class="flex justify-center">
-      <img src={faviconSrc} alt="Food of the Week" class="w-20 h-20 opacity-60" />
+    <!-- Hero Action Bar: Links & Info + Print Full Week -->
+    <div class="hero-action-bar flex items-center justify-center gap-md">
+      <ActionButton 
+        variant="ghost" 
+        href="#site-footer" 
+        size="md"
+        class="hero-action-btn border border-border"
+      >
+        <svg slot="icon" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="16" x2="12" y2="12"></line>
+          <line x1="12" y1="8" x2="12.01" y2="8"></line>
+        </svg>
+        Links & Info
+      </ActionButton>
+      
+      <ActionButton 
+        variant="primary" 
+        size="md"
+        id="hero-print-full-week"
+        class="hero-action-btn"
+        dataAttributes={{ "print-target": "all" }}
+      >
+        <svg slot="icon" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 6 2 18 2 18 9"></polyline>
+          <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+          <rect x="6" y="14" width="12" height="8"></rect>
+        </svg>
+        Print Full Week
+      </ActionButton>
     </div>
+
+    {/* Hero Summary */}
+    {heroRows.length > 0 && (
+      <div class="hero-summary flex flex-col gap-sm items-center mt-lg w-full max-w-[900px] mobile:gap-xs mobile:mt-md mobile:items-stretch">
+        {heroRows.map((row) => {
+          const codenameScheme = getInstructionBadgeColor(row.colorIndex);
+          const infoScheme = sectionColors.firstSubsection;
+
+          return (
+            <a
+              href={row.id ? `#print-section-${row.id}` : undefined}
+              class={`hero-summary-link hero-summary-item w-full flex flex-wrap items-center justify-center gap-sm px-sm py-xs rounded-md bg-bg border border-border hover:bg-bg-alt transition-colors no-underline text-[0.95rem] mobile:gap-xs mobile:px-sm mobile:py-xs ${row.cooked ? 'opacity-60' : ''}`}
+            >
+              <span class="meal-name px-sm py-xs rounded font-semibold text-primary bg-transparent">
+                {row.cooked ? '✓ ' : ''}{row.mealName}
+              </span>
+
+              <span
+                class="codename px-sm py-xs rounded font-bold border mobile:text-[1.05rem]"
+                style={`background: ${codenameScheme.bg}; color: ${codenameScheme.heading}; border-color: ${codenameScheme.border}`}
+              >
+                {row.codename}
+              </span>
+
+              {row.details && (
+                <span
+                  class="details px-sm py-xs rounded font-medium border mobile:text-[1.05rem]"
+                  style={`background: ${infoScheme.bg}; color: ${infoScheme.heading}; border-color: ${infoScheme.border}`}
+                >
+                  {row.details}
+                </span>
+              )}
+            </a>
+          );
+        })}
+      </div>
+    )}
   </section>
   
   {weekPlan.groceryList.length > 0 && (

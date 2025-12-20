@@ -20,6 +20,11 @@ type SchemeRef =
   | { scheme: string }
   | { bg: string; border: string; heading: string };
 
+interface SchemeDerivationOptions {
+  bgMix: number;
+  headingMix: number;
+}
+
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null;
 }
@@ -85,7 +90,8 @@ function getTailwindColorValue(keyOrValue: string): string {
   return colors[keyOrValue] ?? keyOrValue;
 }
 
-function deriveSchemeFromBaseColor(baseColor: string): SectionColorScheme {
+function deriveSchemeFromBaseColor(baseColor: string, opts?: Partial<SchemeDerivationOptions>): SectionColorScheme {
+  const { bgMix = 0.12, headingMix = 0.65 } = opts ?? {};
   const border = getTailwindColorValue(baseColor);
   const bgBase = getTailwindColorValue('bg');
   const textBase = getTailwindColorValue('text');
@@ -98,16 +104,16 @@ function deriveSchemeFromBaseColor(baseColor: string): SectionColorScheme {
     return { bg: bgBase, border, heading: textBase };
   }
 
-  const bg = rgbToHex(mixRgb(bgRgb, borderRgb, 0.12));
-  const heading = rgbToHex(mixRgb(textRgb, borderRgb, 0.65));
+  const bg = rgbToHex(mixRgb(bgRgb, borderRgb, bgMix));
+  const heading = rgbToHex(mixRgb(textRgb, borderRgb, headingMix));
   return { bg, border, heading };
 }
 
-function resolveSchemeRef(ref: SchemeRef): SectionColorScheme {
+function resolveSchemeRef(ref: SchemeRef, opts?: Partial<SchemeDerivationOptions>): SectionColorScheme {
   if ('scheme' in ref) {
     const paletteMatch = getEffectivePalette().find(entry => entry.name === ref.scheme);
     const base = paletteMatch?.color ?? ref.scheme;
-    return deriveSchemeFromBaseColor(base);
+    return deriveSchemeFromBaseColor(base, opts);
   }
 
   return {
@@ -196,6 +202,16 @@ export function getInstructionColor(index: number): SectionColorScheme {
   if (sequenceLength === 0) return deriveSchemeFromBaseColor(getTailwindColorValue('secondary') || '#999999');
 
   return resolveSchemeRef(instructionSequenceRefs[index % sequenceLength]);
+}
+
+export function getInstructionBadgeColor(index: number): SectionColorScheme {
+  const override = positionOverrides[index];
+  if (override) return resolveSchemeRef(override, { bgMix: 0.22, headingMix: 0.72 });
+
+  const sequenceLength = instructionSequenceRefs.length;
+  if (sequenceLength === 0) return deriveSchemeFromBaseColor(getTailwindColorValue('secondary') || '#999999', { bgMix: 0.22, headingMix: 0.72 });
+
+  return resolveSchemeRef(instructionSequenceRefs[index % sequenceLength], { bgMix: 0.22, headingMix: 0.72 });
 }
 
 /**
