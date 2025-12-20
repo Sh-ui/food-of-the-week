@@ -9,6 +9,7 @@
 - [ ] Yukon gold potatoes
 
 ### Staples
+- [x] Panko breadcrumbs
 - [ ] Dried Italian herbs (basil, oregano)
 - [ ] Italian Dressing Mix Packet
 
@@ -16,6 +17,7 @@
 - [ ] Parmigiano-Reggiano wedge
 - [ ] Low Moisture Mozzarella block
 - [ ] Heavy Cream
+- [x] Eggs
 
 ### Protein
 - [ ] Sweet Italian sausage - 1 lb (ground or links)
