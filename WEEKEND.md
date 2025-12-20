@@ -33,7 +33,7 @@
 
 **Ingredients** Sweet Italian sausage, ground beef, panko, fresh parsley, garlic, parmesan, egg, mozzarella, italian bagged salad, yukon gold potatoes, italian dressing, italian herbs, milk
 
-**Description** Italian-American meatballs halfway between meatloaf and meatballs - the kind that get baked large and topped with gooey melted mozzarella. Comfort food that bakes hands-off while you relax. Served with classic wedge salad and garlicky Tuscan mash.
+**Description** Italian-American meatballs halfway between meatloaf and meatballs - the kind that get baked large and topped with gooey melted mozzarella. Bakes hands-off while you relax. Served with Italian salad and garlicky Tuscan mash.
 
 **Sous Chef - Prep**
 
