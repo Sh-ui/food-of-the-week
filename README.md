@@ -90,8 +90,6 @@ GroceryPlanning/
 
 ## Features
 
-### Current Features
-
 - **Quick Read Hero Summary** - Glance-able meal overview with codename badges (Prep&Heat, SousVidePrep, etc.) and timing details parsed from blockquotes in each meal section
 - **Interactive Grocery Lists** - Checkboxes persist in browser localStorage with week-specific keys
 - **Weekend Planning** - Dedicated weekend page with separate meal plans (`/weekend` route)
@@ -105,13 +103,97 @@ GroceryPlanning/
 - **Persistent State** - Grocery list checkbox states saved per week, survives browser refresh
 - **Static Site Generation** - Fast, secure, and hostable anywhere (currently on GitHub Pages)
 
-### Coming Soon
+## Quick Read System
 
-See [TODOS.md](TODOS.md) for the complete development roadmap including:
-- **Cheffy** - Interactive assistant character for notifications, calendar sync, and archive navigation
-- **PWA Support** - Install as app, offline access, and background sync
-- **Archive Search** - Full-text search across past meal plans
-- **Recipe Timeline** - Extract cooking timelines and export to calendar
+Each meal includes a "quick read" that gives you an instant understanding of what kind of work it requires and when to do key tasks. This appears as a hero row at the top of the page and helps with meal planning at a glance.
+
+### Format
+
+Quick reads are added as blockquotes immediately after each meal heading in `FOOD-OF-THE-WEEK.md`:
+
+```markdown
+## Sweet Pork Curry
+
+> Prep&Heat+
+>
+> prep + toast panko + 5:30 rice
+
+**Protein** Frozen ground pork
+```
+
+The first line is the **codename** (workload category), and the third line provides **timing details** (specific actions and when to do them).
+
+### Codenames
+
+Codenames describe the type and intensity of work from the **Sous Chef's perspective** (the person doing prep before the main cook arrives):
+
+| Codename | What It Means | Examples |
+|----------|---------------|----------|
+| **Prep&Heat** | Basic chopping/prep + simple heating | Tostadas, simple stir-fries, assembly dishes |
+| **SousVidePrep** | Sous vide setup + supporting prep work | Starting mire poix sous vide, forming patties, rice cooker setup |
+| **SousChefDish** | Sous chef owns the complete cooking process | Sheet pan roasts, one-pot pastas, full oven dishes |
+
+### Intensity Modifiers
+
+Add `+` for increased complexity or multiple components:
+
+- **Single `+`**: Extra prep steps, multiple components, or extended time
+  - Example: `SousVidePrep+` = sous vide + patty forming + toasting breadcrumbs
+- **Double `++`**: Complex multi-step work like bread-making plus sous vide
+  - Example: `SousVidePrep++` = bread + sous vide beets + sous vide chicken
+
+### Timing Details
+
+The second line of the quick read provides **actionable timing information**—the critical "when" and "what" that helps the Sous Chef schedule their work.
+
+**What to include:**
+- Sous vide start times: `4:00 mire poix`
+- Rice cooker timing: `5:30 rice`
+- Multiple components: `3:30 veg + 5:30 rice`
+- Key prep steps: `prep + toast panko`
+- Oven operations: `Couscous + oven roast`
+
+**What to avoid:**
+- Don't repeat information from the codename (e.g., don't write "sous vide" after `SousVidePrep`)
+- Don't include generic descriptions—focus on specific times and actions
+- Keep it concise—usually 1-2 key timing points
+
+**Examples:**
+
+```markdown
+## Gringo Tostadas
+> Prep&Heat
+>
+> cut toppings + heat stuff
+```
+Simple prep work with basic heating—no complex timing needed.
+
+```markdown
+## Lamb Patties & Veg
+> SousVidePrep
+>
+> 4:00 mire poix + 5:00 patties
+```
+Two timed tasks: start sous vide at 4pm, form patties at 5pm.
+
+```markdown
+## Spiced SheetPan Fish
+> SousChefDish
+>
+> 5:30 Couscous + oven roast
+```
+Sous chef handles complete cooking process—start rice cooker and manage oven.
+
+### How Quick Reads Work
+
+The parser automatically extracts quick read data from these blockquotes and:
+- Displays them as colored badge rows in the hero section (clickable to jump to that meal)
+- Shows them on each meal card for reference while cooking
+- Includes them in printed meal plans
+
+If a meal doesn't have a quick read blockquote, it will still appear in the navigation—just without the detailed badges.
+
+
 
 ## Customization
 
