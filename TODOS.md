@@ -1,6 +1,7 @@
 # TODOS
 
 ## Needs Done P1
+ - [ ] make 'print full week' button at the very bottom of the page, turn brown to match the look of the one in the header for better UX
  - [ ] make what is currently operating as headers parsed from bold text be parsed from `###` and/or `####` that way bold text can be used freely within content without confusing the parser
  - [ ] make the checkboxes locally check-able even if globally checked indicator for non-family users
    - this would also involve making the printed view of grocery list not show the globally checked indicator, this also solves the visual look issue of the circles inside the checkboxes being off center (since we aren't even bothering to show them anymore in the print rendered version)
