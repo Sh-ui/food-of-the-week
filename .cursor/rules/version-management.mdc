@@ -180,6 +180,13 @@ version_bump_process:
       field: "version"
       format: "JSON string value"
     
+    package_lock_json:
+      path: "package-lock.json"
+      fields:
+        - "version (line 3, root level)"
+        - "packages[''].version (line 9, embedded package entry)"
+      note: "Both occurrences must be updated to match package.json"
+    
     readme:
       conditional: "Only if version badge exists"
       patterns:
