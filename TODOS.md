@@ -1,24 +1,30 @@
 # TODOS
 
-## Needs Done
+## Needs Done P1
+ - [ ] make what is currently operating as headers parsed from bold text be parsed from `###` and/or `####` that way bold text can be used freely within content without confusing the parser
  - [ ] make the checkboxes locally check-able even if globally checked indicator for non-family users
+   - this would also involve making the printed view of grocery list not show the globally checked indicator, this also solves the visual look issue of the circles inside the checkboxes being off center (since we aren't even bothering to show them anymore in the print rendered version)
  - [ ] use index sequence override to setup info subsection specified theming and prune deprecated approach
  - [ ] fix license formatting in the repo for parity with standard approaches
+ - [ ] fix scroll up animation for header print button
+   - _it fades out when scrolling down but it doesn't fade in properly when scrolling up_
+ - [ ] Replace hardcoded meal ID system with slugified meal names
+   - _Currently using counter-based IDs (`meal-1`, `meal-2`) instead of slugified meal names (`lamb-patties-veg`, `sweet-pork-curry`)_
+   - _Would enable direct links like `/#print-section-lamb-patties-veg` instead of needing to know meal order_
+   - _Affects: `weekParser.ts` (ID generation), `StickyHeader.astro` (navigation links), any print section targeting logic_
+   - _Print section URLs will automatically work once IDs are slugified_
+
+## Needs Done P2
  - [ ] integrate ko-fi
+   - _put badge at bottom of README.md_
+   - _put 'buy me a coffee' link in the footer of the site_
+   - _add sponsers/funding section to the github repo_
  - [ ] integrate GoatCounter
    - _use script line embedded in `Layout.astro`_
    - _use generated API key + github action/deployment to push a log periodically to my email_
  - [ ] convert .mjs files to .ts files _*this actually might be more involved_
    - see about converting `astro.config.mjs` to `.ts`
    - easiest way to get rid of `tailwind.config.mjs` would be a [MIGRATION](MIGRATION.md) to `v4` 
- - [ ] fix scroll up animation for header print button
-   - _it fades out when scrolling down but it doesn't fade in properly when scrolling up_
- - [ ] fix appearance of checked items in print view
- - [ ] Replace hardcoded meal ID system with slugified meal names
-   - _Currently using counter-based IDs (`meal-1`, `meal-2`) instead of slugified meal names (`lamb-patties-veg`, `sweet-pork-curry`)_
-   - _Would enable direct links like `/#print-section-lamb-patties-veg` instead of needing to know meal order_
-   - _Affects: `weekParser.ts` (ID generation), `StickyHeader.astro` (navigation links), any print section targeting logic_
-   - _Print section URLs will automatically work once IDs are slugified_
 
 ## Possible Features
 

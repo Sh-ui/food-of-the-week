@@ -1,4 +1,4 @@
-# Weekend of December 21-22, 2025
+# Weekend of December 20-21, 2025
 
 ## Grocery List
 

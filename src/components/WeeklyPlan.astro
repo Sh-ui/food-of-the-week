@@ -38,19 +38,14 @@ const mealsForNav = weekPlan.meals.map(meal => ({
   cooked: meal.cooked
 }));
 
-const heroRowsFromMeals: HeroRow[] = weekPlan.meals
-  .map((meal, idx) => {
-    if (!meal.quickRead?.codename) return null;
-    return {
-      id: meal.id,
-      mealName: meal.title,
-      codename: meal.quickRead.codename,
-      details: meal.quickRead.details ?? '',
-      cooked: meal.cooked,
-      colorIndex: idx,
-    };
-  })
-  .filter((row): row is HeroRow => row !== null);
+const heroRowsFromMeals: HeroRow[] = weekPlan.meals.map((meal, idx) => ({
+  id: meal.id,
+  mealName: meal.title,
+  codename: meal.quickRead?.codename ?? '',
+  details: meal.quickRead?.details ?? '',
+  cooked: meal.cooked,
+  colorIndex: idx,
+}));
 
 const mealLookup = new Map(
   weekPlan.meals.map((meal, idx) => [meal.title.trim().toLowerCase(), { id: meal.id, cooked: meal.cooked, colorIndex: idx }])
@@ -135,12 +130,14 @@ const heroRows = heroRowsFromMeals.length > 0 ? heroRowsFromMeals : heroRowsFrom
                 {row.cooked ? '✓ ' : ''}{row.mealName}
               </span>
 
-              <span
-                class="codename px-sm py-xs rounded font-bold border mobile:text-[1.05rem]"
-                style={`background: ${codenameScheme.bg}; color: ${codenameScheme.heading}; border-color: ${codenameScheme.border}`}
-              >
-                {row.codename}
-              </span>
+              {row.codename && (
+                <span
+                  class="codename px-sm py-xs rounded font-bold border mobile:text-[1.05rem]"
+                  style={`background: ${codenameScheme.bg}; color: ${codenameScheme.heading}; border-color: ${codenameScheme.border}`}
+                >
+                  {row.codename}
+                </span>
+              )}
 
               {row.details && (
                 <span
