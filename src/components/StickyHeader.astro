@@ -694,7 +694,7 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     const viewportHeight = window.innerHeight;
     const viewportMidpoint = scrollY + (viewportHeight * 0.5);
 
-    const sections = buildSectionData(scrollY);
+    const sections = buildSectionData(scrollY).sort((a, b) => a.top - b.top);
     const heroData = checkHeroSection(viewportMidpoint, scrollY);
     const footerData = checkFooterSection(viewportMidpoint, scrollY, viewportHeight);
     
@@ -715,8 +715,22 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
           break;
         }
       }
+
+      if (!foundSection && sections.length > 0) {
+        const previousSection = sections.filter(sec => viewportMidpoint >= sec.top).pop();
+        if (previousSection) {
+          foundSection = previousSection.id;
+          foundSectionData = previousSection;
+        } else {
+          const nextSection = sections.find(sec => viewportMidpoint < sec.top);
+          if (nextSection) {
+            foundSection = nextSection.id;
+            foundSectionData = nextSection;
+          }
+        }
+      }
     }
-    
+
     if (foundSection === null) {
       foundSection = 'top';
     }
