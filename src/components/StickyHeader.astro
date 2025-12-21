@@ -155,7 +155,7 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     align-items: center;
     justify-content: center;
     height: 56px;
-    color: var(--color-text);
+    color: var(--color-primary);
     opacity: 1;
     transition: opacity 0.3s ease;
   }
@@ -442,6 +442,16 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
 
   .header-print-btn:hover {
     background: var(--color-secondary-hover);
+  }
+
+  /* Print button turns brown when at footer */
+  .sticky-header[data-at-footer="true"] .header-print-btn {
+    background: var(--color-primary);
+    color: var(--color-bg);
+  }
+
+  .sticky-header[data-at-footer="true"] .header-print-btn:hover {
+    background: var(--color-primary-hover);
   }
 
   .header-print-btn .print-icon {
@@ -814,8 +824,13 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
   let heroPrintBtn: HTMLButtonElement | null = null;
 
   function updateHeroPrintButtonColor(sectionId: string | null): void {
-    if (!heroPrintBtn) return;
-    heroPrintBtn.classList.toggle('hero-bottom', sectionId === 'footer');
+    // Update header data attribute for print button styling
+    header.dataset.atFooter = (sectionId === 'footer') ? 'true' : 'false';
+    
+    // Update hero print button class if it exists
+    if (heroPrintBtn) {
+      heroPrintBtn.classList.toggle('hero-bottom', sectionId === 'footer');
+    }
   }
 
   function setupPrintButtons(): void {
@@ -839,6 +854,7 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     header.dataset.scrolled = 'false';
     header.dataset.dateButtonVisible = 'false';
     header.dataset.hasShadow = 'false';
+    header.dataset.atFooter = 'false';
     updateScrollState();
     setupSectionDropdown();
     setupSmoothScroll();

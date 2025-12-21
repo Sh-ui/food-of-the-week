@@ -89,21 +89,6 @@ body {
   min-height: 100vh;
 }
 
-.header-chef-hat svg {
-  stroke: currentColor;
-  fill: currentColor;
-}
-
-.hero-action-btn.hero-bottom {
-  background: var(--color-text);
-  border-color: var(--color-text);
-  color: var(--color-bg);
-}
-
-.hero-action-btn.hero-bottom svg {
-  stroke: currentColor;
-  fill: currentColor;
-}
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
