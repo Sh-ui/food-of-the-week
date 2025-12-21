@@ -78,7 +78,7 @@ function renderMarkdown(text: string | undefined): string {
                 <strong class="text-primary inline-block min-w-[120px]">{sub.title}</strong>
                 {sub.content && (
                   <span
-                    class="subsection-field-body block mt-xs"
+                    class="subsection-field-body inline text-base"
                     set:html={renderMarkdown(sub.content)}
                   />
                 )}

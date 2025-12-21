@@ -301,7 +301,8 @@ function parseMarkdownContent(content: string): PagePlan {
       // Accumulate content into current block
       if (currentSubsection) {
         if (token.type === 'paragraph') {
-          const text = token.text;
+          const text = token.text.trim();
+          if (!text) continue;
           if (currentSubsection.content) {
             currentSubsection.content += '\n\n' + text;
           } else {

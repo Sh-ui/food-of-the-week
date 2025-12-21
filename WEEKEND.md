@@ -3,30 +3,27 @@
 ## Grocery List
 
 ### Produce
-- [ ] Fresh parsley
-- [ ] Garlic - 1 bulb
-- [ ] Italian bagged salad
+- [x] Fresh parsley
+- [x] Garlic - 1 bulb
+- [x] Italian bagged salad
 - [ ] Yukon gold potatoes
 
 ### Staples
 - [x] Panko breadcrumbs
-- [ ] Dried Italian herbs (basil, oregano)
-- [ ] Italian Dressing Mix Packet
+- [x] Dried Italian herbs (basil, oregano)
+- [x] Italian Dressing Mix Packet
 
 ### Dairy
-- [ ] Parmigiano-Reggiano wedge
-- [ ] Low Moisture Mozzarella block
-- [ ] Heavy Cream
+- [x] Parmigiano-Reggiano wedge
+- [x] Low Moisture Mozzarella block
+- [x] Heavy Cream
 - [x] Eggs
 
 ### Protein
-- [ ] Sweet Italian sausage - 1 lb (ground or links)
-- [ ] Ground beef (80/20) - 1 lb
+- [x] Sweet Italian sausage - 1 lb (ground or links)
+- [x] Ground beef (80/20) - 1 lb
 
 ## Italian Lazy Meatballs
-
-##### Prep&Heat
-###### mix sausage + bake 25-30m + top with mozzarella
 
 #### Day:
 Sunday
