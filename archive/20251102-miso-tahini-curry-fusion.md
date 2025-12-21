@@ -37,28 +37,24 @@
 
 ## Meal 1: Sous Vide Miso-Butter Salmon with Broccoli and Soba Noodles
 
-**Protein:** Salmon
+#### Protein: Salmon
 
-**Ingredients:** Salmon, broccoli, soba noodles, butter, miso paste (pantry), garlic, soy sauce
+#### Ingredients: Salmon, broccoli, soba noodles, butter, miso paste (pantry), garlic, soy sauce
 
-**Description:** Perfectly cooked sous vide salmon with miso-butter sauce, charred broccoli, and cold soba noodles. Temperature and texture contrast that's sophisticated yet weeknight-friendly.
+#### Description: Perfectly cooked sous vide salmon with miso-butter sauce, charred broccoli, and cold soba noodles. Temperature and texture contrast that's sophisticated yet weeknight-friendly.
 
-**Instructions:**
-
-**Already Prepped:**
-
+### Instructions
+### Already Prepped
 - Salmon fillets have been seasoned with salt and vacuum sealed. Stored in fridge.
 
-**Sous Chef - Prep:**
-
+### Sous Chef - Prep
 Drop the vacuum-sealed salmon into sous vide bath set to salmon temperature (Chef will set temperature remotely from the app, typically 122°F).
 
 Cook soba noodles according to package, drain, and rinse under cold water. Toss with sesame oil and soy sauce. Set aside (serving cold).
 
 Cut broccoli into florets. Mince garlic.
 
-**Chef - Finishing & Plating:**
-
+### Chef - Finishing & Plating
 Remove salmon from sous vide bag, pat dry. Using kitchen torch, sear skin side until crispy. Alternatively, sear in hot skillet skin-side down for 2 minutes.
 
 In large skillet over medium-high, char broccoli florets for 3-4 minutes until some edges are blackened. Add splash of water and cover to steam-finish for 2 minutes. Remove.
@@ -71,22 +67,19 @@ Garnish with sesame seeds and scallions if available.
 
 ## Meal 2: Sous Vide Steak with Roasted Sweet Potatoes and Tahini Drizzle
 
-**Protein:** Flat iron steak
+#### Protein: Flat iron steak
 
-**Ingredients:** Flat iron steak, sweet potatoes, tahini, honey, lemon, garlic, frozen spinach
+#### Ingredients: Flat iron steak, sweet potatoes, tahini, honey, lemon, garlic, frozen spinach
 
-**Description:** Perfectly cooked sous vide steak with roasted sweet potato rounds and lemony tahini sauce. Middle Eastern-inspired precision cooking.
+#### Description: Perfectly cooked sous vide steak with roasted sweet potato rounds and lemony tahini sauce. Middle Eastern-inspired precision cooking.
 
-**Instructions:**
-
-**Already Prepped:**
-
+### Instructions
+### Already Prepped
 - Flat iron steak has been seasoned with salt and pepper, then vacuum sealed. Stored in fridge.
 
 - Sweet potatoes have been vacuum sealed and pre-cooked sous vide. Stored in fridge ready to roast for crisping.
 
-**Sous Chef - Prep:**
-
+### Sous Chef - Prep
 Drop the vacuum-sealed steak into sous vide bath set to steak temperature (Chef will set temperature remotely from the app, typically 130-135°F for medium-rare).
 
 Preheat oven to 425°F.
@@ -97,8 +90,7 @@ Make tahini sauce: Whisk tahini with lemon juice, minced garlic, honey, water (t
 
 Thaw frozen spinach and squeeze dry. Season with salt, pepper, and butter. Warm in microwave or small pan.
 
-**Chef - Finishing & Plating:**
-
+### Chef - Finishing & Plating
 Remove steak from sous vide bag, reserve ALL the juices. Pat steak completely dry.
 
 Using kitchen torch, sear all sides of steak until a nice crust forms. Alternatively, sear in screaming hot cast iron 1 minute per side.
@@ -111,20 +103,17 @@ Drizzle tahini sauce and reserved steak juices over everything. Garnish with fre
 
 ## Meal 3: Butternut Squash and Lamb Curry
 
-**Protein:** Ground lamb
+#### Protein: Ground lamb
 
-**Ingredients:** Ground lamb, butternut squash, coconut milk, red curry paste, red onion, frozen peas, fresh basil
+#### Ingredients: Ground lamb, butternut squash, coconut milk, red curry paste, red onion, frozen peas, fresh basil
 
-**Description:** Rich, warming curry with sweet squash and earthy lamb. Aromatic and filling, perfect over rice.
+#### Description: Rich, warming curry with sweet squash and earthy lamb. Aromatic and filling, perfect over rice.
 
-**Instructions:**
-
-**Already Prepped:**
-
+### Instructions
+### Already Prepped
 - Ground lamb is thawed.
 
-**Sous Chef - Cooking:**
-
+### Sous Chef - Cooking
 Start rice cooking (white or brown).
 
 Dice butternut squash into ¾-inch cubes. Dice red onion.
@@ -139,36 +128,31 @@ Add coconut milk and diced butternut squash. Bring to simmer, cover, and cook 15
 
 Add frozen peas in last 5 minutes.
 
-**Chef - Finishing & Plating:**
-
+### Chef - Finishing & Plating
 Taste and adjust - more curry paste for heat, squeeze of lime for brightness, splash of fish sauce for depth.
 
 Serve over rice in bowls. Garnish with fresh basil leaves and lime wedges.
 
 ## Meal 4: Sous Vide Scallops with Teriyaki Broccoli
 
-**Protein:** Scallops
+#### Protein: Scallops
 
-**Ingredients:** Scallops, broccoli, teriyaki sauce, garlic, ginger, sesame oil
+#### Ingredients: Scallops, broccoli, teriyaki sauce, garlic, ginger, sesame oil
 
-**Description:** Perfectly cooked sous vide scallops with quick sear, served with sticky-sweet broccoli. Restaurant-style precision in under 30 minutes.
+#### Description: Perfectly cooked sous vide scallops with quick sear, served with sticky-sweet broccoli. Restaurant-style precision in under 30 minutes.
 
-**Instructions:**
-
-**Already Prepped:**
-
+### Instructions
+### Already Prepped
 - Scallops have been vacuum sealed with salt and white pepper. Stored in fridge.
 
-**Sous Chef - Prep:**
-
+### Sous Chef - Prep
 Drop the vacuum-sealed scallops into sous vide bath set to scallop temperature (Chef will set temperature remotely from the app, typically 122°F for 30 minutes).
 
 Start rice cooking if serving over rice.
 
 Cut broccoli into small florets. Mince garlic and ginger.
 
-**Chef - Finishing & Plating:**
-
+### Chef - Finishing & Plating
 Remove scallops from sous vide bag and pat completely dry. They're already cooked, just need a quick sear.
 
 Heat wok or large skillet over high heat. Add oil and stir-fry broccoli for 3-4 minutes until bright green and starting to char.
@@ -183,20 +167,17 @@ Plate rice (if using), top with teriyaki broccoli and seared scallops. Drizzle w
 
 ## Meal 5: Sweet Potato and Feta Frittata
 
-**Protein:** Eggs (pantry staple)
+#### Protein: Eggs (pantry staple)
 
-**Ingredients:** Sweet potatoes (leftover from Meal 2), frozen spinach, eggs, feta, red onion, garlic
+#### Ingredients: Sweet potatoes (leftover from Meal 2), frozen spinach, eggs, feta, red onion, garlic
 
-**Description:** Using leftover roasted sweet potatoes for a quick breakfast-for-dinner frittata. Flexible and forgiving.
+#### Description: Using leftover roasted sweet potatoes for a quick breakfast-for-dinner frittata. Flexible and forgiving.
 
-**Instructions:**
-
-**Already Prepped:**
-
+### Instructions
+### Already Prepped
 - Leftover roasted sweet potatoes from Meal 2.
 
-**Sous Chef - Prep:**
-
+### Sous Chef - Prep
 Preheat oven to 375°F.
 
 Whisk 8-10 eggs with salt, pepper, and a splash of milk or cream.
@@ -205,8 +186,7 @@ Thaw frozen spinach and squeeze very dry. Dice red onion. Crumble feta.
 
 Chop leftover sweet potatoes into chunks if needed.
 
-**Chef - Finishing & Plating:**
-
+### Chef - Finishing & Plating
 Heat oven-safe skillet over medium. Sauté diced onion until soft.
 
 Add sweet potato chunks and spinach, warm through.

@@ -35,15 +35,14 @@ export interface ListSection {
 }
 
 /**
- * A subsection within a content section.
- * Subsections are detected by bold labels: **Label**
+ * A block within a content section.
+ * Blocks are created from H3/H4 headings.
  */
 export interface Subsection {
-  title: string;              // The bold label text (without **)
-  content: string;            // Paragraph content that follows
+  title: string;              // The heading text (preserves punctuation like colons)
+  content: string;            // Paragraph content that follows (joined with \n\n)
   items: string[];            // List items if content includes a bulleted list
-  isGroupedWithPrevious: boolean;  // True if should be grouped with previous subsection
-  hasInlineContent: boolean;  // True if label had content on the same line
+  depth: 3 | 4;               // Heading depth: 3 for sections, 4 for fields
 }
 
 export interface QuickRead {
@@ -53,14 +52,15 @@ export interface QuickRead {
 
 /**
  * A content section (typically a meal).
- * Contains subsections parsed from bold labels.
+ * Contains blocks parsed from H3/H4 headings.
  */
 export interface ContentSection {
   id: string;
   title: string;              // H2 heading text (used for nav/print)
   cooked: boolean;            // From ~~strikethrough~~ on title
   quickRead?: QuickRead;
-  subsections: Subsection[];
+  preamble?: string;          // Content before first H3/H4 heading (if any)
+  subsections: Subsection[];  // Blocks from H3/H4 headings
 }
 
 /**
@@ -237,7 +237,7 @@ function parseMarkdownContent(content: string): PagePlan {
       continue;
     }
     
-    // H3 = Category in list section
+    // H3 = Category in list section (only in list section, not content sections)
     if (token.type === 'heading' && token.depth === 3) {
       if (currentSection === 'list') {
         if (currentCategory) {
@@ -247,8 +247,9 @@ function parseMarkdownContent(content: string): PagePlan {
           name: token.text,
           items: [],
         };
+        continue; // Only continue for list section H3s
       }
-      continue;
+      // H3s in content sections fall through to be handled below
     }
     
     // List in list section = category items
@@ -280,52 +281,59 @@ function parseMarkdownContent(content: string): PagePlan {
         continue;
       }
 
-      // Check for bold label pattern: **Label**
-      if (token.type === 'paragraph') {
-        const text = token.text;
-        const boldLabelMatch = text.match(/^\*\*([^*]+)\*\*(.*)$/);
-        
-        if (boldLabelMatch) {
-          const label = boldLabelMatch[1].trim();
-          const inlineContent = boldLabelMatch[2].trim();
-          
-          // Key distinction: does this label have inline content?
-          // - Inline content (text on same line as label) = should group with other inline items
-          // - No inline content (empty after label) = starts a new ungrouped section
-          const hasInlineContent = inlineContent.length > 0;
-          
-          // Save previous subsection if exists
-          if (currentSubsection) {
-            currentContentSection.subsections.push(currentSubsection);
-          }
-          
-          // Determine if this should be grouped with previous
-          // Grouped if: this has inline content AND previous subsection also had inline content
-          const previousSub = currentContentSection.subsections[currentContentSection.subsections.length - 1];
-          const previousHadInlineContent = previousSub?.hasInlineContent ?? false;
-          const isGrouped = hasInlineContent && previousHadInlineContent;
-          
-          currentSubsection = {
-            title: label,
-            content: inlineContent,
-            items: [],
-            isGroupedWithPrevious: isGrouped,
-            hasInlineContent: hasInlineContent,
-          };
-        } else if (currentSubsection) {
-          // Regular paragraph - add to current subsection content
+      // H3/H4 = Block creation
+      if (token.type === 'heading' && (token.depth === 3 || token.depth === 4)) {
+        // #region agent log
+        fetch('http://127.0.0.1:7243/ingest/1a810fcc-d7c8-4485-8b15-342c703f6c43',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'weekParser.ts:H3H4',message:'H3/H4 heading detected',data:{depth:token.depth,text:token.text,tokenType:token.type},timestamp:Date.now(),sessionId:'debug-session',hypothesisId:'A,B,E'})}).catch(()=>{});
+        // #endregion
+        // Save previous block if exists
+        if (currentSubsection) {
+          currentContentSection.subsections.push(currentSubsection);
+        }
+
+        currentSubsection = {
+          title: token.text,  // Preserve exact heading text including colons
+          content: '',
+          items: [],
+          depth: token.depth as 3 | 4,
+        };
+        continue;
+      }
+
+      // Accumulate content into current block
+      if (currentSubsection) {
+        if (token.type === 'paragraph') {
+          const text = token.text;
+          // #region agent log
+          fetch('http://127.0.0.1:7243/ingest/1a810fcc-d7c8-4485-8b15-342c703f6c43',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'weekParser.ts:para',message:'Paragraph added to block',data:{blockTitle:currentSubsection.title,blockDepth:currentSubsection.depth,paragraphText:text.substring(0,50)},timestamp:Date.now(),sessionId:'debug-session',hypothesisId:'A,B'})}).catch(()=>{});
+          // #endregion
           if (currentSubsection.content) {
             currentSubsection.content += '\n\n' + text;
           } else {
             currentSubsection.content = text;
           }
+        } else if (token.type === 'list') {
+          const items = extractListItems(token as Tokens.List);
+          currentSubsection.items.push(...items);
         }
-      }
-      
-      // List in content section - add to current subsection
-      if (token.type === 'list' && currentSubsection) {
-        const items = extractListItems(token as Tokens.List);
-        currentSubsection.        items.push(...items);
+      } else {
+        // Content before first H3/H4 heading - store as preamble
+        if (token.type === 'paragraph') {
+          const text = token.text;
+          if (currentContentSection.preamble) {
+            currentContentSection.preamble += '\n\n' + text;
+          } else {
+            currentContentSection.preamble = text;
+          }
+        } else if (token.type === 'list') {
+          const items = extractListItems(token as Tokens.List);
+          const listText = items.join('\n- ');
+          if (currentContentSection.preamble) {
+            currentContentSection.preamble += '\n\n- ' + listText;
+          } else {
+            currentContentSection.preamble = '- ' + listText;
+          }
+        }
       }
     }
   }
@@ -431,19 +439,29 @@ function parseQuickReadFromBlockquote(input: string): QuickRead | null {
 // ============================================================================
 
 /**
- * Group subsections for rendering.
- * Consecutive subsections with isGroupedWithPrevious=true are grouped together.
- * 
- * @returns Array of subsection groups. First group uses firstSubsection colors,
- *          subsequent groups use cycling instruction colors.
+ * Group blocks for rendering based on heading depth.
+ * Consecutive H4 blocks are grouped together as a "fields group".
+ * Each H3 block forms its own "section group".
+ *
+ * @returns Array of block groups for rendering.
  */
 export function groupSubsections(subsections: Subsection[]): Subsection[][] {
+  // #region agent log
+  fetch('http://127.0.0.1:7243/ingest/1a810fcc-d7c8-4485-8b15-342c703f6c43',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'weekParser.ts:group',message:'Grouping subsections',data:{count:subsections.length,subsections:subsections.map(s=>({title:s.title.substring(0,30),depth:s.depth,contentLen:s.content.length}))},timestamp:Date.now(),sessionId:'debug-session',hypothesisId:'B,C'})}).catch(()=>{});
+  // #endregion
   const groups: Subsection[][] = [];
   let currentGroup: Subsection[] = [];
-  
+
   for (const sub of subsections) {
-    if (sub.isGroupedWithPrevious && currentGroup.length > 0) {
-      // Add to current group
+    // If this is an H4 and the current group contains H4s, add to current group
+    // If this is an H3, start a new group
+    // If this is an H4 but current group contains H3s, start a new group
+    const canAddToCurrentGroup = currentGroup.length > 0 &&
+      currentGroup[0].depth === sub.depth &&
+      sub.depth === 4; // Only H4 blocks can be grouped consecutively
+
+    if (canAddToCurrentGroup) {
+      // Add to current group (only works for consecutive H4 blocks)
       currentGroup.push(sub);
     } else {
       // Start new group
@@ -453,11 +471,14 @@ export function groupSubsections(subsections: Subsection[]): Subsection[][] {
       currentGroup = [sub];
     }
   }
-  
+
   // Push final group
   if (currentGroup.length > 0) {
     groups.push(currentGroup);
   }
-  
+
+  // #region agent log
+  fetch('http://127.0.0.1:7243/ingest/1a810fcc-d7c8-4485-8b15-342c703f6c43',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'weekParser.ts:groupResult',message:'Groups created',data:{groupCount:groups.length,groupDepths:groups.map(g=>g[0]?.depth)},timestamp:Date.now(),sessionId:'debug-session',hypothesisId:'C'})}).catch(()=>{});
+  // #endregion
   return groups;
 }

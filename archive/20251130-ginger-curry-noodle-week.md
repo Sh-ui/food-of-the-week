@@ -37,20 +37,17 @@
 
 ## Meal 1: Quick Lamb Curry with Napa Cabbage
 
-**Protein:** Ground lamb
+#### Protein: Ground lamb
 
-**Ingredients:** Napa cabbage, carrots, coconut milk, red curry paste, ginger, garlic
+#### Ingredients: Napa cabbage, carrots, coconut milk, red curry paste, ginger, garlic
 
-**Description:** Rich ground lamb curry with coconut milk and quick-cooked napa cabbage. Bright, aromatic, and filling without heavy starches.
+#### Description: Rich ground lamb curry with coconut milk and quick-cooked napa cabbage. Bright, aromatic, and filling without heavy starches.
 
-**Instructions:**
-
-**Already Prepped:**
-
+### Instructions
+### Already Prepped
 - Ground lamb is thawed.
 
-**Sous Chef - Cooking:**
-
+### Sous Chef - Cooking
 Start rice cooking if serving with rice (optional - also great on its own).
 
 Chop the napa cabbage into 2-inch ribbons. Peel and slice carrots into coins. Mince garlic and ginger.
@@ -63,30 +60,26 @@ Pour in coconut milk and bring to a simmer. Add the carrot coins and let them co
 
 Add the chopped napa cabbage and cook for another 3-4 minutes until wilted but still has some crunch. Season with fish sauce and a squeeze of lime.
 
-**Chef - Finishing & Plating:**
-
+### Chef - Finishing & Plating
 Taste and adjust seasoning - more fish sauce for salt, more lime for brightness, more curry paste for heat.
 
 Serve in bowls with fresh cilantro and lime wedges. Can be served over rice or on its own as a brothy curry bowl.
 
 ## Meal 2: Ginger Scallion Noodles with Bok Choy
 
-**Protein:** Scallops
+#### Protein: Scallops
 
-**Ingredients:** Rice noodles, baby bok choy, scallions, ginger, soy sauce, sesame oil
+#### Ingredients: Rice noodles, baby bok choy, scallions, ginger, soy sauce, sesame oil
 
-**Description:** Quick stir-fried noodles with aromatic ginger-scallion oil, tender scallops, and crisp bok choy. Classic weeknight bowl.
+#### Description: Quick stir-fried noodles with aromatic ginger-scallion oil, tender scallops, and crisp bok choy. Classic weeknight bowl.
 
-**Instructions:**
-
-**Already Prepped:**
-
+### Instructions
+### Already Prepped
 - Scallops have been vacuum sealed with salt and white pepper. Stored in fridge.
 
 - Bok choy has been vacuum sealed and pre-cooked sous vide. Stored in fridge ready to warm.
 
-**Sous Chef - Prep:**
-
+### Sous Chef - Prep
 Cook rice noodles according to package directions, drain and toss with a little sesame oil to prevent sticking. Set aside.
 
 Drop the vacuum-sealed scallops into sous vide bath set to scallop temperature (Chef will set temperature remotely from the app, typically 122°F for 30 minutes).
@@ -95,8 +88,7 @@ Drop the vacuum-sealed bok choy into the same sous vide bath alongside scallops 
 
 Slice scallions (separate white and green parts). Julienne fresh ginger.
 
-**Chef - Finishing & Plating:**
-
+### Chef - Finishing & Plating
 Remove scallops from sous vide bag and pat completely dry. Remove bok choy from bag (it's already cooked, just needs finishing).
 
 Heat wok or large skillet over high heat. Add neutral oil, then sear scallops 1 minute per side until golden crust forms (they're already cooked sous vide, just adding color). Remove and set aside.
@@ -109,30 +101,26 @@ Plate noodles in bowls, top with charred bok choy and scallops. Garnish with sca
 
 ## Meal 3: Sous Vide Pork Chops with Glazed Carrots
 
-**Protein:** Pork chops
+#### Protein: Pork chops
 
-**Ingredients:** Carrots, butter, honey, ginger, soy sauce
+#### Ingredients: Carrots, butter, honey, ginger, soy sauce
 
-**Description:** Perfectly cooked sous vide pork chops finished with a quick sear, served with sweet-savory glazed carrots.
+#### Description: Perfectly cooked sous vide pork chops finished with a quick sear, served with sweet-savory glazed carrots.
 
-**Instructions:**
-
-**Already Prepped:**
-
+### Instructions
+### Already Prepped
 - Pork chops have been seasoned and vacuum sealed. Stored in fridge.
 
 - Carrots have been vacuum sealed and pre-cooked sous vide. Stored in fridge ready to warm.
 
-**Sous Chef - Prep:**
-
+### Sous Chef - Prep
 Drop the vacuum-sealed pork chops into sous vide bath set to pork temperature (Chef will set temperature remotely from the app, typically 140°F).
 
 Drop the vacuum-sealed carrots into the same sous vide bath alongside pork chops to gently warm them.
 
 Mince fresh ginger.
 
-**Chef - Finishing & Plating:**
-
+### Chef - Finishing & Plating
 Remove pork chops from sous vide bag, reserve any juices. Pat chops completely dry.
 
 Remove carrots from bag and slice into thick coins if they're whole.
@@ -147,20 +135,17 @@ Plate pork chops with glazed carrots. Serve with rice or on its own.
 
 ## Meal 4: Quick Tilapia Curry Noodle Soup
 
-**Protein:** Tilapia
+#### Protein: Tilapia
 
-**Ingredients:** Rice noodles, coconut milk, red curry paste, frozen stir-fry vegetables, frozen edamame, lime
+#### Ingredients: Rice noodles, coconut milk, red curry paste, frozen stir-fry vegetables, frozen edamame, lime
 
-**Description:** Fast Thai-inspired curry soup with tender tilapia and vegetables. One-pot comfort in under 30 minutes.
+#### Description: Fast Thai-inspired curry soup with tender tilapia and vegetables. One-pot comfort in under 30 minutes.
 
-**Instructions:**
-
-**Already Prepped:**
-
+### Instructions
+### Already Prepped
 - Tilapia is thawed.
 
-**Sous Chef - Cooking:**
-
+### Sous Chef - Cooking
 In a large pot, bring 4 cups water (or broth if you have it) to a boil.
 
 Add 2 tablespoons red curry paste and 1 can coconut milk. Stir to combine and bring back to simmer.
@@ -173,8 +158,7 @@ Cut tilapia into 2-inch chunks and add to the simmering soup. Cook for 3-4 minut
 
 Season with fish sauce and lime juice to taste.
 
-**Chef - Finishing & Plating:**
-
+### Chef - Finishing & Plating
 Taste and adjust - more curry paste for heat, more fish sauce for salt, more lime for brightness.
 
 Ladle into bowls and garnish with fresh cilantro and lime wedges. Add chili crisp or sriracha if desired.

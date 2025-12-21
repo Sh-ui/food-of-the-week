@@ -35,26 +35,22 @@
 
 ## Meal 1: Braised Pork Chops with Fennel and White Beans
 
-**Protein:** Pork chops
+#### Protein: Pork chops
 
-**Ingredients:** Pork chops, fennel, white beans, white wine, chicken broth, garlic, thyme
+#### Ingredients: Pork chops, fennel, white beans, white wine, chicken broth, garlic, thyme
 
-**Description:** Simple braise with pork chops, caramelized fennel, and creamy beans. One-pot comfort that's fancy enough for weekend but easy enough for weeknight.
+#### Description: Simple braise with pork chops, caramelized fennel, and creamy beans. One-pot comfort that's fancy enough for weekend but easy enough for weeknight.
 
-**Instructions:**
-
-**Already Prepped:**
-
+### Instructions
+### Already Prepped
 - Pork chops are thawed.
 
-**Sous Chef - Prep:**
-
+### Sous Chef - Prep
 Slice fennel bulbs into thick wedges (keep core intact so they hold together). Mince garlic. Drain and rinse white beans.
 
 Season pork chops generously with salt and pepper.
 
-**Chef - Finishing & Plating:**
-
+### Chef - Finishing & Plating
 Heat Dutch oven or large deep skillet over medium-high. Sear pork chops 3-4 minutes per side until golden. Remove.
 
 In same pot, add butter and fennel wedges. Cook 5-6 minutes until starting to caramelize.
@@ -71,22 +67,19 @@ Serve pork chops over fennel and beans, spooning braising liquid over top. Garni
 
 ## Meal 2: Sous Vide Salmon with Smashed Potatoes and Green Beans
 
-**Protein:** Salmon
+#### Protein: Salmon
 
-**Ingredients:** Baby potatoes, green beans, salmon, lemon, butter, garlic
+#### Ingredients: Baby potatoes, green beans, salmon, lemon, butter, garlic
 
-**Description:** Perfectly cooked sous vide salmon with crispy smashed potatoes and roasted green beans. Simple precision cooking.
+#### Description: Perfectly cooked sous vide salmon with crispy smashed potatoes and roasted green beans. Simple precision cooking.
 
-**Instructions:**
-
-**Already Prepped:**
-
+### Instructions
+### Already Prepped
 - Salmon fillets have been seasoned with salt, pepper, and lemon zest, then vacuum sealed. Stored in fridge.
 
 - Baby potatoes have been vacuum sealed and pre-cooked sous vide. Stored in fridge ready to smash and crisp.
 
-**Sous Chef - Prep:**
-
+### Sous Chef - Prep
 Drop the vacuum-sealed salmon into sous vide bath set to salmon temperature (Chef will set temperature remotely from the app, typically 122°F).
 
 Preheat oven to 425°F.
@@ -95,8 +88,7 @@ Remove pre-cooked potatoes from vacuum bag. Spread on oiled baking sheet and use
 
 Trim green beans and toss with oil, salt, pepper, and minced garlic. Add to baking sheet with potatoes in last 10 minutes of roasting.
 
-**Chef - Finishing & Plating:**
-
+### Chef - Finishing & Plating
 Remove salmon from sous vide bag, pat dry. Quickly sear skin-side down in hot skillet with butter for 2 minutes to crisp the skin. Or use kitchen torch to sear the skin side.
 
 Remove everything from oven when potatoes are crispy and green beans are tender with some char.
@@ -105,20 +97,17 @@ Plate smashed potatoes, green beans, and salmon. Squeeze lemon over everything a
 
 ## Meal 3: Sausage, Chard, and White Bean Soup
 
-**Protein:** Chicken sausage
+#### Protein: Chicken sausage
 
-**Ingredients:** Italian chicken sausage, rainbow chard, white beans, orzo, chicken broth, garlic
+#### Ingredients: Italian chicken sausage, rainbow chard, white beans, orzo, chicken broth, garlic
 
-**Description:** Hearty Tuscan-inspired soup with sausage, greens, and tiny pasta. Warming and weeknight-simple.
+#### Description: Hearty Tuscan-inspired soup with sausage, greens, and tiny pasta. Warming and weeknight-simple.
 
-**Instructions:**
-
-**Already Prepped:**
-
+### Instructions
+### Already Prepped
 - None needed - sausage is pre-cooked.
 
-**Sous Chef - Cooking:**
-
+### Sous Chef - Cooking
 Remove casings from chicken sausage if needed, or slice into rounds.
 
 Brown sausage in large pot, breaking up if using ground-style. Remove and set aside.
@@ -131,8 +120,7 @@ Chop chard (stems and leaves separate). Add stems first, cook 2 minutes. Then ad
 
 Return sausage to pot. Simmer everything together for 5 minutes.
 
-**Chef - Finishing & Plating:**
-
+### Chef - Finishing & Plating
 Taste and season with salt, pepper, and a squeeze of lemon.
 
 Serve in bowls with grated Parmesan and drizzle of good olive oil.
@@ -141,20 +129,17 @@ Serve with crusty bread for dipping.
 
 ## Meal 4: Ground Pork and Artichoke Orzo
 
-**Protein:** Ground pork
+#### Protein: Ground pork
 
-**Ingredients:** Ground pork, orzo, frozen artichoke hearts, garlic, lemon, Parmesan, heavy cream
+#### Ingredients: Ground pork, orzo, frozen artichoke hearts, garlic, lemon, Parmesan, heavy cream
 
-**Description:** Creamy one-pot pasta with browned pork and tangy artichokes. Lemony, rich, and comforting.
+#### Description: Creamy one-pot pasta with browned pork and tangy artichokes. Lemony, rich, and comforting.
 
-**Instructions:**
-
-**Already Prepped:**
-
+### Instructions
+### Already Prepped
 - Ground pork is thawed.
 
-**Sous Chef - Cooking:**
-
+### Sous Chef - Cooking
 Brown ground pork in large deep skillet, breaking it up as it cooks. Season with salt, pepper, and Italian herbs (oregano, basil).
 
 Add minced garlic, cook 30 seconds.
@@ -167,8 +152,7 @@ Add frozen artichoke hearts (chopped if large) and continue cooking for 5 more m
 
 Stir in heavy cream and half the Parmesan. Let everything simmer together until creamy and orzo is tender.
 
-**Chef - Finishing & Plating:**
-
+### Chef - Finishing & Plating
 Finish with lemon juice, lemon zest, and remaining Parmesan. Taste and adjust seasoning.
 
 Serve in bowls topped with extra Parmesan, fresh black pepper, and a drizzle of good olive oil.

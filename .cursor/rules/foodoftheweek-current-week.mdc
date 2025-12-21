@@ -55,32 +55,29 @@ meal_format:
   section_heading: "## [Meal Name]"
   note: "No numbering (Meal 1, Meal 2) and no colon in heading"
   
-  required_fields:
-    protein:
-      label: "**Protein**"
-      format: "Bold label (no colon) followed by protein(s) used"
-      example: "**Protein** Ground pork"
-    
-    ingredients:
-      label: "**Ingredients**"
-      format: "Bold label (no colon) followed by comma-separated list"
-      example: "**Ingredients** Brown udon rice noodles, tomato paste, San Marzano tomatoes"
-    
-    description:
-      label: "**Description**"
-      format: "Bold label (no colon) followed by 1-2 sentence overview"
-      example: "**Description** One pot pasta with pork and vegetables"
+  field_format:
+    heading: "#### [Field Name]:"
+    format: "H4 heading with colon, followed by field content (paragraphs/lists)"
+    examples:
+      - "#### Protein: Ground pork"
+      - "#### Ingredients: Brown udon rice noodles, tomato paste, San Marzano tomatoes"
+      - "#### Description: One pot pasta with pork and vegetables"
+      - "#### Day: Sunday"
+    notes: "Field names are arbitrary; consecutive H4 headings are grouped as one visual card"
   
   instruction_format:
     structure: "Three-phase format (see recipe-instruction-format.mdc)"
     phases:
-      - "**Already Prepped** (bulleted list, no colon)"
-      - "**Sous Chef - Prep** or **Sous Chef - Cooking** (paragraphs, no colon)"
-      - "**Chef - Finishing & Plating** (paragraphs, no colon)"
+      - "### Already Prepped"
+      - "### Sous Chef - Prep" or "### Sous Chef - Cooking"
+      - "### Chef - Finishing & Plating"
+    notes: "H3 headings for distinct instruction sections"
 
-  numbering:
-    style: "Sequential (Meal 1, Meal 2, Meal 3, etc.)"
-    range: "4-5 meals per week typically"
+  structure:
+    meals: "Descriptive names only (## Meal Name)"
+    fields: "H4 headings with colons for arbitrary field names"
+    sections: "H3 headings for instruction sections"
+    grouping: "Consecutive H4 fields → single visual card; each H3 → distinct section"
 
 template:
   full_structure: |
@@ -107,20 +104,25 @@ template:
     - [ ] Item 1
     
     ## [Meal Name]
-    **Protein** [Protein used]
-    **Ingredients** [List of main ingredients]
-    **Description** [Brief overview]
-    
-    **Already Prepped**
-    
+
+    > Codename
+    >
+    > timing details
+
+    #### Protein: [Protein used]
+    #### Ingredients: [List of main ingredients]
+    #### Description: [Brief overview]
+
+    ### Already Prepped
+
      - [Item prepared in advance]
-    
-    **Sous Chef - Prep**
-    
+
+    ### Sous Chef - Prep
+
     [Delegation instructions in paragraphs]
-    
-    **Chef - Finishing & Plating**
-    
+
+    ### Chef - Finishing & Plating
+
     [Finishing instructions in paragraphs]
     
     ## [Meal Name]
@@ -160,9 +162,10 @@ actions:
       - "Include all required grocery categories"
       - "Do NOT number meals (no 'Meal 1:', 'Meal 2:', etc.)"
       - "Use descriptive meal names only (## [Meal Name])"
-      - "Use field labels WITHOUT colons (**Protein**, **Ingredients**, **Description**)"
+      - "Use H4 headings with colons for fields (#### Field: content)"
+      - "Use H3 headings for instruction sections (### Section Name)"
       - "Maintain markdown task list format for grocery items"
-      - "Use three-phase instruction format (no colons in phase labels)"
+      - "Use three-phase instruction format"
   
   - type: guide
     when: "User is ready to finalize weekly plan"
@@ -185,27 +188,34 @@ validation:
     - "H1 heading with week date range present"
     - "Grocery List section with all 5 categories"
     - "4-5 meal sections with H2 headings (no numbering, no colons)"
-    - "Each meal has Protein, Ingredients, Description (no colons in labels)"
+    - "Field blocks use H4 headings with colons (#### Field: content)"
+    - "Instruction sections use H3 headings (### Section Name)"
+    - "Consecutive H4 fields are grouped as one visual card"
     - "Markdown task list syntax used for grocery items"
-    - "Instructions use three-phase format (no colons in phase labels)"
+    - "Instructions use three-phase format"
 
 examples:
   - correct_meal: |
       ## One Pot Pasta
-      **Protein** Ground pork
-      **Ingredients** Brown udon rice noodles, tomato paste, San Marzano tomatoes, frozen mixed mushrooms, frozen three pepper blend
-      **Description** One pot pasta with pork and vegetables
-      
-      **Already Prepped**
-      
+
+      > Prep&Heat
+      >
+      > 5:30 noodles + rice cooker
+
+      #### Protein: Ground pork
+      #### Ingredients: Brown udon rice noodles, tomato paste, San Marzano tomatoes, frozen mixed mushrooms, frozen three pepper blend
+      #### Description: One pot pasta with pork and vegetables
+
+      ### Already Prepped
+
        - Ground pork is thawed.
-      
-      **Sous Chef - Cooking**
-      
+
+      ### Sous Chef - Cooking
+
       Brown the pork with aromatics, add tomato paste and tomatoes, simmer. Add frozen veg and noodles, cook until noodles are tender. Season to taste.
-      
-      **Chef - Finishing & Plating**
-      
+
+      ### Chef - Finishing & Plating
+
       Serve in bowls with Parmesan.
   
   - correct_grocery_category: |

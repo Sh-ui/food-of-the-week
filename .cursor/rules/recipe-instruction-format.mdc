@@ -17,8 +17,8 @@ philosophy:
 instruction_structure:
   phases:
     already_prepped:
-      label: "**Already Prepped:**"
-      format: "Bulleted list with ' - ' prefix"
+      label: "### Already Prepped"
+      format: "H3 heading followed by bulleted list with ' - ' prefix"
       purpose: "Items prepared in advance (often sous vide, vacuum sealed, or batch prepped)"
       examples:
         - "Proteins: vacuum sealed and seasoned"
@@ -27,8 +27,8 @@ instruction_structure:
         - "Components: sauces made ahead, items thawed"
     
     sous_chef:
-      label: "**Sous Chef - Prep:**" or "**Sous Chef - Cooking:**"
-      format: "Paragraph instructions"
+      label: "### Sous Chef - Prep" or "### Sous Chef - Cooking"
+      format: "H3 heading followed by paragraph instructions"
       purpose: "Tasks family members can do before primary cook arrives"
       timing: "Done while primary cook is at work or occupied"
       examples:
@@ -42,8 +42,8 @@ instruction_structure:
         - "Note when Chef will set temperature remotely"
     
     chef_finishing:
-      label: "**Chef - Finishing & Plating:**"
-      format: "Paragraph instructions"
+      label: "### Chef - Finishing & Plating"
+      format: "H3 heading followed by paragraph instructions"
       purpose: "Final cooking, searing, sauce-making, and plating"
       timing: "Done by primary cook when home"
       techniques:
@@ -131,6 +131,7 @@ actions:
     when: "Writing or editing meal instructions"
     do:
       - "Use all three phases for every recipe"
+      - "Use H3 headings for each phase (no colons)"
       - "Format Already Prepped as bulleted list"
       - "Format Sous Chef and Chef sections as paragraphs"
       - "Be specific about delegation boundaries"

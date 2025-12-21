@@ -34,30 +34,26 @@
 
 ## Meal 1: Sous Vide Salmon with Celery Root Puree
 
-**Protein:** Salmon
+#### Protein: Salmon
 
-**Ingredients:** Celery root, heavy cream, butter, parsley, lemon
+#### Ingredients: Celery root, heavy cream, butter, parsley, lemon
 
-**Description:** Perfectly cooked sous vide salmon with torch-seared skin over silky celery root puree. Restaurant-quality precision cooking.
+#### Description: Perfectly cooked sous vide salmon with torch-seared skin over silky celery root puree. Restaurant-quality precision cooking.
 
-**Instructions:**
-
-**Already Prepped:**
-
+### Instructions
+### Already Prepped
 - Salmon fillets have been seasoned and vacuum sealed. Stored in fridge.
 
 - Celery root has been vacuum sealed and pre-cooked sous vide. Stored in fridge ready to puree.
 
-**Sous Chef - Prep:**
-
+### Sous Chef - Prep
 Drop the vacuum-sealed salmon into sous vide bath set to salmon temperature (Chef will set temperature remotely from the app, typically 122°F for tender texture).
 
 Remove pre-cooked celery root from vacuum bag. Transfer to blender or food processor with heavy cream (start with ¼ cup), butter, salt, and pepper. Puree until silky smooth, adding more cream if needed.
 
 Keep warm in covered pot or reheat gently before serving.
 
-**Chef - Finishing & Plating:**
-
+### Chef - Finishing & Plating
 Remove salmon from sous vide bag, reserve any juices. Pat salmon completely dry, especially the skin side.
 
 Using a kitchen torch, sear the skin side until deeply crispy and golden. For extra crisp, you can also sear flesh side briefly.
@@ -70,20 +66,17 @@ Spoon celery root puree onto plates, top with salmon skin-side up. Drizzle with 
 
 ## Meal 2: Sous Vide Steak with Charred Cabbage and Roasted Potatoes
 
-**Protein:** Flat iron steak
+#### Protein: Flat iron steak
 
-**Ingredients:** Red cabbage, russet potatoes, shallots, Dijon mustard, white wine vinegar
+#### Ingredients: Red cabbage, russet potatoes, shallots, Dijon mustard, white wine vinegar
 
-**Description:** Deconstructed Midwestern broiler dinner reimagined - perfectly cooked sous vide steak finished with torch, charred cabbage wedges, and crispy potatoes.
+#### Description: Deconstructed Midwestern broiler dinner reimagined - perfectly cooked sous vide steak finished with torch, charred cabbage wedges, and crispy potatoes.
 
-**Instructions:**
-
-**Already Prepped:**
-
+### Instructions
+### Already Prepped
 - Flat iron steak has been seasoned and vacuum sealed. Stored in fridge.
 
-**Sous Chef - Prep:**
-
+### Sous Chef - Prep
 Drop the vacuum-sealed steak into sous vide bath set to steak temperature (Chef will set temperature remotely from the app, typically 130-135°F for medium-rare).
 
 Preheat oven to 425°F.
@@ -92,8 +85,7 @@ Cut potatoes into 1-inch chunks. Toss with oil, salt, and pepper on baking sheet
 
 Cut cabbage into thick wedges through the core (so they hold together). Slice shallots into thick rings.
 
-**Chef - Finishing & Plating:**
-
+### Chef - Finishing & Plating
 Remove steak from sous vide bag, reserve ALL the juices. Pat steak completely dry.
 
 Using a kitchen torch, sear all sides of the steak until a nice crust forms. Alternatively, sear in screaming hot cast iron 1 minute per side.
@@ -108,20 +100,17 @@ Plate with roasted potatoes as base, charred cabbage alongside, fanned steak on 
 
 ## Meal 3: Pork and Cabbage Egg Roll Bowls
 
-**Protein:** Ground pork
+#### Protein: Ground pork
 
-**Ingredients:** Red cabbage, shallots, ginger, soy sauce, sesame oil, rice vinegar
+#### Ingredients: Red cabbage, shallots, ginger, soy sauce, sesame oil, rice vinegar
 
-**Description:** Deconstructed egg rolls without the wrappers - quick stir-fried pork and cabbage bowl with all the flavor, none of the frying.
+#### Description: Deconstructed egg rolls without the wrappers - quick stir-fried pork and cabbage bowl with all the flavor, none of the frying.
 
-**Instructions:**
-
-**Already Prepped:**
-
+### Instructions
+### Already Prepped
 - Ground pork is thawed.
 
-**Sous Chef - Cooking:**
-
+### Sous Chef - Cooking
 Start rice cooking if serving over rice (white or brown).
 
 Shred red cabbage thinly. Mince shallots and ginger.
@@ -134,8 +123,7 @@ Add shredded cabbage and stir-fry for 4-5 minutes until wilted but still has cru
 
 Season with soy sauce, sesame oil, rice vinegar, and a pinch of sugar. Toss everything together.
 
-**Chef - Finishing & Plating:**
-
+### Chef - Finishing & Plating
 Taste and adjust seasoning. Add more soy for salt, more vinegar for tang.
 
 Serve over rice in bowls. Garnish with sesame seeds and sliced scallions if available.
@@ -144,20 +132,17 @@ Optional toppings: sour cream or Greek yogurt drizzle, chili crisp, extra sesame
 
 ## Meal 4: Salmon Cakes with Caesar-ish Salad
 
-**Protein:** Salmon (leftover from Meal 1)
+#### Protein: Salmon (leftover from Meal 1)
 
-**Ingredients:** Salmon, panko breadcrumbs, Dijon mustard, romaine lettuce, Parmesan, anchovy paste, lemon
+#### Ingredients: Salmon, panko breadcrumbs, Dijon mustard, romaine lettuce, Parmesan, anchovy paste, lemon
 
-**Description:** Crispy salmon patties with a lemony Caesar-inspired salad. Great use of leftover cooked salmon or can use canned.
+#### Description: Crispy salmon patties with a lemony Caesar-inspired salad. Great use of leftover cooked salmon or can use canned.
 
-**Instructions:**
-
-**Already Prepped:**
-
+### Instructions
+### Already Prepped
 - Cooked salmon from earlier in week (or can use canned salmon).
 
-**Sous Chef - Prep:**
-
+### Sous Chef - Prep
 Flake cooked salmon (or drain canned salmon well) and mix with panko, 1 egg, Dijon mustard, minced shallot, lemon zest, salt, and pepper. Form into 4-6 patties.
 
 Chill patties for 10 minutes if time permits (helps them hold together).
@@ -166,8 +151,7 @@ Chop romaine into bite-sized pieces.
 
 Make Caesar dressing: whisk together lemon juice, Dijon, anchovy paste (or finely minced capers), grated garlic, olive oil, and grated Parmesan. Adjust to taste.
 
-**Chef - Finishing & Plating:**
-
+### Chef - Finishing & Plating
 Heat skillet with oil and butter over medium heat. Pan-fry salmon cakes 3-4 minutes per side until golden and crispy.
 
 Toss romaine with Caesar dressing and more Parmesan.

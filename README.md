@@ -118,7 +118,9 @@ Quick reads are added as blockquotes immediately after each meal heading in `FOO
 >
 > prep + toast panko + 5:30 rice
 
-**Protein** Frozen ground pork
+#### Protein: Frozen ground pork
+#### Ingredients: Potatoes, carrots, yellow onion, frozen peas, Japanese curry cubes + honey, ginger paste, panko breadcrumbs, Japanese rice, American bagged salad, Japanese dressing
+#### Description: A weeknight-friendly deconstructed take on Japanese pork katsu curry—ground pork simmered in rich curry sauce with potatoes and carrots, topped with toasted breadcrumbs for that katsu crunch. Served with Japanese rice and a simple salad.
 ```
 
 The first line is the **codename** (workload category), and the third line provides **timing details** (specific actions and when to do them).
