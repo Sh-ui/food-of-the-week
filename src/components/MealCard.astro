@@ -21,7 +21,8 @@ const groups = groupSubsections(section.subsections);
 let instructionGroupIndex = 0;
 
 function renderMarkdown(text: string | undefined): string {
-  return marked.parseInline(text?.trim() ?? '');
+  const parsed = marked.parseInline(text?.trim() ?? '');
+  return typeof parsed === 'string' ? parsed : '';
 }
 ---
 
