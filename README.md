@@ -109,14 +109,13 @@ Each meal includes a "quick read" that gives you an instant understanding of wha
 
 ### Format
 
-Quick reads are added as blockquotes immediately after each meal heading in `FOOD-OF-THE-WEEK.md`:
+Quick reads are added using H5/H6 headings immediately after each meal heading in `FOOD-OF-THE-WEEK.md`:
 
 ```markdown
 ## Sweet Pork Curry
 
-> Prep&Heat+
->
-> prep + toast panko + 5:30 rice
+##### SousVidePrep+
+###### prep + toast panko + 5:30 rice
 
 #### Protein:
 Frozen ground pork
@@ -128,7 +127,7 @@ Potatoes, carrots, yellow onion, frozen peas, Japanese curry cubes + honey, ging
 A weeknight-friendly deconstructed take on Japanese pork katsu curry—ground pork simmered in rich curry sauce with potatoes and carrots, topped with toasted breadcrumbs for that katsu crunch. Served with Japanese rice and a simple salad.
 ```
 
-The first line is the **codename** (workload category), and the third line provides **timing details** (specific actions and when to do them).
+The H5 line is the **codename** (workload category), and the H6 line provides **timing details** (specific actions and when to do them).
 
 ### Codenames
 

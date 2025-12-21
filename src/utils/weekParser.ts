@@ -154,6 +154,8 @@ function parseMarkdownContent(content: string): PagePlan {
   // For content section parsing
   let currentContentSection: ContentSection | null = null;
   let currentSubsection: Subsection | null = null;
+  let quickReadCodename: string | null = null;
+  let quickReadDetails: string | null = null;
   
   for (let i = 0; i < tokens.length; i++) {
     const token = tokens[i];
@@ -187,6 +189,12 @@ function parseMarkdownContent(content: string): PagePlan {
         if (currentSubsection) {
           currentContentSection.subsections.push(currentSubsection);
         }
+        if (quickReadCodename) {
+          currentContentSection.quickRead = {
+            codename: quickReadCodename,
+            details: quickReadDetails?.trim() || '',
+          };
+        }
         contentSections.push(currentContentSection);
       }
       
@@ -207,28 +215,17 @@ function parseMarkdownContent(content: string): PagePlan {
         currentSection = 'content';
         contentSectionCount++; // CRITICAL: Independent counter ensures meal-1, meal-2, etc.
                                // even if no grocery list exists (h2Count would be off by 1)
-        
-        // Check for strikethrough (cooked indicator)
-        let title = heading;
-        let cooked = false;
-        
-        // Check if entire title is wrapped in strikethrough
-        if (title.startsWith('~~') && title.endsWith('~~')) {
-          cooked = true;
-          title = title.slice(2, -2).trim();
-        }
-        
-        // Also check for partial strikethrough (e.g., "Meal 1: ~~Title~~")
-        const partialMatch = title.match(/^(.+?):\s*~~(.+)~~$/);
-        if (partialMatch) {
-          cooked = true;
-          title = `${partialMatch[1]}: ${partialMatch[2]}`;
-        }
-        
+
+        const title = heading;
+        const cooked = heading.includes('✓');
+
+        quickReadCodename = null;
+        quickReadDetails = null;
+
         currentContentSection = {
           id: `meal-${contentSectionCount}`, // Use independent counter
-          title: title,
-          cooked: cooked,
+          title,
+          cooked,
           subsections: [],
         };
         currentSubsection = null;
@@ -275,17 +272,18 @@ function parseMarkdownContent(content: string): PagePlan {
 
     // Content section processing
     if (currentSection === 'content' && currentContentSection) {
-      if (token.type === 'blockquote' && !currentContentSection.quickRead) {
-        const quickRead = parseQuickReadFromBlockquote((token as Tokens.Blockquote).text ?? '');
-        if (quickRead) currentContentSection.quickRead = quickRead;
+      if (token.type === 'heading' && token.depth === 5) {
+        quickReadCodename = token.text.trim();
+        continue;
+      }
+
+      if (token.type === 'heading' && token.depth === 6) {
+        quickReadDetails = token.text.trim();
         continue;
       }
 
       // H3/H4 = Block creation
       if (token.type === 'heading' && (token.depth === 3 || token.depth === 4)) {
-        // #region agent log
-        fetch('http://127.0.0.1:7243/ingest/1a810fcc-d7c8-4485-8b15-342c703f6c43',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'weekParser.ts:H3H4',message:'H3/H4 heading detected',data:{depth:token.depth,text:token.text,tokenType:token.type},timestamp:Date.now(),sessionId:'debug-session',hypothesisId:'A,B,E'})}).catch(()=>{});
-        // #endregion
         // Save previous block if exists
         if (currentSubsection) {
           currentContentSection.subsections.push(currentSubsection);
@@ -304,9 +302,6 @@ function parseMarkdownContent(content: string): PagePlan {
       if (currentSubsection) {
         if (token.type === 'paragraph') {
           const text = token.text;
-          // #region agent log
-          fetch('http://127.0.0.1:7243/ingest/1a810fcc-d7c8-4485-8b15-342c703f6c43',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'weekParser.ts:para',message:'Paragraph added to block',data:{blockTitle:currentSubsection.title,blockDepth:currentSubsection.depth,paragraphText:text.substring(0,50)},timestamp:Date.now(),sessionId:'debug-session',hypothesisId:'A,B'})}).catch(()=>{});
-          // #endregion
           if (currentSubsection.content) {
             currentSubsection.content += '\n\n' + text;
           } else {
@@ -351,6 +346,12 @@ function parseMarkdownContent(content: string): PagePlan {
   } else if (currentSection === 'content' && currentContentSection) {
     if (currentSubsection) {
       currentContentSection.subsections.push(currentSubsection);
+    }
+    if (quickReadCodename) {
+      currentContentSection.quickRead = {
+        codename: quickReadCodename,
+        details: quickReadDetails?.trim() || '',
+      };
     }
     contentSections.push(currentContentSection);
   }
@@ -418,22 +419,6 @@ export function slugify(text: string): string {
     .trim();
 }
 
-function parseQuickReadFromBlockquote(input: string): QuickRead | null {
-  const lines = input
-    .split('\n')
-    .map((line: string) => line.trim())
-    .filter(Boolean);
-
-  if (lines.length === 0) return null;
-
-  const [codenameRaw, ...detailParts] = lines;
-  const codename = codenameRaw.trim();
-  const details = detailParts.join(' ').trim();
-  if (!codename) return null;
-
-  return { codename, details };
-}
-
 // ============================================================================
 // Rendering Helpers
 // ============================================================================
@@ -446,9 +431,6 @@ function parseQuickReadFromBlockquote(input: string): QuickRead | null {
  * @returns Array of block groups for rendering.
  */
 export function groupSubsections(subsections: Subsection[]): Subsection[][] {
-  // #region agent log
-  fetch('http://127.0.0.1:7243/ingest/1a810fcc-d7c8-4485-8b15-342c703f6c43',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'weekParser.ts:group',message:'Grouping subsections',data:{count:subsections.length,subsections:subsections.map(s=>({title:s.title.substring(0,30),depth:s.depth,contentLen:s.content.length}))},timestamp:Date.now(),sessionId:'debug-session',hypothesisId:'B,C'})}).catch(()=>{});
-  // #endregion
   const groups: Subsection[][] = [];
   let currentGroup: Subsection[] = [];
 
@@ -477,8 +459,5 @@ export function groupSubsections(subsections: Subsection[]): Subsection[][] {
     groups.push(currentGroup);
   }
 
-  // #region agent log
-  fetch('http://127.0.0.1:7243/ingest/1a810fcc-d7c8-4485-8b15-342c703f6c43',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'weekParser.ts:groupResult',message:'Groups created',data:{groupCount:groups.length,groupDepths:groups.map(g=>g[0]?.depth)},timestamp:Date.now(),sessionId:'debug-session',hypothesisId:'C'})}).catch(()=>{});
-  // #endregion
   return groups;
 }

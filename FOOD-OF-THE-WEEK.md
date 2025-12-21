@@ -1,3 +1,4 @@
+<!-- ✓ -->
 # Week of December 14-20, 2025
 
 ## Grocery List
@@ -37,11 +38,10 @@
 - [x] Frozen mire poix
 - [x] Frozen peas
 
-## ~~Gringo Tostadas~~
+## Gringo Tostadas
 
-> Prep&Heat
->
-> cut toppings + heat stuff
+##### Prep&Heat
+###### cut toppings + heat stuff
 
 #### Protein: 
 Frozen taco meat
@@ -65,11 +65,10 @@ Heat up the taco meat in a skillet. Warm the refried beans in the microwave.
 
 Spread a layer of warm refried beans on each tostada. Top with shredded cheese, taco meat, iceberg lettuce, plum tomatoes, sour cream, and cilantro. Serve with that jar of roasted garlic salsa on the side. Add a lime wedge to each plate.
 
-## ~~Lamb Patties & Veg~~
+## ✓ Lamb Patties & Veg
 
-> SousVidePrep
->
-> 4:00 mire poix + 5:00 patties
+##### SousVidePrep
+###### 4:00 mire poix + 5:00 patties
 
 #### Protein:
 Ground lamb
@@ -78,7 +77,7 @@ Ground lamb
 Frozen mire poix, onion jam, half bunch of parsley, white wine, microgreens
 
 #### Description:
-Tender lamb patties served on a bed of sous vide mire poix, finished with a rich pan sauce made from the mire poix bag juices and pattie fond  + wine. Topped with fresh microgreens.
+Tender lamb **patties** served on a bed of sous vide mire poix, finished with a rich pan sauce made from the mire poix bag juices and pattie fond  + wine. Topped with fresh microgreens.
 
 ### Already Prepped
 
@@ -101,17 +100,16 @@ To plate: Spread the warm mire poix as a bed on each plate. Nestle the patties o
 
 Serve with bread if you have it
 
-## ~~Sweet Pork Curry~~
+## ✓ Sweet Pork Curry
 
-> Prep&Heat+
->
-> prep + toast panko + 5:30 rice
+##### Prep&Heat+
+###### prep + toast panko + 5:30 rice
 
 #### Protein:
 Frozen ground pork
 
 #### Ingredients:
-Potatoes, carrots, yellow onion, frozen peas, Japanese curry cubes + honey, ginger paste, panko breadcrumbs, Japanese rice, American bagged salad, Japanese dressing
+Potatoes, carrots, yellow onion, frozen peas, **Japanese curry cubes** + honey, ginger paste, panko breadcrumbs, Japanese rice, American bagged salad, Japanese dressing
 
 #### Description:
 A weeknight-friendly deconstructed take on Japanese pork katsu curry—ground pork simmered in rich curry sauce with potatoes and carrots, topped with toasted breadcrumbs for that katsu crunch. Served with Japanese rice and a simple salad. The honey adds a sweet, soft flavor to the curry.
@@ -141,11 +139,10 @@ Serve on plates with rice in the center in rounded mound, use the back of a ladl
 
 Sprinkle the toasted panko breadcrumbs generously over the curry portions right before serving.
 
-## ~~Spiced SheetPan Fish~~
+## ✓ Spiced SheetPan Fish
 
-> SousChefDish
->
-> 5:30 Couscous + oven roast
+##### SousChefDish
+###### 5:30 Couscous + oven roast
 
 #### Protein:
 Frozen tilapia

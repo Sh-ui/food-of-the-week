@@ -25,6 +25,9 @@
 
 ## Italian Lazy Meatballs
 
+##### Prep&Heat
+###### mix sausage + bake 25-30m + top with mozzarella
+
 #### Day:
 Sunday
 

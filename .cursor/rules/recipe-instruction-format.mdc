@@ -125,6 +125,8 @@ special_notes:
   remote_control:
     sous_vide_apps: "Note when Chef sets temperature remotely"
     timing: "Allows sous chef to focus on prep without worrying about settings"
+  markdown_purity:
+    - "Let Markdown formatting (bold, italic, strikethrough, blockquotes) render naturally; do not repurpose them as parsing landmarks."
 
 actions:
   - type: enforce

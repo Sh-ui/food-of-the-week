@@ -37,7 +37,7 @@
 - [x] Frozen mire poix
 - [x] Frozen peas
 
-## ~~Gringo Tostadas~~
+## ✓ Gringo Tostadas
 
 #### Protein:
 Frozen taco meat
@@ -62,7 +62,7 @@ Heat up the taco meat in a skillet. Warm the refried beans in the microwave.
 
 Spread a layer of warm refried beans on each tostada. Top with shredded cheese, taco meat, iceberg lettuce, plum tomatoes, sour cream, and cilantro. Serve with that jar of roasted garlic salsa on the side. Add a lime wedge to each plate.
 
-## ~~Lamb Patties & Veg~~
+## ✓ Lamb Patties & Veg
 
 #### Protein:
 Ground lamb
@@ -94,7 +94,7 @@ To plate: Spread the warm mire poix as a bed on each plate. Nestle the patties o
 
 Serve with bread if you have it
 
-## ~~Sweet Pork Curry~~
+## ✓ Sweet Pork Curry
 
 #### Protein:
 Frozen ground pork

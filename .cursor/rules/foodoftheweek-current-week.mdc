@@ -26,6 +26,8 @@ required_structure:
     major_sections: "## (H2) - For Grocery List and each Meal"
     grocery_categories: "### (H3) - For Produce, Staples, etc."
     meal_subsections: "### (H3) - Optional for Instructions, Notes, etc."
+    quick_read_codename: "##### (H5) - Quick read codename (immediately after the meal H2)"
+    quick_read_timing: "###### (H6) - Quick read timing (directly follows the codename)"
 
 grocery_list_format:
   section_heading: "## Grocery List"
@@ -54,6 +56,13 @@ grocery_list_format:
 meal_format:
   section_heading: "## [Meal Name]"
   note: "No numbering (Meal 1, Meal 2) and no colon in heading"
+  quick_read:
+    codename: "##### [Codename]"
+    timing: "###### [Timing details]"
+    placement: "Appears immediately after the meal H2 heading"
+    notes:
+      - "Codename populates hero summary rows; timing adds scheduling detail"
+      - "Codename is required for parser extraction; timing is optional but recommended"
   
   field_format:
     heading: "#### [Field Name]:"
@@ -78,6 +87,7 @@ meal_format:
     fields: "H4 headings with colons for arbitrary field names"
     sections: "H3 headings for instruction sections"
     grouping: "Consecutive H4 fields → single visual card; each H3 → distinct section"
+    cooked: "Use `## ✓ Meal Name` to mark cooked meals; avoid strikethroughs for this purpose"
 
 template:
   full_structure: |
@@ -105,9 +115,8 @@ template:
     
     ## [Meal Name]
 
-    > Codename
-    >
-    > timing details
+    ##### Codename
+    ###### timing details
 
     #### Protein: [Protein used]
     #### Ingredients: [List of main ingredients]
@@ -164,6 +173,8 @@ actions:
       - "Use descriptive meal names only (## [Meal Name])"
       - "Use H4 headings with colons for fields (#### Field: content)"
       - "Use H3 headings for instruction sections (### Section Name)"
+      - "Add H5 codename + H6 timing lines immediately after each meal H2 heading"
+      - "Mark cooked meals with `## ✓ Meal Name` instead of strikethrough"
       - "Maintain markdown task list format for grocery items"
       - "Use three-phase instruction format"
   
@@ -193,6 +204,8 @@ validation:
     - "Consecutive H4 fields are grouped as one visual card"
     - "Markdown task list syntax used for grocery items"
     - "Instructions use three-phase format"
+      - "Quick read codename/timing use H5/H6 immediately after the meal heading"
+      - "Cooked meals use a leading `✓` in the H2 title (no strikethrough)"
 
 examples:
   - correct_meal: |

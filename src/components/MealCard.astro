@@ -2,6 +2,7 @@
 import type { ContentSection } from '../utils/weekParser';
 import { groupSubsections } from '../utils/weekParser';
 import { getInstructionBadgeColor, getInstructionColor, sectionColors } from '../config/colors';
+import { marked } from 'marked';
 
 interface Props {
   section: ContentSection;
@@ -16,17 +17,11 @@ const quickReadInfoScheme = sectionColors.firstSubsection;
 // Group blocks for rendering
 const groups = groupSubsections(section.subsections);
 
-// #region agent log
-fetch('http://127.0.0.1:7243/ingest/1a810fcc-d7c8-4485-8b15-342c703f6c43',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'MealCard.astro:render',message:'Rendering meal card',data:{mealId:section.id,groupCount:groups.length,groupDetails:groups.map((g,i)=>({idx:i,depth:g[0]?.depth,count:g.length,firstTitle:g[0]?.title?.substring(0,40),firstContentLen:g[0]?.content?.length}))},timestamp:Date.now(),sessionId:'debug-session',hypothesisId:'C,D'})}).catch(()=>{});
-// #endregion
-
 // Track instruction group index for color cycling
 let instructionGroupIndex = 0;
 
-// Helper function to render markdown links to HTML
-function renderMarkdown(text: string): string {
-  // Convert markdown links [text](url) to HTML links
-  return text.trim().replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+function renderMarkdown(text: string | undefined): string {
+  return marked.parseInline(text?.trim() ?? '');
 }
 ---
 
@@ -37,12 +32,6 @@ function renderMarkdown(text: string): string {
   data-cooked={section.cooked ? 'true' : 'false'}
 >
   <div class="meal-header">
-    <span 
-      class={`cooked-indicator ${section.cooked ? 'is-cooked' : ''}`}
-      aria-label={section.cooked ? 'Meal has been cooked' : 'Meal not yet cooked'}
-    >
-      {section.cooked ? '✓' : ''}
-    </span>
     <h2>{section.title}</h2>
   </div>
 
@@ -86,7 +75,13 @@ function renderMarkdown(text: string): string {
             {isFieldsGroup ? (
               // H4 fields: render as labeled field rows
               <div class="subsection-field leading-relaxed text-[1.1rem] mobile:text-[1.25rem] mobile:leading-extra-loose">
-                <strong class="text-primary inline-block min-w-[120px]">{sub.title}</strong> {sub.content}
+                <strong class="text-primary inline-block min-w-[120px]">{sub.title}</strong>
+                {sub.content && (
+                  <span
+                    class="subsection-field-body block mt-xs"
+                    set:html={renderMarkdown(sub.content)}
+                  />
+                )}
               </div>
             ) : (
               // H3 sections: render as distinct instruction blocks
@@ -134,7 +129,7 @@ function renderMarkdown(text: string): string {
     break-inside: avoid;
   }
 
-  /* Meal header - title and indicator layout */
+  /* Meal header layout */
   .meal-header {
     display: flex;
     justify-content: flex-start;
@@ -148,28 +143,6 @@ function renderMarkdown(text: string): string {
     flex: 1;
   }
 
-  /* Cooked indicator - circular checkbox next to heading */
-  .cooked-indicator {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 1.75rem;
-    height: 1.75rem;
-    border: 2px solid var(--color-text-light);
-    border-radius: 50%;
-    flex-shrink: 0;
-    margin-top: 0.25rem;
-    font-size: 0.9rem;
-    color: transparent;
-    cursor: default;
-    user-select: none;
-  }
-  
-  .cooked-indicator.is-cooked {
-    background: var(--color-cooked-text, #8a887f);
-    border-color: var(--color-cooked-text, #8a887f);
-    color: white;
-  }
 
   /* Cooked meal state overrides - semantic state styling */
   .meal-cooked {
@@ -225,12 +198,6 @@ function renderMarkdown(text: string): string {
       flex-direction: column;
       align-items: flex-start;
       gap: var(--spacing-md);
-    }
-
-    .cooked-indicator {
-      width: 2rem;
-      height: 2rem;
-      font-size: 1rem;
     }
 
     .meal-header h2 {

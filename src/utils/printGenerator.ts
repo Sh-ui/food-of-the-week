@@ -176,15 +176,16 @@ export function getWeekPlanData(): WeekPlan {
     const infoGroup = mealSection.querySelector('.info-group');
     if (infoGroup) {
       infoGroup.querySelectorAll('.subsection-field').forEach(field => {
-        // Extract field title and content structurally
         const strong = field.querySelector('strong');
         const title = strong?.textContent?.trim() || '';
-        const contentText = field.textContent || '';
-        // Remove the title from content (title appears before content in DOM)
-        const content = contentText.replace(title, '').trim();
+        let contentHtml = field.querySelector('.subsection-field-body')?.innerHTML?.trim() || '';
 
-        // Split content into paragraphs and extract any list items
-        const paragraphs = content.split('\n').filter(p => p.trim());
+        if (!contentHtml) {
+          const fallback = (field.textContent || '').replace(title, '').trim();
+          contentHtml = fallback;
+        }
+
+        const paragraphs = contentHtml ? [contentHtml] : [];
         const items: string[] = [];
 
         fields.push({ title, paragraphs, items });
@@ -200,13 +201,13 @@ export function getWeekPlanData(): WeekPlan {
       // Extract paragraphs from .subsection-content
       const paragraphs: string[] = [];
       group.querySelectorAll('.subsection-content p').forEach(p => {
-        paragraphs.push(p.textContent || '');
+        paragraphs.push(p.innerHTML || '');
       });
 
       // Extract list items
       const items: string[] = [];
       group.querySelectorAll('li').forEach(li => {
-        items.push(li.textContent || '');
+        items.push(li.innerHTML || '');
       });
 
       sections.push({ title, paragraphs, items });
@@ -297,10 +298,14 @@ export function generateMealHTML(meal: Meal, cfg: PrintConfig): string {
 
   // Print all fields
   meal.fields.forEach(field => {
-    html += `
+    field.paragraphs.forEach(paragraph => {
+      if (paragraph.trim()) {
+        html += `
         <p style="margin-bottom:${cfg.spacing.listItemGap};">
-          <strong>${field.title}</strong> ${field.paragraphs.join(' ')}
+          <strong>${field.title}</strong> ${paragraph}
         </p>`;
+      }
+    });
   });
 
   html += `</div>`;
