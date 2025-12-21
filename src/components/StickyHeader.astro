@@ -84,7 +84,7 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
       </a>
     ))}
     
-          <a href="#site-footer" class="dropdown-link" data-section="footer">
+      <a href="#link-and-info" class="dropdown-link" data-section="footer">
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="12" cy="12" r="10"></circle>
         <line x1="12" y1="16" x2="12" y2="12"></line>
@@ -98,7 +98,7 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     <!-- Right side: Info icon button + Print button -->
     <div class="header-right-buttons">
       <!-- Info icon button - links to footer -->
-      <a href="#site-footer" class="header-info-btn" data-section="footer" aria-label="Links & Info">
+      <a href="#link-and-info" class="header-info-btn" data-section="footer" aria-label="Links & Info">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="12" cy="12" r="10"></circle>
           <line x1="12" y1="16" x2="12" y2="12"></line>
@@ -633,7 +633,7 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
   }
 
   function checkFooterSection(viewportMidpoint: number, scrollY: number, viewportHeight: number): { id: string; top: number; bottom: number; height: number; } | null {
-    const footer = document.getElementById('site-footer');
+    const footer = document.getElementById('link-and-info');
     if (!footer) return null;
 
     const footerRect = footer.getBoundingClientRect();
@@ -674,31 +674,52 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     }
   }
 
+  function checkHeroSection(viewportMidpoint: number, scrollY: number): { id: string; top: number; bottom: number; height: number; } | null {
+    const heroSection = document.getElementById('top');
+    if (!heroSection) return null;
+    
+    const rect = heroSection.getBoundingClientRect();
+    const heroTop = rect.top + scrollY;
+    const heroBottom = rect.bottom + scrollY;
+    
+    if (viewportMidpoint < heroBottom) {
+      return { id: 'top', top: heroTop, bottom: heroBottom, height: rect.height };
+    }
+    
+    return null;
+  }
+
   function updateActiveSection(): void {
     const scrollY = window.scrollY;
     const viewportHeight = window.innerHeight;
     const viewportMidpoint = scrollY + (viewportHeight * 0.5);
 
     const sections = buildSectionData(scrollY);
+    const heroData = checkHeroSection(viewportMidpoint, scrollY);
     const footerData = checkFooterSection(viewportMidpoint, scrollY, viewportHeight);
     
     let foundSection: string | null = null;
     let foundSectionData: { id: string; top: number; bottom: number; height: number; } | null = null;
     
-    if (footerData) {
+    if (heroData) {
+      foundSection = heroData.id;
+      foundSectionData = heroData;
+    } else if (footerData) {
       foundSection = footerData.id;
       foundSectionData = footerData;
     } else {
-    for (const section of sections) {
-      if (viewportMidpoint >= section.top && viewportMidpoint < section.bottom) {
-        foundSection = section.id;
-        foundSectionData = section;
-        break;
-      }
+      for (const section of sections) {
+        if (viewportMidpoint >= section.top && viewportMidpoint < section.bottom) {
+          foundSection = section.id;
+          foundSectionData = section;
+          break;
+        }
       }
     }
     
-    if (foundSection === null) return;
+    if (foundSection === null) {
+      foundSection = 'top';
+    }
 
     if (foundSection !== currentSection) {
       currentSection = foundSection;
@@ -746,10 +767,10 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
 
   function syncUrlHash(sectionId: string): void {
     let newHash = '';
-
+    
     if (sectionId === 'footer') {
-      newHash = '#site-footer';
-    } else if (sectionId === 'all') {
+      newHash = '#link-and-info';
+    } else if (sectionId === 'top' || sectionId === 'all') {
       newHash = '';
     } else if (/^[a-z0-9-_]+$/.test(sectionId)) {
       newHash = `#${sectionId}`;
@@ -765,7 +786,7 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
   function updatePrintButton(sectionId: string): void {
     if (!headerPrintBtn) return;
     
-    const printTarget = sectionId === 'footer' ? 'all' : sectionId;
+    const printTarget = (sectionId === 'footer' || sectionId === 'top') ? 'all' : sectionId;
     const displayName = getDisplayName(printTarget);
     
     headerPrintBtn.dataset.printTarget = printTarget;
@@ -783,15 +804,13 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
   }
 
   function getDisplayName(sectionId: string): string {
-    if (sectionId === 'all') return 'Full Week';
+    if (sectionId === 'all' || sectionId === 'top') return 'Full Week';
     if (sectionId === 'grocery-list') return 'Grocery List';
     if (sectionId === 'footer') return 'Links & Info';
-    if (sectionId.startsWith('meal-')) {
-      const mealLink = document.querySelector(`.nav-btn[data-section="${sectionId}"]`);
-      if (mealLink) {
-        const raw = mealLink.textContent?.trim() || 'Meal';
-        return raw.replace(/^[✓\u2713]\s*/, '');
-      }
+    const mealLink = document.querySelector(`.nav-btn[data-section="${sectionId}"]`);
+    if (mealLink) {
+      const raw = mealLink.textContent?.trim() || 'Meal';
+      return raw.replace(/^[✓\u2713]\s*/, '');
     }
     return sectionId;
   }
