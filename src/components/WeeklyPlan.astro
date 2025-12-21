@@ -127,7 +127,7 @@ const heroRows = heroRowsFromMeals.length > 0 ? heroRowsFromMeals : heroRowsFrom
               class={`hero-summary-link hero-summary-item w-full flex flex-wrap items-center justify-center gap-sm px-sm py-xs rounded-md bg-bg border border-border hover:bg-bg-alt transition-colors no-underline text-[0.95rem] mobile:gap-xs mobile:px-sm mobile:py-xs ${row.cooked ? 'opacity-60' : ''}`}
             >
               <span class="meal-name px-sm py-xs rounded font-semibold text-primary bg-transparent">
-                {row.cooked ? '✓ ' : ''}{row.mealName}
+                {row.mealName}
               </span>
 
               {row.codename && (

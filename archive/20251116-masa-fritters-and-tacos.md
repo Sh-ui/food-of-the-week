@@ -36,20 +36,20 @@
 
 ## Meal 1: Masa Fritters with Sous Vide Tilapia and Charred Salad
 
-**Protein:** Tilapia
+#### Protein:
+Tilapia
 
-**Ingredients:** Yellow masa harina, yellow squash, white onion, jalapeño olive oil (at home), Greek yogurt, fire-roasted corn, red bell peppers, cilantro, lime
+#### Ingredients:
+Yellow masa harina, yellow squash, white onion, jalapeño olive oil (at home), Greek yogurt, fire-roasted corn, red bell peppers, cilantro, lime
 
-**Description:** Crispy oven-baked masa fritters studded with squash and onion, served with perfectly cooked sous vide tilapia and a charred vegetable salad.
+#### Description:
+Crispy oven-baked masa fritters studded with squash and onion, served with perfectly cooked sous vide tilapia and a charred vegetable salad.
 
-**Instructions:**
-
-**Already Prepped:**
-
+### Instructions
+### Already Prepped
 - Tilapia fillets have been seasoned with cumin, salt, and pepper, then vacuum sealed. Stored in fridge.
 
-**Sous Chef - Prep:**
-
+### Sous Chef - Prep
 Drop the vacuum-sealed tilapia into sous vide bath set to fish temperature (Chef will set temperature remotely from the app, typically 130°F for 30 minutes).
 
 Preheat oven to 450°F.
@@ -62,8 +62,7 @@ Oil a baking sheet well. Use ice cream scoop to drop fritter dollops onto sheet.
 
 For salad: Char bell peppers and frozen corn under broiler or in cast iron until blistered. Chop peppers. Toss with corn, cilantro, lime juice, and a pinch of salt.
 
-**Chef - Finishing & Plating:**
-
+### Chef - Finishing & Plating
 Remove tilapia from sous vide bag. Pat dry and quickly sear in hot skillet with oil for 1 minute per side to add golden color.
 
 Make crema: Mix remaining Greek yogurt with lime juice, pinch of salt, and thin with water to drizzling consistency.
@@ -72,20 +71,20 @@ Plate fritters, top with tilapia, add charred corn-pepper salad. Drizzle crema o
 
 ## Meal 2: One-Pot Lamb and Tomato Rice
 
-**Protein:** Ground lamb
+#### Protein:
+Ground lamb
 
-**Ingredients:** Ground lamb, tomatoes, white onion, fire-roasted tomatoes, rice, jalapeño, cilantro
+#### Ingredients:
+Ground lamb, tomatoes, white onion, fire-roasted tomatoes, rice, jalapeño, cilantro
 
-**Description:** Turkish-inspired one-pot rice pilaf with spiced lamb and tomatoes. Aromatic, filling, and only one dish to clean.
+#### Description:
+Turkish-inspired one-pot rice pilaf with spiced lamb and tomatoes. Aromatic, filling, and only one dish to clean.
 
-**Instructions:**
-
-**Already Prepped:**
-
+### Instructions
+### Already Prepped
 - Ground lamb is thawed.
 
-**Sous Chef - Cooking:**
-
+### Sous Chef - Cooking
 Dice white onion and mince jalapeño (remove seeds for less heat).
 
 Brown ground lamb in large pot or Dutch oven, breaking it up as it cooks. Season with cumin, paprika, cinnamon, salt, and pepper.
@@ -98,36 +97,34 @@ Add can of fire-roasted tomatoes, 2.5 cups water or broth, and salt. Bring to bo
 
 Cover and cook 18-20 minutes until rice is tender and liquid absorbed.
 
-**Chef - Finishing & Plating:**
-
+### Chef - Finishing & Plating
 Fluff rice with fork. Taste and adjust seasoning.
 
 Serve in bowls topped with diced fresh tomatoes, cilantro, Greek yogurt dollop, and lime wedges.
 
 ## Meal 3: Sous Vide Pork Chops with Squash and Black Bean Skillet
 
-**Protein:** Pork chops
+#### Protein:
+Pork chops
 
-**Ingredients:** Pork chops, zucchini, yellow squash, black beans, salsa verde, pepper jack cheese
+#### Ingredients:
+Pork chops, zucchini, yellow squash, black beans, salsa verde, pepper jack cheese
 
-**Description:** Perfectly cooked sous vide pork chops with sautéed squash, black beans, and melted cheese. Serve with warm tortillas.
+#### Description:
+Perfectly cooked sous vide pork chops with sautéed squash, black beans, and melted cheese. Serve with warm tortillas.
 
-**Instructions:**
-
-**Already Prepped:**
-
+### Instructions
+### Already Prepped
 - Pork chops have been seasoned with chili powder, cumin, garlic powder, salt, and pepper, then vacuum sealed. Stored in fridge.
 
-**Sous Chef - Prep:**
-
+### Sous Chef - Prep
 Drop the vacuum-sealed pork chops into sous vide bath set to pork temperature (Chef will set temperature remotely from the app, typically 140°F).
 
 Dice zucchini and yellow squash into ½-inch cubes. Drain and rinse black beans.
 
 Shred pepper jack cheese.
 
-**Chef - Finishing & Plating:**
-
+### Chef - Finishing & Plating
 Remove pork chops from sous vide bag, pat dry. Sear in hot skillet 1-2 minutes per side until golden crust forms. Remove and tent with foil.
 
 In same pan, sauté diced squash for 5-6 minutes until softened and lightly browned.
@@ -142,20 +139,20 @@ Garnish with cilantro and serve with warm corn tortillas, lime wedges, and extra
 
 ## Meal 4: Tilapia Tacos with Fire-Roasted Corn Salsa
 
-**Protein:** Tilapia
+#### Protein:
+Tilapia
 
-**Ingredients:** Tilapia, corn tortillas, fire-roasted corn, tomatoes, jalapeño, cilantro, lime, cotija
+#### Ingredients:
+Tilapia, corn tortillas, fire-roasted corn, tomatoes, jalapeño, cilantro, lime, cotija
 
-**Description:** Quick fish tacos with bright salsa. Classic weeknight closer that feels fresh and satisfying.
+#### Description:
+Quick fish tacos with bright salsa. Classic weeknight closer that feels fresh and satisfying.
 
-**Instructions:**
-
-**Already Prepped:**
-
+### Instructions
+### Already Prepped
 - Tilapia is thawed.
 
-**Sous Chef - Prep:**
-
+### Sous Chef - Prep
 Make salsa: Combine frozen fire-roasted corn (thawed or quickly sautéed), diced tomatoes, minced jalapeño, chopped cilantro, lime juice, and salt. Let sit to marry flavors.
 
 Make crema: Mix Greek yogurt with lime juice and pinch of salt, thin with water.
@@ -164,8 +161,7 @@ Cut tilapia into strips and season with chili powder, cumin, garlic powder, salt
 
 Warm corn tortillas wrapped in foil in low oven or quickly char over gas flame.
 
-**Chef - Finishing & Plating:**
-
+### Chef - Finishing & Plating
 Heat skillet with oil over medium-high. Cook tilapia strips 2-3 minutes per side until golden and cooked through. Break into chunks.
 
 Assemble tacos: warm tortilla, Greek yogurt crema, tilapia, corn salsa, cotija crumbles, cilantro, lime squeeze.

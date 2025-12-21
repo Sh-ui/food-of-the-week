@@ -61,12 +61,8 @@ export interface Meal {
   title: string;
   fullTitle: string;
   cooked: boolean;
-  protein?: string;
-  ingredients?: string;
-  description?: string;
-  alreadyPrepped?: string[];
-  sousChef?: string;
-  chefFinishing?: string;
+  fields: Array<{ title: string; paragraphs: string[]; items: string[] }>;  // H4 fields
+  sections: Array<{ title: string; paragraphs: string[]; items: string[] }>; // H3 sections
   quickReadCodename?: string;
   quickReadDetails?: string;
 }
@@ -175,43 +171,46 @@ export function getWeekPlanData(): WeekPlan {
     const number = index + 1;
     const title = fullTitle;
 
-    // Extract from flex-parsing structure
-    let protein = '',
-      ingredients = '',
-      description = '';
-
-    // First group (.info-group) contains meal info
+    // Extract fields from .info-group (H4 fields)
+    const fields: Array<{ title: string; paragraphs: string[]; items: string[] }> = [];
     const infoGroup = mealSection.querySelector('.info-group');
     if (infoGroup) {
       infoGroup.querySelectorAll('.subsection-field').forEach(field => {
-        const label = field.querySelector('strong')?.textContent?.replace(':', '') || '';
-        const text = field.textContent?.replace(label + ':', '').trim() || '';
-        if (label.toLowerCase().includes('protein')) protein = text;
-        if (label.toLowerCase().includes('ingredients')) ingredients = text;
-        if (label.toLowerCase().includes('description')) description = text;
+        const strong = field.querySelector('strong');
+        const title = strong?.textContent?.trim() || '';
+        let contentHtml = field.querySelector('.subsection-field-body')?.innerHTML?.trim() || '';
+
+        if (!contentHtml) {
+          const fallback = (field.textContent || '').replace(title, '').trim();
+          contentHtml = fallback;
+        }
+
+        const paragraphs = contentHtml ? [contentHtml] : [];
+        const items: string[] = [];
+
+        fields.push({ title, paragraphs, items });
       });
     }
 
-    // Instruction groups contain subsections
-    const alreadyPrepped: string[] = [];
-    let sousChef = '';
-    let chefFinishing = '';
-
+    // Extract sections from .instruction-group (H3 sections)
+    const sections: Array<{ title: string; paragraphs: string[]; items: string[] }> = [];
     mealSection.querySelectorAll('.instruction-group').forEach(group => {
       const h3 = group.querySelector('h3');
-      const sectionTitle = h3?.textContent?.toLowerCase() || '';
+      const title = h3?.textContent?.trim() || '';
 
-      if (sectionTitle.includes('already') && sectionTitle.includes('prep')) {
-        group.querySelectorAll('li').forEach(li => alreadyPrepped.push(li.textContent || ''));
-      } else if (sectionTitle.includes('sous') && sectionTitle.includes('chef')) {
-        const paragraphs: string[] = [];
-        group.querySelectorAll('.subsection-content p').forEach(el => paragraphs.push(el.textContent || ''));
-        sousChef = paragraphs.join('\n\n');
-      } else if (sectionTitle.includes('chef') && sectionTitle.includes('finish')) {
-        const paragraphs: string[] = [];
-        group.querySelectorAll('.subsection-content p').forEach(el => paragraphs.push(el.textContent || ''));
-        chefFinishing = paragraphs.join('\n\n');
-      }
+      // Extract paragraphs from .subsection-content
+      const paragraphs: string[] = [];
+      group.querySelectorAll('.subsection-content p').forEach(p => {
+        paragraphs.push(p.innerHTML || '');
+      });
+
+      // Extract list items
+      const items: string[] = [];
+      group.querySelectorAll('li').forEach(li => {
+        items.push(li.innerHTML || '');
+      });
+
+      sections.push({ title, paragraphs, items });
     });
 
     const quickReadEl = mealSection.querySelector('.meal-quick-read');
@@ -224,12 +223,8 @@ export function getWeekPlanData(): WeekPlan {
       title,
       fullTitle,
       cooked,
-      protein,
-      ingredients,
-      description,
-      alreadyPrepped: alreadyPrepped.length > 0 ? alreadyPrepped : undefined,
-      sousChef: sousChef || undefined,
-      chefFinishing: chefFinishing || undefined,
+      fields,
+      sections,
       quickReadCodename: quickReadCodename || undefined,
       quickReadDetails: quickReadDetails || undefined,
     });
@@ -301,76 +296,51 @@ export function generateMealHTML(meal: Meal, cfg: PrintConfig): string {
       </div>` : ''}
       <div style="border:1px solid ${cfg.colors.border};padding:10pt;margin-bottom:${cfg.spacing.sectionGap};">`;
 
-  if (meal.protein) {
-    html += `
+  // Print all fields
+  meal.fields.forEach(field => {
+    field.paragraphs.forEach(paragraph => {
+      if (paragraph.trim()) {
+        html += `
         <p style="margin-bottom:${cfg.spacing.listItemGap};">
-          <strong>Protein:</strong> ${meal.protein}
+          <strong>${field.title}</strong> ${paragraph}
         </p>`;
-  }
-  if (meal.ingredients) {
-    html += `
-        <p style="margin-bottom:${cfg.spacing.listItemGap};">
-          <strong>Ingredients:</strong> ${meal.ingredients}
-        </p>`;
-  }
-  if (meal.description) {
-    html += `
-        <p style="margin-bottom:0;">
-          <strong>Description:</strong> ${meal.description}
-        </p>`;
-  }
+      }
+    });
+  });
 
   html += `</div>`;
 
-  if (meal.alreadyPrepped?.length) {
+  // Print all sections
+  meal.sections.forEach(section => {
     html += `
       <div style="margin-bottom:${cfg.spacing.sectionGap};">
         <h3 style="font-family:${cfg.typography.headingFontFamily};font-size:${cfg.typography.h3Size};color:${headingColor};margin-bottom:${cfg.spacing.listItemGap};">
-          Already Prepped
-        </h3>
+          ${section.title}
+        </h3>`;
+
+    // Print paragraphs
+    section.paragraphs.forEach(paragraph => {
+      if (paragraph.trim()) {
+        html += `
+        <p style="margin-bottom:${cfg.spacing.paragraphGap};">${paragraph}</p>`;
+      }
+    });
+
+    // Print list items if any
+    if (section.items.length > 0) {
+      html += `
         <ul style="margin-left:20pt;">`;
-
-    meal.alreadyPrepped.forEach(item => {
-      html += `
+      section.items.forEach(item => {
+        html += `
           <li style="margin-bottom:${cfg.spacing.listItemGap};">${item}</li>`;
-    });
-
-    html += `
-        </ul>
-      </div>`;
-  }
-
-  if (meal.sousChef) {
-    html += `
-      <div style="margin-bottom:${cfg.spacing.sectionGap};">
-        <h3 style="font-family:${cfg.typography.headingFontFamily};font-size:${cfg.typography.h3Size};color:${headingColor};margin-bottom:${cfg.spacing.listItemGap};">
-          Sous Chef - Prep
-        </h3>`;
-
-    meal.sousChef.split('\n\n').forEach(paragraph => {
+      });
       html += `
-        <p style="margin-bottom:${cfg.spacing.paragraphGap};">${paragraph}</p>`;
-    });
+        </ul>`;
+    }
 
     html += `
       </div>`;
-  }
-
-  if (meal.chefFinishing) {
-    html += `
-      <div style="margin-bottom:${cfg.spacing.sectionGap};">
-        <h3 style="font-family:${cfg.typography.headingFontFamily};font-size:${cfg.typography.h3Size};color:${headingColor};margin-bottom:${cfg.spacing.listItemGap};">
-          Chef - Finishing & Plating
-        </h3>`;
-
-    meal.chefFinishing.split('\n\n').forEach(paragraph => {
-      html += `
-        <p style="margin-bottom:${cfg.spacing.paragraphGap};">${paragraph}</p>`;
-    });
-
-    html += `
-      </div>`;
-  }
+  });
 
   return html + `</div>`;
 }

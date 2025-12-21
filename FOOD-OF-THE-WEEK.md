@@ -1,3 +1,4 @@
+<!-- ✓ -->
 # Week of December 14-20, 2025
 
 ## Grocery List
@@ -37,56 +38,59 @@
 - [x] Frozen mire poix
 - [x] Frozen peas
 
-## ~~Gringo Tostadas~~
+## Gringo Tostadas
 
-> Prep&Heat
->
-> cut toppings + heat stuff
+##### Prep&Heat
+###### cut toppings + heat stuff
 
-**Protein** Frozen taco meat
+#### Protein: 
+Frozen taco meat
 
-**Ingredients** Tostadas, refried beans, shredded cheddar, sour cream, cilantro, limes, iceberg lettuce, plum tomatoes, roasted garlic salsa
+#### Ingredients: 
+Tostadas, refried beans, shredded cheddar, sour cream, cilantro, limes, iceberg lettuce, plum tomatoes, roasted garlic salsa
 
-**Description** Crispy tostadas layered with warm refried beans and seasoned taco meat with cheese, topped with fresh iceberg, tomatoes, sour cream, and cilantro.
+#### Description: 
+Crispy tostadas layered with warm refried beans and seasoned taco meat with cheese, topped with fresh iceberg, tomatoes, sour cream, and cilantro.
 
-**Already Prepped**
-
+### Already Prepped 
 - Frozen taco meat is ready to go in the freezer.
 
-**Sous Chef - Prep**
+### Sous Chef - Prep 
 
 Shred the iceberg lettuce into thin strips. Dice the plum tomatoes. Chop the cilantro. Cut limes into wedges.
 
-**Chef - Finishing & Plating**
+### Chef - Finishing & Plating
 
 Heat up the taco meat in a skillet. Warm the refried beans in the microwave.
 
 Spread a layer of warm refried beans on each tostada. Top with shredded cheese, taco meat, iceberg lettuce, plum tomatoes, sour cream, and cilantro. Serve with that jar of roasted garlic salsa on the side. Add a lime wedge to each plate.
 
-## ~~Lamb Patties & Veg~~
+## ✓ Lamb Patties & Veg
 
-> SousVidePrep
->
-> 4:00 mire poix + 5:00 patties
+##### SousVidePrep
+###### 4:00 mire poix + 5:00 patties
 
-**Protein** Ground lamb
+#### Protein:
+Ground lamb
 
-**Ingredients** Frozen mire poix, onion jam, half bunch of parsley, white wine, microgreens
+#### Ingredients:
+Frozen mire poix, onion jam, half bunch of parsley, white wine, microgreens
 
-**Description** Tender lamb patties served on a bed of sous vide mire poix, finished with a rich pan sauce made from the mire poix bag juices and pattie fond  + wine. Topped with fresh microgreens.
+#### Description:
+Tender lamb **patties** served on a bed of sous vide mire poix, finished with a rich pan sauce made from the mire poix bag juices and pattie fond  + wine. Topped with fresh microgreens.
 
-**Already Prepped**
+### Already Prepped
 
 - Ground lamb is thawed.
 - Frozen mire poix is vacuum sealed and stored in the freezer.
 
-**Sous Chef - Prep**
+### Sous Chef - Prep
 
 At no later than 3:30pm, start the sous vide mire poix in the sous vide bath (Chef will set temperature remotely from the app to around 183°F).
 
 At around 5:00pm, Make the lamb patties; Combine the thawed ground lamb with the onion jam, and chopped parsley (half a bunch). Season with salt and pepper to taste (you can microwave a small chunk to check the seasoning). Form into even-sized stout little patties, like slightly flattened meatballs. Put in the fridge to chill until chef arrives.
 
-**Chef - Finishing & Plating**
+### Chef - Finishing & Plating
 
 Heat a large skillet over medium-high heat with a drizzle of oil. Brown the patties on all sides until they develop good color and are cooked through, about 8-10 minutes total. Remove patties and set aside.
 
@@ -96,24 +100,26 @@ To plate: Spread the warm mire poix as a bed on each plate. Nestle the patties o
 
 Serve with bread if you have it
 
-## ~~Sweet Pork Curry~~
+## ✓ Sweet Pork Curry
 
-> Prep&Heat+
->
-> prep + toast panko + 5:30 rice
+##### Prep&Heat+
+###### prep + toast panko + 5:30 rice
 
-**Protein** Frozen ground pork
+#### Protein:
+Frozen ground pork
 
-**Ingredients** Potatoes, carrots, yellow onion, frozen peas, Japanese curry cubes + honey, ginger paste, panko breadcrumbs, Japanese rice, American bagged salad, Japanese dressing
+#### Ingredients:
+Potatoes, carrots, yellow onion, frozen peas, **Japanese curry cubes** + honey, ginger paste, panko breadcrumbs, Japanese rice, American bagged salad, Japanese dressing
 
-**Description** A weeknight-friendly deconstructed take on Japanese pork katsu curry—ground pork simmered in rich curry sauce with potatoes and carrots, topped with toasted breadcrumbs for that katsu crunch. Served with Japanese rice and a simple salad. The honey adds a sweet, soft flavor to the curry.
+#### Description:
+A weeknight-friendly deconstructed take on Japanese pork katsu curry—ground pork simmered in rich curry sauce with potatoes and carrots, topped with toasted breadcrumbs for that katsu crunch. Served with Japanese rice and a simple salad. The honey adds a sweet, soft flavor to the curry.
 
-**Already Prepped**
+### Already Prepped
 
 - Ground pork is thawed.
 - Potatoes and carrots are already chopped + cooked and vacuum sealed in bags. Stored in fridge.
 
-**Sous Chef - Prep** 
+### Sous Chef - Prep 
 
 Dice 1 whole yellow onion
 
@@ -121,7 +127,7 @@ Toast the panko breadcrumbs: In a dry nonstick skillet over medium heat, toast p
 
 At 5:30pm, start the Japanese rice in the rice cooker.
 
-**Chef - Finishing & Plating**
+### Chef - Finishing & Plating
 
 In a large pot or Dutch oven over medium-high heat, brown the ground pork, breaking it up as it cooks. Once browned, add ginger paste and onion jam + honey and cook until fragrant.
 
@@ -133,23 +139,25 @@ Serve on plates with rice in the center in rounded mound, use the back of a ladl
 
 Sprinkle the toasted panko breadcrumbs generously over the curry portions right before serving.
 
-## ~~Spiced SheetPan Fish~~
+## ✓ Spiced SheetPan Fish
 
-> SousChefDish
->
-> 5:30 Couscous + oven roast
+##### SousChefDish
+###### 5:30 Couscous + oven roast
 
-**Protein** Frozen tilapia
+#### Protein:
+Frozen tilapia
 
-**Ingredients** Cherry tomatoes, red onion, garlic, harissa or warm spices, meyer lemons, olives (optional), couscous, parsley, extra virgin olive oil
+#### Ingredients:
+Cherry tomatoes, red onion, garlic, harissa or warm spices, meyer lemons, olives (optional), couscous, parsley, extra virgin olive oil
 
-**Description** Frozen tilapia roasted at high heat with cherry tomatoes, chunky red onion, and warm North African spices. Served over garlic couscous with a bright parsley and olive oil finish.
+#### Description:
+Frozen tilapia roasted at high heat with cherry tomatoes, chunky red onion, and warm North African spices. Served over garlic couscous with a bright parsley and olive oil finish.
 
-**Already Prepped**
+### Already Prepped
 
 - Frozen tilapia fillets (no need to thaw)
 
-**Sous Chef - Cooking**
+### Sous Chef - Cooking
 
 Start the garlic couscous in the rice cooker: smash garlic cloves in the garlic press into the couscous, then add to rice cooker with water or chicken broth. Season it chicken boullion instead of salt, and some white pepper. Set to cook, let it stay on warm until ready to plate.
 
@@ -161,7 +169,7 @@ Roast for around 15 minutes until tilapia is cooked through and tomatoes are bur
 
 When done, turn oven to warm (or lowest setting) and leave the sheet pan in the oven. Keep couscous on warm in the rice cooker. Everything stays warm until Chef arrives.
 
-**Chef - Finishing & Plating**
+### Chef - Finishing & Plating
 
 Fluff the garlic couscous and spread as a bed on each plate. Nestle the roasted tilapia on top, along with the roasted tomatoes, onions, and any pan juices.
 

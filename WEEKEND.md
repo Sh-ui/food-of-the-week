@@ -3,43 +3,47 @@
 ## Grocery List
 
 ### Produce
-- [ ] Fresh parsley
-- [ ] Garlic - 1 bulb
-- [ ] Italian bagged salad
+- [x] Fresh parsley
+- [x] Garlic - 1 bulb
+- [x] Italian bagged salad
 - [ ] Yukon gold potatoes
 
 ### Staples
 - [x] Panko breadcrumbs
-- [ ] Dried Italian herbs (basil, oregano)
-- [ ] Italian Dressing Mix Packet
+- [x] Dried Italian herbs (basil, oregano)
+- [x] Italian Dressing Mix Packet
 
 ### Dairy
-- [ ] Parmigiano-Reggiano wedge
-- [ ] Low Moisture Mozzarella block
-- [ ] Heavy Cream
+- [x] Parmigiano-Reggiano wedge
+- [x] Low Moisture Mozzarella block
+- [x] Heavy Cream
 - [x] Eggs
 
 ### Protein
-- [ ] Sweet Italian sausage - 1 lb (ground or links)
-- [ ] Ground beef (80/20) - 1 lb
+- [x] Sweet Italian sausage - 1 lb (ground or links)
+- [x] Ground beef (80/20) - 1 lb
 
 ## Italian Lazy Meatballs
 
-**Day** Sunday
+#### Day:
+Sunday
 
-**Protein** Sweet Italian sausage + ground beef
+#### Protein:
+Sweet Italian sausage + ground beef
 
-**Ingredients** Sweet Italian sausage, ground beef, panko, fresh parsley, garlic, parmesan, egg, mozzarella, italian bagged salad, yukon gold potatoes, italian dressing, italian herbs, milk
+#### Ingredients:
+Sweet Italian sausage, ground beef, panko, fresh parsley, garlic, parmesan, egg, mozzarella, italian bagged salad, yukon gold potatoes, italian dressing, italian herbs, milk
 
-**Description** Italian-American meatballs halfway between meatloaf and meatballs - the kind that get baked large and topped with gooey melted mozzarella. Bakes hands-off while you relax. Served with Italian salad and garlicky Tuscan mash.
+#### Description:
+Italian-American meatballs halfway between meatloaf and meatballs - the kind that get baked large and topped with gooey melted mozzarella. Bakes hands-off while you relax. Served with Italian salad and garlicky Tuscan mash.
 
-**Sous Chef - Prep**
+### Sous Chef - Prep
 
 Mix 1 lb sweet Italian sausage + 1 lb ground beef + 1 cup panko + chopped parsley + minced garlic + grated parmesan + egg + salt/pepper.
 
 Form into 4-6 large balls (meatloaf-sized, not bite-sized) and place on a roasting sheet.
 
-**Chef - Finishing & Plating**
+### Chef - Finishing & Plating
 
 Bake at 375°F for 25-30 minutes until mostly cooked through.
 

@@ -2,6 +2,7 @@
 import type { ContentSection } from '../utils/weekParser';
 import { groupSubsections } from '../utils/weekParser';
 import { getInstructionBadgeColor, getInstructionColor, sectionColors } from '../config/colors';
+import { marked } from 'marked';
 
 interface Props {
   section: ContentSection;
@@ -13,13 +14,14 @@ const mealIndex = Math.max(0, Number(section.id.split('-')[1] ?? '1') - 1);
 const quickReadCodenameScheme = getInstructionBadgeColor(mealIndex);
 const quickReadInfoScheme = sectionColors.firstSubsection;
 
-// Group subsections for rendering
+// Group blocks for rendering
 const groups = groupSubsections(section.subsections);
 
-// Helper function to render markdown links to HTML
-function renderMarkdown(text: string): string {
-  // Convert markdown links [text](url) to HTML links
-  return text.trim().replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+// Track instruction group index for color cycling
+let instructionGroupIndex = 0;
+
+function renderMarkdown(text: string | undefined): string {
+  return marked.parseInline(text?.trim() ?? '');
 }
 ---
 
@@ -30,12 +32,6 @@ function renderMarkdown(text: string): string {
   data-cooked={section.cooked ? 'true' : 'false'}
 >
   <div class="meal-header">
-    <span 
-      class={`cooked-indicator ${section.cooked ? 'is-cooked' : ''}`}
-      aria-label={section.cooked ? 'Meal has been cooked' : 'Meal not yet cooked'}
-    >
-      {section.cooked ? '✓' : ''}
-    </span>
     <h2>{section.title}</h2>
   </div>
 
@@ -58,28 +54,37 @@ function renderMarkdown(text: string): string {
     </div>
   )}
   
-  {/* Render subsection groups */}
+  {/* Render block groups */}
   {groups.map((group, groupIndex) => {
-    // First group uses firstSubsection colors (meal info)
-    // Subsequent groups use cycling instruction colors
-    const isFirstGroup = groupIndex === 0;
-    const colors = isFirstGroup 
-      ? sectionColors.firstSubsection 
-      : getInstructionColor(groupIndex - 1);
-    
+    // Determine group type based on first block's depth
+    const isFieldsGroup = group[0].depth === 4; // H4 = fields
+    const isSectionGroup = group[0].depth === 3; // H3 = instruction section
+
+    // Color logic: fields groups use firstSubsection colors, instruction sections cycle through instruction colors
+    const colors = isFieldsGroup
+      ? sectionColors.firstSubsection
+      : getInstructionColor(instructionGroupIndex++);
+
     return (
-      <div 
-        class={`subsection-group mb-lg p-md rounded-md border-0 border-solid border-l-4 last:mb-0 ${isFirstGroup ? 'info-group flex flex-col gap-md' : 'instruction-group mt-lg'}`}
+      <div
+        class={`subsection-group mb-lg p-md rounded-md border-0 border-solid border-l-4 last:mb-0 ${isFieldsGroup ? 'info-group flex flex-col gap-md' : 'instruction-group mt-lg'}`}
         style={`background: ${colors.bg}; border-left-color: ${colors.border};`}
       >
         {group.map((sub) => (
           <div class="subsection">
-            {/* For grouped items, show as labeled fields */}
-            {isFirstGroup ? (
+            {isFieldsGroup ? (
+              // H4 fields: render as labeled field rows
               <div class="subsection-field leading-relaxed text-[1.1rem] mobile:text-[1.25rem] mobile:leading-extra-loose">
-                <strong class="text-primary inline-block min-w-[120px]">{sub.title}:</strong> {sub.content}
+                <strong class="text-primary inline-block min-w-[120px]">{sub.title}</strong>
+                {sub.content && (
+                  <span
+                    class="subsection-field-body inline text-base"
+                    set:html={renderMarkdown(sub.content)}
+                  />
+                )}
               </div>
             ) : (
+              // H3 sections: render as distinct instruction blocks
               <>
                 <h3 class="mt-0 mb-md text-[1.25rem] font-semibold mobile:text-[1.3rem] mobile:mb-md" style={`color: ${colors.heading};`}>{sub.title}</h3>
                 {sub.items && sub.items.length > 0 && (
@@ -124,7 +129,7 @@ function renderMarkdown(text: string): string {
     break-inside: avoid;
   }
 
-  /* Meal header - title and indicator layout */
+  /* Meal header layout */
   .meal-header {
     display: flex;
     justify-content: flex-start;
@@ -138,28 +143,6 @@ function renderMarkdown(text: string): string {
     flex: 1;
   }
 
-  /* Cooked indicator - circular checkbox next to heading */
-  .cooked-indicator {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 1.75rem;
-    height: 1.75rem;
-    border: 2px solid var(--color-text-light);
-    border-radius: 50%;
-    flex-shrink: 0;
-    margin-top: 0.25rem;
-    font-size: 0.9rem;
-    color: transparent;
-    cursor: default;
-    user-select: none;
-  }
-  
-  .cooked-indicator.is-cooked {
-    background: var(--color-cooked-text, #8a887f);
-    border-color: var(--color-cooked-text, #8a887f);
-    color: white;
-  }
 
   /* Cooked meal state overrides - semantic state styling */
   .meal-cooked {
@@ -215,12 +198,6 @@ function renderMarkdown(text: string): string {
       flex-direction: column;
       align-items: flex-start;
       gap: var(--spacing-md);
-    }
-
-    .cooked-indicator {
-      width: 2rem;
-      height: 2rem;
-      font-size: 1rem;
     }
 
     .meal-header h2 {

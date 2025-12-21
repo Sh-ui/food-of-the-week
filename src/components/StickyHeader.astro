@@ -42,7 +42,7 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
           class={`nav-btn ${meal.cooked ? 'cooked' : ''}`}
           data-section={meal.id}
         >
-          {meal.cooked ? '✓ ' : ''}{meal.title}
+          {meal.title}
         </a>
       ))}
     </div>
@@ -80,7 +80,7 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
         class={`dropdown-link ${meal.cooked ? 'cooked' : ''}`}
         data-section={meal.id}
       >
-        {meal.cooked ? '✓ ' : ''}{meal.title}
+        {meal.title}
       </a>
     ))}
     

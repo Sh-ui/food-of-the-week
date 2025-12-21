@@ -33,19 +33,22 @@
 
 ## Meal 1: Stir Fry
 
-**Protein:** Sirloin flap steak
+#### Protein:
+Sirloin flap steak
 
-**Ingredients:** Purple asparagus, bok choy microgreens, shallot, brown rice (at home)
+#### Ingredients:
+Purple asparagus, bok choy microgreens, shallot, brown rice (at home)
 
-**Description:** Quick stir fry with tender sirloin flap steak, purple asparagus, and aromatic shallot, finished with delicate bok choy microgreens. Served over brown rice.
+#### Description:
+Quick stir fry with tender sirloin flap steak, purple asparagus, and aromatic shallot, finished with delicate bok choy microgreens. Served over brown rice.
 
-**Instructions:**
+### Instructions
 
-**Already Prepped:**
+### Already Prepped
 
  - Sirloin flap steak is thawed.
 
-**Sous Chef - Prep:**
+### Sous Chef - Prep
 
 Start the brown rice cooking according to package directions (or use a rice cooker).
 
@@ -53,7 +56,7 @@ Slice the sirloin flap steak thinly against the grain. Season with salt and pepp
 
 Trim the woody ends off the asparagus and cut into 2-inch pieces. Slice the shallot thinly.
 
-**Chef - Finishing & Plating:**
+### Chef - Finishing & Plating
 
 Heat a wok or large skillet over high heat. Add oil with a high smoke point (vegetable, grapeseed, or peanut oil).
 
@@ -68,19 +71,22 @@ Plate over the brown rice. Top with a generous handful of the bok choy microgree
 
 ## Meal 2: One Pot Pasta
 
-**Protein:** Ground pork
+#### Protein:
+Ground pork
 
-**Ingredients:** Brown udon rice noodles, tomato paste, San Marzano tomatoes, frozen mixed mushrooms, frozen three pepper blend
+#### Ingredients:
+Brown udon rice noodles, tomato paste, San Marzano tomatoes, frozen mixed mushrooms, frozen three pepper blend
 
-**Description:** A hearty one-pot pasta that combines ground pork with rich tomato sauce, mushrooms, and peppers. Quick weeknight meal with minimal cleanup.
+#### Description:
+A hearty one-pot pasta that combines ground pork with rich tomato sauce, mushrooms, and peppers. Quick weeknight meal with minimal cleanup.
 
-**Instructions:**
+### Instructions
 
-**Already Prepped:**
+### Already Prepped
 
  - Ground pork is thawed.
 
-**Sous Chef - Cooking:**
+### Sous Chef - Cooking
 
 Brown the ground pork in a large pot or deep skillet with a drizzle of oil. Break it up as it cooks. Once browned, add chopped garlic and onion + rimalicious seasoning. Stir in the tomato paste and let it caramelize for a minute or two.
 
@@ -92,27 +98,30 @@ Add the udon noodles directly to the pot. Cook according to package directions, 
 
 Season with salt, pepper, and a pinch of red pepper flakes. Finish with fresh herbs if available (basil, parsley).
 
-**Chef - Finishing & Plating:**
+### Chef - Finishing & Plating
 
 Serve in bowls. Top with grated Parmesan if available.
 
 ## Meal 3: Marinated Steak
 
-**Protein:** Flat iron steak
+#### Protein:
+Flat iron steak
 
-**Ingredients:** White sweet potatoes, green cabbage, red onion
+#### Ingredients:
+White sweet potatoes, green cabbage, red onion
 
-**Description:** Sous vide flat iron steak finished with torch, served with warm sweet potatoes and charred cabbage wedges.
+#### Description:
+Sous vide flat iron steak finished with torch, served with warm sweet potatoes and charred cabbage wedges.
 
-**Instructions:**
+### Instructions
 
-**Already Prepped:**
+### Already Prepped
 
  - Flat iron steaks have been seasoned and vacuum sealed. Stored in fridge.
  
  - White sweet potatoes have been vacuum sealed and cooked to perfect temperature. Stored in fridge ready to warm.
 
-**Sous Chef - Prep:**
+### Sous Chef - Prep
 
 Drop the vacuum-sealed steaks into the sous vide bath set to steak temperature (Chef will set temperature remotely from the app, typically 130-135°F for medium-rare).
 
@@ -124,7 +133,7 @@ Preheat oven to 500°F. Spread the sliced onion rings on a baking sheet with the
 
 Once they look roasted, change the oven temp to warm, and add the plates to the oven alongside the veggies to keep them both warm until the chef gets home.
 
-**Chef - Finishing & Plating:**
+### Chef - Finishing & Plating
 
 Heat a large skillet over medium-high heat. Char the cabbage wedges on both sides until deeply golden and crispy, about 3-4 minutes per side. Remove and set aside.
 
@@ -139,15 +148,18 @@ To plate: Arrange the roasted onions and sweet potato chunks on the plate. Fan t
 
 ## Meal 5: Chicken Fricassée
 
-**Protein:** Whole chicken
+#### Protein:
+Whole chicken
 
-**Ingredients:** Collard greens, gold & red beets, pomegranate
+#### Ingredients:
+Collard greens, gold & red beets, pomegranate
 
-**Description:** Chicken Fricassée (deconstructed whole chicken) served with braised collard greens, roasted beets, and garnished with pomegranate seeds and mustard vinaigrette; a satisfying, colorful meal.
+#### Description:
+Chicken Fricassée (deconstructed whole chicken) served with braised collard greens, roasted beets, and garnished with pomegranate seeds and mustard vinaigrette; a satisfying, colorful meal.
 
-**Instructions:**
+### Instructions
 
-**Already Prepped:**
+### Already Prepped
 
  - Chicken has been spatchcocked, seasoned, and vacuum sealed flat with legs and thighs scored. Stored in fridge.
 
@@ -155,7 +167,7 @@ To plate: Arrange the roasted onions and sweet potato chunks on the plate. Fan t
 
  - Homemade wheat dough is resting in the fridge.
 
-**Sous Chef - Prep:**
+### Sous Chef - Prep
 
 Prepare the bread according to [King Arthur No-Knead Rustic Whole Wheat Bread Instructions](https://www.kingarthurbaking.com/recipes/no-knead-rustic-whole-wheat-bread-recipe) give yourself enough time in the day to alot 2 hours for bread to counter rise, 30 minutes to cook and 2 hours to cool.
 
@@ -167,7 +179,7 @@ Prep a single pomegranate for the garnish.
 
 at 5:30 Preheat the air fryer oven to 475°F.
 
-**Chef - Finishing & Plating:**
+### Chef - Finishing & Plating
 
 With the air fryer oven now hot at 475°F. Spread the chopped collard greens in the small black roasting pan as a bed.
 
