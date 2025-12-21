@@ -37,11 +37,14 @@
 
 ## Meal 1: Sous Vide Miso-Butter Salmon with Broccoli and Soba Noodles
 
-#### Protein: Salmon
+#### Protein:
+Salmon
 
-#### Ingredients: Salmon, broccoli, soba noodles, butter, miso paste (pantry), garlic, soy sauce
+#### Ingredients:
+Salmon, broccoli, soba noodles, butter, miso paste (pantry), garlic, soy sauce
 
-#### Description: Perfectly cooked sous vide salmon with miso-butter sauce, charred broccoli, and cold soba noodles. Temperature and texture contrast that's sophisticated yet weeknight-friendly.
+#### Description:
+Perfectly cooked sous vide salmon with miso-butter sauce, charred broccoli, and cold soba noodles. Temperature and texture contrast that's sophisticated yet weeknight-friendly.
 
 ### Instructions
 ### Already Prepped
@@ -67,11 +70,14 @@ Garnish with sesame seeds and scallions if available.
 
 ## Meal 2: Sous Vide Steak with Roasted Sweet Potatoes and Tahini Drizzle
 
-#### Protein: Flat iron steak
+#### Protein:
+Flat iron steak
 
-#### Ingredients: Flat iron steak, sweet potatoes, tahini, honey, lemon, garlic, frozen spinach
+#### Ingredients:
+Flat iron steak, sweet potatoes, tahini, honey, lemon, garlic, frozen spinach
 
-#### Description: Perfectly cooked sous vide steak with roasted sweet potato rounds and lemony tahini sauce. Middle Eastern-inspired precision cooking.
+#### Description:
+Perfectly cooked sous vide steak with roasted sweet potato rounds and lemony tahini sauce. Middle Eastern-inspired precision cooking.
 
 ### Instructions
 ### Already Prepped
@@ -103,11 +109,14 @@ Drizzle tahini sauce and reserved steak juices over everything. Garnish with fre
 
 ## Meal 3: Butternut Squash and Lamb Curry
 
-#### Protein: Ground lamb
+#### Protein:
+Ground lamb
 
-#### Ingredients: Ground lamb, butternut squash, coconut milk, red curry paste, red onion, frozen peas, fresh basil
+#### Ingredients:
+Ground lamb, butternut squash, coconut milk, red curry paste, red onion, frozen peas, fresh basil
 
-#### Description: Rich, warming curry with sweet squash and earthy lamb. Aromatic and filling, perfect over rice.
+#### Description:
+Rich, warming curry with sweet squash and earthy lamb. Aromatic and filling, perfect over rice.
 
 ### Instructions
 ### Already Prepped
@@ -135,11 +144,14 @@ Serve over rice in bowls. Garnish with fresh basil leaves and lime wedges.
 
 ## Meal 4: Sous Vide Scallops with Teriyaki Broccoli
 
-#### Protein: Scallops
+#### Protein:
+Scallops
 
-#### Ingredients: Scallops, broccoli, teriyaki sauce, garlic, ginger, sesame oil
+#### Ingredients:
+Scallops, broccoli, teriyaki sauce, garlic, ginger, sesame oil
 
-#### Description: Perfectly cooked sous vide scallops with quick sear, served with sticky-sweet broccoli. Restaurant-style precision in under 30 minutes.
+#### Description:
+Perfectly cooked sous vide scallops with quick sear, served with sticky-sweet broccoli. Restaurant-style precision in under 30 minutes.
 
 ### Instructions
 ### Already Prepped
@@ -167,11 +179,14 @@ Plate rice (if using), top with teriyaki broccoli and seared scallops. Drizzle w
 
 ## Meal 5: Sweet Potato and Feta Frittata
 
-#### Protein: Eggs (pantry staple)
+#### Protein:
+Eggs (pantry staple)
 
-#### Ingredients: Sweet potatoes (leftover from Meal 2), frozen spinach, eggs, feta, red onion, garlic
+#### Ingredients:
+Sweet potatoes (leftover from Meal 2), frozen spinach, eggs, feta, red onion, garlic
 
-#### Description: Using leftover roasted sweet potatoes for a quick breakfast-for-dinner frittata. Flexible and forgiving.
+#### Description:
+Using leftover roasted sweet potatoes for a quick breakfast-for-dinner frittata. Flexible and forgiving.
 
 ### Instructions
 ### Already Prepped

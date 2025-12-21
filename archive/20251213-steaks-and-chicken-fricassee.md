@@ -33,11 +33,14 @@
 
 ## Meal 1: Stir Fry
 
-#### Protein: Sirloin flap steak
+#### Protein:
+Sirloin flap steak
 
-#### Ingredients: Purple asparagus, bok choy microgreens, shallot, brown rice (at home)
+#### Ingredients:
+Purple asparagus, bok choy microgreens, shallot, brown rice (at home)
 
-#### Description: Quick stir fry with tender sirloin flap steak, purple asparagus, and aromatic shallot, finished with delicate bok choy microgreens. Served over brown rice.
+#### Description:
+Quick stir fry with tender sirloin flap steak, purple asparagus, and aromatic shallot, finished with delicate bok choy microgreens. Served over brown rice.
 
 ### Instructions
 
@@ -68,11 +71,14 @@ Plate over the brown rice. Top with a generous handful of the bok choy microgree
 
 ## Meal 2: One Pot Pasta
 
-#### Protein: Ground pork
+#### Protein:
+Ground pork
 
-#### Ingredients: Brown udon rice noodles, tomato paste, San Marzano tomatoes, frozen mixed mushrooms, frozen three pepper blend
+#### Ingredients:
+Brown udon rice noodles, tomato paste, San Marzano tomatoes, frozen mixed mushrooms, frozen three pepper blend
 
-#### Description: A hearty one-pot pasta that combines ground pork with rich tomato sauce, mushrooms, and peppers. Quick weeknight meal with minimal cleanup.
+#### Description:
+A hearty one-pot pasta that combines ground pork with rich tomato sauce, mushrooms, and peppers. Quick weeknight meal with minimal cleanup.
 
 ### Instructions
 
@@ -98,11 +104,14 @@ Serve in bowls. Top with grated Parmesan if available.
 
 ## Meal 3: Marinated Steak
 
-#### Protein: Flat iron steak
+#### Protein:
+Flat iron steak
 
-#### Ingredients: White sweet potatoes, green cabbage, red onion
+#### Ingredients:
+White sweet potatoes, green cabbage, red onion
 
-#### Description: Sous vide flat iron steak finished with torch, served with warm sweet potatoes and charred cabbage wedges.
+#### Description:
+Sous vide flat iron steak finished with torch, served with warm sweet potatoes and charred cabbage wedges.
 
 ### Instructions
 
@@ -139,11 +148,14 @@ To plate: Arrange the roasted onions and sweet potato chunks on the plate. Fan t
 
 ## Meal 5: Chicken Fricassée
 
-#### Protein: Whole chicken
+#### Protein:
+Whole chicken
 
-#### Ingredients: Collard greens, gold & red beets, pomegranate
+#### Ingredients:
+Collard greens, gold & red beets, pomegranate
 
-#### Description: Chicken Fricassée (deconstructed whole chicken) served with braised collard greens, roasted beets, and garnished with pomegranate seeds and mustard vinaigrette; a satisfying, colorful meal.
+#### Description:
+Chicken Fricassée (deconstructed whole chicken) served with braised collard greens, roasted beets, and garnished with pomegranate seeds and mustard vinaigrette; a satisfying, colorful meal.
 
 ### Instructions
 

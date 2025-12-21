@@ -36,11 +36,14 @@
 
 ## Meal 1: Masa Fritters with Sous Vide Tilapia and Charred Salad
 
-#### Protein: Tilapia
+#### Protein:
+Tilapia
 
-#### Ingredients: Yellow masa harina, yellow squash, white onion, jalapeño olive oil (at home), Greek yogurt, fire-roasted corn, red bell peppers, cilantro, lime
+#### Ingredients:
+Yellow masa harina, yellow squash, white onion, jalapeño olive oil (at home), Greek yogurt, fire-roasted corn, red bell peppers, cilantro, lime
 
-#### Description: Crispy oven-baked masa fritters studded with squash and onion, served with perfectly cooked sous vide tilapia and a charred vegetable salad.
+#### Description:
+Crispy oven-baked masa fritters studded with squash and onion, served with perfectly cooked sous vide tilapia and a charred vegetable salad.
 
 ### Instructions
 ### Already Prepped
@@ -68,11 +71,14 @@ Plate fritters, top with tilapia, add charred corn-pepper salad. Drizzle crema o
 
 ## Meal 2: One-Pot Lamb and Tomato Rice
 
-#### Protein: Ground lamb
+#### Protein:
+Ground lamb
 
-#### Ingredients: Ground lamb, tomatoes, white onion, fire-roasted tomatoes, rice, jalapeño, cilantro
+#### Ingredients:
+Ground lamb, tomatoes, white onion, fire-roasted tomatoes, rice, jalapeño, cilantro
 
-#### Description: Turkish-inspired one-pot rice pilaf with spiced lamb and tomatoes. Aromatic, filling, and only one dish to clean.
+#### Description:
+Turkish-inspired one-pot rice pilaf with spiced lamb and tomatoes. Aromatic, filling, and only one dish to clean.
 
 ### Instructions
 ### Already Prepped
@@ -98,11 +104,14 @@ Serve in bowls topped with diced fresh tomatoes, cilantro, Greek yogurt dollop, 
 
 ## Meal 3: Sous Vide Pork Chops with Squash and Black Bean Skillet
 
-#### Protein: Pork chops
+#### Protein:
+Pork chops
 
-#### Ingredients: Pork chops, zucchini, yellow squash, black beans, salsa verde, pepper jack cheese
+#### Ingredients:
+Pork chops, zucchini, yellow squash, black beans, salsa verde, pepper jack cheese
 
-#### Description: Perfectly cooked sous vide pork chops with sautéed squash, black beans, and melted cheese. Serve with warm tortillas.
+#### Description:
+Perfectly cooked sous vide pork chops with sautéed squash, black beans, and melted cheese. Serve with warm tortillas.
 
 ### Instructions
 ### Already Prepped
@@ -130,11 +139,14 @@ Garnish with cilantro and serve with warm corn tortillas, lime wedges, and extra
 
 ## Meal 4: Tilapia Tacos with Fire-Roasted Corn Salsa
 
-#### Protein: Tilapia
+#### Protein:
+Tilapia
 
-#### Ingredients: Tilapia, corn tortillas, fire-roasted corn, tomatoes, jalapeño, cilantro, lime, cotija
+#### Ingredients:
+Tilapia, corn tortillas, fire-roasted corn, tomatoes, jalapeño, cilantro, lime, cotija
 
-#### Description: Quick fish tacos with bright salsa. Classic weeknight closer that feels fresh and satisfying.
+#### Description:
+Quick fish tacos with bright salsa. Classic weeknight closer that feels fresh and satisfying.
 
 ### Instructions
 ### Already Prepped

@@ -34,11 +34,14 @@
 
 ## Meal 1: Sous Vide Salmon with Celery Root Puree
 
-#### Protein: Salmon
+#### Protein:
+Salmon
 
-#### Ingredients: Celery root, heavy cream, butter, parsley, lemon
+#### Ingredients:
+Celery root, heavy cream, butter, parsley, lemon
 
-#### Description: Perfectly cooked sous vide salmon with torch-seared skin over silky celery root puree. Restaurant-quality precision cooking.
+#### Description:
+Perfectly cooked sous vide salmon with torch-seared skin over silky celery root puree. Restaurant-quality precision cooking.
 
 ### Instructions
 ### Already Prepped
@@ -66,11 +69,14 @@ Spoon celery root puree onto plates, top with salmon skin-side up. Drizzle with 
 
 ## Meal 2: Sous Vide Steak with Charred Cabbage and Roasted Potatoes
 
-#### Protein: Flat iron steak
+#### Protein:
+Flat iron steak
 
-#### Ingredients: Red cabbage, russet potatoes, shallots, Dijon mustard, white wine vinegar
+#### Ingredients:
+Red cabbage, russet potatoes, shallots, Dijon mustard, white wine vinegar
 
-#### Description: Deconstructed Midwestern broiler dinner reimagined - perfectly cooked sous vide steak finished with torch, charred cabbage wedges, and crispy potatoes.
+#### Description:
+Deconstructed Midwestern broiler dinner reimagined - perfectly cooked sous vide steak finished with torch, charred cabbage wedges, and crispy potatoes.
 
 ### Instructions
 ### Already Prepped
@@ -100,11 +106,14 @@ Plate with roasted potatoes as base, charred cabbage alongside, fanned steak on 
 
 ## Meal 3: Pork and Cabbage Egg Roll Bowls
 
-#### Protein: Ground pork
+#### Protein:
+Ground pork
 
-#### Ingredients: Red cabbage, shallots, ginger, soy sauce, sesame oil, rice vinegar
+#### Ingredients:
+Red cabbage, shallots, ginger, soy sauce, sesame oil, rice vinegar
 
-#### Description: Deconstructed egg rolls without the wrappers - quick stir-fried pork and cabbage bowl with all the flavor, none of the frying.
+#### Description:
+Deconstructed egg rolls without the wrappers - quick stir-fried pork and cabbage bowl with all the flavor, none of the frying.
 
 ### Instructions
 ### Already Prepped
@@ -132,11 +141,14 @@ Optional toppings: sour cream or Greek yogurt drizzle, chili crisp, extra sesame
 
 ## Meal 4: Salmon Cakes with Caesar-ish Salad
 
-#### Protein: Salmon (leftover from Meal 1)
+#### Protein:
+Salmon (leftover from Meal 1)
 
-#### Ingredients: Salmon, panko breadcrumbs, Dijon mustard, romaine lettuce, Parmesan, anchovy paste, lemon
+#### Ingredients:
+Salmon, panko breadcrumbs, Dijon mustard, romaine lettuce, Parmesan, anchovy paste, lemon
 
-#### Description: Crispy salmon patties with a lemony Caesar-inspired salad. Great use of leftover cooked salmon or can use canned.
+#### Description:
+Crispy salmon patties with a lemony Caesar-inspired salad. Great use of leftover cooked salmon or can use canned.
 
 ### Instructions
 ### Already Prepped

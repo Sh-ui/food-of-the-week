@@ -35,11 +35,14 @@
 
 ## Meal 1: Braised Pork Chops with Fennel and White Beans
 
-#### Protein: Pork chops
+#### Protein:
+Pork chops
 
-#### Ingredients: Pork chops, fennel, white beans, white wine, chicken broth, garlic, thyme
+#### Ingredients:
+Pork chops, fennel, white beans, white wine, chicken broth, garlic, thyme
 
-#### Description: Simple braise with pork chops, caramelized fennel, and creamy beans. One-pot comfort that's fancy enough for weekend but easy enough for weeknight.
+#### Description:
+Simple braise with pork chops, caramelized fennel, and creamy beans. One-pot comfort that's fancy enough for weekend but easy enough for weeknight.
 
 ### Instructions
 ### Already Prepped
@@ -67,11 +70,14 @@ Serve pork chops over fennel and beans, spooning braising liquid over top. Garni
 
 ## Meal 2: Sous Vide Salmon with Smashed Potatoes and Green Beans
 
-#### Protein: Salmon
+#### Protein:
+Salmon
 
-#### Ingredients: Baby potatoes, green beans, salmon, lemon, butter, garlic
+#### Ingredients:
+Baby potatoes, green beans, salmon, lemon, butter, garlic
 
-#### Description: Perfectly cooked sous vide salmon with crispy smashed potatoes and roasted green beans. Simple precision cooking.
+#### Description:
+Perfectly cooked sous vide salmon with crispy smashed potatoes and roasted green beans. Simple precision cooking.
 
 ### Instructions
 ### Already Prepped
@@ -97,11 +103,14 @@ Plate smashed potatoes, green beans, and salmon. Squeeze lemon over everything a
 
 ## Meal 3: Sausage, Chard, and White Bean Soup
 
-#### Protein: Chicken sausage
+#### Protein:
+Chicken sausage
 
-#### Ingredients: Italian chicken sausage, rainbow chard, white beans, orzo, chicken broth, garlic
+#### Ingredients:
+Italian chicken sausage, rainbow chard, white beans, orzo, chicken broth, garlic
 
-#### Description: Hearty Tuscan-inspired soup with sausage, greens, and tiny pasta. Warming and weeknight-simple.
+#### Description:
+Hearty Tuscan-inspired soup with sausage, greens, and tiny pasta. Warming and weeknight-simple.
 
 ### Instructions
 ### Already Prepped
@@ -129,11 +138,14 @@ Serve with crusty bread for dipping.
 
 ## Meal 4: Ground Pork and Artichoke Orzo
 
-#### Protein: Ground pork
+#### Protein:
+Ground pork
 
-#### Ingredients: Ground pork, orzo, frozen artichoke hearts, garlic, lemon, Parmesan, heavy cream
+#### Ingredients:
+Ground pork, orzo, frozen artichoke hearts, garlic, lemon, Parmesan, heavy cream
 
-#### Description: Creamy one-pot pasta with browned pork and tangy artichokes. Lemony, rich, and comforting.
+#### Description:
+Creamy one-pot pasta with browned pork and tangy artichokes. Lemony, rich, and comforting.
 
 ### Instructions
 ### Already Prepped

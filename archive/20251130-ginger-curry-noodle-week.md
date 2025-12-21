@@ -37,11 +37,14 @@
 
 ## Meal 1: Quick Lamb Curry with Napa Cabbage
 
-#### Protein: Ground lamb
+#### Protein:
+Ground lamb
 
-#### Ingredients: Napa cabbage, carrots, coconut milk, red curry paste, ginger, garlic
+#### Ingredients:
+Napa cabbage, carrots, coconut milk, red curry paste, ginger, garlic
 
-#### Description: Rich ground lamb curry with coconut milk and quick-cooked napa cabbage. Bright, aromatic, and filling without heavy starches.
+#### Description:
+Rich ground lamb curry with coconut milk and quick-cooked napa cabbage. Bright, aromatic, and filling without heavy starches.
 
 ### Instructions
 ### Already Prepped
@@ -67,11 +70,14 @@ Serve in bowls with fresh cilantro and lime wedges. Can be served over rice or o
 
 ## Meal 2: Ginger Scallion Noodles with Bok Choy
 
-#### Protein: Scallops
+#### Protein:
+Scallops
 
-#### Ingredients: Rice noodles, baby bok choy, scallions, ginger, soy sauce, sesame oil
+#### Ingredients:
+Rice noodles, baby bok choy, scallions, ginger, soy sauce, sesame oil
 
-#### Description: Quick stir-fried noodles with aromatic ginger-scallion oil, tender scallops, and crisp bok choy. Classic weeknight bowl.
+#### Description:
+Quick stir-fried noodles with aromatic ginger-scallion oil, tender scallops, and crisp bok choy. Classic weeknight bowl.
 
 ### Instructions
 ### Already Prepped
@@ -101,11 +107,14 @@ Plate noodles in bowls, top with charred bok choy and scallops. Garnish with sca
 
 ## Meal 3: Sous Vide Pork Chops with Glazed Carrots
 
-#### Protein: Pork chops
+#### Protein:
+Pork chops
 
-#### Ingredients: Carrots, butter, honey, ginger, soy sauce
+#### Ingredients:
+Carrots, butter, honey, ginger, soy sauce
 
-#### Description: Perfectly cooked sous vide pork chops finished with a quick sear, served with sweet-savory glazed carrots.
+#### Description:
+Perfectly cooked sous vide pork chops finished with a quick sear, served with sweet-savory glazed carrots.
 
 ### Instructions
 ### Already Prepped
@@ -135,11 +144,14 @@ Plate pork chops with glazed carrots. Serve with rice or on its own.
 
 ## Meal 4: Quick Tilapia Curry Noodle Soup
 
-#### Protein: Tilapia
+#### Protein:
+Tilapia
 
-#### Ingredients: Rice noodles, coconut milk, red curry paste, frozen stir-fry vegetables, frozen edamame, lime
+#### Ingredients:
+Rice noodles, coconut milk, red curry paste, frozen stir-fry vegetables, frozen edamame, lime
 
-#### Description: Fast Thai-inspired curry soup with tender tilapia and vegetables. One-pot comfort in under 30 minutes.
+#### Description:
+Fast Thai-inspired curry soup with tender tilapia and vegetables. One-pot comfort in under 30 minutes.
 
 ### Instructions
 ### Already Prepped

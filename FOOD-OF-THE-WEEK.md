@@ -71,11 +71,14 @@ Spread a layer of warm refried beans on each tostada. Top with shredded cheese, 
 >
 > 4:00 mire poix + 5:00 patties
 
-#### Protein: Ground lamb
+#### Protein:
+Ground lamb
 
-#### Ingredients: Frozen mire poix, onion jam, half bunch of parsley, white wine, microgreens
+#### Ingredients:
+Frozen mire poix, onion jam, half bunch of parsley, white wine, microgreens
 
-#### Description: Tender lamb patties served on a bed of sous vide mire poix, finished with a rich pan sauce made from the mire poix bag juices and pattie fond  + wine. Topped with fresh microgreens.
+#### Description:
+Tender lamb patties served on a bed of sous vide mire poix, finished with a rich pan sauce made from the mire poix bag juices and pattie fond  + wine. Topped with fresh microgreens.
 
 ### Already Prepped
 
@@ -104,11 +107,14 @@ Serve with bread if you have it
 >
 > prep + toast panko + 5:30 rice
 
-#### Protein: Frozen ground pork
+#### Protein:
+Frozen ground pork
 
-#### Ingredients: Potatoes, carrots, yellow onion, frozen peas, Japanese curry cubes + honey, ginger paste, panko breadcrumbs, Japanese rice, American bagged salad, Japanese dressing
+#### Ingredients:
+Potatoes, carrots, yellow onion, frozen peas, Japanese curry cubes + honey, ginger paste, panko breadcrumbs, Japanese rice, American bagged salad, Japanese dressing
 
-#### Description: A weeknight-friendly deconstructed take on Japanese pork katsu curry—ground pork simmered in rich curry sauce with potatoes and carrots, topped with toasted breadcrumbs for that katsu crunch. Served with Japanese rice and a simple salad. The honey adds a sweet, soft flavor to the curry.
+#### Description:
+A weeknight-friendly deconstructed take on Japanese pork katsu curry—ground pork simmered in rich curry sauce with potatoes and carrots, topped with toasted breadcrumbs for that katsu crunch. Served with Japanese rice and a simple salad. The honey adds a sweet, soft flavor to the curry.
 
 ### Already Prepped
 
@@ -141,11 +147,14 @@ Sprinkle the toasted panko breadcrumbs generously over the curry portions right 
 >
 > 5:30 Couscous + oven roast
 
-#### Protein: Frozen tilapia
+#### Protein:
+Frozen tilapia
 
-#### Ingredients: Cherry tomatoes, red onion, garlic, harissa or warm spices, meyer lemons, olives (optional), couscous, parsley, extra virgin olive oil
+#### Ingredients:
+Cherry tomatoes, red onion, garlic, harissa or warm spices, meyer lemons, olives (optional), couscous, parsley, extra virgin olive oil
 
-#### Description: Frozen tilapia roasted at high heat with cherry tomatoes, chunky red onion, and warm North African spices. Served over garlic couscous with a bright parsley and olive oil finish.
+#### Description:
+Frozen tilapia roasted at high heat with cherry tomatoes, chunky red onion, and warm North African spices. Served over garlic couscous with a bright parsley and olive oil finish.
 
 ### Already Prepped
 

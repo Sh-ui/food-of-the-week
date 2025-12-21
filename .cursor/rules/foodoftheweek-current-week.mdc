@@ -57,13 +57,13 @@ meal_format:
   
   field_format:
     heading: "#### [Field Name]:"
-    format: "H4 heading with colon, followed by field content (paragraphs/lists)"
+    format: "H4 heading with colon on its own line, followed by field content starting on the next line"
     examples:
-      - "#### Protein: Ground pork"
-      - "#### Ingredients: Brown udon rice noodles, tomato paste, San Marzano tomatoes"
-      - "#### Description: One pot pasta with pork and vegetables"
-      - "#### Day: Sunday"
-    notes: "Field names are arbitrary; consecutive H4 headings are grouped as one visual card"
+      - "#### Protein:\nGround pork"
+      - "#### Ingredients:\nBrown udon rice noodles, tomato paste, San Marzano tomatoes"
+      - "#### Description:\nOne pot pasta with pork and vegetables"
+      - "#### Day:\nSunday"
+    notes: "Field names are arbitrary; consecutive H4 headings are grouped as one visual card; do not include the value on the same line as the heading"
   
   instruction_format:
     structure: "Three-phase format (see recipe-instruction-format.mdc)"
@@ -71,7 +71,7 @@ meal_format:
       - "### Already Prepped"
       - "### Sous Chef - Prep" or "### Sous Chef - Cooking"
       - "### Chef - Finishing & Plating"
-    notes: "H3 headings for distinct instruction sections"
+    notes: "H3 headings for distinct instruction sections (no inline values)"
 
   structure:
     meals: "Descriptive names only (## Meal Name)"
