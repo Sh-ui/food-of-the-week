@@ -8,6 +8,7 @@ interface Props {
 const { categories } = Astro.props;
 ---
 
+<div id="grocery-list" class="slug-anchor" aria-hidden="true"></div>
 <div id="print-section-grocery-list" class="print-section bg-bg border border-solid border-border rounded-lg p-lg mb-xl w-full" data-section-type="grocery">
   <div class="flex justify-between items-center mb-lg">
     <h2>Grocery List</h2>
@@ -21,16 +22,14 @@ const { categories } = Astro.props;
           {category.items.map((item, index) => (
             <li class={`flex items-center grocery-item ${item.globallyChecked ? 'globally-checked' : ''}`}>
               <label class="flex items-center cursor-pointer w-full p-[calc(var(--spacing-xs)+2px)] rounded transition-colors hover:bg-[rgba(44,95,45,0.05)] text-[1.1rem] leading-relaxed mobile:p-sm mobile:text-[1.3rem]">
-                <input
-                  type="checkbox"
-                  class={`grocery-checkbox ${item.globallyChecked ? 'global-checkbox' : 'local-checkbox'}`}
-                  data-category={category.name}
-                  data-index={index}
-                  data-item={item.text}
-                  data-globally-checked={item.globallyChecked ? 'true' : 'false'}
-                  checked={item.globallyChecked}
-                  disabled={item.globallyChecked}
-                />
+        <input
+          type="checkbox"
+          class="grocery-checkbox local-checkbox"
+          data-category={category.name}
+          data-index={index}
+          data-item={item.text}
+          data-globally-checked={item.globallyChecked ? 'true' : 'false'}
+        />
                 <span class="flex-1 item-text mobile:text-[1.3rem] mobile:leading-extra-loose">{item.text}</span>
               </label>
             </li>
@@ -71,21 +70,21 @@ const { categories } = Astro.props;
   // Initialize checkboxes from storage
   function initializeCheckboxes(): void {
     const checked = loadCheckedItems();
-    // Only initialize local checkboxes (not globally checked ones)
-    const checkboxes = document.querySelectorAll<HTMLInputElement>('.grocery-checkbox.local-checkbox');
+    const checkboxes = document.querySelectorAll<HTMLInputElement>('.grocery-checkbox');
     
     checkboxes.forEach((checkbox) => {
       const itemKey = getItemKey(checkbox);
+      const parentItem = checkbox.closest('.grocery-item');
+
       if (checked.has(itemKey)) {
         checkbox.checked = true;
-        // Add locally-checked class to parent for styling
-        checkbox.closest('.grocery-item')?.classList.add('locally-checked');
+        parentItem?.classList.add('locally-checked');
+      } else {
+        checkbox.checked = false;
       }
-      
-      // Add change listener for local checkboxes only
+
       checkbox.addEventListener('change', () => {
         const currentChecked = loadCheckedItems();
-        const parentItem = checkbox.closest('.grocery-item');
         if (checkbox.checked) {
           currentChecked.add(itemKey);
           parentItem?.classList.add('locally-checked');
@@ -117,37 +116,6 @@ const { categories } = Astro.props;
     color: var(--color-text-muted, #9a9a91);
   }
 
-  .grocery-item.globally-checked label {
-    cursor: default;
-  }
-
-  .grocery-item.globally-checked label:hover {
-    background-color: transparent !important;
-  }
-
-  /* Custom checkbox styling - needs to stay as CSS (complex pseudo-elements) */
-  .global-checkbox {
-    position: relative;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background: var(--color-bg);
-    border: 2px solid var(--color-text-muted, #9a9a91);
-    cursor: default;
-  }
-
-  .global-checkbox::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 8px;
-    height: 8px;
-    background: var(--color-text-muted, #9a9a91);
-    border-radius: 50%;
-  }
-
   .local-checkbox {
     position: relative;
     -webkit-appearance: none;
@@ -163,6 +131,21 @@ const { categories } = Astro.props;
     border-color: var(--color-primary);
   }
 
+  .local-checkbox:before {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .local-checkbox[data-globally-checked="true"]::before {
+    border-color: var(--color-text-muted);
+    opacity: 1;
+  }
+
   .local-checkbox:checked::after {
     content: '✓';
     position: absolute;
@@ -173,6 +156,10 @@ const { categories } = Astro.props;
     font-size: 0.85rem;
     font-weight: 600;
     line-height: 1;
+  }
+
+  .local-checkbox:checked[data-globally-checked="true"]::before {
+    opacity: 0;
   }
 </style>
 

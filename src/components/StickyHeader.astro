@@ -31,17 +31,17 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
       <a href="#top" class="nav-btn date-btn">{shortTitle}</a>
       
       {hasGroceryList && (
-        <a href="#print-section-grocery-list" class="nav-btn" data-section="grocery-list">
+        <a href="#grocery-list" class="nav-btn" data-section="grocery-list">
           Grocery
         </a>
       )}
       
       {meals.map((meal) => (
-        <a 
-          href={`#print-section-${meal.id}`} 
-          class={`nav-btn ${meal.cooked ? 'cooked' : ''}`}
-          data-section={meal.id}
-        >
+      <a 
+        href={`#${meal.id}`} 
+        class={`nav-btn ${meal.cooked ? 'cooked' : ''}`}
+        data-section={meal.id}
+      >
           {meal.title}
         </a>
       ))}
@@ -68,15 +68,15 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
       Back to Top
     </a>
     
-    {hasGroceryList && (
-      <a href="#print-section-grocery-list" class="dropdown-link" data-section="grocery-list">
-        Grocery List
-      </a>
-    )}
+      {hasGroceryList && (
+        <a href="#grocery-list" class="dropdown-link" data-section="grocery-list">
+          Grocery List
+        </a>
+      )}
     
     {meals.map((meal) => (
       <a 
-        href={`#print-section-${meal.id}`} 
+        href={`#${meal.id}`} 
         class={`dropdown-link ${meal.cooked ? 'cooked' : ''}`}
         data-section={meal.id}
       >
@@ -444,6 +444,15 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     background: var(--color-secondary-hover);
   }
 
+  .sticky-header[data-at-footer="true"] .header-print-btn {
+    background: var(--color-primary);
+    color: var(--color-bg);
+  }
+
+  .sticky-header[data-at-footer="true"] .header-print-btn:hover {
+    background: var(--color-primary-hover);
+  }
+
   .header-print-btn .print-icon {
     flex-shrink: 0;
   }
@@ -547,6 +556,8 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
   let hasShadow = false;
   let currentSection = 'all';
   let isFadingIn = false;
+  let lastScrollY = window.scrollY;
+  let scrollDirection: 'up' | 'down' = 'down';
 
   function getH1Bottom(): number {
     const h1 = document.querySelector('#top h1');
@@ -564,8 +575,22 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     return top + (height * 0.75);
   }
 
+  function restorePrintButton(): void {
+    if (!headerPrintBtn) return;
+    isFadingIn = false;
+    headerPrintBtn.style.transition = 'none';
+    headerPrintBtn.style.opacity = '1';
+  }
+
   function updateScrollState(): void {
     const scrollY = window.scrollY;
+    const newDirection = scrollY > lastScrollY ? 'down' : scrollY < lastScrollY ? 'up' : scrollDirection;
+    scrollDirection = newDirection;
+    lastScrollY = scrollY;
+
+    if (scrollDirection === 'up') {
+      restorePrintButton();
+    }
     const shouldHaveShadow = scrollY > 0;
     const h1Bottom = getH1Bottom();
     const heroSummary75Percent = getHeroSummary75Percent();
@@ -589,10 +614,8 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
       navVisible = shouldShowNav;
       header.dataset.scrolled = navVisible ? 'true' : 'false';
     }
-    
-    if (navVisible) {
-      updateActiveSection();
-    }
+
+    updateActiveSection();
   }
 
   function buildSectionData(scrollY: number): { id: string; top: number; bottom: number; height: number; }[] {
@@ -714,7 +737,29 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     
     if (headerInfoBtn) {
       headerInfoBtn.classList.toggle('active', activeSection === 'footer');
-      }
+    }
+    
+    header.dataset.atFooter = activeSection === 'footer' ? 'true' : 'false';
+    
+    syncUrlHash(activeSection);
+  }
+
+  function syncUrlHash(sectionId: string): void {
+    let newHash = '';
+
+    if (sectionId === 'footer') {
+      newHash = '#site-footer';
+    } else if (sectionId === 'all') {
+      newHash = '';
+    } else if (/^[a-z0-9-_]+$/.test(sectionId)) {
+      newHash = `#${sectionId}`;
+    }
+    
+    const currentHash = window.location.hash;
+    if (newHash !== currentHash) {
+      const newUrl = newHash ? `${window.location.pathname}${newHash}` : window.location.pathname;
+      history.replaceState(null, '', newUrl);
+    }
   }
 
   function updatePrintButton(sectionId: string): void {
@@ -823,14 +868,30 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     }
   }
 
+  function scrollToHashWithOffset(): void {
+    const hash = window.location.hash;
+    if (!hash || hash === '#top') return;
+    
+    const target = document.querySelector(hash);
+    if (target) {
+      setTimeout(() => {
+        const headerHeight = header.offsetHeight;
+        const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight - 20;
+        window.scrollTo({ top: targetPosition, behavior: 'auto' });
+      }, 50);
+    }
+  }
+
   function init(): void {
     header.dataset.scrolled = 'false';
     header.dataset.dateButtonVisible = 'false';
     header.dataset.hasShadow = 'false';
+    header.dataset.atFooter = 'false';
     updateScrollState();
     setupSectionDropdown();
     setupSmoothScroll();
     setupPrintButtons();
+    scrollToHashWithOffset();
 
     window.addEventListener('scroll', updateScrollState, { passive: true });
   }

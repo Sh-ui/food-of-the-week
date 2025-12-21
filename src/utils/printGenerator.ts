@@ -48,6 +48,7 @@ export interface PrintConfig {
 export interface GroceryItem {
   text: string;
   globallyChecked: boolean;
+  locallyChecked: boolean;
 }
 
 export interface GroceryCategory {
@@ -156,7 +157,9 @@ export function getWeekPlanData(): WeekPlan {
       cat.querySelectorAll('.grocery-item').forEach(item => {
         const checkbox = item.querySelector('input[type="checkbox"]') as HTMLInputElement;
         const text = item.querySelector('.item-text')?.textContent || '';
-        items.push({ text, globallyChecked: checkbox?.dataset.globallyChecked === 'true' });
+        const globallyChecked = checkbox?.dataset.globallyChecked === 'true';
+        const locallyChecked = checkbox?.checked === true;
+        items.push({ text, globallyChecked, locallyChecked });
       });
       groceryList.push({ name, items });
     });
@@ -257,8 +260,8 @@ export function generateGroceryListHTML(list: GroceryCategory[], cfg: PrintConfi
 
     cat.items.forEach(item => {
       const cbStyle = `display:inline-block;width:${cfg.checkbox.size};height:${cfg.checkbox.size};border:${cfg.checkbox.borderWidth} solid ${cfg.colors.text};margin-right:8pt;vertical-align:middle;text-align:center;line-height:${cfg.checkbox.size};`;
-      const sym = item.globallyChecked ? cfg.checkbox.globalCheckedSymbol : '';
-      const txtStyle = item.globallyChecked ? `color:${cfg.colors.mutedText};` : `color:${cfg.colors.text};`;
+      const sym = item.locallyChecked ? cfg.checkbox.checkedSymbol : '';
+      const txtStyle = `color:${cfg.colors.text};`;
       html += `
         <li style="margin-bottom:${cfg.spacing.listItemGap};${txtStyle}">
           <span style="${cbStyle}">${sym}</span>${item.text}
@@ -410,20 +413,23 @@ export async function printSection(sectionId: string): Promise<void> {
   const plan = getWeekPlanData();
   const html = generatePrintDocument(plan, cfg, sectionId);
 
-  const win = window.open('', '_blank', 'width=800,height=600');
+  const blob = new Blob([html], { type: 'text/html' });
+  const url = URL.createObjectURL(blob);
+  const win = window.open(url, '_blank', 'width=800,height=600');
+
   if (!win) {
+    URL.revokeObjectURL(url);
     console.error(
       'Print failed: Could not open print window. Please check if pop-ups are blocked in your browser settings.'
     );
     return;
   }
 
-  win.document.write(html);
-  win.document.close();
   win.onload = () => {
     setTimeout(() => {
       win.print();
       win.close();
+      URL.revokeObjectURL(url);
     }, 250);
   };
 }

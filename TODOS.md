@@ -7,7 +7,15 @@
  - [ ] make the checkboxes locally check-able even if globally checked indicator (for non-family users)
    - this would also involve making the printed view of grocery list not show the globally checked indicator, this also solves the visual look issue of the circles inside the checkboxes being off center (since we aren't even bothering to show them anymore in the print rendered version)
  - [ ] use index sequence override to setup info subsection specified theming and prune deprecated approach
- - [ ] fix license formatting in the repo for parity with standard approaches
+   - ```css
+      instructionSubsections: {
+        info: { bg: 'bg-alt', border: 'secondary', heading: 'primary' },
+        overrides: {
+          // 0: { scheme: 'salmon' },
+          // 2: { border: '#81E3F6' },
+          // 5: { bg: 'bg-alt', border: 'accent', heading: 'primary' },
+        }
+     ```
  - [ ] fix scroll up animation for header print button
    - _it fades out when scrolling down but it doesn't fade in properly when scrolling up_
  - [ ] Replace hardcoded meal ID system with slugified meal names

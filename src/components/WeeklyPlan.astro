@@ -161,8 +161,8 @@ const heroRows = heroRowsFromMeals.length > 0 ? heroRowsFromMeals : heroRowsFrom
   )}
   
   <div class="flex flex-col gap-xl mobile:gap-lg">
-    {weekPlan.meals.map((section) => (
-      <MealCard section={section} />
+    {weekPlan.meals.map((section, index) => (
+      <MealCard section={section} sectionIndex={index} />
     ))}
   </div>
   

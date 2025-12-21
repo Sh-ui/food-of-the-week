@@ -36,9 +36,9 @@ export default {
       instructionSubsections: {
         info: { bg: 'bg-alt', border: 'secondary', heading: 'primary' },
         overrides: {
-          // 0: { scheme: 'salmon' },
-          // 2: { border: '#81E3F6' },
-          // 5: { bg: 'bg-alt', border: 'accent', heading: 'primary' },
+          0: { scheme: 'salmon' },
+          2: { border: '#81E3F6' },
+          5: { bg: 'bg-alt', border: 'accent', heading: 'primary' },
         },
       },
       fontFamily: {
