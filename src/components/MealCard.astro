@@ -56,10 +56,9 @@ function renderMarkdown(text: string | undefined): string {
   )}
   
   {/* Render block groups */}
-  {groups.map((group, groupIndex) => {
+  {groups.map((group) => {
     // Determine group type based on first block's depth
     const isFieldsGroup = group[0].depth === 4; // H4 = fields
-    const isSectionGroup = group[0].depth === 3; // H3 = instruction section
 
     // Color logic: fields groups use firstSubsection colors, instruction sections cycle through instruction colors
     const colors = isFieldsGroup

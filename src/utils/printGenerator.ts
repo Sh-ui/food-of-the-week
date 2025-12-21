@@ -410,20 +410,23 @@ export async function printSection(sectionId: string): Promise<void> {
   const plan = getWeekPlanData();
   const html = generatePrintDocument(plan, cfg, sectionId);
 
-  const win = window.open('', '_blank', 'width=800,height=600');
+  const blob = new Blob([html], { type: 'text/html' });
+  const url = URL.createObjectURL(blob);
+  const win = window.open(url, '_blank', 'width=800,height=600');
+  
   if (!win) {
+    URL.revokeObjectURL(url);
     console.error(
       'Print failed: Could not open print window. Please check if pop-ups are blocked in your browser settings.'
     );
     return;
   }
 
-  win.document.write(html);
-  win.document.close();
   win.onload = () => {
     setTimeout(() => {
       win.print();
       win.close();
+      URL.revokeObjectURL(url);
     }, 250);
   };
 }
