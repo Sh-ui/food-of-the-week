@@ -675,7 +675,12 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
       }
     }
     
-    if (foundSection === null) return;
+    if (foundSection === null) {
+      updateHeroPrintButtonColor(null);
+      return;
+    }
+
+    updateHeroPrintButtonColor(foundSection);
 
     if (foundSection !== currentSection) {
       currentSection = foundSection;
@@ -806,16 +811,23 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     });
   }
 
+  let heroPrintBtn: HTMLButtonElement | null = null;
+
+  function updateHeroPrintButtonColor(sectionId: string | null): void {
+    if (!heroPrintBtn) return;
+    heroPrintBtn.classList.toggle('hero-bottom', sectionId === 'footer');
+  }
+
   function setupPrintButtons(): void {
     if (headerPrintBtn) {
       headerPrintBtn.addEventListener('click', () => {
         closeSectionDropdown();
         const target = headerPrintBtn.dataset.printTarget || 'all';
         printSection(target);
-    });
+      });
     }
     
-    const heroPrintBtn = document.getElementById('hero-print-full-week');
+    heroPrintBtn = document.getElementById('hero-print-full-week') as HTMLButtonElement | null;
     if (heroPrintBtn) {
       heroPrintBtn.addEventListener('click', () => {
         printSection('all');
