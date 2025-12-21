@@ -95,17 +95,8 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
       </div>
   </div>
     
-    <!-- Right side: Info icon button + Print button -->
+    <!-- Right side: Print button + Info icon button -->
     <div class="header-right-buttons">
-      <!-- Info icon button - links to footer -->
-      <a href="#link-and-info" class="header-info-btn" data-section="footer" aria-label="Links & Info">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="10"></circle>
-          <line x1="12" y1="16" x2="12" y2="12"></line>
-          <line x1="12" y1="8" x2="12.01" y2="8"></line>
-        </svg>
-      </a>
-  
     <!-- Print Button -->
     <button class="header-print-btn print-button" data-print-target="all" type="button">
       <svg class="print-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -115,6 +106,14 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
       </svg>
         <span class="print-section-name">Grocery List</span>
     </button>
+      <!-- Info icon button - links to footer -->
+      <a href="#link-and-info" class="header-info-btn" data-section="footer" aria-label="Links & Info">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="16" x2="12" y2="12"></line>
+          <line x1="12" y1="8" x2="12.01" y2="8"></line>
+        </svg>
+      </a>
     </div>
   </nav>
 </header>
