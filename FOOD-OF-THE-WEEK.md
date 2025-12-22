@@ -30,7 +30,7 @@
 - [ ] Anchovy fillets
 - [ ] Fresh gnocchi
 
-## Italian Lazy Meatballs
+## Lazy Meatballs
 
 ##### SousVidePrep+
 ###### 3:30 potatoes + 5:00 meatballs in oven + prep salad
@@ -60,7 +60,7 @@ When meatballs hit temp, pull them out of the oven and let them rest on the stov
 
 ### Chef - Finishing & Plating
 
-For the mash: use the already-cooked potatoes, pressed garlic, chopped parsley, chopped basil, dired oregano, heavy cream, and parmesan. Season with salt and white pepper.
+For the mash: use the already-cooked potatoes, pressed garlic, chopped parsley, chopped basil, dried oregano, heavy cream, and parmesan. Season with salt and white pepper.
 
 Make the dressing by combining the dressing packet according to its instructions, using olive oil, vinegar, and water.
 
@@ -71,7 +71,7 @@ Serve meatballs with melted cheese on top, garlicky Tuscan mash on the side, and
 ## Gnocchi Puttanesca
 
 ##### Prep&Heat+
-######  prep lemons + grate parmesan + ready the salad
+######  prep aromatics + grate cheese + ready the salad
 
 #### Protein:
 Anchovies (umami backbone)
@@ -89,21 +89,17 @@ A fast, one-pan gnocchi puttanesca built around anchovies and capers for depth, 
 
 ### Sous Chef - Prep
 
-Open the Caesar salad kit and keep refrigerated until serving.
+Use a vegetable peeler to peel the outer layer of zesty skin from 1 Meyer lemon, chop it throuhroughly together with a half bunch of parsley and 3-4 garlic cloves. _This is the **gremolata**._ Store the gremolata in the fridge for later use by Chef.
 
-Zest 1 Meyer lemon directly into a small bowl or onto a plate; reserve zest for finishing. Then cut into wedges and set aside.
+Open the Caesar salad kit dumped into a bowl, but keep refrigerated and undressed until serving.
 
-Grate or shave parmesan.
-
-Chop parsley.
-
-### Chef - Cooking & Finishing
+### Chef - Cooking & Plating
 
 Heat a wide skillet over medium-high heat with just enough olive oil to coat the bottom and crisp ones side of the gnocchi.
 
 Add gnocchi directly to the pan in a single layer. Let sit undisturbed until deeply golden on that first side, then toss and continue until lightly crisped overall. Take gnocchi out of the pan and set aside.
 
-Add anchovy fillets to the oil and mash/stir until fully dissolved. Add garlic and bloom briefly.
+Add anchovy fillets to the oil and mash/stir until fully dissolved. Add a little bit of the gremolata to this oil and bloom briefly.
 
 Add mushrooms and cook until they release moisture and begin to brown.
 
@@ -111,6 +107,6 @@ Add cherry tomatoes and let them blister and _just start_ to collapse, then stir
 
 Fold gnocchi back into the pan along with the spinach, and fold gently until just wilted and brought together.
 
-Finish with black pepper, a light sprinkle of reserved Meyer lemon zest, parmesan, and then chopped parsley when plated.
+Finish with black pepper, gremolata, and parmesan when plating.
 
 At the table to taste: halved meyer lemons to squeeze over, and the EVOO bottle to drizzle if desired.
