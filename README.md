@@ -90,7 +90,7 @@ GroceryPlanning/
 
 ## Features
 
-- **Quick Read Hero Summary** - Glance-able meal overview with codename badges (Prep&Heat, SousVidePrep, etc.) and timing details parsed from blockquotes in each meal section
+- **Quick Read Hero Summary** - Glance-able meal overview with codename badges (Prep&Heat, SousVidePrep, etc.) and timing details parsed from h5 and h6 headings (respectively) in each meal section
 - **Interactive Grocery Lists** - Checkboxes persist in browser localStorage with week-specific keys
 - **Weekend Planning** - Dedicated weekend page with separate meal plans (`/weekend` route)
 - **Flexible Markdown Parsing** - Position-based parser works with any markdown structure (no keyword dependencies)
