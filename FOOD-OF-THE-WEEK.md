@@ -33,7 +33,7 @@
 ## Lazy Meatballs
 
 ##### SousVidePrep+
-###### 3:30 potatoes + 5:00 meatballs in oven + prep salad
+###### 3:30 potatoes + 5:00 meatballs + prep salad
 
 #### Protein:
 Sweet Italian sausage + ground beef
