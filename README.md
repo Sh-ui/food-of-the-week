@@ -38,7 +38,7 @@ This is a weekly meal planning system built with Astro that transforms structure
 
 1. **Brainstorm** - Plan meals in the `brainstorming/` folder
 2. **Finalize** - Structure the plan in `FOOD-OF-THE-WEEK.md` with all required sections
-3. **Add Quick Reads** - Add a blockquote under each meal heading with codename and timing details
+3. **Add Quick Reads** - Add info under each meal heading with codename and timing details
 4. **Deploy** - Push to GitHub, site auto-deploys in 2-3 minutes
 5. **Shop** - Use the mobile-friendly site with persistent checkbox grocery list
 6. **Archive** - At week's end, copy to `archive/YYYYMMDDsummary.md`
