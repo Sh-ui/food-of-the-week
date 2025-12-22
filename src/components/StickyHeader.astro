@@ -549,6 +549,8 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
   const navBtns = document.querySelectorAll('.nav-btn[data-section], .dropdown-link[data-section]') as NodeListOf<HTMLAnchorElement>;
 
   const FADE_OUT_START = scrollThresholds.FADE_OUT_START;
+  const SECTION_PROBE_MARGIN = 20;
+  const initialHash = window.location.hash;
   
   let dateButtonVisible = false;
   let navVisible = false;
@@ -557,6 +559,7 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
   let isFadingIn = false;
   let lastScrollY = window.scrollY;
   let scrollDirection: 'up' | 'down' = 'down';
+  let initialScrollComplete = false;
 
   function getH1Bottom(): number {
     const h1 = document.querySelector('#top h1');
@@ -631,6 +634,11 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     return sections;
   }
 
+  function getProbeY(scrollY: number): number {
+    const headerHeight = header.offsetHeight;
+    return scrollY + headerHeight + SECTION_PROBE_MARGIN;
+  }
+
   function checkFooterSection(viewportMidpoint: number, scrollY: number, viewportHeight: number): { id: string; top: number; bottom: number; height: number; } | null {
     const footer = document.getElementById('link-and-info');
     if (!footer) return null;
@@ -673,7 +681,7 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     }
   }
 
-  function checkHeroSection(viewportMidpoint: number, scrollY: number): { id: string; top: number; bottom: number; height: number; } | null {
+  function checkHeroSection(probeY: number, scrollY: number): { id: string; top: number; bottom: number; height: number; } | null {
     const heroSection = document.getElementById('top');
     if (!heroSection) return null;
     
@@ -681,7 +689,7 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     const heroTop = rect.top + scrollY;
     const heroBottom = rect.bottom + scrollY;
     
-    if (viewportMidpoint < heroBottom) {
+    if (probeY < heroBottom) {
       return { id: 'top', top: heroTop, bottom: heroBottom, height: rect.height };
     }
     
@@ -692,9 +700,10 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     const scrollY = window.scrollY;
     const viewportHeight = window.innerHeight;
     const viewportMidpoint = scrollY + (viewportHeight * 0.5);
+    const probeY = getProbeY(scrollY);
 
     const sections = buildSectionData(scrollY).sort((a, b) => a.top - b.top);
-    const heroData = checkHeroSection(viewportMidpoint, scrollY);
+    const heroData = checkHeroSection(probeY, scrollY);
     const footerData = checkFooterSection(viewportMidpoint, scrollY, viewportHeight);
     
     let foundSection: string | null = null;
@@ -707,6 +716,8 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
       foundSection = footerData.id;
       foundSectionData = footerData;
     } else {
+      // Once past hero, use viewport midpoint for section-to-section transitions
+      // But for first section activation (grocery), probeY already passed hero check
       for (const section of sections) {
         if (viewportMidpoint >= section.top && viewportMidpoint < section.bottom) {
           foundSection = section.id;
@@ -779,6 +790,15 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
   }
 
   function syncUrlHash(sectionId: string): void {
+    if (!initialScrollComplete) return;
+
+    if (!navVisible) {
+      if (window.location.hash) {
+        history.replaceState(null, '', window.location.pathname);
+      }
+      return;
+    }
+    
     let newHash = '';
     
     if (sectionId === 'footer') {
@@ -860,6 +880,20 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     });
   }
 
+  function getScrollTargetPosition(target: Element): number {
+    const scrollY = window.scrollY;
+    const headerHeight = header.offsetHeight;
+    const targetTop = target.getBoundingClientRect().top + scrollY;
+    const heroSection = document.getElementById('top');
+    const heroBottom = heroSection
+      ? heroSection.getBoundingClientRect().bottom + scrollY
+      : 0;
+
+    const idealPosition = targetTop - headerHeight - SECTION_PROBE_MARGIN;
+    const minToLeaveHero = heroBottom - (headerHeight + SECTION_PROBE_MARGIN) + 1;
+    return Math.max(idealPosition, minToLeaveHero);
+  }
+
   function setupSmoothScroll(): void {
     document.querySelectorAll('.nav-btn, .dropdown-link, .mobile-date-btn, .hero-summary-link, .header-info-btn, .hero-action-btn, .footer-link').forEach(link => {
       link.addEventListener('click', (e) => {
@@ -874,9 +908,7 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
           
           const target = document.querySelector(href);
           if (target) {
-            const headerHeight = header.offsetHeight;
-            const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight - 20;
-            window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+            window.scrollTo({ top: getScrollTargetPosition(target), behavior: 'smooth' });
           }
         }
       });
@@ -901,16 +933,19 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
   }
 
   function scrollToHashWithOffset(): void {
-    const hash = window.location.hash;
-    if (!hash || hash === '#top') return;
+    if (!initialHash || initialHash === '#top') {
+      initialScrollComplete = true;
+      return;
+    }
     
-    const target = document.querySelector(hash);
+    const target = document.querySelector(initialHash);
     if (target) {
       setTimeout(() => {
-        const headerHeight = header.offsetHeight;
-        const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight - 20;
-        window.scrollTo({ top: targetPosition, behavior: 'auto' });
-      }, 50);
+        window.scrollTo({ top: getScrollTargetPosition(target), behavior: 'auto' });
+        initialScrollComplete = true;
+      }, 150);
+    } else {
+      initialScrollComplete = true;
     }
   }
 
@@ -919,11 +954,11 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     header.dataset.dateButtonVisible = 'false';
     header.dataset.hasShadow = 'false';
     header.dataset.atFooter = 'false';
-    updateScrollState();
     setupSectionDropdown();
     setupSmoothScroll();
     setupPrintButtons();
     scrollToHashWithOffset();
+    updateScrollState();
 
     window.addEventListener('scroll', updateScrollState, { passive: true });
   }
