@@ -39,7 +39,7 @@
 Sweet Italian sausage + ground beef
 
 #### Ingredients:
-Sweet Italian sausage, ground beef, panko, fresh parsley, garlic, parmesan, egg, mozzarella, italian bagged salad, shredded carrots, shallot, olives, yukon gold potatoes, italian dressing, italian herbs, milk
+Sweet Italian sausage, ground beef, panko, fresh parsley, garlic, parmesan, egg, mozzarella, italian bagged salad, shredded carrots, shallot, olives, yukon gold potatoes, italian dressing, italian herbs, heavy cream
 
 #### Description:
 Italian-American meatballs halfway between meatloaf and meatballs - the kind that get baked large and topped with gooey melted mozzarella. Served with Italian salad and garlicky Tuscan mash.
