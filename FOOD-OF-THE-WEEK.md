@@ -4,21 +4,19 @@
 
 ### Produce
 - [x] Fresh parsley
-- [x] Garlic - 1 bulb
+- [ ] Garlic - (need more)
+- [x] Meyer lemons
 - [x] Italian bagged salad
-- [ ] Yukon gold potatoes
+- [ ] Caesar salad kit
 - [ ] Cherry tomatoes
-- [ ] Red onion
-- [ ] Yellow onion
+- [ ] Pre-sliced mushrooms
+- [ ] Baby spinach
 
 ### Staples
 - [x] Panko breadcrumbs
-- [x] Dried Italian herbs (basil, oregano)
+- [x] Italian herbs (basil, oregano, parsley)
 - [x] Italian Dressing Mix Packet
-- [ ] Couscous
-- [ ] Harissa paste
-- [ ] Preserved lemon or fresh lemon
-- [ ] Pitted olives
+- [x] Capers
 
 ### Dairy
 - [x] Parmigiano-Reggiano wedge
@@ -29,10 +27,8 @@
 ### Protein
 - [x] Sweet Italian sausage - 1 lb (ground or links)
 - [x] Ground beef (80/20) - 1 lb
-- [ ] Frozen tilapia
-
-### Frozens
-- [ ] None yet
+- [ ] Anchovy fillets
+- [ ] Fresh gnocchi
 
 ## Italian Lazy Meatballs
 
@@ -58,7 +54,7 @@ At **3:30pm**, drop the already-chopped potatoes into the **sous vide bath** (Ch
 
 Make the Italian salad by combining the italian bag mix with olives, shredded carrots, and one finely diced shallot. Leave undressed. Store in fridge until serving.
 
-At 5:00pm on the lower rack, put meatballs in oven at 400°F. Insert predictive probe at an angle into center meatball, **set temp to 157°F**.
+At 5:00pm on the lower rack, put meatballs in oven at 400°F. Insert predictive probe at an angle into center meatball, **set temp to 160°F**.
 
 When meatballs hit temp, pull them out of the oven and let them rest on the stovetop, but **do not** remove the probe.
 
@@ -72,3 +68,49 @@ Shred some mozzarella off a block to cover the meatballs. Put them back under th
 
 Serve meatballs with melted cheese on top, garlicky Tuscan mash on the side, and Italian salad.
 
+## Gnocchi Puttanesca
+
+##### Prep&Heat+
+######  prep lemons + grate parmesan + ready the salad
+
+#### Protein:
+Anchovies (umami backbone)
+
+#### Ingredients:
+Fresh gnocchi, olive oil, anchovy fillets, garlic, cherry tomatoes, capers, pre-sliced mushrooms, baby spinach, black pepper, parmesan, Meyer lemons, parsley, Caesar salad kit
+
+#### Description:
+A fast, one-pan gnocchi puttanesca built around anchovies and capers for depth, cherry tomatoes for sweetness, and mushrooms for bulk. Finished with wilted spinach, Meyer lemon zest and parsley for lift. Served with a ready-made Caesar to add cold crunch and structure to the meal.
+
+### Already Prepped
+- Anchovies and gnocchi are ready to heat.
+- Spinach, tomatoes, and mushrooms are ready to cook.
+- Caesar salad kit is ready to assemble.
+
+### Sous Chef - Prep
+
+Open the Caesar salad kit and keep refrigerated until serving.
+
+Zest 1 Meyer lemon directly into a small bowl or onto a plate; reserve zest for finishing. Then cut into wedges and set aside.
+
+Grate or shave parmesan.
+
+Chop parsley.
+
+### Chef - Cooking & Finishing
+
+Heat a wide skillet over medium-high heat with just enough olive oil to coat the bottom and crisp ones side of the gnocchi.
+
+Add gnocchi directly to the pan in a single layer. Let sit undisturbed until deeply golden on that first side, then toss and continue until lightly crisped overall. Take gnocchi out of the pan and set aside.
+
+Add anchovy fillets to the oil and mash/stir until fully dissolved. Add garlic and bloom briefly.
+
+Add mushrooms and cook until they release moisture and begin to brown.
+
+Add cherry tomatoes and let them blister and _just start_ to collapse, then stir in capers.
+
+Fold gnocchi back into the pan along with the spinach, and fold gently until just wilted and brought together.
+
+Finish with black pepper, a light sprinkle of reserved Meyer lemon zest, parmesan, and then chopped parsley when plated.
+
+At the table to taste: halved meyer lemons to squeeze over, and the EVOO bottle to drizzle if desired.
