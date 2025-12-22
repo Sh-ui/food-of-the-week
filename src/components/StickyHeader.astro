@@ -31,17 +31,17 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
       <a href="#top" class="nav-btn date-btn">{shortTitle}</a>
       
       {hasGroceryList && (
-        <a href="#print-section-grocery-list" class="nav-btn" data-section="grocery-list">
+        <a href="#grocery-list" class="nav-btn" data-section="grocery-list">
           Grocery
         </a>
       )}
       
       {meals.map((meal) => (
-        <a 
-          href={`#print-section-${meal.id}`} 
-          class={`nav-btn ${meal.cooked ? 'cooked' : ''}`}
-          data-section={meal.id}
-        >
+      <a 
+        href={`#${meal.id}`} 
+        class={`nav-btn ${meal.cooked ? 'cooked' : ''}`}
+        data-section={meal.id}
+      >
           {meal.title}
         </a>
       ))}
@@ -68,15 +68,15 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
       Back to Top
     </a>
     
-    {hasGroceryList && (
-      <a href="#print-section-grocery-list" class="dropdown-link" data-section="grocery-list">
-        Grocery List
-      </a>
-    )}
+      {hasGroceryList && (
+        <a href="#grocery-list" class="dropdown-link" data-section="grocery-list">
+          Grocery List
+        </a>
+      )}
     
     {meals.map((meal) => (
       <a 
-        href={`#print-section-${meal.id}`} 
+        href={`#${meal.id}`} 
         class={`dropdown-link ${meal.cooked ? 'cooked' : ''}`}
         data-section={meal.id}
       >
@@ -84,7 +84,7 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
       </a>
     ))}
     
-          <a href="#site-footer" class="dropdown-link" data-section="footer">
+      <a href="#link-and-info" class="dropdown-link" data-section="footer">
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="12" cy="12" r="10"></circle>
         <line x1="12" y1="16" x2="12" y2="12"></line>
@@ -95,17 +95,8 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
       </div>
   </div>
     
-    <!-- Right side: Info icon button + Print button -->
+    <!-- Right side: Print button + Info icon button -->
     <div class="header-right-buttons">
-      <!-- Info icon button - links to footer -->
-      <a href="#site-footer" class="header-info-btn" data-section="footer" aria-label="Links & Info">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="10"></circle>
-          <line x1="12" y1="16" x2="12" y2="12"></line>
-          <line x1="12" y1="8" x2="12.01" y2="8"></line>
-        </svg>
-      </a>
-  
     <!-- Print Button -->
     <button class="header-print-btn print-button" data-print-target="all" type="button">
       <svg class="print-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -115,6 +106,14 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
       </svg>
         <span class="print-section-name">Grocery List</span>
     </button>
+      <!-- Info icon button - links to footer -->
+      <a href="#link-and-info" class="header-info-btn" data-section="footer" aria-label="Links & Info">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="16" x2="12" y2="12"></line>
+          <line x1="12" y1="8" x2="12.01" y2="8"></line>
+        </svg>
+      </a>
     </div>
   </nav>
 </header>
@@ -155,7 +154,7 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     align-items: center;
     justify-content: center;
     height: 56px;
-    color: var(--color-primary);
+    color: var(--color-text);
     opacity: 1;
     transition: opacity 0.3s ease;
   }
@@ -444,7 +443,6 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     background: var(--color-secondary-hover);
   }
 
-  /* Print button turns brown when at footer */
   .sticky-header[data-at-footer="true"] .header-print-btn {
     background: var(--color-primary);
     color: var(--color-bg);
@@ -551,12 +549,17 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
   const navBtns = document.querySelectorAll('.nav-btn[data-section], .dropdown-link[data-section]') as NodeListOf<HTMLAnchorElement>;
 
   const FADE_OUT_START = scrollThresholds.FADE_OUT_START;
+  const SECTION_PROBE_MARGIN = 20;
+  const initialHash = window.location.hash;
   
   let dateButtonVisible = false;
   let navVisible = false;
   let hasShadow = false;
   let currentSection = 'all';
   let isFadingIn = false;
+  let lastScrollY = window.scrollY;
+  let scrollDirection: 'up' | 'down' = 'down';
+  let initialScrollComplete = false;
 
   function getH1Bottom(): number {
     const h1 = document.querySelector('#top h1');
@@ -574,8 +577,22 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     return top + (height * 0.75);
   }
 
+  function restorePrintButton(): void {
+    if (!headerPrintBtn) return;
+    isFadingIn = false;
+    headerPrintBtn.style.transition = 'none';
+    headerPrintBtn.style.opacity = '1';
+  }
+
   function updateScrollState(): void {
     const scrollY = window.scrollY;
+    const newDirection = scrollY > lastScrollY ? 'down' : scrollY < lastScrollY ? 'up' : scrollDirection;
+    scrollDirection = newDirection;
+    lastScrollY = scrollY;
+
+    if (scrollDirection === 'up') {
+      restorePrintButton();
+    }
     const shouldHaveShadow = scrollY > 0;
     const h1Bottom = getH1Bottom();
     const heroSummary75Percent = getHeroSummary75Percent();
@@ -599,10 +616,8 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
       navVisible = shouldShowNav;
       header.dataset.scrolled = navVisible ? 'true' : 'false';
     }
-    
-    if (navVisible) {
-      updateActiveSection();
-    }
+
+    updateActiveSection();
   }
 
   function buildSectionData(scrollY: number): { id: string; top: number; bottom: number; height: number; }[] {
@@ -619,8 +634,13 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     return sections;
   }
 
+  function getProbeY(scrollY: number): number {
+    const headerHeight = header.offsetHeight;
+    return scrollY + headerHeight + SECTION_PROBE_MARGIN;
+  }
+
   function checkFooterSection(viewportMidpoint: number, scrollY: number, viewportHeight: number): { id: string; top: number; bottom: number; height: number; } | null {
-    const footer = document.getElementById('site-footer');
+    const footer = document.getElementById('link-and-info');
     if (!footer) return null;
 
     const footerRect = footer.getBoundingClientRect();
@@ -661,36 +681,69 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     }
   }
 
+  function checkHeroSection(probeY: number, scrollY: number): { id: string; top: number; bottom: number; height: number; } | null {
+    const heroSection = document.getElementById('top');
+    if (!heroSection) return null;
+    
+    const rect = heroSection.getBoundingClientRect();
+    const heroTop = rect.top + scrollY;
+    const heroBottom = rect.bottom + scrollY;
+    
+    if (probeY < heroBottom) {
+      return { id: 'top', top: heroTop, bottom: heroBottom, height: rect.height };
+    }
+    
+    return null;
+  }
+
   function updateActiveSection(): void {
     const scrollY = window.scrollY;
     const viewportHeight = window.innerHeight;
     const viewportMidpoint = scrollY + (viewportHeight * 0.5);
+    const probeY = getProbeY(scrollY);
 
-    const sections = buildSectionData(scrollY);
+    const sections = buildSectionData(scrollY).sort((a, b) => a.top - b.top);
+    const heroData = checkHeroSection(probeY, scrollY);
     const footerData = checkFooterSection(viewportMidpoint, scrollY, viewportHeight);
     
     let foundSection: string | null = null;
     let foundSectionData: { id: string; top: number; bottom: number; height: number; } | null = null;
     
-    if (footerData) {
+    if (heroData) {
+      foundSection = heroData.id;
+      foundSectionData = heroData;
+    } else if (footerData) {
       foundSection = footerData.id;
       foundSectionData = footerData;
     } else {
-    for (const section of sections) {
-      if (viewportMidpoint >= section.top && viewportMidpoint < section.bottom) {
-        foundSection = section.id;
-        foundSectionData = section;
-        break;
+      // Once past hero, use viewport midpoint for section-to-section transitions
+      // But for first section activation (grocery), probeY already passed hero check
+      for (const section of sections) {
+        if (viewportMidpoint >= section.top && viewportMidpoint < section.bottom) {
+          foundSection = section.id;
+          foundSectionData = section;
+          break;
+        }
       }
+
+      if (!foundSection && sections.length > 0) {
+        const previousSection = sections.filter(sec => viewportMidpoint >= sec.top).pop();
+        if (previousSection) {
+          foundSection = previousSection.id;
+          foundSectionData = previousSection;
+        } else {
+          const nextSection = sections.find(sec => viewportMidpoint < sec.top);
+          if (nextSection) {
+            foundSection = nextSection.id;
+            foundSectionData = nextSection;
+          }
+        }
       }
-    }
-    
-    if (foundSection === null) {
-      updateHeroPrintButtonColor(null);
-      return;
     }
 
-    updateHeroPrintButtonColor(foundSection);
+    if (foundSection === null) {
+      foundSection = 'top';
+    }
 
     if (foundSection !== currentSection) {
       currentSection = foundSection;
@@ -729,13 +782,44 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     
     if (headerInfoBtn) {
       headerInfoBtn.classList.toggle('active', activeSection === 'footer');
+    }
+    
+    header.dataset.atFooter = activeSection === 'footer' ? 'true' : 'false';
+    
+    syncUrlHash(activeSection);
+  }
+
+  function syncUrlHash(sectionId: string): void {
+    if (!initialScrollComplete) return;
+
+    if (!navVisible) {
+      if (window.location.hash) {
+        history.replaceState(null, '', window.location.pathname);
       }
+      return;
+    }
+    
+    let newHash = '';
+    
+    if (sectionId === 'footer') {
+      newHash = '#link-and-info';
+    } else if (sectionId === 'top' || sectionId === 'all') {
+      newHash = '';
+    } else if (/^[a-z0-9-_]+$/.test(sectionId)) {
+      newHash = `#${sectionId}`;
+    }
+    
+    const currentHash = window.location.hash;
+    if (newHash !== currentHash) {
+      const newUrl = newHash ? `${window.location.pathname}${newHash}` : window.location.pathname;
+      history.replaceState(null, '', newUrl);
+    }
   }
 
   function updatePrintButton(sectionId: string): void {
     if (!headerPrintBtn) return;
     
-    const printTarget = sectionId === 'footer' ? 'all' : sectionId;
+    const printTarget = (sectionId === 'footer' || sectionId === 'top') ? 'all' : sectionId;
     const displayName = getDisplayName(printTarget);
     
     headerPrintBtn.dataset.printTarget = printTarget;
@@ -753,15 +837,13 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
   }
 
   function getDisplayName(sectionId: string): string {
-    if (sectionId === 'all') return 'Full Week';
+    if (sectionId === 'all' || sectionId === 'top') return 'Full Week';
     if (sectionId === 'grocery-list') return 'Grocery List';
     if (sectionId === 'footer') return 'Links & Info';
-    if (sectionId.startsWith('meal-')) {
-      const mealLink = document.querySelector(`.nav-btn[data-section="${sectionId}"]`);
-      if (mealLink) {
-        const raw = mealLink.textContent?.trim() || 'Meal';
-        return raw.replace(/^[✓\u2713]\s*/, '');
-      }
+    const mealLink = document.querySelector(`.nav-btn[data-section="${sectionId}"]`);
+    if (mealLink) {
+      const raw = mealLink.textContent?.trim() || 'Meal';
+      return raw.replace(/^[✓\u2713]\s*/, '');
     }
     return sectionId;
   }
@@ -798,6 +880,20 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     });
   }
 
+  function getScrollTargetPosition(target: Element): number {
+    const scrollY = window.scrollY;
+    const headerHeight = header.offsetHeight;
+    const targetTop = target.getBoundingClientRect().top + scrollY;
+    const heroSection = document.getElementById('top');
+    const heroBottom = heroSection
+      ? heroSection.getBoundingClientRect().bottom + scrollY
+      : 0;
+
+    const idealPosition = targetTop - headerHeight - SECTION_PROBE_MARGIN;
+    const minToLeaveHero = heroBottom - (headerHeight + SECTION_PROBE_MARGIN) + 1;
+    return Math.max(idealPosition, minToLeaveHero);
+  }
+
   function setupSmoothScroll(): void {
     document.querySelectorAll('.nav-btn, .dropdown-link, .mobile-date-btn, .hero-summary-link, .header-info-btn, .hero-action-btn, .footer-link').forEach(link => {
       link.addEventListener('click', (e) => {
@@ -812,25 +908,11 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
           
           const target = document.querySelector(href);
           if (target) {
-            const headerHeight = header.offsetHeight;
-            const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight - 20;
-            window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+            window.scrollTo({ top: getScrollTargetPosition(target), behavior: 'smooth' });
           }
         }
       });
     });
-  }
-
-  let heroPrintBtn: HTMLButtonElement | null = null;
-
-  function updateHeroPrintButtonColor(sectionId: string | null): void {
-    // Update header data attribute for print button styling
-    header.dataset.atFooter = (sectionId === 'footer') ? 'true' : 'false';
-    
-    // Update hero print button class if it exists
-    if (heroPrintBtn) {
-      heroPrintBtn.classList.toggle('hero-bottom', sectionId === 'footer');
-    }
   }
 
   function setupPrintButtons(): void {
@@ -839,14 +921,31 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
         closeSectionDropdown();
         const target = headerPrintBtn.dataset.printTarget || 'all';
         printSection(target);
-      });
+    });
     }
     
-    heroPrintBtn = document.getElementById('hero-print-full-week') as HTMLButtonElement | null;
+    const heroPrintBtn = document.getElementById('hero-print-full-week');
     if (heroPrintBtn) {
       heroPrintBtn.addEventListener('click', () => {
         printSection('all');
       });
+    }
+  }
+
+  function scrollToHashWithOffset(): void {
+    if (!initialHash || initialHash === '#top') {
+      initialScrollComplete = true;
+      return;
+    }
+    
+    const target = document.querySelector(initialHash);
+    if (target) {
+      setTimeout(() => {
+        window.scrollTo({ top: getScrollTargetPosition(target), behavior: 'auto' });
+        initialScrollComplete = true;
+      }, 150);
+    } else {
+      initialScrollComplete = true;
     }
   }
 
@@ -855,10 +954,11 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     header.dataset.dateButtonVisible = 'false';
     header.dataset.hasShadow = 'false';
     header.dataset.atFooter = 'false';
-    updateScrollState();
     setupSectionDropdown();
     setupSmoothScroll();
     setupPrintButtons();
+    scrollToHashWithOffset();
+    updateScrollState();
 
     window.addEventListener('scroll', updateScrollState, { passive: true });
   }

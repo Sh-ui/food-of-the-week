@@ -82,22 +82,8 @@ const heroRows = heroRowsFromMeals.length > 0 ? heroRowsFromMeals : heroRowsFrom
   <!-- Hero Section -->
   <section class="text-center px-md py-xl min-h-[40vh] flex flex-col items-center justify-center gap-lg mobile:min-h-[30vh] mobile:px-sm" id="top">
     <h1 class="mb-0">{weekPlan.weekTitle}</h1>
-    <!-- Hero Action Bar: Links & Info + Print Full Week -->
+    <!-- Hero Action Bar: Print Full Week + Links & Info -->
     <div class="hero-action-bar flex items-center justify-center gap-md">
-      <ActionButton 
-        variant="ghost" 
-        href="#site-footer" 
-        size="md"
-        class="hero-action-btn border border-border"
-      >
-        <svg slot="icon" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="10"></circle>
-          <line x1="12" y1="16" x2="12" y2="12"></line>
-          <line x1="12" y1="8" x2="12.01" y2="8"></line>
-        </svg>
-        Links & Info
-      </ActionButton>
-      
       <ActionButton 
         variant="primary" 
         size="md"
@@ -112,6 +98,19 @@ const heroRows = heroRowsFromMeals.length > 0 ? heroRowsFromMeals : heroRowsFrom
         </svg>
         Print Full Week
       </ActionButton>
+      <ActionButton 
+        variant="ghost" 
+        href="#link-and-info" 
+        size="md"
+        class="hero-action-btn border border-border"
+      >
+        <svg slot="icon" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="16" x2="12" y2="12"></line>
+          <line x1="12" y1="8" x2="12.01" y2="8"></line>
+        </svg>
+        Links & Info
+      </ActionButton>
     </div>
 
     {/* Hero Summary */}
@@ -123,7 +122,7 @@ const heroRows = heroRowsFromMeals.length > 0 ? heroRowsFromMeals : heroRowsFrom
 
           return (
             <a
-              href={row.id ? `#print-section-${row.id}` : undefined}
+              href={row.id ? `#${row.id}` : undefined}
               class={`hero-summary-link hero-summary-item w-full flex flex-wrap items-center justify-center gap-sm px-sm py-xs rounded-md bg-bg border border-border hover:bg-bg-alt transition-colors no-underline text-[0.95rem] mobile:gap-xs mobile:px-sm mobile:py-xs ${row.cooked ? 'opacity-60' : ''}`}
             >
               <span class="meal-name px-sm py-xs rounded font-semibold text-primary bg-transparent">
@@ -161,8 +160,8 @@ const heroRows = heroRowsFromMeals.length > 0 ? heroRowsFromMeals : heroRowsFrom
   )}
   
   <div class="flex flex-col gap-xl mobile:gap-lg">
-    {weekPlan.meals.map((section) => (
-      <MealCard section={section} />
+    {weekPlan.meals.map((section, index) => (
+      <MealCard section={section} sectionIndex={index} />
     ))}
   </div>
   

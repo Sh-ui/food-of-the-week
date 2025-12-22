@@ -36,9 +36,9 @@ export default {
       instructionSubsections: {
         info: { bg: 'bg-alt', border: 'secondary', heading: 'primary' },
         overrides: {
-          // 0: { scheme: 'salmon' },
-          // 2: { border: '#81E3F6' },
-          // 5: { bg: 'bg-alt', border: 'accent', heading: 'primary' },
+          0: { scheme: 'salmon' },
+          2: { border: '#81E3F6' },
+          5: { bg: 'bg-alt', border: 'accent', heading: 'primary' },
         },
       },
       fontFamily: {
@@ -51,7 +51,7 @@ export default {
         'sm-mobile': { max: '500px' },
         'mobile': { max: '768px' },
         'tablet': { max: '950px' },
-        'desktop': { max: '1000px' },
+        'desktop': { max: '1200px' },
       },
       // Change these values here → entire site updates automatically
       // Creates utilities: p-xs, mb-md, gap-lg, etc.

@@ -61,6 +61,7 @@ export interface ContentSection {
   quickRead?: QuickRead;
   preamble?: string;          // Content before first H3/H4 heading (if any)
   subsections: Subsection[];  // Blocks from H3/H4 headings
+  legacyId?: string;
 }
 
 /**
@@ -139,6 +140,20 @@ function parseMarkdownContent(content: string): PagePlan {
   let heroSummary: string[] = [];
   let listSection: ListSection | null = null;
   const contentSections: ContentSection[] = [];
+
+  const usedMealIds = new Set<string>();
+  function makeMealId(rawHeading: string): string {
+    const cleaned = rawHeading.replace(/^[✓\u2713]\s*/, '').trim();
+    const base = slugify(cleaned || 'meal');
+    let candidate = base;
+    let counter = 1;
+    while (usedMealIds.has(candidate)) {
+      counter += 1;
+      candidate = `${base}-${counter}`;
+    }
+    usedMealIds.add(candidate);
+    return candidate;
+  }
 
   let h2Count = 0;
   let contentSectionCount = 0; // Track content sections independently
@@ -221,9 +236,12 @@ function parseMarkdownContent(content: string): PagePlan {
 
         quickReadCodename = null;
         quickReadDetails = null;
+        const mealId = makeMealId(title);
+        const legacyId = `meal-${contentSectionCount}`;
 
         currentContentSection = {
-          id: `meal-${contentSectionCount}`, // Use independent counter
+          id: mealId,
+          legacyId,
           title,
           cooked,
           subsections: [],

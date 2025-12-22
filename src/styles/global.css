@@ -79,6 +79,17 @@ html {
   scroll-behavior: smooth;
 }
 
+.hero-action-btn.hero-bottom {
+  background: var(--color-text);
+  border-color: var(--color-text);
+  color: var(--color-bg);
+}
+
+.hero-action-btn.hero-bottom svg {
+  stroke: currentColor;
+  fill: currentColor;
+}
+
 body {
   font-family: var(--font-sans);
   color: var(--color-text);

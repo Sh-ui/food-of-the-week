@@ -6,11 +6,12 @@ import { marked } from 'marked';
 
 interface Props {
   section: ContentSection;
+  sectionIndex: number;
 }
 
-const { section } = Astro.props;
+const { section, sectionIndex } = Astro.props;
 
-const mealIndex = Math.max(0, Number(section.id.split('-')[1] ?? '1') - 1);
+const mealIndex = Math.max(0, sectionIndex);
 const quickReadCodenameScheme = getInstructionBadgeColor(mealIndex);
 const quickReadInfoScheme = sectionColors.firstSubsection;
 
@@ -21,8 +22,9 @@ const groups = groupSubsections(section.subsections);
 let instructionGroupIndex = 0;
 
 function renderMarkdown(text: string | undefined): string {
-  const parsed = marked.parseInline(text?.trim() ?? '');
-  return typeof parsed === 'string' ? parsed : '';
+  const parsed: string | Promise<string> = marked.parseInline(text?.trim() ?? '');
+  if (typeof parsed === 'string') return parsed;
+  return '';
 }
 ---
 
@@ -32,6 +34,10 @@ function renderMarkdown(text: string | undefined): string {
   data-section-type="meal" 
   data-cooked={section.cooked ? 'true' : 'false'}
 >
+  {section.legacyId && (
+    <div id={`print-section-${section.legacyId}`} class="legacy-anchor" aria-hidden="true"></div>
+  )}
+    <div id={section.id} class="slug-anchor" aria-hidden="true"></div>
   <div class="meal-header">
     <h2>{section.title}</h2>
   </div>
@@ -207,6 +213,10 @@ function renderMarkdown(text: string | undefined): string {
     .subsection-field strong {
       display: block;
       margin-bottom: var(--spacing-xs);
+    }
+    .legacy-anchor,
+    .slug-anchor {
+      display: none;
     }
   }
 </style>
