@@ -17,6 +17,7 @@
 - [x] Italian herbs (basil, oregano, parsley)
 - [x] Italian Dressing Mix Packet
 - [x] Capers
+- [ ] Fresh gnocchi
 
 ### Dairy
 - [x] Parmigiano-Reggiano wedge
@@ -28,7 +29,6 @@
 - [x] Sweet Italian sausage - 1 lb (ground or links)
 - [x] Ground beef (80/20) - 1 lb
 - [ ] Anchovy fillets
-- [ ] Fresh gnocchi
 
 ## Lazy Meatballs
 
