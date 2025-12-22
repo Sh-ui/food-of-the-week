@@ -4,7 +4,7 @@
 
 **[View or Edit This Week's Plan](FOOD-OF-THE-WEEK.md)** ⇒ [Live Site at food.schuepbach.work](https://sh-ui.github.io/food-of-the-week)
 
-![Version](https://img.shields.io/badge/version-1.5.0-blue.svg)
+![Version](https://img.shields.io/badge/version-1.6.0-blue.svg)
 ![Status](https://img.shields.io/website?url=https://sh-ui.github.io/food-of-the-week&label=status&up_color=success&down_color=critical&up_message=active&down_message=down)
 
 ## About
@@ -102,6 +102,7 @@ GroceryPlanning/
 - **Auto-Deployment** - Push to GitHub, site rebuilds and deploys automatically via GitHub Actions
 - **Persistent State** - Grocery list checkbox states saved per week, survives browser refresh
 - **Static Site Generation** - Fast, secure, and hostable anywhere (currently on GitHub Pages)
+- **Stable Section Permalinks** - Slugified meal IDs allow direct `/#meal-slug` links that match header/nav state
 
 ## Quick Read System
 

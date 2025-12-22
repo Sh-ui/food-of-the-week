@@ -4,7 +4,7 @@
  - [ ] make 'print full week' button at the very bottom of the page, turn brown to match the look of the one in the header for better UX
  - [ ] make what is currently operating as headers parsed from bold text be parsed from `###` and/or `####` that way bold text can be used freely within content without confusing the parser
    - _this would also updating any rules or references to the current approach internally so that it doesn't confuse what is being said from how it is being parsed_
- - [ ] make the checkboxes locally check-able even if globally checked indicator (for non-family users)
+ - [x] make the checkboxes locally check-able even if globally checked indicator (for non-family users)
    - this would also involve making the printed view of grocery list not show the globally checked indicator, this also solves the visual look issue of the circles inside the checkboxes being off center (since we aren't even bothering to show them anymore in the print rendered version)
  - [ ] use index sequence override to setup info subsection specified theming and prune deprecated approach
    - ```css
@@ -16,9 +16,9 @@
           // 5: { bg: 'bg-alt', border: 'accent', heading: 'primary' },
         }
      ```
- - [ ] fix scroll up animation for header print button
+ - [x] fix scroll up animation for header print button
    - _it fades out when scrolling down but it doesn't fade in properly when scrolling up_
- - [ ] Replace hardcoded meal ID system with slugified meal names
+ - [x] Replace hardcoded meal ID system with slugified meal names
    - _Currently using counter-based IDs (`meal-1`, `meal-2`) instead of slugified meal names (`lamb-patties-veg`, `sweet-pork-curry`)_
    - _Would enable direct links like `/#print-section-lamb-patties-veg` instead of needing to know meal order_
    - _Affects: `weekParser.ts` (ID generation), `StickyHeader.astro` (navigation links), any print section targeting logic_
