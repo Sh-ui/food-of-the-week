@@ -50,7 +50,7 @@ Italian-American meatballs halfway between meatloaf and meatballs - the kind tha
 
 ### Sous Chef - Prep
 
-At **3:30pm**, drop the already-chopped potatoes into the **sous vide bath** (Chef will set temperature remotely from the app).
+At **3:30pm**, drop the already-chopped potatoes into the **sous vide bath**. Chef will set temperature remotely from the app, _but_ you will have to **push the button** to start the cook.
 
 Make the Italian salad by combining the italian bag mix with olives, shredded carrots, and one finely diced shallot. Leave undressed. Store in fridge until serving.
 
