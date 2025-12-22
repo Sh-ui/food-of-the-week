@@ -84,7 +84,7 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
       </a>
     ))}
     
-      <a href="#link-and-info" class="dropdown-link" data-section="footer">
+      <a href="#links-and-info" class="dropdown-link" data-section="footer">
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="12" cy="12" r="10"></circle>
         <line x1="12" y1="16" x2="12" y2="12"></line>
@@ -107,7 +107,7 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
         <span class="print-section-name">Grocery List</span>
     </button>
       <!-- Info icon button - links to footer -->
-      <a href="#link-and-info" class="header-info-btn" data-section="footer" aria-label="Links & Info">
+      <a href="#links-and-info" class="header-info-btn" data-section="footer" aria-label="Links & Info">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="12" cy="12" r="10"></circle>
           <line x1="12" y1="16" x2="12" y2="12"></line>
@@ -640,7 +640,7 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
   }
 
   function checkFooterSection(viewportMidpoint: number, scrollY: number, viewportHeight: number): { id: string; top: number; bottom: number; height: number; } | null {
-    const footer = document.getElementById('link-and-info');
+    const footer = document.getElementById('links-and-info');
     if (!footer) return null;
 
     const footerRect = footer.getBoundingClientRect();
@@ -802,7 +802,7 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     let newHash = '';
     
     if (sectionId === 'footer') {
-      newHash = '#link-and-info';
+      newHash = '#links-and-info';
     } else if (sectionId === 'top' || sectionId === 'all') {
       newHash = '';
     } else if (/^[a-z0-9-_]+$/.test(sectionId)) {
