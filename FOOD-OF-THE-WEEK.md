@@ -1,177 +1,74 @@
-<!-- ✓ -->
-# Week of December 14-20, 2025
+# Week of December 22-26, 2025
 
 ## Grocery List
 
 ### Produce
-- [x] Microgreens
 - [x] Fresh parsley
-- [x] Cherry tomatoes
-- [x] Red onion
-- [x] Yellow onion
-- [x] Carrots
-- [x] Potatoes
-- [x] American bagged salad
+- [x] Garlic - 1 bulb
+- [x] Italian bagged salad
+- [ ] Yukon gold potatoes
+- [ ] Cherry tomatoes
+- [ ] Red onion
+- [ ] Yellow onion
 
 ### Staples
-- [x] Onion paste or puree
-- [x] White cooking wine
-- [x] Couscous
-- [x] Harissa paste
-- [x] Preserved lemon or fresh lemon
-- [x] Pitted olives
-- [x] Japanese curry cubes
-- [x] Ginger paste
-- [x] Japanese rice
 - [x] Panko breadcrumbs
-- [x] Japanese dressing
+- [x] Dried Italian herbs (basil, oregano)
+- [x] Italian Dressing Mix Packet
+- [ ] Couscous
+- [ ] Harissa paste
+- [ ] Preserved lemon or fresh lemon
+- [ ] Pitted olives
 
 ### Dairy
-- [ ] None yet
+- [x] Parmigiano-Reggiano wedge
+- [x] Low Moisture Mozzarella block
+- [x] Heavy Cream
+- [x] Eggs
 
 ### Protein
-- [x] Ground lamb
-- [x] Frozen tilapia
-- [x] Frozen ground pork
+- [x] Sweet Italian sausage - 1 lb (ground or links)
+- [x] Ground beef (80/20) - 1 lb
+- [ ] Frozen tilapia
 
 ### Frozens
-- [x] Frozen mire poix
-- [x] Frozen peas
+- [ ] None yet
 
-## Gringo Tostadas
+## Italian Lazy Meatballs
 
-##### Prep&Heat
-###### cut toppings + heat stuff
-
-#### Protein: 
-Frozen taco meat
-
-#### Ingredients: 
-Tostadas, refried beans, shredded cheddar, sour cream, cilantro, limes, iceberg lettuce, plum tomatoes, roasted garlic salsa
-
-#### Description: 
-Crispy tostadas layered with warm refried beans and seasoned taco meat with cheese, topped with fresh iceberg, tomatoes, sour cream, and cilantro.
-
-### Already Prepped 
-- Frozen taco meat is ready to go in the freezer.
-
-### Sous Chef - Prep 
-
-Shred the iceberg lettuce into thin strips. Dice the plum tomatoes. Chop the cilantro. Cut limes into wedges.
-
-### Chef - Finishing & Plating
-
-Heat up the taco meat in a skillet. Warm the refried beans in the microwave.
-
-Spread a layer of warm refried beans on each tostada. Top with shredded cheese, taco meat, iceberg lettuce, plum tomatoes, sour cream, and cilantro. Serve with that jar of roasted garlic salsa on the side. Add a lime wedge to each plate.
-
-## ✓ Lamb Patties & Veg
-
-##### SousVidePrep
-###### 4:00 mire poix + 5:00 patties
+##### SousVidePrep+
+###### 3:30 potatoes + 5:00 meatballs in oven + prep salad
 
 #### Protein:
-Ground lamb
+Sweet Italian sausage + ground beef
 
 #### Ingredients:
-Frozen mire poix, onion jam, half bunch of parsley, white wine, microgreens
+Sweet Italian sausage, ground beef, panko, fresh parsley, garlic, parmesan, egg, mozzarella, italian bagged salad, shredded carrots, shallot, olives, yukon gold potatoes, italian dressing, italian herbs, milk
 
 #### Description:
-Tender lamb **patties** served on a bed of sous vide mire poix, finished with a rich pan sauce made from the mire poix bag juices and pattie fond  + wine. Topped with fresh microgreens.
+Italian-American meatballs halfway between meatloaf and meatballs - the kind that get baked large and topped with gooey melted mozzarella. Served with Italian salad and garlicky Tuscan mash.
 
 ### Already Prepped
-
-- Ground lamb is thawed.
-- Frozen mire poix is vacuum sealed and stored in the freezer.
+- Meatballs are formed and chilling in the fridge.
+- Potatoes are already chopped and vacuum sealed in bags. Stored in fridge.
 
 ### Sous Chef - Prep
 
-At no later than 3:30pm, start the sous vide mire poix in the sous vide bath (Chef will set temperature remotely from the app to around 183°F).
+At **3:30pm**, drop the already-chopped potatoes into the **sous vide bath** (Chef will set temperature remotely from the app).
 
-At around 5:00pm, Make the lamb patties; Combine the thawed ground lamb with the onion jam, and chopped parsley (half a bunch). Season with salt and pepper to taste (you can microwave a small chunk to check the seasoning). Form into even-sized stout little patties, like slightly flattened meatballs. Put in the fridge to chill until chef arrives.
+Make the Italian salad by combining the italian bag mix with olives, shredded carrots, and one finely diced shallot. Leave undressed. Store in fridge until serving.
 
-### Chef - Finishing & Plating
+At 5:00pm on the lower rack, put meatballs in oven at 400°F. Insert predictive probe at an angle into center meatball, **set temp to 157°F**.
 
-Heat a large skillet over medium-high heat with a drizzle of oil. Brown the patties on all sides until they develop good color and are cooked through, about 8-10 minutes total. Remove patties and set aside.
-
-Pour the reserved mire poix bag juices into the hot skillet, scraping up all the browned meatball fond. Add a generous splash of wine and reduce over medium-high heat until thickened into a glossy pan sauce, about 3-4 minutes. Taste and adjust seasoning.
-
-To plate: Spread the warm mire poix as a bed on each plate. Nestle the patties on top. Drizzle the pan sauce over everything. Top with a generous handful of fresh microgreens for a peppery, fresh finish.
-
-Serve with bread if you have it
-
-## ✓ Sweet Pork Curry
-
-##### Prep&Heat+
-###### prep + toast panko + 5:30 rice
-
-#### Protein:
-Frozen ground pork
-
-#### Ingredients:
-Potatoes, carrots, yellow onion, frozen peas, **Japanese curry cubes** + honey, ginger paste, panko breadcrumbs, Japanese rice, American bagged salad, Japanese dressing
-
-#### Description:
-A weeknight-friendly deconstructed take on Japanese pork katsu curry—ground pork simmered in rich curry sauce with potatoes and carrots, topped with toasted breadcrumbs for that katsu crunch. Served with Japanese rice and a simple salad. The honey adds a sweet, soft flavor to the curry.
-
-### Already Prepped
-
-- Ground pork is thawed.
-- Potatoes and carrots are already chopped + cooked and vacuum sealed in bags. Stored in fridge.
-
-### Sous Chef - Prep 
-
-Dice 1 whole yellow onion
-
-Toast the panko breadcrumbs: In a dry nonstick skillet over medium heat, toast panko until golden brown, stirring frequently. Set aside—they'll stay crispy.
-
-At 5:30pm, start the Japanese rice in the rice cooker.
+When meatballs hit temp, pull them out of the oven and let them rest on the stovetop, but **do not** remove the probe.
 
 ### Chef - Finishing & Plating
 
-In a large pot or Dutch oven over medium-high heat, brown the ground pork, breaking it up as it cooks. Once browned, add ginger paste and onion jam + honey and cook until fragrant.
+For the mash: use the already-cooked potatoes, pressed garlic, chopped parsley, chopped basil, dired oregano, heavy cream, and parmesan. Season with salt and white pepper.
 
-Deglaze with cooking sake and add water or broth (about 3-4 cups) then bring to a simmer. Break up the Japanese curry cubes and stir them into the liquid until completely dissolved and the sauce thickens.
+Make the dressing by combining the dressing packet according to its instructions, using olive oil, vinegar, and water.
 
-Add the already-cooked sous vide vegetables (along with the cooking liquid) and frozen peas. Stir gently and let everything heat through for 2-3 minutes. Taste and adjust seasoning with soy sauce for salt, rice vinager for acid, and of course honey for sweetness.
+Shred some mozzarella off a block to cover the meatballs. Put them back under the broiler to warm them back up and finish the cheese.
 
-Serve on plates with rice in the center in rounded mound, use the back of a ladle to press a divet into one side of the rice mound (off center, turning the rice into a plump crescent moon shape), ladel the curry into this divet and put the dressed salad on the opposite side.
-
-Sprinkle the toasted panko breadcrumbs generously over the curry portions right before serving.
-
-## ✓ Spiced SheetPan Fish
-
-##### SousChefDish
-###### 5:30 Couscous + oven roast
-
-#### Protein:
-Frozen tilapia
-
-#### Ingredients:
-Cherry tomatoes, red onion, garlic, harissa or warm spices, meyer lemons, olives (optional), couscous, parsley, extra virgin olive oil
-
-#### Description:
-Frozen tilapia roasted at high heat with cherry tomatoes, chunky red onion, and warm North African spices. Served over garlic couscous with a bright parsley and olive oil finish.
-
-### Already Prepped
-
-- Frozen tilapia fillets (no need to thaw)
-
-### Sous Chef - Cooking
-
-Start the garlic couscous in the rice cooker: smash garlic cloves in the garlic press into the couscous, then add to rice cooker with water or chicken broth. Season it chicken boullion instead of salt, and some white pepper. Set to cook, let it stay on warm until ready to plate.
-
-Preheat oven to 500°F. On a large sheet pan (don't overcrowd), arrange: frozen tilapia fillets, cherry tomatoes (whole), red onion cut into petals. Scatter olives around.
-
-Season everything generously: drizzle with olive oil, add harissa paste, salt, and pepper (you can taste a raw veggie to gauge salt levels). Add slices of fresh meyer lemon wedges tucked around the pan.
-
-Roast for around 15 minutes until tilapia is cooked through and tomatoes are bursting. The fish should flake easily and have golden edges (Give it the poke test!)
-
-When done, turn oven to warm (or lowest setting) and leave the sheet pan in the oven. Keep couscous on warm in the rice cooker. Everything stays warm until Chef arrives.
-
-### Chef - Finishing & Plating
-
-Fluff the garlic couscous and spread as a bed on each plate. Nestle the roasted tilapia on top, along with the roasted tomatoes, onions, and any pan juices.
-
-Roughly chop fresh parsley and scatter generously over everything. Finish with a generous drizzle of good extra virgin olive oil and a squeeze of the nearest roasted lemon if desired.
+Serve meatballs with melted cheese on top, garlicky Tuscan mash on the side, and Italian salad.
 
