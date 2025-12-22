@@ -33,7 +33,7 @@
 ## Lazy Meatballs
 
 ##### SousVidePrep+
-###### 3:30 potatoes + 5:00 meatballs + prep salad
+###### chill potatoes + 5:00 meatballs + prep salad
 
 #### Protein:
 Sweet Italian sausage + ground beef
@@ -46,15 +46,15 @@ Italian-American meatballs halfway between meatloaf and meatballs - the kind tha
 
 ### Already Prepped
 - Meatballs are formed and chilling in the fridge.
-- Potatoes are already chopped and vacuum sealed in bags. Stored in fridge.
+- Potatoes are already cooking in the sous vide bath.
 
 ### Sous Chef - Prep
 
-At **3:30pm**, drop the already-chopped potatoes into the **sous vide bath**. Chef will set temperature remotely from the app, _but_ you will have to **push the button** to start the cook.
+At around **11:00** you should recieve a notification that it is time to remove the potatoes form the sous vide, take the bag out and put it in the fridge to chill until dinner time.
 
 Make the Italian salad by combining the italian bag mix with olives, shredded carrots, and one finely diced shallot. Leave undressed. Store in fridge until serving.
 
-At 5:00pm on the lower rack, put meatballs in oven at 400°F. Insert predictive probe at an angle into center meatball, **set temp to 160°F**.
+At 5:00pm on the lower rack, put meatballs in oven at 400°F. Insert predictive thermometer at an angle into center meatball, **set it's temp to 160°F**.
 
 When meatballs hit temp, pull them out of the oven and let them rest on the stovetop, but **do not** remove the probe.
 
