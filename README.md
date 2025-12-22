@@ -158,7 +158,7 @@ The second line of the quick read provides **actionable timing information**—t
 - Rice cooker timing: `5:30 rice`
 - Multiple components: `3:30 veg + 5:30 rice`
 - Key prep steps: `prep + toast panko`
-- Oven operations: `Couscous + oven roast`
+- Oven operations: `couscous + oven roast`
 
 **What to avoid:**
 - Don't repeat information from the codename (e.g., don't write "sous vide" after `SousVidePrep`)
@@ -168,37 +168,37 @@ The second line of the quick read provides **actionable timing information**—t
 **Examples:**
 
 ```markdown
-## Gringo Tostadas
-> Prep&Heat
->
-> cut toppings + heat stuff
+## Beef Tostadas
+
+##### Prep&Heat 
+###### cut toppings + heat beef
 ```
 Simple prep work with basic heating—no complex timing needed.
 
 ```markdown
 ## Lamb Patties & Veg
-> SousVidePrep
->
-> 4:00 mire poix + 5:00 patties
+
+##### SousVidePrep
+###### 4:00 mire poix + 5:00 patties
 ```
 Two timed tasks: start sous vide at 4pm, form patties at 5pm.
 
 ```markdown
 ## Spiced SheetPan Fish
-> SousChefDish
->
-> 5:30 Couscous + oven roast
+
+##### SousChefDish
+###### 5:30 couscous + oven roast
 ```
 Sous chef handles complete cooking process—start rice cooker and manage oven.
 
 ### How Quick Reads Work
 
-The parser automatically extracts quick read data from these blockquotes and:
+The parser automatically extracts quick read data from these sub-headings and:
 - Displays them as colored badge rows in the hero section (clickable to jump to that meal)
 - Shows them on each meal card for reference while cooking
 - Includes them in printed meal plans
 
-If a meal doesn't have a quick read blockquote, it will still appear in the navigation—just without the detailed badges.
+If a meal doesn't have quick read headings, the meal name still appear in the hero navigation—just without the detailed badges.
 
 
 
