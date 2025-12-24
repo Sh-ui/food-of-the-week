@@ -355,7 +355,6 @@ export function generatePrintDocument(plan: WeekPlan, cfg: PrintConfig, target: 
   const { margins } = cfg.page;
   let content = '';
 
-  // Generate content based on print target
   if (target === 'all') {
     content += `
       <h1 style="font-family:${cfg.typography.headingFontFamily};font-size:${cfg.typography.h1Size};color:${cfg.colors.headingColor};margin-bottom:${cfg.spacing.sectionGap};text-align:center;">
@@ -370,9 +369,8 @@ export function generatePrintDocument(plan: WeekPlan, cfg: PrintConfig, target: 
         ${plan.weekTitle}
       </h1>`;
     content += generateGroceryListHTML(plan.groceryList, cfg);
-  } else if (target.startsWith('meal-')) {
-    const mealNumber = parseInt(target.replace('meal-', ''), 10);
-    const meal = plan.meals.find(m => m.number === mealNumber);
+  } else {
+    const meal = plan.meals.find(m => m.id === target);
     if (meal) {
       content += generateMealHTML(meal, cfg);
     }

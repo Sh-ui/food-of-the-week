@@ -31,17 +31,17 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
       <a href="#top" class="nav-btn date-btn">{shortTitle}</a>
       
       {hasGroceryList && (
-        <a href="#grocery-list" class="nav-btn" data-section="grocery-list">
+        <a href="#print-section-grocery-list" class="nav-btn" data-section="grocery-list">
           Grocery
         </a>
       )}
       
       {meals.map((meal) => (
-      <a 
-        href={`#${meal.id}`} 
-        class={`nav-btn ${meal.cooked ? 'cooked' : ''}`}
-        data-section={meal.id}
-      >
+        <a 
+          href={`#print-section-${meal.id}`} 
+          class={`nav-btn ${meal.cooked ? 'cooked' : ''}`}
+          data-section={meal.id}
+        >
           {meal.title}
         </a>
       ))}
@@ -69,20 +69,20 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     </a>
     
       {hasGroceryList && (
-        <a href="#grocery-list" class="dropdown-link" data-section="grocery-list">
+        <a href="#print-section-grocery-list" class="dropdown-link" data-section="grocery-list">
           Grocery List
         </a>
       )}
     
-    {meals.map((meal) => (
-      <a 
-        href={`#${meal.id}`} 
-        class={`dropdown-link ${meal.cooked ? 'cooked' : ''}`}
-        data-section={meal.id}
-      >
-        {meal.title}
-      </a>
-    ))}
+      {meals.map((meal) => (
+        <a 
+          href={`#print-section-${meal.id}`} 
+          class={`dropdown-link ${meal.cooked ? 'cooked' : ''}`}
+          data-section={meal.id}
+        >
+          {meal.title}
+        </a>
+      ))}
     
       <a href="#links-and-info" class="dropdown-link" data-section="footer">
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -549,7 +549,6 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
   const navBtns = document.querySelectorAll('.nav-btn[data-section], .dropdown-link[data-section]') as NodeListOf<HTMLAnchorElement>;
 
   const FADE_OUT_START = scrollThresholds.FADE_OUT_START;
-  const SECTION_PROBE_MARGIN = 20;
   const initialHash = window.location.hash;
   
   let dateButtonVisible = false;
@@ -634,36 +633,6 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     return sections;
   }
 
-  function getProbeY(scrollY: number): number {
-    const headerHeight = header.offsetHeight;
-    return scrollY + headerHeight + SECTION_PROBE_MARGIN;
-  }
-
-  function checkFooterSection(viewportMidpoint: number, scrollY: number, viewportHeight: number): { id: string; top: number; bottom: number; height: number; } | null {
-    const footer = document.getElementById('links-and-info');
-    if (!footer) return null;
-
-    const footerRect = footer.getBoundingClientRect();
-    const footerTop = footerRect.top + scrollY;
-    const footerBottom = footerRect.bottom + scrollY;
-    
-    if (viewportMidpoint >= footerTop && viewportMidpoint < footerBottom) {
-      return { id: 'footer', top: footerTop, bottom: footerBottom, height: footerRect.height };
-  }
-
-    const viewportBottom = scrollY + viewportHeight;
-    if (viewportBottom >= footerTop + 100) {
-      return { id: 'footer', top: footerTop, bottom: footerBottom, height: footerRect.height };
-    }
-
-    const maxScroll = document.documentElement.scrollHeight - viewportHeight;
-    if (scrollY >= maxScroll - 10) {
-      return { id: 'footer', top: footerTop, bottom: footerBottom, height: footerRect.height };
-    }
-
-    return null;
-  }
-
   function handleSectionFadeOut(foundSectionData: { top: number; height: number; }, viewportMidpoint: number): void {
     if (!headerPrintBtn || isFadingIn) return;
 
@@ -681,45 +650,47 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     }
   }
 
-  function checkHeroSection(probeY: number, scrollY: number): { id: string; top: number; bottom: number; height: number; } | null {
-    const heroSection = document.getElementById('top');
-    if (!heroSection) return null;
-    
-    const rect = heroSection.getBoundingClientRect();
-    const heroTop = rect.top + scrollY;
-    const heroBottom = rect.bottom + scrollY;
-    
-    if (probeY < heroBottom) {
-      return { id: 'top', top: heroTop, bottom: heroBottom, height: rect.height };
-    }
-    
-    return null;
-  }
-
   function updateActiveSection(): void {
     const scrollY = window.scrollY;
+    const headerHeight = header.offsetHeight;
     const viewportHeight = window.innerHeight;
     const viewportMidpoint = scrollY + (viewportHeight * 0.5);
-    const probeY = getProbeY(scrollY);
+    const probePosition = scrollY + headerHeight + 20;
+
+    const heroSection = document.getElementById('top');
+    const heroBottom = heroSection 
+      ? heroSection.getBoundingClientRect().bottom + scrollY 
+      : 0;
+
+    const footer = document.getElementById('links-and-info');
+    const footerTop = footer 
+      ? footer.getBoundingClientRect().top + scrollY 
+      : Infinity;
 
     const sections = buildSectionData(scrollY).sort((a, b) => a.top - b.top);
-    const heroData = checkHeroSection(probeY, scrollY);
-    const footerData = checkFooterSection(viewportMidpoint, scrollY, viewportHeight);
     
     let foundSection: string | null = null;
     let foundSectionData: { id: string; top: number; bottom: number; height: number; } | null = null;
+
+    const maxScroll = document.documentElement.scrollHeight - viewportHeight;
+    const atPageBottom = scrollY >= maxScroll - 10;
+    const midpointPastFooter = viewportMidpoint >= footerTop;
     
-    if (heroData) {
-      foundSection = heroData.id;
-      foundSectionData = heroData;
-    } else if (footerData) {
-      foundSection = footerData.id;
-      foundSectionData = footerData;
+    if (atPageBottom || midpointPastFooter) {
+      foundSection = 'footer';
+      if (footer) {
+        const rect = footer.getBoundingClientRect();
+        foundSectionData = { id: 'footer', top: footerTop, bottom: rect.bottom + scrollY, height: rect.height };
+      }
+    } else if (probePosition < heroBottom) {
+      foundSection = 'top';
+      if (heroSection) {
+        const rect = heroSection.getBoundingClientRect();
+        foundSectionData = { id: 'top', top: 0, bottom: heroBottom, height: rect.height };
+      }
     } else {
-      // Once past hero, use viewport midpoint for section-to-section transitions
-      // But for first section activation (grocery), probeY already passed hero check
       for (const section of sections) {
-        if (viewportMidpoint >= section.top && viewportMidpoint < section.bottom) {
+        if (probePosition >= section.top && probePosition < section.bottom) {
           foundSection = section.id;
           foundSectionData = section;
           break;
@@ -727,16 +698,10 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
       }
 
       if (!foundSection && sections.length > 0) {
-        const previousSection = sections.filter(sec => viewportMidpoint >= sec.top).pop();
-        if (previousSection) {
-          foundSection = previousSection.id;
-          foundSectionData = previousSection;
-        } else {
-          const nextSection = sections.find(sec => viewportMidpoint < sec.top);
-          if (nextSection) {
-            foundSection = nextSection.id;
-            foundSectionData = nextSection;
-          }
+        const lastPassedSection = sections.filter(sec => probePosition >= sec.top).pop();
+        if (lastPassedSection) {
+          foundSection = lastPassedSection.id;
+          foundSectionData = lastPassedSection;
         }
       }
     }
@@ -756,7 +721,7 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     if (foundSectionData) {
       handleSectionFadeOut(foundSectionData, viewportMidpoint);
     }
-    }
+  }
 
   function fadeInPrintButton(sectionId: string): void {
     if (!headerPrintBtn) return;
@@ -791,13 +756,6 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
 
   function syncUrlHash(sectionId: string): void {
     if (!initialScrollComplete) return;
-
-    if (!navVisible) {
-      if (window.location.hash) {
-        history.replaceState(null, '', window.location.pathname);
-      }
-      return;
-    }
     
     let newHash = '';
     
@@ -881,17 +839,9 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
   }
 
   function getScrollTargetPosition(target: Element): number {
-    const scrollY = window.scrollY;
     const headerHeight = header.offsetHeight;
-    const targetTop = target.getBoundingClientRect().top + scrollY;
-    const heroSection = document.getElementById('top');
-    const heroBottom = heroSection
-      ? heroSection.getBoundingClientRect().bottom + scrollY
-      : 0;
-
-    const idealPosition = targetTop - headerHeight - SECTION_PROBE_MARGIN;
-    const minToLeaveHero = heroBottom - (headerHeight + SECTION_PROBE_MARGIN) + 1;
-    return Math.max(idealPosition, minToLeaveHero);
+    const targetTop = target.getBoundingClientRect().top + window.scrollY;
+    return targetTop - headerHeight - 8;
   }
 
   function setupSmoothScroll(): void {
