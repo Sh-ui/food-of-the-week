@@ -93,7 +93,7 @@ Dress the slaw: Toss the prepared vegetables with white balsamic vinegar and jal
 
 Plate each serving: Pile of oven-fried chips, crispy panko cod alongside, generous mound of dressed slaw. Drizzle the white sauce over everything.
 
-## Sous Vide Chicken & Veg
+## Chicken & Veg
 
 ##### Prep&Heat
 ###### 4:30 drop bags + make rice
@@ -167,7 +167,7 @@ Dress the salad with Japanese sesame dressing right before serving.
 
 Plate: Roasted sweet potato wedges, glazed bison hambagu with extra glaze spooned over, side salad. Garnish the patties with sliced green onions.
 
-## Stir-Fried Shrimp Scampi
+## Shrimp Scampi
 
 ##### Prep&Heat
 ###### cut vegetables + boil noodles
