@@ -28,7 +28,7 @@
 - [ ] Pork tenderloin - 1.5 lbs
 - [ ] Frozen salmon fillets - 4 pieces (6 oz each)
 
-## Rosemary Mustard Pork Tenderloin
+## Pork Tenderloin
 
 #### Day:
 Saturday
@@ -64,7 +64,7 @@ For the sauce: Add ½ cup chicken stock to the hot skillet, scraping up all the 
 
 Slice pork against the grain and serve with roasted vegetables and a generous drizzle of the creamy pan sauce.
 
-## Crispy Brussels Sprouts with Maple-Glazed Salmon
+## Maple Salmon & Brussels
 
 #### Day:
 Sunday
