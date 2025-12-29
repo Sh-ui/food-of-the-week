@@ -1,3 +1,5 @@
+<!-- ✓ • https://sh-ui.github.io/food-of-the-week/weekend -->
+
 # Weekend of December 20-21, 2025
 
 ## Grocery List

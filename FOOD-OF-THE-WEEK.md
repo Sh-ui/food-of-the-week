@@ -1,3 +1,5 @@
+<!-- ✓ • https://sh-ui.github.io/food-of-the-week/ -->
+
 # Week of December 29, 2025 - January 2, 2026
 
 ## Grocery List
