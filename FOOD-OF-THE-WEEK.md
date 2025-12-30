@@ -95,7 +95,7 @@ Dress the slaw: Toss the prepared vegetables with white balsamic vinegar and jal
 
 Plate each serving: Pile of oven-fried chips, crispy panko cod alongside, generous mound of dressed slaw. Drizzle the white sauce over everything.
 
-## Chicken & Veg
+## ✓ Chicken & Veg
 
 ##### Prep&Heat
 ###### 4:30 drop bags + make rice
