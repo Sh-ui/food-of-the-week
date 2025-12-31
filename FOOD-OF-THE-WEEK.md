@@ -55,7 +55,7 @@
 - [x] Ground bison - 1 lb
 - [x] Gulf shrimp - 1 lb (31-40 ct)
 
-## Cod & Chips
+## ✓ Cod & Chips
 
 ##### Prep&Heat++
 ###### 5:30 bread + fry fish + prep slaw
