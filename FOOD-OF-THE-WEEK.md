@@ -169,7 +169,7 @@ Dress the salad with Japanese sesame dressing right before serving.
 
 Plate: Roasted sweet potato wedges, glazed bison hambagu with extra glaze spooned over, side salad. Garnish the patties with sliced green onions.
 
-## Shrimp Scampi
+## ✓ Shrimp Scampi
 
 ##### Prep&Heat
 ###### cut vegetables + boil noodles
