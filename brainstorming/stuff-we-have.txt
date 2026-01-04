@@ -1,5 +1,4 @@
 // Dinners / Main Proteins
-Gulf Shrimp, 1 lb (31-40 ct)
 Ground Bison, 1 lb
 Cod, 2 lbs (5-9 pcs)
 Italian Sausage Links, 2 lbs
@@ -15,3 +14,19 @@ Fully Cooked Breaded Chicken Strips, 24 oz
 Fully Cooked Pork Breakfast Sausage Patties, 2 lbs
 Bacon, 10 oz
 Salmon Jerky Sea Salt, 2 x 2 oz pouch
+
+// Veg
+Red Onions
+Garlic
+Frozen Chopped Cabbage
+Frozen Cut Green Beans
+Whole Carrots
+
+// Pantry
+Brown Rice Udon Noodles
+Brown Rice
+White Rice
+Barley
+Canned Chopped Tomatoes
+A couple Russet Potatoes
+Couscous
