@@ -1,207 +1,160 @@
 <!-- ✓ • https://sh-ui.github.io/food-of-the-week/ -->
 
-# Week of December 29, 2025 - January 2, 2026
+# Week of January 5–10, 2026
 
 ## Grocery List
 
 ### Produce
-- [ ] Shaved brussels sprouts - 1 bag
-- [ ] Red cabbage - 1 head
-- [ ] Red onion - 1
-- [ ] Fresh parsley - 2 bunches
-- [ ] Yukon gold potatoes - 2 lbs
-- [ ] Lemon - 2
-- [ ] Fresh dill - 1 bunch
-- [ ] Green beans - 1 lb
-- [ ] Carrots - 1 lb
-- [ ] Garlic - 2 bulbs
-- [ ] Fresh thyme and/or rosemary - 1 bunch each
-- [ ] Green onions - 1 bunch
-- [ ] Sweet potatoes - 2 lbs
-- [ ] Mixed salad greens - 1 bag
-- [ ] Cucumber - 1
-- [ ] Asparagus - 1 bunch
-- [ ] Celery with leaves - 1 bunch
-- [ ] Red bell pepper - 1
 
-### Staples
-- [ ] Panko breadcrumbs
-- [ ] Flour
-- [ ] Fire roasted corn - 1 can
-- [x] White balsamic vinegar
-- [x] Jalapeño olive oil
-- [x] White wine
-- [x] Chicken stock or broth
-- [x] Jasmine rice
+- [x] Red onions
+- [x] Garlic
+- [x] Whole carrots
+- [x] Frozen chopped cabbage
+- [x] Frozen cut green beans
+- [x] Green onions / scallions
+- [x] Fresh thyme and/or rosemary
+- [ ] Bell peppers
+- [x] American bagged salad
+
+### Staples / Pantry
+
+- [x] Brown rice udon noodles
+- [x] Couscous
+- [x] Canned chopped tomatoes
 - [x] Ginger paste
-- [x] Worcestershire sauce
-- [ ] Ketchup
-- [x] Soy sauce
-- [ ] Mirin
-- [x] Sake
-- [x] Japanese sesame dressing
-- [ ] Egg noodles
-- [x] Red pepper flakes
+- [x] Neutral oil
+- [x] Soy sauce / basic umami sauce
+- [x] Ground spices (cumin, coriander, chili flakes)
+- [x] Flour
+- [x] Chicken stock or broth
 
 ### Dairy
-- [ ] Eggs
-- [x] Mayo
-- [ ] Butter
+
+- [x] Feta cheese
 - [ ] Heavy cream
+- [x] Butter
 
 ### Protein
-- [x] Cod - 2 lbs (5-9 pcs)
-- [x] Boneless skinless chicken breast - 2.5 lbs
-- [x] Ground bison - 1 lb
-- [x] Gulf shrimp - 1 lb (31-40 ct)
 
-## ✓ Cod & Chips
+- [x] Ground bison (1 lb)
+- [x] Ground beef 85/15 (2 lbs)
+- [x] Italian sausage links (4)
+- [x] Boneless skinless chicken breast (2)
 
-##### Prep&Heat++
-###### 5:30 bread + fry fish + prep slaw
+### Bakery / Frozen
+
+- [ ] Rolls
+- [ ] Puff pastry
+
+## ✓ One-Pot Bison Ragu with Udon
+
+##### Prep&Heat
+###### 4:30 prep salad + chop
 
 #### Protein:
-Cod
+Ground bison
 
 #### Ingredients:
-Cod fillets, panko breadcrumbs, flour, eggs, shaved brussels sprouts, fire roasted corn, red cabbage, red onion, fresh parsley, white balsamic vinegar, jalapeño olive oil, yukon gold potatoes, mayo, lemon, fresh dill
+Ground bison, red onion, garlic, canned chopped tomatoes, brown rice udon noodles, bagged salad
 
 #### Description:
-Crispy panko-crusted cod shallow-fried to golden perfection, served with oven-roasted chips and a bright, crunchy winter slaw dressed with jalapeño olive oil and white balsamic. A deconstructed fish and chips elevated with fresh vegetables and bold flavors, finished with a simple lemon-herb white sauce.
+A simple, deeply savory weeknight ragu—bison simmered with onions, garlic, and tomatoes, finished directly with udon noodles for a single-pot pasta situation. Paired with a no-effort bag salad.
 
 ### Already Prepped
-- Cod fillets are thawed and ready.
-- Potatoes have been cut into chips, boiled until nearly falling apart, and are sitting exposed to air on a sheet pan in the fridge (for maximum crispiness).
-- Bagged shaved brussels sprouts are ready.
-- Fire roasted corn is in a can, ready to use.
 
-### Sous Chef - Cooking
+- Ground bison is thawed.
 
-Prep the slaw vegetables: Thinly slice half a red onion. Chop half a bunch of parsley. Shred a quarter of a red cabbage into thin strips. Combine in a large bowl with the shaved brussels sprouts and drained fire roasted corn. Leave undressed and store in fridge until Chef assembles.
+### Sous Chef - Prep
 
-Set up breading station with three shallow dishes: flour, beaten eggs, and panko breadcrumbs.
-
-Pat cod fillets completely dry. Salt each side properly. Dredge each fillet in flour, shaking off excess. Dip in egg, letting excess drip off. Press firmly into panko to coat both sides thoroughly.
-
-Heat a large skillet over medium heat with about ¼ inch of neutral oil. When oil shimmers, add breaded cod fillets. Shallow fry until golden brown and crispy, about 3-4 minutes per side, until fish flakes easily. Remove to paper towel-lined plate, transfer finished fillets to a wire rack set in a low oven to keep warm.
+Toss the bagged salad with some veg we have hanging around like shredded carrots, cherry tomatoes, etc. Chill in the fridge until ready to dress and plate.
 
 ### Chef - Finishing & Plating
 
-Preheat oven to 450°F. Toss the prepped potato chips generously with plenty of neutral oil and spread on a sheet pan in a single layer. Season with salt. Roast for 20-25 minutes, flipping halfway, until deeply golden and crispy.
+Dice half a red onion and mince several cloves of garlic. Heat a large pot or Dutch oven over high heat with neutral oil. Add the ground bison and brown hard, breaking it up as it cooks. Don't stir too much—let it get good color.
 
-Make the white sauce: Whisk together mayo, fresh lemon juice, and finely chopped fresh dill. Taste and adjust seasoning with salt and white pepper. Should be drizzlable.
+Once browned, add the onion and garlic. Cook until softened, about 3 minutes. Add the canned tomatoes with their juices. Season with salt and pepper. Bring to a simmer and let the sauce develop for 10-15 minutes.
 
-Dress the slaw: Toss the prepared vegetables with white balsamic vinegar and jalapeño olive oil to taste. Season with salt and pepper. The slaw should be bright and punchy.
+Add the udon noodles directly to the pot along with a splash of water if needed. Stir to coat and cook until the noodles are tender and glossy with sauce, about 5 minutes.
 
-Plate each serving: Pile of oven-fried chips, crispy panko cod alongside, generous mound of dressed slaw. Drizzle the white sauce over everything.
+Serve in bowls with the dressed salad on the side.
 
-## ✓ Chicken & Veg
+## Chicken Pot Pie
 
-##### Prep&Heat
-###### 4:30 drop bags + make rice
+##### Prep&Heat+
+###### 4:30 prep filling + bake
 
 #### Protein:
 Chicken breast
 
 #### Ingredients:
-Chicken breast, green beans, carrots, garlic, butter, white wine, chicken stock, fresh herbs (thyme and/or rosemary), jasmine rice
+Boneless skinless chicken breast, frozen cut green beans, whole carrots, heavy cream, butter, flour, chicken stock, fresh thyme and/or rosemary, green onions, puff pastry
 
 #### Description:
-A streamlined sous vide dinner where both protein and vegetables are already cooked and sealed—sous chef simply drops both bags in the bath to warm together. Chef finishes with a quick sear on the chicken and a simple pan sauce made from the bag juices. Served with fluffy rice and the perfectly cooked vegetables.
+A comforting weeknight pot pie with tender chicken, sweet carrots, and green beans in a creamy herb-laced sauce, topped with crisp golden puff pastry. All the warmth of classic pot pie with simplified execution.
 
 ### Already Prepped
-- Chicken breasts have been seasoned (salt, pepper, garlic, herbs) and vacuum sealed. Stored in fridge.
-- Green beans and carrots have been cooked sous vide (butter, garlic, salt) and vacuum sealed. Stored in fridge.
+
+- Chicken breast is thawed.
+- Frozen green beans are ready.
+- Puff pastry is thawed according to package directions.
 
 ### Sous Chef - Prep
 
-At 4:30pm, drop both the chicken bag and the vegetable bag into the sous vide bath (Chef will set temperature remotely from the app to 153°F for reheating).
+At 4:30pm, peel and slice the carrots into coins. Cube the chicken breast into bite-sized pieces. Slice the green onions (both white and green parts). Strip fresh thyme leaves from stems (or finely chop rosemary).
 
-Start jasmine rice in the rice cooker.
+Prep the puff pastry: Unfold thawed puff pastry and cut to fit your baking dish (or individual ramekins). Keep chilled until ready to use.
 
 ### Chef - Finishing & Plating
 
-Remove chicken and vegetables from bags. Reserve all bag juices (both chicken and veg). Pat chicken completely dry.
+Preheat oven to 400°F.
 
-Heat a skillet over medium-high heat with a drizzle of oil. Sear chicken breasts on both sides until deeply golden, about 2-3 minutes per side.
+In a large oven-safe skillet or Dutch oven, melt butter over medium-high heat. Add the cubed chicken, season with salt and pepper, and cook until just browned on the outside but not cooked through, about 3-4 minutes. Remove and set aside.
 
-Remove chicken to rest. In the same skillet, add reserved bag juices, a splash of white wine, and a splash of chicken stock. Reduce over medium-high heat, scraping up browned bits, until thickened into a glossy pan sauce. Swirl in a knob of butter. Taste and adjust seasoning.
+Add more butter if needed. Add the sliced carrots and cook for 3-4 minutes until starting to soften. Add the frozen green beans and white parts of the green onions. Cook another 2 minutes.
 
-Warm the sous vide vegetables briefly in the pan if needed, or plate directly.
+Sprinkle flour over the vegetables and stir to coat. Cook for 1 minute. Gradually add chicken stock, stirring constantly to prevent lumps. Add heavy cream and bring to a simmer. The sauce should thicken.
 
-Plate: Fluffy rice as a base, sliced chicken breast fanned on top, vegetables alongside. Spoon the pan sauce over the chicken and rice. Scatter fresh herbs if desired.
+Return the chicken to the pan along with any juices. Add the fresh herbs. Taste and adjust seasoning with salt and pepper.
 
-## ✓ Glazed Salmon
+Lay the puff pastry over the filling, tucking edges down or letting them hang over. Cut a few slits in the top for steam to escape.
 
-##### Prep&Heat+
-###### 5:00 salmon & squash + prep salad
+Bake for 20 minutes until the puff pastry is deeply golden and puffed, and the filling is bubbling around the edges.
+
+Let rest for 5 minutes. Scatter sliced green onion tops over the golden crust before serving.
+
+## Sheet Pan Sausage & Peppers
+
+##### SousChefDish
+###### prep ingredients + oven roast
 
 #### Protein:
-Salmon fillets
+Italian sausage links
 
 #### Ingredients:
-Salmon fillets, green onions, garlic, ginger paste, worcestershire sauce, ketchup, soy sauce, mirin, sake, butternut squash, mixed salad greens, shredded carrots, cucumber, Japanese sesame dressing, butter
+Italian sausage links, bell peppers, red onion, garlic, olive oil, tomatoe paste,rolls
 
 #### Description:
-Salmon fillets cooked sous vide, then glazed with a sweet and savory Japanese-inspired glaze of ketchup, mirin, soy. Plated with silky sous vide butternut squash cubes and a bright, crisp salad tossed with Japanese sesame dressing. Comforting, colorful, and bursting with umami.
+High-heat sheet pan roast of sausages with sweet bell peppers and red onion until blistered and juicy. Served simply with warm rolls for a hands-on, low-effort dinner.
 
 ### Already Prepped
-- Salmon fillets are seasoned and vacuum sealed, ready for sous vide.
-- Butternut squash is cut into cubes, cooked sous vide to the perfect texture with salt, and chilled.
-  
-### Sous Chef - Prep
 
-At dinnertime, preheat the sous vide water bath to 120°F (or desired doneness for salmon).
+- Italian sausage links are thawed.
+- Rolls are ready.
 
-Drop the salmon fillet bags and butternut squash bags into the water bath and let them warm together (about 20-30 minutes if coming from fridge).
+### Sous Chef - Cooking
 
-Prep the salad: Combine mixed greens, shredded carrots, and thinly sliced cucumber in a bowl. Keep refrigerated and undressed until serving.
+Preheat oven to 500°F.
+
+Slice bell peppers into thick strips. Cut red onion into thick wedges through the root so they hold together. Smash several garlic cloves.
+
+Arrange sausage links on a large sheet pan. Scatter the pepper strips, onion wedges, and smashed garlic around the sausages. Drizzle generously with olive oil and a tablespoon of tomato paste. Season vegetables with salt and pepper. Mash everything around until well coated
+
+Roast for 25-30 minutes, flipping sausages halfway through, until the sausages are deeply browned and cooked through and the vegetables are soft and caramelized with charred edges.
+
+Turn oven to warm or lowest setting to keep everything hot until Chef arrives to plate.
 
 ### Chef - Finishing & Plating
 
-Remove the salmon and squash from their bags, patting the salmon fillets dry. Reserve any juices.
+Warm the rolls in the oven briefly if desired.
 
-To a small saucepan, add worcestershire sauce, ketchup, soy sauce, mirin, and sake (roughly equal parts, about 2 tablespoons each, or to taste), plus ginger paste and minced garlic. Add reserved salmon juices if desired, and reduce, stirring, until glossy and thick, 2-3 minutes. Swirl in a bit of butter for richness.
-
-Add the salmon to the pan and spoon glaze over fillets to coat.
-
-Dress the salad with Japanese sesame dressing right before serving.
-
-Plate: place the cubes of butternut squash, glazed salmon fillet with extra sauce spooned over, and a side of fresh salad. Garnish salmon with sliced green onions.
-
-## ✓ Shrimp Scampi
-
-##### Prep&Heat
-###### cut vegetables + boil noodles
-
-#### Protein:
-Gulf shrimp (31-40 ct)
-
-#### Ingredients:
-Gulf shrimp, garlic, asparagus, celery (with leaves), red bell pepper, egg noodles, butter, white wine, lemon, fresh parsley, red pepper flakes
-
-#### Description:
-A fast stir-fried take on shrimp scampi that swaps spaghetti for egg noodles and adds quick-cooking vegetables for color and crunch. High heat, garlic butter, white wine, and lemon create that classic scampi flavor while asparagus, celery, and bell pepper keep it light and vegetal. The celery leaves add an herbaceous finish. Weeknight speed with restaurant flavors.
-
-### Already Prepped
-- Shrimp are thawed and deveined.
-
-### Sous Chef - Prep
-
-Bring a large pot of salted water to boil for the egg noodles.
-
-Prep all vegetables: Cut asparagus into 2-inch pieces on the bias. Slice celery thinly on the bias (reserve the leaves, roughly chopped). Slice red bell pepper into thin strips. Mince plenty of garlic (at least 6 cloves).
-
-Cook egg noodles according to package directions. Drain and toss with a little butter or oil to prevent sticking. Set aside.
-
-### Chef - Finishing & Plating
-
-Heat a large wok or skillet over high heat with a drizzle of oil. Add asparagus, celery, and bell pepper. Stir-fry for 2-3 minutes until vegetables are crisp-tender and lightly charred. Remove to a plate.
-
-Add a bit more oil to the same pan, still over high heat. Add shrimp in a single layer, season with salt and pepper. Let them sear undisturbed for about 1 minute, then flip and cook another minute until just pink and cooked through. Remove shrimp to the plate with vegetables.
-
-Reduce heat to medium. Add butter and minced garlic to the pan. Cook until fragrant, about 30 seconds. Add white wine and a squeeze of lemon juice. Let it bubble and reduce slightly, scraping up any browned bits.
-
-Return shrimp and vegetables to the pan along with the cooked egg noodles. Toss everything together in the garlic butter sauce. Add red pepper flakes to taste. Finish with chopped fresh parsley and the reserved celery leaves.
-
-Plate in bowls, making sure everyone gets plenty of that garlic butter sauce. Serve with extra lemon wedges on the side.
+Serve the roasted sausages and vegetables family-style on a platter, or pile into warm rolls for sausage sandwiches. Make sure everyone gets plenty of the sweet, blistered peppers and onions.
