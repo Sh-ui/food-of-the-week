@@ -27,6 +27,7 @@
 - [x] Ground spices (cumin, coriander, chili flakes)
 - [x] Flour
 - [x] Chicken stock or broth
+- [x] Russet potatoes (2)
 
 ### Dairy
 
@@ -87,10 +88,10 @@ Serve in bowls with the dressed salad on the side.
 Chicken breast
 
 #### Ingredients:
-Boneless skinless chicken breast, frozen cut green beans, whole carrots, heavy cream, butter, flour, chicken stock, fresh thyme and/or rosemary, green onions, puff pastry
+Boneless skinless chicken breast, russet potatoes (actually I think one of them is a yellow potato but that's okay), frozen cut green beans, whole carrots, heavy cream, butter, flour, chicken stock, fresh thyme and/or rosemary, green onions, puff pastry
 
 #### Description:
-A comforting weeknight pot pie with tender chicken, sweet carrots, and green beans in a creamy herb-laced sauce, topped with crisp golden puff pastry. All the warmth of classic pot pie with simplified execution.
+A comforting weeknight pot pie with tender chicken, potatoes, sweet carrots, and green beans in a creamy herb-laced sauce, topped with crisp golden puff pastry. All the warmth of classic pot pie with simplified execution.
 
 ### Already Prepped
 
@@ -100,7 +101,7 @@ A comforting weeknight pot pie with tender chicken, sweet carrots, and green bea
 
 ### Sous Chef - Prep
 
-At 4:30pm, peel and slice the carrots into coins. Cube the chicken breast into bite-sized pieces. Slice the green onions (both white and green parts). Strip fresh thyme leaves from stems (or finely chop rosemary).
+At 4:30pm, peel the two russet potatoes and cut into small cubes. Peel and slice the carrots into coins. Cube the chicken breast into bite-sized pieces. Slice the green onions (both white and green parts). Strip fresh thyme leaves from stems (or finely chop rosemary).
 
 Prep the puff pastry: Unfold thawed puff pastry and cut to fit your baking dish (or individual ramekins). Keep chilled until ready to use.
 
@@ -110,7 +111,7 @@ Preheat oven to 400°F.
 
 In a large oven-safe skillet or Dutch oven, melt butter over medium-high heat. Add the cubed chicken, season with salt and pepper, and cook until just browned on the outside but not cooked through, about 3-4 minutes. Remove and set aside.
 
-Add more butter if needed. Add the sliced carrots and cook for 3-4 minutes until starting to soften. Add the frozen green beans and white parts of the green onions. Cook another 2 minutes.
+Add more butter if needed. Add the potato cubes and sliced carrots. Cook for 5-6 minutes until potatoes are starting to soften. Add the frozen green beans and white parts of the green onions. Cook another 2 minutes.
 
 Sprinkle flour over the vegetables and stir to coat. Cook for 1 minute. Gradually add chicken stock, stirring constantly to prevent lumps. Add heavy cream and bring to a simmer. The sauce should thicken.
 
