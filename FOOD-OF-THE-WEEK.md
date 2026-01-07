@@ -140,7 +140,7 @@ High-heat sheet pan roast of sausages with sweet bell peppers and red onion unti
 ### Already Prepped
 
 - Italian sausage links are thawed.
-- Rolls are ready.
+- Rolls are frozen, to be baked according to package instructions.
 
 ### Sous Chef - Cooking
 
@@ -148,7 +148,8 @@ Preheat oven to 500°F.
 
 Slice bell peppers into thick strips. Cut red onion into thick wedges through the root so they hold together. Smash several garlic cloves.
 
-Arrange sausage links on a large sheet pan. Scatter the pepper strips, onion wedges, and smashed garlic around the sausages. Drizzle generously with olive oil and a tablespoon of tomato paste. Season vegetables with salt and pepper. Mash everything around until well coated
+Arrange sausage links on a large sheet pan. Scatter the pepper strips, onion wedges, and smashed garlic around the sausages. Drizzle generously with olive oil and a tablespoon of tomato paste. Season vegetables with salt and pepper. Mash everything around until well coated.
+Place the take-and-bake ciabatta dinner rolls on a small tray and slide them into the convection counter oven per the package instructions; aim to start them when the sausages go in so they finish around the same time.
 
 Roast for 25-30 minutes, flipping sausages halfway through, until the sausages are deeply browned and cooked through and the vegetables are soft and caramelized with charred edges.
 
