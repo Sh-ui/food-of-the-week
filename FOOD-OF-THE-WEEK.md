@@ -47,7 +47,7 @@
 - [ ] Rolls
 - [ ] Puff pastry
 
-## ✓ One-Pot Bison Ragu with Udon
+## ✓ Bison Ragu
 
 ##### Prep&Heat
 ###### 4:30 prep salad + chop
@@ -79,7 +79,7 @@ Add the udon noodles directly to the pot along with a splash of water if needed.
 
 Serve in bowls with the dressed salad on the side.
 
-## Chicken Pot Pie
+## ✓ Chicken Pot Pie
 
 ##### Prep&Heat+
 ###### 4:30 prep filling + bake
@@ -123,7 +123,7 @@ Bake for 20 minutes until the puff pastry is deeply golden and puffed, and the f
 
 Let rest for 5 minutes. Scatter sliced green onion tops over the golden crust before serving.
 
-## Sheet Pan Sausage & Peppers
+## Sausage & Peppers
 
 ##### SousChefDish
 ###### prep ingredients + oven roast
