@@ -1,162 +1,200 @@
 <!-- ✓ • https://sh-ui.github.io/food-of-the-week/ -->
 
-# Week of January 5–10, 2026
+# Week of January 12–17, 2026
 
 ## Grocery List
 
 ### Produce
 
+- [x] Carrots
 - [x] Red onions
+- [x] Yellow onions
 - [x] Garlic
-- [x] Whole carrots
-- [x] Frozen chopped cabbage
-- [x] Frozen cut green beans
-- [x] Green onions / scallions
-- [x] Fresh thyme and/or rosemary
-- [ ] Bell peppers
-- [x] American bagged salad
+- [ ] Arugula (or mixed greens)
+- [x] Hearty Greens (kale or collards)
+- [x] Fresh basil or Thai basil
+- [x] Green onions
+- [ ] Fresh cilantro
+- [x] Cauliflower - 1 head
+- [ ] Fresh ginger
 
-### Staples / Pantry
+### Staples
 
-- [x] Brown rice udon noodles
+- [x] Dijon mustard
+- [x] Soy sauce
+- [ ] Jasmine rice
 - [x] Couscous
-- [x] Canned chopped tomatoes
-- [x] Ginger paste
-- [x] Neutral oil
-- [x] Soy sauce / basic umami sauce
-- [x] Ground spices (cumin, coriander, chili flakes)
-- [x] Flour
-- [x] Chicken stock or broth
-- [x] Russet potatoes (2)
+- [x] Dried lentils (brown or green)
+- [x] Bay leaves
+- [x] Plain yogurt
+- [x] Seasonings for curry
+- [ ] Flatbreads or naan
 
 ### Dairy
 
-- [x] Feta cheese
-- [ ] Heavy cream
 - [x] Butter
+- [x] Plain yogurt
 
 ### Protein
 
-- [x] Ground bison (1 lb)
-- [x] Ground beef 85/15 (2 lbs)
-- [x] Italian sausage links (4)
-- [x] Boneless skinless chicken breast (2)
+- [ ] Chicken thighs - 6-8 pieces
+- [ ] Pork Shoulder or Pork Butt (bone out)
+- [x] Ground beef
 
-### Bakery / Frozen
+### Bakery
 
-- [ ] Rolls
-- [ ] Puff pastry
+- [ ] Crusty Bread
 
-## ✓ Bison Ragu
+### Frozens
 
-##### Prep&Heat
-###### 4:30 prep salad + chop
+- [ ] None this week
+
+## French-ish Chicken Thighs + Roots
+
+##### SousVidePrep
+###### 4:30 drop bags
 
 #### Protein:
-Ground bison
+Chicken thighs
 
 #### Ingredients:
-Ground bison, red onion, garlic, canned chopped tomatoes, brown rice udon noodles, bagged salad
+Chicken thighs, Dijon mustard, garlic, fresh thyme, fresh rosemary, olive oil, carrots, parsnips, yellow onions, arugula, lemon, French bread, butter
 
 #### Description:
-A simple, deeply savory weeknight ragu—bison simmered with onions, garlic, and tomatoes, finished directly with udon noodles for a single-pot pasta situation. Paired with a no-effort bag salad.
+Tender chicken thighs sealed with Dijon, herbs, and garlic, sous vide ahead and finished with a hard sear or broiler blast. Root vegetables cooked sous vide separately and rewarmed alongside. Served with peppery arugula, torn French bread, and butter at the table. Comforting, filling, low night-of effort.
 
 ### Already Prepped
 
-- Ground bison is thawed.
+- Chicken thighs are seasoned with Dijon mustard, minced garlic, fresh thyme, fresh rosemary, olive oil, salt, and pepper. Vacuum sealed and stored in fridge.
+- Root vegetables (carrots, parsnips, yellow onions cut into chunks) are cooked sous vide with olive oil, salt, and pepper. Vacuum sealed and stored in fridge.
 
 ### Sous Chef - Prep
 
-Toss the bagged salad with some veg we have hanging around like shredded carrots, cherry tomatoes, etc. Chill in the fridge until ready to dress and plate.
+At 4:30pm, drop both the chicken thigh bags and the root vegetable bags into the sous vide bath (Chef will set temperature remotely from the app to 150°F for reheating).
 
 ### Chef - Finishing & Plating
 
-Dice half a red onion and mince several cloves of garlic. Heat a large pot or Dutch oven over high heat with neutral oil. Add the ground bison and brown hard, breaking it up as it cooks. Don't stir too much—let it get good color.
+Remove chicken and vegetables from bags. Reserve all bag juices. Pat chicken thighs completely dry.
 
-Once browned, add the onion and garlic. Cook until softened, about 3 minutes. Add the canned tomatoes with their juices. Season with salt and pepper. Bring to a simmer and let the sauce develop for 10-15 minutes.
+Heat a large skillet over high heat or preheat broiler. If using skillet, add a drizzle of oil and sear chicken thighs skin-side down until deeply golden and crispy, about 3-4 minutes. Flip and sear other side. If using broiler, arrange thighs on a sheet pan skin-side up and broil until skin is blistered and golden, about 5-7 minutes.
 
-Add the udon noodles directly to the pot along with a splash of water if needed. Stir to coat and cook until the noodles are tender and glossy with sauce, about 5 minutes.
+Warm the root vegetables in a pan with their bag juices if desired, or plate directly.
 
-Serve in bowls with the dressed salad on the side.
+Dress the arugula simply with lemon juice, olive oil, salt, and pepper.
 
-## ✓ Chicken Pot Pie
+Plate: Arrange chicken thighs with root vegetables alongside. Big bowl of dressed arugula in the center of the table. Torn French bread and butter served family-style.
 
-##### Prep&Heat+
-###### 4:30 prep filling + bake
-
-#### Protein:
-Chicken breast
-
-#### Ingredients:
-Boneless skinless chicken breast, russet potatoes (actually I think one of them is a yellow potato but that's okay), frozen cut green beans, whole carrots, heavy cream, butter, flour, chicken stock, fresh thyme and/or rosemary, green onions, puff pastry
-
-#### Description:
-A comforting weeknight pot pie with tender chicken, potatoes, sweet carrots, and green beans in a creamy herb-laced sauce, topped with crisp golden puff pastry. All the warmth of classic pot pie with simplified execution.
-
-### Already Prepped
-
-- Chicken breast is thawed.
-- Frozen green beans are ready.
-- Puff pastry is thawed according to package directions.
-
-### Sous Chef - Prep
-
-At 4:30pm, peel the two russet potatoes and cut into small cubes. Peel and slice the carrots into coins. Cube the chicken breast into bite-sized pieces. Slice the green onions (both white and green parts). Strip fresh thyme leaves from stems (or finely chop rosemary).
-
-Prep the puff pastry: Unfold thawed puff pastry and cut to fit your baking dish (or individual ramekins). Keep chilled until ready to use.
-
-### Chef - Finishing & Plating
-
-Preheat oven to 400°F.
-
-In a large oven-safe skillet or Dutch oven, melt butter over medium-high heat. Add the cubed chicken, season with salt and pepper, and cook until just browned on the outside but not cooked through, about 3-4 minutes. Remove and set aside.
-
-Add more butter if needed. Add the potato cubes and sliced carrots. Cook for 5-6 minutes until potatoes are starting to soften. Add the frozen green beans and white parts of the green onions. Cook another 2 minutes.
-
-Sprinkle flour over the vegetables and stir to coat. Cook for 1 minute. Gradually add chicken stock, stirring constantly to prevent lumps. Add heavy cream and bring to a simmer. The sauce should thicken.
-
-Return the chicken to the pan along with any juices. Add the fresh herbs. Taste and adjust seasoning with salt and pepper.
-
-Lay the puff pastry over the filling, tucking edges down or letting them hang over. Cut a few slits in the top for steam to escape.
-
-Bake for 20 minutes until the puff pastry is deeply golden and puffed, and the filling is bubbling around the edges.
-
-Let rest for 5 minutes. Scatter sliced green onion tops over the golden crust before serving.
-
-## Sausage & Peppers
+## Mediterranean Pork + Sheet-Pan Veg
 
 ##### SousChefDish
-###### prep ingredients + oven roast
+###### 4:30 drop pork + sheet pan
 
 #### Protein:
-Italian sausage links
+Pork shoulder steaks or thick chops
 
 #### Ingredients:
-Italian sausage links, bell peppers, red onion, garlic, olive oil, tomatoe paste,rolls
+Pork shoulder steaks or thick chops, garlic, fresh rosemary, fresh thyme, olive oil, red onion, cabbage, couscous, lemon
 
 #### Description:
-High-heat sheet pan roast of sausages with sweet bell peppers and red onion until blistered and juicy. Served simply with warm rolls for a hands-on, low-effort dinner.
+Pork sealed with Mediterranean herbs, garlic, and olive oil, sous vide ahead and reheated in the bath. Night-of, a sheet pan of cabbage wedges and red onions roasts hard while couscous cooks. Pork is sliced and finished with a drizzle of olive oil and lemon. Bright, hearty, satisfying.
 
 ### Already Prepped
 
-- Italian sausage links are thawed.
-- Rolls are frozen, to be baked according to package instructions.
+- Pork is seasoned with minced garlic, chopped fresh rosemary, fresh thyme, olive oil, salt, and pepper. Vacuum sealed and stored in fridge.
 
 ### Sous Chef - Cooking
 
-Preheat oven to 500°F.
+At 4:30pm, drop the pork bags into the sous vide bath (Chef will set temperature remotely from the app to 140°F for reheating).
 
-Slice bell peppers into thick strips. Cut red onion into thick wedges through the root so they hold together. Smash several garlic cloves.
+Preheat oven to 450°F.
 
-Arrange sausage links on a large sheet pan. Scatter the pepper strips, onion wedges, and smashed garlic around the sausages. Drizzle generously with olive oil and a tablespoon of tomato paste. Season vegetables with salt and pepper. Mash everything around until well coated.
-Place the take-and-bake ciabatta dinner rolls on a small tray and slide them into the convection counter oven per the package instructions; aim to start them when the sausages go in so they finish around the same time.
+Cut cabbage into thick wedges through the core so they hold together. Cut red onion into thick wedges through the root. Arrange on a large sheet pan. Drizzle generously with olive oil, season with salt and pepper. Roast for 25-30 minutes until edges are charred and vegetables are tender.
 
-Roast for 25-30 minutes, flipping sausages halfway through, until the sausages are deeply browned and cooked through and the vegetables are soft and caramelized with charred edges.
-
-Turn oven to warm or lowest setting to keep everything hot until Chef arrives to plate.
+Start couscous in the rice cooker: Add couscous with water or broth per package directions. Season with salt and a drizzle of olive oil. Set to cook and keep on warm.
 
 ### Chef - Finishing & Plating
 
-Warm the rolls in the oven briefly if desired.
+Remove pork from bags. Reserve bag juices. Slice pork against the grain into thick slices.
 
-Serve the roasted sausages and vegetables family-style on a platter, or pile into warm rolls for sausage sandwiches. Make sure everyone gets plenty of the sweet, blistered peppers and onions.
+Arrange sliced pork on a platter. Drizzle with reserved bag juices, a generous pour of good olive oil, and a squeeze of fresh lemon.
+
+Fluff the couscous and spoon onto plates. Top with roasted vegetables and sliced pork. Make sure everyone gets some of that rich pork jus.
+
+## Thai-Adjacent Ground Beef Stir-Fry
+
+##### Prep&Heat
+###### 5:30 rice
+
+#### Protein:
+Ground beef
+
+#### Ingredients:
+Ground beef, red onion, garlic, fresh ginger, Aldi greens (kale or collards), soy sauce, fish sauce (optional), brown sugar, fresh basil or Thai basil, green onions, jasmine rice
+
+#### Description:
+Ground beef cooked hot and fast in a wide pan with aromatics. Big handfuls of Aldi greens wilted directly into the fat. Seasoned with soy, optional fish sauce, and brown sugar for balance. Finished with basil or green onions. Served over rice. One-pan, aggressive, scalable.
+
+### Already Prepped
+
+- Ground beef is thawed.
+- Aldi greens are ready.
+
+### Sous Chef - Prep
+
+At 5:30pm, start jasmine rice in the rice cooker.
+
+### Chef - Finishing & Plating
+
+Dice half a red onion. Mince plenty of garlic (at least 6 cloves). Grate or mince fresh ginger (about 2 tablespoons).
+
+Heat a large wok or wide skillet over high heat with a drizzle of neutral oil. Add the ground beef and let it sit undisturbed for 2 minutes to get a good sear. Break it up and continue cooking until deeply browned.
+
+Add the red onion, garlic, and ginger. Stir-fry for 1-2 minutes until fragrant.
+
+Add big handfuls of the Aldi greens directly to the pan. They'll wilt down quickly in the fat. Stir to combine.
+
+Season with soy sauce, a splash of fish sauce if using, and a spoonful of brown sugar. Taste and adjust—it should be savory, slightly sweet, with good depth.
+
+Finish with torn fresh basil leaves or sliced green onions.
+
+Serve over jasmine rice in bowls. Make sure the greens are well distributed.
+
+## Indian-Style Lentil & Cauliflower
+
+##### SousVidePrep
+###### 4:30 drop bags + warm flatbread
+
+#### Protein:
+Lentils (meatless)
+
+#### Ingredients:
+Dried lentils, cauliflower, olive oil, bay leaves, garlic, yellow onion, ground cumin, ground coriander, turmeric, garam masala, plain yogurt, lemon, red onion (for pickling), white vinegar, flatbreads or naan, fresh cilantro
+
+#### Description:
+Sous vide lentils and cauliflower cooked ahead, both warmed in the bath on the night. Lentils are finished with Indian spices and butter. Cauliflower gets a spice roast treatment. Build-your-own plates with yogurt sauce, pickled onions, and warm flatbreads. Abundant, substantial, and satisfying without feeling like a single lentil blob.
+
+### Already Prepped
+
+- Lentils are cooked sous vide with olive oil, bay leaf, minced garlic, salt, and water until tender. Vacuum sealed and stored in fridge.
+- Cauliflower is cut into florets and cooked sous vide with olive oil, salt, ground cumin, ground coriander, and turmeric until tender. Vacuum sealed and stored in fridge.
+- Quick pickled red onions: Use the jarred pickled red onions from the pantry, or thinly slice red onion and soak in white vinegar with a pinch of salt and sugar. Stored in fridge.
+
+### Sous Chef - Prep
+
+At 4:30pm, drop both the lentil bags and the cauliflower bags into the sous vide bath (Chef will set temperature remotely from the app to 150°F for reheating).
+
+Make yogurt sauce: Whisk together plain yogurt, lemon juice, minced garlic, salt, and a drizzle of olive oil. Taste and adjust. Should be tangy and pourable. Store in fridge until serving.
+
+Warm flatbreads in the oven or wrapped in foil when Chef arrives.
+
+### Chef - Finishing & Plating
+
+Remove lentils and cauliflower from bags. Reserve all bag liquids.
+
+Warm lentils in a pot with their bag liquid. Add a knob of butter, ground cumin, garam masala, and a squeeze of lemon. Taste and adjust seasoning. Should be rich, earthy, and aromatic.
+
+Heat a large skillet over medium-high heat. Add the cauliflower florets and any bag liquid. Let them sizzle and get some color on the edges. Add more cumin, coriander, and garam masala to taste. Finish with a drizzle of olive oil.
+
+Plate family-style: Large bowl of spiced lentils, platter of roasted spiced cauliflower, bowl of yogurt sauce, bowl of pickled red onions, stack of warm flatbreads. Scatter fresh cilantro over everything.
+
+Everyone builds their own plates—flatbread as the base, lentils and cauliflower piled on, drizzled with yogurt sauce, topped with pickled onions and cilantro.
