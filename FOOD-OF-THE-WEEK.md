@@ -49,7 +49,7 @@
 
 - [ ] None this week
 
-## French-ish Chicken Thighs + Roots
+## Chicken + Roots
 
 ##### SousVidePrep
 ###### 4:30 drop bags
@@ -84,7 +84,7 @@ Dress the arugula simply with lemon juice, olive oil, salt, and pepper.
 
 Plate: Arrange chicken thighs with root vegetables alongside. Big bowl of dressed arugula in the center of the table. Torn French bread and butter served family-style.
 
-## Mediterranean Pork + Sheet-Pan Veg
+## Pork + Veg
 
 ##### SousChefDish
 ###### 4:30 drop pork + sheet pan
@@ -120,7 +120,7 @@ Arrange sliced pork on a platter. Drizzle with reserved bag juices, a generous p
 
 Fluff the couscous and spoon onto plates. Top with roasted vegetables and sliced pork. Make sure everyone gets some of that rich pork jus.
 
-## Thai-Adjacent Ground Beef Stir-Fry
+## Thai Beef Stir-Fry
 
 ##### Prep&Heat
 ###### 5:30 rice
@@ -129,10 +129,10 @@ Fluff the couscous and spoon onto plates. Top with roasted vegetables and sliced
 Ground beef
 
 #### Ingredients:
-Ground beef, red onion, garlic, fresh ginger, Aldi greens (kale or collards), soy sauce, fish sauce (optional), brown sugar, fresh basil or Thai basil, green onions, jasmine rice
+Ground beef, red onion, garlic, fresh ginger, greens (kale or collards), soy sauce, fish sauce (optional), brown sugar, fresh basil or Thai basil, green onions, jasmine rice
 
 #### Description:
-Ground beef cooked hot and fast in a wide pan with aromatics. Big handfuls of Aldi greens wilted directly into the fat. Seasoned with soy, optional fish sauce, and brown sugar for balance. Finished with basil or green onions. Served over rice. One-pan, aggressive, scalable.
+Ground beef cooked hot and fast in a wide pan with aromatics. Big handfuls of hearty greens wilted directly into the fat. Seasoned with soy, optional fish sauce, and brown sugar for balance. Finished with basil or green onions. Served over rice. One-pan, aggressive, scalable.
 
 ### Already Prepped
 
