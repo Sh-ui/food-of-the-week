@@ -159,7 +159,7 @@ Finish with torn fresh basil leaves or sliced green onions.
 
 Serve over jasmine rice in bowls. Make sure the greens are well distributed.
 
-## Indian-Style Lentil & Cauliflower
+## Curry Lentils
 
 ##### SousVidePrep
 ###### 4:30 drop bags + warm flatbread
