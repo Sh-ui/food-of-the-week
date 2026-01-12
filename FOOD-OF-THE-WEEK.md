@@ -1,20 +1,19 @@
 <!-- ✓ • https://sh-ui.github.io/food-of-the-week/ -->
 
-# Week of January 12–17, 2026
+# Week of January 12-17, 2026
 
 ## Grocery List
 
 ### Produce
 
 - [x] Carrots
-- [x] Red onions
 - [x] Yellow onions
 - [x] Garlic
-- [ ] Arugula (or mixed greens)
+- [x] Arugula (or mixed greens)
 - [x] Hearty Greens (kale or collards)
 - [x] Fresh basil or Thai basil
 - [x] Green onions
-- [ ] Fresh cilantro
+- [x] Fresh cilantro
 - [x] Cauliflower - 1 head
 - [ ] Fresh ginger
 
@@ -28,7 +27,7 @@
 - [x] Bay leaves
 - [x] Plain yogurt
 - [x] Seasonings for curry
-- [ ] Flatbreads or naan
+- [x] Flatbreads or naan
 
 ### Dairy
 
@@ -37,8 +36,8 @@
 
 ### Protein
 
-- [ ] Chicken thighs - 6-8 pieces
-- [ ] Pork Shoulder or Pork Butt (bone out)
+- [x] Chicken thighs - 6-8 pieces
+- [x] Pork Shoulder or Pork Butt (bone out)
 - [x] Ground beef
 
 ### Bakery

@@ -30,15 +30,18 @@ interface HeroRow {
 function deriveShortTitle(title: string): string {
   const stripped = title.replace(/^(Week|Weekend) of /, '');
   
+  // Normalize en-dashes to hyphens for consistent matching
+  const normalized = stripped.replace(/\u2013/g, '-');
+  
   // Cross-month pattern: "December 29, 2025 - January 2, 2026"
-  const crossMonthMatch = stripped.match(/(\w+)\s+(\d+),\s*\d+\s*-\s*(\w+)\s+(\d+),?\s*\d*/);
+  const crossMonthMatch = normalized.match(/(\w+)\s+(\d+),\s*\d+\s*-\s*(\w+)\s+(\d+),?\s*\d*/);
   if (crossMonthMatch) {
     const [, month1, day1, month2, day2] = crossMonthMatch;
     return `${month1.slice(0, 3)}${day1}-${month2.slice(0, 3)}${day2}`;
   }
   
-  // Same-month pattern: "December 7-13, 2025"
-  const sameMonthMatch = stripped.match(/(\w+)\s+(\d+-\d+),\s*\d+/);
+  // Same-month pattern: "December 7-13, 2025" or "January 12-17, 2026"
+  const sameMonthMatch = normalized.match(/(\w+)\s+(\d+-\d+),\s*\d+/);
   if (sameMonthMatch) {
     const [, month, days] = sameMonthMatch;
     return `${month.slice(0, 3)} ${days}`;
