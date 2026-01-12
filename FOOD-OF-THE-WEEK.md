@@ -44,10 +44,6 @@
 
 - [ ] Crusty Bread
 
-### Frozens
-
-- [ ] None this week
-
 ## Chicken + Roots
 
 ##### SousVidePrep
