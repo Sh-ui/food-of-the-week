@@ -20,8 +20,6 @@
 ### Staples
 
 - [x] Dijon mustard
-- [x] Soy sauce
-- [ ] Jasmine rice
 - [x] Couscous
 - [x] Dried lentils (brown or green)
 - [x] Bay leaves
@@ -38,11 +36,53 @@
 
 - [x] Chicken thighs - 6-8 pieces
 - [x] Pork Shoulder or Pork Butt (bone out)
-- [x] Ground beef
 
 ### Bakery
 
 - [ ] Crusty Bread
+
+## Curry Lentils
+
+##### SousVidePrep
+###### 4:00 sweet potatoes, 5:00 lentils, prep
+
+#### Protein:
+Lentils (meatless)
+
+#### Ingredients:
+Red lentils, salted sweet potatoes, cauliflower, spiced oil, plain yogurt, pita bread, fresh cilantro
+
+#### Description:
+Sweet potatoes and lentils cooked sous vide on staggered timing. Cauliflower cut fresh and roasted hard on a sheet pan with aromatic spices. Plated rustic-style with each component distinct: spiced cauliflower, nutmeg sweet potatoes, seasoned lentils, yogurt, and fresh cilantro. Warm pita as utensil or sandwich wrapper. Abundant, modular, satisfying.
+
+### Already Prepped
+
+- Seasoned red lentils ready in bag (vacuum sealed).
+- Salted sweet potatoes ready in bag, pre-cut (vacuum sealed).
+
+### Sous Chef - Prep
+
+At 4:00pm, drop the sweet potato bags into the sous vide bath (Chef will set temperature remotely from the app to 185°F).
+
+Set a timer for 1 hour.
+
+At 5:00pm, drop the lentil bags into the sous vide bath alongside the sweet potatoes.
+
+Cut cauliflower into florets and set aside.
+
+Chop fresh cilantro and set aside.
+
+### Chef - Finishing & Plating
+
+Preheat oven to 500°F. Toss the cut cauliflower florets with olive oil, black pepper, ground coriander, dried herbs, paprika, and salt. Arrange on a sheet pan and roast for 15 minutes until edges are charred and florets are tender with good color.
+
+Remove sweet potatoes and lentils from bags. Reserve bag juices and use as desired.
+
+Make spiced oil: Heat extra virgin olive oil in the microwave in pulses until aromatic with ground cardamom, nutmeg, and white pepper.
+
+Warm pita bread wrapped in foil in the oven for the last 5 minutes.
+
+Plate rustically: Each plate gets a portion of roasted spiced cauliflower, sweet potatoes, seasoned lentils, a generous glob of plain yogurt, and freshly chopped cilantro scattered over everything. Drizzle the spiced oil over the sweet potatoes and yogurt. Warm pita on the side as eating utensil or sandwich wrapper.
 
 ## Chicken + Roots
 
@@ -153,43 +193,3 @@ Season with soy sauce, a splash of fish sauce if using, and a spoonful of brown 
 Finish with torn fresh basil leaves or sliced green onions.
 
 Serve over jasmine rice in bowls. Make sure the greens are well distributed.
-
-## Curry Lentils
-
-##### SousVidePrep
-###### 4:30 drop bags + warm flatbread
-
-#### Protein:
-Lentils (meatless)
-
-#### Ingredients:
-Dried lentils, cauliflower, olive oil, bay leaves, garlic, yellow onion, ground cumin, ground coriander, turmeric, garam masala, plain yogurt, lemon, red onion (for pickling), white vinegar, flatbreads or naan, fresh cilantro
-
-#### Description:
-Sous vide lentils and cauliflower cooked ahead, both warmed in the bath on the night. Lentils are finished with Indian spices and butter. Cauliflower gets a spice roast treatment. Build-your-own plates with yogurt sauce, pickled onions, and warm flatbreads. Abundant, substantial, and satisfying without feeling like a single lentil blob.
-
-### Already Prepped
-
-- Lentils are cooked sous vide with olive oil, bay leaf, minced garlic, salt, and water until tender. Vacuum sealed and stored in fridge.
-- Cauliflower is cut into florets and cooked sous vide with olive oil, salt, ground cumin, ground coriander, and turmeric until tender. Vacuum sealed and stored in fridge.
-- Quick pickled red onions: Use the jarred pickled red onions from the pantry, or thinly slice red onion and soak in white vinegar with a pinch of salt and sugar. Stored in fridge.
-
-### Sous Chef - Prep
-
-At 4:30pm, drop both the lentil bags and the cauliflower bags into the sous vide bath (Chef will set temperature remotely from the app to 150°F for reheating).
-
-Make yogurt sauce: Whisk together plain yogurt, lemon juice, minced garlic, salt, and a drizzle of olive oil. Taste and adjust. Should be tangy and pourable. Store in fridge until serving.
-
-Warm flatbreads in the oven or wrapped in foil when Chef arrives.
-
-### Chef - Finishing & Plating
-
-Remove lentils and cauliflower from bags. Reserve all bag liquids.
-
-Warm lentils in a pot with their bag liquid. Add a knob of butter, ground cumin, garam masala, and a squeeze of lemon. Taste and adjust seasoning. Should be rich, earthy, and aromatic.
-
-Heat a large skillet over medium-high heat. Add the cauliflower florets and any bag liquid. Let them sizzle and get some color on the edges. Add more cumin, coriander, and garam masala to taste. Finish with a drizzle of olive oil.
-
-Plate family-style: Large bowl of spiced lentils, platter of roasted spiced cauliflower, bowl of yogurt sauce, bowl of pickled red onions, stack of warm flatbreads. Scatter fresh cilantro over everything.
-
-Everyone builds their own plates—flatbread as the base, lentils and cauliflower piled on, drizzled with yogurt sauce, topped with pickled onions and cilantro.
