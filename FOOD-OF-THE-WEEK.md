@@ -44,7 +44,7 @@
 ## Curry Lentils
 
 ##### SousVidePrep
-###### 4:00 sweet potatoes, 5:00 lentils, prep
+###### 5:30 lentils + sweet potatoes, prep
 
 #### Protein:
 Lentils (meatless)
@@ -53,7 +53,7 @@ Lentils (meatless)
 Red lentils, salted sweet potatoes, cauliflower, spiced oil, plain yogurt, pita bread, fresh cilantro
 
 #### Description:
-Sweet potatoes and lentils cooked sous vide on staggered timing. Cauliflower cut fresh and roasted hard on a sheet pan with aromatic spices. Plated rustic-style with each component distinct: spiced cauliflower, nutmeg sweet potatoes, seasoned lentils, yogurt, and fresh cilantro. Warm pita as utensil or sandwich wrapper. Abundant, modular, satisfying.
+Sweet potatoes and lentils cooked sous vide quickly Cauliflower cut fresh and roasted hard on a sheet pan with aromatic spices. Plated rustic-style with each component distinct: spiced cauliflower, nutmeg sweet potatoes, seasoned lentils, yogurt, and fresh cilantro. Warm pita as utensil or sandwich wrapper. Abundant, modular, satisfying.
 
 ### Already Prepped
 
@@ -62,11 +62,7 @@ Sweet potatoes and lentils cooked sous vide on staggered timing. Cauliflower cut
 
 ### Sous Chef - Prep
 
-At 4:00pm, drop the sweet potato bags into the sous vide bath (Chef will set temperature remotely from the app to 185°F).
-
-Set a timer for 1 hour.
-
-At 5:00pm, drop the lentil bags into the sous vide bath alongside the sweet potatoes.
+At 5:30 drop the sweet potato and lentil bags together into the sous vide bath.
 
 Cut cauliflower into florets and set aside.
 
