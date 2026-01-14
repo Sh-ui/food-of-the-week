@@ -62,6 +62,8 @@ Sweet potatoes and lentils cooked sous vide quickly Cauliflower cut fresh and ro
 
 ### Sous Chef - Prep
 
+At 4:30 press the button on the sous vide machine to preheat it.
+
 At 5:30 drop the sweet potato and lentil bags together into the sous vide bath.
 
 Cut cauliflower into florets and set aside.
