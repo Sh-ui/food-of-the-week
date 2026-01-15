@@ -41,7 +41,7 @@
 
 - [ ] Crusty Bread
 
-## Curry Lentils
+## ✓ Curry Lentils
 
 ##### SousVidePrep
 ###### 5:30 lentils + sweet potatoes, prep
@@ -85,13 +85,13 @@ Plate rustically: Each plate gets a portion of roasted spiced cauliflower, sweet
 ## Chicken + Roots
 
 ##### SousVidePrep
-###### 4:30 drop bags
+###### 4:30 chicken and carrots
 
 #### Protein:
 Chicken thighs
 
 #### Ingredients:
-Chicken thighs, Dijon mustard, garlic, fresh thyme, fresh rosemary, olive oil, carrots, parsnips, yellow onions, arugula, lemon, French bread, butter
+Chicken thighs, Dijon mustard, garlic, fresh thyme, fresh rosemary, olive oil, carrots, parsnips, arugula, lemon, French bread, butter
 
 #### Description:
 Tender chicken thighs sealed with Dijon, herbs, and garlic, sous vide ahead and finished with a hard sear or broiler blast. Root vegetables cooked sous vide separately and rewarmed alongside. Served with peppery arugula, torn French bread, and butter at the table. Comforting, filling, low night-of effort.
@@ -99,11 +99,11 @@ Tender chicken thighs sealed with Dijon, herbs, and garlic, sous vide ahead and 
 ### Already Prepped
 
 - Chicken thighs are seasoned with Dijon mustard, minced garlic, fresh thyme, fresh rosemary, olive oil, salt, and pepper. Vacuum sealed and stored in fridge.
-- Root vegetables (carrots, parsnips, yellow onions cut into chunks) are cooked sous vide with olive oil, salt, and pepper. Vacuum sealed and stored in fridge.
+- Root vegetables (carrots, parsnips) are cooked sous vide with olive oil, salt, and pepper. Vacuum sealed and stored in fridge.
 
 ### Sous Chef - Prep
 
-At 4:30pm, drop both the chicken thigh bags and the root vegetable bags into the sous vide bath (Chef will set temperature remotely from the app to 150°F for reheating).
+At 4:30pm, drop both the chicken thigh bags and the root vegetable bags into the aous vide bath.
 
 ### Chef - Finishing & Plating
 
