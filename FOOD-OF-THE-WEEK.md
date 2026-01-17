@@ -82,7 +82,7 @@ Warm pita bread wrapped in foil in the oven for the last 5 minutes.
 
 Plate rustically: Each plate gets a portion of roasted spiced cauliflower, sweet potatoes, seasoned lentils, a generous glob of plain yogurt, and freshly chopped cilantro scattered over everything. Drizzle the spiced oil over the sweet potatoes and yogurt. Warm pita on the side as eating utensil or sandwich wrapper.
 
-## Chicken + Roots
+## ✓ Chicken + Roots
 
 ##### SousVidePrep
 ###### 4:30 chicken and carrots
@@ -117,7 +117,7 @@ Dress the arugula simply with lemon juice, olive oil, salt, and pepper.
 
 Plate: Arrange chicken thighs with root vegetables alongside. Big bowl of dressed arugula in the center of the table. Torn French bread and butter served family-style.
 
-## Pork + Veg
+## ✓ Pork + Veg
 
 ##### SousChefDish
 ###### 4:30 drop pork + sheet pan
@@ -153,7 +153,7 @@ Arrange sliced pork on a platter. Drizzle with reserved bag juices, a generous p
 
 Fluff the couscous and spoon onto plates. Top with roasted vegetables and sliced pork. Make sure everyone gets some of that rich pork jus.
 
-## Thai Beef Stir-Fry
+## ✓ Thai Beef Stir-Fry
 
 ##### Prep&Heat
 ###### 5:30 rice
