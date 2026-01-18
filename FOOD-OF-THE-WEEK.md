@@ -1,193 +1,212 @@
 <!-- ✓ • https://sh-ui.github.io/food-of-the-week/ -->
 
-# Week of January 12-17, 2026
+# Week of January 19-24, 2026
 
 ## Grocery List
 
 ### Produce
 
-- [x] Carrots
+- [ ] New potatoes
+- [ ] Broccoli - 1 large head
+- [ ] Green beans 
+- [ ] Bell peppers
+- [ ] Mushrooms (small container if possible)
+- [ ] Hearty greens (kale or collards)
+- [ ] Celery
 - [x] Yellow onions
-- [x] Garlic
-- [x] Arugula (or mixed greens)
-- [x] Hearty Greens (kale or collards)
-- [x] Fresh basil or Thai basil
-- [x] Green onions
-- [x] Fresh cilantro
-- [x] Cauliflower - 1 head
-- [ ] Fresh ginger
+- [ ] Garlic
+- [x] Lemon
+- [ ] Parsley
+- [ ] Microgreens (optional)
 
 ### Staples
 
-- [x] Dijon mustard
-- [x] Couscous
-- [x] Dried lentils (brown or green)
+- [x] Egg noodles - 1 lb
+- [ ] Rice (need more Jasmine)
+- [ ] Canned whole tomatoes - 2
+- [ ] Black-eyed peas (dried)
+- [x] Flour
+- [ ] Smoked paprika
+- [x] Dried thyme
 - [x] Bay leaves
-- [x] Plain yogurt
-- [x] Seasonings for curry
-- [x] Flatbreads or naan
+- [x] Dried oregano
+- [x] Cayenne pepper
+- [x] Honey
+- [x] Olive oil
+- [ ] Coconut milk (can or carton)
 
 ### Dairy
 
-- [x] Butter
-- [x] Plain yogurt
+- [ ] Mozzarella (low-moisture) - 12 oz
+- [ ] Parmesan or pecorino - 4 oz
+- [ ] Butter
+- [ ] Greek yogurt (whole milk)
 
 ### Protein
 
-- [x] Chicken thighs - 6-8 pieces
-- [x] Pork Shoulder or Pork Butt (bone out)
+- [ ] Whole side of salmon
+- [ ] Boneless skinless chicken thighs
+- [ ] Italian sausage (hot or sweet) - 1 lb
+- [x] Bacon
 
-### Bakery
-
-- [ ] Crusty Bread
-
-## ✓ Curry Lentils
+## Blackened Salmon with Cajun Green Beans
 
 ##### SousVidePrep
-###### 5:30 lentils + sweet potatoes, prep
+###### 3:30 green beans + 5:30 noodles
 
 #### Protein:
-Lentils (meatless)
+Salmon
 
 #### Ingredients:
-Red lentils, salted sweet potatoes, cauliflower, spiced oil, plain yogurt, pita bread, fresh cilantro
+Whole side of salmon, blackening seasoning, green beans, onion, Cajun seasoning, garlic, smoked paprika, butter, lemon, egg noodles
 
 #### Description:
-Sweet potatoes and lentils cooked sous vide quickly Cauliflower cut fresh and roasted hard on a sheet pan with aromatic spices. Plated rustic-style with each component distinct: spiced cauliflower, nutmeg sweet potatoes, seasoned lentils, yogurt, and fresh cilantro. Warm pita as utensil or sandwich wrapper. Abundant, modular, satisfying.
+Side of salmon coated aggressively in blackening spice, torched to set a charred crust, then slow-roasted in a low oven to perfect doneness. The exterior is smoky and spicy, the interior soft and flaky. Green beans are cooked sous vide earlier in the week with diced onions, Cajun spice, butter, garlic, smoked paprika, and lemon. They reheat into a cohesive, buttery side that tastes finished, not just seasoned. Egg noodles are boiled, buttered, and lightly salted as a neutral base to absorb fat and calm the plate.
 
 ### Already Prepped
 
-- Seasoned red lentils ready in bag (vacuum sealed).
-- Salted sweet potatoes ready in bag, pre-cut (vacuum sealed).
+- Green beans are vacuum sealed with diced onion, Cajun seasoning, butter, garlic powder, smoked paprika, and a splash of lemon juice. Stored in fridge.
 
 ### Sous Chef - Prep
 
-At 4:30 press the button on the sous vide machine to preheat it.
+At 3:30pm, drop the green bean bags into the sous vide bath (Chef will set temperature remotely to 185°F).
 
-At 5:30 drop the sweet potato and lentil bags together into the sous vide bath.
-
-Cut cauliflower into florets and set aside.
-
-Chop fresh cilantro and set aside.
+At 5:30pm, start boiling water for egg noodles.
 
 ### Chef - Finishing & Plating
 
-Preheat oven to 500°F. Toss the cut cauliflower florets with olive oil, black pepper, ground coriander, dried herbs, paprika, and salt. Arrange on a sheet pan and roast for 15 minutes until edges are charred and florets are tender with good color.
+Preheat oven to 275°F for slow-roasting.
 
-Remove sweet potatoes and lentils from bags. Reserve bag juices and use as desired.
+Pat the salmon dry. Coat the top side heavily with blackening seasoning, pressing it into the flesh.
 
-Make spiced oil: Heat extra virgin olive oil in the microwave in pulses until aromatic with ground cardamom, nutmeg, and white pepper.
+Using a kitchen torch, sear the seasoned side of the salmon until the spices form a dark crust and smoke rises. Work methodically across the surface.
 
-Warm pita bread wrapped in foil in the oven for the last 5 minutes.
+Transfer the salmon to a baking sheet, torched side up. Roast in the low oven for 12-15 minutes until the salmon flakes easily but stays moist inside.
 
-Plate rustically: Each plate gets a portion of roasted spiced cauliflower, sweet potatoes, seasoned lentils, a generous glob of plain yogurt, and freshly chopped cilantro scattered over everything. Drizzle the spiced oil over the sweet potatoes and yogurt. Warm pita on the side as eating utensil or sandwich wrapper.
+While the salmon roasts, cook the egg noodles according to package directions. Drain, toss with butter and salt.
 
-## ✓ Chicken + Roots
+Remove green beans from the bag, reheat gently in a pan if needed. Taste and adjust seasoning if desired.
 
-##### SousVidePrep
-###### 4:30 chicken and carrots
+Plate: Portion of buttered egg noodles as the base, green beans alongside, and a generous piece of blackened salmon on top. Serve with lemon wedges.
 
-#### Protein:
-Chicken thighs
-
-#### Ingredients:
-Chicken thighs, Dijon mustard, garlic, fresh thyme, fresh rosemary, olive oil, carrots, parsnips, arugula, lemon, French bread, butter
-
-#### Description:
-Tender chicken thighs sealed with Dijon, herbs, and garlic, sous vide ahead and finished with a hard sear or broiler blast. Root vegetables cooked sous vide separately and rewarmed alongside. Served with peppery arugula, torn French bread, and butter at the table. Comforting, filling, low night-of effort.
-
-### Already Prepped
-
-- Chicken thighs are seasoned with Dijon mustard, minced garlic, fresh thyme, fresh rosemary, olive oil, salt, and pepper. Vacuum sealed and stored in fridge.
-- Root vegetables (carrots, parsnips) are cooked sous vide with olive oil, salt, and pepper. Vacuum sealed and stored in fridge.
-
-### Sous Chef - Prep
-
-At 4:30pm, drop both the chicken thigh bags and the root vegetable bags into the aous vide bath.
-
-### Chef - Finishing & Plating
-
-Remove chicken and vegetables from bags. Reserve all bag juices. Pat chicken thighs completely dry.
-
-Heat a large skillet over high heat or preheat broiler. If using skillet, add a drizzle of oil and sear chicken thighs skin-side down until deeply golden and crispy, about 3-4 minutes. Flip and sear other side. If using broiler, arrange thighs on a sheet pan skin-side up and broil until skin is blistered and golden, about 5-7 minutes.
-
-Warm the root vegetables in a pan with their bag juices if desired, or plate directly.
-
-Dress the arugula simply with lemon juice, olive oil, salt, and pepper.
-
-Plate: Arrange chicken thighs with root vegetables alongside. Big bowl of dressed arugula in the center of the table. Torn French bread and butter served family-style.
-
-## ✓ Pork + Veg
+## Sheetpan Chicken with Lemon-Herb Crema
 
 ##### SousChefDish
-###### 4:30 drop pork + sheet pan
+###### 5:15 full sheet pan roast
 
 #### Protein:
-Pork shoulder steaks or thick chops
+Boneless skinless chicken thighs
 
 #### Ingredients:
-Pork shoulder steaks or thick chops, garlic, fresh rosemary, fresh thyme, olive oil, red onion, cabbage, couscous, lemon
+Chicken thighs, new potatoes, broccoli, olive oil, smoked paprika, garlic powder, honey, lemon, parmesan, sour cream or Greek yogurt, scallions or parsley
 
 #### Description:
-Pork sealed with Mediterranean herbs, garlic, and olive oil, sous vide ahead and reheated in the bath. Night-of, a sheet pan of cabbage wedges and red onions roasts hard while couscous cooks. Pork is sliced and finished with a drizzle of olive oil and lemon. Bright, hearty, satisfying.
+Everything roasts together on one sheet pan. Chicken thighs, halved new potatoes, and large broccoli florets are tossed with olive oil, salt, pepper, smoked paprika, and garlic. The pan goes into a hot oven until the potatoes are tender, the broccoli has charred edges, and the chicken is browned and cooked through. When it comes out, a quick drizzle of honey mixed with lemon juice and a dusting of grated parmesan pulls the tray together. A bright lemon-herb crema made with sour cream, lemon, garlic, and fresh herbs is shot over each plate for a zippy, creamy contrast.
 
 ### Already Prepped
 
-- Pork is seasoned with minced garlic, chopped fresh rosemary, fresh thyme, olive oil, salt, and pepper. Vacuum sealed and stored in fridge.
+- Chicken thighs are thawed.
 
 ### Sous Chef - Cooking
 
-At 4:30pm, drop the pork bags into the sous vide bath (Chef will set temperature remotely from the app to 140°F for reheating).
+Preheat oven to 425°F.
 
-Preheat oven to 450°F.
+Cut new potatoes in half (or quarters if large). Cut broccoli into large florets.
 
-Cut cabbage into thick wedges through the core so they hold together. Cut red onion into thick wedges through the root. Arrange on a large sheet pan. Drizzle generously with olive oil, season with salt and pepper. Roast for 25-30 minutes until edges are charred and vegetables are tender.
+On a large sheet pan, arrange chicken thighs, potatoes, and broccoli. Drizzle generously with olive oil. Season with salt, pepper, smoked paprika, and garlic powder. Toss to coat everything evenly.
 
-Start couscous in the rice cooker: Add couscous with water or broth per package directions. Season with salt and a drizzle of olive oil. Set to cook and keep on warm.
+Roast for 30-35 minutes until potatoes are golden and tender, broccoli has charred edges, and chicken is cooked through (internal temp 165°F).
+
+While roasting, make the lemon-herb crema: In a small bowl, mix sour cream (or Greek yogurt), lemon juice, lemon zest, grated or minced garlic, chopped scallions or parsley, salt, pepper, and a touch of honey. Taste and adjust. Set aside.
 
 ### Chef - Finishing & Plating
 
-Remove pork from bags. Reserve bag juices. Slice pork against the grain into thick slices.
+When the sheet pan comes out of the oven, drizzle honey mixed with lemon juice over everything. Dust with grated parmesan.
 
-Arrange sliced pork on a platter. Drizzle with reserved bag juices, a generous pour of good olive oil, and a squeeze of fresh lemon.
+Plate: Arrange chicken, potatoes, and broccoli on each plate. Drizzle or dollop the lemon-herb crema over the top. Garnish with microgreens if available.
 
-Fluff the couscous and spoon onto plates. Top with roasted vegetables and sliced pork. Make sure everyone gets some of that rich pork jus.
+## Sicilian-Style Sheet Pan Pizza
 
-## ✓ Thai Beef Stir-Fry
-
-##### Prep&Heat
-###### 5:30 rice
+##### SousChefDish
+###### pizza dough prepped days ahead
 
 #### Protein:
-Ground beef
+Italian sausage
 
 #### Ingredients:
-Ground beef, red onion, garlic, fresh ginger, greens (kale or collards), soy sauce, fish sauce (optional), brown sugar, fresh basil or Thai basil, green onions, jasmine rice
+Pizza dough (homemade, aged in fridge), canned whole tomatoes, Italian sausage, onion, bell peppers, mushrooms, low-moisture mozzarella, parmesan, olive oil, dried oregano, chili flakes
 
 #### Description:
-Ground beef cooked hot and fast in a wide pan with aromatics. Big handfuls of hearty greens wilted directly into the fat. Seasoned with soy, optional fish sauce, and brown sugar for balance. Finished with basil or green onions. Served over rice. One-pan, aggressive, scalable.
+Thick pizza dough stretched into a sheet pan and baked at high heat until the bottom is crisp and the top is bubbling. Sauce is made simply from crushed canned tomatoes seasoned with salt, pepper, and oregano. Italian sausage is fully cooked and crumbled before topping. Onions, bell peppers, and mushrooms are sliced and layered on generously. Low-moisture mozzarella melts into a golden, bubbling top. Finished with grated parmesan and optional chili oil for heat.
 
 ### Already Prepped
 
-- Ground beef is thawed.
-- Aldi greens are ready.
+- Pizza dough has been made days in advance and aged in the fridge for flavor development.
 
-### Sous Chef - Prep
+### Sous Chef - Cooking
 
-At 5:30pm, start jasmine rice in the rice cooker.
+Remove pizza dough from the fridge and let it come to room temperature for 30-60 minutes.
+
+Preheat oven to 475°F (or as high as your oven goes).
+
+Make the sauce: Crush canned whole tomatoes by hand or pulse briefly in a blender. Season with salt, pepper, dried oregano, and a drizzle of olive oil. Set aside.
+
+Cook the Italian sausage in a skillet over medium-high heat, breaking it into crumbles as it cooks. Cook until fully browned and cooked through. Drain excess fat. Set aside.
+
+Slice onion, bell peppers, and mushrooms thinly.
+
+Stretch the dough to fit a large sheet pan, pressing it into the corners. Drizzle the bottom with olive oil.
+
+Spread the sauce lightly over the dough, leaving a small border. Top with cooked sausage, sliced onions, bell peppers, and mushrooms. Distribute low-moisture mozzarella evenly over the top.
 
 ### Chef - Finishing & Plating
 
-Dice half a red onion. Mince plenty of garlic (at least 6 cloves). Grate or mince fresh ginger (about 2 tablespoons).
+Bake the pizza for 18-22 minutes until the bottom is crisp, the edges are golden, and the cheese is bubbling and lightly browned.
 
-Heat a large wok or wide skillet over high heat with a drizzle of neutral oil. Add the ground beef and let it sit undisturbed for 2 minutes to get a good sear. Break it up and continue cooking until deeply browned.
+Remove from oven. Dust with grated parmesan and optional chili flakes or chili oil.
 
-Add the red onion, garlic, and ginger. Stir-fry for 1-2 minutes until fragrant.
+Let cool for 2-3 minutes, then slice into squares and serve.
 
-Add big handfuls of the Aldi greens directly to the pan. They'll wilt down quickly in the fat. Stir to combine.
+## Gumbo-Style Black-Eyed Peas and Greens
 
-Season with soy sauce, a splash of fish sauce if using, and a spoonful of brown sugar. Taste and adjust—it should be savory, slightly sweet, with good depth.
+##### SousChefDish
+###### 5:00 roux + full stovetop cooking
 
-Finish with torn fresh basil leaves or sliced green onions.
+#### Protein:
+Black-eyed peas (meatless bulk, bacon for flavor)
 
-Serve over jasmine rice in bowls. Make sure the greens are well distributed.
+#### Ingredients:
+Black-eyed peas, bacon, flour, onion, celery, bell pepper, garlic, canned whole tomatoes, hearty greens (kale or collards), coconut milk, dried thyme, bay leaves, smoked paprika, cayenne pepper, rice
+
+#### Description:
+A Creole-spiced gumbo with a roux base, coconut milk for creaminess, black-eyed peas as the hearty bulk, and greens cooked down long and slow. Bacon is rendered first for its fat and crispy bits. The roux is built in the bacon fat and browned to a deep peanut butter color. The holy trinity of onion, celery, and bell pepper goes in with garlic, then Creole spices bloom. Tomatoes, black-eyed peas, and cooking liquid simmer together to develop depth. Greens are added and cooked until tender. Coconut milk finishes the pot with richness. Served over rice with crispy bacon bits on top.
+
+### Already Prepped
+
+- Black-eyed peas are cooked (if using dried, cooked ahead and stored; if using canned, drained and ready).
+
+### Sous Chef - Cooking
+
+Start rice in the rice cooker.
+
+In a large heavy pot or Dutch oven, cook bacon over medium heat until crispy. Remove bacon, chop into bits, and set aside. Leave bacon fat in the pot.
+
+Add flour to the bacon fat (about 1/4 cup flour to 1/4 cup fat). Stir constantly over medium heat to make a roux. Cook, stirring continuously, until the roux turns a deep peanut butter color (10-15 minutes). Do not burn.
+
+Add diced onion, celery, and bell pepper (holy trinity). Stir and cook until vegetables soften, about 5 minutes. Add minced garlic and cook 1 minute more.
+
+Add dried thyme, bay leaves, smoked paprika, cayenne pepper, and a pinch of salt. Stir to bloom the spices.
+
+Add crushed canned whole tomatoes (crush by hand or pulse in blender). Stir to combine.
+
+Add cooked black-eyed peas and enough water or cooking liquid to make a thick stew (about 2-3 cups). Bring to a simmer.
+
+Chop greens (kale or collards) into bite-sized pieces, removing thick stems. Add to the pot. Stir and simmer for 15-20 minutes until greens are tender and flavors meld.
+
+Add frozen corn if desired for sweetness.
+
+Stir in coconut milk. Taste and adjust seasoning (salt, pepper, cayenne for heat).
+
+### Chef - Finishing & Plating
+
+Serve the gumbo over rice in bowls. Top with crispy bacon bits and optional green onions or parsley if available.
