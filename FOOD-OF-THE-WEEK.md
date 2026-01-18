@@ -49,10 +49,10 @@
 - [ ] Italian sausage (hot or sweet) - 1 lb
 - [x] Bacon
 
-## Blackened Salmon with Cajun Green Beans
+## Blackened Salmon
 
-##### SousVidePrep
-###### 3:30 green beans + 5:30 noodles
+##### Prep&Heat+
+###### 5:30 noodles
 
 #### Protein:
 Salmon
@@ -89,9 +89,9 @@ Remove green beans from the bag, reheat gently in a pan if needed. Taste and adj
 
 Plate: Portion of buttered egg noodles as the base, green beans alongside, and a generous piece of blackened salmon on top. Serve with lemon wedges.
 
-## Sheetpan Chicken with Lemon-Herb Crema
+## Lemon Herb Chicken
 
-##### SousChefDish
+##### Prep&Heat+
 ###### 5:15 full sheet pan roast
 
 #### Protein:
@@ -125,10 +125,10 @@ When the sheet pan comes out of the oven, drizzle honey mixed with lemon juice o
 
 Plate: Arrange chicken, potatoes, and broccoli on each plate. Drizzle or dollop the lemon-herb crema over the top. Garnish with microgreens if available.
 
-## Sicilian-Style Sheet Pan Pizza
+## Sicilian Pizza
 
-##### SousChefDish
-###### pizza dough prepped days ahead
+##### Prep&Heat++
+###### assemble and bake
 
 #### Protein:
 Italian sausage
@@ -167,10 +167,10 @@ Remove from oven. Dust with grated parmesan and optional chili flakes or chili o
 
 Let cool for 2-3 minutes, then slice into squares and serve.
 
-## Gumbo-Style Black-Eyed Peas and Greens
+## Creole Curry
 
-##### SousChefDish
-###### 5:00 roux + full stovetop cooking
+##### Prep&Heat+
+###### 5:00 roux + stovetop cook
 
 #### Protein:
 Black-eyed peas (meatless bulk, bacon for flavor)
