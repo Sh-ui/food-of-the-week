@@ -120,7 +120,7 @@ Plate: Arrange **chicken**, **potatoes**, and **broccoli** on each plate. Drizzl
 ## Sicilian Pizza
 
 ##### Prep&Heat++
-###### assemble and bake
+###### 4:00 dough + prep
 
 #### Protein:
 Italian sausage
@@ -137,7 +137,7 @@ Thick pizza dough stretched into a sheet pan and baked at high heat until the bo
 
 ### Sous Chef - Prep
 
-At 4:30 remove pizza dough from the fridge and let it come to room temperature on the counter.
+At 4:00-4:30 remove pizza dough from the fridge and let it come to room temperature on the counter.
 
 Slice half a red onion, One **poblano** pepper, and mushrooms thinly.
 
