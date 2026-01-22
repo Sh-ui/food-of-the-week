@@ -86,7 +86,7 @@ Remove green beans from the bag, and serve hot.
 
 Plate: Portion of buttered *egg noodles* as the base, *green beans* alongside, and a generous piece of blackened *salmon* on top. Serve with lemon wedges.
 
-## Sheetpan Chicken+
+## ✓ Sheetpan Chicken+
 
 ##### Prep&Heat+
 ###### prep veg
@@ -126,38 +126,36 @@ Plate: Arrange **chicken**, **potatoes**, and **broccoli** on each plate. Drizzl
 Italian sausage
 
 #### Ingredients:
-Pizza dough (homemade, aged in fridge), canned whole tomatoes, Italian sausage, onion, bell peppers, mushrooms, low-moisture mozzarella, parmesan, olive oil, dried oregano, chili flakes
+Pizza dough (homemade, aged in fridge), canned whole tomatoes, Italian sausage, onion, poblano pepper, mushrooms, low-moisture mozzarella, parmesan, olive oil, dried oregano.
 
 #### Description:
-Thick pizza dough stretched into a sheet pan and baked at high heat until the bottom is crisp and the top is bubbling. Sauce is made simply from crushed canned tomatoes seasoned with salt, pepper, and oregano. Italian sausage is fully cooked and crumbled before topping. Onions, bell peppers, and mushrooms are sliced and layered on generously. Low-moisture mozzarella melts into a golden, bubbling top. Finished with grated parmesan and optional chili oil for heat.
+Thick pizza dough stretched into a sheet pan and baked at high heat until the bottom is crisp and the top is bubbling.
 
 ### Already Prepped
 
 - Pizza dough has been made days in advance and aged in the fridge for flavor development.
 
-### Sous Chef - Cooking
+### Sous Chef - Prep
 
-Remove pizza dough from the fridge and let it come to room temperature for 30-60 minutes.
+At 4:30 remove pizza dough from the fridge and let it come to room temperature on the counter.
 
-Preheat oven to 475°F (or as high as your oven goes).
+Slice half a red onion, One **poblano** pepper, and mushrooms thinly.
 
-Make the sauce: Crush canned whole tomatoes by hand or pulse briefly in a blender. Season with salt, pepper, dried oregano, and a drizzle of olive oil. Set aside.
+Roll the Italian sausage into little bite size balls and lay them out on a plate so they are ready.
 
-Cook the Italian sausage in a skillet over medium-high heat, breaking it into crumbles as it cooks. Cook until fully browned and cooked through. Drain excess fat. Set aside.
+Unwrap a package of mozzarella cheese sticks and cut them into thick coins, keep the mozerella cheese in a bowl in the fridge.
 
-Slice onion, bell peppers, and mushrooms thinly.
+Preheat oven to 500
 
-Stretch the dough to fit a large sheet pan, pressing it into the corners. Drizzle the bottom with olive oil.
+### Chef - Finishing & Cooking
 
-Spread the sauce lightly over the dough, leaving a small border. Top with cooked sausage, sliced onions, bell peppers, and mushrooms. Distribute low-moisture mozzarella evenly over the top.
+Generously olive oil the heavy sheet pan, pour out and press dough to evenly distribute. Let it relax for a bit.
 
-### Chef - Finishing & Plating
+Make the pizza sauce by crushing or blending the whole canned tomatoes (partially drained), and seasoning to taste with salt, sugar, msg, and oregano.
 
-Bake the pizza for 18-22 minutes until the bottom is crisp, the edges are golden, and the cheese is bubbling and lightly browned.
+Sauce the dough, and grate hard cheese over it, then top with mozzarella and toppings, putting the sausage last to be exposed to full heat.
 
-Remove from oven. Dust with grated parmesan and optional chili flakes or chili oil.
-
-Let cool for 2-3 minutes, then slice into squares and serve.
+Bake until bubbling brown and crispy.
 
 ## Creole Curry
 
