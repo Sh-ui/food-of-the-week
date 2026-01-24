@@ -1,202 +1,154 @@
 <!-- ✓ • https://sh-ui.github.io/food-of-the-week/ -->
 
-# Week of January 19-24, 2026
+# Week of January 26-31, 2026
 
 ## Grocery List
 
 ### Produce
 
-- [ ] New potatoes
-- [ ] Broccoli - 1 large head
-- [ ] Green beans 
-- [ ] Bell peppers
-- [ ] Mushrooms (small container if possible)
-- [ ] Hearty greens (kale or collards)
-- [ ] Celery
+- [x] Potatoes
+- [ ] Carrots
 - [x] Yellow onions
 - [ ] Garlic
-- [x] Lemon
-- [ ] Parsley
-- [ ] Microgreens (optional)
+- [ ] Cherry tomatoes
+- [ ] Red onion
+- [x] Broccoli - 1 large head
+- [ ] Lemons
+- [ ] Fresh parsley
+- [ ] Collard greens (or similar hearty greens)
+- [ ] Golden beets
+- [ ] Red beets
+- [ ] Pomegranate
+- [ ] Bagged salad (American style mix)
+- [ ] Frozen peas
 
 ### Staples
 
-- [x] Egg noodles - 1 lb
-- [ ] Rice (need more Jasmine)
-- [ ] Canned whole tomatoes - 2
-- [ ] Black-eyed peas (dried)
-- [x] Flour
-- [ ] Smoked paprika
-- [x] Dried thyme
-- [x] Bay leaves
-- [x] Dried oregano
-- [x] Cayenne pepper
+- [ ] Japanese curry cubes
+- [ ] Ginger paste
 - [x] Honey
-- [x] Olive oil
-- [ ] Coconut milk (can or carton)
+- [ ] Panko breadcrumbs
+- [ ] Japanese rice
+- [x] Soy sauce
+- [ ] Rice vinegar
+- [ ] Japanese dressing
+- [x] Cooking sake or white wine
+- [x] Couscous
+- [x] Chicken bouillon (powder or cubes)
+- [x] Harissa paste (or similar warm spice paste)
+- [x] Extra virgin olive oil
 
 ### Dairy
 
-- [ ] Mozzarella (low-moisture) - 12 oz
-- [ ] Parmesan or pecorino - 4 oz
 - [ ] Butter
-- [ ] Greek yogurt (whole milk)
 
 ### Protein
 
-- [ ] Whole side of salmon
-- [ ] Boneless skinless chicken thighs
-- [ ] Italian sausage (hot or sweet) - 1 lb
-- [x] Bacon
+- [ ] Ground pork (frozen is fine)
+- [ ] Chicken thighs
+- [ ] Frozen tilapia fillets
 
-## ✓ Blackened Salmon
-
-##### SousVidePrep
-###### 5:30 green beans + 5:45 noodles
-
-#### Protein:
-Salmon
-
-#### Description:
-Side of *salmon* coated aggressively in blackening spice, torched to set a charred crust, then slow-roasted in a low oven to perfect doneness. The exterior is smoky and spicy, the interior soft and flaky. Firecracker *green beans* are cooked sous vide earlier in the week with diced onions, Cajun spice, olive oil, garlic, paprika, and liquid smoke. *Egg noodles* are cooked al dente and tossed lightly with butter and salt as a neutral base to absorb fat and calm the plate.
-
-### Already Prepped
-
-- *Green beans* are vacuum sealed with diced onion, Cajun seasoning, butter, garlic powder, smoked paprika, and a splash of lemon juice. Stored in fridge.
-
-### Sous Chef - Prep
-
-At **5:30pm**, drop the *green bean* bags into the sous vide bath (Chef will set temperature remotely).
-
-At **5:45pm**, start boiling water for *egg noodles*.
-
-### Chef - Finishing & Plating
-
-Preheat oven to **275°F** for slow-roasting.
-
-Pat the *salmon* dry. Coat the top side heavily with blackening seasoning, pressing it into the flesh.
-
-Using a kitchen torch, sear the seasoned side of the *salmon* until the spices form a dark crust and smoke rises. Work methodically across the surface.
-
-Transfer the *salmon* to a baking sheet. Roast in the low oven until a probe reads 125°F.
-
-While the *salmon* roasts, cook the *egg noodles* according to package directions. Drain, toss with butter and salt.
-
-Remove green beans from the bag, and serve hot.
-
-Plate: Portion of buttered *egg noodles* as the base, *green beans* alongside, and a generous piece of blackened *salmon* on top. Serve with lemon wedges.
-
-## ✓ Sheetpan Chicken+
-
-##### Prep&Heat+
-###### prep veg
-
-#### Protein:
-Boneless skinless chicken thighs
-
-#### Description:
-**Chicken** thighs, halved new **potatoes**, and large **broccoli** florets are tossed with olive oil, and seasonings and roasted on high **together** on a **sheet pan**, then finished with a **lemon-herb crema** and microgreens.
-
-### Already Prepped
-
-- **Chicken** thighs are marinated.
-
-### Sous Chef - Prep
-
-Cut new **potatoes** in *half*. Cut **broccoli** into ***large florets***. *Finely* chop **parsley**.
-
-At 6:00pm, preheat oven to **500°F**.
-
-### Chef - Finishing & Plating
-
-Make the **lemon-herb crema**: In a small bowl, combine **yogurt**, chopped **parsley**, pepper, salt, lemon juice, lemon zest, and honey, *sparingly* add water for consistency. ***Taste*** and adjust. Set aside.
-
-On a large sheet pan, drizzle the **potatoes** and **broccoli** generously with olive oil, season well with salt and pepper; toss and massage them to coat evenly. Then add the **chicken thighs** to the same pan, smushing them *evenly spaced* between the vegetables, and distributing **everything** *evenly* as one layer.
-
-Roast for **20-25 minutes** until **potatoes** are golden and tender, **broccoli** has charred edges, and/or when a ***probe*** in the **chicken** reads **165°F**.
-
-Plate: Arrange **chicken**, **potatoes**, and **broccoli** on each plate. Drizzle the **lemon-herb crema** over the top. Garnish with **microgreens**.
-
-## ✓ Sicilian Pizza
+## Sweet Pork Curry
 
 ##### Prep&Heat++
-###### 4:00 dough + prep
+###### prep + toast panko + 5:30 rice
 
 #### Protein:
-Italian sausage
-
-#### Ingredients:
-Pizza dough (homemade, aged in fridge), canned whole tomatoes, Italian sausage, onion, poblano pepper, mushrooms, low-moisture mozzarella, parmesan, olive oil, dried oregano.
+Frozen ground pork
 
 #### Description:
-Thick pizza dough stretched into a sheet pan and baked at high heat until the bottom is crisp and the top is bubbling.
+This is a weeknight-friendly, deconstructed **Japanese pork katsu curry** built around **frozen ground pork**, soft **potatoes** and **carrots**, sweet **yellow onion**, and sweet pops of **frozen peas** simmered in **Japanese curry cubes** loosened with water and a squeeze of **honey** and **ginger paste**. Instead of frying cutlets, **panko breadcrumbs** are toasted separately until crisp and scattered over each plate at the end for the katsu crunch. Everything rides next to a mound of **Japanese rice** with a simple bagged **American salad** on the side dressed in **Japanese dressing** for acid and freshness.
 
 ### Already Prepped
 
-- Pizza dough has been made days in advance and aged in the fridge for flavor development.
+- Ground pork is thawed.
+- Potatoes and carrots are already chopped and cooked sous vide, vacuum sealed in bags. Stored in fridge.
 
 ### Sous Chef - Prep
 
-At 4:00-4:30 remove pizza dough from the fridge and let it come to room temperature on the counter.
+Dice 1 whole yellow onion.
 
-Slice half a red onion, One **poblano** pepper, and mushrooms thinly.
+Toast the panko breadcrumbs: In a dry nonstick skillet over medium heat, toast **panko** until golden brown, stirring frequently. Set aside; they will stay crispy at room temperature.
 
-Roll the Italian sausage into little bite size balls and lay them out on a plate so they are ready.
+At **5:30pm**, start the **Japanese rice** in the rice cooker.
 
-Unwrap a package of mozzarella cheese sticks and cut them into thick coins, keep the mozerella cheese in a bowl in the fridge.
+### Chef - Finishing & Plating
 
-Preheat oven to 500
+In a large pot or Dutch oven over medium-high heat, brown the **ground pork**, breaking it up as it cooks. Once browned, add **ginger paste**, onion paste or jam, and **honey**; cook until fragrant.
 
-### Chef - Finishing & Cooking
+Deglaze with cooking sake or white wine if available, then add water or broth (about 3-4 cups). Bring to a simmer. Break up the **Japanese curry cubes** and stir them into the liquid until completely dissolved and the sauce thickens.
 
-Generously olive oil the heavy sheet pan, pour out and press dough to evenly distribute. Let it relax for a bit.
+Add the already-cooked sous vide **potatoes** and **carrots** (with their cooking liquid) and **frozen peas**. Stir gently and let everything heat through for 2-3 minutes. Taste and adjust seasoning with soy sauce for salt, rice vinegar for acid, and more honey for sweetness if needed.
 
-Make the pizza sauce by crushing or blending the whole canned tomatoes (partially drained), and seasoning to taste with salt, sugar, msg, and oregano.
+To plate, put a rounded mound of **Japanese rice** on each plate. Use the back of a ladle to press a divot into one side of the rice mound (off center so it becomes a crescent). Ladle the **pork curry** into that divot. Add a handful of dressed **salad** on the opposite side of the plate. Right before serving, sprinkle the toasted **panko** generously over the curry portions so it stays crisp.
 
-Sauce the dough, and grate hard cheese over it, then top with mozzarella and toppings, putting the sausage last to be exposed to full heat.
+---
 
-Bake until bubbling brown and crispy.
+## SheetPan Fish
 
-## Creole Curry
-
-##### Prep&Heat+
-###### 5:00 roux + stovetop cook
+##### SousChefDish
+###### 5:30 couscous + oven roast
 
 #### Protein:
-Black-eyed peas (meatless bulk, bacon for flavor)
-
-#### Ingredients:
-Black-eyed peas, bacon, flour, onion, celery, bell pepper, garlic, canned whole tomatoes, hearty greens (kale or collards), coconut milk, dried thyme, bay leaves, smoked paprika, cayenne pepper, rice
+Frozen tilapia
 
 #### Description:
-A Creole-spiced gumbo with a roux base, coconut milk for creaminess, black-eyed peas as the hearty bulk, and greens cooked down long and slow. Bacon is rendered first for its fat and crispy bits. The roux is built in the bacon fat and browned to a deep peanut butter color. The holy trinity of onion, celery, and bell pepper goes in with garlic, then Creole spices bloom. Tomatoes, black-eyed peas, and cooking liquid simmer together to develop depth. Greens are added and cooked until tender. Coconut milk finishes the pot with richness. Served over rice with crispy bacon bits on top.
+This is a high-heat sheet pan roast built around **frozen tilapia** fillets plus whole **cherry tomatoes**, chunky petals of **red onion**, **broccoli florets**, smashed **garlic**, and a spoon or two of **harissa**, all roasted hard with **lemon** wedges. Everything roasts together on one pan while **garlic couscous** steams in the rice cooker. At the end, a shower of chopped **parsley** and a drizzle of good **extra virgin olive oil** for a composed plate
 
 ### Already Prepped
 
-- Black-eyed peas are cooked (if using dried, cooked ahead and stored; if using canned, drained and ready).
+- Frozen tilapia fillets are on hand (no need to thaw).
 
 ### Sous Chef - Cooking
 
-Start rice in the rice cooker.
+Start the garlic couscous in the rice cooker: smash **garlic** cloves directly into the dry couscous, then add to the rice cooker with water or broth. Season with chicken bouillon instead of plain salt and a little white pepper. Set it to cook and then hold on warm until plating.
 
-In a large heavy pot or Dutch oven, cook bacon over medium heat until crispy. Remove bacon, chop into bits, and set aside. Leave bacon fat in the pot.
+Preheat oven to **500°F**. On a large sheet pan (do not overcrowd), arrange: frozen **tilapia** fillets, whole **cherry tomatoes**, **broccoli florets**, and **red onion** cut into petals.
 
-Add flour to the bacon fat (about 1/4 cup flour to 1/4 cup fat). Stir constantly over medium heat to make a roux. Cook, stirring continuously, until the roux turns a deep peanut butter color (10-15 minutes). Do not burn.
+Season everything aggressively: drizzle with **olive oil**, add **harissa**, salt, and pepper (taste a raw tomato or onion to gauge salt). Tuck slices or wedges of **lemon** around the pan.
 
-Add diced onion, celery, and bell pepper (holy trinity). Stir and cook until vegetables soften, about 5 minutes. Add minced garlic and cook 1 minute more.
+Roast for around 15 minutes until the **tilapia** is cooked through and tomatoes are bursting. The fish should flake easily and have some golden edges, and the broccoli should be tender and browned in spots.
 
-Add dried thyme, bay leaves, smoked paprika, cayenne pepper, and a pinch of salt. Stir to bloom the spices.
-
-Add crushed canned whole tomatoes (crush by hand or pulse in blender). Stir to combine.
-
-Add cooked black-eyed peas and enough water or cooking liquid to make a thick stew (about 2-3 cups). Bring to a simmer.
-
-Chop greens (kale or collards) into bite-sized pieces, removing thick stems. Add to the pot. Stir and simmer for 15-20 minutes until greens are tender and flavors meld.
-
-Add frozen corn if desired for sweetness.
-
-Stir in coconut milk. Taste and adjust seasoning (salt, pepper, cayenne for heat).
+When done, turn the oven to warm (or its lowest setting) and leave the sheet pan in the oven. Keep the **couscous** on warm in the rice cooker so everything holds until Chef finishes.
 
 ### Chef - Finishing & Plating
 
-Serve the gumbo over rice in bowls. Top with crispy bacon bits and optional green onions or parsley if available.
+Fluff the **garlic couscous** and spread it as a bed on each plate. Nestle the roasted **tilapia** on top, alongside the **broccoli**, **tomatoes**, and **red onion**.
+
+Roughly chop fresh **parsley** and scatter it generously over everything. Finish with a drizzle of good **extra virgin olive oil** and a squeeze of the closest roasted **lemon** on each plate.
+
+---
+
+## Chicken & Beets
+
+##### SousVidePrep+
+###### 3:30 beets & chicken
+
+#### Protein:
+Chicken thighs
+
+#### Description:
+**Chicken thighs** cooked sous vide, then served hot over a bed of braised **collard greens** with warm **gold and red beets**. Then scattered with **pomegranate seeds** for brightness, and served alongside **crustybread** with butter for a full, composed dinner.
+
+### Already Prepped
+
+- **Chicken thighs** have been seasoned, brined, and vacuum sealed flat in bags. Stored in the fridge.
+- **Golden and red beets** have been vacuum sealed and cooked to perfect temperature. Stored in the fridge, ready to warm.
+
+### Sous Chef - Prep
+
+At **3:30pm**, drop the vacuum-sealed **chicken thigh** bags into the sous vide bath (Chef will set temperature remotely from the app). Drop the vacuum-sealed **gold and red beets** into the same bath alongside the chicken to gently warm them.
+
+Wash, stem, and roughly chop the **collard greens**. Set aside.
+
+Prep a **pomegranate** for garnish by removing the seeds and discarding pith.
+
+### Chef - Finishing & Plating
+
+Remove the **chicken thighs** from the sous vide bags, pat them dry and then torch them for a few minutes to get a nice crust.
+
+Quickly stir-fry the **collard greens** in a large skillet with a bit of oil and salt over medium-high heat until just wilted and still bright.
+
+To plate, arrange the warm **beet** chunks on top of the **collard greens**. Nestle the **chicken thighs** on top for visual impact. Sprinkle **pomegranate seeds** generously for color and acid.
+
+Serve with thick slices of the **crusty bread** and butter on the side.
