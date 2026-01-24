@@ -117,7 +117,7 @@ Roast for **20-25 minutes** until **potatoes** are golden and tender, **broccoli
 
 Plate: Arrange **chicken**, **potatoes**, and **broccoli** on each plate. Drizzle the **lemon-herb crema** over the top. Garnish with **microgreens**.
 
-## Sicilian Pizza
+## ✓ Sicilian Pizza
 
 ##### Prep&Heat++
 ###### 4:00 dough + prep
