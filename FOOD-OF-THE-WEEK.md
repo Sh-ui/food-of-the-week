@@ -48,40 +48,6 @@
 - [ ] Chicken thighs
 - [ ] Frozen tilapia fillets
 
-## Sweet Pork Curry
-
-##### Prep&Heat++
-###### prep + toast panko + 5:30 rice
-
-#### Protein:
-Frozen ground pork
-
-#### Description:
-This is a weeknight-friendly, deconstructed **Japanese pork katsu curry** built around **frozen ground pork**, soft **potatoes** and **carrots**, sweet **yellow onion**, and sweet pops of **frozen peas** simmered in **Japanese curry cubes** loosened with water and a squeeze of **honey** and **ginger paste**. Instead of frying cutlets, **panko breadcrumbs** are toasted separately until crisp and scattered over each plate at the end for the katsu crunch. Everything rides next to a mound of **Japanese rice** with a simple bagged **American salad** on the side dressed in **Japanese dressing** for acid and freshness.
-
-### Already Prepped
-
-- Ground pork is thawed.
-- Potatoes and carrots are already chopped and cooked sous vide, vacuum sealed in bags. Stored in fridge.
-
-### Sous Chef - Prep
-
-Dice 1 whole yellow onion.
-
-Toast the panko breadcrumbs: In a dry nonstick skillet over medium heat, toast **panko** until golden brown, stirring frequently. Set aside; they will stay crispy at room temperature.
-
-At **5:30pm**, start the **Japanese rice** in the rice cooker.
-
-### Chef - Finishing & Plating
-
-In a large pot or Dutch oven over medium-high heat, brown the **ground pork**, breaking it up as it cooks. Once browned, add **ginger paste**, onion paste or jam, and **honey**; cook until fragrant.
-
-Deglaze with cooking sake or white wine if available, then add water or broth (about 3-4 cups). Bring to a simmer. Break up the **Japanese curry cubes** and stir them into the liquid until completely dissolved and the sauce thickens.
-
-Add the already-cooked sous vide **potatoes** and **carrots** (with their cooking liquid) and **frozen peas**. Stir gently and let everything heat through for 2-3 minutes. Taste and adjust seasoning with soy sauce for salt, rice vinegar for acid, and more honey for sweetness if needed.
-
-To plate, put a rounded mound of **Japanese rice** on each plate. Use the back of a ladle to press a divot into one side of the rice mound (off center so it becomes a crescent). Ladle the **pork curry** into that divot. Add a handful of dressed **salad** on the opposite side of the plate. Right before serving, sprinkle the toasted **panko** generously over the curry portions so it stays crisp.
-
 ---
 
 ## SheetPan Fish
@@ -116,6 +82,42 @@ When done, turn the oven to warm (or its lowest setting) and leave the sheet pan
 Fluff the **garlic couscous** and spread it as a bed on each plate. Nestle the roasted **tilapia** on top, alongside the **broccoli**, **tomatoes**, and **red onion**.
 
 Roughly chop fresh **parsley** and scatter it generously over everything. Finish with a drizzle of good **extra virgin olive oil** and a squeeze of the closest roasted **lemon** on each plate.
+
+---
+
+## Sweet Pork Curry
+
+##### Prep&Heat++
+###### prep + toast panko + 5:30 rice
+
+#### Protein:
+Frozen ground pork
+
+#### Description:
+This is a weeknight-friendly, deconstructed **Japanese pork katsu curry** built around **frozen ground pork**, soft **potatoes** and **carrots**, sweet **yellow onion**, and sweet pops of **frozen peas** simmered in **Japanese curry cubes** loosened with water and a squeeze of **honey** and **ginger paste**. Instead of frying cutlets, **panko breadcrumbs** are toasted separately until crisp and scattered over each plate at the end for the katsu crunch. Everything rides next to a mound of **Japanese rice** with a simple bagged **American salad** on the side dressed in **Japanese dressing** for acid and freshness.
+
+### Already Prepped
+
+- Ground pork is thawed.
+- Potatoes and carrots are already chopped and cooked sous vide, vacuum sealed in bags. Stored in fridge.
+
+### Sous Chef - Prep
+
+Dice 1 whole yellow onion.
+
+Toast the panko breadcrumbs: In a dry nonstick skillet over medium heat, toast **panko** until golden brown, stirring frequently. Set aside; they will stay crispy at room temperature.
+
+At **5:30pm**, start the **Japanese rice** in the rice cooker.
+
+### Chef - Finishing & Plating
+
+In a large pot or Dutch oven over medium-high heat, brown the **ground pork**, breaking it up as it cooks. Once browned, add **ginger paste**, onion paste or jam, and **honey**; cook until fragrant.
+
+Deglaze with cooking sake or white wine if available, then add water or broth (about 3-4 cups). Bring to a simmer. Break up the **Japanese curry cubes** and stir them into the liquid until completely dissolved and the sauce thickens.
+
+Add the already-cooked sous vide **potatoes** and **carrots** (with their cooking liquid) and **frozen peas**. Stir gently and let everything heat through for 2-3 minutes. Taste and adjust seasoning with soy sauce for salt, rice vinegar for acid, and more honey for sweetness if needed.
+
+To plate, put a rounded mound of **Japanese rice** on each plate. Use the back of a ladle to press a divot into one side of the rice mound (off center so it becomes a crescent). Ladle the **pork curry** into that divot. Add a handful of dressed **salad** on the opposite side of the plate. Right before serving, sprinkle the toasted **panko** generously over the curry portions so it stays crisp.
 
 ---
 
