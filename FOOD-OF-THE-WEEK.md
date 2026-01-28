@@ -50,7 +50,7 @@
 
 ---
 
-## SheetPan Fish
+## ✓ SheetPan Fish
 
 ##### SousChefDish
 ###### 5:30 couscous + oven roast
@@ -82,6 +82,42 @@ When done, turn the oven to warm (or its lowest setting) and leave the sheet pan
 Fluff the **garlic couscous** and spread it as a bed on each plate. Nestle the roasted **tilapia** on top, alongside the **broccoli**, **tomatoes**, and **red onion**.
 
 Roughly chop fresh **parsley** and scatter it generously over everything. Finish with a drizzle of good **extra virgin olive oil** and a squeeze of the closest roasted **lemon** on each plate.
+
+---
+
+## Chicken & Beets
+
+##### SousVidePrep+
+###### 4:30 chicken,beets + prep
+
+#### Protein:
+Chicken breasts
+
+#### Description:
+**Chicken breast** cooked sous vide, then served hot over a bed of braised **collard greens** with warm **gold and red beets**. Then scattered with **pomegranate seeds** for brightness, and served alongside **crustybread** with butter for a full, composed dinner.
+
+### Already Prepped
+
+- **Chicken breast s** have been seasoned, brined, and vacuum sealed flat in bags. Stored in the fridge.
+- **Golden and red beets** have been vacuum sealed and cooked to perfect temperature. Stored in the fridge, ready to warm.
+
+### Sous Chef - Prep
+
+At **3:30pm**, drop the vacuum-sealed **chicken breast** bags into the sous vide bath (Chef will set temperature remotely from the app). Drop the vacuum-sealed **gold and red beets** into the same bath alongside the chicken to gently warm them.
+
+Wash, stem, and roughly chop the **collard greens**. Set aside.
+
+Prep a **pomegranate** for garnish by removing the seeds and discarding pith.
+
+### Chef - Finishing & Plating
+
+Remove the **chicken breast** from the sous vide bags, pat them dry and then torch them for a few minutes to get a nice crust.
+
+Quickly stir-fry the **collard greens** in a large skillet with a bit of oil and salt over medium-high heat until just wilted and still bright.
+
+To plate, arrange the warm **beet** chunks on top of the **collard greens**. Nestle the **chicken breast** on top for visual impact. Sprinkle **pomegranate seeds** generously for color and acid.
+
+Serve with thick slices of the **crusty bread** and butter on the side.
 
 ---
 
@@ -118,39 +154,3 @@ Deglaze with cooking sake or white wine if available, then add water or broth (a
 Add the already-cooked sous vide **potatoes** and **carrots** (with their cooking liquid) and **frozen peas**. Stir gently and let everything heat through for 2-3 minutes. Taste and adjust seasoning with soy sauce for salt, rice vinegar for acid, and more honey for sweetness if needed.
 
 To plate, put a rounded mound of **Japanese rice** on each plate. Use the back of a ladle to press a divot into one side of the rice mound (off center so it becomes a crescent). Ladle the **pork curry** into that divot. Add a handful of dressed **salad** on the opposite side of the plate. Right before serving, sprinkle the toasted **panko** generously over the curry portions so it stays crisp.
-
----
-
-## Chicken & Beets
-
-##### SousVidePrep+
-###### 3:30 beets & chicken
-
-#### Protein:
-Chicken thighs
-
-#### Description:
-**Chicken thighs** cooked sous vide, then served hot over a bed of braised **collard greens** with warm **gold and red beets**. Then scattered with **pomegranate seeds** for brightness, and served alongside **crustybread** with butter for a full, composed dinner.
-
-### Already Prepped
-
-- **Chicken thighs** have been seasoned, brined, and vacuum sealed flat in bags. Stored in the fridge.
-- **Golden and red beets** have been vacuum sealed and cooked to perfect temperature. Stored in the fridge, ready to warm.
-
-### Sous Chef - Prep
-
-At **3:30pm**, drop the vacuum-sealed **chicken thigh** bags into the sous vide bath (Chef will set temperature remotely from the app). Drop the vacuum-sealed **gold and red beets** into the same bath alongside the chicken to gently warm them.
-
-Wash, stem, and roughly chop the **collard greens**. Set aside.
-
-Prep a **pomegranate** for garnish by removing the seeds and discarding pith.
-
-### Chef - Finishing & Plating
-
-Remove the **chicken thighs** from the sous vide bags, pat them dry and then torch them for a few minutes to get a nice crust.
-
-Quickly stir-fry the **collard greens** in a large skillet with a bit of oil and salt over medium-high heat until just wilted and still bright.
-
-To plate, arrange the warm **beet** chunks on top of the **collard greens**. Nestle the **chicken thighs** on top for visual impact. Sprinkle **pomegranate seeds** generously for color and acid.
-
-Serve with thick slices of the **crusty bread** and butter on the side.
