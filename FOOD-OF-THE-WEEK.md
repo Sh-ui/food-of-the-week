@@ -1,156 +1,185 @@
 <!-- ✓ • https://sh-ui.github.io/food-of-the-week/ -->
 
-# Week of January 26-31, 2026
+# Week of February 9-14, 2026
 
 ## Grocery List
 
 ### Produce
 
-- [x] Potatoes
-- [ ] Carrots
 - [x] Yellow onions
-- [ ] Garlic
-- [ ] Cherry tomatoes
-- [ ] Red onion
-- [x] Broccoli - 1 large head
-- [ ] Lemons
-- [ ] Fresh parsley
-- [ ] Collard greens (or similar hearty greens)
-- [ ] Golden beets
-- [ ] Red beets
-- [ ] Pomegranate
-- [ ] Bagged salad (American style mix)
-- [ ] Frozen peas
+- [x] Garlic
+- [x] Fresh ginger
+- [x] Carrots
+- [x] Green cabbage
+- [x] Collard greens
+- [x] Bell peppers
+- [x] Green onions
+- [x] Cilantro
+- [x] Lemons
+- [x] Spaghetti squash
+- [x] Small potatoes (salvaged sprouting ones from pantry)
 
 ### Staples
 
-- [ ] Japanese curry cubes
-- [ ] Ginger paste
-- [x] Honey
-- [ ] Panko breadcrumbs
-- [ ] Japanese rice
+- [x] Lentils (green or red)
+- [x] Japanese curry cubes
+- [x] Japanese rice
+- [x] Panko breadcrumbs
+- [x] Masa flour
+- [x] Olive oil
 - [x] Soy sauce
-- [ ] Rice vinegar
-- [ ] Japanese dressing
-- [x] Cooking sake or white wine
-- [x] Couscous
-- [x] Chicken bouillon (powder or cubes)
-- [x] Harissa paste (or similar warm spice paste)
-- [x] Extra virgin olive oil
+- [x] Japanese dressing (last of it)
 
 ### Dairy
 
-- [ ] Butter
+- [x] Eggs
+- [x] Greek yogurt
+- [x] Parmesan
 
 ### Protein
 
-- [ ] Ground pork (frozen is fine)
-- [ ] Chicken thighs
-- [ ] Frozen tilapia fillets
+- [x] Ground beef
+- [x] Frozen marinated chicken breasts - 2
+- [x] Frozen fish (tilapia + cod)
+- [x] Chicken parts + carcass (for stock)
 
----
+### Frozens
 
-## ✓ SheetPan Fish
+- [x] Frozen peas
+- [x] Pre-portioned refried beans + rice
 
-##### SousChefDish
-###### 5:30 couscous + oven roast
+## Lentil Curry
+
+##### Prep&Heat+
+###### prep + 5:30 rice
 
 #### Protein:
-Frozen tilapia
+Lentils (meatless)
 
 #### Description:
-This is a high-heat sheet pan roast built around **frozen tilapia** fillets plus whole **cherry tomatoes**, chunky petals of **red onion**, **broccoli florets**, smashed **garlic**, and a spoon or two of **harissa**, all roasted hard with **lemon** wedges. Everything roasts together on one pan while **garlic couscous** steams in the rice cooker. At the end, a shower of chopped **parsley** and a drizzle of good **extra virgin olive oil** for a composed plate
+**Lentils** simmered with diced **onion**, **carrots**, **ginger**, and **garlic** in **homemade chicken stock**, thickened and flavored with **Japanese curry cubes**. Served over **Japanese sticky rice** with a side of crisp shredded **green cabbage** dressed in the last of the **Japanese dressing**.
 
 ### Already Prepped
 
-- Frozen tilapia fillets are on hand (no need to thaw).
-
-### Sous Chef - Cooking
-
-Start the garlic couscous in the rice cooker: smash **garlic** cloves directly into the dry couscous, then add to the rice cooker with water or broth. Season with chicken bouillon instead of plain salt and a little white pepper. Set it to cook and then hold on warm until plating.
-
-Preheat oven to **500°F**. On a large sheet pan (do not overcrowd), arrange: frozen **tilapia** fillets, whole **cherry tomatoes**, **broccoli florets**, and **red onion** cut into petals.
-
-Season everything aggressively: drizzle with **olive oil**, add **harissa**, salt, and pepper (taste a raw tomato or onion to gauge salt). Tuck slices or wedges of **lemon** around the pan.
-
-Roast for around 15 minutes until the **tilapia** is cooked through and tomatoes are bursting. The fish should flake easily and have some golden edges, and the broccoli should be tender and browned in spots.
-
-When done, turn the oven to warm (or its lowest setting) and leave the sheet pan in the oven. Keep the **couscous** on warm in the rice cooker so everything holds until Chef finishes.
-
-### Chef - Finishing & Plating
-
-Fluff the **garlic couscous** and spread it as a bed on each plate. Nestle the roasted **tilapia** on top, alongside the **broccoli**, **tomatoes**, and **red onion**.
-
-Roughly chop fresh **parsley** and scatter it generously over everything. Finish with a drizzle of good **extra virgin olive oil** and a squeeze of the closest roasted **lemon** on each plate.
-
----
-
-## Chicken & Beets
-
-##### SousVidePrep+
-###### 4:30 chicken,beets + prep
-
-#### Protein:
-Chicken breasts
-
-#### Description:
-**Chicken breast** cooked sous vide, then served hot over a bed of braised **collard greens** with warm **gold and red beets**. Then scattered with **pomegranate seeds** for brightness, and served alongside **crustybread** with butter for a full, composed dinner.
-
-### Already Prepped
-
-- **Chicken breast s** have been seasoned, brined, and vacuum sealed flat in bags. Stored in the fridge.
-- **Golden and red beets** have been vacuum sealed and cooked to perfect temperature. Stored in the fridge, ready to warm.
+- **Chicken stock** made early in the week: roast chicken parts + carcass hard in the oven, cover with water in a big pot, simmer *low* for a few hours, strain. Reserve for this meal and the fish cakes.
 
 ### Sous Chef - Prep
 
-At **3:30pm**, drop the vacuum-sealed **chicken breast** bags into the sous vide bath (Chef will set temperature remotely from the app). Drop the vacuum-sealed **gold and red beets** into the same bath alongside the chicken to gently warm them.
+Dice 1 **yellow onion**. Peel and dice 2-3 **carrots**. Mince **garlic** and grate fresh **ginger**.
 
-Wash, stem, and roughly chop the **collard greens**. Set aside.
-
-Prep a **pomegranate** for garnish by removing the seeds and discarding pith.
-
-### Chef - Finishing & Plating
-
-Remove the **chicken breast** from the sous vide bags, pat them dry and then torch them for a few minutes to get a nice crust.
-
-Quickly stir-fry the **collard greens** in a large skillet with a bit of oil and salt over medium-high heat until just wilted and still bright.
-
-To plate, arrange the warm **beet** chunks on top of the **collard greens**. Nestle the **chicken breast** on top for visual impact. Sprinkle **pomegranate seeds** generously for color and acid.
-
-Serve with thick slices of the **crusty bread** and butter on the side.
-
----
-
-## Sweet Pork Curry
-
-##### Prep&Heat++
-###### prep + toast panko + 5:30 rice
-
-#### Protein:
-Frozen ground pork
-
-#### Description:
-This is a weeknight-friendly, deconstructed **Japanese pork katsu curry** built around **frozen ground pork**, soft **potatoes** and **carrots**, sweet **yellow onion**, and sweet pops of **frozen peas** simmered in **Japanese curry cubes** loosened with water and a squeeze of **honey** and **ginger paste**. Instead of frying cutlets, **panko breadcrumbs** are toasted separately until crisp and scattered over each plate at the end for the katsu crunch. Everything rides next to a mound of **Japanese rice** with a simple bagged **American salad** on the side dressed in **Japanese dressing** for acid and freshness.
-
-### Already Prepped
-
-- Ground pork is thawed.
-- Potatoes and carrots are already chopped and cooked sous vide, vacuum sealed in bags. Stored in fridge.
-
-### Sous Chef - Prep
-
-Dice 1 whole yellow onion.
-
-Toast the panko breadcrumbs: In a dry nonstick skillet over medium heat, toast **panko** until golden brown, stirring frequently. Set aside; they will stay crispy at room temperature.
+Shred a quarter head of **green cabbage** thinly. Dress with the **Japanese dressing** and set aside in the fridge.
 
 At **5:30pm**, start the **Japanese rice** in the rice cooker.
 
 ### Chef - Finishing & Plating
 
-In a large pot or Dutch oven over medium-high heat, brown the **ground pork**, breaking it up as it cooks. Once browned, add **ginger paste**, onion paste or jam, and **honey**; cook until fragrant.
+In a large pot over medium heat, saute the **onion** and **carrots** in oil until softened, about 5 minutes. Add **garlic** and **ginger**, cook 1 minute.
 
-Deglaze with cooking sake or white wine if available, then add water or broth (about 3-4 cups). Bring to a simmer. Break up the **Japanese curry cubes** and stir them into the liquid until completely dissolved and the sauce thickens.
+Add rinsed **lentils** and enough **chicken stock** to cover by an inch (3-4 cups). Simmer until lentils are tender -- 20-25 min for red, 30-35 for green.
 
-Add the already-cooked sous vide **potatoes** and **carrots** (with their cooking liquid) and **frozen peas**. Stir gently and let everything heat through for 2-3 minutes. Taste and adjust seasoning with soy sauce for salt, rice vinegar for acid, and more honey for sweetness if needed.
+Break up the **Japanese curry cubes** and stir into the pot until dissolved and the sauce thickens. ***Taste*** and adjust with soy sauce or salt.
 
-To plate, put a rounded mound of **Japanese rice** on each plate. Use the back of a ladle to press a divot into one side of the rice mound (off center so it becomes a crescent). Ladle the **pork curry** into that divot. Add a handful of dressed **salad** on the opposite side of the plate. Right before serving, sprinkle the toasted **panko** generously over the curry portions so it stays crisp.
+Serve over **Japanese rice** with the dressed **cabbage** on the side.
+
+## Fish Cakes & Spaghetti Squash
+
+##### Prep&Heat++
+###### roast squash + boil potatoes + form cakes + slaw
+
+#### Protein:
+Frozen tilapia + Alaskan cod
+
+#### Description:
+Lightly adapted from [Simply Recipes cod fish cakes](https://www.simplyrecipes.com/recipes/cod_fish_cakes/): **flaked fish** and **mashed small potatoes** (salvaged sprouting ones from the pantry) mixed with **panko**, **Parmesan**, **garlic**, **green onion**, **egg**, salt, and pepper, formed into patties and pan-fried *golden*. Served with **lemon** wedges. Alongside roasted **spaghetti squash** scraped into strands with **olive oil**, **garlic**, salt, and pepper, and a quick **cabbage slaw**.
+
+### Already Prepped
+
+- **Chicken stock** made earlier in the week (optional: use to simmer the fish instead of water).
+- Frozen **fish** is thawed.
+
+### Sous Chef - Prep
+
+Cut the **spaghetti squash** in half lengthwise, scoop seeds. Drizzle cut sides with **olive oil**, salt, and pepper. Roast *cut-side down* at **400°F** for 35-40 minutes until tender. Cool slightly, then scrape strands into a bowl.
+
+Boil the **small potatoes** (salvaged sprouting ones) in salted water until tender. Drain and *mash*; set aside.
+
+Simmer the thawed **fish** in water (or **chicken stock**) *covered* until it flakes easily, about 3-5 minutes. Drain, flake with a fork, and *remove any bones*. Combine in a bowl with the **mashed potatoes**, **panko**, grated **Parmesan**, minced **garlic**, chopped **green onion**, **egg**, salt, and pepper. Mix well by hand. *If too crumbly, add another egg; if too sticky, add more panko.* Form into *flat patties* about 3 inches across. Set on a plate in the fridge to firm up.
+
+Make the **slaw**: use the bagged salad kit, or shred remaining **green cabbage** and dress with olive oil, lemon juice, salt, and pepper.
+
+### Chef - Finishing & Plating
+
+Heat a skillet over *medium-high* with a generous pour of **olive oil**. Pan-fry the **fish cakes** until *golden and crispy* on both sides, about 3-4 minutes per side.
+
+Toss the **spaghetti squash** strands with **olive oil**, minced **garlic**, salt, and pepper. Warm gently in a pan or microwave.
+
+Plate: **spaghetti squash** as a bed, **fish cakes** on top, **slaw** alongside. Serve with **lemon** wedges for squeezing over the fish cakes.
+
+## Pad Kra Pao
+
+##### Prep&Heat
+###### 5:30 rice
+
+#### Protein:
+Ground beef
+
+#### Description:
+**Ground beef** cooked *hot and fast* with diced **onion**, **ginger**, **garlic**, and torn **collard greens** in a punchy sauce of **soy sauce**, sugar, and chili. Served over **Japanese rice**.
+
+### Already Prepped
+
+- **Ground beef** is thawed.
+
+### Sous Chef - Prep
+
+At **5:30pm**, start **Japanese rice** in the rice cooker.
+
+Dice half a **yellow onion**. Mince **garlic** (4-5 cloves). Grate **ginger** (about 1 tablespoon). Wash and roughly chop **collard greens**, removing thick stems.
+
+### Chef - Finishing & Plating
+
+Heat a large skillet or wok over *high heat* with oil. Add **ground beef**, let it sit undisturbed for 2 minutes to get a hard sear, then break up and brown deeply.
+
+Add **onion**, **garlic**, and **ginger**. Stir-fry 1-2 minutes until fragrant.
+
+Add the **collard greens**. They wilt fast. Stir to combine.
+
+Season with **soy sauce**, a pinch of sugar, and chili flakes or hot sauce. ***Taste*** and adjust -- savory, a touch sweet, with heat.
+
+Serve over **Japanese rice** in bowls.
+
+## Chicken Tacos
+
+##### Prep&Heat++
+###### tortillas + thaw sides + cook chicken
+
+#### Protein:
+Frozen marinated chicken breasts
+
+#### Description:
+Frozen marinated **chicken breast** (already salty) cooked hard with **cumin** and **paprika**, sliced and served in homemade **corn tortillas** with sauteed **onions** and **green bell pepper**, fresh **cilantro**, and fridge accompaniments like **Greek yogurt** as crema, pickled onions, and salsa. Thawed **refried beans** and **rice** on the side.
+
+### Already Prepped
+
+- **Chicken breasts** are frozen and already marinated (salty -- *skip added salt*).
+- Pre-portioned **refried beans** and **rice** containers in the freezer.
+
+### Sous Chef - Prep
+
+Thaw the **refried beans** and **rice** portions (microwave or stovetop).
+
+Dice 1 **yellow onion**. Slice 1 **green bell pepper** into strips.
+
+Make **corn tortillas**: mix **masa flour** with warm water and a pinch of salt until smooth and pliable. *Rest 15 minutes*. Roll into small balls, press flat between plastic wrap. Cook each on a *dry hot skillet* about 1 minute per side until lightly charred. Stack in a towel to stay warm.
+
+Chop **cilantro**. Set out fridge accompaniments: **Greek yogurt**, pickled red onions, salsa, etc.
+
+### Chef - Finishing & Plating
+
+Cook the **chicken breasts** in a hot skillet with oil. Season generously with **cumin** and **paprika** only -- *no salt*. Cook until *well-browned* and a ***probe*** reads **165°F**. Rest briefly, then slice against the grain.
+
+In the same skillet, saute **onions** and **green pepper** until softened and lightly charred.
+
+Warm **refried beans** and **rice** if not already hot.
+
+Serve family-style: stack of **corn tortillas**, sliced **chicken**, sauteed **peppers and onions**, **cilantro**, and all the fridge accompaniments. **Beans** and **rice** alongside.

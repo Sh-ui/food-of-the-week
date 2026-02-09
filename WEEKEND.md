@@ -1,101 +1,102 @@
 <!-- ✓ • https://sh-ui.github.io/food-of-the-week/weekend -->
 
-# Weekend of December 20-21, 2025
+# Lunches - Week of February 9-14, 2026
 
 ## Grocery List
 
 ### Produce
-- [ ] Fresh rosemary - 1 bunch
-- [ ] Yellow onions - 2 large
-- [ ] Garlic - 1 bulb
-- [ ] Carrots - 1 lb
-- [ ] Yukon gold potatoes - 2 lbs
-- [ ] Brussels sprouts - 1 lb
-- [ ] Mixed greens - 1 bag
-- [ ] Meyer lemons - 2
-- [ ] Fresh thyme - 1 bunch
 
-### Staples
-- [ ] Dijon mustard
-- [ ] Balsamic vinegar
-- [ ] Maple syrup
-- [ ] Panko breadcrumbs
-- [ ] Chicken stock or broth
-
-### Dairy
-- [ ] Heavy cream
-- [ ] Parmesan cheese
+- [ ] Cucumber
 
 ### Protein
-- [ ] Pork tenderloin - 1.5 lbs
-- [ ] Frozen salmon fillets - 4 pieces (6 oz each)
 
-## Pork Tenderloin
+- [ ] Turkey slices (deli)
+- [ ] Ham slices (deli)
+
+### On Hand
+
+- [x] Spinach herb wraps
+- [x] Hummus
+- [x] Green olives
+- [x] Pickled red onions
+- [x] Bacon (dry-cured maple thick cut)
+- [x] Collard greens
+- [x] Frozen hashbrowns (bag)
+- [x] Eggs
+- [x] Beans (pinto or pre-cooked frozen)
+- [x] Frozen ragu marinara
+- [x] Frozen chicken meatballs
+- [x] Pasta (pantry)
+- [x] Parmesan
+- [x] Carrots
+- [x] Yellow onions
+
+## Ragu Meatball Pasta
 
 #### Day:
-Saturday
+Lunch
 
 #### Protein:
-Pork tenderloin
-
-#### Ingredients:
-Pork tenderloin, fresh rosemary, garlic, dijon mustard, maple syrup, balsamic vinegar, yukon gold potatoes, carrots, chicken stock, heavy cream, fresh thyme
+Frozen chicken meatballs
 
 #### Description:
-A weekend-worthy pork tenderloin marinated in rosemary-mustard and roasted with root vegetables. The pork gets a quick sear then finishes in the oven, leaving you free to relax while it cooks. Served with a creamy pan sauce made from the drippings and roasted vegetables.
+Frozen **ragu marinara** simmered with diced **onion** and frozen **chicken meatballs** served over pantry **pasta**, finished with shredded **Parmesan**. Optional steamed **carrots** on the side.
 
-### Sous Chef - Prep
+### Already Prepped
 
-Trim any silver skin from the pork tenderloin and place in a large zip-top bag.
-
-Mix 2 tbsp dijon mustard + 1 tbsp maple syrup + 1 tbsp balsamic vinegar + 2 minced garlic cloves + 1 tbsp chopped fresh rosemary + salt/pepper. Pour over pork, seal bag, and massage to coat evenly. Let marinate on counter while you prep vegetables.
-
-Cut yukon gold potatoes into 1-inch chunks and carrots into ½-inch rounds. Toss with olive oil, salt, pepper, and a few sprigs of fresh thyme.
+- **Ragu** and **meatballs** are in the freezer.
 
 ### Chef - Finishing & Plating
 
-Preheat oven to 425°F.
+Thaw **ragu** and **meatballs** (microwave or stovetop). Dice half an **onion** and saute in a pot until soft. Add **ragu** and **meatballs**, simmer 10-15 minutes until heated through.
 
-Heat an oven-safe skillet over medium-high heat with a drizzle of oil. Sear pork tenderloin on all sides until golden brown, about 2-3 minutes per side.
+Boil **pasta** to package directions. Drain.
 
-Add the seasoned potatoes and carrots to the skillet around the pork. Transfer entire skillet to oven and roast for 20-25 minutes, until pork reaches 145°F internally and vegetables are tender and caramelized.
+Serve **pasta** topped with the **ragu** and **meatballs**. Shred **Parmesan** over the top. Steam **carrots** alongside if desired.
 
-Remove pork to rest, covered with foil. Return vegetables to oven if they need more time.
-
-For the sauce: Add ½ cup chicken stock to the hot skillet, scraping up all the browned bits. Stir in ¼ cup heavy cream and 1 tbsp dijon mustard. Simmer until thickened, about 3 minutes. Taste and adjust seasoning.
-
-Slice pork against the grain and serve with roasted vegetables and a generous drizzle of the creamy pan sauce.
-
-## Maple Salmon & Brussels
+## Brunch Hash
 
 #### Day:
-Sunday
+Brunch
 
 #### Protein:
-Frozen salmon fillets
-
-#### Ingredients:
-Frozen salmon fillets, brussels sprouts, yellow onions, garlic, panko breadcrumbs, parmesan, meyer lemons, mixed greens, balsamic vinegar, maple syrup
+Beans + bacon + eggs
 
 #### Description:
-Sheet-pan salmon and brussels sprouts with a maple-balsamic glaze. The salmon stays moist and flaky while the brussels get crispy and caramelized. Simple, healthy, and satisfying for a relaxed Sunday dinner with plenty of leftovers for quick weekday meals.
+One-skillet brunch: crispy **bacon** rendered for fat, a layer of **hashbrowns** crisped in that fat, **beans** (pinto or white) and torn **collard greens** folded in, then **eggs** cracked on top and cooked under a lid until *just set*. Served straight from the skillet.
 
-### Sous Chef - Prep
+### Already Prepped
 
-Thaw salmon fillets in cold water for 15-20 minutes, then pat dry and season with salt and pepper.
-
-Trim brussels sprouts and cut in half. Slice 1 yellow onion into thin wedges. Toss brussels and onions with olive oil, salt, pepper, and 2 minced garlic cloves.
-
-Mix 2 tbsp maple syrup + 1 tbsp balsamic vinegar + 1 tbsp dijon mustard for the glaze.
+- **Beans** are cooked (use frozen pre-cooked or cook dried ahead).
+- **Hashbrowns** are bagged and ready.
 
 ### Chef - Finishing & Plating
 
-Preheat oven to 425°F.
+In a large cast iron or oven-safe skillet, cook **bacon** over medium heat until crispy. Remove, chop into bits. Leave the fat.
 
-Arrange salmon fillets and brussels sprouts mixture on a large sheet pan. Brush salmon with the maple-balsamic glaze.
+Spread **hashbrowns** in the bacon fat in an *even layer*. Cook *without stirring* over medium heat until the bottom is *golden and crispy*, about 8-10 minutes.
 
-Roast for 15-18 minutes until salmon flakes easily and brussels are crispy and caramelized at the edges.
+Add cooked **beans** and roughly chopped **collard greens**. Stir gently into the hashbrowns. Season with salt, pepper, hot sauce if desired. Cook until greens wilt, 3-4 minutes.
 
-Serve salmon atop the roasted brussels and onions. Squeeze fresh meyer lemon over everything. For extra crispiness, you can sprinkle with panko-parmesan mixture during the last 5 minutes of roasting.
+Make wells in the mixture and crack **eggs** into them. Cover with a lid and cook until whites are *set but yolks are still runny*, about 4-5 minutes.
 
-Pair with a simple mixed greens salad dressed with olive oil, balsamic, and a squeeze of meyer lemon if desired.
+Top with **bacon** bits. Serve *from the skillet*.
+
+## Wrap Lunches
+
+#### Day:
+Lunch (make ahead)
+
+#### Protein:
+Turkey + ham
+
+#### Description:
+**Spinach herb wraps** spread with **hummus**, layered with sliced **turkey**, **ham**, **cucumber**, **green olives**, and **pickled red onions**. Rolled tight and cut in half.
+
+### Chef - Finishing & Plating
+
+Lay out **spinach herb wraps**. Spread a generous layer of **hummus** across each.
+
+Layer: **turkey**, **ham**, sliced **cucumber**, halved **green olives**, a spoonful of **pickled red onions**.
+
+Roll tightly, cut in half. Serve cold or wrap in foil for later.
