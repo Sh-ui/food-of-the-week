@@ -81,7 +81,7 @@ Break up the **Japanese curry cubes** and stir into the pot until dissolved and 
 
 Serve over **Japanese rice** with the dressed **cabbage** on the side.
 
-## Fish Cakes & Spaghetti Squash
+## Fish Cakes
 
 ##### Prep&Heat++
 ###### roast squash + boil potatoes + form cakes + slaw
