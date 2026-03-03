@@ -1,185 +1,185 @@
 <!-- ✓ • https://sh-ui.github.io/food-of-the-week/ -->
 
-# Week of February 9-14, 2026
+# Week of March 2-7, 2026
 
 ## Grocery List
 
 ### Produce
 
-- [x] Yellow onions
-- [x] Garlic
-- [x] Fresh ginger
-- [x] Carrots
-- [x] Green cabbage
-- [x] Collard greens
-- [x] Bell peppers
-- [x] Green onions
-- [x] Cilantro
-- [x] Lemons
-- [x] Spaghetti squash
-- [x] Small potatoes (salvaged sprouting ones from pantry)
+- [ ] Green cabbage - 1 head
 
 ### Staples
 
-- [x] Lentils (green or red)
-- [x] Japanese curry cubes
-- [x] Japanese rice
-- [x] Panko breadcrumbs
-- [x] Masa flour
-- [x] Olive oil
-- [x] Soy sauce
-- [x] Japanese dressing (last of it)
-
-### Dairy
-
-- [x] Eggs
-- [x] Greek yogurt
-- [x] Parmesan
+- [ ] Pitas or naan - 1 pack
 
 ### Protein
 
-- [x] Ground beef
-- [x] Frozen marinated chicken breasts - 2
-- [x] Frozen fish (tilapia + cod)
-- [x] Chicken parts + carcass (for stock)
+- [ ] Ground beef - 1 lb
 
-### Frozens
-
-- [x] Frozen peas
-- [x] Pre-portioned refried beans + rice
-
-## Lentil Curry
-
-##### Prep&Heat+
-###### prep + 5:30 rice
-
-#### Protein:
-Lentils (meatless)
-
-#### Description:
-**Lentils** simmered with diced **onion**, **carrots**, **ginger**, and **garlic** in **homemade chicken stock**, thickened and flavored with **Japanese curry cubes**. Served over **Japanese sticky rice** with a side of crisp shredded **green cabbage** dressed in the last of the **Japanese dressing**.
-
-### Already Prepped
-
-- **Chicken stock** made early in the week: roast chicken parts + carcass hard in the oven, cover with water in a big pot, simmer *low* for a few hours, strain. Reserve for this meal and the fish cakes.
-
-### Sous Chef - Prep
-
-Dice 1 **yellow onion**. Peel and dice 2-3 **carrots**. Mince **garlic** and grate fresh **ginger**.
-
-Shred a quarter head of **green cabbage** thinly. Dress with the **Japanese dressing** and set aside in the fridge.
-
-At **5:30pm**, start the **Japanese rice** in the rice cooker.
-
-### Chef - Finishing & Plating
-
-In a large pot over medium heat, saute the **onion** and **carrots** in oil until softened, about 5 minutes. Add **garlic** and **ginger**, cook 1 minute.
-
-Add rinsed **lentils** and enough **chicken stock** to cover by an inch (3-4 cups). Simmer until lentils are tender -- 20-25 min for red, 30-35 for green.
-
-Break up the **Japanese curry cubes** and stir into the pot until dissolved and the sauce thickens. ***Taste*** and adjust with soy sauce or salt.
-
-Serve over **Japanese rice** with the dressed **cabbage** on the side.
-
-## Fish Cakes
-
-##### Prep&Heat++
-###### roast squash + boil potatoes + form cakes + slaw
-
-#### Protein:
-Frozen tilapia + Alaskan cod
-
-#### Description:
-Lightly adapted from [Simply Recipes cod fish cakes](https://www.simplyrecipes.com/recipes/cod_fish_cakes/): **flaked fish** and **mashed small potatoes** (salvaged sprouting ones from the pantry) mixed with **panko**, **Parmesan**, **garlic**, **green onion**, **egg**, salt, and pepper, formed into patties and pan-fried *golden*. Served with **lemon** wedges. Alongside roasted **spaghetti squash** scraped into strands with **olive oil**, **garlic**, salt, and pepper, and a quick **cabbage slaw**.
-
-### Already Prepped
-
-- **Chicken stock** made earlier in the week (optional: use to simmer the fish instead of water).
-- Frozen **fish** is thawed.
-
-### Sous Chef - Prep
-
-Cut the **spaghetti squash** in half lengthwise, scoop seeds. Drizzle cut sides with **olive oil**, salt, and pepper. Roast *cut-side down* at **400°F** for 35-40 minutes until tender. Cool slightly, then scrape strands into a bowl.
-
-Boil the **small potatoes** (salvaged sprouting ones) in salted water until tender. Drain and *mash*; set aside.
-
-Simmer the thawed **fish** in water (or **chicken stock**) *covered* until it flakes easily, about 3-5 minutes. Drain, flake with a fork, and *remove any bones*. Combine in a bowl with the **mashed potatoes**, **panko**, grated **Parmesan**, minced **garlic**, chopped **green onion**, **egg**, salt, and pepper. Mix well by hand. *If too crumbly, add another egg; if too sticky, add more panko.* Form into *flat patties* about 3 inches across. Set on a plate in the fridge to firm up.
-
-Make the **slaw**: use the bagged salad kit, or shred remaining **green cabbage** and dress with olive oil, lemon juice, salt, and pepper.
-
-### Chef - Finishing & Plating
-
-Heat a skillet over *medium-high* with a generous pour of **olive oil**. Pan-fry the **fish cakes** until *golden and crispy* on both sides, about 3-4 minutes per side.
-
-Toss the **spaghetti squash** strands with **olive oil**, minced **garlic**, salt, and pepper. Warm gently in a pan or microwave.
-
-Plate: **spaghetti squash** as a bed, **fish cakes** on top, **slaw** alongside. Serve with **lemon** wedges for squeezing over the fish cakes.
-
-## Pad Kra Pao
+## One Pot Penne
 
 ##### Prep&Heat
-###### 5:30 rice
+###### chop veggies + bake
 
 #### Protein:
-Ground beef
+Frozen chicken meatballs
 
 #### Description:
-**Ground beef** cooked *hot and fast* with diced **onion**, **ginger**, **garlic**, and torn **collard greens** in a punchy sauce of **soy sauce**, sugar, and chili. Served over **Japanese rice**.
+**Penne**, frozen **chicken meatballs**, and frozen **marinara** cooked together in one pot with diced **bell pepper** and **onion**. **Parmesan** shaved on top.
 
 ### Already Prepped
 
-- **Ground beef** is thawed.
+- Frozen **chicken meatballs** and **marinara** are on hand.
 
 ### Sous Chef - Prep
 
-At **5:30pm**, start **Japanese rice** in the rice cooker.
-
-Dice half a **yellow onion**. Mince **garlic** (4-5 cloves). Grate **ginger** (about 1 tablespoon). Wash and roughly chop **collard greens**, removing thick stems.
+Dice 1 **bell pepper** and half a **yellow onion**.
 
 ### Chef - Finishing & Plating
 
-Heat a large skillet or wok over *high heat* with oil. Add **ground beef**, let it sit undisturbed for 2 minutes to get a hard sear, then break up and brown deeply.
+Preheat oven to 400°F.
 
-Add **onion**, **garlic**, and **ginger**. Stir-fry 1-2 minutes until fragrant.
+In a large pot, heat oil over medium-high. Saute the **onion** and **bell pepper** just until they get a bit of color, about 2 minutes. Add the frozen **marinara** and a splash of water. Once simmering, add the frozen **chicken meatballs** and **penne**. 
 
-Add the **collard greens**. They wilt fast. Stir to combine.
+Stir, push pasta *under the surface of the liquid*. Bake *uncovered* for ***15-25 minutes*** checking halfway through, until the pasta is tender and the sauce is glossy and clinging to the pasta.
 
-Season with **soy sauce**, a pinch of sugar, and chili flakes or hot sauce. ***Taste*** and adjust -- savory, a touch sweet, with heat.
+***Taste*** and adjust with salt, pepper, MSG if you want. Serve in bowls with **Parmesan** shaved over the top.
 
-Serve over **Japanese rice** in bowls.
+## Chicken Shawarma Pitas
 
-## Chicken Tacos
-
-##### Prep&Heat++
-###### tortillas + thaw sides + cook chicken
+##### SousVidePrep
+###### 3:30 chicken + prep
 
 #### Protein:
 Frozen marinated chicken breasts
 
 #### Description:
-Frozen marinated **chicken breast** (already salty) cooked hard with **cumin** and **paprika**, sliced and served in homemade **corn tortillas** with sauteed **onions** and **green bell pepper**, fresh **cilantro**, and fridge accompaniments like **Greek yogurt** as crema, pickled onions, and salsa. Thawed **refried beans** and **rice** on the side.
+The 2 frozen marinated **chicken breasts** cooked sous vide and sliced thin into warm **pitas** with **tzatziki** from **Greek yogurt** and **lemon**, warm spiced **chickpeas**, crumbled **feta**, shredded **cabbage**, and **pickled red onions**. The chicken's saltiness works *for* this application the way doner meat works — sliced thin in a wrap with cooling, bright elements around it.
 
 ### Already Prepped
 
-- **Chicken breasts** are frozen and already marinated (salty -- *skip added salt*).
-- Pre-portioned **refried beans** and **rice** containers in the freezer.
+- **Chicken breasts** are frozen and already heavily marinated (salty — *skip added salt when cooking*).
 
 ### Sous Chef - Prep
 
-Thaw the **refried beans** and **rice** portions (microwave or stovetop).
+Drop the **chicken breasts** into the sous vide bath at **152°F** (Chef will set temperature remotely from the app). Remove from the bag and pat dry, torch briefly for color, then slice thin against the grain.
 
-Dice 1 **yellow onion**. Slice 1 **green bell pepper** into strips.
+Drain and rinse **canned garbanzo beans**. In a skillet over medium heat with a glug of oil, warm the **chickpeas** with **cumin**, **paprika**, minced **garlic**, and a squeeze of **lemon**. Smash some with the back of a spoon, leave others whole. Season with pepper (no salt — the cumin and paprika carry it).
 
-Make **corn tortillas**: mix **masa flour** with warm water and a pinch of salt until smooth and pliable. *Rest 15 minutes*. Roll into small balls, press flat between plastic wrap. Cook each on a *dry hot skillet* about 1 minute per side until lightly charred. Stack in a towel to stay warm.
+Make **tzatziki**: **Greek yogurt**, minced **garlic**, **lemon** juice, salt, pepper.
 
-Chop **cilantro**. Set out fridge accompaniments: **Greek yogurt**, pickled red onions, salsa, etc.
+Shred a quarter of the **cabbage** thinly. Set out **feta**, **pickled red onions**.
+
+Warm the **pitas** in a dry skillet or directly over a burner flame until *pliable and lightly charred*.
 
 ### Chef - Finishing & Plating
 
-Cook the **chicken breasts** in a hot skillet with oil. Season generously with **cumin** and **paprika** only -- *no salt*. Cook until *well-browned* and a ***probe*** reads **165°F**. Rest briefly, then slice against the grain.
+Slice the rested **chicken** thin.
 
-In the same skillet, saute **onions** and **green pepper** until softened and lightly charred.
+Serve family-style: warm **pitas**, sliced **chicken**, bowl of **spiced chickpeas**, **tzatziki**, **feta** crumbles, shredded **cabbage**, **pickled red onions**. Everyone builds their own.
 
-Warm **refried beans** and **rice** if not already hot.
+## Beef Chili
 
-Serve family-style: stack of **corn tortillas**, sliced **chicken**, sauteed **peppers and onions**, **cilantro**, and all the fridge accompaniments. **Beans** and **rice** alongside.
+##### Prep&Heat+
+###### soak beans prev day + 4:00 rice + prep
+
+#### Protein:
+Ground beef + pinto beans
+
+#### Description:
+**Ground beef** browned hard with **onion** and **garlic**, then simmered low with **canned tomatoes** (chopped and whole, crushed by hand), the **pinto beans**, and **spices**. Served over **white or brown rice** topped with shredded **cabbage**, **Greek yogurt**, **pickled red onions**, and **cherry pepper relish** for heat. Makes enough for a full second night of leftovers.
+
+### Already Prepped
+
+- **Pinto beans** soaked and ready to cook
+
+### Sous Chef - Cooking
+
+Start **rice** in the rice cooker.
+
+Dice 1 **yellow onion**. Mince **garlic** (4-5 cloves). Shred some **cabbage** for topping and set aside.
+
+In a large pot or Dutch oven over *high heat*, brown the **ground beef** hard — don't stir it for the first 2 minutes, let it get a real sear, then break up and finish browning.
+
+Bloom spices like **cumin**, **paprika**, **chili powder**, in that hot fat.
+
+Add **onion** and **garlic**, deglaze by adding **canned tomatoes** (crush the whole ones by hand as they go in). Add the **pinto beans**. Season now salt, pepper, a pinch of **sugar** to balance the acid, **MSG** if you want.
+
+Stir, bring to a simmer, then drop to *low*. Let it cook for as long as you have — 30 minutes minimum, longer is better. ***Taste*** and adjust before serving.
+
+### Chef - Finishing & Plating
+
+Ladle **chili** over **rice** in bowls. Top with shredded **cabbage**, a dollop of **Greek yogurt**, **pickled red onions**, and **cherry pepper relish**.
+
+### Leftovers
+
+Makes enough for a second full dinner the next night. Reheat and serve the same way over fresh rice, or with tostada shells if you have them in the pantry.
+
+## Tenderloin & Dutch Babies
+
+##### SousVidePrep+
+###### 3:30 beef + oven dutch babies
+
+#### Protein:
+Frozen grass-fed beef tenderloin
+
+#### Description:
+The **beef tenderloin** cooked sous vide, then seared *ripping hot* for a crust. The bag juices and sear fond deglazed into a quick **gravy**. Alongside: **dutch babies** puffed up golden in the oven (flour, eggs, butter, heavy cream — cheap spectacle), seared **cabbage** wedges charred in the beef pan, and **frozen peas** warmed with **butter**. This is the peak meal. Cook the whole tenderloin — eat steaks tonight, reserve sliced meat for tomorrow's sandwiches.
+
+### Already Prepped
+
+- **Beef tenderloin** has been moved from deep freezer to fridge to thaw (ideally 1-2 days ahead).
+
+### Sous Chef - Prep
+
+Season the thawed **tenderloin** and vacuum seal if not already. Drop into the sous vide bath (Chef sets temperature remotely from the app).
+
+Cut the **cabbage** into thick wedges through the core so they hold together. Set aside.
+
+When sous vide is done, preheat oven to **425°F**. Put a knob of **butter** in a cast iron or oven-safe skillet and place it in the oven to heat.
+
+Make the **dutch baby** batter: whisk **eggs**, **flour**, **heavy cream** (or milk), a pinch of salt and **sugar** until smooth. When the skillet is *screaming hot*, pull it out, pour in the batter, and return to the oven immediately. Bake **18-20 minutes** until *puffed and deeply golden*. Do not open the oven.
+
+### Chef - Finishing & Plating
+
+Remove the **tenderloin** from the bag. Pat *completely dry*. Reserve the bag juices.
+
+Sear the **tenderloin** in a *ripping hot* skillet with oil — hard sear on all sides until a deep crust forms. Remove and rest on a cutting board.
+
+In the same pan with the fond, sear the **cabbage** wedges cut-side down until *charred and golden*, about 3-4 minutes per side. Remove.
+
+Deglaze the pan with the reserved **bag juices**, scraping up browned bits. Let it reduce slightly into a quick **gravy**. Add a knob of **butter** and swirl to finish. ***Taste*** and adjust with salt and pepper.
+
+Warm the **frozen peas** with **butter** in a small pot.
+
+Slice the **tenderloin** into thick medallions. Plate with a wedge of the puffed **dutch baby**, charred **cabbage**, **peas**, and **gravy** spooned over.
+
+### Next Day
+
+Reserve leftover sliced **tenderloin** for tomorrow's steak sandwiches.
+
+## Steak Sandwiches
+
+##### Prep&Heat
+###### assembly only — 15 min
+
+#### Protein:
+Leftover beef tenderloin
+
+#### Description:
+Cold sliced **tenderloin** from last night on toasted **sourdough bread** with melted **American cheese**, **cherry pepper relish**, and **pickled red onions**. Assembly, not cooking. Fifteen minutes.
+
+### Already Prepped
+
+- Sliced **tenderloin** reserved from last night, stored in the fridge.
+- **Sourdough bread**, **American cheese**, **cherry pepper relish**, and **pickled red onions** are all on hand.
+
+### Sous Chef - Prep
+
+Slice the **sourdough bread** thick. Lay out **American cheese** slices, **cherry pepper relish**, **pickled red onions**.
+
+### Chef - Finishing & Plating
+
+Toast the **sourdough** slices. Lay **American cheese** on the warm bread and let it melt (or run under the broiler briefly). Layer cold sliced **tenderloin** on top. Spoon **cherry pepper relish** and pile **pickled red onions** over the meat.
+
+Serve open-faced or closed. No sides needed — this is a hearty sandwich. If you want, warm any leftover **cabbage** or **peas** from last night alongside.
