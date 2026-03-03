@@ -7,14 +7,49 @@
 ### Produce
 
 - [ ] Green cabbage - 1 head
+- [x] Yellow onions
+- [x] Garlic
+- [x] Lemons
+- [x] Bell peppers - 2
 
 ### Staples
 
 - [ ] Pitas or naan - 1 pack
+- [x] Penne - 1 bag
+- [x] Rice
+- [x] Dried pinto beans
+- [x] Canned garbanzo beans
+- [x] Canned tomatoes
+
+### Dairy
+
+- [x] Eggs
+- [x] Greek yogurt
+- [x] Parmesan
+- [x] Feta
+- [x] American cheese
+- [x] Butter
+- [x] Heavy cream
 
 ### Protein
 
 - [ ] Ground beef - 1 lb
+- [x] Frozen chicken meatballs
+- [x] Frozen marinated chicken breasts - 2
+- [x] Frozen grass-fed beef tenderloin
+
+### Frozens
+
+- [x] Frozen marinara (Ragu)
+- [x] Frozen peas
+- [x] Sourdough bread
+
+### Fridge Garnishes
+
+- [x] Pickled red onions
+- [x] Cherry pepper relish
+
+---
 
 ## One Pot Penne
 
@@ -45,7 +80,9 @@ Stir, push pasta *under the surface of the liquid*. Bake *uncovered* for ***15-2
 
 ***Taste*** and adjust with salt, pepper, MSG if you want. Serve in bowls with **Parmesan** shaved over the top.
 
-## Chicken Shawarma Pitas
+---
+
+## Chicken Pitas
 
 ##### SousVidePrep
 ###### 3:30 chicken + prep
@@ -78,7 +115,9 @@ Slice the rested **chicken** thin.
 
 Serve family-style: warm **pitas**, sliced **chicken**, bowl of **spiced chickpeas**, **tzatziki**, **feta** crumbles, shredded **cabbage**, **pickled red onions**. Everyone builds their own.
 
-## Beef Chili
+---
+
+## Chili
 
 ##### Prep&Heat+
 ###### soak beans prev day + 4:00 rice + prep
@@ -115,16 +154,18 @@ Ladle **chili** over **rice** in bowls. Top with shredded **cabbage**, a dollop 
 
 Makes enough for a second full dinner the next night. Reheat and serve the same way over fresh rice, or with tostada shells if you have them in the pantry.
 
-## Tenderloin & Dutch Babies
+---
+
+## Tenderloin & Popovers
 
 ##### SousVidePrep+
-###### 3:30 beef + oven dutch babies
+###### 3:30 beef + prep + oven popovers
 
 #### Protein:
 Frozen grass-fed beef tenderloin
 
 #### Description:
-The **beef tenderloin** cooked sous vide, then seared *ripping hot* for a crust. The bag juices and sear fond deglazed into a quick **gravy**. Alongside: **dutch babies** puffed up golden in the oven (flour, eggs, butter, heavy cream — cheap spectacle), seared **cabbage** wedges charred in the beef pan, and **frozen peas** warmed with **butter**. This is the peak meal. Cook the whole tenderloin — eat steaks tonight, reserve sliced meat for tomorrow's sandwiches.
+The **beef tenderloin** cooked sous vide, then seared *ripping hot* for a crust. The bag juices and sear fond deglazed into a quick **gravy**. Alongside: **popovers** puffed up golden in a muffin tin (flour, eggs, butter, heavy cream — cheap spectacle), seared **cabbage** wedges charred in the beef pan, and **frozen peas** warmed with **butter**. This is the peak meal. Cook the whole tenderloin — eat steaks tonight, reserve sliced meat for tomorrow's sandwiches.
 
 ### Already Prepped
 
@@ -136,9 +177,9 @@ Season the thawed **tenderloin** and vacuum seal if not already. Drop into the s
 
 Cut the **cabbage** into thick wedges through the core so they hold together. Set aside.
 
-When sous vide is done, preheat oven to **425°F**. Put a knob of **butter** in a cast iron or oven-safe skillet and place it in the oven to heat.
+When sous vide is done, preheat oven to **425°F**. Grease the 6-cup **muffin tin** generously with **butter** and place it in the oven to heat.
 
-Make the **dutch baby** batter: whisk **eggs**, **flour**, **heavy cream** (or milk), a pinch of salt and **sugar** until smooth. When the skillet is *screaming hot*, pull it out, pour in the batter, and return to the oven immediately. Bake **18-20 minutes** until *puffed and deeply golden*. Do not open the oven.
+Make the **popover** batter: whisk **eggs**, **flour**, **heavy cream** (or milk), a pinch of salt and **sugar** until smooth. When the tin is *screaming hot*, pull it out, divide the batter evenly across the 6 cups, and return to the oven immediately. Bake **20-25 minutes** until *puffed and deeply golden*. Do not open the oven.
 
 ### Chef - Finishing & Plating
 
@@ -152,34 +193,8 @@ Deglaze the pan with the reserved **bag juices**, scraping up browned bits. Let 
 
 Warm the **frozen peas** with **butter** in a small pot.
 
-Slice the **tenderloin** into thick medallions. Plate with a wedge of the puffed **dutch baby**, charred **cabbage**, **peas**, and **gravy** spooned over.
+Slice the **tenderloin** into thick medallions. Plate with **popovers**, charred **cabbage**, **peas**, and **gravy** spooned over.
 
-### Next Day
+### Leftovers
 
-Reserve leftover sliced **tenderloin** for tomorrow's steak sandwiches.
-
-## Steak Sandwiches
-
-##### Prep&Heat
-###### assembly only — 15 min
-
-#### Protein:
-Leftover beef tenderloin
-
-#### Description:
-Cold sliced **tenderloin** from last night on toasted **sourdough bread** with melted **American cheese**, **cherry pepper relish**, and **pickled red onions**. Assembly, not cooking. Fifteen minutes.
-
-### Already Prepped
-
-- Sliced **tenderloin** reserved from last night, stored in the fridge.
-- **Sourdough bread**, **American cheese**, **cherry pepper relish**, and **pickled red onions** are all on hand.
-
-### Sous Chef - Prep
-
-Slice the **sourdough bread** thick. Lay out **American cheese** slices, **cherry pepper relish**, **pickled red onions**.
-
-### Chef - Finishing & Plating
-
-Toast the **sourdough** slices. Lay **American cheese** on the warm bread and let it melt (or run under the broiler briefly). Layer cold sliced **tenderloin** on top. Spoon **cherry pepper relish** and pile **pickled red onions** over the meat.
-
-Serve open-faced or closed. No sides needed — this is a hearty sandwich. If you want, warm any leftover **cabbage** or **peas** from last night alongside.
+Reserve sliced **tenderloin** for the next day. Toast thick-cut **sourdough**, melt **American cheese** on top, layer cold sliced **tenderloin**, **cherry pepper relish**, and **pickled red onions**. Steak sandwiches — assembly, not cooking, fifteen minutes.
