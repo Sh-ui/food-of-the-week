@@ -121,10 +121,10 @@ Pull any remaining dark meat off the bones. Next day: hot skillet, day-old **bar
 
 ---
 
-## Chicken Alfredo Pizza
+## Alfredo Pizza
 
 ##### SousVidePrep+
-###### sous vide chicken morning + dough from fridge + 5:00 oven
+###### am chicken + 4:00 dough rest + 5:00 oven
 
 #### Protein:
 White meat chicken (breasts, reserved from whole chicken)
@@ -162,7 +162,7 @@ Scatter fresh **parsley** over the whole pan before serving family-style.
 ## Lazy Italioafs
 
 ##### ChefDish++
-###### roll prev day + oven roast + sauce reduction + mash
+###### form prev day + oven roast + sauce + mash
 
 #### Protein:
 Ground meat -- cheapest available (pork, turkey, beef, or sausage)
@@ -187,3 +187,7 @@ Dress **romaine** with olive oil and **balsamic vinegar**, a pinch of salt, just
 ### Chef - Finishing & Plating
 
 Spoon **garlic mash** onto each plate. Nestle the **italioafs** alongside or on top and spoon the reduced **ragu** over them. Scatter **parsley** and grate **Parmesan** generously over everything. **Romaine** salad and **cherry pepper relish** on the table.
+
+### Leftovers
+
+Slice the cold italioafs into thick slabs. Serve on rolls or good bread with any remaining sauce, and add extras like cheese or cherry pepper relish to taste.
