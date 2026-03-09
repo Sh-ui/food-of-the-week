@@ -1,10 +1,12 @@
 ---
-description: Recipe Instruction Format - Three-Phase Workflow
+description: "Writing recipe instructions, three-phase cooking workflow, Already Prepped / Sous Chef / Chef sections, markdown bold italic emphasis, delegation structure for meals"
 alwaysApply: false
 ---
 # Recipe Instruction Format
 
 Guidelines for structuring recipe instructions in the three-phase workflow format that matches the household's actual cooking process.
+
+**Context loading:** If not already loaded, read `brainstorming/idea-basis/cooking-identity.md` for the cook's equipment, technique preferences, and delegation style.
 
 <rule>
 name: recipe-instruction-format
@@ -127,12 +129,17 @@ special_notes:
     timing: "Allows sous chef to focus on prep without worrying about settings"
   markdown_purity:
     - "Let Markdown formatting (bold, italic, strikethrough, blockquotes) render naturally; do not repurpose them as parsing landmarks."
+  
+  markdown_emphasis_conventions:
+    bold: "**text** — All ingredient names throughout Description and instructions"
+    italic: "*text* — Sensory cues, technique emphasis, timing qualifiers (e.g., *ripping hot*, *low*, *charred and golden*)"
+    bold_italic: "***text*** — Critical action moments only: ***Taste***, ***probe***. Used sparingly."
 
 actions:
   - type: enforce
     when: "Writing or editing meal instructions"
     do:
-      - "Use all three phases for every recipe"
+      - "Use the three base phases for every recipe; additional H3 sections (e.g., ### Leftovers) may follow"
       - "Use H3 headings for each phase (no colons)"
       - "Format Already Prepped as bulleted list"
       - "Format Sous Chef and Chef sections as paragraphs"

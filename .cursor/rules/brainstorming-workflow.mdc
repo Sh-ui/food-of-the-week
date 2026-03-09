@@ -1,10 +1,12 @@
 ---
-description: Brainstorming Folder Workflow
+description: "Brainstorming folder workflow, archiving weekly plans, organizing meal ideas, stuff-we-have inventory, idea-basis reference files, old-ideas cleanup"
 alwaysApply: false
 ---
 # Brainstorming Workflow
 
 Rules for using the `brainstorming/` folder during weekly meal planning sessions.
+
+**Context loading:** Before brainstorming or archiving, read `brainstorming/idea-basis/cooking-identity.md` for the cook's profile and preferences.
 
 <rule>
 name: brainstorming-workflow
@@ -26,13 +28,13 @@ folder_structure:
   subdirectories:
     idea_basis:
       path: "brainstorming/idea-basis/"
-      purpose: "Reference documents containing meal planning paradigms, inspirations, and established patterns"
+      purpose: "Reference documents containing the cook's identity, paradigms, inspirations, and established patterns"
       usage: "Consult these files when brainstorming to understand user's cooking style, preferences, and planning approach"
+      key_file: "cooking-identity.md — synthesized profile of the cook's style, preferences, and instincts (READ FIRST)"
       examples:
-        - "meal-planning.txt - Core planning principles"
-        - "f-word-inspo.txt - Flavor inspiration sources"
-        - "quick-meal.txt - Fast weeknight patterns"
-        - "RULE-FRAME.md - Planning framework"
+        - "cooking-identity.md - Cook's full profile and preferences (primary reference)"
+        - "f-word-inspo.txt - F-Word philosophy and flavor inspiration"
+        - "flow-chart.txt - Meal planning decision flow"
     
     old_ideas:
       path: "brainstorming/old-ideas/"
@@ -68,10 +70,9 @@ usage_patterns:
     - "Reference established patterns from idea-basis when suggesting meals"
   
   context_sources:
-    - "brainstorming/idea-basis/meal-planning.txt - Core planning principles"
-    - "brainstorming/idea-basis/f-word-inspo.txt - Flavor inspiration"
-    - "brainstorming/idea-basis/quick-meal.txt - Fast weeknight patterns"
-    - "brainstorming/idea-basis/RULE-FRAME.md - Planning framework"
+    - "brainstorming/idea-basis/cooking-identity.md - Cook's full profile (READ FIRST)"
+    - "brainstorming/idea-basis/f-word-inspo.txt - F-Word philosophy and flavor inspiration"
+    - "brainstorming/idea-basis/flow-chart.txt - Meal planning decision flow"
     - "Any other files in idea-basis/ that contain relevant paradigms"
   
   state: "Work-in-progress, informal, exploratory"
@@ -93,17 +94,17 @@ archiving_process:
   steps:
     1: "Copy entire FOOD-OF-THE-WEEK.md content"
     2: "Create new file: archive/YYYYMMDDsummary.md"
-    3: "Remove all strikethroughs from meal names (e.g., '~~Meal 1: Name~~' → 'Meal 1: Name')"
-    4: "Remove strikethroughs from any other content that may have been marked as completed"
+    3: "Remove ✓ markers from cooked meal headings (e.g., '## ✓ One Pot Penne' → '## One Pot Penne')"
+    4: "Remove any other completion markers from the content"
     5: "Paste cleaned content into archive file"
     6: "Update FOOD-OF-THE-WEEK.md with next week's content"
   
-  strikethrough_removal:
-    pattern: "~~text~~"
+  completion_marker_removal:
+    pattern: "✓ in H2 headings"
     examples:
-      - "~~Meal 1: One Pot Pasta~~" → "Meal 1: One Pot Pasta"
-      - "## ~~Meal 2: Stir Fry~~" → "## Meal 2: Stir Fry"
-    scope: "All meal headings and any other strikethrough text in the document"
+      - "## ✓ One Pot Penne" → "## One Pot Penne"
+      - "## ✓ Tenderloin & Popovers" → "## Tenderloin & Popovers"
+    scope: "All meal headings marked as cooked"
     reason: "Archive files should preserve the final plan without completion markers"
 
 maintenance:
@@ -151,8 +152,8 @@ actions:
   - type: enforce
     when: "Archiving FOOD-OF-THE-WEEK.md to archive/ folder"
     do:
-      - "Remove all strikethroughs (~~text~~) from meal names and headings"
-      - "Remove strikethroughs from any other content marked as completed"
+      - "Remove ✓ markers from cooked meal headings"
+      - "Remove any other completion markers from content"
       - "Create archive file with cleaned content (no completion markers)"
       - "Preserve all other formatting and structure"
 

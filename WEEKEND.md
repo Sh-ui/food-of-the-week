@@ -4,32 +4,9 @@
 
 ## Grocery List
 
-### Produce
-
-- [ ] Cucumber
-
-### Protein
-
-- [ ] Turkey slices (deli)
-- [ ] Ham slices (deli)
-
 ### On Hand
 
-- [x] Spinach herb wraps
-- [x] Hummus
-- [x] Green olives
-- [x] Pickled red onions
-- [x] Bacon (dry-cured maple thick cut)
-- [x] Collard greens
-- [x] Frozen hashbrowns (bag)
-- [x] Eggs
-- [x] Beans (pinto or pre-cooked frozen)
-- [x] Frozen ragu marinara
-- [x] Frozen chicken meatballs
-- [x] Pasta (pantry)
-- [x] Parmesan
-- [x] Carrots
-- [x] Yellow onions
+- [x] Variable
 
 ## Ragu Meatball Pasta
 
@@ -100,3 +77,49 @@ Lay out **spinach herb wraps**. Spread a generous layer of **hummus** across eac
 Layer: **turkey**, **ham**, sliced **cucumber**, halved **green olives**, a spoonful of **pickled red onions**.
 
 Roll tightly, cut in half. Serve cold or wrap in foil for later.
+
+## Tenderloin & Popovers
+
+#### Day:
+Dinner
+
+##### SousVidePrep+
+###### 3:30 beef + prep + oven popovers
+
+#### Protein:
+Frozen grass-fed beef tenderloin
+
+#### Description:
+The **beef tenderloin** cooked sous vide, then seared *ripping hot* for a crust. The bag juices and sear fond deglazed into a quick **gravy**. Alongside: **popovers** puffed up golden in a muffin tin (flour, eggs, butter, heavy cream — cheap spectacle), seared **cabbage** wedges charred in the beef pan, and **frozen peas** warmed with **butter**. This is the peak meal. Cook the whole tenderloin — eat steaks tonight, reserve sliced meat for tomorrow's sandwiches.
+
+### Already Prepped
+
+- **Beef tenderloin** has been moved from deep freezer to fridge to thaw (ideally 1-2 days ahead).
+
+### Sous Chef - Prep
+
+Season the thawed **tenderloin** and vacuum seal if not already. Drop into the sous vide bath (Chef sets temperature remotely from the app).
+
+Cut the **cabbage** into thick wedges through the core so they hold together. Set aside.
+
+When sous vide is done, preheat oven to **425°F**. Grease the 6-cup **muffin tin** generously with **butter** and place it in the oven to heat.
+
+Make the **popover** batter: whisk **eggs**, **flour**, **heavy cream** (or milk), a pinch of salt and **sugar** until smooth. When the tin is *screaming hot*, pull it out, divide the batter evenly across the 6 cups, and return to the oven immediately. Bake **20-25 minutes** until *puffed and deeply golden*. Do not open the oven.
+
+### Chef - Finishing & Plating
+
+Remove the **tenderloin** from the bag. Pat *completely dry*. Reserve the bag juices.
+
+Sear the **tenderloin** in a *ripping hot* skillet with oil — hard sear on all sides until a deep crust forms. Remove and rest on a cutting board.
+
+In the same pan with the fond, sear the **cabbage** wedges cut-side down until *charred and golden*, about 3-4 minutes per side. Remove.
+
+Deglaze the pan with the reserved **bag juices**, scraping up browned bits. Let it reduce slightly into a quick **gravy**. Add a knob of **butter** and swirl to finish. ***Taste*** and adjust with salt and pepper.
+
+Warm the **frozen peas** with **butter** in a small pot.
+
+Slice the **tenderloin** into thick medallions. Plate with **popovers**, charred **cabbage**, **peas**, and **gravy** spooned over.
+
+### Leftovers
+
+Reserve sliced **tenderloin** for the next day. Toast thick-cut **sourdough**, melt **American cheese** on top, layer cold sliced **tenderloin**, **cherry pepper relish**, and **pickled red onions**. Steak sandwiches — assembly, not cooking, fifteen minutes.
