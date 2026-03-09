@@ -1,25 +1,25 @@
-# Two-Phase Week Draft — v2
+# Two-Phase Week Draft -- v2
 
 ## The Real Shape of the Week
 
 - Sunday night: already passed, no dinner needed.
 - Monday + Tuesday: just me and Dad. He's working. Meals need to be morale-boosting, not survival food. Leftovers need to remix into easy lunches/next-day dinners, not reheated sadness.
-- Tuesday night: girls return but it's pizza/dance night — still don't cook for them.
+- Tuesday night: girls return but it's pizza/dance night -- still don't cook for them.
 - Wednesday-Saturday: full house returns to eating together. They want comfort. Schedule is chaotic. Meals need to slide without waste.
 
 ## Ingredient Buckets
 
 ### Use Now
-- Half head of **cabbage** (going bad soon — must be in Phase 1)
-- **Eggs** (1 dozen — breakfast this week, maybe 2-3 available for cooking)
+- Half head of **cabbage** (going bad soon -- must be in Phase 1)
+- **Eggs** (1 dozen -- breakfast this week, maybe 2-3 available for cooking)
 - **Miso** (won't spoil, but good energy to use it in the Asian meal)
 
-### Safe Later (pantry/freezer — no spoilage risk)
-- **Barley** — hearty, luxurious texture, underused
+### Safe Later (pantry/freezer -- no spoilage risk)
+- **Barley** -- hearty, luxurious texture, underused
 - **Japanese white rice** (plenty)
 - **Brown rice** (milled)
 - **Flour** (multiple types including bread flour)
-- **Dry yeast** — no-knead dough costs literally nothing
+- **Dry yeast** -- no-knead dough costs literally nothing
 - **Red lentils**, **green lentils**
 - **Dried Great Northern beans**, **dried pinto beans**
 - Pre-portioned **refried beans** (freezer)
@@ -57,7 +57,7 @@ A whole chicken (~$5-8) broken down is the single smartest protein buy this week
 ## Phase 1 Thinking: Asian Morale Boost (Mon/Tue, just me and Dad)
 
 ### The Direction
-An Asian-inflected chicken and barley braise. Dark meat braised low with the cabbage, ginger, and the Asian pantry. Barley as the grain — chewy, substantial, different from the usual rice. Miso could work as part of the braising liquid or as a finishing element.
+An Asian-inflected chicken and barley braise. Dark meat braised low with the cabbage, ginger, and the Asian pantry. Barley as the grain -- chewy, substantial, different from the usual rice. Miso could work as part of the braising liquid or as a finishing element.
 
 ### Why This Works
 - Burns the cabbage immediately
@@ -68,7 +68,7 @@ An Asian-inflected chicken and barley braise. Dark meat braised low with the cab
 
 ### Smart Leftover Path
 - Night 1: the braise itself, served as a composed bowl with barley
-- Night 2 (or Dad's lunch): shred the leftover chicken, toss with sesame oil and rice wine vinegar, serve cold or warm over rice as a different identity — almost like a chicken salad bowl with Asian dressing. Or fold into a quick brothy noodle situation if we feel like it.
+- Night 2 (or Dad's lunch): shred the leftover chicken, toss with sesame oil and rice wine vinegar, serve cold or warm over rice as a different identity -- almost like a chicken salad bowl with Asian dressing. Or fold into a quick brothy noodle situation if we feel like it.
 
 ### What This Needs Bought
 - **Whole chicken** (the engine)
@@ -83,13 +83,13 @@ An Asian-inflected chicken and barley braise. Dark meat braised low with the cab
 ## Phase 2 Thinking: Comfort for the Girls' Return (Wed-Sat, flexible)
 
 ### The Direction
-The girls want something American and comforting. The no-knead dough is the secret weapon here — it costs almost nothing (flour, yeast, salt, water), takes zero active effort, and makes any meal feel like an event.
+The girls want something American and comforting. The no-knead dough is the secret weapon here -- it costs almost nothing (flour, yeast, salt, water), takes zero active effort, and makes any meal feel like an event.
 
 ### Possible Shapes
 
 **A: Chicken pot pie / stew + crusty bread**
 - Use the white meat from the whole chicken + the carcass stock
-- Classic vegetables (carrots, peas, potatoes — carrots bought for Phase 1, peas in freezer, potatoes are cheap)
+- Classic vegetables (carrots, peas, potatoes -- carrots bought for Phase 1, peas in freezer, potatoes are cheap)
 - Thicken with a roux or just reduce
 - Serve with torn hunks of the no-knead bread
 - This is peak comfort food that looks expensive but costs almost nothing
@@ -103,21 +103,21 @@ The girls want something American and comforting. The no-knead dough is the secr
 - Collard greens from freezer could go alongside or into it
 
 **C: Something masa-based (tostadas, gorditas)**
-- Different direction entirely — uses masa from pantry
+- Different direction entirely -- uses masa from pantry
 - Could layer with refried beans from freezer + the chicken
 - Less "comfort blanket" energy, more fun assembly
 - Might not hit the emotional note the girls want
 
 ### Inventory Amplifiers
 Ingredients worth buying that cross both phases:
-- **Carrots** — into the braise AND the comfort stew
-- **Potatoes** — into the comfort stew, cheap bulk
-- **Ginger** — Asian braise, possibly into stock
+- **Carrots** -- into the braise AND the comfort stew
+- **Potatoes** -- into the comfort stew, cheap bulk
+- **Ginger** -- Asian braise, possibly into stock
 
 ### The No-Knead Dough
 - Mix Sunday night or Monday morning: flour, yeast, salt, water
-- Sits on the counter or in the fridge for days — gets BETTER with time
-- Bake whenever needed — Wednesday, Thursday, whenever the girls' meal happens
+- Sits on the counter or in the fridge for days -- gets BETTER with time
+- Bake whenever needed -- Wednesday, Thursday, whenever the girls' meal happens
 - Costs: ~$0.30
 - Emotional value: enormous
 

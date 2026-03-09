@@ -1,4 +1,4 @@
-# Week of January 5–10, 2026
+# Week of January 5-10, 2026
 
 ## Grocery List
 
@@ -57,7 +57,7 @@ Ground bison
 Ground bison, red onion, garlic, canned chopped tomatoes, brown rice udon noodles, bagged salad
 
 #### Description:
-A simple, deeply savory weeknight ragu—bison simmered with onions, garlic, and tomatoes, finished directly with udon noodles for a single-pot pasta situation. Paired with a no-effort bag salad.
+A simple, deeply savory weeknight ragu--bison simmered with onions, garlic, and tomatoes, finished directly with udon noodles for a single-pot pasta situation. Paired with a no-effort bag salad.
 
 ### Already Prepped
 
@@ -69,7 +69,7 @@ Toss the bagged salad with some veg we have hanging around like shredded carrots
 
 ### Chef - Finishing & Plating
 
-Dice half a red onion and mince several cloves of garlic. Heat a large pot or Dutch oven over high heat with neutral oil. Add the ground bison and brown hard, breaking it up as it cooks. Don't stir too much—let it get good color.
+Dice half a red onion and mince several cloves of garlic. Heat a large pot or Dutch oven over high heat with neutral oil. Add the ground bison and brown hard, breaking it up as it cooks. Don't stir too much--let it get good color.
 
 Once browned, add the onion and garlic. Cook until softened, about 3 minutes. Add the canned tomatoes with their juices. Season with salt and pepper. Bring to a simmer and let the sauce develop for 10-15 minutes.
 

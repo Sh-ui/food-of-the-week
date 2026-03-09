@@ -60,13 +60,13 @@ Trim the woody ends off the asparagus and cut into 2-inch pieces. Slice the shal
 
 Heat a wok or large skillet over high heat. Add oil with a high smoke point (vegetable, grapeseed, or peanut oil).
 
-Stir fry the beef in batches to avoid crowding—you want a good sear. Set aside on a plate.
+Stir fry the beef in batches to avoid crowding--you want a good sear. Set aside on a plate.
 
 In the same pan, add a bit more oil if needed. Stir fry the shallot for 30 seconds until fragrant, then add the asparagus. Cook for 2-3 minutes, tossing frequently, until bright and tender-crisp.
 
 Return the beef to the pan. Add a quick sauce: soy sauce, a splash of rice vinegar or rice wine, maybe a touch of honey or sugar, and garlic/ginger if you have them. Toss everything together for about 30 seconds.
 
-Plate over the brown rice. Top with a generous handful of the bok choy microgreens—they'll wilt slightly from the heat and add a fresh, peppery finish.
+Plate over the brown rice. Top with a generous handful of the bok choy microgreens--they'll wilt slightly from the heat and add a fresh, peppery finish.
 
 
 ## Meal 2: One Pot Pasta

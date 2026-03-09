@@ -131,9 +131,9 @@ special_notes:
     - "Let Markdown formatting (bold, italic, strikethrough, blockquotes) render naturally; do not repurpose them as parsing landmarks."
   
   markdown_emphasis_conventions:
-    bold: "**text** — All ingredient names throughout Description and instructions"
-    italic: "*text* — Sensory cues, technique emphasis, timing qualifiers (e.g., *ripping hot*, *low*, *charred and golden*)"
-    bold_italic: "***text*** — Critical action moments only: ***Taste***, ***probe***. Used sparingly."
+    bold: "**text** -- All ingredient names throughout Description and instructions"
+    italic: "*text* -- Sensory cues, technique emphasis, timing qualifiers (e.g., *ripping hot*, *low*, *charred and golden*)"
+    bold_italic: "***text*** -- Critical action moments only: ***Taste***, ***probe***. Used sparingly."
 
 actions:
   - type: enforce

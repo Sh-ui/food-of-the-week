@@ -186,7 +186,7 @@ Add the red onion, garlic, and ginger. Stir-fry for 1-2 minutes until fragrant.
 
 Add big handfuls of the Aldi greens directly to the pan. They'll wilt down quickly in the fat. Stir to combine.
 
-Season with soy sauce, a splash of fish sauce if using, and a spoonful of brown sugar. Taste and adjust—it should be savory, slightly sweet, with good depth.
+Season with soy sauce, a splash of fish sauce if using, and a spoonful of brown sugar. Taste and adjust--it should be savory, slightly sweet, with good depth.
 
 Finish with torn fresh basil leaves or sliced green onions.
 

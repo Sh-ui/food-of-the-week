@@ -107,7 +107,7 @@ Chicken breast
 Chicken breast, green beans, carrots, garlic, butter, white wine, chicken stock, fresh herbs (thyme and/or rosemary), jasmine rice
 
 #### Description:
-A streamlined sous vide dinner where both protein and vegetables are already cooked and sealed—sous chef simply drops both bags in the bath to warm together. Chef finishes with a quick sear on the chicken and a simple pan sauce made from the bag juices. Served with fluffy rice and the perfectly cooked vegetables.
+A streamlined sous vide dinner where both protein and vegetables are already cooked and sealed--sous chef simply drops both bags in the bath to warm together. Chef finishes with a quick sear on the chicken and a simple pan sauce made from the bag juices. Served with fluffy rice and the perfectly cooked vegetables.
 
 ### Already Prepped
 - Chicken breasts have been seasoned (salt, pepper, garlic, herbs) and vacuum sealed. Stored in fridge.

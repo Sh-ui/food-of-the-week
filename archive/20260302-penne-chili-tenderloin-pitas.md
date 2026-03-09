@@ -89,17 +89,17 @@ Stir, push pasta *under the surface of the liquid*. Bake *uncovered* for ***15-2
 Frozen marinated chicken breasts
 
 #### Description:
-The 2 frozen marinated **chicken breasts** cooked sous vide and sliced thin into warm **pitas** with **tzatziki** from **Greek yogurt** and **lemon**, warm spiced **chickpeas**, crumbled **feta**, shredded **cabbage**, and **pickled red onions**. The chicken's saltiness works *for* this application the way doner meat works — sliced thin in a wrap with cooling, bright elements around it.
+The 2 frozen marinated **chicken breasts** cooked sous vide and sliced thin into warm **pitas** with **tzatziki** from **Greek yogurt** and **lemon**, warm spiced **chickpeas**, crumbled **feta**, shredded **cabbage**, and **pickled red onions**. The chicken's saltiness works *for* this application the way doner meat works -- sliced thin in a wrap with cooling, bright elements around it.
 
 ### Already Prepped
 
-- **Chicken breasts** are frozen and already heavily marinated (salty — *skip added salt when cooking*).
+- **Chicken breasts** are frozen and already heavily marinated (salty -- *skip added salt when cooking*).
 
 ### Sous Chef - Prep
 
 Drop the **chicken breasts** into the sous vide bath at **152°F** (Chef will set temperature remotely from the app). Remove from the bag and pat dry, torch briefly for color, then slice thin against the grain.
 
-Drain and rinse **canned garbanzo beans**. In a skillet over medium heat with a glug of oil, warm the **chickpeas** with **cumin**, **paprika**, minced **garlic**, and a squeeze of **lemon**. Smash some with the back of a spoon, leave others whole. Season with pepper (no salt — the cumin and paprika carry it).
+Drain and rinse **canned garbanzo beans**. In a skillet over medium heat with a glug of oil, warm the **chickpeas** with **cumin**, **paprika**, minced **garlic**, and a squeeze of **lemon**. Smash some with the back of a spoon, leave others whole. Season with pepper (no salt -- the cumin and paprika carry it).
 
 Make **tzatziki**: **Greek yogurt**, minced **garlic**, **lemon** juice, salt, pepper.
 
@@ -136,13 +136,13 @@ Start **rice** in the rice cooker.
 
 Dice 1 **yellow onion**. Mince **garlic** (4-5 cloves). Shred some **cabbage** for topping and set aside.
 
-In a large pot or Dutch oven over *high heat*, brown the **ground beef** hard — don't stir it for the first 2 minutes, let it get a real sear, then break up and finish browning.
+In a large pot or Dutch oven over *high heat*, brown the **ground beef** hard -- don't stir it for the first 2 minutes, let it get a real sear, then break up and finish browning.
 
 Bloom spices like **cumin**, **paprika**, **chili powder**, in that hot fat.
 
 Add **onion** and **garlic**, deglaze by adding **canned tomatoes** (crush the whole ones by hand as they go in). Add the **pinto beans**. Season now salt, pepper, a pinch of **sugar** to balance the acid, **MSG** if you want.
 
-Stir, bring to a simmer, then drop to *low*. Let it cook for as long as you have — 30 minutes minimum, longer is better. ***Taste*** and adjust before serving.
+Stir, bring to a simmer, then drop to *low*. Let it cook for as long as you have -- 30 minutes minimum, longer is better. ***Taste*** and adjust before serving.
 
 ### Chef - Finishing & Plating
 
@@ -163,7 +163,7 @@ Makes enough for a second full dinner the next night. Reheat and serve the same 
 Frozen grass-fed beef tenderloin
 
 #### Description:
-The **beef tenderloin** cooked sous vide, then seared *ripping hot* for a crust. The bag juices and sear fond deglazed into a quick **gravy**. Alongside: **popovers** puffed up golden in a muffin tin (flour, eggs, butter, heavy cream — cheap spectacle), seared **cabbage** wedges charred in the beef pan, and **frozen peas** warmed with **butter**. This is the peak meal. Cook the whole tenderloin — eat steaks tonight, reserve sliced meat for tomorrow's sandwiches.
+The **beef tenderloin** cooked sous vide, then seared *ripping hot* for a crust. The bag juices and sear fond deglazed into a quick **gravy**. Alongside: **popovers** puffed up golden in a muffin tin (flour, eggs, butter, heavy cream -- cheap spectacle), seared **cabbage** wedges charred in the beef pan, and **frozen peas** warmed with **butter**. This is the peak meal. Cook the whole tenderloin -- eat steaks tonight, reserve sliced meat for tomorrow's sandwiches.
 
 ### Already Prepped
 
@@ -183,7 +183,7 @@ Make the **popover** batter: whisk **eggs**, **flour**, **heavy cream** (or milk
 
 Remove the **tenderloin** from the bag. Pat *completely dry*. Reserve the bag juices.
 
-Sear the **tenderloin** in a *ripping hot* skillet with oil — hard sear on all sides until a deep crust forms. Remove and rest on a cutting board.
+Sear the **tenderloin** in a *ripping hot* skillet with oil -- hard sear on all sides until a deep crust forms. Remove and rest on a cutting board.
 
 In the same pan with the fond, sear the **cabbage** wedges cut-side down until *charred and golden*, about 3-4 minutes per side. Remove.
 
@@ -195,4 +195,4 @@ Slice the **tenderloin** into thick medallions. Plate with **popovers**, charred
 
 ### Leftovers
 
-Reserve sliced **tenderloin** for the next day. Toast thick-cut **sourdough**, melt **American cheese** on top, layer cold sliced **tenderloin**, **cherry pepper relish**, and **pickled red onions**. Steak sandwiches — assembly, not cooking, fifteen minutes.
+Reserve sliced **tenderloin** for the next day. Toast thick-cut **sourdough**, melt **American cheese** on top, layer cold sliced **tenderloin**, **cherry pepper relish**, and **pickled red onions**. Steak sandwiches -- assembly, not cooking, fifteen minutes.

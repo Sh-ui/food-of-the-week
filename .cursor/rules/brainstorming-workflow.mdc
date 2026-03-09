@@ -30,7 +30,7 @@ folder_structure:
       path: "brainstorming/idea-basis/"
       purpose: "Reference documents containing the cook's identity, paradigms, inspirations, and established patterns"
       usage: "Consult these files when brainstorming to understand user's cooking style, preferences, and planning approach"
-      key_file: "cooking-identity.md — synthesized profile of the cook's style, preferences, and instincts (READ FIRST)"
+      key_file: "cooking-identity.md -- synthesized profile of the cook's style, preferences, and instincts (READ FIRST)"
       examples:
         - "cooking-identity.md - Cook's full profile and preferences (primary reference)"
         - "f-word-inspo.txt - F-Word philosophy and flavor inspiration"

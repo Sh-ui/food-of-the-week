@@ -112,7 +112,7 @@ Frozen ground pork
 Potatoes, carrots, yellow onion, frozen peas, Japanese curry cubes + honey, ginger paste, panko breadcrumbs, Japanese rice, American bagged salad, Japanese dressing
 
 #### Description:
-A weeknight-friendly deconstructed take on Japanese pork katsu curry—ground pork simmered in rich curry sauce with potatoes and carrots, topped with toasted breadcrumbs for that katsu crunch. Served with Japanese rice and a simple salad. The honey adds a sweet, soft flavor to the curry.
+A weeknight-friendly deconstructed take on Japanese pork katsu curry--ground pork simmered in rich curry sauce with potatoes and carrots, topped with toasted breadcrumbs for that katsu crunch. Served with Japanese rice and a simple salad. The honey adds a sweet, soft flavor to the curry.
 
 ### Already Prepped
 
@@ -123,7 +123,7 @@ A weeknight-friendly deconstructed take on Japanese pork katsu curry—ground po
 
 Dice 1 whole yellow onion
 
-Toast the panko breadcrumbs: In a dry nonstick skillet over medium heat, toast panko until golden brown, stirring frequently. Set aside—they'll stay crispy.
+Toast the panko breadcrumbs: In a dry nonstick skillet over medium heat, toast panko until golden brown, stirring frequently. Set aside--they'll stay crispy.
 
 At 5:30pm, start the Japanese rice in the rice cooker.
 

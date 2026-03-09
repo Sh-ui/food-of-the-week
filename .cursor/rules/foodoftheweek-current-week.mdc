@@ -41,7 +41,7 @@ grocery_list_format:
     - "### Protein"
     - "### Frozens"
   notes:
-    - "Only include categories that have items — not all are required every week"
+    - "Only include categories that have items -- not all are required every week"
     - "Custom categories are allowed (e.g., ### Fridge Garnishes, ### Bakery)"
   
   item_format:
@@ -67,7 +67,7 @@ meal_format:
     codename_types:
       ChefDish:
         pattern: "##### ChefDish[+*]"
-        meaning: "Chef is doing this solo — no meaningful delegation. Plus signs signal the chef's own memory-jog level."
+        meaning: "Chef is doing this solo -- no meaningful delegation. Plus signs signal the chef's own memory-jog level."
         plus_scale:
           none: "Straightforward. No day-ahead work. Cook and plate."
           one_plus: "Some day-ahead or timing-sensitive effort required (e.g. dry brine, marinate, start a dough)."
@@ -104,7 +104,7 @@ meal_format:
     notes:
       - "Field names are arbitrary; consecutive H4 headings are grouped as one visual card"
       - "Do not include the value on the same line as the heading"
-      - "Description doubles as the ingredient list — all ingredients woven in as **bold** text rather than a separate #### Ingredients: field"
+      - "Description doubles as the ingredient list -- all ingredients woven in as **bold** text rather than a separate #### Ingredients: field"
   
   instruction_format:
     structure: "Three-phase base format (see recipe-instruction-format.mdc)"
@@ -114,7 +114,7 @@ meal_format:
       - "### Chef - Finishing & Plating"
     additional_sections:
       - "Additional H3 sections can follow the base phases for special needs"
-      - "### Leftovers — describes how to transform leftovers into a different meal"
+      - "### Leftovers -- describes how to transform leftovers into a different meal"
       - "Keep additional sections concise (a paragraph, not a full recipe)"
     notes: "H3 headings for distinct instruction sections (no inline values)"
 

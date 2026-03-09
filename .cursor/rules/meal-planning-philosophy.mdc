@@ -7,9 +7,9 @@ alwaysApply: false
 Guidelines for generating weekly meal plans that match the household's cooking style, constraints, and preferences.
 
 **BEFORE RESPONDING to any meal or food topic, read these files in order:**
-1. `brainstorming/idea-basis/cooking-identity.md` — the cook's full profile, instincts, and preferences
-2. Current `FOOD-OF-THE-WEEK.md` — what was planned most recently
-3. 1-2 recent `archive/*.md` files — to avoid repetition and understand patterns
+1. `brainstorming/idea-basis/cooking-identity.md` -- the cook's full profile, instincts, and preferences
+2. Current `FOOD-OF-THE-WEEK.md` -- what was planned most recently
+3. 1-2 recent `archive/*.md` files -- to avoid repetition and understand patterns
 
 <rule>
 name: meal-planning-philosophy

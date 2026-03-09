@@ -125,7 +125,7 @@ Frozen ground pork
 Potatoes, carrots, yellow onion, frozen peas, Japanese curry cubes + honey, ginger paste, panko breadcrumbs, Japanese rice, American bagged salad, Japanese dressing
 
 #### Description:
-A weeknight-friendly deconstructed take on Japanese pork katsu curry—ground pork simmered in rich curry sauce with potatoes and carrots, topped with toasted breadcrumbs for that katsu crunch. Served with Japanese rice and a simple salad.
+A weeknight-friendly deconstructed take on Japanese pork katsu curry--ground pork simmered in rich curry sauce with potatoes and carrots, topped with toasted breadcrumbs for that katsu crunch. Served with Japanese rice and a simple salad.
 ```
 
 The H5 line is the **codename** (workload category), and the H6 line provides **timing details** (specific actions and when to do them).
@@ -151,7 +151,7 @@ Add `+` for increased complexity or multiple components:
 
 ### Timing Details
 
-The second line of the quick read provides **actionable timing information**—the critical "when" and "what" that helps the Sous Chef schedule their work.
+The second line of the quick read provides **actionable timing information**--the critical "when" and "what" that helps the Sous Chef schedule their work.
 
 **What to include:**
 - Sous vide start times: `4:00 mire poix`
@@ -162,8 +162,8 @@ The second line of the quick read provides **actionable timing information**—t
 
 **What to avoid:**
 - Don't repeat information from the codename (e.g., don't write "sous vide" after `SousVidePrep`)
-- Don't include generic descriptions—focus on specific times and actions
-- Keep it concise—usually 1-2 key timing points
+- Don't include generic descriptions--focus on specific times and actions
+- Keep it concise--usually 1-2 key timing points
 
 **Examples:**
 
@@ -173,7 +173,7 @@ The second line of the quick read provides **actionable timing information**—t
 ##### Prep&Heat 
 ###### cut toppings + heat beef
 ```
-Simple prep work with basic heating—no complex timing needed.
+Simple prep work with basic heating--no complex timing needed.
 
 ```markdown
 ## Lamb Patties & Veg
@@ -189,7 +189,7 @@ Two timed tasks: start sous vide at 4pm, form patties at 5pm.
 ##### SousChefDish
 ###### 5:30 couscous + oven roast
 ```
-Sous chef handles complete cooking process—start rice cooker and manage oven.
+Sous chef handles complete cooking process--start rice cooker and manage oven.
 
 ### How Quick Reads Work
 
@@ -198,7 +198,7 @@ The parser automatically extracts quick read data from these sub-headings and:
 - Shows them on each meal card for reference while cooking
 - Includes them in printed meal plans
 
-If a meal doesn't have quick read headings, the meal name still appear in the hero navigation—just without the detailed badges.
+If a meal doesn't have quick read headings, the meal name still appear in the hero navigation--just without the detailed badges.
 
 
 

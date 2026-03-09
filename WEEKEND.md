@@ -90,7 +90,7 @@ Dinner
 Frozen grass-fed beef tenderloin
 
 #### Description:
-The **beef tenderloin** cooked sous vide, then seared *ripping hot* for a crust. The bag juices and sear fond deglazed into a quick **gravy**. Alongside: **popovers** puffed up golden in a muffin tin (flour, eggs, butter, heavy cream — cheap spectacle), seared **cabbage** wedges charred in the beef pan, and **frozen peas** warmed with **butter**. This is the peak meal. Cook the whole tenderloin — eat steaks tonight, reserve sliced meat for tomorrow's sandwiches.
+The **beef tenderloin** cooked sous vide, then seared *ripping hot* for a crust. The bag juices and sear fond deglazed into a quick **gravy**. Alongside: **popovers** puffed up golden in a muffin tin (flour, eggs, butter, heavy cream -- cheap spectacle), seared **cabbage** wedges charred in the beef pan, and **frozen peas** warmed with **butter**. This is the peak meal. Cook the whole tenderloin -- eat steaks tonight, reserve sliced meat for tomorrow's sandwiches.
 
 ### Already Prepped
 
@@ -110,7 +110,7 @@ Make the **popover** batter: whisk **eggs**, **flour**, **heavy cream** (or milk
 
 Remove the **tenderloin** from the bag. Pat *completely dry*. Reserve the bag juices.
 
-Sear the **tenderloin** in a *ripping hot* skillet with oil — hard sear on all sides until a deep crust forms. Remove and rest on a cutting board.
+Sear the **tenderloin** in a *ripping hot* skillet with oil -- hard sear on all sides until a deep crust forms. Remove and rest on a cutting board.
 
 In the same pan with the fond, sear the **cabbage** wedges cut-side down until *charred and golden*, about 3-4 minutes per side. Remove.
 
@@ -122,4 +122,4 @@ Slice the **tenderloin** into thick medallions. Plate with **popovers**, charred
 
 ### Leftovers
 
-Reserve sliced **tenderloin** for the next day. Toast thick-cut **sourdough**, melt **American cheese** on top, layer cold sliced **tenderloin**, **cherry pepper relish**, and **pickled red onions**. Steak sandwiches — assembly, not cooking, fifteen minutes.
+Reserve sliced **tenderloin** for the next day. Toast thick-cut **sourdough**, melt **American cheese** on top, layer cold sliced **tenderloin**, **cherry pepper relish**, and **pickled red onions**. Steak sandwiches -- assembly, not cooking, fifteen minutes.

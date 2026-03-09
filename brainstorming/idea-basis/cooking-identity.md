@@ -1,6 +1,6 @@
 # Cooking Identity
 
-Synthesized profile of this household's cooking style, preferences, and instincts. This is a living document — update after each planning session with new learnings.
+Synthesized profile of this household's cooking style, preferences, and instincts. This is a living document -- update after each planning session with new learnings.
 
 ## Household
 
@@ -15,7 +15,7 @@ Synthesized profile of this household's cooking style, preferences, and instinct
 - Meals emerge from intersections of ingredients and ideas, not strict tradition. A "deconstructed Midwestern broiler steak dinner" is a natural concept here.
 - One protein per meal. Never combine chicken + fish + beef on one plate. Each protein gets its own meal built around it.
 - Three movers in every dish: a flavor base (aromatics, fats), a structural ingredient (protein, starch, veg), and a finishing accent (acid, herb, crunch).
-- The week should have variety in pattern and cuisine — never two similar meals back-to-back.
+- The week should have variety in pattern and cuisine -- never two similar meals back-to-back.
 
 ## Cuisine Range
 
@@ -39,7 +39,7 @@ Any given week might include a Japanese curry alongside a Tuscan braise alongsid
 - **Convection oven** for high-heat finishing (500°F roasts, sheet pans, popovers).
 - **Cast iron and heavy skillets** for searing and fond-building.
 - Loves high-heat finishing: charring cabbage wedges, searing proteins in ripping hot pans, building fond then deglazing.
-- Vacuum seals proteins in advance with seasonings — batch prep is common.
+- Vacuum seals proteins in advance with seasonings -- batch prep is common.
 - Vegetables often pre-cooked sous vide (beets, sweet potatoes, green beans, mirepoix).
 
 ## Meal Patterns
@@ -59,11 +59,11 @@ The cook thinks in modular patterns that accept different ingredients:
 The overarching philosophy comes from Gordon Ramsay's "The F Word": restaurant-style meals that anyone can make at home.
 - Take normal food, keep its soul, give it one or two touches that make it feel deliberate and composed.
 - If the main component is soft, add sharpness and crunch. If humble, add something clean and elevated.
-- The garnish or finishing sauce is what makes it "restaurant" — the base stays homey.
+- The garnish or finishing sauce is what makes it "restaurant" -- the base stays homey.
 
 ## Protein and Sourcing
 
-- Proteins often come from ButcherBox deliveries — frozen, portioned, vacuum sealed.
+- Proteins often come from ButcherBox deliveries -- frozen, portioned, vacuum sealed.
 - Common proteins across weeks: salmon, tilapia, cod, chicken (breasts and thighs), ground beef, ground pork, ground lamb, pork chops, pork tenderloin, flat iron steak, beef tenderloin, Italian sausage, scallops, shrimp.
 - Frozen-to-pan or rapid-thaw methods are normal and expected.
 - Thaw time should be factored into the week's sequence.
@@ -71,7 +71,7 @@ The overarching philosophy comes from Gordon Ramsay's "The F Word": restaurant-s
 ## Budget and Grocery Approach
 
 - Budget varies week to week. Some weeks have full ButcherBox runs; some weeks are near-zero grocery trips.
-- When the cook says money is tight: default to using what's on hand. Grocery trips should be surgical strikes — the minimum items that unlock the most meals.
+- When the cook says money is tight: default to using what's on hand. Grocery trips should be surgical strikes -- the minimum items that unlock the most meals.
 - Stretch ingredients (potatoes, ground beef, cabbage, dried beans) are valued because they transform across multiple dishes without feeling repetitive.
 - Don't pad the grocery list with nice-to-haves unless the cook asks.
 
@@ -84,7 +84,7 @@ The overarching philosophy comes from Gordon Ramsay's "The F Word": restaurant-s
 
 ## Ingredient Instincts
 
-- **Eggs** are ingredients, not protein. Used as binders, in batters, in fried rice — never as a meal's protein anchor.
+- **Eggs** are ingredients, not protein. Used as binders, in batters, in fried rice -- never as a meal's protein anchor.
 - **Beans and lentils** can anchor a meatless meal if the dish has enough body and character. Plain beans + rice alone is not enough.
 - **Fridge garnishes** do heavy lifting: pickled red onions, cherry pepper relish, greek yogurt as crema, feta, Parmesan, specialty oils and vinegars. They turn a simple base into a complete plate across multiple meals.
 - **Specialty oils and vinegars** (jalapeño olive oil, white pineapple balsamic) should be featured intentionally, not wasted as background.
