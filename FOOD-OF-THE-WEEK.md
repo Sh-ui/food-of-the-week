@@ -77,7 +77,7 @@ Set everything out family-style -- **pitas**, **pork**, vegetables, **yogurt sau
 
 ---
 
-## Hamburg Steaks
+## Hambagu
 
 ##### ChefDish+
 ###### form prev night + broiler + probe + flavor cabinet glaze
@@ -106,7 +106,7 @@ Serve the patties over **white rice** with the remaining glaze spooned over. Dre
 
 ---
 
-## Kimchi Sesame Chicken Thighs
+## Kimchi Chicken
 
 ##### ChefDish
 ###### blend kimchi + brush + roast high heat
@@ -139,7 +139,7 @@ Serve the thighs over or beside the **cabbage slaw** with the **edamame** on the
 
 ---
 
-## Shrimp Pad Thai Riff
+## Shrimp Pad Riff
 
 ##### ChefDish
 ###### 20 min active + noodles
@@ -174,7 +174,7 @@ Serve in wide bowls. Scatter crushed **peanuts** and scallion greens over the to
 
 ---
 
-## Spaghetti & Meat
+## Spaghetti
 
 ##### Prep&Heat
 ###### brown sausage + simmer Ragu + pasta
