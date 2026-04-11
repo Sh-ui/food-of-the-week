@@ -8,6 +8,8 @@ Guidelines for structuring recipe instructions in the three-phase workflow forma
 
 **Context loading:** If not already loaded, read `brainstorming/idea-basis/cooking-identity.md` for the cook's equipment, technique preferences, and delegation style.
 
+**Gold-standard template:** `brainstorming/idea-basis/prototype-week.md` is the canonical reference for instruction structure. Follow its pattern.
+
 <rule>
 name: recipe-instruction-format
 description: Three-phase instruction structure for meal recipes
@@ -20,39 +22,36 @@ instruction_structure:
   phases:
     already_prepped:
       label: "### Already Prepped"
-      format: "H3 heading followed by bulleted list with ' - ' prefix"
-      purpose: "Items prepared in advance (often sous vide, vacuum sealed, or batch prepped)"
+      format: "H3 heading followed by bulleted list"
+      purpose: "Sunday prep components used tonight -- what's in the fridge/freezer ready to go"
       examples:
-        - "Proteins: vacuum sealed and seasoned"
-        - "Vegetables: pre-cooked sous vide and ready to warm"
-        - "Dough: resting in fridge"
-        - "Components: sauces made ahead, items thawed"
+        - "**Green beans** (sesame-dressed bag) in fridge from Sunday."
+        - "**Soy eggs** in marinade in fridge from Sunday."
+        - "**Ground pork** (mapo portion) in freezer from Sunday."
     
     sous_chef:
-      label: "### Sous Chef - Prep" or "### Sous Chef - Cooking"
+      label: "### Sous Chef - Assembly"
       format: "H3 heading followed by paragraph instructions"
-      purpose: "Tasks family members can do before primary cook arrives"
-      timing: "Done while primary cook is at work or occupied"
+      purpose: "Tasks done before chef starts active cooking"
       examples:
-        - "Starting sous vide baths with remote temperature control"
-        - "Chopping vegetables"
-        - "Starting rice or bread baking"
-        - "Basic cooking tasks for simple dishes"
-      delegation_notes:
+        - "Start rice in the rice cooker"
+        - "Drop bags in sous vide bath to come to temp"
+        - "Prep fresh components (smash cucumbers, shred cabbage)"
+        - "Boil noodles, portion pickled items"
+      notes:
+        - "Label flexes: 'Sous Chef - Assembly', 'Sous Chef - Prep', etc."
         - "Instructions should be clear enough for any family member"
-        - "Use specific measurements and timing"
-        - "Note when Chef will set temperature remotely"
     
-    chef_finishing:
-      label: "### Chef - Finishing & Plating"
+    chef_cooking:
+      label: "### Chef - Wok Sequence" or "### Chef - Cooking"
       format: "H3 heading followed by paragraph instructions"
-      purpose: "Final cooking, searing, sauce-making, and plating"
-      timing: "Done by primary cook when home"
-      techniques:
-        - "Torch-searing sous vide proteins"
-        - "High-heat finishing (charring, crisping)"
-        - "Sauce reduction and glazing"
-        - "Final assembly and plating"
+      purpose: "Active cooking by primary cook -- wok, cast iron, oven"
+      label_flexes:
+        - "### Chef - Wok Sequence (for wok nights with multiple dishes)"
+        - "### Chef - Cooking (for single-technique nights)"
+      notes:
+        - "End with a **Table**: line describing the final table layout"
+        - "For wok nights, label each dish: **Wok dish 1 -- [name]**, **Wok dish 2 -- [name]**"
 
 formatting_rules:
   already_prepped:
@@ -75,20 +74,20 @@ formatting_rules:
     - "Note any saucing or garnishing"
 
 recipe_patterns:
-  sous_vide_protein:
-    already_prepped: "Protein vacuum sealed and seasoned"
-    sous_chef: "Drop in sous vide bath (temperature set remotely), prep vegetables"
-    chef: "Torch-sear protein, char vegetables, make sauce from bag juices, plate"
+  wok_night:
+    already_prepped: "Sous vide cai bags in fridge, soy eggs, frozen protein portion"
+    sous_chef: "Rice on, warm bags, prep fresh cai (smash cucumbers, portion pickles)"
+    chef: "Wok sequence -- 1-3 dishes fired in a row, each into a shared serving dish"
   
-  one_pot_meal:
-    already_prepped: "Proteins thawed"
-    sous_chef: "Complete cooking of entire dish"
-    chef: "Final seasoning check, serve/plate"
+  prep_and_heat:
+    already_prepped: "Formed patty/meatballs, soup cubes, pickled items"
+    sous_chef: "Rice cooker with steam rack for patty, reheat bags, prep fresh items"
+    chef: "Gwuntong from cubes, one quick wok dish, assemble table"
   
-  complex_plate:
-    already_prepped: "Multiple components pre-cooked or prepped"
-    sous_chef: "Warm components, prep fresh elements, start breads/grains"
-    chef: "Final cooking techniques, sauce making, composed plating"
+  chef_dish:
+    already_prepped: "Seasoned protein (vacuum sealed), sous vide cai bag"
+    sous_chef: "Drop cai bag in bath, make fresh slaw, start rice"
+    chef: "Cast iron sear or oven roast, finish and plate"
 
 technique_vocabulary:
   sous_vide:

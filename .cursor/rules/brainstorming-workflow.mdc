@@ -30,11 +30,15 @@ folder_structure:
       path: "brainstorming/idea-basis/"
       purpose: "Reference documents containing the cook's identity, paradigms, inspirations, and established patterns"
       usage: "Consult these files when brainstorming to understand user's cooking style, preferences, and planning approach"
-      key_file: "cooking-identity.md -- synthesized profile of the cook's style, preferences, and instincts (READ FIRST)"
+      key_files:
+        - "cooking-identity.md -- synthesized profile of the cook's style, preferences, and instincts (READ FIRST)"
+        - "prototype-week.md -- gold-standard week template that all generated weeks must follow"
       examples:
         - "cooking-identity.md - Cook's full profile and preferences (primary reference)"
-        - "f-word-inspo.txt - F-Word philosophy and flavor inspiration"
-        - "flow-chart.txt - Meal planning decision flow"
+        - "prototype-week.md - Canonical week format (grocery, Sunday prep, meal cards)"
+        - "fan-cai-paradigm.md - Structural logic for fan, cai, service, and table flow"
+        - "table-frames.md - Multicultural meal examples grounded in fan/cai"
+        - "cai-portion-guide.md - Portion sizing for 6-person table"
     
     old_ideas:
       path: "brainstorming/old-ideas/"
@@ -71,8 +75,10 @@ usage_patterns:
   
   context_sources:
     - "brainstorming/idea-basis/cooking-identity.md - Cook's full profile (READ FIRST)"
-    - "brainstorming/idea-basis/f-word-inspo.txt - F-Word philosophy and flavor inspiration"
-    - "brainstorming/idea-basis/flow-chart.txt - Meal planning decision flow"
+    - "brainstorming/idea-basis/prototype-week.md - Gold-standard week template (structure, grocery format, Sunday prep, meal cards)"
+    - "brainstorming/idea-basis/fan-cai-paradigm.md - Current structural model for fan/cai nights"
+    - "brainstorming/idea-basis/table-frames.md - Culturally grounded meal examples across tiers"
+    - "brainstorming/idea-basis/cai-portion-guide.md - Portion sizing for 6-person table"
     - "Any other files in idea-basis/ that contain relevant paradigms"
   
   state: "Work-in-progress, informal, exploratory"

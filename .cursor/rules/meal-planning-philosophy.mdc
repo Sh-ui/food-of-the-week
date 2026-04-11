@@ -8,19 +8,21 @@ Guidelines for generating weekly meal plans that match the household's cooking s
 
 **BEFORE RESPONDING to any meal or food topic, read these files in order:**
 1. `brainstorming/idea-basis/cooking-identity.md` -- the cook's full profile, instincts, and preferences
-2. Current `FOOD-OF-THE-WEEK.md` -- what was planned most recently
-3. 1-2 recent `archive/*.md` files -- to avoid repetition and understand patterns
+2. `brainstorming/idea-basis/prototype-week.md` -- gold-standard week template (every generated week must follow this pattern)
+3. Current `FOOD-OF-THE-WEEK.md` -- what was planned most recently
+4. 1-2 recent `archive/*.md` files -- to avoid repetition and understand patterns
 
 <rule>
 name: meal-planning-philosophy
-description: Core principles for brainstorming and generating weekly meal plans for a household of 5
+description: Core principles for brainstorming and generating weekly meal plans for a household of 6-8
 
 context:
-  household_size: 5 people
+  household_size: 6-8 people
   primary_cook: User (with family helpers available)
   cooking_time: Weeknight constraints - narrow time window, split attention
   helpers: Dad (chopping), sister (rice/simple tasks)
   meal_frequency: Typically 4-5 meals per week
+  service_model: "Fan/cai table with a staple fan, multiple mandatory cai, soup, lazy susan, and personal serving tools"
 
 constraints:
   timing:
@@ -43,19 +45,22 @@ cooking_philosophy:
   format: "Structured sketches, not rigid procedures"
   
   priorities:
-    - One-pot or simple flows, fewer dishes
+    - One active cooking task supported by batch-prepped components
     - Big flavors from a few key ingredients
     - Minimal chopping unless delegated
     - Speed without sacrificing personality
+    - Structural commitments that prevent drift back to individual Western plating
   
   conceptual_approach:
     - Focus on "what does this dish want to feel like?"
     - Recipes emerge from intersections, not strict tradition
-    - Examples: "deconstructed Midwestern broiler dinner", "power-salad leveraging specialty vinegars"
+    - Sunday batch prep is the keystone -- everything flows from what was prepped
+    - Sous vide for pre-cooking cai components (not just proteins)
 
 meal_plan_structure:
   recipe_count: 4-5 recipes per week
   characteristics: Simple but flavorful, weeknight-appropriate, ideally leave leftovers
+  default_night_shape: "fan + 2-3 cai + soup, with one anchor dish when the night calls for it"
   
   grocery_list_required: true
   grocery_categories:
@@ -72,36 +77,38 @@ meal_plan_structure:
     step_by_step: "Only when explicitly requested"
 
 meal_patterns:
-  description: "Treat recipes as modular patterns that plug in seasonal ingredients"
+  description: "Weeknight techniques that fit the fan/cai table and Sunday batch prep model"
   
-  core_patterns:
-    sheet_pan:
-      description: "Protein + veg + dressed roast"
-      benefits: "Great for frozen proteins, minimal mess, scalable"
+  core_techniques:
+    wok_sequence:
+      description: "1-3 quick dishes fired in a row in the wok"
+      when: "Stir-fries, dry-frying batch-prepped cai, fast protein dishes"
+      codename: "WokNight"
     
-    one_pot_noodle_broth:
-      description: "Rice noodles, aromatics, broth, quick protein, veg"
-      benefits: "High speed, flexible, low prep, universally liked"
+    steam_over_rice:
+      description: "Patty or component steamed on the rice cooker rack"
+      when: "Canton home nights -- the rice cooker does double duty"
+      codename: "Prep&Heat"
     
-    warm_power_salad:
-      description: "Greens or shredded veg + roasted/pan-seared protein + bold dressing + crunchy accent"
-      benefits: "Incorporates specialty oils/vinegars"
+    cast_iron_sear:
+      description: "High-heat protein sear (blackened, pan-fried)"
+      when: "Anchor-forward nights where one protein commands the table"
+      codename: "ChefDish"
     
-    skillet_braise:
-      description: "Shallow liquids, sear then low simmer, aromatic broth reduction"
-      benefits: "Good for steaks, chops, lamb, fish"
+    oven_roast:
+      description: "Meatballs, sheet-pan components roasted from frozen"
+      when: "Hands-off protein while assembling fresh cai and soup"
+      codename: "Prep&Heat"
     
-    fritters_patties:
-      description: "Masa fritters, veggie pancakes, salmon cakes"
-      benefits: "Flexible for leftover veg or squash"
-    
-    stir_fry_saute:
-      description: "Fast, high heat, minimal chopping"
-      benefits: "Pairs well with rice"
-    
-    roasted_veg_centerpiece:
-      description: "Sweet potato halves, celeriac steaks, cabbage wedges with punchy dressing"
-      benefits: "Veg-forward but hearty"
+    soup_from_cube:
+      description: "Concentrated frozen soup base dissolved in boiling water"
+      when: "Quick gwuntong or broth from Sunday's batch"
+
+  fan_cai_notes:
+    - "Treat the cai as one decomposed meal, not elective sides or buffet choices"
+    - "Plan enough fan for generous first bowls plus refills"
+    - "Assume each diner needs access to each cai without waiting on a shared utensil"
+    - "A small side plate is optional; the personal bowl is the required home base"
 
 protein_handling:
   common_proteins:
@@ -132,16 +139,17 @@ ingredient_tendencies:
     finishing_accent: "Acid, herb, crunchy element"
 
 weekly_narrative_shape:
-  description: "Week's menu should have alternating variety"
+  description: "Week's menu should have alternating variety across technique, culture, and fan type"
   
-  ideal_mix:
-    - A couple of warm bowls
-    - A roast-centered plate
-    - One big-flavor salad
-    - A stir-fry or noodle thing
-    - A wildcard (fritters, braise, or fusion experiment)
+  design_constraints:
+    - "Two proteins used in different preparations across all nights"
+    - "3 rice nights + 1-2 non-rice fans (noodles, farro, etc.)"
+    - "2-3 soup nights, 1-2 no-soup nights"
+    - "2-3 Asian nights (at least one should not feel 'super Asian' to a Westerner)"
+    - "Shared produce that earns its spot across multiple nights"
+    - "Every night has Sunday prep components -- no night starts from scratch"
   
-  goal: "Avoid monotony through pattern variation"
+  goal: "Avoid monotony through technique, fan, and cultural rotation -- not just swapping proteins"
 
 dietary_preferences:
   carbs: "Substantial but not carb-heavy is often ideal"
@@ -153,11 +161,13 @@ actions:
     when: "User is brainstorming weekly meals"
     do:
       - Suggest 4-5 meal ideas using different patterns
+      - Default to fan/cai structure unless the user clearly wants a one-pot or assembly exception
       - Ensure frozen protein handling is considered
       - Include specialty oil/vinegar usage where appropriate
       - Maintain sketch-style recipe format
       - Create complete grocery list in specified categories
       - Verify weekly shape has variety
+      - Preserve the table-service logic: shared central dishes, mandatory cai, no individual protein plating
   
   - type: guide
     when: "User asks for recipe details"

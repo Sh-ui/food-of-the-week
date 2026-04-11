@@ -1,5 +1,5 @@
 ---
-import type { ContentSection } from '../utils/weekParser';
+import type { ContentSection, SubsectionItem } from '../utils/weekParser';
 import { groupSubsections } from '../utils/weekParser';
 import { getInstructionBadgeColor, getInstructionColor, sectionColors } from '../config/colors';
 import { marked } from 'marked';
@@ -93,13 +93,34 @@ function renderMarkdown(text: string | undefined): string {
               // H3 sections: render as distinct instruction blocks
               <>
                 <h3 class="mt-0 mb-md text-[1.25rem] font-semibold mobile:text-[1.3rem] mobile:mb-md" style={`color: ${colors.heading};`}>{sub.title}</h3>
-                {sub.items && sub.items.length > 0 && (
-                  <ul class="list-disc ml-lg">
-                    {sub.items.map((item: string) => (
-                      <li class="mb-sm leading-relaxed text-[1.1rem] mobile:text-[1.25rem] mobile:leading-extra-loose" set:html={renderMarkdown(item)} />
-                    ))}
-                  </ul>
-                )}
+                {sub.items && sub.items.length > 0 && (() => {
+                  const hasChecklist = sub.items.some((item: SubsectionItem) => item.checked !== undefined);
+                  return hasChecklist ? (
+                    <ul class="checklist-items flex flex-col gap-sm list-none ml-0 pl-0">
+                      {sub.items.map((item: SubsectionItem, index: number) => (
+                        <li class={`flex items-center checklist-item ${item.checked ? 'globally-checked' : ''}`}>
+                          <label class="flex items-center cursor-pointer w-full p-[calc(var(--spacing-xs)+2px)] rounded transition-colors hover:bg-[rgba(44,95,45,0.05)] text-[1.1rem] leading-relaxed mobile:p-sm mobile:text-[1.25rem]">
+                            <input
+                              type="checkbox"
+                              class="checklist-checkbox local-checkbox"
+                              data-section={section.id}
+                              data-index={index}
+                              data-item={item.text}
+                              data-globally-checked={item.checked ? 'true' : 'false'}
+                            />
+                            <span class="flex-1 item-text mobile:text-[1.25rem] mobile:leading-extra-loose" set:html={renderMarkdown(item.text)} />
+                          </label>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <ul class="list-disc ml-lg">
+                      {sub.items.map((item: SubsectionItem) => (
+                        <li class="mb-sm leading-relaxed text-[1.1rem] mobile:text-[1.25rem] mobile:leading-extra-loose" set:html={renderMarkdown(item.text)} />
+                      ))}
+                    </ul>
+                  );
+                })()}
                 {sub.content && (
                   <div class="subsection-content">
                     {sub.content.split('\n\n').map((paragraph: string) => (
@@ -198,6 +219,42 @@ function renderMarkdown(text: string | undefined): string {
     color: var(--color-accent);
   }
 
+  .checklist-item.locally-checked .item-text {
+    text-decoration: line-through;
+    color: var(--color-text-light);
+  }
+
+  .checklist-item.globally-checked .item-text {
+    color: var(--color-text-muted, #9a9a91);
+  }
+
+  .checklist-checkbox {
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: var(--color-bg);
+    border: 2px solid var(--color-border);
+    cursor: pointer;
+  }
+
+  .checklist-checkbox:checked {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+
+  .checklist-checkbox:checked::after {
+    content: '\2713';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 600;
+    line-height: 1;
+  }
+
   /* Mobile responsive adjustments */
   @media screen(mobile) {
     .meal-header {
@@ -216,3 +273,59 @@ function renderMarkdown(text: string | undefined): string {
     }
   }
 </style>
+
+<script>
+  function getStorageKey(): string {
+    const weekElement = document.querySelector('h1');
+    const weekTitle = weekElement?.textContent || 'current-week';
+    return `checklist-${weekTitle.toLowerCase().replace(/\s+/g, '-')}`;
+  }
+
+  function loadCheckedItems(): Set<string> {
+    const key = getStorageKey();
+    const stored = localStorage.getItem(key);
+    return stored ? new Set(JSON.parse(stored)) : new Set();
+  }
+
+  function saveCheckedItems(checked: Set<string>): void {
+    const key = getStorageKey();
+    localStorage.setItem(key, JSON.stringify([...checked]));
+  }
+
+  function getItemKey(checkbox: HTMLInputElement): string {
+    return `${checkbox.dataset.section}::${checkbox.dataset.index}::${checkbox.dataset.item}`;
+  }
+
+  function initializeChecklists(): void {
+    const checked = loadCheckedItems();
+    const checkboxes = document.querySelectorAll<HTMLInputElement>('.checklist-checkbox');
+
+    checkboxes.forEach((checkbox) => {
+      const itemKey = getItemKey(checkbox);
+      const parentItem = checkbox.closest('.checklist-item');
+
+      if (checked.has(itemKey)) {
+        checkbox.checked = true;
+        parentItem?.classList.add('locally-checked');
+      }
+
+      checkbox.addEventListener('change', () => {
+        const currentChecked = loadCheckedItems();
+        if (checkbox.checked) {
+          currentChecked.add(itemKey);
+          parentItem?.classList.add('locally-checked');
+        } else {
+          currentChecked.delete(itemKey);
+          parentItem?.classList.remove('locally-checked');
+        }
+        saveCheckedItems(currentChecked);
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeChecklists);
+  } else {
+    initializeChecklists();
+  }
+</script>

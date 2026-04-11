@@ -1,11 +1,10 @@
-<!-- ✓ • https://sh-ui.github.io/food-of-the-week/ -->
+<!-- prototype week: fan/cai paradigm stress test -->
 
 # Week of April 13-18, 2026
 
 ## Grocery List
 
 ### Produce
-
 - [ ] Baby bok choy - 2 bunches
 - [ ] Napa cabbage - 1 large head
 - [ ] Green beans - 1.5 lbs
@@ -19,13 +18,11 @@
 - [x] Yellow onions
 
 ### Protein
-
-- [ ] Ground pork - 2 lbs (~0.5 lb mapo, ~0.75 lb patty, ~0.75 lb meatballs)
-- [ ] Chicken thighs, bone-in skin-on - ~3 lbs (~1.5 lb blackened, ~1.5 lb diced stir-fry)
+- [ ] Ground pork - 2 lbs
+- [ ] Chicken thighs, bone-in skin-on - ~3 lbs
 - [x] Eggs (larger batch -- soy eggs serve Mon cai + Tue soup)
 
 ### Staples
-
 - [ ] Silken tofu - 2 blocks
 - [ ] Udon noodles - 2 packs fresh or frozen
 - [ ] Farro - 1 bag
@@ -34,7 +31,6 @@
 - [x] Frozen collard greens
 
 ### Pantry
-
 - [ ] Doubanjiang (Pixian chili bean paste) - 1 jar (lasts months)
 - [ ] Sichuan peppercorn - 1 bag
 - [ ] Fermented black beans (douchi) - 1 bag
@@ -48,8 +44,6 @@
 
 ##### BatchDay
 ###### 2-3 hours active
-
-### Prep Checklist
 
 - [ ] Green beans -- season and sous vide, split into two bags (sesame-dressed + plain), refrigerate
 - [ ] Collard greens -- season and sous vide, refrigerate
@@ -136,7 +130,7 @@ Halve **soy eggs**, arrange on a small plate.
 
 ---
 
-## Steamed Pork Patty
+## Steamed Pork
 
 ##### Prep&Heat
 ###### rice cooker does double duty, 15 min active
@@ -152,7 +146,6 @@ Garlic bok choy (wok, 3 min), pickled radishes (from Sunday jar)
 
 #### Soup:
 Soy egg and napa cabbage gwuntong
-
 ### Already Prepped
 
 - **Pork patty** formed and refrigerated from Sunday.
@@ -221,7 +214,7 @@ Rest 3 minutes. Serve whole or sliced.
 
 ---
 
-## Ginger-Scallion Chicken
+## Scallion Chicken
 
 ##### WokNight
 ###### wok sequence + udon + soup from cube, 20 min active
@@ -264,7 +257,7 @@ Shred remaining **napa cabbage** into wide ribbons.
 
 ---
 
-## Harissa Pork Meatballs
+## Harissa Meatballs
 
 ##### Prep&Heat
 ###### oven meatballs from frozen + farro + soup from cube, 25 min active
@@ -306,3 +299,4 @@ While meatballs roast: drain the warmed **green beans** from their bag. Toss in 
 In the last 3 minutes of meatball roasting, brush tops with **harissa paste** thinned with a little **olive oil**. Return to oven until the glaze sets and caramelizes.
 
 **Table**: **farro** in individual bowls (the fan). **Meatballs** on a center platter. **Green beans** and **cucumber-yogurt salad** in shared dishes. **Soup** ladled into individual bowls.
+

@@ -34,6 +34,11 @@ export interface ListSection {
   categories: ListCategory[];
 }
 
+export interface SubsectionItem {
+  text: string;
+  checked?: boolean;
+}
+
 /**
  * A block within a content section.
  * Blocks are created from H3/H4 headings.
@@ -41,7 +46,7 @@ export interface ListSection {
 export interface Subsection {
   title: string;              // The heading text (preserves punctuation like colons)
   content: string;            // Paragraph content that follows (joined with \n\n)
-  items: string[];            // List items if content includes a bulleted list
+  items: SubsectionItem[];
   depth: 3 | 4;               // Heading depth: 3 for sections, 4 for fields
 }
 
@@ -341,7 +346,7 @@ function parseMarkdownContent(content: string): PagePlan {
           }
         } else if (token.type === 'list') {
           const items = extractListItems(token as Tokens.List);
-          const listText = items.join('\n- ');
+          const listText = items.map(i => i.text).join('\n- ');
           if (currentContentSection.preamble) {
             currentContentSection.preamble += '\n\n- ' + listText;
           } else {
@@ -413,14 +418,15 @@ function extractGroceryItems(token: Tokens.List): GroceryItem[] {
   return items;
 }
 
-/**
- * Extract plain text items from a list token.
- */
-function extractListItems(token: Tokens.List): string[] {
-  const items: string[] = [];
+function extractListItems(token: Tokens.List): SubsectionItem[] {
+  const items: SubsectionItem[] = [];
   
   for (const item of token.items) {
-    items.push(item.text);
+    const subItem: SubsectionItem = { text: item.text };
+    if (item.checked === true || item.checked === false) {
+      subItem.checked = item.checked;
+    }
+    items.push(subItem);
   }
   
   return items;

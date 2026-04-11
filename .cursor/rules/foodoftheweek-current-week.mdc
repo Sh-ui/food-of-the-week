@@ -8,6 +8,8 @@ Standards for how `FOOD-OF-THE-WEEK.md` serves as the source of truth for the cu
 
 **Context loading:** If not already loaded, read `brainstorming/idea-basis/cooking-identity.md` for the cook's profile before writing or editing meals.
 
+**Gold-standard template:** `brainstorming/idea-basis/prototype-week.md` is the canonical reference for structure, field names, grocery format, Sunday prep format, and meal card layout. All generated weeks must follow its pattern exactly.
+
 <rule>
 name: foodoftheweek-current-week
 description: Defines the structure and lifecycle of FOOD-OF-THE-WEEK.md as the live meal plan document
@@ -36,13 +38,14 @@ grocery_list_format:
   
   common_categories:
     - "### Produce"
-    - "### Staples"
-    - "### Dairy"
     - "### Protein"
-    - "### Frozens"
+    - "### Staples"
+    - "### Pantry"
   notes:
     - "Only include categories that have items -- not all are required every week"
-    - "Custom categories are allowed (e.g., ### Fridge Garnishes, ### Bakery)"
+    - "Custom categories are allowed (e.g., ### Dairy, ### Frozens)"
+    - "On-hand items go into their natural category with [x] -- no separate 'Already On Hand' section"
+    - "Flavor cabinet staples (soy sauce, oils, vinegars, salt, spices always in stock) are omitted entirely"
   
   item_format:
     to_buy: "- [ ] Item name - quantity/details"
@@ -65,27 +68,22 @@ meal_format:
       - "Codename is required for parser extraction; timing is optional but recommended"
     
     codename_types:
+      WokNight:
+        pattern: "##### WokNight"
+        meaning: "Wok-sequenced meal -- 1-3 quick dishes fired in a row. The wok is the primary tool."
+        examples:
+          - "##### WokNight"
+
       ChefDish:
         pattern: "##### ChefDish[+*]"
         meaning: "Chef is doing this solo -- no meaningful delegation. Plus signs signal the chef's own memory-jog level."
         plus_scale:
           none: "Straightforward. No day-ahead work. Cook and plate."
-          one_plus: "Some day-ahead or timing-sensitive effort required (e.g. dry brine, marinate, start a dough)."
-          two_plus: "Significant day-ahead AND active evening effort (e.g. roll meatballs prev day, probe work, manage multiple components)."
-          three_plus: "Reserved for high-complexity solo cook sessions."
+          one_plus: "Some day-ahead or timing-sensitive effort required."
+          two_plus: "Significant day-ahead AND active evening effort."
         examples:
           - "##### ChefDish"
           - "##### ChefDish+"
-          - "##### ChefDish++"
-          - "##### ChefDish+++"
-      
-      SousVidePrep:
-        pattern: "##### SousVidePrep[+*]"
-        meaning: "Sous vide is the primary prep method. Family drops bags; chef finishes."
-        plus_scale:
-          none: "Single protein in the bath, straightforward finish."
-          one_plus: "Multiple components or extended timing management."
-          two_plus: "Complex multi-step finish after sous vide (e.g. sauce, multiple garnishes, oven work)."
       
       Prep_and_Heat:
         pattern: "##### Prep&Heat[+*]"
@@ -93,30 +91,38 @@ meal_format:
         plus_scale:
           none: "Simple prep and heat."
           one_plus: "Some day-ahead work or longer active prep."
-          two_plus: "Day-ahead AND multiple active steps (e.g. soak beans, long cook, multiple components)."
+      
+      BatchDay:
+        pattern: "##### BatchDay"
+        meaning: "Sunday batch prep session. Not a meal -- a prep day."
+        examples:
+          - "##### BatchDay"
   
   field_format:
     heading: "#### [Field Name]:"
     format: "H4 heading with colon on its own line, followed by field content starting on the next line"
     standard_fields:
-      - "#### Protein:"
-      - "#### Description:"
+      - "#### Anchor:"
+      - "#### Fan:"
+      - "#### Cai:"
+      - "#### Soup:"
     notes:
       - "Field names are arbitrary; consecutive H4 headings are grouped as one visual card"
       - "Do not include the value on the same line as the heading"
-      - "Description doubles as the ingredient list -- all ingredients woven in as **bold** text rather than a separate #### Ingredients: field"
+      - "Anchor = the louder cai / primary protein dish. Fan = the staple grain. Cai = shared dishes. Soup = soup or 'None' with reason."
   
   instruction_format:
     structure: "Three-phase base format (see recipe-instruction-format.mdc)"
     base_phases:
       - "### Already Prepped"
-      - "### Sous Chef - Prep" or "### Sous Chef - Cooking"
-      - "### Chef - Finishing & Plating"
-    additional_sections:
-      - "Additional H3 sections can follow the base phases for special needs"
-      - "### Leftovers -- describes how to transform leftovers into a different meal"
-      - "Keep additional sections concise (a paragraph, not a full recipe)"
-    notes: "H3 headings for distinct instruction sections (no inline values)"
+      - "### Sous Chef - Assembly"
+      - "### Chef - Wok Sequence" or "### Chef - Cooking"
+    notes:
+      - "H3 headings for distinct instruction sections (no inline values)"
+      - "Phase names flex to match the night's technique (Wok Sequence, Cooking, etc.)"
+      - "Already Prepped is a bulleted list of Sunday prep components used tonight"
+      - "Sous Chef handles rice, reheating bags, fresh assembly"
+      - "Chef handles the active cooking (wok, cast iron, oven)"
 
   structure:
     meals: "Descriptive names only (## Meal Name)"
@@ -126,60 +132,74 @@ meal_format:
     cooked: "Use `## ✓ Meal Name` to mark cooked meals; avoid strikethroughs for this purpose"
 
 template:
-  full_structure: |
+  reference: "See brainstorming/idea-basis/prototype-week.md for the full canonical example"
+  skeleton: |
     # Week of [Month DD - DD, YYYY]
     
     ## Grocery List
     
     ### Produce
-    - [ ] Item 1
-    - [ ] Item 2
-    
-    ### Staples
-    - [ ] Item 1
-    - [ ] Item 2
-    
-    ### Dairy
-    - [ ] Item 1
+    - [ ] Item - quantity
+    - [x] On-hand item
     
     ### Protein
-    - [ ] Item 1
-    - [ ] Item 2
+    - [ ] Protein - amount (breakdown)
     
-    ### Frozens
-    - [ ] Item 1
+    ### Staples
+    - [ ] Item
+    - [x] On-hand item
+    
+    ### Pantry
+    - [ ] Specialty item (lasts months)
+    - [x] On-hand item
+    
+    ---
+    
+    ## Sunday Prep
+    
+    ##### BatchDay
+    ###### time estimate
+    
+    ### Prep Checklist
+    - [ ] Task 1
+    - [ ] Task 2
+    
+    ### Cai Batch
+    [Detailed instructions for each sous vide / pickle / marinade component]
+    
+    ### Soup Bases
+    [Concentrated soup base instructions]
+    
+    ### Protein Bags
+    [Portioning, seasoning, and storage for each protein use]
+    
+    ---
     
     ## [Meal Name]
-
+    
     ##### Codename
     ###### timing details
-
-    #### Protein:
-    [Protein used]
-
-    #### Description:
-    [Overview with all **ingredients** bolded inline]
-
+    
+    #### Anchor:
+    [Primary protein dish -- the louder cai]
+    
+    #### Fan:
+    [Staple grain or noodle]
+    
+    #### Cai:
+    [Supporting shared dishes]
+    
+    #### Soup:
+    [Soup or None with reason]
+    
     ### Already Prepped
-
-     - [Item prepared in advance]
-
-    ### Sous Chef - Prep
-
-    [Delegation instructions in paragraphs]
-
-    ### Chef - Finishing & Plating
-
-    [Finishing instructions in paragraphs]
+    - **Component** from Sunday.
     
-    ## [Meal Name]
-    ...
+    ### Sous Chef - Assembly
+    [Rice, reheating bags, fresh prep]
     
-    ## [Meal Name]
-    ...
-    
-    ## [Meal Name]
-    ...
+    ### Chef - Cooking
+    [Active cooking paragraphs ending with **Table**: layout]
 
 lifecycle:
   active_period: "One week (typically Sunday to Sunday or Monday to Saturday)"
@@ -254,34 +274,45 @@ validation:
 
 examples:
   - correct_meal: |
-      ## One Pot Penne
+      ## Mapo Tofu
 
-      ##### Prep&Heat
-      ###### chop veggies + bake
+      ##### WokNight
+      ###### 15 min wok sequence, no soup
 
-      #### Protein:
-      Frozen chicken meatballs
+      #### Anchor:
+      Mapo tofu with ground pork -- Sichuan, saucy, numbing-spicy
 
-      #### Description:
-      **Penne**, frozen **chicken meatballs**, and frozen **marinara** cooked together in one pot with diced **bell pepper** and **onion**. **Parmesan** shaved on top.
+      #### Fan:
+      White rice
+
+      #### Cai:
+      Dry-fried green beans (from Sunday bag, wok finish), smashed cucumber salad (fresh), soy eggs (from Sunday)
+
+      #### Soup:
+      None -- the mapo is brothy enough to fill the soup role. Three cai plus rice is a full table.
 
       ### Already Prepped
 
-       - Frozen **chicken meatballs** and **marinara** are on hand.
+      - **Green beans** (sesame-dressed bag) in fridge from Sunday.
+      - **Soy eggs** in marinade in fridge from Sunday.
+      - **Ground pork** (mapo portion) in freezer from Sunday.
 
-      ### Sous Chef - Prep
+      ### Sous Chef - Assembly
 
-      Dice 1 **bell pepper** and half a **yellow onion**.
+      Start **rice** in the rice cooker. Thaw **ground pork** bag in warm water.
 
-      ### Chef - Finishing & Plating
+      ### Chef - Wok Sequence
 
-      In a large pot, heat oil over medium-high. Saute the **onion** and **bell pepper** just until they get a bit of color. Add the frozen **marinara** and a splash of water. Once simmering, add the frozen **chicken meatballs** and **penne**. ***Taste*** and adjust. Serve in bowls with **Parmesan** shaved over the top.
+      **Wok dish 1 -- Mapo tofu**: Heat wok, add oil. ...
+
+      **Table**: **rice** in individual bowls. **Mapo tofu** center on the lazy susan. **Green beans**, **cucumber salad**, **soy eggs** in small shared dishes.
   
   - correct_grocery_category: |
       ### Produce
-      - [ ] Green cabbage - 1 head
-      - [x] Yellow onions
+      - [ ] Napa cabbage - 1 large head
+      - [ ] Green beans - 1.5 lbs
       - [x] Garlic
+      - [x] Ginger
   
   - correct_filename: "archive/20251207summary.md"
   
