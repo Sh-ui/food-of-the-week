@@ -41,9 +41,6 @@
 - [x] Canned whole tomatoes
 - [x] Panko
 - [x] Frozen collard greens
-- [x] Frozen chopped cabbage
-- [x] Kimchi
-
 ### Pantry
 
 - [ ] White cooking wine
@@ -64,7 +61,7 @@
 - [ ] Cook white beans from dried, vacuum seal with garlic and olive oil
 - [ ] Cook black beans from dried, dress and refrigerate
 - [ ] Spatchcock chicken, salt heavily, dry brine uncovered on rack in fridge
-- [ ] Mix, form, and freeze meatballs (with frozen cabbage folded in)
+- [ ] Mix, form, and freeze meatballs
 - [ ] Make thick reduced tomato sauce, refrigerate
 - [ ] Cook picadillo fully, vacuum seal flat
 - [ ] Cut and vacuum seal broccoli (half the 2-pack) with garlic for Thursday
@@ -82,7 +79,7 @@
 
 **Whole chicken**: spatchcock by cutting along both sides of the backbone with kitchen shears. Press flat, crack the breastbone. Salt heavily on all surfaces. Set on a rack over a sheet pan, uncovered in the fridge. Dry brine until Tuesday morning.
 
-**Meatballs**: thaw **frozen chopped cabbage**, squeeze out excess moisture through a clean towel. Mix with ~1 lb **ground meat**, 1 **egg**, generous **panko** (enough that the mix feels breadcrumb-heavy), minced **garlic**, chopped **parsley**, **smoked paprika**, **cumin**, salt, pepper. Form big -- golf ball size or larger. Roll each one in a final coat of **panko** for a crunchy exterior. Lay on parchment-lined sheet pan. Freeze solid, then transfer to a freezer bag.
+**Meatballs**: mix ~1 lb **ground meat**, 1 **egg**, generous **panko** (enough that the mix feels breadcrumb-heavy), minced **garlic**, chopped **parsley**, **smoked paprika**, **cumin**, salt, pepper. Form big -- golf ball size or larger. Roll each one in a final coat of **panko** for a crunchy exterior. Lay on parchment-lined sheet pan. Freeze solid, then transfer to a freezer bag.
 
 **Picadillo**: brown ~1 lb **ground meat** in a wide pan, breaking it up. Add diced **onion** and minced **garlic**, cook until softened. Add crushed **canned tomatoes** (half the can -- save the rest for tomato sauce), halved **olives**, **cumin**, pinch of **cinnamon**, salt. Simmer until *thick and saucy*, about 15-20 minutes. Cool completely. Vacuum seal flat. Refrigerate (or freeze if Thursday feels far away).
 
@@ -103,7 +100,7 @@
 ## Shrimp Scampi
 
 ##### ChefDish
-###### warm bean bag + wok scampi + dashi soup, 15 min active
+###### warm beans + wok scampi + dashi soup, 15 min active
 
 #### Anchor:
 Shrimp scampi -- butter, garlic, bell pepper, celery, white wine
@@ -143,7 +140,7 @@ Open **white bean** bag, pour into a medium bowl. Spoon **cherry pepper relish**
 ## Roast Chicken
 
 ##### ChefDish+
-###### dry brine Sunday + sous vide Tuesday morning + 480° convection crisp, 20 min active
+###### dry brine Sunday + sous vide am + 480° oven crisp, 20 min active
 
 #### Anchor:
 Spatchcocked whole chicken over braised greens -- sous vide to temp, oven-crisped, carved cai png style
@@ -191,14 +188,14 @@ Carve chicken on the platter over the now-wilted greens. People take pieces.
 
 Dress **romaine** and **cherry tomatoes** with **balsamic** and **olive oil**, salt, pepper.
 
-**Table**: **rice** in individual bowls. **Chicken over greens** on center platter. **Broccoli** and **romaine salad** in shared dishes. **Soup** ladled into individual bowls. **Kimchi** ambient.
+**Table**: **rice** in individual bowls. **Chicken over greens** on center platter. **Broccoli** and **romaine salad** in shared dishes. **Soup** ladled into individual bowls.
 
 ---
 
 ## Big Meatballs
 
 ##### Prep&Heat
-###### frozen meatballs into 425° oven (sous chef) + wok mushroom-pepper, 20 min chef active
+###### meatballs 425° oven + wok veg, 20 min chef
 
 #### Anchor:
 Big breadcrumb-coated meatballs with melted cheese, sitting in thick reduced tomato sauce
@@ -243,7 +240,7 @@ Nestle **meatballs** into the warm **tomato sauce** in the pan, or spoon sauce o
 
 Dress **romaine** with the **creamy Parmesan dressing**, top with sliced **pepperoncini**.
 
-**Table**: **angel hair** in individual bowls (the fan). **Meatballs in sauce** on center platter. **Mushroom-pepper** and **romaine salad** in shared dishes on the lazy susan. **Kimchi** ambient.
+**Table**: **angel hair** in individual bowls (the fan). **Meatballs in sauce** on center platter. **Mushroom-pepper** and **romaine salad** in shared dishes on the lazy susan.
 
 ---
 
@@ -284,4 +281,4 @@ Open **picadillo** bag, pour into a medium bowl. ***Taste*** and adjust salt or 
 
 Open **broccoli** bag, arrange florets in a serving bowl. They should be *bright green and tender-crisp*.
 
-**Table**: **rice** in individual bowls. **Picadillo** in a center bowl. **Broccoli** and **black bean salad** in shared dishes on the lazy susan. **Kimchi** ambient.
+**Table**: **rice** in individual bowls. **Picadillo** in a center bowl. **Broccoli** and **black bean salad** in shared dishes on the lazy susan.
