@@ -6,303 +6,282 @@
 
 ### Produce
 
-- [ ] Baby bok choy - 2 bunches
-- [ ] Napa cabbage - 1 large head
-- [ ] Green beans - 1.5 lbs
-- [ ] Cucumbers - 3
-- [ ] Radishes - 1-2 bunches
-- [ ] Scallions - 2 bunches
-- [ ] Fresh dill - 1 bunch
+- [ ] Celery - 1 bunch
+- [ ] Bell peppers - 2
+- [ ] Broccoli - 2-pack
+- [ ] Romaine hearts
+- [ ] Mushrooms - 8 oz
+- [ ] Cherry tomatoes - 1 pint
+- [ ] Scallions - 1 bunch
 - [ ] Lemon - 2
-- [x] Garlic
-- [x] Ginger
-- [x] Yellow onions
+- [ ] Parsley - 1 bunch
+- [ ] Garlic - 2 heads
+- [ ] Onions - 3
+- [ ] Walnuts - small bag
+- [ ] Dates - small package
+- [x] Big bok choy
 
 ### Protein
 
-- [ ] Ground pork - 2 lbs (~0.5 lb mapo, ~0.75 lb patty, ~0.75 lb meatballs)
-- [ ] Chicken thighs, bone-in skin-on - ~3 lbs (~1.5 lb blackened, ~1.5 lb diced stir-fry)
-- [x] Eggs (larger batch -- soy eggs serve Mon cai + Tue soup)
+- [ ] Whole chicken - 1
+- [ ] Ground meat - ~2 lbs (split: ~1 lb meatballs, ~1 lb picadillo)
+- [x] Frozen shrimp (half bag)
+
+### Dairy
+
+- [ ] Parmesan wedge
+- [x] Greek yogurt
 
 ### Staples
 
-- [ ] Silken tofu - 2 blocks
-- [ ] Udon noodles - 2 packs fresh or frozen
-- [ ] Farro - 1 bag
 - [x] White rice
-- [x] Greek yogurt
+- [x] Angel hair pasta
+- [x] Dried Great Northern (white) beans
+- [x] Dried black beans
+- [x] Canned whole tomatoes
+- [x] Panko
 - [x] Frozen collard greens
+- [x] Frozen chopped cabbage
+- [x] Kimchi
 
 ### Pantry
 
-- [ ] Doubanjiang (Pixian chili bean paste) - 1 jar (lasts months)
-- [ ] Sichuan peppercorn - 1 bag
-- [ ] Fermented black beans (douchi) - 1 bag
-- [ ] Harissa paste - 1 jar
-- [ ] Cajun/Creole spice blend - 1 tin
-- [x] Kombu, bonito flakes
+- [ ] White cooking wine
+- [ ] Pepperoncini or banana peppers
+- [x] Dashi packets
+- [x] Olives
+- [x] Cherry pepper relish
 
 ---
 
 ## Sunday Prep
 
 ##### BatchDay
-###### 2-3 hours active
+###### 2-3 hours active -- soak beans Saturday night
 
 ### Prep Checklist
 
-- [ ] Green beans -- season and sous vide, split into two bags (sesame-dressed + plain), refrigerate
-- [ ] Collard greens -- season and sous vide, refrigerate
-- [ ] Pickle radishes -- mason jar, refrigerate
-- [ ] Soy eggs -- soft boil and marinate overnight
-- [ ] Ginger-scallion-chicken soup cubes -- freeze
-- [ ] Tomato-harissa soup cubes -- freeze
-- [ ] Portion ground pork into 3 bags (mapo, patty, meatballs)
-- [ ] Mix and form pork patty -- refrigerate (not frozen)
-- [ ] Mix, form, and freeze meatballs
-- [ ] Season bone-in chicken thighs with Cajun spice -- vacuum seal and refrigerate
-- [ ] Debone, dice, and marinate chicken thighs -- vacuum seal and freeze
+- [ ] Cook white beans from dried, vacuum seal with garlic and olive oil
+- [ ] Cook black beans from dried, dress and refrigerate
+- [ ] Spatchcock chicken, salt heavily, dry brine uncovered on rack in fridge
+- [ ] Mix, form, and freeze meatballs (with frozen cabbage folded in)
+- [ ] Make thick reduced tomato sauce, refrigerate
+- [ ] Cook picadillo fully, vacuum seal flat
+- [ ] Cut and vacuum seal broccoli (half the 2-pack) with garlic for Thursday
+- [ ] Make gremolata breadcrumbs, jar at room temp
+- [ ] Make creamy Parmesan dressing, jar and refrigerate
+- [ ] Toast walnuts, jar at room temp
 
-### Cai Batch
+### Bean Batch
 
-**Green beans (two bags)**: Split 1.5 lbs **green beans** into two portions. Bag 1: season with **sesame oil**, **soy sauce**, **rice vinegar**, toasted **sesame seeds**, vacuum seal, sous vide at 183°F for 15-20 min until crisp-firm. Bag 2: season with **olive oil**, a pinch of salt, vacuum seal, sous vide same. Both go straight to the fridge.
+**White beans**: soak **Great Northern beans** overnight Saturday. Sunday, simmer until tender (~1 hour). Drain. Portion into a vacuum bag with **olive oil**, 2-3 whole **garlic** cloves, pinch of salt. Seal. Refrigerate -- these warm in the sous vide bath Monday afternoon.
 
-**Collard greens**: thaw **frozen collard greens**, pack into a vacuum bag with minced **garlic**, a splash of **cider vinegar**, pinch of **sugar**, and salt. Seal and sous vide at 185°F for 2 hours until fully tender and deep green. Refrigerate.
+**Black beans**: soak **black beans** overnight Saturday (or quick-soak: bring to a boil, cover, sit 1 hour). Simmer until tender. Drain while warm, toss with **olive oil**, **cumin**, splash of **balsamic vinegar**, salt. Refrigerate in a container -- these serve cold as a salad Thursday.
 
-**Pickled radishes**: slice **radishes** thin, pack into a mason jar with **rice vinegar**, **sugar**, pinch of salt, and a few slices of fresh chili. Refrigerate. Lasts all week.
+### Protein Prep
 
-**Soy eggs**: soft boil **eggs** 6.5 minutes, ice bath, peel. Marinate in **soy sauce** + **mirin** + water (1:1:2) overnight. Refrigerate. Keep all week. Make enough for Monday cai platter plus Tuesday soup -- a dozen is reasonable for 6 people across both nights.
+**Whole chicken**: spatchcock by cutting along both sides of the backbone with kitchen shears. Press flat, crack the breastbone. Salt heavily on all surfaces. Set on a rack over a sheet pan, uncovered in the fridge. Dry brine until Tuesday morning.
 
-### Soup Bases
+**Meatballs**: thaw **frozen chopped cabbage**, squeeze out excess moisture through a clean towel. Mix with ~1 lb **ground meat**, 1 **egg**, generous **panko** (enough that the mix feels breadcrumb-heavy), minced **garlic**, chopped **parsley**, **smoked paprika**, **cumin**, salt, pepper. Form big -- golf ball size or larger. Roll each one in a final coat of **panko** for a crunchy exterior. Lay on parchment-lined sheet pan. Freeze solid, then transfer to a freezer bag.
 
-**Ginger-scallion-chicken**: simmer chicken bones (from the deboning trimmings) with **ginger** slices and **scallion** whites until concentrated and golden. Strain, reduce to syrupy, freeze in large cube trays.
+**Picadillo**: brown ~1 lb **ground meat** in a wide pan, breaking it up. Add diced **onion** and minced **garlic**, cook until softened. Add crushed **canned tomatoes** (half the can -- save the rest for tomato sauce), halved **olives**, **cumin**, pinch of **cinnamon**, salt. Simmer until *thick and saucy*, about 15-20 minutes. Cool completely. Vacuum seal flat. Refrigerate (or freeze if Thursday feels far away).
 
-**Tomato-harissa**: sweat diced **onion**, add canned **crushed tomatoes** and 2 tbsp **harissa paste**, simmer until thick and reduced by half. Cool, freeze in large cube trays.
+**Tomato sauce** (for meatball night): remaining **canned tomatoes** in a small pot with minced **garlic**, splash of **olive oil**, pinch of **sugar**. Simmer and reduce until *thick and clingy* -- this needs to coat meatballs, not pool under them. Refrigerate.
 
-### Protein Bags
+### Cai Prep
 
-**Ground pork -- mapo portion (~0.5 lb)**: bag as-is, freeze.
+**Broccoli (Thursday bag)**: cut half the **broccoli** 2-pack into florets. Vacuum seal with sliced **garlic**, **olive oil**, salt. Freeze. Thursday morning it goes in the sous vide bath at 185°F.
 
-**Ground pork -- patty portion (~0.75 lb)**: mix with a splash of **soy sauce**, a few drops of **dark soy sauce**, drizzle of **sesame oil**, pinch of **sugar**, **white pepper**, 1 tsp **cornstarch** (for silkiness), and 2-3 finely sliced **scallions**. Add 2 tbsp water and mix until it loosens slightly. Form into a flat patty on a small plate, cover, refrigerate (not frozen -- steams directly over the rice cooker).
+**Gremolata breadcrumbs**: toast **panko** in a splash of **olive oil** over medium heat until *golden and crunchy*. Remove from heat, toss with **lemon** zest (from one lemon), minced **garlic**, chopped **parsley**. Cool completely. Jar at room temperature. Stays crunchy for days.
 
-**Ground pork -- meatball portion (~0.75 lb)**: mix with **cumin**, **coriander**, **smoked paprika**, minced **garlic**, **salt**, and a beaten **egg** for binding. Form into small meatballs on a parchment-lined sheet pan. Freeze solid, then bag.
+**Creamy Parmesan dressing**: grate **Parmesan** into **Greek yogurt**, thin with **olive oil**, squeeze of **lemon**, minced **garlic**, cracked pepper, salt. Jar and refrigerate.
 
-**Chicken thighs -- bone-in (~1.5 lb)**: season with **Cajun/Creole spice blend**, vacuum seal, refrigerate.
-
-**Chicken thighs -- diced (~1.5 lb)**: debone, cut into bite-size pieces, toss with **soy sauce**, **cornstarch**, splash of **shaoxing wine** or mirin. Vacuum seal and freeze.
+**Toasted walnuts**: dry pan over medium heat, toss **walnuts** until *fragrant and slightly darkened*, 3-4 minutes. Cool. Jar.
 
 ---
 
-## Mapo Tofu
+## Shrimp Scampi
 
-##### WokNight
-###### 15 min wok sequence, no soup
+##### ChefDish
+###### warm bean bag + wok scampi + dashi soup, 15 min active
 
 #### Anchor:
-Mapo tofu with ground pork -- Sichuan, saucy, numbing-spicy
+Shrimp scampi -- butter, garlic, bell pepper, celery, white wine
 
 #### Fan:
 White rice
 
 #### Cai:
-Dry-fried green beans (from Sunday bag, wok finish), smashed cucumber salad (fresh), soy eggs (from Sunday)
+Shaved celery salad with walnuts, Parmesan, lemon, dates (fresh). Warm Tuscan white beans with cherry pepper relish (from Sunday bag).
 
 #### Soup:
-None -- the mapo is brothy enough to fill the soup role. Three cai plus rice is a full table.
+Clear dashi broth with sliced spring onion
 
 ### Already Prepped
 
-- **Green beans** (sesame-dressed bag) in fridge from Sunday.
-- **Soy eggs** in marinade in fridge from Sunday.
-- **Ground pork** (mapo portion) in freezer from Sunday.
+- **White beans** vacuum sealed with garlic, in fridge from Sunday.
+- **Walnuts** toasted, in jar from Sunday.
 
 ### Sous Chef - Assembly
 
-Start **rice** in the rice cooker. Thaw **ground pork** bag in warm water.
+Start **rice** in the rice cooker. Drop **white bean** bag into the sous vide bath at ~150°F to warm through.
 
-Pull **green bean** bag from fridge. If you want them hot, drop the bag in the sous vide bath to bring to temp while you prep everything else.
-
-Smash 3 **cucumbers** with the flat of a knife, tear into rough pieces, toss with **soy sauce**, **rice vinegar**, **sesame oil**, minced **garlic**, pinch of **sugar**. Set aside.
-
-Halve **soy eggs**, arrange on a small plate.
-
-### Chef - Wok Sequence
-
-**Wok dish 1 -- Mapo tofu**: Heat wok, add oil. Fry **ground pork** until crumbly and rendered. Add **doubanjiang** (2 tbsp), **fermented black beans** (1 tbsp), minced **garlic** and **ginger**. Stir until fragrant and red. Add a cup of water or light stock, bring to a simmer. Slide in cubed **silken tofu** gently. Simmer 5 minutes. Thicken with a cornstarch slurry. Finish with ground **Sichuan peppercorn** and **scallion** greens. Pour into a serving bowl.
-
-**Wok dish 2 -- Dry-fried green beans**: Quick rinse of the wok. High heat, splash of oil. Dump the warmed **green beans** from the bag, spread flat, let them blister and char without moving for 60 seconds. Toss once, add a splash of **soy sauce**. Out into a serving bowl.
-
-**Table**: **rice** in individual bowls. **Mapo tofu** center on the lazy susan. **Green beans**, **cucumber salad**, **soy eggs** in small shared dishes. No soup tonight.
-
----
-
-## Steamed Pork Patty
-
-##### Prep&Heat
-###### rice cooker does double duty, 15 min active
-
-#### Anchor:
-Steamed pork patty with scallion -- Canton home technique
-
-#### Fan:
-White rice (steamed simultaneously under the patty)
-
-#### Cai:
-Garlic bok choy (wok, 3 min), pickled radishes (from Sunday jar)
-
-#### Soup:
-Soy egg and napa cabbage gwuntong
-
-### Already Prepped
-
-- **Pork patty** formed and refrigerated from Sunday.
-- **Soy eggs** in marinade in fridge from Sunday.
-- **Pickled radishes** in jar in fridge from Sunday.
-
-### Sous Chef - Assembly
-
-Start **rice** in the rice cooker. When steam begins to vent, place the **pork patty** (on its plate) on the steam rack inside the cooker to steam over the rice. The patty cooks in the time the rice finishes.
-
-Portion **pickled radishes** into a small serving dish.
-
-Tear 3-4 leaves of **napa cabbage** into pieces. Halve 3-4 **soy eggs**.
+Shave **celery** inner stalks and hearts thin on the bias. Toss with **olive oil**, juice of half a **lemon**, shaved **Parmesan**, sliced **dates**, toasted **walnuts** from the jar, salt. Arrange on a small plate.
 
 ### Chef - Cooking
 
-**Gwuntong**: Bring a pot of water to a boil. Add **napa cabbage** pieces, simmer 5 minutes. Season with salt. Drop **soy egg** halves in at the end to warm through -- don't boil them, just let them sit in the hot broth for a minute. Done.
+**Scampi**: heat **butter** and a splash of **olive oil** in the wok or a wide pan. Add sliced **garlic**, diced **bell pepper**, and sliced **celery** pieces. Sauté 2 minutes until *softened but not limp*. Add **shrimp**, spread flat, sear 1 minute per side until *pink and curled*. Deglaze with a generous splash of **white cooking wine**, let it reduce 30 seconds. Season with salt and pepper. Out onto a small platter.
 
-**Wok -- garlic bok choy**: Halve **baby bok choy** lengthwise. Wok ripping hot, splash of oil. Lay bok choy cut-side down, sear 60 seconds until charred. Flip, add minced **garlic** and a splash of **oyster sauce** + water. Toss until wilted but stems still have bite. Out into a serving bowl.
+**Soup**: bring a small pot of water to a boil. Stir in **dashi** packet. Slice **scallions** thin, drop into the broth. Season with salt. 3 minutes.
 
-Remove **pork patty** from rice cooker. The juices on the plate are liquid gold -- drizzle them back over the patty or onto the rice.
+Open **white bean** bag, pour into a medium bowl. Spoon **cherry pepper relish** over the top, drizzle with **olive oil**.
 
-**Table**: **rice** in individual bowls. **Pork patty** on its plate, center. **Bok choy** and **pickled radishes** in small shared dishes. **Soup** ladled into individual bowls.
+**Table**: **rice** in individual bowls. **Shrimp scampi** on center platter. **Celery salad** and **white beans** in shared dishes on the lazy susan. **Soup** ladled into individual bowls.
 
 ---
 
-## Blackened Chicken
+## Roast Chicken
 
-##### ChefDish
-###### cast iron sear, no soup, 20 min active
+##### ChefDish+
+###### dry brine Sunday + sous vide Tuesday morning + 480° convection crisp, 20 min active
 
 #### Anchor:
-Cajun-blackened bone-in chicken thighs -- Southern, aggressive spice
+Spatchcocked whole chicken over braised greens -- sous vide to temp, oven-crisped, carved cai png style
 
 #### Fan:
 White rice
 
 #### Cai:
-Collard greens (from Sunday bag, reheated), vinegar cabbage slaw (fresh, 5 min)
+Romaine salad with cherry tomato, balsamic, EVOO (fresh). Roasted broccoli with lemon and Parmesan (oven alongside chicken).
 
 #### Soup:
-None -- two hearty cai from the bath plus an aggressively spiced protein. Full table.
+Chicken bag liquid from the sous vide, finished with white wine and thinned with water
 
 ### Already Prepped
 
-- **Chicken thighs** seasoned with Cajun spice, vacuum sealed from Sunday.
-- **Collard greens** in bag in fridge from Sunday.
+- **Whole chicken** spatchcocked and dry-brined in fridge since Sunday.
+- **Frozen collard greens** in freezer.
+- **Big bok choy** in fridge.
 
 ### Sous Chef - Assembly
 
-Drop **collard greens** bag into the sous vide bath to come to serving temp while you work.
-
-Shred a quarter of the **napa cabbage** thin. Toss with **cider vinegar**, a drizzle of **olive oil**, pinch of **sugar**, salt, and a few grinds of black pepper. Let it sit -- it improves as it rests.
+Morning: pull **chicken** from fridge, vacuum seal flat, place in sous vide bath at **150°F**. Leave for at least 2 hours -- all day is fine.
 
 Start **rice** in the rice cooker.
 
+Halve **cherry tomatoes**. Tear **romaine** into a bowl. Set aside with **balsamic vinegar** and **olive oil** for dressing at the table.
+
 ### Chef - Cooking
 
-Remove **chicken thighs** from bag, pat completely dry. The Cajun seasoning is already on them from Sunday.
+Crank mini oven to **480°F** super convection.
 
-Get **cast iron** ripping hot with a thin film of high-smoke-point oil. Lay thighs **skin-side down**. Press with a spatula for the first 30 seconds to ensure full contact. Sear without moving for **5-6 minutes** until the skin is *deeply blackened and crisp*. Flip, reduce heat to medium, cook another **5-6 minutes** until a probe reads **165°F** in the thickest part.
+Remove **chicken** from bag. ***Save the bag liquid*** -- pour into a small pot. Pat skin *completely dry* with paper towels.
 
-Rest 3 minutes. Serve whole or sliced.
+Spread **frozen collard greens** and roughly chopped **bok choy** on a sheet pan as a bed. Set chicken skin-side up on the greens. Into the oven.
 
-**Table**: **rice** in individual bowls. **Chicken** on a center platter (sliced or whole, bone-in -- people pull pieces with their serving tools). **Collard greens** and **cabbage slaw** in shared dishes. No soup tonight.
+Toss **broccoli** florets (half the 2-pack) with **olive oil** and salt on a separate tray or alongside if space allows.
 
----
+Roast until skin is *deeply golden and crispy*, roughly 15-20 minutes. If the breast feels too hot, rest briefly -- the sous vide has already brought it to temp, you are crisping skin without overcooking.
 
-## Ginger-Scallion Chicken
+While the chicken roasts: warm the reserved **bag liquid** over medium heat. Add a splash of **white cooking wine**, thin with water to desired consistency. ***Taste*** and adjust salt. This is the soup.
 
-##### WokNight
-###### wok sequence + udon + soup from cube, 20 min active
+Finish **broccoli** with **lemon** zest and shaved **Parmesan**.
 
-#### Anchor:
-Diced chicken stir-fried with ginger and scallion -- clean, savory, fast
+Carve chicken on the platter over the now-wilted greens. People take pieces.
 
-#### Fan:
-Plain udon noodles
+Dress **romaine** and **cherry tomatoes** with **balsamic** and **olive oil**, salt, pepper.
 
-#### Cai:
-Stir-fried napa cabbage with garlic (wok, using the remaining napa from Tuesday's head), pickled radishes (same jar from Sunday)
-
-#### Soup:
-Ginger-scallion-chicken from frozen cube, with sliced scallion and a few drops of sesame oil
-
-### Already Prepped
-
-- **Diced chicken** marinated and vacuum sealed from Sunday.
-- **Pickled radishes** in jar in fridge.
-- **Ginger-scallion-chicken soup cubes** in freezer.
-
-### Sous Chef - Assembly
-
-Boil water for **udon** noodles. Cook per package, drain, rinse briefly. Set aside in bowls.
-
-Drop 2 **ginger-scallion-chicken cubes** into a small pot of boiling water. Slice **scallion** greens thin, float a handful into the soup. Drizzle **sesame oil**.
-
-Portion **pickled radishes** into a small serving dish.
-
-Shred remaining **napa cabbage** into wide ribbons.
-
-### Chef - Wok Sequence
-
-**Wok dish 1 -- Ginger-scallion chicken**: Wok ripping hot, oil in. Spread **diced chicken** in a single layer, let it sear without moving for 60 seconds. Toss. Add sliced **ginger** (a thumb's worth) and **scallion** whites. Stir-fry 2 minutes until the chicken is golden and fragrant. Season with **soy sauce**, a splash of **mirin**, finish with **scallion** greens. Out into a serving bowl.
-
-**Wok dish 2 -- Garlic napa cabbage**: Quick rinse. High heat, oil. Add minced **garlic**, then **napa cabbage** ribbons. Stir-fry 2-3 minutes until wilted but still has some crunch. Season with salt and a tiny splash of **soy sauce**. Out.
-
-**Table**: **udon** in individual bowls (the fan). **Chicken** and **napa cabbage** in shared dishes on the lazy susan. **Pickled radishes** in a small dish. **Soup** ladled into individual bowls.
+**Table**: **rice** in individual bowls. **Chicken over greens** on center platter. **Broccoli** and **romaine salad** in shared dishes. **Soup** ladled into individual bowls. **Kimchi** ambient.
 
 ---
 
-## Harissa Pork Meatballs
+## Big Meatballs
 
 ##### Prep&Heat
-###### oven meatballs from frozen + farro + soup from cube, 25 min active
+###### frozen meatballs into 425° oven (sous chef) + wok mushroom-pepper, 20 min chef active
 
 #### Anchor:
-Harissa-glazed pork meatballs -- Mediterranean, warm spice, roasted
+Big breadcrumb-coated meatballs with melted cheese, sitting in thick reduced tomato sauce
 
 #### Fan:
-Farro
+Angel hair
 
 #### Cai:
-Green beans with olive oil, garlic, and lemon (from Sunday bag, dressed Mediterranean), cucumber-yogurt-dill salad (fresh, 5 min)
+Sautéed mushroom and bell pepper topped with gremolata breadcrumbs (wok). Romaine salad with creamy Parmesan dressing and pepperoncini.
 
 #### Soup:
-Tomato-harissa broth from frozen cube
+None -- rich anchor in sauce, two substantial cai, angel hair. Full table.
 
 ### Already Prepped
 
-- **Pork meatballs** formed and frozen from Sunday.
-- **Green beans** (plain bag) in fridge from Sunday.
-- **Tomato-harissa soup cubes** in freezer.
+- **Meatballs** formed and frozen from Sunday.
+- **Tomato sauce** thick and reduced, in fridge from Sunday.
+- **Gremolata breadcrumbs** in jar from Sunday.
+- **Creamy Parmesan dressing** in jar from Sunday.
 
 ### Sous Chef - Assembly
 
-Start **farro** in the rice cooker or a pot (2:1 water to farro, simmer ~25 min until tender, drain if needed).
+Preheat oven to **425°F**. Pull **meatballs** from freezer, lay on parchment-lined sheet pan. Into the oven when hot -- this can start before chef gets home.
 
-Pull **green bean** bag from fridge. Drop in the sous vide bath to bring to temp if you want them warm.
+Boil water for **angel hair**.
 
-Drop 2 **tomato-harissa cubes** into a small pot of boiling water. Stir until dissolved, simmer gently.
+Slice **mushrooms**. Cut **bell pepper** into strips.
 
-Dice 1-2 **cucumbers**, fold into **Greek yogurt** with chopped **dill**, minced **garlic**, juice of half a **lemon**, salt. Set aside.
+Tear **romaine** into a bowl. Set out the **creamy Parmesan dressing** jar and sliced **pepperoncini**.
 
 ### Chef - Cooking
 
-Preheat oven to **450°F**. Spread frozen **meatballs** on a parchment-lined sheet pan. Roast **15-18 minutes** until browned and cooked through.
+Check **meatballs** after 20-25 minutes -- they should be *browned and firm, panko crust golden*. Lay a piece of **Parmesan** (or cheese of choice) on each. Return to oven 3-5 minutes until *melted and bubbling*.
 
-While meatballs roast: drain the warmed **green beans** from their bag. Toss in a bowl with **olive oil**, minced **garlic**, **lemon** juice, flaky salt, and black pepper. If you want, warm the dressed beans briefly in a skillet for 2 minutes.
+While meatballs finish: warm the **tomato sauce** in a wide pan over medium heat. Let it reduce a touch more if needed -- it should *coat a spoon thickly*.
 
-In the last 3 minutes of meatball roasting, brush tops with **harissa paste** thinned with a little **olive oil**. Return to oven until the glaze sets and caramelizes.
+**Wok -- mushroom and bell pepper**: high heat, splash of **olive oil**. Spread **mushrooms** flat, let them sear without moving for 60 seconds until *golden on one side*. Toss. Add **bell pepper** strips, sauté 2 minutes until *softened but still with bite*. Season with salt and pepper. Out into a serving bowl. Top generously with **gremolata breadcrumbs** from the jar.
 
-**Table**: **farro** in individual bowls (the fan). **Meatballs** on a center platter. **Green beans** and **cucumber-yogurt salad** in shared dishes. **Soup** ladled into individual bowls.
+Cook **angel hair** 3-4 minutes, drain. Toss with a little **butter** or **olive oil**.
+
+Nestle **meatballs** into the warm **tomato sauce** in the pan, or spoon sauce over meatballs on a platter.
+
+Dress **romaine** with the **creamy Parmesan dressing**, top with sliced **pepperoncini**.
+
+**Table**: **angel hair** in individual bowls (the fan). **Meatballs in sauce** on center platter. **Mushroom-pepper** and **romaine salad** in shared dishes on the lazy susan. **Kimchi** ambient.
+
+---
+
+## Picadillo
+
+##### Prep&Heat
+###### sous vide reheat all day (185°F), 5 min assembly
+
+#### Anchor:
+Picadillo -- saucy ground meat with tomato, olives, cumin, cinnamon
+
+#### Fan:
+White rice
+
+#### Cai:
+Garlicky broccoli (sous vide, bright green, from Sunday bag). Black bean salad (cold, dressed, from Sunday).
+
+#### Soup:
+None -- picadillo is saucy, broccoli and black beans round the table. Three cai plus rice is enough.
+
+### Already Prepped
+
+- **Picadillo** fully cooked and vacuum sealed from Sunday.
+- **Broccoli** vacuum sealed with garlic, in freezer from Sunday.
+- **Black bean salad** dressed and in fridge from Sunday.
+
+### Sous Chef - Assembly
+
+Morning: drop **picadillo** bag and **broccoli** bag into the sous vide bath at **185°F**. Both reheat together all day.
+
+Start **rice** in the rice cooker.
+
+Portion **black bean salad** from fridge into a serving bowl.
+
+### Chef - Cooking
+
+Open **picadillo** bag, pour into a medium bowl. ***Taste*** and adjust salt or **cumin** if needed.
+
+Open **broccoli** bag, arrange florets in a serving bowl. They should be *bright green and tender-crisp*.
+
+**Table**: **rice** in individual bowls. **Picadillo** in a center bowl. **Broccoli** and **black bean salad** in shared dishes on the lazy susan. **Kimchi** ambient.
