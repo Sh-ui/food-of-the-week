@@ -12,6 +12,9 @@ interface Props {
 }
 
 const { weekPlan } = Astro.props;
+const base = import.meta.env.BASE_URL.endsWith('/') 
+  ? import.meta.env.BASE_URL 
+  : import.meta.env.BASE_URL + '/';
 
 interface HeroRow {
   id: string;
@@ -118,6 +121,14 @@ const heroRows = heroRowsFromMeals.length > 0 ? heroRowsFromMeals : heroRowsFrom
           <rect x="6" y="14" width="12" height="8"></rect>
         </svg>
         Print Full Week
+      </ActionButton>
+      <ActionButton 
+        variant="ghost" 
+        href={`${base}fancai`}
+        size="md"
+        class="hero-action-btn border border-border"
+      >
+        What is 饭菜?
       </ActionButton>
       <ActionButton 
         variant="ghost" 

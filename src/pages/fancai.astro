@@ -1,0 +1,123 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+import StickyHeader from '../components/StickyHeader.astro';
+import { marked } from 'marked';
+import fs from 'fs';
+import path from 'path';
+
+const filePath = path.join(process.cwd(), 'brainstorming', 'fan-cai-article.md');
+const raw = fs.readFileSync(filePath, 'utf-8');
+const articleHtml = await marked.parse(raw);
+---
+
+<Layout title="饭菜搭配 -- Fan/Cai">
+  <StickyHeader 
+    shortTitle="饭菜"
+    meals={[]}
+    hasGroceryList={false}
+  />
+
+  <div class="max-w-container w-full mx-auto overflow-x-hidden px-md pt-0 pb-lg mobile:px-sm">
+    <section class="text-center px-md py-xl flex flex-col items-center justify-center gap-md" id="top">
+      <h1 class="mb-0">饭菜搭配</h1>
+      <p class="text-text-light text-[1.1rem] mt-0">Fan/Cai -- how the dinner table works here</p>
+    </section>
+
+    <article class="article-prose" set:html={articleHtml} />
+
+    <Footer />
+  </div>
+</Layout>
+
+<style>
+  .article-prose {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+  }
+
+  .article-prose :global(h1) {
+    display: none;
+  }
+
+  .article-prose :global(h2) {
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-primary);
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
+    line-height: var(--line-height-h2);
+  }
+
+  .article-prose :global(h3) {
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text);
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-sm);
+    line-height: var(--line-height-h3);
+  }
+
+  .article-prose :global(p) {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text);
+  }
+
+  .article-prose :global(em) {
+    font-style: italic;
+  }
+
+  .article-prose :global(strong) {
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+
+  .article-prose :global(hr) {
+    border: none;
+    border-top: 1px solid var(--color-border);
+    margin: var(--spacing-xl) 0;
+  }
+
+  .article-prose :global(ul),
+  .article-prose :global(ol) {
+    margin-bottom: var(--spacing-md);
+    padding-left: var(--spacing-lg);
+  }
+
+  .article-prose :global(li) {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .article-prose :global(blockquote) {
+    border-left: 3px solid var(--color-accent);
+    padding-left: var(--spacing-md);
+    margin: var(--spacing-md) 0;
+    color: var(--color-text-light);
+    font-style: italic;
+  }
+
+  .article-prose :global(a) {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-decoration-color: var(--color-accent);
+    text-underline-offset: 2px;
+    transition: color 0.2s ease;
+  }
+
+  .article-prose :global(a:hover) {
+    color: var(--color-accent);
+  }
+
+  @media screen(mobile) {
+    .article-prose :global(p),
+    .article-prose :global(li) {
+      font-size: 1.15rem;
+      line-height: 1.85;
+    }
+  }
+</style>

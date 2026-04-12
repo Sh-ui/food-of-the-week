@@ -15,13 +15,15 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
 ---
 
 <header class="sticky-header" id="sticky-header" data-scrolled="false">
-  <!-- Chef hat icon - visible when at top, centered decorative element -->
+  <!-- Chef hat icon with 饭菜 flanking - visible when at top, centered decorative element -->
   <div class="header-chef-hat">
+    <span class="chef-hat-hanzi" aria-hidden="true">饭</span>
     <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
       <path d="M19 19.002v1.998a1 1 0 0 1 -.883 .993l-.117 .007h-12a1 1 0 0 1 -1 -1v-1.994a1 1 0 0 1 1 -1l12 -.004a1 1 0 0 1 1 1"></path>
       <path d="M12 2a5 5 0 0 1 4.533 2.888l.06 .137l.136 -.009a5 5 0 0 1 4.99 3.477l.063 .213a5 5 0 0 1 -2.696 5.831l-.087 .037v1.428a1 1 0 0 1 -1 1l-12 .004a1 1 0 0 1 -.993 -.883l-.007 -.117v-1.433l-.123 -.055a5 5 0 0 1 -2.6 -3.001l-.064 -.223a5 5 0 0 1 5.193 -6.27l.066 -.142a5 5 0 0 1 4.302 -2.877z"></path>
     </svg>
+    <span class="chef-hat-hanzi" aria-hidden="true">菜</span>
   </div>
 
   <!-- Scrolled nav - visible when scrolled down -->
@@ -153,10 +155,19 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 6px;
     height: 56px;
     color: var(--color-text);
     opacity: 1;
     transition: opacity 0.3s ease;
+  }
+
+  .chef-hat-hanzi {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--color-text-light);
+    user-select: none;
   }
 
   /* Fade out chef hat when scrolled */
