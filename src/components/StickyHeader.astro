@@ -9,9 +9,10 @@ interface Props {
   shortTitle: string;
   meals: MealNavItem[];
   hasGroceryList: boolean;
+  articleMode?: boolean;
 }
 
-const { shortTitle, meals, hasGroceryList } = Astro.props;
+const { shortTitle, meals, hasGroceryList, articleMode = false } = Astro.props;
 ---
 
 <header class="sticky-header" id="sticky-header" data-scrolled="false">
@@ -97,25 +98,35 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
       </div>
   </div>
     
-    <!-- Right side: Print button + Info icon button -->
+    <!-- Right side buttons -->
     <div class="header-right-buttons">
-    <!-- Print Button -->
-    <button class="header-print-btn print-button" data-print-target="all" type="button">
-      <svg class="print-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="6 9 6 2 18 2 18 9"></polyline>
-        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
-        <rect x="6" y="14" width="12" height="8"></rect>
-      </svg>
-        <span class="print-section-name">Grocery List</span>
-    </button>
-      <!-- Info icon button - links to footer -->
-      <a href="#links-and-info" class="header-info-btn" data-section="footer" aria-label="Links & Info">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="10"></circle>
-          <line x1="12" y1="16" x2="12" y2="12"></line>
-          <line x1="12" y1="8" x2="12.01" y2="8"></line>
+    {articleMode ? (
+      <button class="header-print-btn article-print-btn" type="button" aria-label="Print article">
+        <svg class="print-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 6 2 18 2 18 9"></polyline>
+          <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+          <rect x="6" y="14" width="12" height="8"></rect>
         </svg>
-      </a>
+      </button>
+    ) : (
+      <>
+        <button class="header-print-btn print-button" data-print-target="all" type="button">
+          <svg class="print-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 6 2 18 2 18 9"></polyline>
+            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+            <rect x="6" y="14" width="12" height="8"></rect>
+          </svg>
+          <span class="print-section-name">Grocery List</span>
+        </button>
+        <a href="#links-and-info" class="header-info-btn" data-section="footer" aria-label="Links & Info">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+        </a>
+      </>
+    )}
     </div>
   </nav>
 </header>
@@ -910,7 +921,38 @@ const { shortTitle, meals, hasGroceryList } = Astro.props;
     }
   }
 
+  function initArticleMode(): boolean {
+    const articlePrintBtn = document.querySelector('.article-print-btn') as HTMLButtonElement;
+    if (!articlePrintBtn) return false;
+
+    articlePrintBtn.addEventListener('click', () => window.print());
+
+    header.dataset.scrolled = 'false';
+    header.dataset.dateButtonVisible = 'false';
+    header.dataset.hasShadow = 'false';
+    header.dataset.atFooter = 'false';
+
+    function updateArticleScroll(): void {
+      const scrollY = window.scrollY;
+      const shouldHaveShadow = scrollY > 0;
+      header.dataset.hasShadow = shouldHaveShadow ? 'true' : 'false';
+
+      const h1 = document.querySelector('#top h1');
+      const h1Bottom = h1 ? h1.getBoundingClientRect().bottom + scrollY : 0;
+      const shouldShowNav = scrollY > h1Bottom;
+      header.dataset.scrolled = shouldShowNav ? 'true' : 'false';
+      header.dataset.dateButtonVisible = shouldShowNav ? 'true' : 'false';
+    }
+
+    setupSmoothScroll();
+    updateArticleScroll();
+    window.addEventListener('scroll', updateArticleScroll, { passive: true });
+    return true;
+  }
+
   function init(): void {
+    if (initArticleMode()) return;
+
     header.dataset.scrolled = 'false';
     header.dataset.dateButtonVisible = 'false';
     header.dataset.hasShadow = 'false';
