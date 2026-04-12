@@ -108,7 +108,7 @@ Romaine salad with cherry tomato, balsamic, EVOO (fresh).
 Roasted broccoli with lemon and Parmesan (oven alongside chicken).
 
 #### Soup:
-Chicken bag liquid from the sous vide, finished with white wine and thinned with water
+Chicken bag liquid from the sous vide, finished with white wine and thinned with water if needed
 
 ### Already Prepped
 
