@@ -53,8 +53,8 @@ const { shortTitle, meals, hasGroceryList, articleMode = false } = Astro.props;
     <!-- Mobile: Date button (separate from desktop, appears on scroll) -->
     <a href="#top" class="mobile-date-btn">{shortTitle}</a>
   
-      <!-- Mobile: Section selector with dropdown -->
-      <div class="section-selector">
+      <!-- Mobile: Section selector with dropdown (hidden in article mode) -->
+      <div class={`section-selector ${articleMode ? 'article-hidden' : ''}`}>
         <button class="section-selector-btn" aria-expanded="false" aria-haspopup="true">
           <svg class="dropdown-caret" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="6 9 12 15 18 9"></polyline>
@@ -310,6 +310,10 @@ const { shortTitle, meals, hasGroceryList, articleMode = false } = Astro.props;
   .section-selector {
     display: none;
     position: relative;
+  }
+
+  .section-selector.article-hidden {
+    display: none !important;
   }
 
   .section-selector-btn {
