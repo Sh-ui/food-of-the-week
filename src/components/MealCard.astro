@@ -88,10 +88,10 @@ function splitFieldLines(text: string | undefined): string[] {
           <div class="subsection">
             {isFieldsGroup ? (
               // H4 fields: render as labeled field rows
-              <div class="subsection-field grid grid-cols-[120px_minmax(0,1fr)] items-start gap-x-sm text-[1.1rem] mobile:text-[1.25rem]">
+              <div class="subsection-field grid grid-cols-[120px_minmax(0,1fr)] items-baseline gap-x-sm text-[1.1rem] mobile:text-[1.25rem]">
                 <strong class="text-primary">{sub.title}</strong>
                 {sub.content && (
-                  <span class="subsection-field-body text-base">
+                  <span class="subsection-field-body">
                     {splitFieldLines(sub.content).map((line: string, index: number, lines: string[]) => (
                       <span class={`field-line ${index < lines.length - 1 ? 'field-line-spaced' : ''}`}>
                         {line ? (
@@ -277,11 +277,11 @@ function splitFieldLines(text: string | undefined): string[] {
 
   .field-line {
     display: block;
-    line-height: 1.35;
+    line-height: 1.15;
   }
 
   .field-line-spaced {
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.02rem;
   }
 
   /* Mobile responsive adjustments */
