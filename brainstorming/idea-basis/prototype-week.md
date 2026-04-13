@@ -43,7 +43,7 @@
 ## Sunday Prep
 
 ##### BatchDay
-###### 2-3 hours active
+###### 2-3 h ⏱
 
 - [ ] Green beans -- season and sous vide, split into two bags (sesame-dressed + plain), refrigerate
 - [ ] Collard greens -- season and sous vide, refrigerate
@@ -90,7 +90,7 @@
 ## Mapo Tofu
 
 ##### WokNight
-###### 15 min wok sequence, no soup
+###### 15 min ⏱, wok sequence, no soup
 
 #### Anchor:
 Mapo tofu with ground pork -- Sichuan, saucy, numbing-spicy
@@ -133,7 +133,7 @@ Halve **soy eggs**, arrange on a small plate.
 ## Steamed Pork
 
 ##### Prep&Heat
-###### rice cooker does double duty, 15 min active
+###### rice cooker does double duty, 15 min ⏱
 
 #### Anchor:
 Steamed pork patty with scallion -- Canton home technique
@@ -175,7 +175,7 @@ Remove **pork patty** from rice cooker. The juices on the plate are liquid gold 
 ## Blackened Chicken
 
 ##### ChefDish
-###### cast iron sear, no soup, 20 min active
+###### cast iron sear, no soup, 20 min ⏱
 
 #### Anchor:
 Cajun-blackened bone-in chicken thighs -- Southern, aggressive spice
@@ -217,7 +217,7 @@ Rest 3 minutes. Serve whole or sliced.
 ## Scallion Chicken
 
 ##### WokNight
-###### wok sequence + udon + soup from cube, 20 min active
+###### wok sequence + udon + soup from cube, 20 min ⏱
 
 #### Anchor:
 Diced chicken stir-fried with ginger and scallion -- clean, savory, fast
@@ -260,7 +260,7 @@ Shred remaining **napa cabbage** into wide ribbons.
 ## Harissa Meatballs
 
 ##### Prep&Heat
-###### oven meatballs from frozen + farro + soup from cube, 25 min active
+###### oven meatballs from frozen + farro + soup from cube, 25 min ⏱
 
 #### Anchor:
 Harissa-glazed pork meatballs -- Mediterranean, warm spice, roasted

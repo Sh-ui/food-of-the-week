@@ -29,7 +29,7 @@
 
 ### Dairy
 
-- [ ] Parmesan wedge
+- [ ] Asiago wedge
 - [x] Greek yogurt
 
 ### Staples
@@ -54,7 +54,7 @@
 ## Sunday Prep
 
 ##### BatchDay
-###### 2-3 hours active -- soak beans Saturday night
+###### soak beans Saturday night -- 2-3 hours ⏱
 
 ### Prep Checklist
 
@@ -94,18 +94,18 @@
 ## Roast Chicken
 
 ##### ChefDish+
-###### SV AM + 480° oven, 20 min active
+###### SV AM + 480° oven, 20 min ⏱
 
 #### Anchor:
 Spatchcocked whole chicken over braised greens -- sous vide to temp, oven-crisped, carved cai png style
 
 #### Fan:
-White rice
+Farro
 
 #### Cai:
 Romaine salad with cherry tomato, balsamic, EVOO (fresh).
 
-Roasted broccoli with lemon and Parmesan (oven alongside chicken).
+Roasted broccoli with lemon and Asiago.
 
 #### Soup:
 Chicken bag liquid from the sous vide, finished with white wine and thinned with water if needed
@@ -120,7 +120,7 @@ Chicken bag liquid from the sous vide, finished with white wine and thinned with
 
 Morning: pull **chicken** from fridge, vacuum seal flat, place in sous vide bath at **150°F**. Leave for at least 2 hours -- all day is fine.
 
-Start **rice** in the rice cooker.
+Start **farro** in the rice cooker.
 
 Halve **cherry tomatoes**. Tear **romaine** into a bowl. Set aside with **balsamic vinegar** and **olive oil** for dressing at the table.
 
@@ -138,20 +138,20 @@ Roast until skin is *deeply golden and crispy*, roughly 15-20 minutes. If the br
 
 While the chicken roasts: warm the reserved **bag liquid** over medium heat. Add a splash of **white cooking wine**, thin with water to desired consistency. ***Taste*** and adjust salt. This is the soup.
 
-Finish **broccoli** with **lemon** zest and shaved **Parmesan**.
+Finish **broccoli** with **lemon** zest and shaved **Asiago**.
 
 Carve chicken on the platter over the now-wilted greens. People take pieces.
 
 Dress **romaine** and **cherry tomatoes** with **balsamic** and **olive oil**, salt, pepper.
 
-**Table**: **rice** in individual bowls. **Chicken over greens** on center platter. **Broccoli** and **romaine salad** in shared dishes. **Soup** ladled into individual bowls.
+**Table**: **farro** in individual bowls. **Chicken over greens** on center platter. **Broccoli** and **romaine salad** in shared dishes. **Soup** ladled into individual bowls.
 
 ---
 
 ## Shrimp Scampi
 
 ##### ChefDish
-###### warm beans + wok scampi + dashi soup, 15 min active
+###### warm beans + wok scampi + dashi soup, 15 min ⏱
 
 #### Anchor:
 Shrimp scampi -- brined shrimp, garlicky EVOO and butter, julienned bell pepper, white wine, finished with celery leaf garnish
@@ -160,7 +160,7 @@ Shrimp scampi -- brined shrimp, garlicky EVOO and butter, julienned bell pepper,
 White rice
 
 #### Cai:
-Celery salad with julienned dates, walnuts, lots of Parmesan, lemon juice and zest (fresh). 
+Celery salad with julienned dates, walnuts, lots of Asiago, lemon juice and zest (fresh). 
 
 Warm Tuscan chickpeas with cherry pepper relish (from Sunday bag).
 
@@ -180,13 +180,13 @@ Toss **shrimp** with a pinch each of **salt**, **sugar**, **MSG**, and **baking 
 
 Julienne **bell pepper** into thin strips.
 
-Wash and peel **celery** stalks. Strip and save the **celery leaves** in a small bowl -- *save* these to *garnish* the scampi. Split each stalk lengthwise, then cut on the bias. Julienne the **dates**. In a mixing bowl, combine celery, dates, **walnuts** from the jar, a very generous amount of shaved **Parmesan**, juice and zest of half a **lemon**, a drizzle of **olive oil**, salt. Mix well. Pour into a wide serving bowl.
+Wash and peel **celery** stalks. Strip and save the **celery leaves** in a small bowl -- *save* these to *garnish* the scampi. Split each stalk lengthwise, then cut on the bias. Julienne the **dates**. In a mixing bowl, combine celery, dates, **walnuts** from the jar, a very generous amount of shaved **Asiago**, juice and zest of half a **lemon**, a drizzle of **olive oil**, salt. Mix well. Pour into a wide serving bowl.
 
 ### Chef - Cooking
 
 Pat **shrimp** completely dry with paper towels.
 
-**Scampi**: wok over high heat. Add a generous pour of **olive oil** and a knob of **butter**. When *shimmering hot*, add sliced **garlic** -- let it sizzle and turn *golden at the edges*. Add the julienned **bell pepper**, stir-fry 1 minute. Add **shrimp** in a single layer, sear without moving for 60 seconds until *pink and crusted on the bottom*. Flip. Deglaze with a generous splash of **white cooking wine**, let it reduce 30 seconds and coat everything. Season with salt and pepper. Out onto a small platter. Scatter **celery leaves** over the top.
+**Scampi**: wok over high heat. Add a generous pour of **olive oil** and a knob of **butter**. When *shimmering hot*, add sliced **garlic** -- let it sizzle and turn *golden at the edges*. Add the julienned **bell pepper**, stir-fry 1 minute. Add **shrimp** in a single layer, sear without moving for 60 seconds until *pink and crusted on the bottom*. Flip. Deglaze with a generous splash of **white cooking wine**, let it reduce 30 seconds and coat everything. Thicken with slurry if desired. Season with salt and pepper. Out onto a small platter. Scatter **celery leaves** over the top.
 
 **Soup**: bring a small pot of water to a boil. Stir in **dashi** packet. Slice **scallions** thin, drop into the broth. Season with salt. 3 minutes.
 
@@ -196,13 +196,13 @@ Open **chickpea** bag, pour into a medium bowl. Spoon **cherry pepper relish** o
 
 ---
 
-## Big Meatballs
+## Meatballs
 
 ##### Prep&Heat
-###### meatballs 425° oven + wok veg, 20 min chef
+###### 425° oven + wok veg, 20 min ⏱
 
 #### Anchor:
-Big breadcrumb-coated meatballs with melted cheese, sitting in thick reduced tomato sauce
+Meatballs with tomato sauce
 
 #### Fan:
 Angel hair
@@ -210,7 +210,7 @@ Angel hair
 #### Cai:
 Sautéed mushroom and bell pepper topped with gremolata breadcrumbs (wok). 
 
-Romaine salad with creamy Parmesan dressing and pepperoncini.
+Romaine salad with creamy Asiago dressing and banana peppers.
 
 #### Soup:
 None -- rich anchor in sauce, two substantial cai, angel hair. Full table.
@@ -218,42 +218,41 @@ None -- rich anchor in sauce, two substantial cai, angel hair. Full table.
 ### Already Prepped
 
 - **Meatballs** formed and frozen from Sunday.
-- **Tomato sauce** thick and reduced, in fridge from Sunday.
-- **Gremolata breadcrumbs** in jar from Sunday.
-- **Creamy Parmesan dressing** in jar from Sunday.
+- **Tomato sauce** thick and reduced, in freezer from Sunday.
+- **Toasted breadcrumbs** in jar from Sunday.
+- **Creamy Asiago dressing** in jar from Sunday.
+- **Banana peppers** are in a jar in the fridge.
 
 ### Sous Chef - Assembly
 
-Preheat oven to **425°F**. Pull **meatballs** from freezer, lay on parchment-lined sheet pan. Into the oven when hot -- this can start before chef gets home.
+Preheat oven to **450°F**. Pull **meatballs** from freezer, lay on parchment-lined sheet pan. Into the oven when hot -- this can start before chef gets home.
 
-Boil water for **angel hair**.
+Warm the **tomato sauce** in the sous vide bath at ~150°F.
 
 Slice **mushrooms**. Cut **bell pepper** into strips.
 
-Tear **romaine** into a bowl. Set out the **creamy Parmesan dressing** jar and sliced **pepperoncini**.
+Tear **romaine** into a bowl. Toss with the homemade **creamy Asiago dressing** and some of the sliced **banana peppers** from the jar. Keep refrigerated until ready to use.
+
+Prepare the gremolata by chopping together a few outer peels (yellow only) of lemon, a handful of parsley, and a few cloves of garlic. Keep refrigerated until ready to use.
 
 ### Chef - Cooking
 
-Check **meatballs** after 20-25 minutes -- they should be *browned and firm, panko crust golden*. Lay a piece of **Parmesan** (or cheese of choice) on each. Return to oven 3-5 minutes until *melted and bubbling*.
-
-While meatballs finish: warm the **tomato sauce** in a wide pan over medium heat. Let it reduce a touch more if needed -- it should *coat a spoon thickly*.
+Check **meatballs** after 20-25 minutes -- they should be *browned and firm*.
 
 **Wok -- mushroom and bell pepper**: high heat, splash of **olive oil**. Spread **mushrooms** flat, let them sear without moving for 60 seconds until *golden on one side*. Toss. Add **bell pepper** strips, sauté 2 minutes until *softened but still with bite*. Season with salt and pepper. Out into a serving bowl. Top generously with **gremolata breadcrumbs** from the jar.
 
 Cook **angel hair** 3-4 minutes, drain. Toss with a little **butter** or **olive oil**.
 
-Nestle **meatballs** into the warm **tomato sauce** in the pan, or spoon sauce over meatballs on a platter.
+Nestle **meatballs** into the warm **tomato sauce** in a serving bowl/dish. Top with freshly grated **Asiago** if desired.
 
-Dress **romaine** with the **creamy Parmesan dressing**, top with sliced **pepperoncini**.
-
-**Table**: **angel hair** in individual bowls (the fan). **Meatballs in sauce** on center platter. **Mushroom-pepper** and **romaine salad** in shared dishes on the lazy susan.
+**Table**: **angel hair** in individual bowls (the fan). **Meatballs in sauce**, **Mushroom-pepper**, and **romaine salad** in shared dishes on the lazy susan.
 
 ---
 
 ## Picadillo
 
 ##### Prep&Heat
-###### sous vide reheat all day (185°F) + quick broccoli, 10 min active
+###### SV reheat + quick broccoli, 10 min ⏱
 
 #### Anchor:
 Picadillo -- saucy ground meat with tomato, olives, cumin, cinnamon

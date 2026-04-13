@@ -31,7 +31,7 @@ required_structure:
     grocery_categories: "### (H3) - For Produce, Staples, etc."
     meal_subsections: "### (H3) - Optional for Instructions, Notes, etc."
     quick_read_codename: "##### (H5) - Quick read codename (immediately after the meal H2)"
-    quick_read_timing: "###### (H6) - Quick read timing (directly follows the codename)"
+    quick_read_timing: "###### (H6) - Quick read timing (directly follows the codename; use Unicode U+23F1 STOPWATCH `⏱` for chef hands-on time)"
 
 grocery_list_format:
   section_heading: "## Grocery List"
@@ -66,6 +66,8 @@ meal_format:
     notes:
       - "Codename populates hero summary rows; timing adds scheduling detail"
       - "Codename is required for parser extraction; timing is optional but recommended"
+      - "In the H6 timing line, suffix hands-on chef time with the stopwatch symbol `⏱` (e.g. `20 min ⏱`, `SV AM + 480° oven, 20 min ⏱`). Do not spell out the word active for that slot."
+      - "Sunday Prep BatchDay H6 may use the same pattern for total prep time (e.g. `2-3 h ⏱`)."
     
     codename_types:
       WokNight:
@@ -80,7 +82,7 @@ meal_format:
         plus_scale:
           none: "Straightforward. No day-ahead work. Cook and plate."
           one_plus: "Some day-ahead or timing-sensitive effort required."
-          two_plus: "Significant day-ahead AND active evening effort."
+          two_plus: "Significant day-ahead AND hands-on evening effort."
         examples:
           - "##### ChefDish"
           - "##### ChefDish+"
@@ -90,7 +92,7 @@ meal_format:
         meaning: "Family-delegated prep with oven or stovetop finish. Classic weeknight delegation pattern."
         plus_scale:
           none: "Simple prep and heat."
-          one_plus: "Some day-ahead work or longer active prep."
+          one_plus: "Some day-ahead work or longer hands-on prep."
       
       BatchDay:
         pattern: "##### BatchDay"
@@ -122,7 +124,7 @@ meal_format:
       - "Phase names flex to match the night's technique (Wok Sequence, Cooking, etc.)"
       - "Already Prepped is a bulleted list of Sunday prep components used tonight"
       - "Sous Chef handles rice, reheating bags, fresh assembly"
-      - "Chef handles the active cooking (wok, cast iron, oven)"
+      - "Chef handles hands-on cooking (wok, cast iron, oven)"
 
   structure:
     meals: "Descriptive names only (## Meal Name)"
@@ -158,7 +160,7 @@ template:
     ## Sunday Prep
     
     ##### BatchDay
-    ###### time estimate
+    ###### 2-3 h ⏱
     
     ### Prep Checklist
     - [ ] Task 1
@@ -178,7 +180,7 @@ template:
     ## [Meal Name]
     
     ##### Codename
-    ###### timing details
+    ###### 20 min ⏱
     
     #### Anchor:
     [Primary protein dish -- the louder cai]
@@ -199,7 +201,7 @@ template:
     [Rice, reheating bags, fresh prep]
     
     ### Chef - Cooking
-    [Active cooking paragraphs ending with **Table**: layout]
+    [Hands-on cooking paragraphs ending with **Table**: layout]
 
 lifecycle:
   active_period: "One week (typically Sunday to Sunday or Monday to Saturday)"
@@ -263,6 +265,7 @@ validation:
     - "Markdown task list syntax used for grocery items"
     - "Instructions use three-phase format"
       - "Quick read codename/timing use H5/H6 immediately after the meal heading"
+      - "H6 timing lines use `⏱` for chef hands-on time (not the word active)"
       - "Cooked meals use a leading `✓` in the H2 title (no strikethrough)"
 
   section_separators:
@@ -277,7 +280,7 @@ examples:
       ## Mapo Tofu
 
       ##### WokNight
-      ###### 15 min wok sequence, no soup
+      ###### 15 min ⏱, wok sequence, no soup
 
       #### Anchor:
       Mapo tofu with ground pork -- Sichuan, saucy, numbing-spicy
