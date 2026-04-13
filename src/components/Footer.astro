@@ -1,39 +1,38 @@
 ---
-// Footer component with links
 const repoBase = 'https://github.com/sh-ui/food-of-the-week';
 const base = import.meta.env.BASE_URL;
 const currentYear = new Date().getFullYear();
 
-// Detect if on main page or subpage
-const currentPath = Astro.url.pathname;
-const isMainPage = currentPath === base || currentPath === `${base}index.html` || currentPath === '/';
+const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
+const basePath = base.replace(/\/$/, '') || '/';
+
+const navLinks = [
+  { href: `${basePath}/weekend`, label: 'Weekend' },
+  { href: `${basePath}/fancai`, label: '饭菜搭配' },
+];
 ---
 
 <footer class="mt-xl py-xl px-md border border-solid border-border rounded-lg" id="links-and-info">
   <div class="max-w-container mx-auto flex flex-col gap-lg">
-    <!-- Navigation Links -->
     <nav class="flex justify-center items-center gap-md flex-wrap mobile:flex-col mobile:gap-md">
-      {isMainPage ? (
-        <a href="#top" class="footer-link">
-          ↑ Back to Top
-        </a>
-      ) : (
-        <a href={base} class="footer-link">
-          ← This Week
-        </a>
-      )}
-      <span class="text-border select-none mobile:hidden">·</span>
-      <a href={`${base}/weekend`} class="footer-link">
-        Weekend
-    </a>
-      <span class="text-border select-none mobile:hidden">·</span>
-      <a href={`${base}/fancai`} class="footer-link">
-        饭菜搭配
-    </a>
+      <a href="#top" class="footer-link">↑ Back to Top</a>
+      {navLinks.map((link) => {
+        const isCurrent = currentPath === link.href;
+        return (
+          <>
+            <span class="text-border select-none mobile:hidden">·</span>
+            {isCurrent ? (
+              <a href={basePath || '/'} class="footer-link">← This Week</a>
+            ) : (
+              <a href={link.href} class="footer-link">{link.label}</a>
+            )}
+          </>
+        );
+      })}
       <span class="text-border select-none mobile:hidden">·</span>
       <a href={`${repoBase}/tree/master/archive`} target="_blank" rel="noopener noreferrer" class="footer-link">
-      Archive
-    </a>
+        Archive
+      </a>
     </nav>
 
     <!-- GitHub & Copyright -->
