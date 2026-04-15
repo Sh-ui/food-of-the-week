@@ -63,7 +63,6 @@
 - [x] Spatchcock chicken, salt heavily, dry brine uncovered on rack in fridge
 - [x] Mix, form, and freeze meatballs
 - [x] Make thick reduced tomato sauce, refrigerate
-- [ ] Cook picadillo fully, vacuum seal flat
 - [x] Toast panko breadcrumbs, cool and jar at room temp
 - [x] Toast walnuts, jar at room temp
 
@@ -174,19 +173,21 @@ Clear dashi broth with sliced spring onion
 
 ### Sous Chef - Assembly
 
-Drop **chickpea** bag into the sous vide bath (chef set remotely).
+At no later than **4:00pm**, drop **chickpea** bag into the sous vide bath and *push the button on the **top*** (chef set remotely).
 
-Wash and peel **celery** stalks. Strip and save the **celery leaves** in a small bowl -- *save* these to *garnish* the scampi. Split each stalk lengthwise, then cut on the bias. Julienne the **dates**. In a mixing bowl, combine celery, dates, **walnuts** from the jar, a very generous amount of shaved **Asiago**, juice and zest of half a **lemon**, a drizzle of **olive oil**, salt. Mix well. Pour into a wide serving bowl.
+Wash and *peel* **celery** stalks. Strip and *save* the **celery leaves** in a small bowl -- *save* these to *garnish* the scampi. Split each stalk lengthwise, then cut on a *bias*. Julienne some **dates**. In a mixing bowl, combine celery, dates, **walnuts** from the jar (by the breadbox), a very generous amount of shaved **Asiago**, juice and zest of half a **lemon**, a drizzle of **olive oil**, salt. Mix well. ***Taste and adjust before pouring into a wide serving bowl.***
 
-Julienne **bell pepper** into thin strips. Refrigerate until ready to use.
+Julienne ***1 & 1/2* bell peppers** into thin strips. Refrigerate until ready to use.
 
 Start **rice** in the rice cooker. 
 
 Peel a whole head of garlic, put the cloves in a small bowl near the stove.
 
+Put the frozen bag of shrimp from the freezer into a bowl of *cold* water to thaw.
+
 ### Chef - Cooking
 
-Toss **shrimp** with a pinch each of **salt**, **sugar**, **MSG**, and **baking soda**. Set aside to marinate while you prep everything else -- at least 15-20 minutes.
+Toss **shrimp** with a pinch each of **salt**, **sugar**, **MSG**, and **baking soda**. Set aside to marinate.
 
 **Soup**: bring a small pot of water to a boil. Stir in **dashi** packet. Slice **scallions** thin, drop into the broth. Season with salt. 3 minutes.
 
@@ -224,14 +225,13 @@ None -- rich anchor in sauce, two substantial cai, angel hair. Full table.
 - **Meatballs** formed and frozen from Prep Day.
 - **Tomato sauce** thick and reduced, in freezer from Prep Day.
 - **Toasted breadcrumbs** in jar from Prep Day.
-- **Creamy Asiago dressing** in jar from Prep Day.
 - **Banana peppers** are in a jar in the fridge.
 
 ### Sous Chef - Assembly
 
 Preheat oven to **450°F**. Pull **meatballs** from freezer, lay on parchment-lined sheet pan. Into the oven when hot -- this can start before chef gets home.
 
-Warm the **tomato sauce** in the sous vide bath at ~150°F.
+Warm the **tomato sauce** in the sous vide bath (chef set remotely).
 
 Slice **mushrooms**. Cut **bell pepper** into strips.
 
@@ -274,12 +274,11 @@ None -- picadillo is saucy, broccoli and black beans round the table. Three cai 
 
 ### Already Prepped
 
-- **Picadillo** fully cooked and vacuum sealed from Prep Day.
 - **Black bean salad** dressed and in fridge from Prep Day.
 
 ### Sous Chef - Assembly
 
-Morning: drop **picadillo** bag into the sous vide bath at **185°F**. Reheats all day.
+Morning: drop **picadillo** bag into the sous vide bath (chef set remotely).
 
 Start **rice** in the rice cooker.
 
