@@ -175,7 +175,7 @@ Clear dashi broth with sliced spring onion
 
 At no later than **4:00pm**, drop **chickpea** bag into the sous vide bath and *push the button on the **top*** (chef set remotely).
 
-Wash and *peel* **celery** stalks. Strip and *save* the **celery leaves** in a small bowl -- *save* these to *garnish* the scampi. Split each stalk lengthwise, then cut on a *bias*. Julienne some **dates**. In a mixing bowl, combine celery, dates, **walnuts** from the jar (by the breadbox), a very generous amount of shaved **Asiago**, juice and zest of half a **lemon**, a drizzle of **olive oil**, salt. Mix well. ***Taste and adjust before pouring into a wide serving bowl.***
+Wash and *peel* **celery** stalks. Strip and *save* the **celery leaves** in a small bowl -- *save* these to *garnish* the scampi. Split each stalk lengthwise, then thinly cut on a *bias*. Julienne some **dates**. In a mixing bowl, combine celery, dates, **walnuts** from the jar (by the breadbox), a very generous amount of shaved **Asiago**, juice and zest of half a **lemon**, a drizzle of **olive oil**, salt. Mix well. ***Taste and adjust before pouring into a wide serving bowl.***
 
 Julienne ***1 & 1/2* bell peppers** into thin strips. Refrigerate until ready to use.
 
