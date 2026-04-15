@@ -51,7 +51,7 @@
 
 ---
 
-## Sunday Prep
+## ✓ Prep Day
 
 ##### BatchDay
 ###### soak beans Saturday night -- 2-3 hours ⏱
@@ -91,7 +91,7 @@
 
 ---
 
-## Roast Chicken
+## ✓ Roast Chicken
 
 ##### ChefDish+
 ###### SV AM + 480° oven, 20 min ⏱
@@ -150,8 +150,8 @@ Dress **romaine** and **cherry tomatoes** with **balsamic** and **olive oil**, s
 
 ## Shrimp Scampi
 
-##### ChefDish
-###### warm beans + wok scampi + dashi soup, 15 min ⏱
+##### SousVidePrep
+###### 4:00 beans + make salad + prep veg
 
 #### Anchor:
 Shrimp scampi -- brined shrimp, garlicky EVOO and butter, julienned bell pepper, white wine, finished with celery leaf garnish
@@ -162,35 +162,39 @@ White rice
 #### Cai:
 Celery salad with julienned dates, walnuts, lots of Asiago, lemon juice and zest (fresh). 
 
-Warm Tuscan chickpeas with cherry pepper relish (from Sunday bag).
+Warm Tuscan chickpeas with cherry pepper relish (from Prep Day bag).
 
 #### Soup:
 Clear dashi broth with sliced spring onion
 
 ### Already Prepped
 
-- **Chickpeas** vacuum sealed with garlic, in fridge from Sunday.
-- **Walnuts** toasted, in jar from Sunday.
+- **Chickpeas** vacuum sealed with seasonings, in fridge from Prep Day.
+- **Walnuts** toasted, in jar from Prep Day.
 
 ### Sous Chef - Assembly
 
-Start **rice** in the rice cooker. Drop **chickpea** bag into the sous vide bath at ~150°F to warm through.
-
-Toss **shrimp** with a pinch each of **salt**, **sugar**, **MSG**, and **baking soda**. Set aside to marinate while you prep everything else -- at least 15-20 minutes.
-
-Julienne **bell pepper** into thin strips.
+Drop **chickpea** bag into the sous vide bath (chef set remotely).
 
 Wash and peel **celery** stalks. Strip and save the **celery leaves** in a small bowl -- *save* these to *garnish* the scampi. Split each stalk lengthwise, then cut on the bias. Julienne the **dates**. In a mixing bowl, combine celery, dates, **walnuts** from the jar, a very generous amount of shaved **Asiago**, juice and zest of half a **lemon**, a drizzle of **olive oil**, salt. Mix well. Pour into a wide serving bowl.
 
+Julienne **bell pepper** into thin strips. Refrigerate until ready to use.
+
+Start **rice** in the rice cooker. 
+
+Peel a whole head of garlic, put the cloves in a small bowl near the stove.
+
 ### Chef - Cooking
 
-Pat **shrimp** completely dry with paper towels.
-
-**Scampi**: wok over high heat. Add a generous pour of **olive oil** and a knob of **butter**. When *shimmering hot*, add sliced **garlic** -- let it sizzle and turn *golden at the edges*. Add the julienned **bell pepper**, stir-fry 1 minute. Add **shrimp** in a single layer, sear without moving for 60 seconds until *pink and crusted on the bottom*. Flip. Deglaze with a generous splash of **white cooking wine**, let it reduce 30 seconds and coat everything. Thicken with slurry if desired. Season with salt and pepper. Out onto a small platter. Scatter **celery leaves** over the top.
+Toss **shrimp** with a pinch each of **salt**, **sugar**, **MSG**, and **baking soda**. Set aside to marinate while you prep everything else -- at least 15-20 minutes.
 
 **Soup**: bring a small pot of water to a boil. Stir in **dashi** packet. Slice **scallions** thin, drop into the broth. Season with salt. 3 minutes.
 
-Open **chickpea** bag, pour into a medium bowl. Spoon **cherry pepper relish** over the top, drizzle with **olive oil**.
+Pat **shrimp** completely dry with paper towels.
+
+**Scampi**: wok over high heat. Add a generous pour of **olive oil** and a knob of **butter**. When *shimmering hot*, add sliced **garlic** -- let it sizzle and turn *golden at the edges*. Add the julienned **bell pepper**, stir-fry 1 minute. Add **shrimp** in a single layer, sear without moving for 60 seconds until *pink and crusted on the bottom*. Flip. Deglaze with a generous splash of **white cooking wine**, let it reduce 30 seconds and coat everything. Thicken with slurry if desired. Season with salt and pepper to taste. Out onto a small platter. Scatter **celery leaves** over the top.
+
+Open **chickpea** bag, pour into a wide serving bowl. Spoon **cherry pepper relish** over the top, drizzle with **olive oil**.
 
 **Table**: **rice** in individual bowls. **Shrimp scampi** on center platter. **Celery salad** and **chickpeas** in shared dishes on the lazy susan. **Soup** ladled into individual bowls.
 
@@ -217,10 +221,10 @@ None -- rich anchor in sauce, two substantial cai, angel hair. Full table.
 
 ### Already Prepped
 
-- **Meatballs** formed and frozen from Sunday.
-- **Tomato sauce** thick and reduced, in freezer from Sunday.
-- **Toasted breadcrumbs** in jar from Sunday.
-- **Creamy Asiago dressing** in jar from Sunday.
+- **Meatballs** formed and frozen from Prep Day.
+- **Tomato sauce** thick and reduced, in freezer from Prep Day.
+- **Toasted breadcrumbs** in jar from Prep Day.
+- **Creamy Asiago dressing** in jar from Prep Day.
 - **Banana peppers** are in a jar in the fridge.
 
 ### Sous Chef - Assembly
@@ -261,17 +265,17 @@ Picadillo -- saucy ground meat with tomato, olives, cumin, cinnamon
 White rice
 
 #### Cai:
-Garlicky broccoli (sous vide, bright green, from Sunday bag). 
+Garlicky broccoli (sous vide, bright green, from Prep Day bag). 
 
-Black bean salad (cold, dressed, from Sunday).
+Black bean salad (cold, dressed, from Prep Day).
 
 #### Soup:
 None -- picadillo is saucy, broccoli and black beans round the table. Three cai plus rice is enough.
 
 ### Already Prepped
 
-- **Picadillo** fully cooked and vacuum sealed from Sunday.
-- **Black bean salad** dressed and in fridge from Sunday.
+- **Picadillo** fully cooked and vacuum sealed from Prep Day.
+- **Black bean salad** dressed and in fridge from Prep Day.
 
 ### Sous Chef - Assembly
 
