@@ -45,6 +45,8 @@
 ##### BatchDay
 ###### 2-3 h ⏱
 
+### Prep Checklist
+
 - [ ] Green beans -- season and sous vide, split into two bags (sesame-dressed + plain), refrigerate
 - [ ] Collard greens -- season and sous vide, refrigerate
 - [ ] Pickle radishes -- mason jar, refrigerate
