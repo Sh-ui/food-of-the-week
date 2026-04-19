@@ -54,6 +54,8 @@
 ##### BatchDay
 ###### 2-3 h ⏱
 
+### Prep Checklist
+
 - [ ] Dapanji bag -- chunk thighs, spice mix, seal, freeze
 - [ ] Mushroom cream chicken bag -- season thighs, seal, refrigerate
 - [ ] Kofta mix -- mix beef, spices, herbs, seal flat, refrigerate (freeze if kofta is Thursday+)
