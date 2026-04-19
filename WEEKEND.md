@@ -1,6 +1,6 @@
 <!-- ✓ • https://sh-ui.github.io/food-of-the-week/weekend -->
 
-# Lunches - Week of February 9-14, 2026
+# Lunches - Week of April 19-25, 2026
 
 ## Grocery List
 
@@ -77,6 +77,50 @@ Lay out **spinach herb wraps**. Spread a generous layer of **hummus** across eac
 Layer: **turkey**, **ham**, sliced **cucumber**, halved **green olives**, a spoonful of **pickled red onions**.
 
 Roll tightly, cut in half. Serve cold or wrap in foil for later.
+
+## Picadillo
+
+#### Day:
+Lunch
+
+#### Protein:
+Ground beef or pork
+
+#### Description:
+**Picadillo** -- saucy ground meat with **tomato**, **olives**, **cumin**, and a pinch of **cinnamon**. From the Cuban tradition; here it lands on **white rice** with **garlicky broccoli** and cold **black bean salad**. Make the picadillo ahead and vacuum seal flat for a fast SV reheat, or cook the day of.
+
+##### Prep&Heat
+###### SV reheat + quick broccoli, 10 min ⏱
+
+### Batch ahead (optional)
+
+Brown ~1 lb **ground meat** in a wide pan, breaking it up. Add diced **onion** and minced **garlic**, cook until softened. Add crushed **canned tomatoes** (about half a 28 oz can), halved **olives**, **cumin**, pinch of **cinnamon**, salt. Simmer until *thick and saucy*, 15-20 minutes. Cool completely. Vacuum seal flat. Refrigerate or freeze.
+
+Dress **black beans** while warm with **olive oil**, **cumin**, splash of **balsamic**, salt; chill for salad.
+
+### Already Prepped
+
+- **Picadillo** in a vac bag (refrigerated or thawed), if batched ahead.
+- **Black bean salad** dressed and chilled.
+- **Broccoli** ready to cut into florets.
+
+### Sous Chef - Assembly
+
+Morning: drop **picadillo** bag into the sous vide bath if reheating that way.
+
+Start **rice** in the rice cooker.
+
+Portion **black bean salad** into a serving bowl.
+
+Cut **broccoli** into florets. Set aside.
+
+### Chef - Cooking
+
+Open **picadillo** bag, pour into a medium bowl. Warm through if needed. ***Taste*** and adjust salt or **cumin**.
+
+**Broccoli**: wide pan or wok over high heat, splash of **olive oil**. Add sliced **garlic**, sizzle 10 seconds. Add **broccoli**, toss. Splash of water, cover 60 seconds to steam. Uncover, toss until *bright green and just tender* with a little char. Salt.
+
+**Table**: **rice** in bowls. **Picadillo** center bowl. **Broccoli** and **black bean salad** on the lazy susan.
 
 ## Tenderloin & Popovers
 
