@@ -88,6 +88,54 @@ Simmer **dried chickpeas** until just tender (no seasoning -- they'll be dressed
 
 ---
 
+## Brown Butter Salmon
+
+##### SousVidePrep
+###### 5:00 veg SV warm + prep + rice
+
+#### Anchor:
+SV salmon finished with brown butter, capers, lemon
+
+#### Fan:
+White rice
+
+#### Cai:
+SV asparagus -- shallot, lemon zest, black pepper, olive oil. Torch-finished or served delicate.
+
+Golden beets with lemon zest, olive oil, parsley.
+
+#### Soup:
+None
+
+### Already Prepped
+
+- **Asparagus** SV'd and dressed in fridge from Sunday.
+- **Golden beets** SV'd, peeled, cut, salted, from Sunday.
+
+### Sous Chef - Assembly
+
+At 5:00 drop **beets** and **asparagus** bags into the sous vide to warm (chef set remotely)
+
+*Roughly* chop *half* a bunch of **parsley**
+
+Start a family size portion of **rice** in the rice cooker.
+
+Preheat oven to 275.
+
+### Chef - Cooking
+
+Pat **salmon** dry, lay skin side down on tinfoil on a baking sheet with a probe at the thickest part, season with salt pepper and olive oil. Pull from oven when *probe reads 120.*
+
+Small pan over medium heat: generous **butter**, swirl continuously until it foams, turns *golden-brown and smells nutty*. Add **capers** -- they'll spit and crisp slightly. Squeeze in **lemon juice**. Spoon over the salmon at the table, or per portion as you plate.
+
+**Asparagus**: quick torch on the tips if desired, or just lay the spears on a platter as-is. Drizzle any extra **olive oil** from the bag over.
+
+Arrange **beet** wedges in a shallow bowl. Drizzle with **olive oil** and a little **lemon zest**. Add **parsley** leaves.
+
+**Table**: **rice** in individual bowls. **Salmon** on platter with brown butter in a small pitcher or spooned. **Asparagus** and **beets** in shared dishes.
+
+---
+
 ## Dapanji
 
 ##### ChefDish
@@ -175,52 +223,6 @@ Pull **carrot** bag from the bath. Slice into coins. Quick torch on the cut face
 
 ---
 
-## Brown Butter Salmon
-
-##### SousVidePrep
-###### 4:00 SV salmon in bath + asparagus + beets out of fridge
-
-#### Anchor:
-SV salmon finished tableside with brown butter, capers, lemon
-
-#### Fan:
-White rice
-
-#### Cai:
-SV asparagus -- shallot, lemon zest, black pepper, olive oil. Torch-finished or served delicate.
-
-Golden beets with lemon, olive oil, pistachios, parsley.
-
-#### Soup:
-None
-
-### Already Prepped
-
-- **Asparagus** SV'd and dressed in fridge from Sunday.
-- **Golden beets** SV'd, peeled, dressed in fridge from Sunday.
-- **Salmon** portioned and in vac bag (portion day-of if fresh; if from frozen, pulled to fridge Wednesday).
-
-### Sous Chef - Assembly
-
-Drop **salmon** bag into SV bath (chef set temp remotely to **125°F**). In by 4:00.
-
-Pull **asparagus** bag and **beet** container from the fridge 30-45 min before dinner to take the chill off.
-
-Slice **beets** into wedges or coins on a cutting board just before dinner. Don't plate yet -- wait for chef.
-
-### Chef - Cooking
-
-Pull **salmon** from the bath. Pat the surface *completely dry*. Quick torch pass over the top if you want a sear, or serve as-is -- the SV texture is the point.
-
-Small pan over medium heat: generous **butter**, swirl continuously until it foams, turns *golden-brown and smells nutty*. Add **capers** -- they'll spit and crisp slightly. Squeeze in **lemon juice**. Spoon over the salmon at the table, or per portion as you plate.
-
-**Asparagus**: quick torch on the tips if desired, or just lay the spears on a platter as-is. Drizzle any extra **olive oil** from the bag over.
-
-Arrange **beet** wedges in a shallow bowl. Drizzle with **olive oil** and a little more **lemon**. Crush **pistachios** roughly in your hand and scatter over. Add torn **parsley** leaves.
-
-**Table**: **rice** in individual bowls. **Salmon** on platter with brown butter in a small pitcher or spooned. **Asparagus** and **beets** in shared dishes.
-
----
 
 ## Kofta
 
