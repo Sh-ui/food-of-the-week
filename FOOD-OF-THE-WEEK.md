@@ -1,4 +1,5 @@
-<!-- • https://sh-ui.github.io/food-of-the-week/ -->
+
+<!-- ✓ • https://sh-ui.github.io/food-of-the-week/ -->
 
 # Week of April 19-25, 2026
 
@@ -49,7 +50,7 @@
 
 ---
 
-## Sunday Prep
+## ✓ Sunday Prep
 
 ##### BatchDay
 ###### 2-3 h ⏱
@@ -88,7 +89,7 @@ Simmer **dried chickpeas** until just tender (no seasoning -- they'll be dressed
 
 ---
 
-## Brown Butter Salmon
+## ✓ Brown Butter Salmon
 
 ##### SousVidePrep
 ###### 5:00 veg SV warm + prep + rice
@@ -138,8 +139,8 @@ Arrange **beet** wedges in a shallow bowl. Drizzle with **olive oil** and a litt
 
 ## Dapanji
 
-##### ChefDish
-###### 4:30 thaw chicken bag + blanch cabbage + start rice
+##### SousVidePrep+
+###### 4:30 SV chicken + prep/cabbage + 5:30 rice
 
 #### Anchor:
 Xinjiang-style spiced chicken braise -- cumin, star anise, Sichuan pepper, dried chili, canned tomato, garlic, onion
@@ -148,7 +149,7 @@ Xinjiang-style spiced chicken braise -- cumin, star anise, Sichuan pepper, dried
 White rice
 
 #### Cai:
-Cold sesame cabbage -- blanched frozen cabbage dressed with black vinegar, sesame oil, sesame seed, garlic.
+Cold sesame cabbage -- blanched cabbage dressed with black vinegar, sesame oil, sesame seed, garlic.
 
 Garlic green beans -- dry-fried dark, sliced garlic hit at the end.
 
@@ -157,25 +158,73 @@ None -- dapanji is saucy, two cai, full table.
 
 ### Already Prepped
 
-- **Dapanji chicken bag** in freezer from Sunday.
+- **Dapanji chicken bag** in fridge from Sunday.
 
 ### Sous Chef - Assembly
 
-Submerge **dapanji** bag in cold water to thaw -- 30-45 min, change the water once.
+At *no later* than ***4:30*** drop the spicy looking chicken bag into the sous vide bath -- temp is set remotely *no button press needed*.
 
-While it thaws: bring a pot of water to a boil. Add frozen **cabbage**, blanch 1-2 min, drain immediately into a colander, then ice bath or run cold water over it. Press out as much water as you can. Into a bowl: **black vinegar** + **sesame oil** + generous **sesame seeds** + minced **garlic** + pinch of **sugar** + salt. Toss. Taste. Refrigerate.
+Peel a whole head of **garlic**, *you* will use *one* clove, save the rest for later in a small bowl near the stove.
+
+Chop *half a head* of **cabbage** into large bite size pieces (about 3/4 inch squares).
+
+Bring a pot of water to a boil. Add your **cabbage**, blanch ***1-2 min***, drain immediately into a colander, then *immediately run cold water over it*. Press out (or salad spin) as much water as you can. Into a bowl: **black vinegar** + **sesame oil** + generous **sesame seeds** + minced **garlic** + pinch of **sugar** + salt. Toss. Taste and adjust as needed for deliciousness. Refrigerate.
+
+***Do not*** start the **rice** in the rice cooker until **5:30**
+
+### Chef - Cooking
+
+Heat up wok, then into hot peanut oil goes some rough-chopped **onion**, and the **garlic**. Once fragrant pour in the sv'd **dapanji** bag along with *half a can* of drained **tomatoes**. Swirl in a bit of **cooking wine** then bring to a boil, drop to a steady simmer, cover. 10  min until ingredients meld and the liquid has reduced to a *thick, fragrant sauce*. 
+
+***Taste*** -- adjust **salt**, more **cumin** if it wants it. Thicken with *a bit* of slurry if desired.
+
+Rinse the wok. **Green beans**: wok ripping hot, splash of oil. Lay beans flat, *do not touch* until blistered and charred in spots, about 2 min. Toss, let blister again on the other side. Douse with *some water* and cover for a minute. Season with **salt**. Add a generous amount of sliced **garlic** at the very end, toss 20 seconds. Out immediately.
+
+**Table**: **rice** in individual bowls. **Dapanji** in a center bowl. **Sesame cabbage** and **garlic green beans** in shared dishes on the lazy susan.
+
+---
+
+## Kofta
+
+##### Prep&Heat
+###### 4:30 thaw kofta + smash cukes + dress slaw + assemble salad
+
+#### Anchor:
+Ground beef kofta -- cumin, coriander, paprika, parsley, garlic, onion, mint. Pan-seared.
+
+#### Fan:
+White rice
+
+#### Cai:
+Yogurt cabbage slaw -- frozen cabbage, yogurt, lemon, garlic, mint.
+
+Cucumber, chickpea, cherry tomato and shallot salad -- lemon, olive oil, cumin, parsley.
+
+#### Soup:
+None
+
+### Already Prepped
+
+- **Kofta mix** in fridge (or freezer -- thaw if needed) from Sunday.
+- **Chickpeas** cooked and in fridge from Sunday.
+
+### Sous Chef - Assembly
+
+Submerge **kofta** bag in cold water to thaw if frozen -- 30 min.
+
+**Yogurt slaw**: thaw **frozen cabbage** briefly in the microwave or in boiling water 1 min, drain, press moisture out hard with a towel. Dress: **yogurt** + juice of half a **lemon** + 1 minced **garlic** clove + torn **mint** + salt. Toss well. ***Taste*** -- it should be tangy and herby. Refrigerate.
+
+**Cucumber-chickpea salad**: smash **cucumbers** with the flat of a knife, rough-chop into bite-size pieces. Toss with a generous pinch of salt and let drain in a colander for 10 min. Squeeze dry. Combine in a wide bowl with **chickpeas**, halved **cherry tomatoes**, and thin-sliced **shallot**. Dress: juice of **1 lemon** + drizzle of **olive oil** + small pinch **cumin** + 1 minced **garlic** clove + salt. Scatter chopped **parsley** over the top. Refrigerate.
 
 Start **rice** in the rice cooker.
 
 ### Chef - Cooking
 
-Dump thawed **dapanji** bag into a wok or wide heavy pan. Add one rough-chopped **onion**, half the can of **canned tomatoes** (squeeze the tomatoes in by hand). Add a splash of water to barely cover. Bring to a boil, drop to a steady simmer, cover. 20-25 min until chicken is cooked through and the liquid has reduced to a *thick, fragrant sauce*.
+Open the thawed **kofta** bag. The mix will be seasoned and ready -- just form into oblong patties, 8-10 for the table.
 
-***Taste*** -- adjust **salt**, more **cumin** if it wants it.
+Cast iron over medium-high with a splash of oil. Patties in -- *do not move them* for 3-4 min until a *dark crust forms on the bottom*. Flip, 3 min. Press the thickest one -- *firm, no pink when cut through*. Rest briefly.
 
-Rinse the wok. **Green beans**: wok ripping hot, splash of oil. Lay beans flat, *do not touch* until blistered and charred in spots, about 2 min. Toss, let blister again on the other side. Season with **salt**. Add a generous amount of sliced **garlic** at the very end, toss 20 seconds. Out immediately.
-
-**Table**: **rice** in individual bowls. **Dapanji** in a center bowl. **Sesame cabbage** and **garlic green beans** in shared dishes on the lazy susan.
+**Table**: **rice** in individual bowls. **Kofta** on a center platter. **Yogurt slaw** and **cucumber-chickpea salad** in shared dishes. **Olives** and **cherry pepper relish** from the fridge on the table.
 
 ---
 
@@ -220,48 +269,3 @@ Drop heat to medium. Add more **butter**, spread all the **mushrooms** flat -- *
 Pull **carrot** bag from the bath. Slice into coins. Quick torch on the cut face if you want caramelization.
 
 **Table**: **rice** in individual bowls. **Chicken in mushroom cream** on center platter. **Mint peas** and **honey-pepper carrots** in shared dishes.
-
----
-
-
-## Kofta
-
-##### Prep&Heat
-###### 4:30 thaw kofta + smash cukes + dress slaw + assemble salad
-
-#### Anchor:
-Ground beef kofta -- cumin, coriander, paprika, parsley, garlic, onion, mint. Pan-seared.
-
-#### Fan:
-White rice
-
-#### Cai:
-Yogurt cabbage slaw -- frozen cabbage, yogurt, lemon, garlic, mint.
-
-Cucumber, chickpea, cherry tomato and shallot salad -- lemon, olive oil, cumin, parsley.
-
-#### Soup:
-None
-
-### Already Prepped
-
-- **Kofta mix** in fridge (or freezer -- thaw if needed) from Sunday.
-- **Chickpeas** cooked and in fridge from Sunday.
-
-### Sous Chef - Assembly
-
-Submerge **kofta** bag in cold water to thaw if frozen -- 30 min.
-
-**Yogurt slaw**: thaw **frozen cabbage** briefly in the microwave or in boiling water 1 min, drain, press moisture out hard with a towel. Dress: **yogurt** + juice of half a **lemon** + 1 minced **garlic** clove + torn **mint** + salt. Toss well. ***Taste*** -- it should be tangy and herby. Refrigerate.
-
-**Cucumber-chickpea salad**: smash **cucumbers** with the flat of a knife, rough-chop into bite-size pieces. Toss with a generous pinch of salt and let drain in a colander for 10 min. Squeeze dry. Combine in a wide bowl with **chickpeas**, halved **cherry tomatoes**, and thin-sliced **shallot**. Dress: juice of **1 lemon** + drizzle of **olive oil** + small pinch **cumin** + 1 minced **garlic** clove + salt. Scatter chopped **parsley** over the top. Refrigerate.
-
-Start **rice** in the rice cooker.
-
-### Chef - Cooking
-
-Open the thawed **kofta** bag. The mix will be seasoned and ready -- just form into oblong patties, 8-10 for the table.
-
-Cast iron over medium-high with a splash of oil. Patties in -- *do not move them* for 3-4 min until a *dark crust forms on the bottom*. Flip, 3 min. Press the thickest one -- *firm, no pink when cut through*. Rest briefly.
-
-**Table**: **rice** in individual bowls. **Kofta** on a center platter. **Yogurt slaw** and **cucumber-chickpea salad** in shared dishes. **Olives** and **cherry pepper relish** from the fridge on the table.
