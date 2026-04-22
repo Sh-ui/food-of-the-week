@@ -170,6 +170,8 @@ Chop *half a head* of **cabbage** into large bite size pieces (about 3/4 inch sq
 
 Bring a pot of water to a boil. Add your **cabbage**, blanch ***1-2 min***, drain immediately into a colander, then *immediately run cold water over it*. Press out (or salad spin) as much water as you can. Into a bowl: **black vinegar** + **sesame oil** + generous **sesame seeds** + minced **garlic** + pinch of **sugar** + salt. Toss. Taste and adjust as needed for deliciousness. Refrigerate.
 
+*If* you have time, **trim** the ends off of the **green beans** and set them aside.
+
 ***Do not*** start the **rice** in the rice cooker until **5:30**
 
 ### Chef - Cooking
