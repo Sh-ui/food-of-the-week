@@ -230,10 +230,10 @@ Roast the **Kofta meatballs** until golden browned and cooked through.
 
 ---
 
-## Mushroom Cream Chicken
+## Mushroom Chicken
 
 ##### ChefDish+
-###### 4:00 SV carrots in bath + slice mushrooms + start rice
+###### 4:00 SV carrots + slice mushrooms + start rice
 
 #### Anchor:
 Chicken thigh seared in butter, finished in mushroom cream -- white wine, cream, thyme
