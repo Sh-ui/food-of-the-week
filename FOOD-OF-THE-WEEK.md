@@ -137,7 +137,7 @@ Arrange **beet** wedges in a shallow bowl. Drizzle with **olive oil** and a litt
 
 ---
 
-## Dapanji
+## ✓ Dapanji
 
 ##### SousVidePrep+
 ###### 4:30 SV chicken + prep/cabbage + 5:30 rice
@@ -186,47 +186,47 @@ Rinse the wok. **Green beans**: wok ripping hot, splash of oil. Lay beans flat, 
 
 ---
 
-## Kofta
+## Kofta-esque
 
-##### Prep&Heat
-###### 4:30 thaw kofta + smash cukes + dress slaw + assemble salad
+##### SousChefDish
+###### 5:00 prep veg + assemble salad
 
 #### Anchor:
-Ground beef kofta -- cumin, coriander, paprika, parsley, garlic, onion, mint. Pan-seared.
+Last week's parsely and garlic **meatballs** served in the style of Kofta
 
 #### Fan:
 White rice
 
 #### Cai:
-Yogurt cabbage slaw -- frozen cabbage, yogurt, lemon, garlic, mint.
+Yogurt cabbage slaw -- cabbage, yogurt, lemon, garlic, mint.
 
-Cucumber, chickpea, cherry tomato and shallot salad -- lemon, olive oil, cumin, parsley.
+Cucumber, chickpea, cherry tomato and onion salad -- lemon, olive oil, cumin, parsley.
 
 #### Soup:
 None
 
 ### Already Prepped
 
-- **Kofta mix** in fridge (or freezer -- thaw if needed) from Sunday.
-- **Chickpeas** cooked and in fridge from Sunday.
+- **Kofta Meatballs** in freezer from last week.
+- **Chickpeas** using *canned* this week so they are ready to go.
 
 ### Sous Chef - Assembly
 
-Submerge **kofta** bag in cold water to thaw if frozen -- 30 min.
+Take out the **parsely** and **mint** from the fridge and prepare all of it it by stripping the leaves and gently chopping it up a bit, *don't bruise it or chop it too finely*. Put these herbs into *two seperate* bowls
 
-**Yogurt slaw**: thaw **frozen cabbage** briefly in the microwave or in boiling water 1 min, drain, press moisture out hard with a towel. Dress: **yogurt** + juice of half a **lemon** + 1 minced **garlic** clove + torn **mint** + salt. Toss well. ***Taste*** -- it should be tangy and herby. Refrigerate.
+**Yogurt slaw**: Chop *half a head* of **cabbage** thinly. Dress: **yogurt** + juice of half a **lemon** + *half* of your chopped **mint** + salt. Toss well. ***Taste*** -- it should be tangy and herby. Refrigerate.
 
-**Cucumber-chickpea salad**: smash **cucumbers** with the flat of a knife, rough-chop into bite-size pieces. Toss with a generous pinch of salt and let drain in a colander for 10 min. Squeeze dry. Combine in a wide bowl with **chickpeas**, halved **cherry tomatoes**, and thin-sliced **shallot**. Dress: juice of **1 lemon** + drizzle of **olive oil** + small pinch **cumin** + 1 minced **garlic** clove + salt. Scatter chopped **parsley** over the top. Refrigerate.
+**Cucumber-chickpea salad**: smash **cucumbers** with the flat of a knife, rough-chop into bite-size pieces. Combine in a wide bowl with **chickpeas**, halved **cherry tomatoes**, and finely chopped **white onion**. Dress: juice of **1 lemon** + *hefty* drizzle of **olive oil** + small pinch **cumin** + *salt* to ***taste*** . Scatter *half* of your chopped **parsley** over the top. Refrigerate.
 
 Start **rice** in the rice cooker.
 
-### Chef - Cooking
+Preheat oven to **450**
 
-Open the thawed **kofta** bag. The mix will be seasoned and ready -- just form into oblong patties, 8-10 for the table.
+### Chef - Finishing
 
-Cast iron over medium-high with a splash of oil. Patties in -- *do not move them* for 3-4 min until a *dark crust forms on the bottom*. Flip, 3 min. Press the thickest one -- *firm, no pink when cut through*. Rest briefly.
+Roast the **Kofta meatballs** until golden browned and cooked through.
 
-**Table**: **rice** in individual bowls. **Kofta** on a center platter. **Yogurt slaw** and **cucumber-chickpea salad** in shared dishes. **Olives** and **cherry pepper relish** from the fridge on the table.
+**Table**: **rice** in individual bowls. **Kofta** on a center platter. **Yogurt slaw** and **cucumber-chickpea salad** in shared dishes. **Olives** and **cherry pepper relish** from the fridge on the table if desired. Scatter the remaining **chopped herbs** over the **meatballs** before digging in.
 
 ---
 
