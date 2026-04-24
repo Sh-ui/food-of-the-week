@@ -34,11 +34,12 @@ export default {
         { name: 'orange', color: '#F08A4B' },
       ],
       instructionSubsections: {
-        info: { bg: 'bg-alt', border: 'secondary', heading: 'primary' },
         overrides: {
-          0: { scheme: 'salmon' },
-          2: { border: '#81E3F6' },
-          5: { bg: 'bg-alt', border: 'accent', heading: 'primary' },
+          info: { bg: 'bg-alt', border: 'secondary', heading: 'primary' },
+          // Example - override 2nd instruction block to a palette scheme:
+          // 1: { scheme: 'salmon' },
+          // Example - override 3rd instruction block with explicit colors (all three keys required):
+          // 2: { bg: 'bg-alt', border: '#81E3F6', heading: 'primary' },
         },
       },
       fontFamily: {

@@ -1,7 +1,7 @@
 ---
 import type { ContentSection, SubsectionItem } from '../utils/weekParser';
 import { groupSubsections } from '../utils/weekParser';
-import { getInstructionBadgeColor, getInstructionColor, sectionColors } from '../config/colors';
+import { getInstructionBadgeColor, getInstructionColor, getSubsectionScheme } from '../config/colors';
 import { marked } from 'marked';
 
 interface Props {
@@ -13,7 +13,7 @@ const { section, sectionIndex } = Astro.props;
 
 const mealIndex = Math.max(0, sectionIndex);
 const quickReadCodenameScheme = getInstructionBadgeColor(mealIndex);
-const quickReadInfoScheme = sectionColors.firstSubsection;
+const quickReadInfoScheme = getSubsectionScheme('info');
 
 // Group blocks for rendering
 const groups = groupSubsections(section.subsections);
@@ -74,9 +74,9 @@ function splitFieldLines(text: string | undefined): string[] {
     // Determine group type based on first block's depth
     const isFieldsGroup = group[0].depth === 4; // H4 = fields
 
-    // Color logic: fields groups use firstSubsection colors, instruction sections cycle through instruction colors
+    // Color logic: fields groups use info colors, instruction sections cycle through instruction colors
     const colors = isFieldsGroup
-      ? sectionColors.firstSubsection
+      ? getSubsectionScheme('info')
       : getInstructionColor(instructionGroupIndex++);
 
     return (

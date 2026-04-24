@@ -1,0 +1,33 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import WeeklyPlan from '../../components/WeeklyPlan.astro';
+import { parseWeekPlan } from '../../utils/weekParser';
+import fs from 'fs';
+import path from 'path';
+
+export async function getStaticPaths() {
+  const archiveDir = path.join(process.cwd(), 'archive');
+  if (!fs.existsSync(archiveDir)) return [];
+
+  const files = fs
+    .readdirSync(archiveDir)
+    .filter((name) => name.endsWith('.md'))
+    .sort((a, b) => b.localeCompare(a));
+
+  return files.map((file) => ({
+    params: { slug: file.replace(/\.md$/, '') },
+    props: { filename: `archive/${file}` },
+  }));
+}
+
+interface Props {
+  filename: string;
+}
+
+const { filename } = Astro.props;
+const weekPlan = await parseWeekPlan(filename);
+---
+
+<Layout title={weekPlan.weekTitle}>
+  <WeeklyPlan weekPlan={weekPlan} />
+</Layout>

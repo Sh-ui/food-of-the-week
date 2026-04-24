@@ -1,8 +1,8 @@
 # TODOS
 
 ## Needs Done P1
- - [ ] fix minor bug where grocery list slug url sometimes doesn't show up when scrolling down from the top of the page on first load.
- - [ ] use index sequence override to setup info subsection specified theming and prune deprecated approach
+ - [x] fix minor bug where grocery list slug url sometimes doesn't show up when scrolling down from the top of the page on first load.
+ - [x] use index sequence override to setup info subsection specified theming and prune deprecated approach
    - ```css
       instructionSubsections: {
         info: { bg: 'bg-alt', border: 'secondary', heading: 'primary' },
@@ -28,7 +28,7 @@
 ## Possible Features
 
 ### Permalink Generation
-- [ ] Archive permalink generation from archive folder
+- [x] Archive permalink generation from archive folder
   - _Generate stable URLs for archived weeks (e.g., `/archive/20251214-lamb-patties-week`)_
   - _Allow navigation to specific archived meal plans by date/week identifier_
 

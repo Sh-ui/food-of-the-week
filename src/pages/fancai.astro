@@ -1,9 +1,10 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import BackToCurrentWeekButton from '../components/BackToCurrentWeekButton.astro';
 import Footer from '../components/Footer.astro';
 import StickyHeader from '../components/StickyHeader.astro';
-import { marked } from 'marked';
+import Layout from '../layouts/Layout.astro';
 import fs from 'fs';
+import { marked } from 'marked';
 import path from 'path';
 
 const filePath = path.join(process.cwd(), 'brainstorming', 'fan-cai-article.md');
@@ -23,6 +24,9 @@ const articleHtml = await marked.parse(raw);
     <section class="text-center px-md py-xl flex flex-col items-center justify-center gap-md" id="top">
       <h1 class="mb-0">饭菜搭配</h1>
       <p class="text-text-light text-[1.1rem] mt-0">Fan/Cai -- how the dinner table works here</p>
+      <div class="hero-action-bar flex items-center justify-center gap-md mt-md">
+        <BackToCurrentWeekButton />
+      </div>
     </section>
 
     <article class="article-prose" set:html={articleHtml} />

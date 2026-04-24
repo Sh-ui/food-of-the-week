@@ -1,47 +1,65 @@
 # Food of the Week
 
-> Weekly meal planning system for a household of 5
+> Weekly meal planning system for a household of 6-8
 
 **[View or Edit This Week's Plan](FOOD-OF-THE-WEEK.md)** ⇒ [Live Site at food.schuepbach.work](https://sh-ui.github.io/food-of-the-week)
 
-![Version](https://img.shields.io/badge/version-1.6.0-blue.svg)
+![Version](https://img.shields.io/badge/version-1.7.0-blue.svg)
 ![Status](https://img.shields.io/website?url=https://sh-ui.github.io/food-of-the-week&label=status&up_color=success&down_color=critical&up_message=active&down_message=down)
 
 ## About
 
-This is a weekly meal planning system built with Astro that transforms structured meal plans into a beautiful, printable website with interactive grocery lists. The system supports a three-phase cooking workflow (Already Prepped, Sous Chef, Chef Finishing) designed for efficient weeknight dinners with family delegation.
+A weekly meal planning system built with Astro that transforms a single structured markdown file into a published website with interactive grocery lists, printable recipes, and a hero quick-read summary. Built around a fan/cai family dinner model for a household of 6-8.
 
-## Assumptions
+## How This Household Cooks
 
-### Sous Vide Workflow
+### Fan/Cai Structure
 
-- Many dishes use sous vide for prep and precision cooking
-- Vegetables often pre-cooked sous vide and vacuum sealed
-- Proteins cooked sous vide then chef-finished (various techniques)
-- Allows warming pre-cooked components alongside cooking proteins
-- Remote temperature control via app
+Every dinner follows a fan/cai framework rather than "one big dish per plate":
 
-### Meat Sourcing
+- **Fan** (staple grain) - rice most nights, rotated with farro, polenta, noodles, or bread to prevent fatigue
+- **Cai** (shared dishes) - 2-3 small, intensely flavored dishes served family-style from the center of the table on a lazy susan
+- **Anchor dish** - one of the cai dishes that reads as the high-impact star of the night; bridges Western expectations
+- **Soup** - a light soup at some meals, built quickly from batch-prepped concentrated base cubes
 
-- Meat comes from ButcherBox deliveries
-- Chef preps meat in advance (seasoning, vacuum sealing, portioning)
-- Batch prep workflow before meal days
+The fan/cai structure is cuisine-agnostic - it accepts any flavor tradition. What stays constant is the shared table logic, not the cuisine. See the [fan/cai article](https://sh-ui.github.io/food-of-the-week/fancai) for the full background.
 
-### Family Delegation
+### Sunday Batch Prep
 
-- Three-phase instruction format guides the cooking flow
-- Sous Chef handles prep and initial cooking before primary cook arrives
-- Chef handles finishing techniques, saucing, and plating
-- Clear delegation boundaries in every recipe
+The keystone that makes the weeknight workflow sustainable. Each Sunday:
+
+- Vacuum seal and freeze 4-6 cai components (braised veg, seasoned greens, stewed beans, slow-cooked proteins)
+- Pre-season and bag proteins for the week
+- Prep concentrated soup base cubes, freeze
+- Make condiments, pickles, and sauces that last the week
+
+Weeknight workflow becomes: daytime sous vide reheat of frozen cai bags, rice cooker on, soup cubes thawing, then one active cooking task - the anchor/cai finishing.
+
+### Delegation Model
+
+Each recipe has three phases:
+
+- **Already Prepped** - Sunday prep components that are ready: what's in the fridge/freezer tonight
+- **Sous Chef** - tasks done before the primary cook arrives (rice on, bags in bath, fresh prep, quick assembly)
+- **Chef** - active hands-on cooking (wok, cast iron, oven); ends with a table layout line
+
+### Equipment
+
+Sous vide circulator (with remote app), vacuum sealer, wok, rice cooker, convection oven, kitchen torch, lazy susan, large ice cube trays for soup base freezing.
+
+### Proteins
+
+Often from ButcherBox deliveries - frozen, portioned, vacuum sealed. Thaw time is factored into the week's sequence.
 
 ## Weekly Workflow
 
 1. **Brainstorm** - Plan meals in the `brainstorming/` folder
-2. **Finalize** - Structure the plan in `FOOD-OF-THE-WEEK.md` with all required sections
-3. **Add Quick Reads** - Add info under each meal heading with codename and timing details
-4. **Deploy** - Push to GitHub, site auto-deploys in 2-3 minutes
-5. **Shop** - Use the mobile-friendly site with persistent checkbox grocery list
-6. **Archive** - At week's end, copy to `archive/YYYYMMDDsummary.md`
+2. **Sunday Prep** - Batch cook, seal, and freeze the week's cai components and protein bags
+3. **Finalize** - Structure the plan in `FOOD-OF-THE-WEEK.md` with all required sections
+4. **Add Quick Reads** - Add H5 codename + H6 timing under each meal heading
+5. **Deploy** - Push to GitHub, site auto-deploys in 2-3 minutes
+6. **Shop** - Use the mobile-friendly site with persistent checkbox grocery list
+7. **Archive** - At week's end, copy to `archive/YYYYMMDDsummary.md`
 
 ## Project Structure
 
@@ -64,6 +82,7 @@ GroceryPlanning/
 ├── src/
 │   ├── components/              # Astro components
 │   │   ├── ActionButton.astro   # Reusable button/link component with variants
+│   │   ├── BackToCurrentWeekButton.astro # Hero "← This Week" button for subpages
 │   │   ├── GroceryList.astro    # Interactive grocery list with localStorage
 │   │   ├── MealCard.astro       # Meal display with flex-parsing + quick read
 │   │   ├── StickyHeader.astro   # Two-state header with dynamic scroll behavior
@@ -75,7 +94,9 @@ GroceryPlanning/
 │   │   └── Layout.astro         # Base HTML layout
 │   ├── pages/
 │   │   ├── index.astro          # Main page (FOOD-OF-THE-WEEK.md)
-│   │   └── weekend.astro        # Weekend page (WEEKEND.md)
+│   │   ├── weekend.astro        # Weekend page (WEEKEND.md)
+│   │   ├── fancai.astro         # Article page (饭菜 / what is this)
+│   │   └── archive/[slug].astro # Permalinks for archived weeks (archive/*.md)
 │   ├── styles/
 │   │   └── global.css           # Main styles with CSS custom properties
 │   └── utils/
@@ -90,12 +111,12 @@ GroceryPlanning/
 
 ## Features
 
-- **Quick Read Hero Summary** - Glance-able meal overview with codename badges (Prep&Heat, SousVidePrep, etc.) and timing details parsed from h5 and h6 headings (respectively) in each meal section
+- **Quick Read Hero Summary** - Glance-able meal overview with codename badges and timing details, parsed from H5/H6 headings under each meal
 - **Interactive Grocery Lists** - Checkboxes persist in browser localStorage with week-specific keys
 - **Weekend Planning** - Dedicated weekend page with separate meal plans (`/weekend` route)
 - **Flexible Markdown Parsing** - Position-based parser works with any markdown structure (no keyword dependencies)
 - **Flexible Color System** - Palette-driven theming with automatic variant derivation and cycling
-- **Three-Phase Instructions** - Color-coded workflow sections (Already Prepped, Sous Chef, Chef Finishing)
+- **Three-Phase Instructions** - Color-coded workflow sections (Already Prepped, Sous Chef, Chef)
 - **Smart Sticky Header** - Two-state header: minimal chef-hat at top, full navigation with section buttons when scrolled
 - **Print Functionality** - Print full week, grocery list only, or individual meals with config-driven formatting
 - **Mobile-Friendly** - Responsive design optimized for shopping and cooking on any device
@@ -103,6 +124,7 @@ GroceryPlanning/
 - **Persistent State** - Grocery list checkbox states saved per week, survives browser refresh
 - **Static Site Generation** - Fast, secure, and hostable anywhere (currently on GitHub Pages)
 - **Stable Section Permalinks** - Slugified meal IDs allow direct `/#meal-slug` links that match header/nav state
+- **Archive Permalinks** - Archived weeks in `archive/*.md` are built to `/archive/<filename-stem>/`
 
 ## Quick Read System
 
@@ -118,78 +140,74 @@ Quick reads are added using H5/H6 headings immediately after each meal heading i
 ##### SousVidePrep+
 ###### prep + toast panko + 5:30 rice
 
-#### Protein:
-Frozen ground pork
+#### Anchor:
+Ground pork simmered in Japanese curry sauce with potatoes and carrots, topped with toasted panko
 
-#### Ingredients:
-Potatoes, carrots, yellow onion, frozen peas, Japanese curry cubes + honey, ginger paste, panko breadcrumbs, Japanese rice, American bagged salad, Japanese dressing
+#### Fan:
+Japanese rice
 
-#### Description:
-A weeknight-friendly deconstructed take on Japanese pork katsu curry--ground pork simmered in rich curry sauce with potatoes and carrots, topped with toasted breadcrumbs for that katsu crunch. Served with Japanese rice and a simple salad.
+#### Cai:
+Smashed cucumber salad (fresh, rice wine vinegar), soy eggs (from Sunday)
+
+#### Soup:
+Dashi wih green onions and thinly sliced mushroom
+
+### Already Prepped
+- **Pork curry bag** (seasoned, vacuum sealed) in freezer from Sunday.
+- **Soy eggs** in marinade in fridge from Sunday.
+
+### Sous Chef - Assembly
+Start **rice**. At 5:30 drop **curry bag** into the sous vide bath (chef set remotely). Smash **cucumbers**, dress with rice wine vinegar and a pinch of salt, set aside.
+
+### Chef - Cooking
+Pull curry bag, open, pour into saucepan. Simmer 5 min, taste and adjust. Toast **panko** in a dry pan until golden. **Table**: **rice** in individual bowls, **curry** center on the lazy susan, **cucumber salad** and **soy eggs** in small shared dishes, soup in small bowls. Panko at the table for topping.
 ```
 
-The H5 line is the **codename** (workload category), and the H6 line provides **timing details** (specific actions and when to do them).
+The H5 line is the **codename** (workload category), and the H6 line provides **timing details**. The `⏱` symbol marks chef hands-on time (e.g. `20 min ⏱`).
 
 ### Codenames
 
-Codenames describe the type and intensity of work from the **Sous Chef's perspective** (the person doing prep before the main cook arrives):
+Codenames signal the night's workflow pattern - primarily who does what and how complex:
 
 | Codename | What It Means | Examples |
 |----------|---------------|----------|
-| **Prep&Heat** | Basic chopping/prep + simple heating | Tostadas, simple stir-fries, assembly dishes |
-| **SousVidePrep** | Sous vide setup + supporting prep work | Starting mire poix sous vide, forming patties, rice cooker setup |
+| **BatchDay** | Sunday batch prep session - not a meal, a prep day | Sunday protein bags, cai batches, soup bases |
+| **WokNight** | Wok-sequenced meal - 1-3 quick cai fired in a row | Stir-fries, mapo tofu, dry green beans + another cai |
+| **ChefDish** | Chef-driven night - limited sous chef delegation | Cast iron sear, skillet braise, solo technique |
+| **Prep&Heat** | Family-delegated prep + oven or stovetop finish | Meatballs, sheet pan, reheated batch components |
+| **SousVidePrep** | Sous vide is the technique anchor + supporting prep | SV protein morning + rice + one fresh cai |
 | **SousChefDish** | Sous chef owns the complete cooking process | Sheet pan roasts, one-pot pastas, full oven dishes |
 
-### Intensity Modifiers
-
-Add `+` for increased complexity or multiple components:
-
-- **Single `+`**: Extra prep steps, multiple components, or extended time
-  - Example: `SousVidePrep+` = sous vide + patty forming + toasting breadcrumbs
-- **Double `++`**: Complex multi-step work like bread-making plus sous vide
-  - Example: `SousVidePrep++` = bread + sous vide beets + sous vide chicken
+Add `+` for each additional layer of complexity or timing pressure. `SousVidePrep+` = sous vide + extra fresh prep work. `ChefDish++` = significant day-ahead AND complex hands-on evening.
 
 ### Timing Details
 
-The second line of the quick read provides **actionable timing information**--the critical "when" and "what" that helps the Sous Chef schedule their work.
+The H6 line provides **actionable scheduling information** - specific times and key actions, not a repeat of the codename:
 
 **What to include:**
-- Sous vide start times: `4:00 mire poix`
+- Sous vide drop times: `4:00 chicken SV`
 - Rice cooker timing: `5:30 rice`
-- Multiple components: `3:30 veg + 5:30 rice`
+- Multiple handoffs: `3:30 veg + 5:30 rice`
 - Key prep steps: `prep + toast panko`
-- Oven operations: `couscous + oven roast`
+- Total prep time for BatchDay: `2-3 h ⏱`
 
 **What to avoid:**
-- Don't repeat information from the codename (e.g., don't write "sous vide" after `SousVidePrep`)
-- Don't include generic descriptions--focus on specific times and actions
-- Keep it concise--usually 1-2 key timing points
+- Don't repeat the codename (don't write "sous vide" after `SousVidePrep`)
+- Don't use generic descriptions - focus on specific times and actions
+- Keep it short - 1-2 key timing points maximum
 
-**Examples:**
+### Meal Fields
 
-```markdown
-## Beef Tostadas
+Each meal uses H4 headings with colons to describe what's on the table that night:
 
-##### Prep&Heat 
-###### cut toppings + heat beef
-```
-Simple prep work with basic heating--no complex timing needed.
+| Field | What It Means |
+|-------|---------------|
+| `#### Anchor:` | The louder cai / primary protein dish - the star |
+| `#### Fan:` | The staple grain (rice, farro, noodles, bread) |
+| `#### Cai:` | Supporting shared dishes served family-style |
+| `#### Soup:` | Soup or `None` with a short reason |
 
-```markdown
-## Lamb Patties & Veg
-
-##### SousVidePrep
-###### 4:00 mire poix + 5:00 patties
-```
-Two timed tasks: start sous vide at 4pm, form patties at 5pm.
-
-```markdown
-## Spiced SheetPan Fish
-
-##### SousChefDish
-###### 5:30 couscous + oven roast
-```
-Sous chef handles complete cooking process--start rice cooker and manage oven.
+Consecutive H4 headings are grouped into one visual card on the site.
 
 ### How Quick Reads Work
 
@@ -198,9 +216,7 @@ The parser automatically extracts quick read data from these sub-headings and:
 - Shows them on each meal card for reference while cooking
 - Includes them in printed meal plans
 
-If a meal doesn't have quick read headings, the meal name still appear in the hero navigation--just without the detailed badges.
-
-
+If a meal doesn't have quick read headings, the meal name still appears in the hero navigation - just without the detailed badges.
 
 ## Customization
 
@@ -242,13 +258,13 @@ Components              ← Use Tailwind utilities OR colors.ts for dynamic styl
    ```
    The system automatically derives `bg` and `heading` variants from each base color. Add any number of palette entries - they cycle automatically.
 
-3. **Subsection overrides** - Configure info group and position-specific overrides in `theme.extend.instructionSubsections`:
+3. **Subsection overrides** - Configure named and position-based overrides in `theme.extend.instructionSubsections.overrides`:
    ```js
    instructionSubsections: {
-     info: { bg: 'bg-alt', border: 'secondary', heading: 'primary' },
      overrides: {
-       0: { scheme: 'salmon' },           // Use palette entry by name
-       2: { border: '#81E3F6' },           // Or use explicit Tailwind keys/hex
+       info: { bg: 'bg-alt', border: 'secondary', heading: 'primary' }, // info section (H4 fields + quick read details)
+       1: { scheme: 'salmon' },           // Use palette entry by name (second instruction block)
+       2: { bg: 'bg-alt', border: '#81E3F6', heading: 'primary' }, // Explicit overrides must include all three keys
      },
    }
    ```
@@ -258,15 +274,17 @@ Components              ← Use Tailwind utilities OR colors.ts for dynamic styl
 - **Automatic cycling**: Instruction sections cycle through palette entries (wraps if more sections than colors)
 - **Flexible overrides**: Break the cycle for specific positions using palette names or Tailwind tokens
 - **Single source of truth**: All configuration in `tailwind.config.mjs`, `colors.ts` handles derivation logic
+- **Partial override objects are rejected**: `{ border: '#81E3F6' }` is invalid. Provide `{ bg, border, heading }` or `{ scheme: 'name' }`.
 
 **Example customizations:**
 
 | Goal | Edit |
 |------|------|
 | Add a 4th cycling color | Add `{ name: 'green', color: '#22C55E' }` to `instructionPalette` array |
-| Change info group colors | Edit `instructionSubsections.info` in tailwind.config.mjs |
-| Override 2nd instruction to use salmon | Add `0: { scheme: 'salmon' }` to `instructionSubsections.overrides` |
-| Use custom color for position 3 | Add `2: { bg: 'bg-alt', border: '#81E3F6', heading: 'primary' }` to overrides |
+| Change info group colors | Edit `instructionSubsections.overrides.info` in tailwind.config.mjs |
+| Override 2nd instruction to use salmon | Add `1: { scheme: 'salmon' }` to `instructionSubsections.overrides` |
+| Use explicit colors for position 3 | Add `2: { bg: 'bg-alt', border: '#81E3F6', heading: 'primary' }` to overrides |
+| Theme a new subsection type by name | Add `overrides.<name>` and call `getSubsectionScheme('<name>')` |
 
 **Note:** CSS custom properties in `global.css` mirror Tailwind colors for backwards compatibility with scoped component styles.
 
@@ -284,7 +302,7 @@ The print layout is fully customizable via `public/print-config.json`:
 
 **How it works:**
 1. Edit `public/print-config.json` with your preferred settings
-2. StickyHeader print functionality reads this config at runtime
+2. Print functionality loads this config at runtime in the browser
 3. Generated print documents use your custom layout
 4. No code changes needed - just edit the JSON file
 

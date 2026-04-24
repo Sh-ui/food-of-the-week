@@ -10,12 +10,23 @@ const navLinks = [
   { href: `${basePath}/weekend`, label: 'Weekend' },
   { href: `${basePath}/fancai`, label: '饭菜搭配' },
 ];
+
+const isHome = currentPath === basePath;
+const hasInlineBackLink = navLinks.some((link) => currentPath === link.href);
+const showPrependedBackLink = !isHome && !hasInlineBackLink;
+const homeHref = basePath === '/' ? '/' : basePath + '/';
 ---
 
 <footer class="mt-xl py-xl px-md border border-solid border-border rounded-lg" id="links-and-info">
   <div class="max-w-container mx-auto flex flex-col gap-lg">
     <nav class="flex justify-center items-center gap-md flex-wrap mobile:flex-col mobile:gap-md">
       <a href="#top" class="footer-link">↑ Back to Top</a>
+      {showPrependedBackLink && (
+        <>
+          <span class="text-border select-none mobile:hidden">·</span>
+          <a href={homeHref} class="footer-link">← This Week</a>
+        </>
+      )}
       {navLinks.map((link) => {
         const isCurrent = currentPath === link.href;
         return (

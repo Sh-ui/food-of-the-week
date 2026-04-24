@@ -6,9 +6,9 @@ export interface SectionColorScheme {
   heading: string;
 }
 
-export interface SectionColors {
-  firstSubsection: SectionColorScheme;
-  listCategory: SectionColorScheme;
+interface ParsedOverrides {
+  byName: Record<string, SchemeRef>;
+  byIndex: Record<number, SchemeRef>;
 }
 
 interface InstructionPaletteEntry {
@@ -130,28 +130,38 @@ function readSchemeRef(value: unknown): SchemeRef | null {
     return { scheme: value.scheme };
   }
 
+  const hasAnyShapeKey = ['bg', 'border', 'heading'].some((key) => key in value);
+  if (!hasAnyShapeKey) return null;
+
   if (typeof value.bg === 'string' && typeof value.border === 'string' && typeof value.heading === 'string') {
     return { bg: value.bg, border: value.border, heading: value.heading };
   }
 
-  return null;
+  throw new Error(
+    `Invalid subsection scheme: must be { scheme: 'name' } or all three of { bg, border, heading }. Got: ${JSON.stringify(value)}`
+  );
 }
 
-function readPositionOverrides(value: unknown): Record<number, SchemeRef> {
-  if (!isRecord(value)) return {};
+function readOverrides(value: unknown): ParsedOverrides {
+  const byName: Record<string, SchemeRef> = {};
+  const byIndex: Record<number, SchemeRef> = {};
 
-  const out: Record<number, SchemeRef> = {};
+  if (!isRecord(value)) return { byName, byIndex };
+
   for (const [rawKey, rawValue] of Object.entries(value)) {
-    const index = Number(rawKey);
-    if (!Number.isInteger(index) || index < 0) continue;
-
     const ref = readSchemeRef(rawValue);
     if (!ref) continue;
 
-    out[index] = ref;
+    const asInt = Number(rawKey);
+    if (Number.isInteger(asInt) && asInt >= 0 && String(asInt) === rawKey) {
+      byIndex[asInt] = ref;
+      continue;
+    }
+
+    byName[rawKey] = ref;
   }
 
-  return out;
+  return { byName, byIndex };
 }
 
 function getEffectivePalette(): InstructionPaletteEntry[] {
@@ -161,31 +171,29 @@ function getEffectivePalette(): InstructionPaletteEntry[] {
   return [{ name: 'default', color: fallback }];
 }
 
-function readInfoSchemeRef(): SchemeRef {
-  if (!isRecord(instructionSubsections)) {
-    return { bg: 'bg-alt', border: 'secondary', heading: 'primary' };
-  }
-
-  const ref = readSchemeRef(instructionSubsections.info);
-  if (ref) return ref;
-
-  return { bg: 'bg-alt', border: 'secondary', heading: 'primary' };
-}
-
 const instructionSequenceRefs: SchemeRef[] = getEffectivePalette().map(entry => ({ scheme: entry.name }));
 
-const positionOverrides: Record<number, SchemeRef> = isRecord(instructionSubsections)
-  ? readPositionOverrides(instructionSubsections.overrides)
-  : {};
+const overrides = isRecord(instructionSubsections)
+  ? readOverrides(instructionSubsections.overrides)
+  : { byName: {}, byIndex: {} };
 
-export const sectionColors: SectionColors = {
-  firstSubsection: resolveSchemeRef(readInfoSchemeRef()),
-  listCategory: {
-    bg: 'transparent',
-    border: 'transparent',
-    heading: 'inherit',
-  },
-};
+const namedOverrides: Record<string, SchemeRef> = { ...overrides.byName };
+const positionOverrides: Record<number, SchemeRef> = overrides.byIndex;
+
+if (!namedOverrides.info) {
+  namedOverrides.info = { bg: 'bg-alt', border: 'secondary', heading: 'primary' };
+}
+
+export function getSubsectionScheme(name: string): SectionColorScheme {
+  const ref = namedOverrides[name];
+  if (!ref) {
+    throw new Error(
+      `Unknown subsection scheme "${name}". Define it in tailwind.config.mjs → instructionSubsections.overrides.${name}`
+    );
+  }
+
+  return resolveSchemeRef(ref);
+}
 
 /**
  * Get the color scheme for an instruction section by its index.
