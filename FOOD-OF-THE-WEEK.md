@@ -61,7 +61,6 @@
 - [ ] Lemongrass pork bag -- mix ground pork with aromatics, seal flat, refrigerate
 - [ ] Bulgogi beef bag -- slice sirloin thin, marinate, seal flat, freeze
 - [ ] Green bean bag -- season with additives, seal, **SV 183°F / 15 min**
-- [ ] Spinach bag -- season with additives, seal gently, **SV 165°F / 4 min, ice bath immediately**
 - [ ] Zucchini bag -- season with additives, seal, **SV 183°F / 10 min**
 - [ ] Tadka base bag -- diced onion + garlic + ginger + jalapeño, seal, refrigerate (no SV)
 - [ ] Move bulgogi bag from freezer to fridge **Monday evening**
@@ -78,11 +77,9 @@ Proteins first on the cutting board + tray (raw meat). Wash board, then cut all 
 
 ### Veg Bags -- Sealed and SV'd Sunday
 
-All green vegetables get **calcium lactate + baking soda** (firm + bright). Zucchini gets **calcium lactate only** (texture hold, color irrelevant). New potatoes SV day-of Thursday -- not Sunday.
+Green beans get **calcium lactate + baking soda** (firm + bright). Zucchini gets **calcium lactate only** (texture hold, color irrelevant). Spinach and new potatoes done day-of -- not Sunday.
 
 **Green beans**: trim ends, into a vac bag with **neutral oil**, pinch of **salt**, **1/4 tsp calcium lactate** dissolved in 1 tbsp water, **tiny pinch baking soda** (1/8 tsp or less). Seal. **SV at 183°F for 15 min**. Ice bath, refrigerate. Ready to wok-char Monday with no further cooking needed.
-
-**Spinach**: dump into a vac bag with a drizzle of **neutral oil**, pinch of **salt**, **1/4 tsp calcium lactate** dissolved in 1 tbsp water, **tiny pinch baking soda**. Seal gently -- low vacuum. **SV at 165°F for 4 min only**. Pull and ice bath ***immediately***. Squeeze gently, refrigerate. Dress Tuesday just before serving -- it's fully cooked.
 
 **Zucchini**: cut into 1/2 inch coins, into a vac bag with **olive oil**, **zest of 1 lemon**, pinch of **salt**, several grinds of **black pepper**, **1/4 tsp calcium lactate** dissolved in 1 tbsp water. Seal. **SV at 183°F for 10 min**. Ice bath, refrigerate.
 
@@ -160,15 +157,13 @@ None -- the bulgogi sauce reduces into a glaze, two cai is enough.
 ### Already Prepped
 
 - **Bulgogi beef bag** thawing in fridge since Monday evening.
-- **Spinach bag** fully cooked in fridge from Sunday.
-
 ### Sous Chef - Assembly
 
 Start **rice** in the rice cooker.
 
 Smash **3 cucumbers** with the flat of a knife. Tear into rough bite-size pieces. Into a bowl: **3 tbsp kimchi** chopped roughly, **1 tsp sesame oil**, **1 tsp rice vinegar**, **1 tsp sugar**, **1 minced garlic clove**, **1 tsp sesame seeds**. Toss with cucumbers. Refrigerate to mingle.
 
-Pull the **spinach bag** from the fridge. Squeeze gently to remove excess liquid (don't murder it). Pile into a bowl and dress: **2 tsp sesame oil**, **1 tsp soy sauce**, **1 minced garlic clove**, generous pinch of **sesame seeds**, pinch of **salt**. Toss. ***Taste*** -- nutty, savory, garlicky. Set aside at room temp.
+Bring a small pot of water to a boil. Drop in the whole bag of **spinach**, blanch ***60-90 seconds*** only. Drain immediately into a colander and run cold water over it until completely cold -- or ice bath if you have ice. Grab handfuls and squeeze hard to wring out as much water as you can. Pile into a bowl and dress: **2 tsp sesame oil**, **1 tsp soy sauce**, **1 minced garlic clove**, generous pinch of **sesame seeds**, pinch of **salt**. Toss. ***Taste*** -- nutty, savory, garlicky. Set aside at room temp.
 
 Slice **1 green bell pepper** into thin strips. Set near the stove.
 
