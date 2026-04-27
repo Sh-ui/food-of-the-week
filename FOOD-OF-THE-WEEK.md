@@ -89,8 +89,8 @@ Green beans get **calcium lactate + baking soda** (firm + bright). Zucchini gets
 
 ## Lemongrass Pork
 
-##### WokNight
-###### wok sequence, veg already cooked, 20 min ⏱
+##### SousVidePrep
+###### setup SV + prep/salad + 5:30 rice
 
 #### Anchor:
 Caramelized lemongrass ground pork -- Vietnamese, fish sauce + lime + sugar lacquered
@@ -99,9 +99,9 @@ Caramelized lemongrass ground pork -- Vietnamese, fish sauce + lime + sugar lacq
 White rice
 
 #### Cai:
-Wok-blistered green beans -- already cooked from Sunday, 90 seconds in the wok to char and finish with garlic and lime
+Wok-blistered green beans -- 15 minutes SV blanch, 90 seconds in the wok to char and finish with garlic and lime
 
-Carrot ribbon salad with rice vinegar, fermented cayenne mash, cilantro, sugar -- cold
+Carrot ribbon salad with rice vinegar, cayenne sauce, cilantro, sugar -- cold
 
 #### Soup:
 None -- the pork is intensely seasoned, two cai, full table.
@@ -109,23 +109,25 @@ None -- the pork is intensely seasoned, two cai, full table.
 ### Already Prepped
 
 - **Lemongrass pork bag** in fridge from Sunday.
-- **Green bean bag** fully cooked in fridge from Sunday.
+- **Green bean bag** vac sealed and salted in fridge from Sunday.
 
 ### Sous Chef - Assembly
 
-Start a family-size portion of **rice** in the rice cooker.
+Setup and fill the **sous vide machine** and have it ready on the counter.
 
-Pull the **green bean bag** from the fridge and let it sit out on the counter to take the chill off while you work.
+Peel and ribbon **carrots** with a vegetable peeler -- aim for 2-3 generous handfuls of long ribbons. Into a bowl: juice of **1 lime**, **2 tsp rice vinegar**, **1 tsp sugar**, **1/2 tsp fermented cayenne sauce**, pinch of **salt**. Toss with the **carrots**. Refrigerate to crisp up.
 
-Peel and ribbon **carrots** with a vegetable peeler -- aim for 2-3 generous handfuls of long ribbons. Into a bowl: juice of **1 lime**, **2 tsp rice vinegar**, **1 tsp sugar**, **1/2 tsp fermented cayenne mash**, pinch of **salt**. Toss with the **carrots**. Refrigerate to crisp up.
+Strip leaves from **cilantro** -- about half the bunch, gently chopped. Two piles: *one* for the **carrot salad**, *one* for the **pork** at the table.
 
-Strip leaves from **cilantro** -- about half the bunch, gently chopped. Two piles: one for the carrot salad, one for the pork at the table.
+Slice up *3-5* **scallions** thinly, and set aside for later.
 
-Slice **scallion** greens thin.
+At **5:30** start a family-size portion of **rice** in the rice cooker, wash the rice but try using slightly less water when cooking this time.
 
 ### Chef - Wok Sequence
 
-**Wok dish 1 -- Lemongrass pork**: wok ripping hot, splash of **neutral oil**. Dump in the **pork mixture** from the bag. ***Don't touch it*** for 60 seconds -- let the bottom layer caramelize hard. Break up and stir-fry, pressing the meat against the wok to build dark sticky edges. About 5-7 minutes total. The fish sauce + sugar will turn deep mahogany. ***Taste*** -- more **fish sauce** if it needs salt, pinch of **sugar** if flat. Finish with **scallion** greens and a generous squeeze of **lime**. Out.
+Drop the **green beans** into the sous vide bath at 194 for 15 minutes.
+
+**Wok dish 1 -- Lemongrass pork**: wok ripping hot, splash of **neutral oil**. Dump in the **pork mixture** from the bag. ***Don't touch it*** for 60 seconds -- let the bottom layer caramelize hard. Break up and stir-fry, pressing the meat against the wok to build dark sticky edges. Drop in the whites of scallions and a swirl of rice wine, quick mix; Then in with the fish sauce + sugar cooked to a deep mahogany. ***Taste*** -- more **fish sauce** if it needs salt, pinch of **sugar** if flat. Finish with **scallion** greens and a generous squeeze of **lime**. Out.
 
 **Wok dish 2 -- Green beans**: quick rinse of the wok. Ripping hot, splash of **oil**. Dump the **green beans** in from the bag, spread flat, *don't touch* until charred in spots, about 60-90 seconds. Toss, add 3 cloves of sliced **garlic**, toss 20 seconds. Out immediately. Squeeze **lime** over.
 
