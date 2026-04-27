@@ -10,7 +10,7 @@
 - [ ] Spinach - 1 large bag (~10 oz)
 - [ ] Green beans - 1 lb
 - [ ] Zucchini - 3-4 medium
-- [ ] Cauliflower - 1 head
+- [x] New potatoes - ~1.5 lb (Thu sabzi, SV day-of)
 - [ ] Cucumbers - 4
 - [ ] Carrots - small bag (~1 lb)
 - [ ] Tomatoes - 3 medium (Thu)
@@ -63,7 +63,6 @@
 - [ ] Green bean bag -- season with additives, seal, **SV 183°F / 15 min**
 - [ ] Spinach bag -- season with additives, seal gently, **SV 165°F / 4 min, ice bath immediately**
 - [ ] Zucchini bag -- season with additives, seal, **SV 183°F / 10 min**
-- [ ] Cauliflower bag -- season with additives, seal, **SV 183°F / 20 min**
 - [ ] Tadka base bag -- diced onion + garlic + ginger + jalapeño, seal, refrigerate (no SV)
 - [ ] Move bulgogi bag from freezer to fridge **Monday evening**
 
@@ -79,15 +78,13 @@ Proteins first on the cutting board + tray (raw meat). Wash board, then cut all 
 
 ### Veg Bags -- Sealed and SV'd Sunday
 
-All green vegetables get **calcium lactate + baking soda** (firm + bright). Zucchini and cauliflower get **calcium lactate only** (texture hold, color is irrelevant).
+All green vegetables get **calcium lactate + baking soda** (firm + bright). Zucchini gets **calcium lactate only** (texture hold, color irrelevant). New potatoes SV day-of Thursday -- not Sunday.
 
 **Green beans**: trim ends, into a vac bag with **neutral oil**, pinch of **salt**, **1/4 tsp calcium lactate** dissolved in 1 tbsp water, **tiny pinch baking soda** (1/8 tsp or less). Seal. **SV at 183°F for 15 min**. Ice bath, refrigerate. Ready to wok-char Monday with no further cooking needed.
 
 **Spinach**: dump into a vac bag with a drizzle of **neutral oil**, pinch of **salt**, **1/4 tsp calcium lactate** dissolved in 1 tbsp water, **tiny pinch baking soda**. Seal gently -- low vacuum. **SV at 165°F for 4 min only**. Pull and ice bath ***immediately***. Squeeze gently, refrigerate. Dress Tuesday just before serving -- it's fully cooked.
 
 **Zucchini**: cut into 1/2 inch coins, into a vac bag with **olive oil**, **zest of 1 lemon**, pinch of **salt**, several grinds of **black pepper**, **1/4 tsp calcium lactate** dissolved in 1 tbsp water. Seal. **SV at 183°F for 10 min**. Ice bath, refrigerate.
-
-**Cauliflower**: cut into bite-size florets, into a vac bag with **neutral oil**, 1/2 tsp **turmeric**, 1 tsp **ground cumin**, pinch of **salt**, **1/4 tsp calcium lactate** dissolved in 1 tbsp water. Seal. **SV at 183°F for 20 min** -- it should be just-tender, not collapsing. Ice bath, refrigerate.
 
 **Tadka base (raw -- no SV)**: dice 1 medium **white onion**, mince 4 cloves **garlic**, mince 1 inch **ginger**, mince 1 **jalapeño**. Into a vac bag together. Seal. Refrigerate. Used Thursday in two places -- splits in half at the stove.
 
@@ -238,8 +235,8 @@ Bring a large pot of generously salted water to a boil for the **angel hair**.
 
 ## Red Lentil Dal
 
-##### ChefDish
-###### dal simmer + wok cauliflower, veg already cooked, 30 min ⏱
+##### ChefDish+
+###### SV potatoes 2:30 PM + dal simmer + wok sabzi, 30 min ⏱
 
 #### Anchor:
 Tempered red lentil dal -- turmeric, ginger, tomato, finished with sizzling cumin tadka poured at the table
@@ -248,7 +245,7 @@ Tempered red lentil dal -- turmeric, ginger, tomato, finished with sizzling cumi
 White rice
 
 #### Cai:
-Cauliflower sabzi -- already cooked from Sunday, wok-finished with tadka base, tomato, garam masala
+New potato sabzi -- SV'd day-of at 194°F / 2.5 h, wok-finished with tadka base, tomato, garam masala
 
 Cucumber-mint raita -- yogurt, cucumber, mint, cumin, lime (cold)
 
@@ -257,10 +254,12 @@ None -- the dal is brothy and substantial, two cai, full thali table.
 
 ### Already Prepped
 
-- **Cauliflower bag** fully cooked in fridge from Sunday.
+- **New potato bag** -- already cut and salted, sealed; in the SV bath since ~2:30 PM (**194°F / 2.5 h**).
 - **Tadka base bag** (onion + garlic + ginger + jalapeño) in fridge from Sunday.
 
 ### Sous Chef - Assembly
+
+***At 2:30 PM***: drop the sealed **new potato bag** (already cut and salted) into the bath at **194°F**. Set a **2.5-hour timer** -- done by **5:00**, holding warm until cook time.
 
 Rinse **2 cups red lentils** in a fine strainer until water runs mostly clear. Into a heavy pot: **6 cups water**, **1 tsp turmeric**, **1 tsp salt**, a **knob of butter**. Bring to a boil, ***skim foam***, drop to a low simmer. Stir occasionally for 25 minutes -- they'll dissolve into a creamy porridge.
 
@@ -278,8 +277,8 @@ Strip **cilantro** leaves for the dal finish.
 
 **Dal finish**: when the lentils are creamy, stir in the first half of the **tadka base** and one pile of **chopped tomato**. Simmer 5-8 minutes until the onion softens in. ***Taste*** -- rich, rounded. Adjust salt. Too thick: add water. Too loose: simmer down.
 
-**Cauliflower sabzi**: wok or large skillet, splash of **oil**, medium-high heat. Add the second half of the **tadka base**, stir-fry 2 min until fragrant. Add the second pile of **chopped tomato**, **1 tsp garam masala**, **1/2 tsp coriander** if you have it, **1/2 tsp fermented cayenne mash**, pinch of **salt**. Stir until tomato breaks down, 2-3 min. Dump in the **cauliflower** from the bag. Toss to coat, let the edges sear briefly. ***Taste*** -- adjust salt and garam masala. Out.
+**Potato sabzi**: wok or large skillet, splash of **oil**, medium-high heat. Add the second half of the **tadka base**, stir-fry 2 min until fragrant. Add the second pile of **chopped tomato**, **1 tsp garam masala**, **1/2 tsp coriander** if you have it, **1/2 tsp fermented cayenne mash**, pinch of **salt**. Stir until tomato breaks down, 2-3 min. Dump in the **new potatoes** from the bag. Toss to coat, let the cut faces sear and pick up color. ***Taste*** -- adjust salt and garam masala. Out.
 
 **Tadka pour**: small pan, medium-high heat, **3 tbsp butter or ghee**. Once it foams: **1 tsp ground cumin** (or whole seeds if you have them), **1/2 tsp fermented cayenne mash**, **1 smashed garlic clove**. Sizzle 30 seconds until nutty and fragrant. ***At the table, in front of everyone***, pour this sizzling oil directly into the dal bowl. Let them hear it.
 
-**Table**: **rice** in individual bowls. **Dal** in a wide shared bowl, tadka poured at service. **Cauliflower sabzi** and **raita** in shared dishes. Lime wedges on the table. Scatter **cilantro** over the dal.
+**Table**: **rice** in individual bowls. **Dal** in a wide shared bowl, tadka poured at service. **Potato sabzi** and **raita** in shared dishes. Lime wedges on the table. Scatter **cilantro** over the dal.
