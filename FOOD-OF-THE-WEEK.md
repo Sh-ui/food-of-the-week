@@ -1,6 +1,3 @@
-
-<!-- multi-cuisinal wok week, sv-blanching cai sunday, no soup, aldi-only -->
-
 # Week of April 26 - May 2, 2026
 
 ## Grocery List
@@ -51,7 +48,7 @@
 
 ---
 
-## Sunday Prep
+## ✓ Sunday Prep
 
 ##### BatchDay
 ###### 2-2.5 h ⏱, no stove -- SV bath runs unattended
@@ -87,7 +84,7 @@ Green beans get **calcium lactate + baking soda** (firm + bright). Zucchini gets
 
 ---
 
-## Lemongrass Pork
+## ✓ Lemongrass Pork
 
 ##### SousVidePrep
 ###### setup SV + prep/salad + 5:30 rice
@@ -134,6 +131,50 @@ Drop the **green beans** into the sous vide bath at 194 for 15 minutes.
 Toss **carrot salad** with the reserved **cilantro** right before serving.
 
 **Table**: **rice** in individual bowls. **Lemongrass pork** in a center bowl, **cilantro** scattered over. **Green beans** and **carrot ribbon salad** in shared dishes. Lime wedges on the table.
+---
+
+## Arrabbiata
+
+##### Prep&Heat
+###### bean salad + prep
+
+#### Anchor:
+Spicy arrabbiata with angel hair -- garlic, anchovy, fermented cayenne, canned tomatoes, parsley
+
+#### Fan:
+The pasta is the fan tonight (one-pot relax)
+
+#### Cai:
+Zucchini -- already cooked from Sunday, 90-second wok-char with garlic, lemon, parsley
+
+White bean salad with cherry pepper relish -- cold, sharp, fridge garnish energy
+
+#### Soup:
+None -- pasta night, full table, two cai.
+
+### Already Prepped
+
+- **Zucchini bag** fully cooked in fridge from Sunday.
+
+### Sous Chef - Assembly
+
+Strip and roughly chop the whole **parsley** bunch -- half into the bean salad, half for the pasta finish.
+
+Drain and rinse the **canned cannellini** in a colander. Into a bowl: **2 tbsp cherry pepper relish**, **3 tbsp olive oil**, juice of **half a lemon**, half a thinly sliced **white onion** (rinsed under cold water first), salt, pepper, half the chopped **parsley**. Toss. ***Taste*** -- punchy, a little hot. Refrigerate.
+
+Mince 6 cloves of **garlic**, slice 2 more thin. Both near the stove.
+
+Bring a large pot of generously salted water to a boil for the **angel hair** later.
+
+### Chef - Cooking
+
+**Sauce**: large skillet or wide pot, medium-low heat. **4-5 tbsp olive oil**. In go the **3 anchovies** and **minced garlic** together. Stir constantly -- anchovies dissolve into the oil in 1-2 min. ***Don't burn the garlic***. Add **1 tsp fermented cayenne sauce**, stir 30 seconds. Pour in the **canned whole tomatoes** with their juice, crush them against the pan as they hit. Splash of **red wine** if open. Salt lightly. Simmer **15-18 min** until thick and the oil pools red on top. ***Taste*** -- sharp, deep, slightly sweet from reduction.
+
+**Pasta**: 5 min before the sauce is done, drop **angel hair** into the boiling water. ***Time it*** -- angel hair is done in 3-4 min. Reserve a cup of pasta water before draining. Dump drained pasta into the sauce, toss with tongs, add pasta water as needed for silkiness. Finish with the second handful of **parsley** and the **sliced raw garlic** -- it sharpens everything.
+
+**Zucchini**: hot skillet or a quick wok rinse, splash of **olive oil**. Dump the zucchini in, toss 90 seconds until the edges char and pick up some color. Squeeze of **lemon juice**, scatter of **parsley**, salt. Out.
+
+**Table**: **pasta** in shallow bowls or a big family platter. **Zucchini** and **white bean salad** in shared dishes. Extra **olive oil** and a wedge of **lemon** on the table. Skip parmesan -- the anchovy carries the salt.
 
 ---
 
@@ -178,55 +219,6 @@ Slice **scallion** greens thin for the bulgogi finish.
 Spinach namul and cucumber salad are already done -- no second wok dish.
 
 **Table**: **rice** in individual bowls, scatter **furikake** generously on top. **Bulgogi with peppers** in a center bowl, extra **scallion** over. **Spinach namul** and **cucumber kimchi salad** in shared dishes. Jar of **kimchi** on the table.
-
----
-
-## Arrabbiata
-
-##### ChefDish
-###### one-pot pasta + SV zucchini wok-finish, 30 min ⏱
-
-#### Anchor:
-Spicy arrabbiata with angel hair -- garlic, anchovy, fermented cayenne, canned tomatoes, parsley
-
-#### Fan:
-The pasta is the fan tonight (one-pot relax)
-
-#### Cai:
-Zucchini -- already cooked from Sunday, 90-second wok-char with garlic, lemon, parsley
-
-White bean salad with cherry pepper relish -- cold, sharp, fridge garnish energy
-
-#### Soup:
-None -- pasta night, full table, two cai.
-
-### Already Prepped
-
-- **Zucchini bag** fully cooked in fridge from Sunday.
-
-### Sous Chef - Assembly
-
-Pull the **zucchini bag** from the fridge and set on the counter.
-
-Drain and rinse the **canned cannellini** in a colander. Into a bowl: **2 tbsp cherry pepper relish**, **3 tbsp olive oil**, juice of **half a lemon**, half a thinly sliced **white onion** (rinsed under cold water first), salt, pepper, half the chopped **parsley**. Toss. ***Taste*** -- punchy, a little hot. Refrigerate.
-
-Strip and roughly chop the whole **parsley** bunch -- half into the bean salad, half for the pasta finish.
-
-Mince 6 cloves of **garlic**, slice 2 more thin. Both near the stove.
-
-Fish out **3 anchovy fillets** from the tin and set on a small plate near the stove.
-
-Bring a large pot of generously salted water to a boil for the **angel hair**.
-
-### Chef - Cooking
-
-**Sauce**: large skillet or wide pot, medium-low heat. **4-5 tbsp olive oil**. In go the **3 anchovies** and **minced garlic** together. Stir constantly -- anchovies dissolve into the oil in 1-2 min. ***Don't burn the garlic***. Add **1 tsp fermented cayenne mash**, stir 30 seconds. Pour in the **canned whole tomatoes** with their juice, crush them against the pan as they hit. Splash of **red wine** if open. Salt lightly. Simmer **15-18 min** until thick and the oil pools red on top. ***Taste*** -- sharp, deep, slightly sweet from reduction.
-
-**Pasta**: 5 min before the sauce is done, drop **angel hair** into the boiling water. ***Time it*** -- angel hair is done in 3-4 min. Reserve a cup of pasta water before draining. Dump drained pasta into the sauce, toss with tongs, add pasta water as needed for silkiness. Finish with the second handful of **parsley** and the **sliced raw garlic** -- it sharpens everything.
-
-**Zucchini**: hot skillet or a quick wok rinse, splash of **olive oil**. Dump the zucchini in, toss 90 seconds until the edges char and pick up some color. Squeeze of **lemon juice**, scatter of **parsley**, salt. Out.
-
-**Table**: **pasta** in shallow bowls or a big family platter. **Zucchini** and **white bean salad** in shared dishes. Extra **olive oil** and a wedge of **lemon** on the table. Skip parmesan -- the anchovy carries the salt.
 
 ---
 
