@@ -134,7 +134,7 @@ Toss **carrot salad** with the reserved **cilantro** right before serving.
 
 ---
 
-## Arrabbiata
+## ✓ Arrabbiata
 
 ##### Prep&Heat
 ###### bean salad + prep
@@ -181,41 +181,44 @@ Bring a large pot of generously salted water to a boil for the **angel hair** la
 
 ## Bulgogi Beef
 
-##### WokNight
-###### wok sequence, veg already cooked, 20 min ⏱
+##### Prep&Heat+
+###### salad + prep prep + 5:30 rice
 
 #### Anchor:
-Korean bulgogi -- thin-sliced sirloin, soy-sesame-sugar marinade, wok-charred fast with green pepper
+Korean bulgogi -- thin-sliced beef, soy-sesame-sugar marinade, wok-charred fast with green pepper
 
 #### Fan:
 White rice with furikake
 
 #### Cai:
-Spinach namul -- already cooked from Sunday, just dress and serve at room temp
+Spinach namul -- blanched spinach dressed with sesame
 
-Smashed cucumber kimchi salad -- cold, crunchy, sharp
+Cucumber kimchi salad -- cold, crunchy, sharp
 
 #### Soup:
 None -- the bulgogi sauce reduces into a glaze, two cai is enough.
 
 ### Already Prepped
 
-- **Bulgogi beef bag** thawing in fridge since Monday evening.
+- nothing...
+
 ### Sous Chef - Assembly
 
-Start **rice** in the rice cooker.
+Slice *five* **spring onions**, seperating the whites from the greens. Set the *greens* aside for later, you will be using the *whites* in the *cuke salad*.
 
-Smash **3 cucumbers** with the flat of a knife. Tear into rough bite-size pieces. Into a bowl: **3 tbsp kimchi** chopped roughly, **1 tsp sesame oil**, **1 tsp rice vinegar**, **1 tsp sugar**, **1 minced garlic clove**, **1 tsp sesame seeds**. Toss with cucumbers. Refrigerate to mingle.
+Cut **cucumber** into bite sized pieces. Into a bowl: **3 tbsp kimchi** chopped roughly, **1 tsp rice vinegar**, **2 tsp sugar**, **1 small finely minced thumb of peeled ginger**, **the whites of your spring onions**, **2 quick dashes of fish sauce**, **assertive pinch of salt**. Toss together until coated, and cucumbers are slighty beaten up. *Taste and adjust*. Refrigerate to mingle.
 
-Bring a small pot of water to a boil. Drop in the whole bag of **spinach**, blanch ***60-90 seconds*** only. Drain immediately into a colander and run cold water over it until completely cold -- or ice bath if you have ice. Grab handfuls and squeeze hard to wring out as much water as you can. Pile into a bowl and dress: **2 tsp sesame oil**, **1 tsp soy sauce**, **1 minced garlic clove**, generous pinch of **sesame seeds**, pinch of **salt**. Toss. ***Taste*** -- nutty, savory, garlicky. Set aside at room temp.
+Bring a small pot of water to a boil. Drop in the whole container of **baby spinach**, blanch ***60-90 seconds*** only. Drain immediately into a colander and run *cold* water over it until ***completely cold** -- or ice bath if you have ice. Grab handfuls and squeeze hard to wring out as much water as you can. Pile into a bowl and dress: **2 tsp sesame oil**, **1 tsp *dark* soy sauce**, generous dashing of **sesame seeds**, pinch of **salt**. Toss. ***Taste*** -- nutty, savory, fresh. Set aside at room temp.
 
-Slice **1 green bell pepper** into thin strips. Set near the stove.
+Slice **1 green bell pepper** into thin strips. Set near the stove along with the **spring onion greens** from earlier.
 
-Slice **scallion** greens thin for the bulgogi finish.
+At **5:30** start the rice in the rice cooker.
 
-### Chef - Wok Sequence
+### Chef - Finishing
 
-**Wok dish 1 -- Bulgogi with green pepper**: pull the **beef bag** from the fridge -- fully thawed. Wok until it smokes, splash of **neutral oil**. Dump the **beef and marinade** in. ***Spread flat*** and don't touch for 60 seconds -- char, not steam. Toss, sear the other side 60 seconds. Now stir-fry hard. When the beef is nearly done (about 3 min), dump in the **green bell pepper strips**. Toss together for 60 seconds -- the pepper warms through and picks up the glaze. ***Taste*** -- splash of **soy** if it needs salt, splash of **rice vinegar** or **mirin** if flat. Finish with **scallion** greens. Out.
+Thinly slice cold **steak** into strips, marinate with a tiny pinch baking soda, cayenne sauce, fish sauce, msg, sugar, dark soy sauce, a little bit of potato starch, and a bit of peanut oil.
+
+**Bulgogi with green pepper**: Wok until it smokes, splash of **neutral oil**. Dump the **beef and marinade** in. ***Spread flat*** and don't touch for 60 seconds -- char, not steam. Toss, sear the other side 60 seconds. Now stir-fry hard. When the beef is nearly done (about 3 min), dump in the **green bell pepper strips**. Toss together for 60 seconds -- the pepper warms through and picks up the glaze. ***Taste*** -- splash of **soy** if it needs salt, splash of **rice vinegar** or **mirin** if flat. Finish with **scallion** greens. Out.
 
 Spinach namul and cucumber salad are already done -- no second wok dish.
 
