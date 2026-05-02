@@ -6,9 +6,6 @@
 
 ### Produce
 
-- [ ] Italian sausage links - ~1.5 lb (4-5 links, sweet or hot your call)
-- [ ] Chicken thighs, boneless skinless - ~2 lb
-- [ ] Bacon - 1 pack
 - [ ] Fennel bulbs - 1
 - [ ] Bell peppers - 3 (any color, for charring + chili)
 - [ ] Green cabbage - 1 head
@@ -33,6 +30,10 @@
 - [ ] Garlic
 
 ### Protein
+
+- [ ] Italian sausage links - ~1.5 lb (4-5 links, sweet or hot your call)
+- [ ] Chicken thighs, boneless skinless - ~2 lb
+- [ ] Bacon - 1 pack
 
 ### Dairy
 
