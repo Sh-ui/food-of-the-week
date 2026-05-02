@@ -1,5 +1,4 @@
-
-<!-- week of may 3-9 2026 -->
+<!-- ✓ • https://sh-ui.github.io/food-of-the-week/ -->
 
 # Week of May 3-9, 2026
 
