@@ -167,3 +167,52 @@ Slice the **tenderloin** into thick medallions. Plate with **popovers**, charred
 ### Leftovers
 
 Reserve sliced **tenderloin** for the next day. Toast thick-cut **sourdough**, melt **American cheese** on top, layer cold sliced **tenderloin**, **cherry pepper relish**, and **pickled red onions**. Steak sandwiches -- assembly, not cooking, fifteen minutes.
+
+---
+
+## Lentil Dal
+
+##### SousChefDish
+###### dal simmer + prep prep + 5:30 rice
+
+#### Anchor:
+Tempered red lentil dal -- turmeric, ginger, tomato, finished with sizzling cumin tadka poured at the table
+
+#### Fan:
+White rice
+
+#### Cai:
+New potato sabzi -- wok-finished with tadka base, tomato, garam masala
+
+Cucumber-mint raita -- yogurt, cucumber, mint, cumin, lime (cold)
+
+#### Soup:
+None -- the dal is brothy and substantial, two cai, full table.
+
+### Already Prepped
+
+- **New potato jar** -- already cut and salted, in a jar from SV bath previously.
+
+### Sous Chef - Cooking + Prep
+
+Rinse **2 cups red lentils** in a fine strainer until water runs mostly clear. Into a heavy pot: **6 cups water**, **1 tsp turmeric**, **1 tsp salt**, a **knob of butter**. Bring to a boil, then drop to a low simmer. Stir occasionally for 25 minutes -- they'll dissolve into a creamy porridge. Keep an eye on it for texure, when it seems close, drop it single burner super low with the lid on to keep warm until we eat.
+
+Dice **1 cucumber** small. Chop **mint** leaves. Into a bowl: **1.5 cups Greek yogurt** loosened with a few tbsp of water, the **cucumber**, **mint**, **1/2 tsp ground cumin**, juice of **half a lime**, pinch of **salt**. Stir. ***Taste*** -- cool, herby, tart. Refrigerate.
+
+Cut the **cherry tomatoes** in half. Set aside for later.
+
+Chop **cilantro** leaves for the dal finish.
+
+Finely chop one **white onion** + two **jalapenos** + **medium thumb of ginger**, set aside for later.
+
+at **5:30** Start **rice** in the rice cooker.
+
+### Chef - Cooking
+
+**Dal finish**: when the lentils are creamy, stir in the first half of the **tadka base** and one pile of **chopped tomato**. Simmer 5-8 minutes until the onion softens in. ***Taste*** -- rich, rounded. Adjust salt. Too thick: add water. Too loose: simmer down.
+
+**Potato sabzi**: wok or large skillet, splash of **oil**, medium-high heat. Add the second half of the **tadka base**, stir-fry 2 min until fragrant. Add **1 tsp garam masala**, **1/2 tsp coriander** if you have it, **1/2 tsp fermented cayenne mash**, pinch of **salt**. Stir until fragrant, 1-2 min. Dump in the **new potatoes** from the jar. Toss to coat, let the cut faces sear and pick up color. ***Taste*** -- adjust salt and garam masala. Out.
+
+**Tadka pour**: small pan, medium-high heat, **3 tbsp butter or ghee**. Once it foams: **1 tsp ground cumin** (or whole seeds if you have them), **1/2 tsp fermented cayenne mash**, **1 smashed garlic clove**. Sizzle 30 seconds until nutty and fragrant. ***At the table, in front of everyone***, pour this sizzling oil directly into the dal bowl. Let them hear it.
+
+**Table**: **rice** in individual bowls. **Dal** in a wide shared bowl, tadka poured at service. **Potato sabzi** and **raita** in shared dishes. Lime wedges on the table. Scatter **cilantro** over the dal.

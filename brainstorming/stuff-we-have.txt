@@ -6,6 +6,7 @@ Pantry
 - Dried Chickpeas
 - Masa harina (multiple colors)
 - [wheat, bread, cake, ap] flour
+- potato starch
 - Sugar
 - Quinoa (about 1 dinner)
 - Japanese curry cubes
@@ -16,6 +17,8 @@ Pantry
 - white onion
 - garlic
 - white rice
+- more little potatoes
+- ginger
 
 Fridge
 - Miso
@@ -36,7 +39,6 @@ Freezer
 
 Deep freezer
 - Older frozen pre-cooked beans
-- Large frozen grass-fed beef tenderloin
 
 Flavor Cabinet
 - Dark soy
@@ -51,4 +53,4 @@ Flavor Cabinet
 - furikake
 - Various Spices
 - Various Cooking Oils
-- Various sstandard cabinet spices and staples
+- Various standard cabinet spices and staples

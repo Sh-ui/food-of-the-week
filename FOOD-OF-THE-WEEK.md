@@ -1,274 +1,278 @@
-# Week of April 26 - May 2, 2026
+
+<!-- week of may 3-9 2026 -->
+
+# Week of May 3-9, 2026
 
 ## Grocery List
 
 ### Produce
 
-- [ ] Spinach - 1 large bag (~10 oz)
-- [ ] Green beans - 1 lb
-- [ ] Zucchini - 3-4 medium
-- [x] New potatoes - ~1.5 lb (Thu sabzi, SV day-of)
-- [ ] Cucumbers - 4
-- [ ] Carrots - small bag (~1 lb)
-- [ ] Tomatoes - 3 medium (Thu)
-- [ ] Cilantro - 1 bunch
+- [ ] Italian sausage links - ~1.5 lb (4-5 links, sweet or hot your call)
+- [ ] Chicken thighs, boneless skinless - ~2 lb
+- [ ] Bacon - 1 pack
+- [ ] Fennel bulbs - 1
+- [ ] Bell peppers - 3 (any color, for charring + chili)
+- [ ] Green cabbage - 1 head
+- [ ] Cucumbers - 1
+- [ ] Avocados - 2
+- [x] Jalapeños - 1
 - [ ] Parsley - 1 bunch
-- [ ] Mint - 1 bunch
+- [ ] Cilantro - 1 large bunch
+- [ ] Lemons - 3
+- [x] Limes - 4
+- [ ] Mushrooms - 10-12 oz
+- [ ] Shallots - 4
+- [ ] Romaine lettuce - 2 heads
+- [ ] Arugula - 1 bag
+- [ ] Walnuts - 1 small bag
+- [x] Thyme - 1 bunch (fresh, or check dried)
+- [ ] Broccoli - 2 crowns
+- [ ] Oranges - 2
 - [ ] Scallions - 1 bunch
-- [ ] Jalapeños - 3
-- [ ] Limes - 4
-- [ ] Lemons - 2
-- [ ] Ginger - 1 knob (if low)
-- [x] Lemongrass
-- [x] White onion
-- [x] Garlic
-- [x] Green bell peppers - 2 (already in fridge)
+- [x] Cornstarch - check pantry
+- [ ] White onion
+- [ ] Garlic
 
 ### Protein
 
-- [ ] Beef sirloin - ~1.5 lb (slice thin for bulgogi)
-- [ ] Ground pork - ~1.5 lb
-
 ### Dairy
 
-- [x] Greek yogurt
-- [x] Butter (check)
+- [ ] Egg noodles - 1 bag (wide)
+- [ ] Butter
+- [x] Greek yogurt (stands in for cream in the mushroom pan sauce)
 
 ### Pantry
 
-- [ ] Canned cannellini beans - 1 can
-- [ ] Anchovies in olive oil - 1 small tin
-- [ ] Garam masala - 1 jar (skip if already in spice rack)
-- [x] Brown sugar (check)
-- [x] Canned whole tomatoes (Wed + Thu)
-- [x] Dried angel hair pasta (Wed)
-- [x] Red lentils (Thu)
-- [x] Cherry pepper relish (Wed)
-- [x] Kimchi (Tue)
+- [ ] Canned cannellini beans - 2 can
+- [ ] Canned chickpeas - 2 cans
+- [ ] Dijon mustard - 1 jar
+- [ ] Canned fire roasted diced tomatoes - 1 can (28 oz)
+- [ ] Tomato paste - 1 tube
+- [ ] Chipotle peppers in adobo - 1 small can
+- [ ] Veggie stock - 32 oz carton
+- [ ] Fire Roasted Corn - 1 can
+- [x] Apple cider vinegar - small bottle
+- [x] Cherry pepper relish
+- [x] Black vinegar
+- [x] Olive oil
+- [x] Red lentils
+- [x] Canned whole tomatoes (use as crushed)
+- [x] Par-cooked seasoned black beans (fridge)
+- [x] Brown sugar
+- [x] Dark soy sauce
 
 ---
 
-## ✓ Sunday Prep
+## Sunday Prep
 
 ##### BatchDay
-###### 2-2.5 h ⏱, no stove -- SV bath runs unattended
+###### 2-2.5 h ⏱ -- SV bath runs while you char peppers and seal bags
 
 ### Prep Checklist
 
-- [ ] Lemongrass pork bag -- mix ground pork with aromatics, seal flat, refrigerate
-- [ ] Bulgogi beef bag -- slice sirloin thin, marinate, seal flat, freeze
-- [ ] Green bean bag -- season with additives, seal, **SV 183°F / 15 min**
-- [ ] Zucchini bag -- season with additives, seal, **SV 183°F / 10 min**
-- [ ] Tadka base bag -- diced onion + garlic + ginger + jalapeño, seal, refrigerate (no SV)
-- [ ] Move bulgogi bag from freezer to fridge **Monday evening**
+**Do these first (SV bath at 183°F):**
+- [ ] Bistro chicken thighs -- season, vac seal, **SV 160°F / 2 h**, ice bath, refrigerate *(start first -- longest run)*
+- [ ] Broccoli bag -- florets + additives, seal, **SV 183°F / 8 min**, ice bath, refrigerate
+
+**No heat needed:**
+- [ ] Chickpea salad bag -- chickpeas + Dijon + shallot + oil + lemon, seal, refrigerate
+
+**Stove / flame:**
+- [ ] Char bell peppers -- blacken over flame or broiler, bag and steam 10 min, peel, seed, slice, dress with black vinegar + garlic + olive oil, refrigerate
 
 ### Workflow
 
-Proteins first on the cutting board + tray (raw meat). Wash board, then cut all veg. Run the SV bath at **183°F** and drop bags in sequence -- they can overlap except the spinach which needs its own short run and an immediate ice bath. Everything refrigerates after it cools, already fully cooked for the week.
+Start the SV bath at **160°F** and drop the **chicken bag** in first -- it needs 2 hours and the bath can hold both temperatures sequentially. While the chicken runs, char the peppers and seal the veg bags. When the chicken is done and you've bumped the bath to **183°F**, run the **broccoli bag** (8 min) while you mix and seal the chickpea salad bag. The bath does the work -- you're mostly just chopping, seasoning, and sealing.
 
 ### Protein Bags
 
-**Lemongrass pork**: into a vac bag with **ground pork** (~1.5 lb): 2 stalks **lemongrass** (tough outer leaves stripped, tender core minced very fine), 4 cloves **garlic** minced, 1/4 **white onion** minced, 2 tbsp **fish sauce**, 1 tbsp **brown sugar**, 1 tsp **black pepper**, 1 tsp **fermented cayenne mash**. Seal flat. Refrigerate -- use Monday.
+**Bistro chicken thighs**: season **bone-in skin-on thighs** generously with **salt**, **black pepper**, and **thyme**. Vac seal flat. **SV at 160°F for 2 hours**. Ice bath to stop cooking. Refrigerate. Night of: wok or cast iron, skin-side down, to render and crisp.
 
-**Bulgogi beef**: slice **sirloin** as thin as you can across the grain (30 min in the freezer first makes this easier). Into a vac bag: 4 tbsp **soy sauce**, 2 tbsp **brown sugar**, 1 tbsp **sesame oil**, 4 cloves **garlic** minced, 1 inch **ginger** grated, 1 tsp **black pepper**, splash of **rice wine** or **mirin**, 1 tsp **fermented cayenne mash**. Massage to coat. Seal flat. **Freeze**. Move to fridge Monday evening.
+### Veg Bags
 
-### Veg Bags -- Sealed and SV'd Sunday
+**Broccoli**: cut **2 crowns** into florets. Into a vac bag: **neutral oil**, pinch of **salt**, **1/4 tsp calcium lactate** dissolved in 1 tbsp water, **tiny pinch baking soda** (keeps it vivid green through storage). Seal. **SV at 183°F for 8 min**. Ice bath immediately. Refrigerate.
 
-Green beans get **calcium lactate + baking soda** (firm + bright). Zucchini gets **calcium lactate only** (texture hold, color irrelevant). Spinach and new potatoes done day-of -- not Sunday.
-
-**Green beans**: trim ends, into a vac bag with **neutral oil**, pinch of **salt**, **1/4 tsp calcium lactate** dissolved in 1 tbsp water, **tiny pinch baking soda** (1/8 tsp or less). Seal. **SV at 183°F for 15 min**. Ice bath, refrigerate. Ready to wok-char Monday with no further cooking needed.
-
-**Zucchini**: cut into 1/2 inch coins, into a vac bag with **olive oil**, **zest of 1 lemon**, pinch of **salt**, several grinds of **black pepper**, **1/4 tsp calcium lactate** dissolved in 1 tbsp water. Seal. **SV at 183°F for 10 min**. Ice bath, refrigerate.
-
-**Tadka base (raw -- no SV)**: dice 1 medium **white onion**, mince 4 cloves **garlic**, mince 1 inch **ginger**, mince 1 **jalapeño**. Into a vac bag together. Seal. Refrigerate. Used Thursday in two places -- splits in half at the stove.
+**Chickpea salad** (no SV -- just marinate cold): drain and rinse **2 cans chickpeas**. Into a vac bag: chickpeas, **1 minced shallot**, **1 tbsp Dijon**, **2 tbsp olive oil**, juice of **half a lemon**, pinch of **salt** and **black pepper**. Seal. Refrigerate. Night of: drop bag into sous vide at 140°F for 15 min to warm through.
 
 ---
 
-## ✓ Lemongrass Pork
+## Sausage Fennel Pasta
 
-##### SousVidePrep
-###### setup SV + prep/salad + 5:30 rice
+##### WokNight
+###### wok sequence + egg noodles, 25 min ⏱
 
 #### Anchor:
-Caramelized lemongrass ground pork -- Vietnamese, fish sauce + lime + sugar lacquered
+Italian sausage sliced into coins, seared hard with fennel and onion in the wok -- gremolata finish
 
 #### Fan:
-White rice
+Garlic butter egg noodles
 
 #### Cai:
-Wok-blistered green beans -- 15 minutes SV blanch, 90 seconds in the wok to char and finish with garlic and lime
+White bean salad with cherry pepper relish -- cold, punchy, olive oil, lemon
 
-Carrot ribbon salad with rice vinegar, cayenne sauce, cilantro, sugar -- cold
+Charred bell peppers -- blistered Sunday, peeled, dressed with black vinegar, garlic, olive oil
 
 #### Soup:
-None -- the pork is intensely seasoned, two cai, full table.
+None -- pasta night rules relaxed, two cai, full Italian table.
 
 ### Already Prepped
 
-- **Lemongrass pork bag** in fridge from Sunday.
-- **Green bean bag** vac sealed and salted in fridge from Sunday.
+- **Charred bell peppers** dressed and in fridge from Sunday.
 
 ### Sous Chef - Assembly
 
-Setup and fill the **sous vide machine** and have it ready on the counter.
+Drain and rinse the **canned cannellini beans**. Into a bowl: **2 tbsp cherry pepper relish**, **3 tbsp olive oil**, juice of **half a lemon**, a few thin slices of **white onion** rinsed under cold water, salt, pepper. Toss. ***Taste*** -- punchy, bright. Refrigerate.
 
-Peel and ribbon **carrots** with a vegetable peeler -- aim for 2-3 generous handfuls of long ribbons. Into a bowl: juice of **1 lime**, **2 tsp rice vinegar**, **1 tsp sugar**, **1/2 tsp fermented cayenne sauce**, pinch of **salt**. Toss with the **carrots**. Refrigerate to crisp up.
+Strip and roughly chop the **parsley** -- about 3/4 of the bunch. Set aside two piles: one for the **gremolata**, one loose for the table.
 
-Strip leaves from **cilantro** -- about half the bunch, gently chopped. Two piles: *one* for the **carrot salad**, *one* for the **pork** at the table.
+**Gremolata**: zest of **1 lemon** + 1 clove **garlic** grated fine + a generous handful of **chopped parsley**. Mix. Set aside.
 
-Slice up *3-5* **scallions** thinly, and set aside for later.
+Bring a large pot of generously salted water to a boil for the **egg noodles**.
 
-At **5:30** start a family-size portion of **rice** in the rice cooker, wash the rice but try using slightly less water when cooking this time.
+Slice the **sausages** into 3/4 inch coins on a bias. Slice **fennel** into thin half-moons (reserve the fronds if they look nice -- scatter at the table). Slice **half an onion** into thin strips.
 
 ### Chef - Wok Sequence
 
-Drop the **green beans** into the sous vide bath at 194 for 15 minutes.
+**Garlic butter noodles**: cook **egg noodles** per package until just shy of done (they finish in the butter). In a wide pan, melt **3-4 tbsp butter** over medium heat with **3-4 minced garlic cloves** -- let the garlic bloom gently, 60 seconds. Drain noodles, toss directly in the butter, add a splash of pasta water, toss until glossy. Salt. Set aside covered.
 
-**Wok dish 1 -- Lemongrass pork**: wok ripping hot, splash of **neutral oil**. Dump in the **pork mixture** from the bag. ***Don't touch it*** for 60 seconds -- let the bottom layer caramelize hard. Break up and stir-fry, pressing the meat against the wok to build dark sticky edges. Drop in the whites of scallions and a swirl of rice wine, quick mix; Then in with the fish sauce + sugar cooked to a deep mahogany. ***Taste*** -- more **fish sauce** if it needs salt, pinch of **sugar** if flat. Finish with **scallion** greens and a generous squeeze of **lime**. Out.
+**Wok dish -- Sausage with fennel**: wok ripping hot, splash of **neutral oil**. Lay **sausage coins** flat, *don't touch* for 90 seconds until a deep sear forms on the cut face. Flip, 60 seconds. Remove sausage to a bowl. In the same wok with the rendered fat, add **onion** and **fennel**. Toss, let them sit for 60-90 seconds until they pick up color. Toss again. Season with salt. Cook until fennel is softened and caramelizing at the edges, 4-5 minutes. Return **sausage** to the wok, toss once to marry. Out into a serving bowl. Shower the **gremolata** over the top.
 
-**Wok dish 2 -- Green beans**: quick rinse of the wok. Ripping hot, splash of **oil**. Dump the **green beans** in from the bag, spread flat, *don't touch* until charred in spots, about 60-90 seconds. Toss, add 3 cloves of sliced **garlic**, toss 20 seconds. Out immediately. Squeeze **lime** over.
-
-Toss **carrot salad** with the reserved **cilantro** right before serving.
-
-**Table**: **rice** in individual bowls. **Lemongrass pork** in a center bowl, **cilantro** scattered over. **Green beans** and **carrot ribbon salad** in shared dishes. Lime wedges on the table.
+**Table**: **egg noodles** in a wide bowl or platter (family-style fan). **Sausage + fennel** in a center bowl, gremolata already on top. **White bean salad** and **charred peppers** in shared dishes. Extra **lemon wedge** and **parsley** on the table.
 
 ---
 
-## ✓ Arrabbiata
+## Veggie Chili
 
-##### Prep&Heat
-###### bean salad + prep
+##### ChefDish
+###### one-pot chili + wok cabbage, 40 min ⏱
 
 #### Anchor:
-Spicy arrabbiata with angel hair -- garlic, anchovy, fermented cayenne, canned tomatoes, parsley
+Lagerstrom-style veggie chili -- chipotle, cocoa, lentil-thickened, using on-hand par-cooked black beans
 
 #### Fan:
-The pasta is the fan tonight (one-pot relax)
+White rice (one-pot relax, chili and rice served together)
 
 #### Cai:
-Zucchini -- already cooked from Sunday, 90-second wok-char with garlic, lemon, parsley
+Bacon-fat caramelized cabbage -- green cabbage cooked low and slow in rendered bacon fat until dark and sweet, jalapeño hit at the end
 
-White bean salad with cherry pepper relish -- cold, sharp, fridge garnish energy
+Cucumber-avocado salsa-salad -- cold, chunky, cilantro, lime, jalapeño
 
 #### Soup:
-None -- pasta night, full table, two cai.
+None -- the chili is brothy, two cai, full table.
 
 ### Already Prepped
 
-- **Zucchini bag** fully cooked in fridge from Sunday.
+- **Par-cooked seasoned black beans** in fridge -- drain and add directly.
+- **Cucumber-avocado salsa-salad** made earlier in the day or by the sous chef before cooking starts.
 
 ### Sous Chef - Assembly
 
-Strip and roughly chop the whole **parsley** bunch -- half into the bean salad, half for the pasta finish.
+**Cucumber-avocado salsa-salad**: dice **2 cucumbers** into rough 1/2 inch chunks. Dice **2 avocados**. Mince **half a jalapeño**. Combine in a wide bowl with a generous handful of **cilantro leaves** (torn, not chopped fine). Dress: juice of **2 limes**, pinch of **salt**, small drizzle of **olive oil**. ***Taste*** -- bright, chunky, herby. Refrigerate. (Make this early -- the lime keeps the avocado from browning.)
 
-Drain and rinse the **canned cannellini** in a colander. Into a bowl: **2 tbsp cherry pepper relish**, **3 tbsp olive oil**, juice of **half a lemon**, half a thinly sliced **white onion** (rinsed under cold water first), salt, pepper, half the chopped **parsley**. Toss. ***Taste*** -- punchy, a little hot. Refrigerate.
+Start **rice** in the rice cooker.
 
-Mince 6 cloves of **garlic**, slice 2 more thin. Both near the stove.
-
-Bring a large pot of generously salted water to a boil for the **angel hair** later.
+Dice **1 large white onion** and the **poblano or bell pepper** for the chili base. Mince **1 tbsp garlic**. Set all near the stove.
 
 ### Chef - Cooking
 
-**Sauce**: large skillet or wide pot, medium-low heat. **4-5 tbsp olive oil**. In go the **3 anchovies** and **minced garlic** together. Stir constantly -- anchovies dissolve into the oil in 1-2 min. ***Don't burn the garlic***. Add **1 tsp fermented cayenne sauce**, stir 30 seconds. Pour in the **canned whole tomatoes** with their juice, crush them against the pan as they hit. Splash of **red wine** if open. Salt lightly. Simmer **15-18 min** until thick and the oil pools red on top. ***Taste*** -- sharp, deep, slightly sweet from reduction.
+**Chili**: heat a large heavy pot over medium-high, long squeeze of **olive oil**. In go **onion**, **pepper**, pinch of **salt** -- stir and soften 2-3 min. Add **garlic**, stir. Add **2 tbsp tomato paste** and **2 diced chipotles in adobo** (more if you want heat). Stir in the spices: **2.5 tbsp chili powder**, **2 tbsp smoked paprika**, **2 tbsp cumin**, **1 tbsp cocoa**. Stir 30 seconds -- it should smell incredible and look dark. Add **veggie stock**, **canned diced tomatoes**, and the **whole tomatoes** crushed by hand. Stir well, scraping the bottom. Add **1 cup red lentils**, stir, bring to a boil. Reduce to medium-low, cover, simmer **15-20 min** until lentils dissolve. Add the drained **par-cooked black beans** and **kidney beans** (with their juices) and **frozen corn**. Simmer covered 10 more min. Off heat: **1 tbsp soy sauce**, **1 tbsp brown sugar**, **1 tbsp apple cider vinegar**, splash of **hot sauce**. ***Taste*** hard -- adjust salt, acid, heat.
 
-**Pasta**: 5 min before the sauce is done, drop **angel hair** into the boiling water. ***Time it*** -- angel hair is done in 3-4 min. Reserve a cup of pasta water before draining. Dump drained pasta into the sauce, toss with tongs, add pasta water as needed for silkiness. Finish with the second handful of **parsley** and the **sliced raw garlic** -- it sharpens everything.
+**Cabbage cai**: in a wide skillet or second wok, cook **3-4 strips of bacon** over medium heat until crispy. Remove bacon, chop into bits. Leave every drop of fat. Add thinly sliced **half a head of green cabbage** in a single layer -- *don't stir* for 2-3 min until the bottom begins to caramelize. Toss, press down again, repeat until the cabbage is dark and jammy at the edges, 10-12 min total over medium heat. In the last minute add **1 sliced jalapeño**. Season with salt. Scatter the **bacon bits** back over. Out.
 
-**Zucchini**: hot skillet or a quick wok rinse, splash of **olive oil**. Dump the zucchini in, toss 90 seconds until the edges char and pick up some color. Squeeze of **lemon juice**, scatter of **parsley**, salt. Out.
-
-**Table**: **pasta** in shallow bowls or a big family platter. **Zucchini** and **white bean salad** in shared dishes. Extra **olive oil** and a wedge of **lemon** on the table. Skip parmesan -- the anchovy carries the salt.
+**Table**: **rice** in individual bowls. **Chili** in a wide center bowl. **Caramelized cabbage** and **cucumber-avocado salsa-salad** in shared dishes. Extra **lime wedges**, **cilantro**, and the **southwest salsa** from the fridge on the table as toppings.
 
 ---
 
-## Bulgogi Beef
+## Bistro Chicken
 
-##### Prep&Heat+
-###### salad + prep prep + 5:30 rice
+##### ChefDish+
+###### SV chickpeas warm + wok chicken finish, 25 min ⏱
 
 #### Anchor:
-Korean bulgogi -- thin-sliced beef, soy-sesame-sugar marinade, wok-charred fast with green pepper
+SV par-cooked chicken thighs -- wok-finished skin-side for crust, garlic and thyme hit at the end, parsley over
 
 #### Fan:
-White rice with furikake
+Romaine and arugula salad -- toasted walnuts, shallot, simple lemon-Dijon vinaigrette
 
 #### Cai:
-Spinach namul -- blanched spinach dressed with sesame
+Warm chickpea salad -- Dijon, shallot, olive oil, lemon; SV-warmed from Sunday bag
 
-Cucumber kimchi salad -- cold, crunchy, sharp
+Mushrooms with Dijon pan sauce -- shallot, thyme, deglazed with white wine, spoonful of Greek yogurt stirred in
 
 #### Soup:
-None -- the bulgogi sauce reduces into a glaze, two cai is enough.
+None -- the salad is the fan, two warm cai, full bistro table.
 
 ### Already Prepped
 
-- nothing...
+- **Chicken thigh bag** fully cooked (160°F / 2h) in fridge from Sunday.
+- **Chickpea salad bag** dressed and sealed in fridge from Sunday.
 
 ### Sous Chef - Assembly
 
-Slice *five* **spring onions**, seperating the whites from the greens. Set the *greens* aside for later, you will be using the *whites* in the *cuke salad*.
+Drop the **chickpea salad bag** into the sous vide at **140°F**. Set a 15-minute timer -- it just needs to warm through.
 
-Cut **cucumber** into bite sized pieces. Into a bowl: **3 tbsp kimchi** chopped roughly, **1 tsp rice vinegar**, **2 tsp sugar**, **1 small finely minced thumb of peeled ginger**, **the whites of your spring onions**, **2 quick dashes of fish sauce**, **assertive pinch of salt**. Toss together until coated, and cucumbers are slighty beaten up. *Taste and adjust*. Refrigerate to mingle.
+Toast a generous handful of **walnuts** in a dry pan over medium heat, tossing frequently until fragrant and lightly golden, 3-4 min. Watch them -- they burn fast. Set aside.
 
-Bring a small pot of water to a boil. Drop in the whole container of **baby spinach**, blanch ***60-90 seconds*** only. Drain immediately into a colander and run *cold* water over it until ***completely cold** -- or ice bath if you have ice. Grab handfuls and squeeze hard to wring out as much water as you can. Pile into a bowl and dress: **2 tsp sesame oil**, **1 tsp *dark* soy sauce**, generous dashing of **sesame seeds**, pinch of **salt**. Toss. ***Taste*** -- nutty, savory, fresh. Set aside at room temp.
+**Salad**: tear **romaine** into large pieces, combine with **arugula** in a wide bowl or platter. Thinly slice **1 shallot** and scatter over. In a small bowl: **1 tbsp Dijon**, juice of **half a lemon**, **3 tbsp olive oil**, pinch of **salt** -- whisk to combine. Hold the dressing; dress the salad right before the chicken is done.
 
-Slice **1 green bell pepper** into thin strips. Set near the stove along with the **spring onion greens** from earlier.
+Mince **3 garlic cloves** and pick a few **thyme sprigs** for the wok. Set near the stove.
 
-At **5:30** start the rice in the rice cooker.
+### Chef - Wok Sequence
 
-### Chef - Finishing
+**Wok dish 1 -- Chicken**: pull the **chicken thighs** from the fridge bag, pat the skin completely dry. Wok or cast iron over medium-high heat, thin film of **neutral oil**. Lay thighs **skin-side down**, press with a spatula for the first 30 seconds. Sear without moving **4-5 minutes** until the skin is *deep golden and crisp*. Flip, 2 minutes. Add the **minced garlic** and **thyme** directly to the pan around the thighs. Swirl **1 tbsp butter** in, baste the thighs once. Out onto a cutting board. Rest 3 minutes, then slice or serve whole. Scatter **parsley** generously over.
 
-Thinly slice cold **steak** into strips, marinate with a tiny pinch baking soda, cayenne sauce, fish sauce, msg, sugar, dark soy sauce, a little bit of potato starch, and a bit of peanut oil.
+**Wok dish 2 -- Mushrooms**: quick rinse of the wok. Medium-high heat, splash of **olive oil**. Add **1 sliced shallot**, 30 seconds. Dump in **mushrooms** in a single layer -- *don't touch* for 60-90 seconds until *golden on one face*. Toss, cook 2 more minutes until dark and tender. Add **1 tsp Dijon**, splash of **white wine** or cooking wine -- it will sizzle hard. Stir up the fond. Reduce 60 seconds. Off heat, stir in **1 heaping tbsp Greek yogurt** until the sauce goes glossy and creamy. Salt to taste. Out into a serving bowl.
 
-**Bulgogi with green pepper**: Wok until it smokes, splash of **neutral oil**. Dump the **beef and marinade** in. ***Spread flat*** and don't touch for 60 seconds -- char, not steam. Toss, sear the other side 60 seconds. Now stir-fry hard. When the beef is nearly done (about 3 min), dump in the **green bell pepper strips**. Toss together for 60 seconds -- the pepper warms through and picks up the glaze. ***Taste*** -- splash of **soy** if it needs salt, splash of **rice vinegar** or **mirin** if flat. Finish with **scallion** greens. Out.
+Pull the **chickpea salad** bag from the bath, open, pour into a serving dish. Taste and adjust salt or lemon.
 
-Spinach namul and cucumber salad are already done -- no second wok dish.
+Dress the **salad** with the vinaigrette, scatter the **toasted walnuts** over.
 
-**Table**: **rice** in individual bowls, scatter **furikake** generously on top. **Bulgogi with peppers** in a center bowl, extra **scallion** over. **Spinach namul** and **cucumber kimchi salad** in shared dishes. Jar of **kimchi** on the table.
+**Table**: **salad** on a wide platter or in a large bowl (the fan -- personal helpings). **Chicken** sliced or whole on a center plate with parsley over. **Warm chickpea salad** and **mushrooms** in shared dishes.
 
 ---
 
-## Lentil Dal
+## Orange Chicken
 
-##### SousChefDish
-###### dal simmer + prep prep + 5:30 rice
+##### WokNight
+###### wok sequence + SV broccoli, 25 min ⏱
 
 #### Anchor:
-Tempered red lentil dal -- turmeric, ginger, tomato, finished with sizzling cumin tadka poured at the table
+Cornstarch-crusted chicken thigh with orange sauce -- garlic, ginger, soy, rice vinegar, orange juice and zest, bell peppers cooked into the glaze
 
 #### Fan:
 White rice
 
 #### Cai:
-New potato sabzi -- wok-finished with tadka base, tomato, garam masala
+SV broccoli -- wok-charred from Sunday bag, garlic, sesame seeds, sesame oil finish
 
-Cucumber-mint raita -- yogurt, cucumber, mint, cumin, lime (cold)
+Ribbon cucumber salad -- peeler ribbons, scallion, soy-ginger dressing from the fridge, cold
 
 #### Soup:
-None -- the dal is brothy and substantial, two cai, full table.
+None -- the orange glaze is saucy, three dishes, full table.
 
 ### Already Prepped
 
-- **New potato jar** -- already cut and salted, in a jar from SV bath previously.
+- **Broccoli bag** fully cooked in fridge from Sunday (183°F / 8 min).
 
-### Sous Chef - Cooking + Prep
+### Sous Chef - Assembly
 
-Rinse **2 cups red lentils** in a fine strainer until water runs mostly clear. Into a heavy pot: **6 cups water**, **1 tsp turmeric**, **1 tsp salt**, a **knob of butter**. Bring to a boil, then drop to a low simmer. Stir occasionally for 25 minutes -- they'll dissolve into a creamy porridge. Keep an eye on it for texure, when it seems close, drop it single burner super low with the lid on to keep warm until we eat.
+Start **rice** in the rice cooker.
 
-Dice **1 cucumber** small. Chop **mint** leaves. Into a bowl: **1.5 cups Greek yogurt** loosened with a few tbsp of water, the **cucumber**, **mint**, **1/2 tsp ground cumin**, juice of **half a lime**, pinch of **salt**. Stir. ***Taste*** -- cool, herby, tart. Refrigerate.
+**Ribbon cucumber salad**: run a vegetable peeler down **2-3 cucumbers** along their length to make long thin ribbons, rotating as you go. Stop when you hit the seedy core. Into a bowl with **sliced scallion greens** and a drizzle of **soy-ginger dressing** from the fridge. Toss gently. ***Taste*** -- it should be savory and clean. Refrigerate.
 
-Cut the **cherry tomatoes** in half. Set aside for later.
+Pull the **broccoli bag** from the fridge and let it come to room temp slightly.
 
-Chop **cilantro** leaves for the dal finish.
+Slice **2 bell peppers** into strips. Set near the stove.
 
-Finely chop one **white onion** + two **jalapenos** + **medium thumb of ginger**, set aside for later.
+**Orange sauce** (mix in a small bowl): juice of **2 oranges**, zest of **1 orange**, **4 tbsp soy sauce**, **2 tbsp rice vinegar**, **3 tbsp sugar**, **1 tsp cornstarch** dissolved in the liquid. Stir. Set near the stove.
 
-at **5:30** Start **rice** in the rice cooker.
+### Chef - Wok Sequence
 
-### Chef - Cooking
+**Wok dish 1 -- Orange chicken with pepper**: cut **boneless thighs** into large chunks. Season with **salt**, toss thoroughly in **cornstarch** until no longer sticky. Wok ripping hot, generous **neutral oil** -- enough to shallow-fry. Fry chicken in batches without crowding, *don't move* until a firm crust forms on the bottom, 2-3 min. Flip, 2 more min. Remove all chicken to a plate. Pour off most of the oil, leaving a thin film. Add **minced garlic** (3 cloves) and **grated ginger** (1 inch), stir 20 seconds. Add **bell pepper strips**, toss 60 seconds. Pour in the **orange sauce** -- it will bubble and thicken fast. Return **chicken** to the wok, toss to coat. If the sauce is too thick, splash in a little water. Off heat: **big pinch of chili flakes** (or fermented cayenne mash) and **zest of the remaining orange**. ***Taste*** -- adjust soy or sugar. Out.
 
-**Dal finish**: when the lentils are creamy, stir in the first half of the **tadka base** and one pile of **chopped tomato**. Simmer 5-8 minutes until the onion softens in. ***Taste*** -- rich, rounded. Adjust salt. Too thick: add water. Too loose: simmer down.
+**Wok dish 2 -- Broccoli**: quick rinse of the wok. Ripping hot, splash of **oil**. Dump in the **broccoli** from the bag, spread flat, *don't touch* for 60-90 seconds until charred in spots. Toss, add **3 sliced garlic cloves**, toss 20 seconds. Off heat: drizzle of **sesame oil**, generous scatter of **sesame seeds**. Out.
 
-**Potato sabzi**: wok or large skillet, splash of **oil**, medium-high heat. Add the second half of the **tadka base**, stir-fry 2 min until fragrant. Add **1 tsp garam masala**, **1/2 tsp coriander** if you have it, **1/2 tsp fermented cayenne mash**, pinch of **salt**. Stir until fragrant, 1-2 min. Dump in the **new potatoes** from the jar. Toss to coat, let the cut faces sear and pick up color. ***Taste*** -- adjust salt and garam masala. Out.
+**Table**: **rice** in individual bowls. **Orange chicken** in a center bowl. **Broccoli** and **ribbon cucumber salad** in shared dishes. Extra **scallion** scattered over the chicken.
 
-**Tadka pour**: small pan, medium-high heat, **3 tbsp butter or ghee**. Once it foams: **1 tsp ground cumin** (or whole seeds if you have them), **1/2 tsp fermented cayenne mash**, **1 smashed garlic clove**. Sizzle 30 seconds until nutty and fragrant. ***At the table, in front of everyone***, pour this sizzling oil directly into the dal bowl. Let them hear it.
+---
 
-**Table**: **rice** in individual bowls. **Dal** in a wide shared bowl, tadka poured at service. **Potato sabzi** and **raita** in shared dishes. Lime wedges on the table. Scatter **cilantro** over the dal.
