@@ -118,7 +118,7 @@ Peel **6 garlic cloves**. You will be using *one* for prep, set the *remaining* 
 
 Roughly chop *half* of the **parsely**, you will be using a small amount for prep, set the *remaining* aside for garnishing later.
 
-**Chickpeas**: Drain and thoroughly rinse a can of **chickpeas**, combine with one *finely minced* **shallot**, the ***zest** and juice* of **one lemon**, along with a few pinches of your **chopped parsley**. Stir to combine, adding **salt** and **pepper** to taste.
+**Chickpeas**: Drain and thoroughly rinse a can of **chickpeas**, combine with one *finely minced* **shallot**, a *single* small **garlic clove**, the ***zest** and juice* of **one lemon**, along with a few pinches of your **chopped parsley**. Stir to combine, adding **salt** and **pepper** to taste.
 
 **Salad Greens**: Chop *one and a half* hearts of **romaine** into bit size pieces, combine with some **arugula** (final salad should be 1 part arugula two parts romaine) in the stainless steel bowl.
 
