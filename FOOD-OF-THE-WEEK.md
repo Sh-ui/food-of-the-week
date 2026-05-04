@@ -96,6 +96,50 @@ Start the SV bath at **160°F** and drop the **chicken bag** in first -- it need
 
 ---
 
+## Bistro Chicken
+
+##### Prep&Heat
+###### prep + salad salad
+
+#### Anchor:
+Chicken thigh meat -- wok-finished with garlic, thyme and walnuts; garnished with parsley.
+
+#### Fan:
+Romaine and arugula salad greens -- kept basic to be the canvas.
+
+#### Cai:
+Chickpea salad -- shallot, olive oil, lemon
+
+Mushrooms with Dijon pan sauce -- spring onions, Dijon, deglazed with white wine
+
+### Sous Chef - Assembly
+
+Peel **6 garlic cloves**. You will be using *one* for prep, set the *remaining* aside for later.
+
+Roughly chop *half* of the **parsely**, you will be using a small amount for prep, set the *remaining* aside for garnishing later.
+
+**Chickpeas**: Drain and thoroughly rinse a can of **chickpeas**, combine with one *finely minced* **shallot**, the ***zest** and juice* of **one lemon**, along with a few pinches of your **chopped parsley**. Stir to combine, adding **salt** and **pepper** to taste.
+
+**Salad Greens**: Chop *one and a half* hearts of **romaine** into bit size pieces, combine with some **arugula** (final salad should be 1 part arugula two parts romaine) in the stainless steel bowl.
+
+### Chef - Wok Sequence
+
+Pull the **chicken thighs** from the fridge, slice into bite sized pieces and quick mix in a bowl with a tiny pinch of baking soda, along with salt, pepper, and msg. Marinate while you work on dish 1.
+
+Slice a *few* **spring onions** into *seperated* whites and greens.
+
+**Wok dish 1 -- Mushrooms**: Medium-high heat, splash of **olive oil**. Dump in **mushrooms** in a single layer -- *don't touch* for 60-90 seconds until *golden on one face*. Add **spring onion whites**, cook 2 more minutes until dark and tender. Add **1 tsp Dijon**, splash of **white wine** -- it will sizzle hard. Reduce then serve with **spring onion greens** scattered over.
+
+**Wok dish 2 -- Chicken**: Quick rinse in the wok, set over medium-high heat, thin film of **neutral oil**. Stir fry until cooked through, Add the **minced garlic**, **thyme**, and **walnuts** directly to the pan. Stir fry until the garlic and nuts are fragrant, before they burn, drop  **1 tbsp butter** in, 1-2 more minutes to finish. Scatter **parsley** generously over before serving.
+
+Pour the **chickpeas** into a serving dish.
+
+Keep the **salad greens** plain, let the sauciness of the shared dishes dress the greens as you eat.
+
+**Table**: portion **greens** into individual bowls. **Chicken**, **chickpea salad** and **mushrooms** in shared dishes on the lazy susan.
+
+---
+
 ## Sausage Fennel Pasta
 
 ##### WokNight
@@ -180,54 +224,6 @@ Dice **1 large white onion** and the **poblano or bell pepper** for the chili ba
 **Cabbage cai**: in a wide skillet or second wok, cook **3-4 strips of bacon** over medium heat until crispy. Remove bacon, chop into bits. Leave every drop of fat. Add thinly sliced **half a head of green cabbage** in a single layer -- *don't stir* for 2-3 min until the bottom begins to caramelize. Toss, press down again, repeat until the cabbage is dark and jammy at the edges, 10-12 min total over medium heat. In the last minute add **1 sliced jalapeño**. Season with salt. Scatter the **bacon bits** back over. Out.
 
 **Table**: **rice** in individual bowls. **Chili** in a wide center bowl. **Caramelized cabbage** and **cucumber-avocado salsa-salad** in shared dishes. Extra **lime wedges**, **cilantro**, and the **southwest salsa** from the fridge on the table as toppings.
-
----
-
-## Bistro Chicken
-
-##### ChefDish+
-###### SV chickpeas warm + wok chicken finish, 25 min ⏱
-
-#### Anchor:
-SV par-cooked chicken thighs -- wok-finished skin-side for crust, garlic and thyme hit at the end, parsley over
-
-#### Fan:
-Romaine and arugula salad -- toasted walnuts, shallot, simple lemon-Dijon vinaigrette
-
-#### Cai:
-Warm chickpea salad -- Dijon, shallot, olive oil, lemon; SV-warmed from Sunday bag
-
-Mushrooms with Dijon pan sauce -- shallot, thyme, deglazed with white wine, spoonful of Greek yogurt stirred in
-
-#### Soup:
-None -- the salad is the fan, two warm cai, full bistro table.
-
-### Already Prepped
-
-- **Chicken thigh bag** fully cooked (160°F / 2h) in fridge from Sunday.
-- **Chickpea salad bag** dressed and sealed in fridge from Sunday.
-
-### Sous Chef - Assembly
-
-Drop the **chickpea salad bag** into the sous vide at **140°F**. Set a 15-minute timer -- it just needs to warm through.
-
-Toast a generous handful of **walnuts** in a dry pan over medium heat, tossing frequently until fragrant and lightly golden, 3-4 min. Watch them -- they burn fast. Set aside.
-
-**Salad**: tear **romaine** into large pieces, combine with **arugula** in a wide bowl or platter. Thinly slice **1 shallot** and scatter over. In a small bowl: **1 tbsp Dijon**, juice of **half a lemon**, **3 tbsp olive oil**, pinch of **salt** -- whisk to combine. Hold the dressing; dress the salad right before the chicken is done.
-
-Mince **3 garlic cloves** and pick a few **thyme sprigs** for the wok. Set near the stove.
-
-### Chef - Wok Sequence
-
-**Wok dish 1 -- Chicken**: pull the **chicken thighs** from the fridge bag, pat the skin completely dry. Wok or cast iron over medium-high heat, thin film of **neutral oil**. Lay thighs **skin-side down**, press with a spatula for the first 30 seconds. Sear without moving **4-5 minutes** until the skin is *deep golden and crisp*. Flip, 2 minutes. Add the **minced garlic** and **thyme** directly to the pan around the thighs. Swirl **1 tbsp butter** in, baste the thighs once. Out onto a cutting board. Rest 3 minutes, then slice or serve whole. Scatter **parsley** generously over.
-
-**Wok dish 2 -- Mushrooms**: quick rinse of the wok. Medium-high heat, splash of **olive oil**. Add **1 sliced shallot**, 30 seconds. Dump in **mushrooms** in a single layer -- *don't touch* for 60-90 seconds until *golden on one face*. Toss, cook 2 more minutes until dark and tender. Add **1 tsp Dijon**, splash of **white wine** or cooking wine -- it will sizzle hard. Stir up the fond. Reduce 60 seconds. Off heat, stir in **1 heaping tbsp Greek yogurt** until the sauce goes glossy and creamy. Salt to taste. Out into a serving bowl.
-
-Pull the **chickpea salad** bag from the bath, open, pour into a serving dish. Taste and adjust salt or lemon.
-
-Dress the **salad** with the vinaigrette, scatter the **toasted walnuts** over.
-
-**Table**: **salad** on a wide platter or in a large bowl (the fan -- personal helpings). **Chicken** sliced or whole on a center plate with parsley over. **Warm chickpea salad** and **mushrooms** in shared dishes.
 
 ---
 
