@@ -63,7 +63,7 @@
 
 ---
 
-## Sunday Prep
+## ✓ Sunday Prep
 
 ##### BatchDay
 ###### 2-2.5 h ⏱ -- SV bath runs while you char peppers and seal bags
@@ -96,7 +96,7 @@ Start the SV bath at **160°F** and drop the **chicken bag** in first -- it need
 
 ---
 
-## Bistro Chicken
+## ✓ Bistro Chicken
 
 ##### Prep&Heat
 ###### prep + salad salad
@@ -142,8 +142,8 @@ Keep the **salad greens** plain, let the sauciness of the shared dishes dress th
 
 ## Sausage Fennel Pasta
 
-##### WokNight
-###### wok sequence + egg noodles, 25 min ⏱
+##### WokNightPrep++
+###### prep + salad/gremolata + 5:30 boil
 
 #### Anchor:
 Italian sausage sliced into coins, seared hard with fennel and onion in the wok -- gremolata finish
@@ -154,10 +154,7 @@ Garlic butter egg noodles
 #### Cai:
 White bean salad with cherry pepper relish -- cold, punchy, olive oil, lemon
 
-Charred bell peppers -- blistered Sunday, peeled, dressed with black vinegar, garlic, olive oil
-
-#### Soup:
-None -- pasta night rules relaxed, two cai, full Italian table.
+Charred bell peppers -- blistered Sunday and served with the remaining argugula.
 
 ### Already Prepped
 
@@ -165,23 +162,35 @@ None -- pasta night rules relaxed, two cai, full Italian table.
 
 ### Sous Chef - Assembly
 
-Drain and rinse the **canned cannellini beans**. Into a bowl: **2 tbsp cherry pepper relish**, **3 tbsp olive oil**, juice of **half a lemon**, a few thin slices of **white onion** rinsed under cold water, salt, pepper. Toss. ***Taste*** -- punchy, bright. Refrigerate.
+Peel a *whole head* of **garlic**, save *1-2 cloves* for *your prep*, set the rest aside near the stove.
 
-Strip and roughly chop the **parsley** -- about 3/4 of the bunch. Set aside two piles: one for the **gremolata**, one loose for the table.
+Strip and roughly chop the **parsley** -- we have two bags of parsely in the fridge, pick *one* that looks older and use as much as you can. Set aside two piles: one for the **gremolata**, one loose for the table.
 
-**Gremolata**: zest of **1 lemon** + 1 clove **garlic** grated fine + a generous handful of **chopped parsley**. Mix. Set aside.
+Finely *mince* a **large shallot** or two small ones. Save half these minced shallots for *your prep*, and dump the rest into the small glass bowl with the orange lid containing the **roasted red bell pepper**
 
-Bring a large pot of generously salted water to a boil for the **egg noodles**.
+Slice a **white onion** (like you would for fajitas)
 
-Slice the **sausages** into 3/4 inch coins on a bias. Slice **fennel** into thin half-moons (reserve the fronds if they look nice -- scatter at the table). Slice **half an onion** into thin strips.
+Prepare the **fennel** by seperating the *pale green stalks* from the *white bulb* -- then *slice* the green stalks into thin coins, and prepare the *bulb* by cutting it into *quarters* from root to tip, and then *thinly slicing* those quarters (you can discard the woody bottom). *If* the **dark green fronds** look good, *save them* to use as a *garnish*
+
+Use the *vegetable peeler* to get thin strips of the *outer* yellow **skin of the lemon**, the peels will be for the **gremolata** and the fruit can be cut in half for *jucing* into the **bean salad**
+
+**Gremolata**: finely chop that together with the **parsley** and **lemon peels** you set aside, along with *1-2* of your **garlic cloves**
+
+**Bean Salad**: Drain and rinse the **canned cannellini beans**. Into a bowl: **2 tbsp cherry pepper relish**, **3 tbsp olive oil**, juice of **half a lemon**, *half* of your **minced shallot**, salt, pepper. Toss. ***Taste*** -- punchy, bright. Refrigerate.
+
+**Sausages**: At **around 5:30** get some water up to *boiling* in the dutch oven, drop in *all* of the **italian sausages* into the water, and then ***drop it to a medium-low simmer*** -- Those can hang out in there to parcook until the chef arrives.
 
 ### Chef - Wok Sequence
 
-**Garlic butter noodles**: cook **egg noodles** per package until just shy of done (they finish in the butter). In a wide pan, melt **3-4 tbsp butter** over medium heat with **3-4 minced garlic cloves** -- let the garlic bloom gently, 60 seconds. Drain noodles, toss directly in the butter, add a splash of pasta water, toss until glossy. Salt. Set aside covered.
+Remove the **sausages** from the water, and *slice into coins*
 
-**Wok dish -- Sausage with fennel**: wok ripping hot, splash of **neutral oil**. Lay **sausage coins** flat, *don't touch* for 90 seconds until a deep sear forms on the cut face. Flip, 60 seconds. Remove sausage to a bowl. In the same wok with the rendered fat, add **onion** and **fennel**. Toss, let them sit for 60-90 seconds until they pick up color. Toss again. Season with salt. Cook until fennel is softened and caramelizing at the edges, 4-5 minutes. Return **sausage** to the wok, toss once to marry. Out into a serving bowl. Shower the **gremolata** over the top.
+**Garlic butter noodles**: cook **egg noodles** to al dente in the same water the sausages boiled in. Finish with butter and garlic.
 
-**Table**: **egg noodles** in a wide bowl or platter (family-style fan). **Sausage + fennel** in a center bowl, gremolata already on top. **White bean salad** and **charred peppers** in shared dishes. Extra **lemon wedge** and **parsley** on the table.
+**Wok dish -- Sausage with fennel**: wok ripping hot, splash of **neutral oil**. Stir fry **sausage** until beginning to blister and release some fat, then drop in the **fennel and onions** -- Cook until fennel is just fork tender and everything is carmelized a bit.
+
+**Charred Peppers Verte**: Toss the bowl of **bell pepper and shallot** with EVOO + sherry vin, along with salt. Commbine well then add to a serving dish over **arugula greens**
+
+**Table**: **egg noodles** go into individually portioned bowls. **Sausage + fennel** with gremolata over, **White bean salad**, and **charred peppers verte** in shared dishes on the lazy susan. Extra **lemon wedge** and **parsley** on the table.
 
 ---
 
