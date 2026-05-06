@@ -171,7 +171,7 @@ Use the *vegetable peeler* to get thin strips of the *outer* yellow **skin of th
 
 **Bean Salad**: Drain and rinse the **canned cannellini beans**. Into a bowl: **2 tbsp cherry pepper relish**, **3 tbsp olive oil**, juice of **half a lemon**, *half* of your **minced shallot**, salt, pepper. Toss. ***Taste*** -- punchy, bright. Refrigerate.
 
-**Sausages**: At **around 5:30** get some water up to *boiling* in the dutch oven, drop in *all* of the **italian sausages** into the water, and then ***drop it to a medium-low simmer*** -- Those can hang out in there to parcook until the chef arrives.
+**Sausages**: At **around 5:30** get some water up to *boiling* in the dutch oven, put *all* of the **italian sausages** into the water, and then ***drop it to a medium-low simmer*** -- Those can hang out in there to parcook until the chef arrives.
 
 ### Chef - Wok Sequence
 
