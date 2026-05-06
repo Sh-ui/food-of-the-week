@@ -167,11 +167,11 @@ Prepare the **fennel** by seperating the *pale green stalks* from the *white bul
 
 Use the *vegetable peeler* to get thin strips of the *outer* yellow **skin of the lemon**, the peels will be for the **gremolata** and the fruit can be cut in half for *jucing* into the **bean salad**
 
-**Gremolata**: finely chop that together with the **parsley** and **lemon peels** you set aside, along with *1-2* of your **garlic cloves**
+**Gremolata**: finely chop together the **parsley** and **lemon peels** you set aside, along with *1-2* of your **garlic cloves**
 
 **Bean Salad**: Drain and rinse the **canned cannellini beans**. Into a bowl: **2 tbsp cherry pepper relish**, **3 tbsp olive oil**, juice of **half a lemon**, *half* of your **minced shallot**, salt, pepper. Toss. ***Taste*** -- punchy, bright. Refrigerate.
 
-**Sausages**: At **around 5:30** get some water up to *boiling* in the dutch oven, drop in *all* of the **italian sausages* into the water, and then ***drop it to a medium-low simmer*** -- Those can hang out in there to parcook until the chef arrives.
+**Sausages**: At **around 5:30** get some water up to *boiling* in the dutch oven, drop in *all* of the **italian sausages** into the water, and then ***drop it to a medium-low simmer*** -- Those can hang out in there to parcook until the chef arrives.
 
 ### Chef - Wok Sequence
 
