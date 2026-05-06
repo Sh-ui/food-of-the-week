@@ -153,7 +153,7 @@ Charred bell peppers -- blistered Sunday and served with the remaining argugula.
 
 - **Charred bell peppers** dressed and in fridge from Sunday.
 
-### Sous Chef - Assembly
+### Sous Chef - Prep
 
 Peel a *whole head* of **garlic**, save *1-2 cloves* for *your prep*, set the rest aside near the stove.
 
@@ -166,6 +166,8 @@ Slice a **white onion** (like you would for fajitas)
 Prepare the **fennel** by seperating the *pale green stalks* from the *white bulb* -- then *slice* the green stalks into thin coins, and prepare the *bulb* by cutting it into *quarters* from root to tip, and then *thinly slicing* those quarters (you can discard the woody bottom). *If* the **dark green fronds** look good, *save them* to use as a *garnish*
 
 Use the *vegetable peeler* to get thin strips of the *outer* yellow **skin of the lemon**, the peels will be for the **gremolata** and the fruit can be cut in half for *jucing* into the **bean salad**
+
+### Sous Chef - Assembly
 
 **Gremolata**: finely chop together the **parsley** and **lemon peels** you set aside, along with *1-2* of your **garlic cloves**
 
