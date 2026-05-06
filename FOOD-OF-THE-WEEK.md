@@ -21,11 +21,9 @@
 - [ ] Romaine lettuce - 2 heads
 - [ ] Arugula - 1 bag
 - [ ] Walnuts - 1 small bag
-- [x] Thyme - 1 bunch (fresh, or check dried)
 - [ ] Broccoli - 2 crowns
 - [ ] Oranges - 2
 - [ ] Scallions - 1 bunch
-- [x] Cornstarch - check pantry
 - [ ] White onion
 - [ ] Garlic
 
@@ -34,12 +32,13 @@
 - [ ] Italian sausage links - ~1.5 lb (4-5 links, sweet or hot your call)
 - [ ] Chicken thighs, boneless skinless - ~2 lb
 - [ ] Bacon - 1 pack
+- [x] Par-cooked seasoned black beans
 
 ### Dairy
 
 - [ ] Egg noodles - 1 bag (wide)
 - [ ] Butter
-- [x] Greek yogurt (stands in for cream in the mushroom pan sauce)
+- [x] Greek yogurt
 
 ### Pantry
 
@@ -51,15 +50,9 @@
 - [ ] Chipotle peppers in adobo - 1 small can
 - [ ] Veggie stock - 32 oz carton
 - [ ] Fire Roasted Corn - 1 can
-- [x] Apple cider vinegar - small bottle
 - [x] Cherry pepper relish
-- [x] Black vinegar
-- [x] Olive oil
 - [x] Red lentils
 - [x] Canned whole tomatoes (use as crushed)
-- [x] Par-cooked seasoned black beans (fridge)
-- [x] Brown sugar
-- [x] Dark soy sauce
 
 ---
 
