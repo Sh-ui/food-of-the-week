@@ -155,17 +155,17 @@ Charred bell peppers -- blistered Sunday and served with the remaining argugula.
 
 ### Sous Chef - Prep
 
-Peel a *whole head* of **garlic**, save *1-2 cloves* for *your prep*, set the rest aside near the stove.
+- [ ] Peel a *whole head* of **garlic**, save *1-2 cloves* for *your prep*, set the rest aside near the stove.
 
-Strip and roughly chop the **parsley** -- we have two bags of parsely in the fridge, pick *one* that looks older and use as much as you can. Set aside two piles: one for the **gremolata**, one loose for the table.
+- [ ] Strip and roughly chop the **parsley** -- we have two bags of parsely in the fridge, pick *one* that looks older and use as much as you can. Set aside two piles: one for the **gremolata**, one loose for the table.
 
-Finely *mince* a **large shallot** or two small ones. Save half these minced shallots for *your prep*, and dump the rest into the small glass bowl with the orange lid containing the **roasted red bell pepper**
+- [ ] Finely *mince* a **large shallot** or two small ones. Save half these minced shallots for *your prep*, and dump the rest into the small glass bowl with the orange lid containing the **roasted red bell pepper**
 
-Slice a **white onion** (like you would for fajitas)
+- [ ] Slice a **white onion** (like you would for fajitas)
 
-Prepare the **fennel** by seperating the *pale green stalks* from the *white bulb* -- then *slice* the green stalks into thin coins, and prepare the *bulb* by cutting it into *quarters* from root to tip, and then *thinly slicing* those quarters (you can discard the woody bottom). *If* the **dark green fronds** look good, *save them* to use as a *garnish*
+- [ ] Prepare the **fennel** by seperating the *pale green stalks* from the *white bulb* -- then *slice* the green stalks into thin coins, and prepare the *bulb* by cutting it into *quarters* from root to tip, and then *thinly slicing* those quarters (you can discard the woody bottom). *If* the **dark green fronds** look good, *save them* to use as a *garnish*
 
-Use the *vegetable peeler* to get thin strips of the *outer* yellow **skin of the lemon**, the peels will be for the **gremolata** and the fruit can be cut in half for *jucing* into the **bean salad**
+- [ ] Use the *vegetable peeler* to get thin strips of the *outer* yellow **skin of the lemon**, the peels will be for the **gremolata** and the fruit can be cut in half for *jucing* into the **bean salad**
 
 ### Sous Chef - Assembly
 
