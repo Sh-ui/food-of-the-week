@@ -133,7 +133,7 @@ Keep the **salad greens** plain, let the sauciness of the shared dishes dress th
 
 ---
 
-## Sausage Fennel Pasta
+## ✓ Sausage Fennel Pasta
 
 ##### WokNightPrep++
 ###### prep + salad/gremolata + 5:30 boil
@@ -191,43 +191,52 @@ Remove the **sausages** from the water, and *slice into coins*
 
 ## Veggie Chili
 
-##### ChefDish
-###### one-pot chili + wok cabbage, 40 min ⏱
+##### WokNightPrep+
+###### prep + salad + oven blanch
 
 #### Anchor:
-Lagerstrom-style veggie chili -- chipotle, cocoa, lentil-thickened, using on-hand par-cooked black beans
+Veggie chili -- chipotle, cocoa, using on-hand par-cooked black beans
 
 #### Fan:
-White rice (one-pot relax, chili and rice served together)
+White rice (chili and rice served together)
 
 #### Cai:
-Bacon-fat caramelized cabbage -- green cabbage cooked low and slow in rendered bacon fat until dark and sweet, jalapeño hit at the end
+Bacon-fat caramelized cabbage -- green cabbage cooked in rendered bacon fat until dark and sweet, jalapeño hit at the end
 
-Cucumber-avocado salsa-salad -- cold, chunky, cilantro, lime, jalapeño
-
-#### Soup:
-None -- the chili is brothy, two cai, full table.
+Fire Roasted Corn + Avocado salad -- cold, chunky, cilantro, lime, jalapeño, chopped romaine
 
 ### Already Prepped
 
-- **Par-cooked seasoned black beans** in fridge -- drain and add directly.
-- **Cucumber-avocado salsa-salad** made earlier in the day or by the sous chef before cooking starts.
+- **Par-cooked seasoned black beans** in fridge -- add directly.
 
-### Sous Chef - Assembly
+### Sous Chef - Prep
 
-**Cucumber-avocado salsa-salad**: dice **2 cucumbers** into rough 1/2 inch chunks. Dice **2 avocados**. Mince **half a jalapeño**. Combine in a wide bowl with a generous handful of **cilantro leaves** (torn, not chopped fine). Dress: juice of **2 limes**, pinch of **salt**, small drizzle of **olive oil**. ***Taste*** -- bright, chunky, herby. Refrigerate. (Make this early -- the lime keeps the avocado from browning.)
+- [ ] Dice **1 large white onion**
+- [ ] Dice **yellow bell pepper**
+- [ ] Peel a half head of **garlic**
+- [ ] Cube **2 avocados**
+- [ ] Mince **a half/whole jalapeño** (depending on heat)
+- [ ] *Wash* then chop *all* the **cilantro**
+- [ ] Chop *then* wash/soak **romaine lettuce** (enough to pair with the avocados for the salad)
+- [ ] Chop *half* a head of **green cabbage** (into bite size squares)
 
-Start **rice** in the rice cooker.
+### Sous Chef - Assembly/Par-Cooking
 
-Dice **1 large white onion** and the **poblano or bell pepper** for the chili base. Mince **1 tbsp garlic**. Set all near the stove.
+Set the prepared **onion, pepper, and garlic** near the stove for *later*.
+
+**Avocado Salad base**: Combine the **avocado**, **jalapeño**, and **cilantro** in a mixing bowl, **along with half/whole **can of fire roasted corn**. Dress: juice of **1 lime**, pinch of **salt**, small drizzle of **olive oil**. ***Taste*** -- bright, chunky, herby. Refrigerate. (Make this early -- the lime keeps the avocado from browning.) Keep the **chopped romaine lettuce** *seperate* until ready to serve.
+
+**Cabbage and Bacon**: *Oven Blanch* to par cook this for me -- start by spreading the **chopped cabbage** in an even layer on our *black baking tray*, add a few drizzles of water, and then lay *half the pack* of the **bacon strips** from the fridge over the cabbage. *Cover tightly* with tinfoil. Stick it into the oven *and then* set the oven to 300 (AKA *do not* preheat it).
+
+At **5:30** start the rice in the rice cooker.
 
 ### Chef - Cooking
 
-**Chili**: heat a large heavy pot over medium-high, long squeeze of **olive oil**. In go **onion**, **pepper**, pinch of **salt** -- stir and soften 2-3 min. Add **garlic**, stir. Add **2 tbsp tomato paste** and **2 diced chipotles in adobo** (more if you want heat). Stir in the spices: **2.5 tbsp chili powder**, **2 tbsp smoked paprika**, **2 tbsp cumin**, **1 tbsp cocoa**. Stir 30 seconds -- it should smell incredible and look dark. Add **veggie stock**, **canned diced tomatoes**, and the **whole tomatoes** crushed by hand. Stir well, scraping the bottom. Add **1 cup red lentils**, stir, bring to a boil. Reduce to medium-low, cover, simmer **15-20 min** until lentils dissolve. Add the drained **par-cooked black beans** and **kidney beans** (with their juices) and **frozen corn**. Simmer covered 10 more min. Off heat: **1 tbsp soy sauce**, **1 tbsp brown sugar**, **1 tbsp apple cider vinegar**, splash of **hot sauce**. ***Taste*** hard -- adjust salt, acid, heat.
+**Chili**: heat a large heavy pot over medium-high, long squeeze of **olive oil**. In go **onion**, **pepper**, pinch of **salt** -- stir and soften 2-3 min. Add **garlic**, stir. Add **2 tbsp tomato paste** and **2 diced chipotles in adobo** (more if you want heat). Stir in the spices: **2.5 tbsp chili powder**, **2 tbsp smoked paprika**, **2 tbsp cumin**, **1 tbsp cocoa**. Stir 30 seconds -- it should smell incredible and look dark. Add **veggie stock**, **canned diced tomatoes**, and the **whole tomatoes** crushed by hand. Stir well, scraping the bottom. Reduce to medium, simmer **10 min**. Add the **par-cooked black beans** and **kidney beans** (with their juices). Simmer 10 more min. Off heat: **1 tbsp soy sauce**, **1 tbsp brown sugar**, **1 tbsp apple cider vinegar**, splash of **hot sauce**. ***Taste*** hard -- adjust salt, acid, heat.
 
-**Cabbage cai**: in a wide skillet or second wok, cook **3-4 strips of bacon** over medium heat until crispy. Remove bacon, chop into bits. Leave every drop of fat. Add thinly sliced **half a head of green cabbage** in a single layer -- *don't stir* for 2-3 min until the bottom begins to caramelize. Toss, press down again, repeat until the cabbage is dark and jammy at the edges, 10-12 min total over medium heat. In the last minute add **1 sliced jalapeño**. Season with salt. Scatter the **bacon bits** back over. Out.
+**Cabbage cai**: Heat wok to medium high. Remove the tray of par cooked **cabbage and bacon** from the oven. Roughly chop the bacon, add it to the wok with some of the juice/fat from the cooking tray and start crisping it up. When it looks carmilzed and lightly crisped. Drop in the **cabbage** and raise the heat to high, stir fry until just carmelized, fold the bacon back in. Season to taste with white pepper and a bit of salt if needed.
 
-**Table**: **rice** in individual bowls. **Chili** in a wide center bowl. **Caramelized cabbage** and **cucumber-avocado salsa-salad** in shared dishes. Extra **lime wedges**, **cilantro**, and the **southwest salsa** from the fridge on the table as toppings.
+**Table**: **rice** in individual bowls. **Chili** in a wide center bowl. **Caramelized cabbage** and **Corn Avocado Salsa** in shared dishes. Extra **lime wedges** at the table.
 
 ---
 
