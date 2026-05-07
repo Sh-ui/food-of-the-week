@@ -224,9 +224,9 @@ Fire Roasted Corn + Avocado salad -- cold, chunky, cilantro, lime, jalapeño, ch
 
 Set the prepared **onion, pepper, and garlic** near the stove for *later*.
 
-**Avocado Salad base**: Combine the **avocado**, **jalapeño**, and **cilantro** in a mixing bowl, **along with half/whole **can of fire roasted corn**. Dress: juice of **1 lime**, pinch of **salt**, small drizzle of **olive oil**. ***Taste*** -- bright, chunky, herby. Refrigerate. (Make this early -- the lime keeps the avocado from browning.) Keep the **chopped romaine lettuce** *seperate* until ready to serve.
+**Avocado Salad base**: Combine the **avocado**, **jalapeño**, and **cilantro** in a mixing bowl, along with half/whole **can of fire roasted corn**. Dress: juice of **1 lime**, pinch of **salt**, small drizzle of **olive oil**. ***Taste*** -- bright, chunky, herby. Refrigerate. (Make this early -- the lime keeps the avocado from browning.) Keep the **chopped romaine lettuce** *seperate* until ready to serve.
 
-**Cabbage and Bacon**: *Oven Blanch* to par cook this for me -- start by spreading the **chopped cabbage** in an even layer on our *black baking tray*, add a few drizzles of water, and then lay *half the pack* of the **bacon strips** from the fridge over the cabbage. *Cover tightly* with tinfoil. Stick it into the oven *and then* set the oven to 300 (AKA *do not* preheat it).
+**Cabbage and Bacon**: *Oven Blanch* to par cook this stuff for later -- start by spreading the **chopped cabbage** in an even layer on our *black baking tray*, add a few drizzles of water, and then lay *half the pack* of the **bacon strips** from the fridge over the cabbage. *Cover tightly* with tinfoil. Stick it into the oven *and then* set the oven to 300 (AKA *do not* preheat it).
 
 At **5:30** start the rice in the rice cooker.
 
