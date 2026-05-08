@@ -189,7 +189,7 @@ Remove the **sausages** from the water, and *slice into coins*
 
 ---
 
-## Veggie Chili
+## ✓ Veggie Chili
 
 ##### WokNightPrep+
 ###### prep + salad + oven blanch
@@ -240,7 +240,7 @@ At **5:30** start the rice in the rice cooker.
 
 ---
 
-## Orange Chicken
+## ✓ Orange Chicken
 
 ##### WokNight
 ###### wok sequence + SV broccoli, 25 min ⏱
