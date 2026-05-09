@@ -1,9 +1,6 @@
 Pantry
-- Green lentils (~8 oz)
-- Red lentils (~16 oz)
 - Dried pinto beans
-- Dried Black Beans
-- Dried Chickpeas
+- 1 can Chickpeas
 - Masa harina (multiple colors)
 - [wheat, bread, cake, ap] flour
 - potato starch
@@ -12,13 +9,13 @@ Pantry
 - Japanese curry cubes
 - Canned Pumpkin
 - can whole tomatoes
-- dried angel hair pasta 1lb
+- can of fire roasted crushed tomatoes
+- 2 lb dried spaggetti
 - refried beans
-- white onion
+- yellow onions
 - garlic
 - white rice
 - more little potatoes
-- ginger
 
 Fridge
 - Miso
@@ -29,16 +26,17 @@ Fridge
 - kimchi
 - cottage Cheese
 - almost a whole jar of southwest salsa
-- 2 bell peppers
-- seasoned and par cooked black beans
-
+- preserved black beans
+- half pack of bacon
+- a bit of hard cheese
 
 Freezer
 - frozen edamame beans shelled
 - frozen peas
 
 Deep freezer
-- Older frozen pre-cooked beans
+- mexican rice frozen portion
+- mexican refried beans frozen portion
 
 Flavor Cabinet
 - Dark soy
