@@ -21,11 +21,9 @@
 - [ ] Romaine lettuce - 2 heads
 - [ ] Arugula - 1 bag
 - [ ] Walnuts - 1 small bag
-- [x] Thyme - 1 bunch (fresh, or check dried)
 - [ ] Broccoli - 2 crowns
 - [ ] Oranges - 2
 - [ ] Scallions - 1 bunch
-- [x] Cornstarch - check pantry
 - [ ] White onion
 - [ ] Garlic
 
@@ -34,12 +32,13 @@
 - [ ] Italian sausage links - ~1.5 lb (4-5 links, sweet or hot your call)
 - [ ] Chicken thighs, boneless skinless - ~2 lb
 - [ ] Bacon - 1 pack
+- [x] Par-cooked seasoned black beans
 
 ### Dairy
 
 - [ ] Egg noodles - 1 bag (wide)
 - [ ] Butter
-- [x] Greek yogurt (stands in for cream in the mushroom pan sauce)
+- [x] Greek yogurt
 
 ### Pantry
 
@@ -51,19 +50,13 @@
 - [ ] Chipotle peppers in adobo - 1 small can
 - [ ] Veggie stock - 32 oz carton
 - [ ] Fire Roasted Corn - 1 can
-- [x] Apple cider vinegar - small bottle
 - [x] Cherry pepper relish
-- [x] Black vinegar
-- [x] Olive oil
 - [x] Red lentils
 - [x] Canned whole tomatoes (use as crushed)
-- [x] Par-cooked seasoned black beans (fridge)
-- [x] Brown sugar
-- [x] Dark soy sauce
 
 ---
 
-## Sunday Prep
+## ✓ Sunday Prep
 
 ##### BatchDay
 ###### 2-2.5 h ⏱ -- SV bath runs while you char peppers and seal bags
@@ -96,10 +89,54 @@ Start the SV bath at **160°F** and drop the **chicken bag** in first -- it need
 
 ---
 
-## Sausage Fennel Pasta
+## ✓ Bistro Chicken
 
-##### WokNight
-###### wok sequence + egg noodles, 25 min ⏱
+##### Prep&Heat
+###### prep + salad salad
+
+#### Anchor:
+Chicken thigh meat -- wok-finished with garlic, thyme and walnuts; garnished with parsley.
+
+#### Fan:
+Romaine and arugula salad greens -- kept basic to be the canvas.
+
+#### Cai:
+Chickpea salad -- shallot, olive oil, lemon
+
+Mushrooms with Dijon pan sauce -- spring onions, Dijon, deglazed with white wine
+
+### Sous Chef - Assembly
+
+Peel **6 garlic cloves**. You will be using *one* for prep, set the *remaining* aside for later.
+
+Roughly chop *half* of the **parsely**, you will be using a small amount for prep, set the *remaining* aside for garnishing later.
+
+**Chickpeas**: Drain and thoroughly rinse a can of **chickpeas**, combine with one *finely minced* **shallot**, a *single* small **garlic clove**, the ***zest** and juice* of **one lemon**, along with a few pinches of your **chopped parsley**. Stir to combine, adding **salt** and **pepper** to taste.
+
+**Salad Greens**: Chop *one and a half* hearts of **romaine** into bit size pieces, combine with some **arugula** (final salad should be 1 part arugula two parts romaine) in the stainless steel bowl.
+
+### Chef - Wok Sequence
+
+Pull the **chicken thighs** from the fridge, slice into bite sized pieces and quick mix in a bowl with a tiny pinch of baking soda, along with salt, pepper, and msg. Marinate while you work on dish 1.
+
+Slice a *few* **spring onions** into *seperated* whites and greens.
+
+**Wok dish 1 -- Mushrooms**: Medium-high heat, splash of **olive oil**. Dump in **mushrooms** in a single layer -- *don't touch* for 60-90 seconds until *golden on one face*. Add **spring onion whites**, cook 2 more minutes until dark and tender. Add **1 tsp Dijon**, splash of **white wine** -- it will sizzle hard. Reduce then serve with **spring onion greens** scattered over.
+
+**Wok dish 2 -- Chicken**: Quick rinse in the wok, set over medium-high heat, thin film of **neutral oil**. Stir fry until cooked through, Add the **minced garlic**, **thyme**, and **walnuts** directly to the pan. Stir fry until the garlic and nuts are fragrant, before they burn, drop  **1 tbsp butter** in, 1-2 more minutes to finish. Scatter **parsley** generously over before serving.
+
+Pour the **chickpeas** into a serving dish.
+
+Keep the **salad greens** plain, let the sauciness of the shared dishes dress the greens as you eat.
+
+**Table**: portion **greens** into individual bowls. **Chicken**, **chickpea salad** and **mushrooms** in shared dishes on the lazy susan.
+
+---
+
+## ✓ Sausage Fennel Pasta
+
+##### WokNightPrep++
+###### prep + salad/gremolata + 5:30 boil
 
 #### Anchor:
 Italian sausage sliced into coins, seared hard with fennel and onion in the wok -- gremolata finish
@@ -110,128 +147,100 @@ Garlic butter egg noodles
 #### Cai:
 White bean salad with cherry pepper relish -- cold, punchy, olive oil, lemon
 
-Charred bell peppers -- blistered Sunday, peeled, dressed with black vinegar, garlic, olive oil
-
-#### Soup:
-None -- pasta night rules relaxed, two cai, full Italian table.
+Charred bell peppers -- blistered Sunday and served with the remaining argugula.
 
 ### Already Prepped
 
 - **Charred bell peppers** dressed and in fridge from Sunday.
 
+### Sous Chef - Prep
+
+- [ ] Peel a *whole head* of **garlic**, save *1-2 cloves* for *your prep*, set the rest aside near the stove.
+
+- [ ] Strip and roughly chop the **parsley** -- we have two bags of parsely in the fridge, pick *one* that looks older and use as much as you can. Set aside two piles: one for the **gremolata**, one loose for the table.
+
+- [ ] Finely *mince* a **large shallot** or two small ones. Save half these minced shallots for *your prep*, and dump the rest into the small glass bowl with the orange lid containing the **roasted red bell pepper**
+
+- [ ] Slice a **white onion** (like you would for fajitas)
+
+- [ ] Prepare the **fennel** by seperating the *pale green stalks* from the *white bulb* -- then *slice* the green stalks into thin coins, and prepare the *bulb* by cutting it into *quarters* from root to tip, and then *thinly slicing* those quarters (you can discard the woody bottom). *If* the **dark green fronds** look good, *save them* to use as a *garnish*
+
+- [ ] Use the *vegetable peeler* to get thin strips of the *outer* yellow **skin of the lemon**, the peels will be for the **gremolata** and the fruit can be cut in half for *jucing* into the **bean salad**
+
 ### Sous Chef - Assembly
 
-Drain and rinse the **canned cannellini beans**. Into a bowl: **2 tbsp cherry pepper relish**, **3 tbsp olive oil**, juice of **half a lemon**, a few thin slices of **white onion** rinsed under cold water, salt, pepper. Toss. ***Taste*** -- punchy, bright. Refrigerate.
+**Gremolata**: finely chop together the **parsley** and **lemon peels** you set aside, along with *1-2* of your **garlic cloves**
 
-Strip and roughly chop the **parsley** -- about 3/4 of the bunch. Set aside two piles: one for the **gremolata**, one loose for the table.
+**Bean Salad**: Drain and rinse the **canned cannellini beans**. Into a bowl: **2 tbsp cherry pepper relish**, **3 tbsp olive oil**, juice of **half a lemon**, *half* of your **minced shallot**, salt, pepper. Toss. ***Taste*** -- punchy, bright. Refrigerate.
 
-**Gremolata**: zest of **1 lemon** + 1 clove **garlic** grated fine + a generous handful of **chopped parsley**. Mix. Set aside.
-
-Bring a large pot of generously salted water to a boil for the **egg noodles**.
-
-Slice the **sausages** into 3/4 inch coins on a bias. Slice **fennel** into thin half-moons (reserve the fronds if they look nice -- scatter at the table). Slice **half an onion** into thin strips.
+**Sausages**: At **around 5:30** get some water up to *boiling* in the dutch oven, put *all* of the **italian sausages** into the water, and then ***drop it to a medium-low simmer*** -- Those can hang out in there to parcook until the chef arrives.
 
 ### Chef - Wok Sequence
 
-**Garlic butter noodles**: cook **egg noodles** per package until just shy of done (they finish in the butter). In a wide pan, melt **3-4 tbsp butter** over medium heat with **3-4 minced garlic cloves** -- let the garlic bloom gently, 60 seconds. Drain noodles, toss directly in the butter, add a splash of pasta water, toss until glossy. Salt. Set aside covered.
+Remove the **sausages** from the water, and *slice into coins*
 
-**Wok dish -- Sausage with fennel**: wok ripping hot, splash of **neutral oil**. Lay **sausage coins** flat, *don't touch* for 90 seconds until a deep sear forms on the cut face. Flip, 60 seconds. Remove sausage to a bowl. In the same wok with the rendered fat, add **onion** and **fennel**. Toss, let them sit for 60-90 seconds until they pick up color. Toss again. Season with salt. Cook until fennel is softened and caramelizing at the edges, 4-5 minutes. Return **sausage** to the wok, toss once to marry. Out into a serving bowl. Shower the **gremolata** over the top.
+**Garlic butter noodles**: cook **egg noodles** to al dente in the same water the sausages boiled in. Finish with butter and garlic.
 
-**Table**: **egg noodles** in a wide bowl or platter (family-style fan). **Sausage + fennel** in a center bowl, gremolata already on top. **White bean salad** and **charred peppers** in shared dishes. Extra **lemon wedge** and **parsley** on the table.
+**Wok dish -- Sausage with fennel**: wok ripping hot, splash of **neutral oil**. Stir fry **sausage** until beginning to blister and release some fat, then drop in the **fennel and onions** -- Cook until fennel is just fork tender and everything is carmelized a bit.
+
+**Charred Peppers Verte**: Toss the bowl of **bell pepper and shallot** with EVOO + sherry vin, along with salt. Commbine well then add to a serving dish over **arugula greens**
+
+**Table**: **egg noodles** go into individually portioned bowls. **Sausage + fennel** with gremolata over, **White bean salad**, and **charred peppers verte** in shared dishes on the lazy susan. Extra **lemon wedge** and **parsley** on the table.
 
 ---
 
-## Veggie Chili
+## ✓ Veggie Chili
 
-##### ChefDish
-###### one-pot chili + wok cabbage, 40 min ⏱
+##### WokNightPrep+
+###### prep + salad + oven blanch
 
 #### Anchor:
-Lagerstrom-style veggie chili -- chipotle, cocoa, lentil-thickened, using on-hand par-cooked black beans
+Veggie chili -- chipotle, cocoa, using on-hand par-cooked black beans
 
 #### Fan:
-White rice (one-pot relax, chili and rice served together)
+White rice (chili and rice served together)
 
 #### Cai:
-Bacon-fat caramelized cabbage -- green cabbage cooked low and slow in rendered bacon fat until dark and sweet, jalapeño hit at the end
+Bacon-fat caramelized cabbage -- green cabbage cooked in rendered bacon fat until dark and sweet, jalapeño hit at the end
 
-Cucumber-avocado salsa-salad -- cold, chunky, cilantro, lime, jalapeño
-
-#### Soup:
-None -- the chili is brothy, two cai, full table.
+Fire Roasted Corn + Avocado salad -- cold, chunky, cilantro, lime, jalapeño, chopped romaine
 
 ### Already Prepped
 
-- **Par-cooked seasoned black beans** in fridge -- drain and add directly.
-- **Cucumber-avocado salsa-salad** made earlier in the day or by the sous chef before cooking starts.
+- **Par-cooked seasoned black beans** in fridge -- add directly.
 
-### Sous Chef - Assembly
+### Sous Chef - Prep
 
-**Cucumber-avocado salsa-salad**: dice **2 cucumbers** into rough 1/2 inch chunks. Dice **2 avocados**. Mince **half a jalapeño**. Combine in a wide bowl with a generous handful of **cilantro leaves** (torn, not chopped fine). Dress: juice of **2 limes**, pinch of **salt**, small drizzle of **olive oil**. ***Taste*** -- bright, chunky, herby. Refrigerate. (Make this early -- the lime keeps the avocado from browning.)
+- [ ] Dice **1 large white onion**
+- [ ] Dice **yellow bell pepper**
+- [ ] Peel a half head of **garlic**
+- [ ] Cube **2 avocados**
+- [ ] Mince **a half/whole jalapeño** (depending on heat)
+- [ ] *Wash* then chop *all* the **cilantro**
+- [ ] Chop *then* wash/soak **romaine lettuce** (enough to pair with the avocados for the salad)
+- [ ] Chop *half* a head of **green cabbage** (into bite size squares)
 
-Start **rice** in the rice cooker.
+### Sous Chef - Assembly/Par-Cooking
 
-Dice **1 large white onion** and the **poblano or bell pepper** for the chili base. Mince **1 tbsp garlic**. Set all near the stove.
+Set the prepared **onion, pepper, and garlic** near the stove for *later*.
+
+**Avocado Salad base**: Combine the **avocado**, **jalapeño**, and **cilantro** in a mixing bowl, along with half/whole **can of fire roasted corn**. Dress: juice of **1 lime**, pinch of **salt**, small drizzle of **olive oil**. ***Taste*** -- bright, chunky, herby. Refrigerate. (Make this early -- the lime keeps the avocado from browning.) Keep the **chopped romaine lettuce** *seperate* until ready to serve.
+
+**Cabbage and Bacon**: *Oven Blanch* to par cook this stuff for later -- start by spreading the **chopped cabbage** in an even layer on our *black baking tray*, add a few drizzles of water, and then lay *half the pack* of the **bacon strips** from the fridge over the cabbage. *Cover tightly* with tinfoil. Stick it into the oven *and then* set the oven to 300 (AKA *do not* preheat it).
+
+At **5:30** start the rice in the rice cooker.
 
 ### Chef - Cooking
 
-**Chili**: heat a large heavy pot over medium-high, long squeeze of **olive oil**. In go **onion**, **pepper**, pinch of **salt** -- stir and soften 2-3 min. Add **garlic**, stir. Add **2 tbsp tomato paste** and **2 diced chipotles in adobo** (more if you want heat). Stir in the spices: **2.5 tbsp chili powder**, **2 tbsp smoked paprika**, **2 tbsp cumin**, **1 tbsp cocoa**. Stir 30 seconds -- it should smell incredible and look dark. Add **veggie stock**, **canned diced tomatoes**, and the **whole tomatoes** crushed by hand. Stir well, scraping the bottom. Add **1 cup red lentils**, stir, bring to a boil. Reduce to medium-low, cover, simmer **15-20 min** until lentils dissolve. Add the drained **par-cooked black beans** and **kidney beans** (with their juices) and **frozen corn**. Simmer covered 10 more min. Off heat: **1 tbsp soy sauce**, **1 tbsp brown sugar**, **1 tbsp apple cider vinegar**, splash of **hot sauce**. ***Taste*** hard -- adjust salt, acid, heat.
+**Chili**: heat a large heavy pot over medium-high, long squeeze of **olive oil**. In go **onion**, **pepper**, pinch of **salt** -- stir and soften 2-3 min. Add **garlic**, stir. Add **2 tbsp tomato paste** and **2 diced chipotles in adobo** (more if you want heat). Stir in the spices: **2.5 tbsp chili powder**, **2 tbsp smoked paprika**, **2 tbsp cumin**, **1 tbsp cocoa**. Stir 30 seconds -- it should smell incredible and look dark. Add **veggie stock**, **canned diced tomatoes**, and the **whole tomatoes** crushed by hand. Stir well, scraping the bottom. Reduce to medium, simmer **10 min**. Add the **par-cooked black beans** and **kidney beans** (with their juices). Simmer 10 more min. Off heat: **1 tbsp soy sauce**, **1 tbsp brown sugar**, **1 tbsp apple cider vinegar**, splash of **hot sauce**. ***Taste*** hard -- adjust salt, acid, heat.
 
-**Cabbage cai**: in a wide skillet or second wok, cook **3-4 strips of bacon** over medium heat until crispy. Remove bacon, chop into bits. Leave every drop of fat. Add thinly sliced **half a head of green cabbage** in a single layer -- *don't stir* for 2-3 min until the bottom begins to caramelize. Toss, press down again, repeat until the cabbage is dark and jammy at the edges, 10-12 min total over medium heat. In the last minute add **1 sliced jalapeño**. Season with salt. Scatter the **bacon bits** back over. Out.
+**Cabbage cai**: Heat wok to medium high. Remove the tray of par cooked **cabbage and bacon** from the oven. Roughly chop the bacon, add it to the wok with some of the juice/fat from the cooking tray and start crisping it up. When it looks carmilzed and lightly crisped. Drop in the **cabbage** and raise the heat to high, stir fry until just carmelized, fold the bacon back in. Season to taste with white pepper and a bit of salt if needed.
 
-**Table**: **rice** in individual bowls. **Chili** in a wide center bowl. **Caramelized cabbage** and **cucumber-avocado salsa-salad** in shared dishes. Extra **lime wedges**, **cilantro**, and the **southwest salsa** from the fridge on the table as toppings.
-
----
-
-## Bistro Chicken
-
-##### ChefDish+
-###### SV chickpeas warm + wok chicken finish, 25 min ⏱
-
-#### Anchor:
-SV par-cooked chicken thighs -- wok-finished skin-side for crust, garlic and thyme hit at the end, parsley over
-
-#### Fan:
-Romaine and arugula salad -- toasted walnuts, shallot, simple lemon-Dijon vinaigrette
-
-#### Cai:
-Warm chickpea salad -- Dijon, shallot, olive oil, lemon; SV-warmed from Sunday bag
-
-Mushrooms with Dijon pan sauce -- shallot, thyme, deglazed with white wine, spoonful of Greek yogurt stirred in
-
-#### Soup:
-None -- the salad is the fan, two warm cai, full bistro table.
-
-### Already Prepped
-
-- **Chicken thigh bag** fully cooked (160°F / 2h) in fridge from Sunday.
-- **Chickpea salad bag** dressed and sealed in fridge from Sunday.
-
-### Sous Chef - Assembly
-
-Drop the **chickpea salad bag** into the sous vide at **140°F**. Set a 15-minute timer -- it just needs to warm through.
-
-Toast a generous handful of **walnuts** in a dry pan over medium heat, tossing frequently until fragrant and lightly golden, 3-4 min. Watch them -- they burn fast. Set aside.
-
-**Salad**: tear **romaine** into large pieces, combine with **arugula** in a wide bowl or platter. Thinly slice **1 shallot** and scatter over. In a small bowl: **1 tbsp Dijon**, juice of **half a lemon**, **3 tbsp olive oil**, pinch of **salt** -- whisk to combine. Hold the dressing; dress the salad right before the chicken is done.
-
-Mince **3 garlic cloves** and pick a few **thyme sprigs** for the wok. Set near the stove.
-
-### Chef - Wok Sequence
-
-**Wok dish 1 -- Chicken**: pull the **chicken thighs** from the fridge bag, pat the skin completely dry. Wok or cast iron over medium-high heat, thin film of **neutral oil**. Lay thighs **skin-side down**, press with a spatula for the first 30 seconds. Sear without moving **4-5 minutes** until the skin is *deep golden and crisp*. Flip, 2 minutes. Add the **minced garlic** and **thyme** directly to the pan around the thighs. Swirl **1 tbsp butter** in, baste the thighs once. Out onto a cutting board. Rest 3 minutes, then slice or serve whole. Scatter **parsley** generously over.
-
-**Wok dish 2 -- Mushrooms**: quick rinse of the wok. Medium-high heat, splash of **olive oil**. Add **1 sliced shallot**, 30 seconds. Dump in **mushrooms** in a single layer -- *don't touch* for 60-90 seconds until *golden on one face*. Toss, cook 2 more minutes until dark and tender. Add **1 tsp Dijon**, splash of **white wine** or cooking wine -- it will sizzle hard. Stir up the fond. Reduce 60 seconds. Off heat, stir in **1 heaping tbsp Greek yogurt** until the sauce goes glossy and creamy. Salt to taste. Out into a serving bowl.
-
-Pull the **chickpea salad** bag from the bath, open, pour into a serving dish. Taste and adjust salt or lemon.
-
-Dress the **salad** with the vinaigrette, scatter the **toasted walnuts** over.
-
-**Table**: **salad** on a wide platter or in a large bowl (the fan -- personal helpings). **Chicken** sliced or whole on a center plate with parsley over. **Warm chickpea salad** and **mushrooms** in shared dishes.
+**Table**: **rice** in individual bowls. **Chili** in a wide center bowl. **Caramelized cabbage** and **Corn Avocado Salsa** in shared dishes. Extra **lime wedges** at the table.
 
 ---
 
-## Orange Chicken
+## ✓ Orange Chicken
 
 ##### WokNight
 ###### wok sequence + SV broccoli, 25 min ⏱
