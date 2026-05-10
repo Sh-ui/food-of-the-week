@@ -8,7 +8,7 @@ Standards for how `FOOD-OF-THE-WEEK.md` serves as the source of truth for the cu
 
 **Context loading:** If not already loaded, read `brainstorming/idea-basis/cooking-identity.md` for the cook's profile before writing or editing meals.
 
-**Gold-standard template:** `brainstorming/idea-basis/prototype-week.md` is the canonical reference for structure, field names, grocery format, Sunday prep format, and meal card layout. All generated weeks must follow its pattern exactly.
+**Reference examples:** Recent files in `archive/` are the canonical source for current structure (most recent week wins). Do not reference any deleted prototype documents.
 
 <rule>
 name: foodoftheweek-current-week
@@ -31,7 +31,7 @@ required_structure:
     grocery_categories: "### (H3) - For Produce, Staples, etc."
     meal_subsections: "### (H3) - Optional for Instructions, Notes, etc."
     quick_read_codename: "##### (H5) - Quick read codename (immediately after the meal H2)"
-    quick_read_timing: "###### (H6) - Quick read timing (directly follows the codename; use Unicode U+23F1 STOPWATCH `⏱` for chef hands-on time)"
+    quick_read_briefing: "###### (H6) - Sous chef night briefing fragment (directly follows the codename). Tells the sous chef team the structure of THEIR night in short phrases: prep tasks, timing pegs (5:30 boil, bag in bath PM), and finishing handoffs. NOT a chef hands-on time metric."
 
 grocery_list_format:
   section_heading: "## Grocery List"
@@ -61,13 +61,16 @@ meal_format:
   note: "No numbering (Meal 1, Meal 2) and no colon in heading"
   quick_read:
     codename: "##### [Codename]"
-    timing: "###### [Timing details]"
+    briefing: "###### [Sous chef night briefing -- short fragment]"
     placement: "Appears immediately after the meal H2 heading"
+    audience: "The H6 line is for the sous chef team. The H5 line is for everyone."
     notes:
-      - "Codename populates hero summary rows; timing adds scheduling detail"
-      - "Codename is required for parser extraction; timing is optional but recommended"
-      - "In the H6 timing line, suffix hands-on chef time with the stopwatch symbol `⏱` (e.g. `20 min ⏱`, `SV AM + 480° oven, 20 min ⏱`). Do not spell out the word active for that slot."
-      - "Sunday Prep BatchDay H6 may use the same pattern for total prep time (e.g. `2-3 h ⏱`)."
+      - "Codename populates hero summary rows; the H6 briefing tells the sous chef what their night looks like."
+      - "Codename is required for parser extraction; H6 briefing is optional but recommended."
+      - "H6 briefing format: short phrases separated by ` + `, ordered by when the sous chef does each thing. Examples: `prep + salad/gremolata + 5:30 boil`, `prep + curry simmer + 5:30 rice`, `bag in bath PM + 5:30 quinoa + cast iron sear`."
+      - "Use clock pegs only when timing matters (e.g. `5:30 rice` for the rice cooker start). Do NOT include chef hands-on time -- that metric is irrelevant to the planning."
+      - "Do NOT use the stopwatch symbol `⏱`. It was a deprecated convention that confused the audience. The H6 line is sous chef workflow, not a chef metric."
+      - "BatchDay H6 follows the same pattern: it briefs the batcher on the structure of prep, e.g. `saturday: cube + bag pork into bath / sunday: chicken bag + cai jars`. Not a duration."
     
     codename_types:
       WokNight:
@@ -107,24 +110,38 @@ meal_format:
       - "#### Anchor:"
       - "#### Fan:"
       - "#### Cai:"
-      - "#### Soup:"
+      - "#### Soup:  (optional, only include if soup is on the table)"
     notes:
       - "Field names are arbitrary; consecutive H4 headings are grouped as one visual card"
       - "Do not include the value on the same line as the heading"
-      - "Anchor = the louder cai / primary protein dish. Fan = the staple grain. Cai = shared dishes. Soup = soup or 'None' with reason."
+      - "Anchor = the louder cai / primary protein dish. Fan = the staple grain. Cai = shared dishes. Soup = soup if it's on the table; omit the field entirely on no-soup nights (do not write 'None')."
   
   instruction_format:
-    structure: "Three-phase base format (see recipe-instruction-format.mdc)"
+    structure: "Three-phase base format (see recipe-instruction-format.mdc). The Sous Chef phase can split into Prep + Assembly on heavy nights."
     base_phases:
       - "### Already Prepped"
-      - "### Sous Chef - Assembly"
-      - "### Chef - Wok Sequence" or "### Chef - Cooking"
+      - "### Sous Chef - Assembly  (or split into ### Sous Chef - Prep + ### Sous Chef - Assembly)"
+      - "### Chef - Wok Sequence  (or ### Chef - Cooking)"
     notes:
       - "H3 headings for distinct instruction sections (no inline values)"
       - "Phase names flex to match the night's technique (Wok Sequence, Cooking, etc.)"
       - "Already Prepped is a bulleted list of Sunday prep components used tonight"
       - "Sous Chef handles rice, reheating bags, fresh assembly"
       - "Chef handles hands-on cooking (wok, cast iron, oven)"
+    sous_chef_split:
+      when_to_split: "Heavy nights with multiple atomic prep tasks before the assembly work begins. Simple nights collapse to a single Sous Chef section."
+      prep_section:
+        label: "### Sous Chef - Prep"
+        format: "Markdown task checklist (- [ ] format). Atomic prep tasks with light context. Can be grouped under bold sub-headers like `**Do these first:**` or grouped by tool/technique."
+        examples:
+          - "- [ ] Dice *1 large* **yellow onion** for the curry."
+          - "- [ ] Slice *4-5* **garlic** cloves thin, set near the stove."
+      assembly_section:
+        label: "### Sous Chef - Assembly"
+        format: "Composed cai builds with `**Bold dish name**:` and narrative instructions, plus timing pegs (5:30 boil, etc.)."
+        examples:
+          - "**Roman white bean salad**: into a serving bowl combine the **cannellini**, **rinsed diced white onion**..."
+          - "At **5:30** fill the dutch oven with water, **salt it like the sea**, and bring to a boil."
 
   structure:
     meals: "Descriptive names only (## Meal Name)"
@@ -134,7 +151,7 @@ meal_format:
     cooked: "Use `## ✓ Meal Name` to mark cooked meals; avoid strikethroughs for this purpose"
 
 template:
-  reference: "See brainstorming/idea-basis/prototype-week.md for the full canonical example"
+  reference: "Use the most recent file in archive/ as the canonical example. The skeleton below is a structural reference."
   skeleton: |
     # Week of [Month DD - DD, YYYY]
     
@@ -160,27 +177,30 @@ template:
     ## Sunday Prep
     
     ##### BatchDay
-    ###### 2-3 h ⏱
+    ###### saturday: pork bath / sunday: chicken bag + cai jars
     
     ### Prep Checklist
     - [ ] Task 1
     - [ ] Task 2
     
-    ### Cai Batch
-    [Detailed instructions for each sous vide / pickle / marinade component]
-    
-    ### Soup Bases
-    [Concentrated soup base instructions]
+    ### Workflow
+    [Narrative explaining the staging across days/hours]
     
     ### Protein Bags
     [Portioning, seasoning, and storage for each protein use]
+    
+    ### Cai Bags
+    [Detailed instructions for each sous vide / pickle / marinade / no-heat component]
+    
+    ### Soup Bases (optional)
+    [Concentrated soup base instructions, if soup is part of the week]
     
     ---
     
     ## [Meal Name]
     
     ##### Codename
-    ###### 20 min ⏱
+    ###### prep + bean salad + 5:30 boil
     
     #### Anchor:
     [Primary protein dish -- the louder cai]
@@ -192,13 +212,17 @@ template:
     [Supporting shared dishes]
     
     #### Soup:
-    [Soup or None with reason]
+    [Optional -- include only if soup is on the table; soup is no longer assumed]
     
     ### Already Prepped
     - **Component** from Sunday.
     
+    ### Sous Chef - Prep
+    - [ ] Atomic prep task 1
+    - [ ] Atomic prep task 2
+    
     ### Sous Chef - Assembly
-    [Rice, reheating bags, fresh prep]
+    [Composed cai builds with **Bold name**: instructions, plus timing pegs like 5:30 rice]
     
     ### Chef - Cooking
     [Hands-on cooking paragraphs ending with **Table**: layout]
@@ -263,10 +287,10 @@ validation:
     - "Instruction sections use H3 headings (### Section Name)"
     - "Consecutive H4 fields are grouped as one visual card"
     - "Markdown task list syntax used for grocery items"
-    - "Instructions use three-phase format"
-      - "Quick read codename/timing use H5/H6 immediately after the meal heading"
-      - "H6 timing lines use `⏱` for chef hands-on time (not the word active)"
-      - "Cooked meals use a leading `✓` in the H2 title (no strikethrough)"
+    - "Instructions use three-phase format (Sous Chef may split into Prep + Assembly)"
+    - "Quick read codename + sous chef briefing use H5/H6 immediately after the meal heading"
+    - "H6 line is a sous chef workflow briefing fragment (no `⏱`, no chef hands-on time metric)"
+    - "Cooked meals use a leading `✓` in the H2 title (no strikethrough)"
 
   section_separators:
     format: "--- (horizontal rule) between meal sections"
@@ -280,7 +304,7 @@ examples:
       ## Mapo Tofu
 
       ##### WokNight
-      ###### 15 min ⏱, wok sequence, no soup
+      ###### bag thaw + 5:30 rice + wok sequence
 
       #### Anchor:
       Mapo tofu with ground pork -- Sichuan, saucy, numbing-spicy
@@ -290,9 +314,6 @@ examples:
 
       #### Cai:
       Dry-fried green beans (from Sunday bag, wok finish), smashed cucumber salad (fresh), soy eggs (from Sunday)
-
-      #### Soup:
-      None -- the mapo is brothy enough to fill the soup role. Three cai plus rice is a full table.
 
       ### Already Prepped
 

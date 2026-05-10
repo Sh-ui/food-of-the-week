@@ -8,7 +8,7 @@ Guidelines for structuring recipe instructions in the three-phase workflow forma
 
 **Context loading:** If not already loaded, read `brainstorming/idea-basis/cooking-identity.md` for the cook's equipment, technique preferences, and delegation style.
 
-**Gold-standard template:** `brainstorming/idea-basis/prototype-week.md` is the canonical reference for instruction structure. Follow its pattern.
+**Reference examples:** Recent files in `archive/` are the canonical source for current instruction structure (most recent week wins).
 
 <rule>
 name: recipe-instruction-format
@@ -30,17 +30,37 @@ instruction_structure:
         - "**Ground pork** (mapo portion) in freezer from Sunday."
     
     sous_chef:
-      label: "### Sous Chef - Assembly"
-      format: "H3 heading followed by paragraph instructions"
-      purpose: "Tasks done before chef starts active cooking"
-      examples:
-        - "Start rice in the rice cooker"
-        - "Drop bags in sous vide bath to come to temp"
-        - "Prep fresh components (smash cucumbers, shred cabbage)"
-        - "Boil noodles, portion pickled items"
+      label: "### Sous Chef - Assembly  (or split into ### Sous Chef - Prep + ### Sous Chef - Assembly)"
+      format: "H3 heading. Format depends on whether the night is single-section or split."
+      purpose: "Tasks done before chef starts active cooking. On heavy nights, this splits into a Prep checklist + a composed Assembly section."
+      single_section:
+        when: "Simple nights with light pre-work and a quick cooking finish."
+        format: "Single H3 heading `### Sous Chef - Assembly` followed by paragraph instructions."
+        examples:
+          - "Start rice in the rice cooker"
+          - "Drop bags in sous vide bath to come to temp"
+          - "Prep fresh components (smash cucumbers, shred cabbage)"
+          - "Boil noodles, portion pickled items"
+      split_into_prep_and_assembly:
+        when: "Heavy nights with multiple atomic prep tasks before the cai assembly work begins."
+        prep:
+          label: "### Sous Chef - Prep"
+          format: "Markdown task checklist (`- [ ] task` format). Atomic prep tasks with light context (italics for nuance, bold for ingredients)."
+          grouping: "Tasks can be grouped under bold sub-headers like `**Do these first:**`, `**No heat needed:**`, `**Stove / flame:**`, or by tool."
+          examples:
+            - "- [ ] Dice *1 large* **yellow onion** for the curry."
+            - "- [ ] Slice *4-5* **garlic** cloves thin, set near the stove."
+            - "- [ ] Finely *mince* a **large shallot** -- save half for *your prep*, dump the rest into the small glass bowl."
+        assembly:
+          label: "### Sous Chef - Assembly"
+          format: "Composed cai builds with `**Bold dish name**:` and narrative instructions, plus timing pegs (5:30 boil, etc.)."
+          examples:
+            - "**Roman white bean salad**: into a serving bowl combine the **cannellini**, **rinsed diced white onion**, **chopped parsley**, *3 tbsp* **olive oil**, juice of *half a lemon*..."
+            - "At **5:30** fill the dutch oven with water, **salt it like the sea**, and bring to a boil."
       notes:
-        - "Label flexes: 'Sous Chef - Assembly', 'Sous Chef - Prep', etc."
+        - "Label flexes: 'Sous Chef - Assembly', 'Sous Chef - Prep', 'Sous Chef - Cooking' (when sous chef owns more), etc."
         - "Instructions should be clear enough for any family member"
+        - "Default to single section. Split only when the prep is genuinely a separate phase from the assembly."
     
     chef_cooking:
       label: "### Chef - Wok Sequence" or "### Chef - Cooking"

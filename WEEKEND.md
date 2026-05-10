@@ -90,7 +90,7 @@ Ground beef or pork
 **Picadillo** -- saucy ground meat with **tomato**, **olives**, **cumin**, and a pinch of **cinnamon**. From the Cuban tradition; here it lands on **white rice** with **garlicky broccoli** and cold **black bean salad**. Make the picadillo ahead and vacuum seal flat for a fast SV reheat, or cook the day of.
 
 ##### Prep&Heat
-###### SV reheat + quick broccoli, 10 min ⏱
+###### SV reheat + quick broccoli
 
 ### Batch ahead (optional)
 

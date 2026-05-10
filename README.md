@@ -40,7 +40,7 @@ Weeknight workflow becomes: daytime sous vide reheat of frozen cai bags, rice co
 Each recipe has three phases:
 
 - **Already Prepped** - Sunday prep components that are ready: what's in the fridge/freezer tonight
-- **Sous Chef** - tasks done before the primary cook arrives (rice on, bags in bath, fresh prep, quick assembly)
+- **Sous Chef** - tasks done before the primary cook arrives (rice on, bags in bath, fresh prep, quick assembly). On heavy nights this splits into `Sous Chef - Prep` (atomic task checklist) + `Sous Chef - Assembly` (composed cai builds)
 - **Chef** - active hands-on cooking (wok, cast iron, oven); ends with a table layout line
 
 ### Equipment
@@ -163,7 +163,7 @@ Start **rice**. At 5:30 drop **curry bag** into the sous vide bath (chef set rem
 Pull curry bag, open, pour into saucepan. Simmer 5 min, taste and adjust. Toast **panko** in a dry pan until golden. **Table**: **rice** in individual bowls, **curry** center on the lazy susan, **cucumber salad** and **soy eggs** in small shared dishes, soup in small bowls. Panko at the table for topping.
 ```
 
-The H5 line is the **codename** (workload category), and the H6 line provides **timing details**. The `⏱` symbol marks chef hands-on time (e.g. `20 min ⏱`).
+The H5 line is the **codename** (workload category) for everyone. The H6 line is a **sous chef night briefing** -- short fragments separated by ` + `, ordered by when the sous chef does each thing. It tells the sous chef team the structure of THEIR night (not a chef hands-on time metric).
 
 ### Codenames
 
@@ -180,21 +180,22 @@ Codenames signal the night's workflow pattern - primarily who does what and how 
 
 Add `+` for each additional layer of complexity or timing pressure. `SousVidePrep+` = sous vide + extra fresh prep work. `ChefDish++` = significant day-ahead AND complex hands-on evening.
 
-### Timing Details
+### Sous Chef Briefing (H6)
 
-The H6 line provides **actionable scheduling information** - specific times and key actions, not a repeat of the codename:
+The H6 line is the sous chef's night-of briefing in fragment form. It captures the structure of their night: what to prep, when key actions hit, and where handoffs happen.
 
 **What to include:**
-- Sous vide drop times: `4:00 chicken SV`
-- Rice cooker timing: `5:30 rice`
-- Multiple handoffs: `3:30 veg + 5:30 rice`
-- Key prep steps: `prep + toast panko`
-- Total prep time for BatchDay: `2-3 h ⏱`
+- Prep cue: `prep`, `prep + bean salad`
+- Sous vide drop times: `bag in bath PM`, `4:00 chicken SV`
+- Rice/grain cooker timing: `5:30 rice`, `5:30 quinoa`
+- Multiple handoffs: `prep + bean salad + 5:30 boil`, `bag in bath PM + 5:30 rice + wok pork`
+- For BatchDay, the cross-day structure: `saturday: pork bath / sunday: chicken bag + cai jars`
 
 **What to avoid:**
 - Don't repeat the codename (don't write "sous vide" after `SousVidePrep`)
-- Don't use generic descriptions - focus on specific times and actions
-- Keep it short - 1-2 key timing points maximum
+- Don't include chef hands-on time -- that metric is irrelevant for planning
+- Don't use the deprecated `⏱` symbol -- it confused the audience
+- Keep it short -- 2-4 fragments separated by ` + `
 
 ### Meal Fields
 

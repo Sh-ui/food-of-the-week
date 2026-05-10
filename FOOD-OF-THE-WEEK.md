@@ -1,287 +1,314 @@
 <!-- ✓ • https://sh-ui.github.io/food-of-the-week/ -->
 
-# Week of May 3-9, 2026
+# Week of May 10-16, 2026
 
 ## Grocery List
 
 ### Produce
 
-- [ ] Fennel bulbs - 1
-- [ ] Bell peppers - 3 (any color, for charring + chili)
-- [ ] Green cabbage - 1 head
-- [ ] Cucumbers - 1
-- [ ] Avocados - 2
-- [x] Jalapeños - 1
-- [ ] Parsley - 1 bunch
-- [ ] Cilantro - 1 large bunch
-- [ ] Lemons - 3
-- [x] Limes - 4
-- [ ] Mushrooms - 10-12 oz
-- [ ] Shallots - 4
-- [ ] Romaine lettuce - 2 heads
-- [ ] Arugula - 1 bag
-- [ ] Walnuts - 1 small bag
-- [ ] Broccoli - 2 crowns
-- [ ] Oranges - 2
-- [ ] Scallions - 1 bunch
-- [ ] White onion
-- [ ] Garlic
+- [ ] Cucumbers - 4-5 (Korean kimchi salad + edamame salad + Eastern Med chickpea salad)
+- [ ] Carrots - small bag, ~1 lb
+- [ ] Scallions - 2 bunches (curry crema + edamame salad + Korean pork finish)
+- [ ] Parsley - 1 large bunch (spaghetti + Eastern Med pork)
+- [ ] Lemons - 4 (curry, spaghetti, Eastern Med, yogurt dollops)
+- [ ] Ginger - 1 small knob (curry + Korean marinade)
+- [ ] Romaine or bagged salad mix - 1 head/bag (curry greens + spaghetti greens)
+- [ ] White onion - 1 (Roman bean salad + Eastern Med pork)
+- [x] Garlic
+- [x] Yellow onions (curry + Eastern Med marinade)
+- [x] More little potatoes (curry + cai 1 stir-fried potato)
 
 ### Protein
 
-- [ ] Italian sausage links - ~1.5 lb (4-5 links, sweet or hot your call)
-- [ ] Chicken thighs, boneless skinless - ~2 lb
-- [ ] Bacon - 1 pack
-- [x] Par-cooked seasoned black beans
+- [ ] Pork shoulder, boneless - ~5-6 lb (single cut, Saturday cube + bag for 2 nights)
+- [ ] Chicken thighs, boneless skinless - ~2 lb (Sunday SV for curry)
+- [x] Bacon - half pack (sufficient for spaghetti as flavor agent)
+- [ ] Canned cannellini beans - 2 cans (Roman white bean salad)
 
 ### Dairy
 
-- [ ] Egg noodles - 1 bag (wide)
-- [ ] Butter
-- [x] Greek yogurt
+- [x] Greek yogurt (curry crema + Eastern Med dollop)
 
-### Pantry
+### On Hand Staples
 
-- [ ] Canned cannellini beans - 2 can
-- [ ] Canned chickpeas - 2 cans
-- [ ] Dijon mustard - 1 jar
-- [ ] Canned fire roasted diced tomatoes - 1 can (28 oz)
-- [ ] Tomato paste - 1 tube
-- [ ] Chipotle peppers in adobo - 1 small can
-- [ ] Veggie stock - 32 oz carton
-- [ ] Fire Roasted Corn - 1 can
-- [x] Cherry pepper relish
-- [x] Red lentils
-- [x] Canned whole tomatoes (use as crushed)
+- [x] Peanuts - small bag, plain or lightly salted (edamame salad)
+- [x] Japanese curry cubes
+- [x] Quinoa (one dinner -- Eastern Med fan)
+- [x] White rice
+- [x] Spaghetti - 2 lb dried
+- [x] Canned whole tomatoes (spaghetti)
+- [x] Canned chickpeas - 1 can (Eastern Med chickpea salad)
+- [x] Canned pumpkin (Eastern Med spiced pumpkin spread)
+- [x] Walnuts (Eastern Med pumpkin garnish)
+- [x] Dates (in back of fridge -- Eastern Med pumpkin garnish)
+- [x] Cherry pepper relish (Eastern Med chickpea salad)
+- [x] Kimchi (Korean cucumber salad)
+- [x] Soy-ginger dressing (curry greens)
+- [x] Frozen edamame, shelled (Korean cai 2)
+- [x] Frozen peas (curry)
+- [x] Miso (Korean pork glaze accent + curry crema base)
 
 ---
 
-## ✓ Sunday Prep
+## Weekend Prep
 
 ##### BatchDay
-###### 2-2.5 h ⏱ -- SV bath runs while you char peppers and seal bags
+###### saturday: cube + bag pork into bath / sunday: chicken bag + cai jars
 
 ### Prep Checklist
 
-**Do these first (SV bath at 183°F):**
-- [ ] Bistro chicken thighs -- season, vac seal, **SV 160°F / 2 h**, ice bath, refrigerate *(start first -- longest run)*
-- [ ] Broccoli bag -- florets + additives, seal, **SV 183°F / 8 min**, ice bath, refrigerate
+**Saturday afternoon (right after grocery, before unpacking the rest):**
 
-**No heat needed:**
-- [ ] Chickpea salad bag -- chickpeas + Dijon + shallot + oil + lemon, seal, refrigerate
+- [ ] Trim and cube **pork shoulder** into roughly *1.5-2 inch* chunks. Split evenly into two piles.
+- [ ] **Korean bag** -- pork chunks + soy + sesame oil + minced garlic + grated ginger + sugar + sliced scallion whites + black pepper + splash of rice vinegar. Vac seal flat.
+- [ ] **Eastern Med bag** -- pork chunks + olive oil + cumin + coriander + smoked paprika + smashed garlic + bay leaves + black pepper + lemon zest + salt. Vac seal flat.
+- [ ] Drop both bags in the bath at **158°F**. Leave running until Sunday afternoon (~18-24 h is the window, longer is fine).
 
-**Stove / flame:**
-- [ ] Char bell peppers -- blacken over flame or broiler, bag and steam 10 min, peel, seed, slice, dress with black vinegar + garlic + olive oil, refrigerate
+**Sunday morning/early afternoon (the bath is ready):**
+
+- [ ] Pull both **pork bags** from the bath, ice bath 30 min, refrigerate ***intact*** (don't break the vacuum seals -- those juices become night-of sauce).
+- [ ] Bump bath to **160°F**.
+- [ ] **Chicken thigh bag** -- season, vac seal flat, SV 160°F / 2 h, ice bath, refrigerate.
+
+**Sunday no-heat cai (anytime that day):**
+
+- [ ] **Cucumber kimchi salad** -- smash, toss, jar, refrigerate. Lives all week.
+- [ ] **Edamame-cucumber salad base** -- thaw edamame, dice cucumber, dress lightly. Toppings (peanuts, scallion greens, furikake) stored separately for Tuesday.
+- [ ] **Spiced pumpkin spread** -- mix in a container. Date-walnut garnish in a small separate jar.
+- [ ] **Chickpea cherry-pepper base** -- chickpeas + relish + olive oil + lemon + salt. Cucumber added Thursday afternoon.
 
 ### Workflow
 
-Start the SV bath at **160°F** and drop the **chicken bag** in first -- it needs 2 hours and the bath can hold both temperatures sequentially. While the chicken runs, char the peppers and seal the veg bags. When the chicken is done and you've bumped the bath to **183°F**, run the **broccoli bag** (8 min) while you mix and seal the chickpea salad bag. The bath does the work -- you're mostly just chopping, seasoning, and sealing.
+Saturday is light. Cube the **pork shoulder**, mix two flavor profiles into two bags, drop in the bath. The circulator runs unattended through the night.
+
+Sunday morning the pork bath is finished. Pull both bags first, ice them, refrigerate them ***sealed*** -- the bag juice is the night-of glaze for both pork meals. Then **bump the bath to 160°F** and drop the **chicken thigh bag**. That runs 2 hours while you build the cai jars.
+
+The cai jars are all no-heat, no-stove. While the chicken finishes, smash and dress cucumbers for the **kimchi salad**, dice and dress the **edamame-cucumber salad base**, mix the **spiced pumpkin spread**, and dress the **chickpea cherry-pepper base**. By mid-afternoon Sunday everything is labeled and stacked in the fridge: 3 protein bags + 4 cai containers.
+
+Total Sunday active work: ~45 minutes spread across the 2-hour chicken cycle.
 
 ### Protein Bags
 
-**Bistro chicken thighs**: season **bone-in skin-on thighs** generously with **salt**, **black pepper**, and **thyme**. Vac seal flat. **SV at 160°F for 2 hours**. Ice bath to stop cooking. Refrigerate. Night of: wok or cast iron, skin-side down, to render and crisp.
+**Korean pork** (Tuesday): cubed **pork shoulder** marinated in *1/3 cup* **soy sauce**, *2 tbsp* **sesame oil**, *4 cloves* minced **garlic**, *1 tbsp* grated **ginger**, *2 tbsp* **sugar**, *2 sliced* **scallion whites**, *1 tsp* **black pepper**, splash of **rice vinegar**. Vac seal flat. SV 158°F / 18-24 h. Cool sealed, refrigerate.
 
-### Veg Bags
+**Eastern Med pork** (Thursday): cubed **pork shoulder** rubbed with *3 tbsp* **olive oil**, *1 tbsp* **cumin**, *1 tbsp* **coriander**, *2 tsp* **smoked paprika**, *4 cloves* smashed **garlic**, *2* **bay leaves**, *1 tsp* **black pepper**, **zest of 1 lemon**, *1 tsp* **salt**. Vac seal flat. SV 158°F / 18-24 h. Cool sealed, refrigerate.
 
-**Broccoli**: cut **2 crowns** into florets. Into a vac bag: **neutral oil**, pinch of **salt**, **1/4 tsp calcium lactate** dissolved in 1 tbsp water, **tiny pinch baking soda** (keeps it vivid green through storage). Seal. **SV at 183°F for 8 min**. Ice bath immediately. Refrigerate.
+**Curry chicken thighs** (Monday): *2 lb* **boneless skinless thighs** seasoned light with **salt**, **black pepper**, and a few **smashed garlic cloves** (the curry will carry most of the seasoning Monday night). Vac seal flat. SV 160°F / 2 h. Ice bath, refrigerate.
 
-**Chickpea salad** (no SV -- just marinate cold): drain and rinse **2 cans chickpeas**. Into a vac bag: chickpeas, **1 minced shallot**, **1 tbsp Dijon**, **2 tbsp olive oil**, juice of **half a lemon**, pinch of **salt** and **black pepper**. Seal. Refrigerate. Night of: drop bag into sous vide at 140°F for 15 min to warm through.
+### Cai Bags
 
----
+**Cucumber kimchi salad** (Tuesday): smash *2 cucumbers* with the flat of a knife, tear into rough 1-inch pieces. Into a jar with *3/4 cup* roughly chopped **kimchi**, a few spoonfuls of **kimchi juice**, *1 tbsp* **sesame oil**, *1 tsp* **sugar**, *1 sliced* **scallion**, *1 tsp* **toasted sesame seeds**. Lid on, refrigerate. Improves with sit time.
 
-## ✓ Bistro Chicken
+**Edamame-cucumber salad base** (Tuesday): thaw *1 lb* shelled **edamame**, drain. *1 cucumber* diced small. Toss with *2-3 tbsp* **soy-ginger dressing** from the fridge. Refrigerate in a container. ***Dry topping jar*** with chopped **peanuts** and **furikake** stored separately so the peanuts stay crisp. **Scallion greens** get sliced fresh Tuesday by the sous chef.
 
-##### Prep&Heat
-###### prep + salad salad
+**Spiced pumpkin spread** (Thursday): *1 can* **pumpkin puree** (~15 oz) + *2 tbsp* **olive oil** + *1 tsp* **cumin** + *1/2 tsp* **cinnamon** + *1/2 tsp* **allspice** + *1 clove* minced **garlic** + *2 tbsp* **lemon juice** + **salt** to taste. Stir until smooth. Refrigerate in a container.
 
-#### Anchor:
-Chicken thigh meat -- wok-finished with garlic, thyme and walnuts; garnished with parsley.
+***Date-walnut garnish*** in a separate small jar: roughly chop *6-8 dates* and a small handful of **walnuts**, mix with a small drizzle of **olive oil** and a pinch of **salt**. Spooned over the pumpkin Thursday at the table -- keeps the texture distinct.
 
-#### Fan:
-Romaine and arugula salad greens -- kept basic to be the canvas.
-
-#### Cai:
-Chickpea salad -- shallot, olive oil, lemon
-
-Mushrooms with Dijon pan sauce -- spring onions, Dijon, deglazed with white wine
-
-### Sous Chef - Assembly
-
-Peel **6 garlic cloves**. You will be using *one* for prep, set the *remaining* aside for later.
-
-Roughly chop *half* of the **parsely**, you will be using a small amount for prep, set the *remaining* aside for garnishing later.
-
-**Chickpeas**: Drain and thoroughly rinse a can of **chickpeas**, combine with one *finely minced* **shallot**, a *single* small **garlic clove**, the ***zest** and juice* of **one lemon**, along with a few pinches of your **chopped parsley**. Stir to combine, adding **salt** and **pepper** to taste.
-
-**Salad Greens**: Chop *one and a half* hearts of **romaine** into bit size pieces, combine with some **arugula** (final salad should be 1 part arugula two parts romaine) in the stainless steel bowl.
-
-### Chef - Wok Sequence
-
-Pull the **chicken thighs** from the fridge, slice into bite sized pieces and quick mix in a bowl with a tiny pinch of baking soda, along with salt, pepper, and msg. Marinate while you work on dish 1.
-
-Slice a *few* **spring onions** into *seperated* whites and greens.
-
-**Wok dish 1 -- Mushrooms**: Medium-high heat, splash of **olive oil**. Dump in **mushrooms** in a single layer -- *don't touch* for 60-90 seconds until *golden on one face*. Add **spring onion whites**, cook 2 more minutes until dark and tender. Add **1 tsp Dijon**, splash of **white wine** -- it will sizzle hard. Reduce then serve with **spring onion greens** scattered over.
-
-**Wok dish 2 -- Chicken**: Quick rinse in the wok, set over medium-high heat, thin film of **neutral oil**. Stir fry until cooked through, Add the **minced garlic**, **thyme**, and **walnuts** directly to the pan. Stir fry until the garlic and nuts are fragrant, before they burn, drop  **1 tbsp butter** in, 1-2 more minutes to finish. Scatter **parsley** generously over before serving.
-
-Pour the **chickpeas** into a serving dish.
-
-Keep the **salad greens** plain, let the sauciness of the shared dishes dress the greens as you eat.
-
-**Table**: portion **greens** into individual bowls. **Chicken**, **chickpea salad** and **mushrooms** in shared dishes on the lazy susan.
+**Chickpea cherry-pepper base** (Thursday): drain and rinse *1 can* **chickpeas**. Into a container with *2 tbsp* **cherry pepper relish**, *3 tbsp* **olive oil**, juice of *half a lemon*, *1/2* **white onion** finely diced and rinsed under cold water, **salt**, **black pepper**. Stir, refrigerate. ***Cucumber*** (diced) gets added Thursday afternoon by the sous chef -- if it goes in Sunday it gets watery and sad.
 
 ---
 
-## ✓ Sausage Fennel Pasta
-
-##### WokNightPrep++
-###### prep + salad/gremolata + 5:30 boil
-
-#### Anchor:
-Italian sausage sliced into coins, seared hard with fennel and onion in the wok -- gremolata finish
-
-#### Fan:
-Garlic butter egg noodles
-
-#### Cai:
-White bean salad with cherry pepper relish -- cold, punchy, olive oil, lemon
-
-Charred bell peppers -- blistered Sunday and served with the remaining argugula.
-
-### Already Prepped
-
-- **Charred bell peppers** dressed and in fridge from Sunday.
-
-### Sous Chef - Prep
-
-- [ ] Peel a *whole head* of **garlic**, save *1-2 cloves* for *your prep*, set the rest aside near the stove.
-
-- [ ] Strip and roughly chop the **parsley** -- we have two bags of parsely in the fridge, pick *one* that looks older and use as much as you can. Set aside two piles: one for the **gremolata**, one loose for the table.
-
-- [ ] Finely *mince* a **large shallot** or two small ones. Save half these minced shallots for *your prep*, and dump the rest into the small glass bowl with the orange lid containing the **roasted red bell pepper**
-
-- [ ] Slice a **white onion** (like you would for fajitas)
-
-- [ ] Prepare the **fennel** by seperating the *pale green stalks* from the *white bulb* -- then *slice* the green stalks into thin coins, and prepare the *bulb* by cutting it into *quarters* from root to tip, and then *thinly slicing* those quarters (you can discard the woody bottom). *If* the **dark green fronds** look good, *save them* to use as a *garnish*
-
-- [ ] Use the *vegetable peeler* to get thin strips of the *outer* yellow **skin of the lemon**, the peels will be for the **gremolata** and the fruit can be cut in half for *jucing* into the **bean salad**
-
-### Sous Chef - Assembly
-
-**Gremolata**: finely chop together the **parsley** and **lemon peels** you set aside, along with *1-2* of your **garlic cloves**
-
-**Bean Salad**: Drain and rinse the **canned cannellini beans**. Into a bowl: **2 tbsp cherry pepper relish**, **3 tbsp olive oil**, juice of **half a lemon**, *half* of your **minced shallot**, salt, pepper. Toss. ***Taste*** -- punchy, bright. Refrigerate.
-
-**Sausages**: At **around 5:30** get some water up to *boiling* in the dutch oven, put *all* of the **italian sausages** into the water, and then ***drop it to a medium-low simmer*** -- Those can hang out in there to parcook until the chef arrives.
-
-### Chef - Wok Sequence
-
-Remove the **sausages** from the water, and *slice into coins*
-
-**Garlic butter noodles**: cook **egg noodles** to al dente in the same water the sausages boiled in. Finish with butter and garlic.
-
-**Wok dish -- Sausage with fennel**: wok ripping hot, splash of **neutral oil**. Stir fry **sausage** until beginning to blister and release some fat, then drop in the **fennel and onions** -- Cook until fennel is just fork tender and everything is carmelized a bit.
-
-**Charred Peppers Verte**: Toss the bowl of **bell pepper and shallot** with EVOO + sherry vin, along with salt. Commbine well then add to a serving dish over **arugula greens**
-
-**Table**: **egg noodles** go into individually portioned bowls. **Sausage + fennel** with gremolata over, **White bean salad**, and **charred peppers verte** in shared dishes on the lazy susan. Extra **lemon wedge** and **parsley** on the table.
-
----
-
-## ✓ Veggie Chili
+## Japanese Chicken Curry
 
 ##### WokNightPrep+
-###### prep + salad + oven blanch
+###### prep + curry simmer + 5:30 rice
 
 #### Anchor:
-Veggie chili -- chipotle, cocoa, using on-hand par-cooked black beans
-
-#### Fan:
-White rice (chili and rice served together)
-
-#### Cai:
-Bacon-fat caramelized cabbage -- green cabbage cooked in rendered bacon fat until dark and sweet, jalapeño hit at the end
-
-Fire Roasted Corn + Avocado salad -- cold, chunky, cilantro, lime, jalapeño, chopped romaine
-
-### Already Prepped
-
-- **Par-cooked seasoned black beans** in fridge -- add directly.
-
-### Sous Chef - Prep
-
-- [ ] Dice **1 large white onion**
-- [ ] Dice **yellow bell pepper**
-- [ ] Peel a half head of **garlic**
-- [ ] Cube **2 avocados**
-- [ ] Mince **a half/whole jalapeño** (depending on heat)
-- [ ] *Wash* then chop *all* the **cilantro**
-- [ ] Chop *then* wash/soak **romaine lettuce** (enough to pair with the avocados for the salad)
-- [ ] Chop *half* a head of **green cabbage** (into bite size squares)
-
-### Sous Chef - Assembly/Par-Cooking
-
-Set the prepared **onion, pepper, and garlic** near the stove for *later*.
-
-**Avocado Salad base**: Combine the **avocado**, **jalapeño**, and **cilantro** in a mixing bowl, along with half/whole **can of fire roasted corn**. Dress: juice of **1 lime**, pinch of **salt**, small drizzle of **olive oil**. ***Taste*** -- bright, chunky, herby. Refrigerate. (Make this early -- the lime keeps the avocado from browning.) Keep the **chopped romaine lettuce** *seperate* until ready to serve.
-
-**Cabbage and Bacon**: *Oven Blanch* to par cook this stuff for later -- start by spreading the **chopped cabbage** in an even layer on our *black baking tray*, add a few drizzles of water, and then lay *half the pack* of the **bacon strips** from the fridge over the cabbage. *Cover tightly* with tinfoil. Stick it into the oven *and then* set the oven to 300 (AKA *do not* preheat it).
-
-At **5:30** start the rice in the rice cooker.
-
-### Chef - Cooking
-
-**Chili**: heat a large heavy pot over medium-high, long squeeze of **olive oil**. In go **onion**, **pepper**, pinch of **salt** -- stir and soften 2-3 min. Add **garlic**, stir. Add **2 tbsp tomato paste** and **2 diced chipotles in adobo** (more if you want heat). Stir in the spices: **2.5 tbsp chili powder**, **2 tbsp smoked paprika**, **2 tbsp cumin**, **1 tbsp cocoa**. Stir 30 seconds -- it should smell incredible and look dark. Add **veggie stock**, **canned diced tomatoes**, and the **whole tomatoes** crushed by hand. Stir well, scraping the bottom. Reduce to medium, simmer **10 min**. Add the **par-cooked black beans** and **kidney beans** (with their juices). Simmer 10 more min. Off heat: **1 tbsp soy sauce**, **1 tbsp brown sugar**, **1 tbsp apple cider vinegar**, splash of **hot sauce**. ***Taste*** hard -- adjust salt, acid, heat.
-
-**Cabbage cai**: Heat wok to medium high. Remove the tray of par cooked **cabbage and bacon** from the oven. Roughly chop the bacon, add it to the wok with some of the juice/fat from the cooking tray and start crisping it up. When it looks carmilzed and lightly crisped. Drop in the **cabbage** and raise the heat to high, stir fry until just carmelized, fold the bacon back in. Season to taste with white pepper and a bit of salt if needed.
-
-**Table**: **rice** in individual bowls. **Chili** in a wide center bowl. **Caramelized cabbage** and **Corn Avocado Salsa** in shared dishes. Extra **lime wedges** at the table.
-
----
-
-## ✓ Orange Chicken
-
-##### WokNight
-###### wok sequence + SV broccoli, 25 min ⏱
-
-#### Anchor:
-Cornstarch-crusted chicken thigh with orange sauce -- garlic, ginger, soy, rice vinegar, orange juice and zest, bell peppers cooked into the glaze
+Japanese curry with sous-vide **chicken thigh** chunks, **carrots**, and **frozen peas** -- built off curry cubes loosened with stock, sweetened with a touch of honey and rounded with soy sauce. Mild, glossy, weeknight comfort.
 
 #### Fan:
 White rice
 
 #### Cai:
-SV broccoli -- wok-charred from Sunday bag, garlic, sesame seeds, sesame oil finish
+Wok-fried potato strips with miso-yogurt crema and sliced scallion greens
 
-Ribbon cucumber salad -- peeler ribbons, scallion, soy-ginger dressing from the fridge, cold
-
-#### Soup:
-None -- the orange glaze is saucy, three dishes, full table.
+Dressed greens -- romaine or bag mix tossed with the soy-ginger dressing from the fridge
 
 ### Already Prepped
 
-- **Broccoli bag** fully cooked in fridge from Sunday (183°F / 8 min).
+- **Curry chicken thigh bag** in the fridge from Sunday SV (160°F / 2 h, fully cooked).
+
+### Sous Chef - Prep
+
+- [ ] Dice *1 large* **yellow onion** for the curry.
+- [ ] Mince *3 cloves* of **garlic** and grate *a thumb* of **ginger** for the curry.
+- [ ] Peel and chunk *3-4* **carrots** into bite-size pieces.
+- [ ] Slice *4-5 small* **potatoes** into thin matchsticks (*~1/4 inch*) for the wok cai. Hold in a bowl of cold water until the chef arrives so they don't oxidize.
+- [ ] Slice *2* **scallions** -- whites set aside for the curry, greens reserved for the wok potato garnish.
+- [ ] Tear or chop *half* of the **romaine head** (or half the bag mix) into a serving bowl, undressed. Cover, refrigerate. ***Save the other half*** for Wednesday's spaghetti night greens.
+- [ ] Open the **chicken thigh bag**, drain juices into the curry pot, cube the thighs into bite-size pieces.
 
 ### Sous Chef - Assembly
 
-Start **rice** in the rice cooker.
+**Curry**: Heat a heavy pot or Dutch oven over medium, splash of **neutral oil**. Sweat the **diced onion** with a pinch of **salt** until translucent and just starting to color, ~6-8 min. Add the **minced garlic** and **grated ginger**, stir 30 sec. Pour in *4 cups* of **water or stock** along with the chicken bag juices. Bring to a simmer, add the **carrots**, cook until just fork-tender, ~10 min. Off heat, break in the **Japanese curry cubes** (use the package guidance for amount based on liquid). Stir until completely dissolved and the sauce thickens. Stir in the **cubed chicken** and a generous handful of **frozen peas**. Bring back to a gentle simmer for 2-3 min. ***Taste*** -- adjust with a splash of **soy sauce** for salt, *1 tsp* **sugar** (or honey if you have any) for round sweetness, and a tiny grind of **black pepper**. Hold on low.
 
-**Ribbon cucumber salad**: run a vegetable peeler down **2-3 cucumbers** along their length to make long thin ribbons, rotating as you go. Stop when you hit the seedy core. Into a bowl with **sliced scallion greens** and a drizzle of **soy-ginger dressing** from the fridge. Toss gently. ***Taste*** -- it should be savory and clean. Refrigerate.
+**Miso-yogurt crema**: in a small bowl whisk *3 tbsp* **Greek yogurt** + *1 tbsp* **miso** + juice of *1/4 lemon* + *1 tsp* **sugar** + a tablespoon or two of water until pourable like a thick salad dressing. ***Taste*** -- it should be savory-creamy with a tang and a faint sweetness. Refrigerate until plating.
 
-Pull the **broccoli bag** from the fridge and let it come to room temp slightly.
+At **5:30** start the **white rice** in the rice cooker.
 
-Slice **2 bell peppers** into strips. Set near the stove.
-
-**Orange sauce** (mix in a small bowl): juice of **2 oranges**, zest of **1 orange**, **4 tbsp soy sauce**, **2 tbsp rice vinegar**, **3 tbsp sugar**, **1 tsp cornstarch** dissolved in the liquid. Stir. Set near the stove.
+Right before sitting down, toss the **greens** with *2-3 tbsp* of the **soy-ginger dressing** from the fridge. Don't dress earlier -- they get sad.
 
 ### Chef - Wok Sequence
 
-**Wok dish 1 -- Orange chicken with pepper**: cut **boneless thighs** into large chunks. Season with **salt**, toss thoroughly in **cornstarch** until no longer sticky. Wok ripping hot, generous **neutral oil** -- enough to shallow-fry. Fry chicken in batches without crowding, *don't move* until a firm crust forms on the bottom, 2-3 min. Flip, 2 more min. Remove all chicken to a plate. Pour off most of the oil, leaving a thin film. Add **minced garlic** (3 cloves) and **grated ginger** (1 inch), stir 20 seconds. Add **bell pepper strips**, toss 60 seconds. Pour in the **orange sauce** -- it will bubble and thicken fast. Return **chicken** to the wok, toss to coat. If the sauce is too thick, splash in a little water. Off heat: **big pinch of chili flakes** (or fermented cayenne mash) and **zest of the remaining orange**. ***Taste*** -- adjust soy or sugar. Out.
+**Wok dish -- Stir-fried potato strips**: Drain the **potato matchsticks** thoroughly and pat them dry with a towel (wet potatoes will steam, not crisp). Wok ripping hot, *generous* **neutral oil**. Dump the potatoes in, spread them flat in a single layer, *don't touch* for 60-90 seconds until they release from the wok and the bottom faces are *deeply golden*. Toss, redistribute, continue stir-frying for 3-4 more minutes until the strips are *crispy on the edges and tender in the middle*. Off heat, **salt** generously.
 
-**Wok dish 2 -- Broccoli**: quick rinse of the wok. Ripping hot, splash of **oil**. Dump in the **broccoli** from the bag, spread flat, *don't touch* for 60-90 seconds until charred in spots. Toss, add **3 sliced garlic cloves**, toss 20 seconds. Off heat: drizzle of **sesame oil**, generous scatter of **sesame seeds**. Out.
+Pile onto a serving plate. Drizzle the **miso-yogurt crema** over the top in a zigzag (don't drown them -- they should still be visibly crispy). Scatter **scallion greens** over.
 
-**Table**: **rice** in individual bowls. **Orange chicken** in a center bowl. **Broccoli** and **ribbon cucumber salad** in shared dishes. Extra **scallion** scattered over the chicken.
+**Table**: **rice** in individual bowls. **Curry** in a wide center pot or bowl with a ladle. **Stir-fried potatoes with crema** and **dressed greens** in shared dishes on the lazy susan.
+
+---
+
+## Korean Pork
+
+##### WokNight
+###### bag in bath PM + 5:30 rice + wok pork
+
+#### Anchor:
+Bulgogi-leaning **pork shoulder**, sliced thin against the grain from the Sunday SV bag and wok-fired hot with the marinade reduced to a glossy glaze, finished with scallion whites and greens.
+
+#### Fan:
+White rice
+
+#### Cai:
+Cucumber kimchi salad -- smashed cucumber, kimchi, sesame oil, scallion (already in the jar from Sunday)
+
+Edamame-cucumber salad -- soy-ginger dressed base from Sunday, topped with peanuts, scallion greens, and furikake at the table
+
+### Already Prepped
+
+- **Korean pork bag** in the fridge from Saturday SV (158°F / 18-24 h, fully cooked, fully marinated).
+- **Cucumber kimchi salad** in the jar from Sunday, only better with sit time.
+- **Edamame-cucumber salad base** in a container from Sunday. *Topping bag* (peanuts, scallion greens, furikake) in a small jar in the fridge.
+
+### Sous Chef - Assembly
+
+Around **3:00pm**, drop the **Korean pork bag** into the SV bath at *140°F* to gently warm through. (Chef sets the temperature remotely from the app -- this is reheat, not more cooking.)
+
+At **5:30** start the **white rice** in the rice cooker.
+
+Open the **cucumber kimchi salad** jar, give it a stir, transfer to a small shared dish.
+
+Pull the **edamame-cucumber base** from the fridge and transfer to a small shared dish. Leave the **topping jar** (peanuts, scallion greens, furikake) on the table next to it -- the family scatters it on at first portion so the peanuts stay crispy.
+
+Slice *2* **scallions** -- whites set near the stove for the chef, greens added to the toppings.
+
+### Chef - Wok Sequence
+
+Pull the warmed **pork bag** from the bath. Cut open over a bowl and drain the **marinade juices** into the bowl -- these are the glaze. Pull the pork chunks out, lay them on a board, and slice *thin against the grain* into ~1/4 inch slices. The cubes will be tender enough to slice easily.
+
+**Wok dish -- Bulgogi pork**: Wok ripping hot, thin film of **neutral oil**. Lay the **sliced pork** flat in the wok, *don't move* for 60-90 seconds until the bottom faces are charred and the edges crisp. Toss, redistribute, char another 60 seconds. Pour in the **marinade juices**, let them bubble hard and reduce to a glossy syrup that coats the pork (~1-2 min). Add the **scallion whites**, toss 30 seconds. Off heat, scatter **scallion greens** generously over.
+
+**Table**: **rice** in individual bowls. **Bulgogi pork** in a small platter or shallow bowl, center on the lazy susan. **Cucumber kimchi salad** and **edamame salad with toppings** in small shared dishes flanking it.
+
+---
+
+## Bacon Spaghetti
+
+##### Prep&Heat+
+###### prep + bean salad + 5:30 boil
+
+#### Anchor:
+Spaghetti tossed with a *fresca-leaning* tomato sauce -- **bacon** rendered into the fat, **garlic**, hand-crushed **canned whole tomatoes**, finished with black pepper and a squeeze of butter. Lighter than carbonara, simpler than amatriciana. The pot ***is*** the meal.
+
+#### Fan:
+Spaghetti (one-pot exception -- the pasta is the fan)
+
+#### Cai:
+Roman white bean salad -- **cannellini** with diced rinsed white onion, parsley, lemon, olive oil, generous black pepper. Cold, sharp, peppery.
+
+Dressed greens -- **romaine** (the second half of the head from Monday) tossed with Italian-style dressing or olive oil + balsamic + salt + pepper.
+
+### Already Prepped
+
+- **Half-head of romaine** (or remaining bag mix) from Monday in the fridge, undressed.
+- Half a bunch of **parsley** in the fridge, untouched (the other half is reserved for Thursday's Eastern Med pork).
+
+### Sous Chef - Prep
+
+- [ ] Drain and rinse *2 cans* of **cannellini beans**.
+- [ ] Finely dice *1/2* of a **white onion**, then rinse the dice in a fine sieve under cold water for 10 seconds to mellow the bite. Drain well.
+- [ ] Roughly chop *half* of the **parsley** bunch (save the rest for Thursday).
+- [ ] Peel and slice *4-5* **garlic** cloves thin for the sauce, set near the stove.
+- [ ] Chop the **bacon** (half pack from the fridge) into ~1/4 inch lardons, set near the stove.
+- [ ] Open *1 can* of **canned whole tomatoes**, set near the stove with a bowl for hand-crushing.
+- [ ] Tear or chop the **half head of romaine** into a serving bowl, undressed. Cover, refrigerate.
+
+### Sous Chef - Assembly
+
+**Roman white bean salad**: into a serving bowl combine the **cannellini**, **rinsed diced white onion**, **chopped parsley**, *3 tbsp* **olive oil**, juice of *half a lemon*, *generous* **black pepper** (this is the dish -- don't skimp), **salt** to taste. Stir gently. Let it sit at room temp for 15-20 min so the beans take on the dressing. ***Taste*** -- it should be peppery, lemony, and clearly olive-oil-forward.
+
+At **5:30** fill the dutch oven with water, **salt it like the sea**, and bring to a boil. Hold at a low boil until the chef arrives.
+
+### Chef - Cooking
+
+In a wide deep skillet or another pot over medium heat, drop in the **bacon lardons**. Render them slowly until the fat is fully released and the lardons are *just barely crisp*, ~6-8 min. Don't blast it -- you want fat, not blackened bacon.
+
+Add the **sliced garlic** and a *small pinch* of **red pepper flake**, stir 30 seconds until fragrant but not browning.
+
+Pour in the **canned whole tomatoes** with their juice, crushing each tomato by hand into the pan as it goes in. Season with a small pinch of **salt** (the bacon already brings salt). Bring to a simmer, ***lower*** to medium-low, and let it break down for 12-15 min until it goes from watery to glossy and the tomato pieces are softening into the sauce.
+
+Drop the **spaghetti** (most or all of the 2 lb bag, depending on appetite for 6-8) into the boiling water. Cook until *just shy* of al dente -- about a minute less than the package says. Reserve *1 cup* of pasta water before draining.
+
+Drain the pasta and slide it directly into the simmering sauce. Add a generous splash of **pasta water** (~1/2 cup), toss vigorously over medium heat for ~1 min so the pasta finishes cooking IN the sauce and emulsifies with the bacon fat. Off heat, swirl in a **knob of butter** until glossy. Crack a *lot* more **black pepper** over.
+
+Right before sitting down, dress the **greens** with Italian dressing or olive oil + balsamic + salt + pepper.
+
+**Table**: pasta plated into individual wide bowls or pasta plates. **Roman white bean salad** in a small shared bowl with a serving spoon, **dressed greens** in a small shared bowl. Extra **black pepper** at the table.
+
+---
+
+## Eastern Med Pork
+
+##### Prep&Heat
+###### bag in bath PM + 5:30 quinoa + cast iron sear
+
+#### Anchor:
+Cubed **pork shoulder** from the Eastern Med SV bag, ripping cast iron sear, finished off-heat with a warm aromatic shower of garlic, parsley, lemon zest, and rinsed diced yellow onion.
+
+#### Fan:
+Quinoa
+
+#### Cai:
+Spiced pumpkin spread with date-walnut garnish -- room temp, served on a shallow plate (already prepped Sunday)
+
+Chickpea-cucumber salad -- cherry pepper relish, lemon, olive oil, with a dollop of Greek yogurt at the table
+
+### Already Prepped
+
+- **Eastern Med pork bag** in the fridge from Saturday SV (158°F / 18-24 h, fully cooked, fully spiced).
+- **Spiced pumpkin spread** in a container from Sunday + ***date-walnut garnish*** in a separate jar.
+- **Chickpea cherry-pepper base** in a container from Sunday (cucumber added today).
+- The other half of the **parsley** bunch in the fridge from Sunday.
+
+### Sous Chef - Prep
+
+- [ ] At **3:00pm**, drop the **Eastern Med pork bag** into the SV bath at *140°F* to gently warm through. (Chef sets temperature remotely from the app.)
+- [ ] At **4:30pm**, rinse *1 cup* dry **quinoa** in a fine sieve under running water until the water runs clear (this removes the bitter saponin coating). Add to the rice cooker with *2 cups* water and a pinch of **salt**. Set to cook, hold on warm.
+- [ ] Dice *1 cucumber* small. Fold into the **chickpea cherry-pepper base** from the fridge. Transfer to a serving bowl, refrigerate.
+- [ ] Finely dice *1/2* of a **yellow onion**, rinse under cold water for 10 seconds, drain ***thoroughly*** on paper towels. (This is the chef's off-heat shower -- it must be dry to fold into hot pork.)
+- [ ] Mince *3 cloves* of **garlic** for the chef.
+- [ ] Chop the remaining **parsley** -- the chef's bunch will be most of it, save a small pinch to scatter over the chickpea salad before serving.
+- [ ] **Zest** *1 lemon* with a microplane or fine grater for the chef. Cut the zested lemon into wedges for the table.
+- [ ] Transfer the **spiced pumpkin spread** to a shallow plate or wide bowl, smooth the top. Leave the **date-walnut garnish jar** next to it -- the family scatters it on at first portion so the texture stays distinct.
+
+### Sous Chef - Assembly
+
+Right before sitting down, sprinkle a small pinch of **chopped parsley** over the chickpea salad and place a small bowl of **Greek yogurt** on the table next to it (each person takes a dollop).
+
+### Chef - Cooking
+
+Pull the warmed **pork bag** from the bath. Cut it open over a small bowl and drain the **bag juices** -- reserve these as a finishing splash. Lift the cubes out, lay them on a board, and pat each cube ***dry*** with a paper towel. Surface moisture is the enemy of the sear.
+
+Get the **cast iron** ripping hot over high heat with a thin film of high-smoke-point **oil** (enough to slick the pan -- the pork has its own fat coming).
+
+Lay the **pork cubes** in a single layer with space between them, *don't move* for 60-90 seconds until the bottom face is *deeply browned and crusted*. Flip with tongs, sear another 60 seconds. Flip to a third face, 30 more seconds. You're not cooking the inside -- it's already perfectly cooked from the SV. You're just building crust.
+
+Off heat (this is critical -- the pan is hot enough to sizzle the aromatics without scorching them): scatter the **minced garlic** over the cubes and toss for 20 seconds in residual heat. Add the **chopped parsley**, the **lemon zest**, and the **rinsed dried yellow onion**. Toss once or twice -- you want everything coated and warm but the onion still crunchy and the parsley still green.
+
+Splash in *1-2 tbsp* of the reserved **bag juices** and a small drizzle of fresh **olive oil**. Final squeeze of **lemon** from a wedge over the top.
+
+**Table**: **quinoa** in individual bowls. **Pork** in a small platter or shallow bowl, center on the lazy susan. **Pumpkin spread with date-walnut garnish jar** to the side, **chickpea-cucumber salad with yogurt** to the other side, **lemon wedges** scattered on the table.
 
 ---
 
