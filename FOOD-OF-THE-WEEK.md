@@ -51,7 +51,7 @@
 
 ---
 
-## Weekend Prep
+## ✓ Weekend Prep
 
 ##### BatchDay
 ###### saturday: cube + bag pork into bath / sunday: chicken bag + veg bags
@@ -96,7 +96,7 @@ Sunday: pull both **pork bags** first, ice them, refrigerate ***sealed***. Bump 
 
 ---
 
-## Japanese Chicken Curry
+## ✓ Japanese Chicken Curry
 
 ##### WokNightPrep+
 ###### prep + curry simmer + 5:30 rice
@@ -161,7 +161,7 @@ White rice
 #### Cai:
 Cucumber kimchi salad -- smashed cucumber, kimchi, sesame oil, scallion (made day-of by sous chef)
 
-Edamame-cucumber salad -- soy-ginger dressed, topped with peanuts, scallion greens, and furikake at the table
+Carrot-edamame salad -- soy-ginger dressed, topped with peanuts, scallion greens, and furikake at the table
 
 ### Already Prepped
 
@@ -169,21 +169,29 @@ Edamame-cucumber salad -- soy-ginger dressed, topped with peanuts, scallion gree
 
 ### Sous Chef - Prep
 
-- [ ] **Cucumber kimchi salad**: smash *2 cucumbers* with the flat of a knife, tear into rough 1-inch pieces. Into a jar with *3/4 cup* roughly chopped **kimchi**, a few spoonfuls of **kimchi juice**, *1 tbsp* **sesame oil**, *1 tsp* **sugar**, *1 tsp* toasted **sesame seeds**. Stir, refrigerate. Improves with sit time -- make this first.
-- [ ] **Edamame salad**: thaw *1 lb* shelled **edamame**, drain. Dice *1 cucumber* small and fold in. Toss with *2-3 tbsp* **soy-ginger dressing** from the fridge. Refrigerate. Leave the toppings (chopped **peanuts**, **furikake**) in their dry jar -- add at the table so peanuts stay crispy.
-- [ ] Slice *2* **scallions** -- whites near the stove for the chef, greens into the topping jar with the peanuts.
+- [ ] Pour the **frozen shelled edamame** into a bowl of *cold* water to *thaw*
+- [ ] Cut 5 **spring onions** into *seperate piles* of whites and greens
+- [ ] Peel and *finely* mince a small thumb of **ginger**
+- [ ] Peel and *ribbon* a few **carrots**
+- [ ] Chop *half* a **cucumber** into *bite size* medium-small cubes
+- [ ] *Roughly* chop **3 tbsp kimchi**
+- [ ] *Roughly* chop a couple handfuls of **peanuts**
+
+Set the **spring onion whites** near the stove for later.
 
 ### Sous Chef - Assembly
 
-At **5:30** start the **white rice** in the rice cooker.
+**Cucumber Kimchi Salad**: Into a bowl goes your **cucumber**, chopped **kimchi**, **1 tsp rice vinegar**, **2 tsp sugar**, the **ginger**, **the greens of your spring onions**, along with **2 quick dashes of fish sauce**, and an **assertive pinch of salt**. Toss together until coated, and cucumbers are slighty beaten up. *Taste and adjust*. Refrigerate to mingle.
 
-When ready to serve: stir the **cucumber kimchi salad**, transfer to a small shared dish. Transfer the **edamame salad** to a small shared dish. Set the **topping jar** (peanuts, scallion greens, furikake) on the table next to it.
+**Carrot-Edamame Salad**: Into a bowl with your **ribboned carrots**, *thawed* and *thouroughly* drained **edamame**, *half* of your **chopped peanuts** (set the rest aside for topping later) and some **soy ginger dressing**. Toss to coat and taste for deliciousness.
+
+At **5:30** start the **white rice** in the rice cooker.
 
 ### Chef - Wok Sequence
 
 Pull the **Korean pork bag** from the fridge. Cut open over a bowl and drain the **marinade juices** into the bowl -- these are the glaze. Pull the pork chunks out, lay them on a board, and slice *thin against the grain* into ~1/4 inch slices.
 
-**Wok dish -- Bulgogi pork**: Wok ripping hot, thin film of **neutral oil**. Lay the **sliced pork** flat in the wok, *don't move* for 60-90 seconds until the bottom faces are charred and the edges crisp. Toss, redistribute, char another 60 seconds. Pour in the **marinade juices**, let them bubble hard and reduce to a glossy syrup that coats the pork (~1-2 min). Add the **scallion whites**, toss 30 seconds. Off heat, scatter **scallion greens** generously over.
+**Wok dish -- Bulgogi pork**: Wok ripping hot, thin film of **neutral oil**. Lay the **sliced pork** flat in the wok, *don't move* for 60-90 seconds until the bottom faces are charred and the edges crisp. Toss, redistribute, char another 60 seconds. Pour in the **marinade juices**, let them bubble hard and reduce to a glossy syrup that coats the pork (~1-2 min). Add the **scallion whites**, toss 30 seconds.
 
 **Table**: **rice** in individual bowls. **Bulgogi pork** in a small platter or shallow bowl, center on the lazy susan. **Cucumber kimchi salad** and **edamame salad with toppings** in small shared dishes flanking it.
 
