@@ -71,44 +71,48 @@ Saturday is just two bag moves to the fridge. Sunday: drop the **chicken bag** i
 
 ---
 
-## Pastel de Tamal
+## Tamale Casserole
 
 ##### Prep&Heat+
-###### thaw pork + masa mix + oven bake
+###### prep/slaw + 3:30 preheat + resting time
 
 #### Anchor:
-Tamale-style bake -- **masa harina** dough layered around a filling of shredded **pre-cooked pork shoulder**, **chipotle in adobo**, **preserved black beans**, and a spoonful of **fire roasted crushed tomatoes** with **southwest salsa**. One dish, oven does the work.
+Tamale-style bake -- **masa harina** dough layered around a filling of shredded **pre-cooked pork shoulder**, **chipotle in adobo**, **preserved black beans**, and a spoonful of **fire roasted crushed tomatoes** with **white cheddar**. One dish, oven does the work.
 
 #### Fan:
 The tamal bake is the fan. Two cai alongside.
 
 #### Cai:
-Charred bell pepper with pickled onions and pickled jalapeños -- room temp, punchy, relish-style
+Charred peppers with pickled onions and pickled jalapeños -- room temp, punchy
 
-Green cabbage slaw -- lime, oil, salt, cold and crunchy
+Green cabbage slaw -- cilantro, lime, oil, salt, cold and crunchy
 
 ### Already Prepped
 
-- **Pre-cooked pork shoulder bag** thawed in fridge since Saturday.
-- **Charred bell pepper** (pepper 1) dressed and jarred in fridge from Sunday.
+- **Tamale Casserole** is already assembled and wrapped in foil in the fridge from Sunday, ready to go in the oven.
+- **Pickled onions and jalapeños** in the fridge ready for use.
 
 ### Sous Chef - Prep
 
-- [ ] Pull the **pork shoulder bag** from the fridge. Open over a bowl, drain any bag juices. Shred or break the chunks into rough bite-size pieces with two forks. Set aside.
-- [ ] Finely chop *2 chipotles in adobo* and scrape in their **adobo sauce** (taste and calibrate for heat -- you want smokiness, not fire). Fold into the pork.
-- [ ] Build the **filling**: shredded pork + chipotle + *1 cup* drained rinsed **preserved black beans** + a big spoonful of **southwest salsa** + *~1/2 cup* **fire roasted crushed tomatoes** + *1 tsp* **cumin** + *2 cloves* minced **garlic** + **salt**. ***Taste*** -- it should be boldly seasoned; it mellows in the bake.
-- [ ] Mix the **masa dough**: *2 cups* **masa harina** into a bowl. Pour in *1.5 cups* warm water, *2 tbsp* **neutral oil**, *1 tsp* **salt**, *1/2 tsp* **baking powder**. Stir until smooth and no dry flour remains. Texture should feel like soft play-dough -- add water a tablespoon at a time if too stiff. ***Taste the raw masa for salt.***
-- [ ] Oil a large baking dish generously.
+- [ ] Cut and deseed *one* **poblano pepper** into thumb length strips
+- [ ] Do the same to *one* **large sweet rainbow pepper**
+- [ ] Chop *roughly* an small handful of **pickled red onions** + a *bit* of **pickled jalapeño**
+- [ ] Set the **cut peppers** and the **pickled stuff** aside near the stove *for later*
+- [ ] Wash and finely *chop* the **cilantro**
+- [ ] Cut a **lime** in half for juicing
+- [ ] finely *shred* the *whole head* of **green cabbage**
 
 ### Sous Chef - Assembly
 
-Press *half the masa* into the oiled baking dish in an even layer, going slightly up the sides. Spread the **filling** in an even layer over the masa. Press the remaining masa over the top, patching any gaps -- it doesn't need to be perfect, just covered.
+**Cabbage Slaw**: Shredded **cabbage** into a bowl, start with half of your **lime juice**, *1 tbsp* **olive oil**, a generous pinch of **salt**, and your chopped **cilantro**; Toss hard. Taste -- bright, crunchy, lightly salty. Cover it and put it in the fridge to mingle; toss once more right before serving.
 
-Cover *tightly* with foil. Bake at **375°F for 35 minutes**. Remove foil and bake another **10-12 minutes** until the top has a slight crust and the edges pull slightly from the dish.
+**Tamale Casserole**: At *no later than* **3:30**, preheat the oven to **375°F** -- Once hot, place the *still wrapped* **casserole** into the oven. **Bake for 80 minutes**. After the 80 minute timer goes off, *take off the foil* and then *crank* the oven to **450°F** -- bake for another **10-20 minutes** until the cheese on top is *bubbling* and ***deeply** golden brown*. It will need a *long resting time* -- so it can safely hang out for a while on the stovetop at this point.
 
-While the bake is in the oven, make the **cabbage slaw**: shred a few big handfuls of **green cabbage** thin. Into a bowl with *2 tbsp* **lime juice**, *1 tbsp* **neutral oil**, a generous pinch of **salt**. Toss hard. Taste -- bright, crunchy, lightly salty. Set at room temp; toss once more right before serving.
+### Chef - Finishing + Table
 
-Tip the **charred bell pepper** jar into a small shared bowl. Fan a few rings of **pickled onion** and a scatter of **pickled jalapeño** slices over the top.
+**Charred Peppers dish**: Cook the **prepared poblano and rainbow peppers** tiger skin style in a hot wok, dress and finish with a bit of oil, salt, and toss together with the **prepared pickled stuff**.
+
+**Tamale Casserole Extraction**: Run a thin flexible tool along the edge to check for release, then use a bowl underneath the pan to pop the central pan component holding the cake up and away from the outer ring. Check the firmness. If nice and firm, invert onto a plate and then invert again onto a serving platter to slice and bring to the table. Otherwise, just transport and serve the dish by slicing and serving right off the the popped out pan.
 
 **Table**: slice the tamal cake at the table into portions. **Cabbage slaw** and **charred pepper** in shared dishes. **Greek yogurt** on the side as a crema dollop.
 
