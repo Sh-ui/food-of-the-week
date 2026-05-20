@@ -1,4 +1,4 @@
-<!-- https://sh-ui.github.io/food-of-the-week/ -->
+<!-- • ✓ • https://sh-ui.github.io/food-of-the-week/ -->
 
 # Week of May 17-23, 2026
 
@@ -43,7 +43,7 @@
 
 ---
 
-## Weekend Prep
+## ✓ Weekend Prep
 
 ##### BatchDay
 ###### saturday: move bags to fridge / sunday: chicken bag + char 2 peppers
@@ -71,7 +71,7 @@ Saturday is just two bag moves to the fridge. Sunday: drop the **chicken bag** i
 
 ---
 
-## Tamale Casserole
+## ✓ Tamale Casserole
 
 ##### Prep&Heat+
 ###### prep/slaw + 3:30 preheat + resting time
@@ -121,7 +121,7 @@ Green cabbage slaw -- cilantro, lime, oil, salt, cold and crunchy
 ## Wok Chicken Parm
 
 ##### WokNightPrep+
-###### wok sear + torch + pasta water
+###### prep/salad + zucchini + pasta water
 
 #### Anchor:
 Sous-vide **chicken thigh** chunks wok-seared with garlic and olive oil, arranged on a platter over a tight tomato base, torched under grated **parmesan**, finished with crisped **panko**.
@@ -137,30 +137,34 @@ Oven-roasted zucchini -- olive oil, garlic, black pepper, crispy-edged.
 ### Already Prepped
 
 - **Chicken thigh bag** in fridge from Sunday SV (160°F / 2 h, fully cooked).
+- **Zucchini** already cut and frozen in a bag
 
 ### Sous Chef - Prep
 
-- [ ] Pull the **chicken thigh bag** from the fridge. Open, drain bag juices into a small bowl (save these). Cut thighs into roughly *1-inch* bite-size pieces. Set near the stove.
 - [ ] Drain and rinse the **canned white beans**.
-- [ ] Finely dice *half a* **yellow onion**, rinse under cold water 10 seconds, drain well.
+- [ ] Finely dice *half a* **white onion**, rinse under cold water 10 seconds, drain well.
+- [ ] Finely Chop some **parsely** -- Half goes in your bean salad, save the other half for garnish later
 - [ ] Slice *3-4 cloves* **garlic** thin for the wok. Set near the stove.
-- [ ] **Zucchini**: toss the **frozen cut zucchini** with *1 tbsp* **olive oil**, *2 cloves* minced **garlic**, **black pepper**, and salt. Spread on a tray. Roast at **425°F** (or air fry at 400°F) for 18-20 min until edges are crispy and golden. Hold on warm.
-- [ ] **Toast panko**: small dry pan over medium, *3 tbsp* **panko** + *1 tbsp* **olive oil** + pinch of **salt**. Stir constantly until golden, 3-4 min. Watch it -- it burns fast. Off heat, set aside.
-- [ ] **Tight tomato sauce**: small saucepan, *~1/2 cup* **fire roasted crushed tomatoes** + 1 clove minced **garlic** + drizzle **olive oil** + pinch **salt**. Simmer medium-low until thick and jammy, 8-10 min. Set aside.
+- [ ] Cut a **lemon** in half for jucing.
+- [ ] Preheat the **airfyer** to 450, set to *roast* with *super convection*
 
 ### Sous Chef - Assembly
 
 **White bean salad**: into a serving bowl combine the **cannellini**, **rinsed diced yellow onion**, *2 tbsp* **cherry pepper relish**, *3 tbsp* **olive oil**, juice of *half a lemon*, generous **black pepper**, **salt**. Toss, taste. Punchy and bright. Refrigerate.
 
-Fill the **dutch oven** with water, **salt it generously**, bring to a boil. Drop the **pasta**. Cook to *just shy* of al dente. Reserve *1 cup* **pasta water** before draining.
+**Zucchini**: toss the **frozen cut zucchini** with 1 tbsp olive oil, black pepper, and salt. Spread on a tray. Roast at 450°F for **10-15 min** until edges are crispy and golden. *Hold on warm*.
+
+Fill the **dutch oven** with water, **salt it generously**, bring to a boil; then keep the lid on it and turn off the heat to stay hot so it comes to boil quickly during the chef steps.
 
 ### Chef - Wok Sequence
 
+**Toast panko**: small dry pan over medium, *4 tbsp* **panko** + *1 tbsp* **olive oil** + pinch of **salt**. Stir constantly until golden, 3-4 min. Watch it -- it burns fast. Off heat, set aside.
+
 **Wok dish -- Chicken**: Wok ripping hot, *generous* **olive oil**. Drop the **chicken pieces** in a single layer, *don't move* 60-90 seconds until the bottom faces are golden and crusted. Flip, 30 seconds. Add the **sliced garlic** last 30 seconds, toss once. They're already fully cooked -- you're building color only. Off heat.
 
-Spread the **tight tomato sauce** across a serving platter. Lift the chicken out of the wok and arrange over the sauce. Grate **parmesan** generously over the top. **Torch** until blistered and spotty-brown. Scatter the **crisped panko** immediately -- don't wait or it disappears. Finish with a drizzle of **olive oil** and a pinch of **parsley** scattered over.
+Spread some **tomato sauce** across a serving platter. Lift the chicken out of the wok and arrange over the sauce. Grate **parmesan** generously over the top. **Torch** until blistered and spotty-brown. Scatter the **crisped panko** immediately -- don't wait or it disappears. Finish with a drizzle of **olive oil** and a pinch of **parsley** scattered over.
 
-**Garlic butter pasta**: drain the pasta, toss in the wok (wiped) or the same pot with a knob of **butter** + *2 cloves* minced **garlic** + a splash of reserved **pasta water**. Season with **salt** and cracked pepper.
+**Garlic butter pasta**: cook and drain the pasta, toss in the same pot with a knob of **butter** + some garlic powder + a splash of reserved **pasta water**. Season with **salt** and cracked pepper.
 
 **Table**: **pasta** in individual bowls. **Chicken parm platter** in the center of the lazy susan. **White bean salad** and **roasted zucchini** in shared dishes flanking it.
 
