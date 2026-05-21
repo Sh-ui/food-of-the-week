@@ -118,7 +118,7 @@ Green cabbage slaw -- cilantro, lime, oil, salt, cold and crunchy
 
 ---
 
-## Wok Chicken Parm
+## ✓ Wok Chicken Parm
 
 ##### WokNightPrep+
 ###### prep/salad + zucchini + pasta water
@@ -173,10 +173,10 @@ Spread some **tomato sauce** across a serving platter. Lift the chicken out of t
 ## Tilapia
 
 ##### Prep&Heat
-###### harissa rub + 5:30 couscous + wok cai
+###### 5:30 couscous 
 
 #### Anchor:
-**Tilapia** fillets rubbed with **harissa** and roasted in a hot oven or air fryer until the crust chars at the edges, served on a shared platter with parsley and lemon.
+**Tilapia** fillets roasted in a hot oven or air fryer until the crust chars at the edges
 
 #### Fan:
 Garlic couscous (or white rice)
@@ -192,23 +192,31 @@ Cucumber + parsley salad -- lemon, olive oil, cold
 
 ### Sous Chef - Prep
 
-- [ ] If **tilapia** is still frozen, cold water thaw: leave in packaging, submerge in cold water 20-30 min, swap water once. Pat *completely dry* before rubbing.
-- [ ] Rub **tilapia** on both sides with **harissa paste**, a drizzle of **olive oil**, and a pinch of **salt**. Set on a small lined tray.
-- [ ] Slice **bell pepper 2** into strips. Halve the **cherry tomatoes**. Smash *2 cloves* **garlic**. Set everything near the stove.
-- [ ] **Cucumber salad**: slice the **cucumber** into thin rounds or ribbons. Roughly chop a small handful of **parsley** leaves. Into a bowl: cucumber + parsley + *2 tbsp* **olive oil** + juice of *half a lemon* + pinch of **salt**. Toss, taste. Refrigerate.
-- [ ] At **5:30** start **couscous** in the rice cooker: smash *2 garlic cloves* into the dry couscous, add water (1:1.5 ratio, couscous to water), pinch of **salt**. Cook, hold on warm. (Or start **white rice** if skipping couscous.)
+- [ ] Slice *just **one*** of the *smallest* **rainbow peppers** into strips
+- [ ] Wash, but *don't* cut the **cherry tomatoes**
+- [ ] Peel *2 cloves* **garlic**
+- [ ] Chop what remains of the **parsely**
+- [ ] *Set all of the above near the stove*
+- [ ] Cut what remains of the **cucumber** for the cucumber salad into small cubes or slices
+- [ ] Finely *dice* & ***rinse** the other half of **white onion** from yesterday
+- [ ] Get some **lemon** ready for juicing
+- [ ] Preheat oven to **maximum tempeture**
 
 ### Sous Chef - Assembly
 
-Preheat oven to **425°F** (or air fryer to **400°F**). Roast the **harissa tilapia** 10-12 min until the flesh flakes easily and the crust chars at the edges. Transfer to a serving platter and hold on warm.
+**Cucumber Salad**: Into a bowl goes **cucumber** + **diced onion** + 2 tbsp olive oil + juice of half a lemon + pinch of salt. Toss, taste. Refrigerate.
 
-### Chef - Wok Sequence
+At **5:30** start **couscous** in the rice cooker (the small kind in from the plastic jar, not the pearl couscous in a bag): smash 2 garlic cloves (if we have them) into the dry couscous, add water (1:1.5 ratio, couscous to water), pinch of salt. Cook, hold on warm.
 
-**Wok cai -- charred pepper and tomatoes**: Wok ripping hot, thin film of **oil**. Drop the **bell pepper strips** flat, *don't move* 60-90 sec until charred. Toss, redistribute. Add the **smashed garlic**, toss 20 seconds. Drop in the **cherry tomatoes**, let them blister and burst in the wok heat, ~2 min. Season with **salt**, drizzle of **olive oil** off heat. Transfer to a small shared bowl.
+### Chef - Finishing
+
+**Wok cai -- charred pepper and tomatoes**: Wok ripping hot, thin film of **oil**. Drop the **bell pepper strips** flat, *don't move* 60-90 sec until charred. Toss, redistribute. Add the **garlic**, toss 20 seconds. Drop in the **cherry tomatoes**, let them blister and burst in the wok heat, ~2 min. Season with **salt**, drizzle of **olive oil** off heat. Transfer to a small shared bowl.
+
+**Tilapia**: Season it with whatever flavor paste/rub we are using. Then roast it on a tray for 10-12 min until the flesh flakes easily and the crust chars at the edges. Transfer to a serving platter.
 
 Scatter chopped **parsley** over the **tilapia platter** and nestle **lemon wedges** alongside.
 
-**Table**: **couscous** (or rice) in individual bowls. **Tilapia platter** in the center. **Charred pepper and tomatoes** and **cucumber salad** in shared dishes. Lemon wedges for squeezing.
+**Table**: **couscous** in individual bowls. **Tilapia platter** in the center. **Charred pepper and tomatoes** and **cucumber salad** in shared dishes.
 
 ---
 
