@@ -173,7 +173,7 @@ Spread some **tomato sauce** across a serving platter. Lift the chicken out of t
 ## Tilapia
 
 ##### Prep&Heat
-###### 5:30 couscous 
+###### prep/salad + 5:30 couscous + preheat
 
 #### Anchor:
 **Tilapia** fillets roasted in a hot oven or air fryer until the crust chars at the edges
