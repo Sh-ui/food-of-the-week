@@ -198,7 +198,7 @@ Cucumber + parsley salad -- lemon, olive oil, cold
 - [ ] Chop what remains of the **parsely**
 - [ ] *Set all of the above near the stove*
 - [ ] Cut what remains of the **cucumber** for the cucumber salad into small cubes or slices
-- [ ] Finely *dice* & ***rinse** the other half of **white onion** from yesterday
+- [ ] Finely *dice* & ***rinse*** the other half of **white onion** from yesterday
 - [ ] Get some **lemon** ready for juicing
 - [ ] Preheat oven to **maximum tempeture**
 
