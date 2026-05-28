@@ -1,4 +1,4 @@
-<!-- • https://sh-ui.github.io/food-of-the-week/ -->
+<!-- ✓ • https://sh-ui.github.io/food-of-the-week/ -->
 
 # Week of May 24-30, 2026
 
@@ -64,7 +64,7 @@
 
 ---
 
-## Weekend Prep
+## ✓ Weekend Prep
 
 ##### BatchDay
 ###### saturday: thaw salmon + chicken + beef / sunday: chicken bag + broccoli bag + shape meatballs
@@ -81,11 +81,10 @@
 
 - [ ] **Chicken thigh bag** -- season thawed thighs with **salt**, **black pepper**, and 2 smashed **garlic cloves**. Vac seal flat. SV 160°F / 2 h. Ice bath, refrigerate. These are Thursday's orange chicken.
 - [ ] After chicken is done, raise bath to **183°F**. **Broccoli bag** -- cut *1 large head* **broccoli** into florets, season with a pinch of **salt** and a drizzle of **sesame oil**, vac seal. SV 183°F / 8 min. Ice bath, refrigerate. This is Thursday's sesame cai.
-- [ ] **Feta meatballs** (for Tuesday): combine the thawed **ground beef** in a bowl with *1/2 cup* crumbled **feta**, *1 tsp* **dried oregano**, *1/2 tsp* **cumin**, *1/2 tsp* **black pepper**, *1/2 tsp* **salt**, and *1 minced garlic clove*. Mix gently -- don't overwork. Roll into golf-ball-sized meatballs. Arrange on a plate, cover, refrigerate. Makes about 16-18 meatballs.
 
 ### Workflow
 
-Saturday is bag moves only. Sunday: drop the **chicken bag** in the bath first (160°F / 2 h). While it runs, shape the **meatballs** and refrigerate. Once chicken is done -- ice bath, bag in the fridge -- raise the bath to 183°F and run the **broccoli bag** (8 min). Done by early afternoon.
+Saturday is bag moves only. Sunday: drop the **chicken bag** in the bath first (160°F / 2 h). Once chicken is done -- ice bath, bag in the fridge -- raise the bath to 183°F and run the **broccoli bag** (8 min). Done by early afternoon.
 
 ### Protein Bags
 
@@ -93,7 +92,7 @@ Saturday is bag moves only. Sunday: drop the **chicken bag** in the bath first (
 
 ---
 
-## Sheet Pan Miso Salmon
+## ✓ Sheet Pan Miso Salmon
 
 ##### Prep&Heat
 ###### prep + miso glaze + kimchi salad + 5:30 rice + sheet pan in
@@ -140,46 +139,45 @@ Just before serving, toss the **bagged greens** in a large bowl with a few spoon
 
 ---
 
-## Mediterranean Orzo with Feta Meatballs
+## Feta Meatballs Orzo
 
 ##### WokNight
-###### prep + chickpea salad + orzo water + wok sequence
+###### form meatballs + chickpea salad + orzo water
 
 #### Anchor:
-**Ground beef and feta meatballs** -- seared in the wok until deeply crusted, herby and savory inside, plated over warm lemon-parsley orzo.
+**Ground beef and feta meatballs** -- seared in the wok until deeply crusted, herby and savory inside, plated over warm lemon-garlic orzo.
 
 #### Fan:
-Lemon-parsley orzo -- tossed with olive oil, lemon zest and juice, fresh parsley, garlic.
+Lemon-garlic orzo -- tossed with olive oil, lemon zest and juice, fresh garlic.
 
 #### Cai:
 Chickpea + tomato + cucumber + onion salad -- lemon juice, olive oil, parsley, cold.
 
 Wok-fired green beans -- cumin, coriander, black pepper, garlic. Dry and charred.
 
-### Already Prepped
-
-- **Feta meatballs** shaped and refrigerated from Sunday.
-
 ### Sous Chef - Prep
 
 - [ ] Drain and rinse *1 can* **chickpeas**.
-- [ ] Finely dice *1* **roma or plum tomato** into small cubes.
-- [ ] Dice *1/2* **cucumber** into small cubes.
-- [ ] Finely dice *1/4* **yellow onion**, rinse under cold water 10 seconds, drain.
-- [ ] Chop a generous handful of **parsley** -- half for the chickpea salad, half for the orzo.
-- [ ] Zest and halve *2* **lemons**.
-- [ ] Trim the ends off the **green beans**.
-- [ ] Fill a large pot with water and **salt it generously**. Bring to a boil for the orzo.
+- [ ] Dice *2* **plum tomato** into small cubes.
+- [ ] Dice *1* **cucumber** into small cubes.
+- [ ] Finely dice *half* a **large white onion**, rinse under cold water + drain -- *save* half of this for the meatballs, the rest for the chickpea salad
+- [ ] Chop a generous handful of **parsley** -- *save* half for the meatballs + half for the chickpea salad
+- [ ] Halve *2* **lemons** -- *please* ***save them** so I can *zest* them later.
+- [ ] Trim the ends off the **green beans** -- Set aside near the stove.
+- [ ] Peel a *whole head* of **garlic cloves** -- these will be used in various ways
+- [ ] Fill a large pot with water and **salt it generously**. Bring to a boil then keep warm until chef.
 
 ### Sous Chef - Assembly
 
-**Chickpea salad**: combine the **chickpeas**, diced **tomato**, diced **cucumber**, **rinsed diced onion**, *half the parsley*, juice of *1 lemon*, *3 tbsp* **olive oil**, a generous pinch of **salt** and **black pepper**. Toss. Taste -- bright, lemony, savory. Refrigerate.
+**Chickpea salad**: combine the **chickpeas**, diced **tomato**, diced **cucumber**, **rinsed diced onion**, *half the parsley*, juice of *1 lemon*, *3 tbsp* **olive oil (dark green short bottle)**, a generous pinch of **salt** and **black pepper**. Toss. Taste -- bright, lemony, fresh. Refrigerate.
 
-**Orzo**: cook in the boiling salted water until just al dente (follow pkg time minus 1 min -- it will continue cooking as you dress it). Drain, immediately return to the pot off heat. Toss with *3 tbsp* **olive oil**, *lemon zest* of 1 lemon, juice of *half a lemon*, *the remaining parsley*, *1 minced or pressed garlic clove*, generous **salt** and **black pepper**. Pour into a wide serving bowl. It should be glossy and fragrant. Hold warm.
+**Feta meatballs**: combine the thawed **ground beef** in a bowl with *1/2 cup* crumbled **feta**, *1 tsp* **dried oregano**, *1/2 tsp* **cumin**, *1/2 tsp* **black pepper**, *1/2 tsp* **salt**, *3 pressed garlic cloves* and the other *half the parsley*. Mix *very* well. Grab a small amount and microwave it so you can ***taste*** for salt and seasoning. Once it tastes right, *then* roll into golf-ball-sized meatballs. Arrange on a sheet pan, cover, refrigerate. Makes about 16-18 meatballs.
 
 ### Chef - Wok Sequence
 
-**Wok dish 1 -- Meatballs**: Wok ripping hot, generous **oil** -- enough to coat the bottom. Place the **meatballs** in without crowding (work in batches if needed). *Don't move* for 90 seconds until the bottom is deeply browned. Roll to the next face, repeat. Work all 3-4 sides until a dark crust is set all around, 8-10 min total. They'll be cooked through by the time they're fully crusted. Transfer to a plate. ***Taste one*** -- adjust salt if needed.
+**Orzo**: cook in the boiling salted water until just al dente (follow pkg time minus 1 min -- it will continue cooking as you dress it). Drain, immediately return to the pot off heat. Toss with *3 tbsp* **olive oil**, *lemon zest* of 1 lemon, juice of *half a lemon*, *1 minced or pressed garlic clove*, generous **salt** and **black pepper**. Pour into a wide serving bowl. It should be glossy and fragrant. Hold warm.
+
+**Wok dish 1 -- Meatballs**: Wok ripping hot, generous **oil** -- enough to coat the bottom. Place the **meatballs** in without crowding (work in batches if needed). *Don't move* for 90 seconds until the bottom is deeply browned. Roll to the next face, repeat. Work all 3-4 sides until a dark crust is set all around, 8-10 min total. They'll be cooked through by the time they're fully crusted.
 
 **Wok dish 2 -- Green beans**: quick rinse of the wok. Back to ripping hot, splash of **oil**. Dump the **green beans** in, spread flat, *don't touch* 60-90 seconds until blistered in spots. Toss. Add *2 cloves* **minced garlic**, toss 20 seconds. Add *1 tsp* **cumin** + *1/2 tsp* **coriander** + *generous* **black pepper** + pinch of **salt**. Toss hard until coated and fragrant. Off heat.
 
