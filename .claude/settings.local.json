@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node .claude/skills/plan-week/parse-archive.mjs --list --since=20251102 --until=20251102)",
+      "Bash(node .claude/skills/plan-week/parse-archive.mjs --facets)",
+      "Bash(node .claude/skills/plan-week/parse-archive.mjs --list --protein=chicken,pork --since=20260101)",
+      "Bash(node .claude/skills/plan-week/parse-archive.mjs --id=20260503-orange-chicken --full)",
+      "Bash(node -e 'const m=JSON.parse\\(require\\(\"fs\"\\).readFileSync\\(0\\)\\)[0]; console.log\\(m? m.name+\" | fan:\"+m.fan : \"NOT FOUND\"\\)')",
+      "Bash(node .claude/skills/plan-week/parse-archive.mjs --facets --protein=lamb)",
+      "Bash(node .claude/skills/plan-week/parse-archive.mjs --list --protein=shrimp,pork --cuisine=east-asian,indian-sasian)",
+      "Bash(node .claude/skills/plan-week/parse-archive.mjs --list --cuisine=indian-sasian)",
+      "Bash(npm run *)",
+      "Bash(git fetch *)",
+      "Bash(git rev-list *)",
+      "Bash(git add *)"
+    ]
+  }
+}

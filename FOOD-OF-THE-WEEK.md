@@ -1,249 +1,245 @@
 <!-- https://sh-ui.github.io/food-of-the-week/ -->
 
-# Week of June 14-20, 2026
-
-*Family of four this week. Deliberately light prep -- the only make-ahead is the lentils.*
+# Week of June 21-27, 2026
 
 ## Grocery List
 
 ### Produce
 
-- [ ] Bell peppers - 1 three-pack (Orange Chicken glaze + Tilapia cai + Dal salad)
-- [ ] Broccoli - 1 head (Orange Chicken)
-- [ ] Carrots - 3-4 (Orange Chicken ribbon salad)
-- [ ] Cucumbers - 2 (Tilapia + Dal salads)
-- [ ] Cherry tomatoes - 1 pint (Tilapia cai; a few diced into the Dal salad)
-- [ ] Green cabbage - 1 small head (Chili slaw)
-- [ ] Cilantro - 1 bunch (Chili slaw)
-- [ ] Jalapeños - 1-2 (Chili slaw + Dal)
-- [ ] Parsley - 1 bunch (Tilapia)
-- [ ] Scallions - 1 bunch (Orange Chicken)
-- [ ] Yellow/white onion - 2 (Tilapia, Dal, Chili)
-- [ ] Oranges - 2 (Orange Chicken sauce)
-- [ ] Limes - 2 (Chili slaw)
-- [ ] Garlic
-- [x] Ginger (on hand)
-- [x] Lemons (on hand)
+- [ ] Scallions - 2 bunches (Korean pork marinade + garnishes)
+- [ ] Fresh ginger - 1 large knob (Korean pork, glazed carrots, curry)
+- [ ] Carrots - ~1.25 lb (Korean carrot-edamame salad + glazed carrots night)
+- [ ] Cucumber - 1 (kimchi salad)
+- [ ] Yukon Gold potatoes - ~2 lb (pumpkin curry chunks + smashed potatoes night)
+- [ ] Asparagus - 1 bunch (scampi)
+- [ ] Celery - 1 small head, with leaves (scampi)
+- [ ] Red bell pepper - 1 (scampi)
+- [ ] Romaine - 1 head (curry side salad)
+- [ ] Lemons - 3 (scampi)
+- [ ] Parsley - 1 bunch (scampi)
+- [x] Yellow onions (pantry)
+- [x] Garlic (pantry)
 
 ### Protein
 
-- [x] Chicken thighs, boneless - 1 pack (freezer)
-- [x] Tilapia fillets, frozen (freezer)
-- [x] Veggie chili - 2 frozen meal cubes (freezer)
+- [x] Pork loin roast (ButcherBox, freezer -- split across Korean Pork + SV roast night)
+- [x] Shrimp, peeled & deveined (freezer, half bag -- scampi)
+- [x] Seasoned soaked lentils, vac-packed (freezer -- pumpkin curry)
 
 ### Dairy
 
-- [ ] Butter
-- [x] Greek yogurt (optional crema)
+- [ ] Butter - 1 stick (scampi + glazed carrots)
+
+### Frozen
+
+- [ ] Shelled edamame - 1 bag (Korean carrot-edamame salad)
 
 ### Pantry
 
-- [ ] Fire roasted corn - 1 can (Chili slaw)
-- [ ] Couscous - the small kind in the plastic jar (Tilapia fan)
-- [ ] Cornstarch (Orange Chicken crust)
-- [ ] Red lentils - 1 bag (Sunday simmer -- *confirm on hand*)
+- [ ] Egg noodles - 12 oz (scampi)
+- [ ] Coconut milk - 1 can (pumpkin curry)
+- [ ] Kimchi - 1 jar (Korean cucumber salad)
+- [ ] Honey - small bottle (glazed carrots -- or sub the pantry sugar)
+- [x] Canned pumpkin (pantry)
 - [x] White rice (pantry)
-- [x] Soy sauce / light soy, rice vinegar, sugar, sesame oil, sesame seeds (pantry)
-- [x] Harissa paste (fridge)
-- [x] Miso (fridge)
-- [x] Kimchi (fridge)
-- [x] Spices: turmeric, cumin, chili flakes/cayenne (pantry)
+- [x] Walnuts (pantry -- carrot salad topping in place of peanuts)
+- [x] Sugar (pantry)
 
 ---
 
-## Sunday Prep
+## Weekend Prep
 
 ##### BatchDay
-###### light week: simmer the lentils, then just thaw on schedule
+###### saturday: thaw loin + shrimp + lentils / sunday: split loin (SV bag + bulgogi slice) + SV carrots
 
 ### Prep Checklist
 
-**Today (Sunday):**
+**Saturday afternoon:**
 
-- [ ] **Pre-simmer the red lentils**: rinse *~1.25 cups* **red lentils** in a fine strainer until the water mostly runs clear. Into a heavy pot: *~4 cups water*, *1 tsp* **turmeric**, *1 tsp* **salt**, a knob of **butter**. Bring to a boil, drop to a low simmer, stir occasionally for ~25 min until they dissolve into a creamy porridge. Cool and refrigerate -- this is the Lentil Dal base.
+- [ ] Move the **pork loin roast** from the freezer to the fridge to thaw overnight.
+- [ ] Move the **shrimp bag** from the freezer to the fridge to thaw.
+- [ ] Move the **seasoned soaked lentil bag** from the freezer to the fridge to thaw.
 
-**Thaw cues (no other prep):**
+**Sunday:**
 
-- [ ] Move the **pack of chicken thighs** from the freezer to the fridge the *night before* **Orange Chicken night**.
-- [ ] **Tilapia stays frozen** -- it roasts straight from frozen.
-- [ ] **Chili cubes stay frozen** until chili night.
+- [ ] **Split the loin** into two roughly equal halves. *Half A* (the roast) -- season all over with **salt**, **black pepper**, and 2 smashed **garlic cloves**, vac seal flat for the SV night.
+- [ ] *Half B* (Korean) -- firm it up in the freezer *~20 min* for clean cuts, then slice *thin against the grain*. Toss in the bulgogi marinade: *4 tbsp* **soy sauce**, *2 tbsp* **sugar**, *1 tbsp* **sesame oil**, *1 inch* grated **ginger**, *3 cloves* grated **garlic**, sliced whites of *2 scallions*, a crack of **black pepper**. Bag and refrigerate -- it improves over a couple days.
+- [ ] **Carrot bag** -- peel and cut *~0.75 lb* **carrots** into thick coins on the bias, drizzle of **oil** + pinch of **salt**, vac seal. SV 183°F / ~40 min until just tender. Ice bath, refrigerate -- they reheat in the sear pan Wednesday.
 
 ### Workflow
 
-A deliberately light week: no sous-vide, no charred-and-marinated peppers, no pre-made dressings. The only real task today is simmering the lentils (~25 min, mostly unattended). Everything else -- broccoli, peppers, salads, dressings -- is made the night of.
+**Cooking for 4 this week** (in-laws away), so portions and the per-night spread are scaled down -- one anchor, one fan, two cai, no soup. Lighter prep all around.
+
+Saturday is three bag moves to the fridge. Sunday is one focused session: split and bag both halves of the loin (season *Half A*, slice and marinate *Half B*), then run the **carrot bag** in the SV bath at 183°F. The lentils thaw on their own. Everything is portioned and cold by mid-afternoon -- the loin does double duty across two nights, and weeknights become heat-and-finish.
+
+### Protein Bags
+
+**SV pork loin** (roast night): *Half A*, seasoned with salt, pepper, smashed garlic, vac sealed flat. Cooked night-of -- SV 140°F.
+
+**Bulgogi pork loin** (Korean Pork): *Half B*, sliced thin against the grain, in soy-sugar-sesame-ginger-garlic-scallion marinade. Wok-fired hot night-of -- the loin is lean, so it's a fast, hot sear, not a long cook.
+
+### Cai Bags
+
+**Glazed-carrot base**: carrot coins SV'd at 183°F / ~40 min, vac sealed. Reheat and glaze in the sear pan on the SV pork night.
 
 ---
 
-## Veggie Chili
-
-##### Prep&Heat
-###### slaw + 5:30 rice + reheat chili cubes
-
-#### Anchor:
-Veggie chili -- chipotle, cocoa, black beans -- reheated from your **2 frozen meal cubes**. No chili-making tonight; just thaw and warm through.
-
-#### Fan:
-White rice
-
-#### Cai:
-Fire-roasted corn and cabbage slaw -- shredded green cabbage, fire-roasted corn, jalapeño, cilantro, lime. Cold and crunchy, the single side this week.
-
-### Already Prepped
-
-- **2 chili cubes** in the freezer, ready to reheat.
-
-### Sous Chef - Prep
-
-- [ ] Pull **2 chili cubes** from the freezer to start thawing (microwave defrost, or a saucepan over low with a splash of water).
-- [ ] Finely *shred* about *half* a head of **green cabbage** into a bowl.
-- [ ] Drain *1 can* **fire roasted corn**.
-- [ ] Mince *half/whole* a **jalapeño** (to taste).
-- [ ] Wash and chop a handful of **cilantro**.
-- [ ] Cut *1-2* **limes** into wedges.
-- [ ] At **5:30** start **white rice** in the rice cooker.
-
-### Sous Chef - Assembly
-
-**Corn and cabbage slaw**: into the bowl with the **shredded cabbage** add the drained **fire roasted corn**, **jalapeño**, and **cilantro**. Dress with the juice of *1 lime*, *2 tbsp* **olive oil**, a generous pinch of **salt**. Toss hard. ***Taste*** -- bright, crunchy, a little smoky from the corn. Refrigerate; toss again right before serving.
-
-### Chef - Finishing
-
-**Chili**: get the **chili cubes** into a pot over medium heat with a small splash of water to loosen. Stir occasionally until fully heated through and bubbling. ***Taste*** -- adjust salt, add a splash of hot sauce or a pinch of chili powder if it needs waking up after the freezer.
-
-**Table**: **rice** in individual bowls. **Chili** in a wide center bowl. **Corn and cabbage slaw** in a shared dish. Extra **lime wedges** and **Greek yogurt** as a crema on the table.
-
----
-
-## Harissa Tilapia
-
-##### Prep&Heat
-###### prep/salad + 5:30 couscous + preheat
-
-#### Anchor:
-**Tilapia** fillets rubbed with **harissa** and olive oil, roasted from frozen in a ripping-hot oven or air fryer until the flesh flakes and the edges char.
-
-#### Fan:
-Garlic couscous
-
-#### Cai:
-Wok-charred bell pepper with burst cherry tomatoes -- garlic, olive oil, hot
-
-Cucumber + parsley salad -- lemon, olive oil, cold
-
-### Already Prepped
-
-- (nothing -- sous chef handles all of tonight; the tilapia goes in frozen)
-
-### Sous Chef - Prep
-
-- [ ] Slice *1* **bell pepper** into strips
-- [ ] Wash, but *don't* cut the **cherry tomatoes**
-- [ ] Peel *2 cloves* **garlic**
-- [ ] Chop a handful of **parsley** -- some for the cucumber salad, some for garnishing the fish
-- [ ] *Set all of the above near the stove*
-- [ ] Cut *1* **cucumber** into small cubes or slices
-- [ ] Finely *dice* & ***rinse*** *half* a **white onion**
-- [ ] Get a **lemon** ready for juicing
-- [ ] Preheat oven (or air fryer) to **maximum temperature**
-
-### Sous Chef - Assembly
-
-**Cucumber salad**: into a bowl goes **cucumber** + **diced onion** + a little chopped **parsley** + *2 tbsp* olive oil + juice of *half a lemon* + pinch of salt. Toss, taste. Refrigerate.
-
-At **5:30** start **couscous** in the rice cooker (the small kind from the plastic jar, not the pearl couscous in a bag): smash 2 garlic cloves into the dry couscous, add water (1:1.5 ratio, couscous to water), pinch of salt. Cook, hold on warm.
-
-### Chef - Finishing
-
-**Wok cai -- charred pepper and tomatoes**: Wok ripping hot, thin film of **oil**. Drop the **bell pepper strips** flat, *don't move* 60-90 sec until charred. Toss, redistribute. Add the **garlic**, toss 20 seconds. Drop in the **cherry tomatoes**, let them blister and burst in the wok heat, ~2 min. Season with **salt**, drizzle of **olive oil** off heat. Transfer to a small shared bowl.
-
-**Tilapia**: rub the **frozen fillets** all over with **harissa** and a little **olive oil**. Roast on a tray for **15-18 min** -- a few minutes longer than thawed, since they go in frozen -- until the flesh flakes easily and the crust chars at the edges. Pat off any released moisture partway through to help it crust. Transfer to a serving platter.
-
-Scatter the reserved chopped **parsley** over the **tilapia platter** and nestle **lemon wedges** alongside.
-
-**Table**: **couscous** in individual bowls. **Tilapia platter** in the center. **Charred pepper and tomatoes** and **cucumber salad** in shared dishes.
-
----
-
-## Orange Chicken
+## Korean Pork
 
 ##### WokNight
-###### prep + carrot salad + 5:30 rice + steam broccoli + wok sequence
+###### cucumber salad + carrot-edamame salad + 5:30 rice + wok sequence
 
 #### Anchor:
-Cornstarch-crusted **chicken thigh** (your one pack, thawed) shallow-fried in the wok and tossed in an orange-soy glaze with **bell pepper** cooked in -- garlic, ginger, orange juice and zest.
+Bulgogi-leaning **pork loin**, sliced thin against the grain from the Sunday marinade bag and wok-fired *ripping hot* until the edges caramelize and the marinade reduces to a glossy glaze, finished with **scallion** whites and greens.
 
 #### Fan:
 White rice
 
 #### Cai:
-Sesame broccoli -- steamed day-of, then wok-charred with garlic, sesame oil and seeds
+Cucumber kimchi salad -- smashed **cucumber**, **kimchi**, sesame oil, scallion. Cold and sharp, made day-of.
 
-Ribbon carrot salad -- peeler ribbons, scallion, miso-ginger-lemon dressing, cold
+Carrot-edamame salad -- soy-ginger dressed, topped with **walnuts**, scallion greens, and **furikake** at the table.
 
 ### Already Prepped
 
-- **Chicken thighs** thawed in the fridge (moved over the night before).
+- **Bulgogi pork** sliced and marinating in the fridge from Sunday.
 
 ### Sous Chef - Prep
 
-- [ ] Use a vegetable peeler to make **carrot ribbons**: peel along the length of *3-4* **carrots**, rotating as you go, stopping at the seedy core. Into a bowl.
-- [ ] Cut *1 head* **broccoli** into florets and **steam** until just tender-crisp (steamer basket or microwave). Set aside to finish in the wok later.
-- [ ] Slice *1-2* **bell peppers** into strips. Set near the stove.
-- [ ] Slice *3-4* **scallions** -- whites for the wok, greens for the carrot salad and garnish.
-- [ ] Finely *mince* a *thumb* of **ginger** (a fine mince is great -- no grating needed) -- split between the dressing and the wok.
-- [ ] **Orange sauce**: in a small bowl whisk together juice of *2* **oranges**, zest of *1 orange*, *4 tbsp* **soy sauce**, *2 tbsp* **rice vinegar**, *3 tbsp* **sugar**, *1 tsp* **cornstarch** dissolved in the liquid. Set near the stove.
+- [ ] Pull the **pork bag** from the fridge 20 min before cooking.
+- [ ] Thaw *1.5 cups* **frozen edamame** under warm water, drain well.
+- [ ] Peel *2-3* **carrots** into ribbons or matchsticks for the salad.
+- [ ] Slice *3-4* **scallions** -- whites for the wok, greens for garnish.
+- [ ] Smash *1* **cucumber** (whack it, tear into rough chunks) for the kimchi salad.
+- [ ] Roughly chop a small handful of **walnuts**.
 - [ ] At **5:30** start **white rice** in the rice cooker.
 
 ### Sous Chef - Assembly
 
-**Miso-ginger-lemon dressing**: whisk together *1 tbsp* **white miso**, *1 tsp* finely minced **ginger**, juice of *half a lemon*, *1 tsp* **light soy sauce**, *1-2 tsp* **sugar** (to loosen and balance), and *2 tbsp* **neutral or sesame oil**. It should pour easily and taste savory-bright.
+**Cucumber kimchi salad**: into a bowl with the smashed **cucumber**, a generous scoop of **kimchi** (roughly equal volume), *2 scallion greens* sliced thin, a few drops of **sesame oil**. Toss. Taste -- tart, spicy, crunchy. Refrigerate.
 
-**Carrot ribbon salad**: into a serving bowl with the **carrot ribbons** and **scallion greens**, add the **miso-ginger-lemon dressing**. Toss gently. ***Taste*** -- savory, bright, clean. Refrigerate.
+**Carrot-edamame salad**: combine the **carrots** and drained **edamame** with a splash of **soy sauce**, *1 tsp* grated **ginger**, *1 tsp* **sesame oil**, a pinch of **sugar**. Toss. Refrigerate. Hold the **walnuts**, scallion greens, and **furikake** to scatter at the table.
 
 ### Chef - Wok Sequence
 
-**Wok dish 1 -- Orange chicken with pepper**: cut the **boneless thighs** into large chunks. Season with **salt**, toss thoroughly in **cornstarch** until no longer sticky. Wok ripping hot, generous **neutral oil** -- enough to shallow-fry. Fry chicken in batches without crowding, *don't move* until a firm crust forms on the bottom, 2-3 min. Flip, 2 more min, until cooked through. Remove all chicken to a plate. Pour off most of the oil, leaving a thin film. Add *2 cloves* **minced garlic** and the **minced ginger**, stir 20 seconds. Add **scallion whites**, toss 15 seconds. Add **bell pepper strips**, toss 60 seconds. Pour in the **orange sauce** -- it will bubble and thicken fast. Return **chicken** to the wok, toss to coat. If the sauce is too thick, splash in a little water. Off heat: **big pinch of chili flakes** and **zest of the remaining orange**. ***Taste*** -- adjust soy or sugar. Out.
+**Wok dish -- Korean pork**: Wok *ripping hot*, thin film of **oil**. Lift the **pork slices** out of the marinade (reserve it) and lay them in a single layer -- *don't crowd*, work in batches. *Don't move* 60-90 seconds until the bottoms caramelize, then toss to sear the other side, ~30 seconds. The loin is *lean* -- pull it the moment it's seared and just cooked, don't dry it out. Once all the pork is back in, pour in a few spoonfuls of the **reserved marinade**, let it bubble and reduce to a *glossy glaze* coating the meat, ~1 min. Off heat. Toss in the **scallion whites**. ***Taste*** -- adjust soy or sugar.
 
-**Wok dish 2 -- Broccoli**: quick rinse of the wok. Ripping hot, splash of **oil**. Dump in the **steamed broccoli**, spread flat, *don't touch* 60-90 seconds until charred in spots. Toss, add *2-3 sliced garlic cloves*, toss 20 seconds. Off heat: drizzle of **sesame oil**, generous scatter of **sesame seeds**. Out.
-
-**Table**: **rice** in individual bowls. **Orange chicken** in a center bowl. **Sesame broccoli** and **ribbon carrot salad** in shared dishes. Extra **scallion** scattered over the chicken.
+**Table**: **rice** in individual bowls. **Korean pork** in a center bowl on the lazy susan. **Cucumber kimchi salad** and **carrot-edamame salad** in shared dishes -- scatter **walnuts**, scallion greens, and **furikake** over the carrot salad as it lands.
 
 ---
 
-## Lentil Dal
+## Shrimp Scampi
 
 ##### Prep&Heat
-###### reheat dal + 5:30 rice + cucumber salad
+###### cut vegetables + boil noodles + high-heat sear
 
 #### Anchor:
-Creamy **red lentil dal** with turmeric, finished with sautéed onion, garlic, and jalapeño plus a simple **cumin-butter temper** stirred right in. The lentils were simmered Sunday, so tonight is reheat and finish.
+A fast stir-fried take on shrimp scampi -- **shrimp** seared hot, tossed with quick-charred vegetables in **garlic butter**, white wine, and **lemon**, over **egg noodles**. The celery leaves finish it herbaceous.
+
+#### Fan:
+Egg noodles
+
+#### Cai:
+The charred vegetables (asparagus, celery, bell pepper) live in the dish -- this is a one-bowl night.
+
+### Already Prepped
+
+- **Shrimp** thawed and deveined in the fridge from the weekend.
+
+### Sous Chef - Prep
+
+- [ ] Bring a large pot of *generously salted* water to a boil for the **egg noodles**.
+- [ ] Cut **asparagus** into 2-inch pieces on the bias.
+- [ ] Slice **celery** thinly on the bias -- reserve the leaves, roughly chopped.
+- [ ] Slice the **red bell pepper** into thin strips.
+- [ ] Mince *4-5 cloves* **garlic**.
+- [ ] Halve *2-3* **lemons** for juicing and wedges.
+- [ ] Chop a handful of **parsley**.
+- [ ] Cook the **egg noodles** to just shy of al dente, drain, toss with a little **oil** to keep them loose. Set aside.
+
+### Chef - Finishing
+
+Heat a large **wok** over high heat with a drizzle of **oil**. Add **asparagus**, **celery**, and **bell pepper**. Stir-fry 2-3 min until crisp-tender and lightly charred. Remove to a plate.
+
+A bit more **oil** to the same pan, still *ripping hot*. Add the **shrimp** in a single layer, season with **salt** and **black pepper**. *Don't move* ~1 min until seared, flip, ~1 min more until just pink. Remove to the plate with the vegetables -- *don't overcook them*.
+
+Reduce heat to medium. Add a knob of **butter** and the minced **garlic**, cook 30 seconds until fragrant. Add a splash of **white wine** (cooking wine) and the juice of *1 lemon*. Let it bubble and reduce, scraping up the browned bits.
+
+Return the **shrimp**, **vegetables**, and **egg noodles** to the pan. Toss everything in the garlic butter. Add **red pepper flakes** to taste. Finish with **parsley** and the reserved **celery leaves**.
+
+**Table**: plate in bowls, making sure everyone gets plenty of the garlic butter sauce. Extra **lemon wedges** on the side.
+
+---
+
+## SV Pork Loin & Smashed Potatoes
+
+##### SousVidePrep
+###### drop loin + carrots in bath PM + roast/smash potatoes + sear & glaze
+
+#### Anchor:
+Sous-vide **pork loin** finished with a hard sear for a deeply golden crust, served with sweet-savory **glazed carrots** off the Sunday SV bag.
+
+#### Fan:
+Roasted smashed potatoes -- crispy-edged, garlic, black pepper.
+
+#### Cai:
+The glazed carrots ride alongside the pork; the smashed potatoes are the fan.
+
+### Already Prepped
+
+- **SV pork loin bag** (*Half A*) in the fridge, seasoned and sealed from Sunday.
+- **Carrot bag** SV'd and sealed from Sunday, ready to reheat and glaze.
+
+### Sous Chef - Prep
+
+- [ ] In the afternoon, drop the **pork loin bag** into the sous vide bath -- *Chef sets 140°F remotely from the app*. It can hold there happily.
+- [ ] Boil *~1.25 lb* **Yukon Gold potatoes** (whole, or halved if large) in salted water until fork-tender, ~20 min. Drain well.
+- [ ] Spread the potatoes on an oiled sheet pan and *smash each one flat* with the bottom of a cup. Drizzle with **oil**, scatter **salt**, **black pepper**, and a little **garlic**.
+- [ ] Mince a thumb of **ginger** for the carrot glaze.
+- [ ] Drop the **carrot bag** into the same bath alongside the pork to warm through.
+
+### Chef - Finishing
+
+Roast the **smashed potatoes** at **450°F** for 25-30 min until the edges are *crispy and golden*. Hold warm.
+
+Remove the **pork loin** from the bag, reserve the juices, pat *completely dry*. Heat a large skillet over high heat with **oil**. Sear the loin 1-2 min per side until a *deeply golden crust* forms all around. Rest it on a board.
+
+Pull the **carrots** from their bag. Into the same hot pan: a knob of **butter**, the **carrots**, minced **ginger**, a splash of **soy sauce**, *1 tbsp* **honey** (or sugar), and the reserved **pork juices**. Toss 1-2 min until *glossy* and lightly caramelized.
+
+Slice the rested **pork loin** against the grain.
+
+**Table**: sliced **pork loin** fanned on a platter with the **glazed carrots** spooned alongside. **Smashed potatoes** in a shared bowl.
+
+---
+
+## Pumpkin Curry
+
+##### Prep&Heat+
+###### lentil-pumpkin simmer + 5:30 rice + romaine salad
+
+#### Anchor:
+**Seasoned lentils** and **canned pumpkin** simmered in **coconut milk** with chunked **Yukon Gold potatoes**, **onion**, **ginger**, and **garlic**, spiced from the cabinet -- **cumin**, **turmeric**, **coriander**, **cayenne** -- until thick, fragrant, and *deep orange-gold*. The potatoes absorb the spice while holding their shape.
 
 #### Fan:
 White rice
 
 #### Cai:
-Cucumber and bell pepper salad -- cucumber, bell pepper, tomato, onion, lemon. Cold and bright.
+Quick **romaine** salad -- rice wine vinegar, sesame oil, a few drops of fish sauce, a pinch of sugar. Cold and sharp against the rich curry.
 
 ### Already Prepped
 
-- **Red lentils** simmered creamy on Sunday, in the fridge -- just reheat.
+- **Seasoned soaked lentils** thawed in the fridge from the weekend -- already seasoned and softened, so they melt into the curry fast.
 
 ### Sous Chef - Prep
 
-- [ ] Pull the **cooked lentils** from the fridge into a heavy pot; add a splash of water to loosen and set over low heat to warm through, stirring occasionally.
-- [ ] Finely chop *1* **yellow onion** + *4 cloves* **garlic** + *1-2* **jalapeños** (or pickled).
-- [ ] Dice *1* **cucumber**, *half* a **bell pepper**, and a few **cherry tomatoes** into small cubes. Finely dice & rinse *a little* **onion**.
-- [ ] Get a **lemon** ready for juicing.
+- [ ] Dice *1* **onion**. Mince *3-4 cloves* **garlic** and a thumb of **ginger**. Cut *~0.75 lb* **potatoes** into 1-inch chunks.
+- [ ] In a heavy pot over medium heat, sauté the **onion** in **oil** until soft and starting to color. Add **garlic** and **ginger**, cook 1 min. Bloom *1 tsp* **cumin**, *1 tsp* **turmeric**, *1 tsp* **coriander**, and a pinch of **cayenne** in the oil for 30 seconds until the kitchen smells alive.
+- [ ] Add the **canned pumpkin**, the **thawed lentils**, **potato** chunks, and *1 can* **coconut milk**. Loosen with a cup or two of **water**. Season with **salt**, bring to a simmer, cover, and cook on low *20-25 min* until the potatoes are tender and the lentils have dissolved into the sauce. Stir occasionally so it doesn't catch.
 - [ ] At **5:30** start **white rice** in the rice cooker.
+- [ ] Tear **romaine** into a bowl. Whisk a quick dressing: **seasoned rice wine vinegar**, **sesame oil**, a few drops of **fish sauce**, a pinch of **sugar**. Dress just before serving.
 
-### Sous Chef - Assembly
+### Chef - Finishing
 
-**Cucumber and bell pepper salad**: into a bowl combine the diced **cucumber**, **bell pepper**, **tomato**, and **rinsed onion**. Dress with the juice of *half a lemon*, *1 tbsp* **olive oil**, pinch of **salt**. Toss, taste -- cooling and crunchy. Refrigerate.
+***Taste*** the curry. More **fish sauce** for salt, **cayenne** for heat, a splash of **rice wine vinegar** if it needs a lift. The sauce should coat a spoon -- *fragrant and slightly thick*. If it's tight, loosen with water; if loose, simmer it down.
 
-### Chef - Cooking
-
-**Dal finish**: in a small pan, heat *1 tbsp* **oil** over medium and soften most of the chopped **onion/garlic/jalapeño**, 3-5 min. Stir into the warm lentils and simmer 5 min. ***Taste*** -- adjust salt. Too thick: splash of water. Too loose: simmer down.
-
-**Cumin-butter temper**: small pan, medium-high heat, *3 tbsp* **butter**. Once it foams: *1 tsp* **cumin**, *1 smashed garlic clove*, pinch of **chili powder or cayenne**. Sizzle 30 seconds until nutty, then **stir it straight into the dal pot** and fold through.
-
-**Table**: **rice** in individual bowls. **Dal** in a wide shared bowl. **Cucumber and bell pepper salad** in a shared dish. **Lemon wedges** on the table.
+**Table**: **rice** in individual bowls, **curry** ladled in a wide shared bowl, a drizzle of **sesame oil** and scatter of **sesame seeds** over the top. Dressed **romaine** alongside.
