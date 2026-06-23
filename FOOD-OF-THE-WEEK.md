@@ -8,8 +8,7 @@
 
 - [ ] Scallions - 2 bunches (Korean pork marinade + garnishes)
 - [ ] Fresh ginger - 1 large knob (Korean pork, glazed carrots, curry)
-- [ ] Carrots - ~1.25 lb (Korean carrot-edamame salad + glazed carrots night)
-- [ ] Cucumber - 1 (kimchi salad)
+- [ ] Carrots - ~1.25 lb (Korean pork stir-fry matchsticks + glazed carrots night)
 - [ ] Yukon Gold potatoes - ~2 lb (pumpkin curry chunks + smashed potatoes night)
 - [ ] Asparagus - 1 bunch (scampi)
 - [ ] Celery - 1 small head, with leaves (scampi)
@@ -32,17 +31,15 @@
 
 ### Frozen
 
-- [ ] Shelled edamame - 1 bag (Korean carrot-edamame salad)
+- [ ] Shelled edamame - 1 bag (Korean pork stir-fry)
 
 ### Pantry
 
 - [ ] Egg noodles - 12 oz (scampi)
 - [ ] Coconut milk - 1 can (pumpkin curry)
-- [ ] Kimchi - 1 jar (Korean cucumber salad)
 - [ ] Honey - small bottle (glazed carrots -- or sub the pantry sugar)
 - [x] Canned pumpkin (pantry)
 - [x] White rice (pantry)
-- [x] Walnuts (pantry -- carrot salad topping in place of peanuts)
 - [x] Sugar (pantry)
 
 ---
@@ -87,44 +84,36 @@ Saturday is three bag moves to the fridge. Sunday is one focused session: split 
 ## Korean Pork
 
 ##### WokNight
-###### cucumber salad + carrot-edamame salad + 5:30 rice + wok sequence
+###### carrot matchsticks + edamame in wok + 5:30 rice + wok sequence
 
 #### Anchor:
-Bulgogi-leaning **pork loin**, sliced thin against the grain from the Sunday marinade bag and wok-fired *ripping hot* until the edges caramelize and the marinade reduces to a glossy glaze, finished with **scallion** whites and greens.
+Bulgogi-leaning **pork loin**, sliced thin against the grain and wok-fired *ripping hot* until the edges caramelize and the marinade reduces to a glossy glaze -- **carrot matchsticks** and **edamame** tossed straight into the wok to pick up the glaze, finished with **scallion** whites and greens.
 
 #### Fan:
 White rice
 
 #### Cai:
-Cucumber kimchi salad -- smashed **cucumber**, **kimchi**, sesame oil, scallion. Cold and sharp, made day-of.
+Carrot matchsticks and edamame -- stir-fried in the wok with the pork, picking up the bulgogi glaze. No separate salads tonight.
 
-Carrot-edamame salad -- soy-ginger dressed, topped with **walnuts**, scallion greens, and **furikake** at the table.
+### URGENT -- Defrost Pork Now
 
-### Already Prepped
-
-- **Bulgogi pork** sliced and marinating in the fridge from Sunday.
+The pork was not thawed over the weekend. Sous chef team: pull the **pork loin** from the **deep freezer** right now -- grab the **loin**, not the chunks of pork shoulder -- and run it under **cold running water** until fully thawed. Start this as soon as possible.
 
 ### Sous Chef - Prep
 
-- [ ] Pull the **pork bag** from the fridge 20 min before cooking.
-- [ ] Thaw *1.5 cups* **frozen edamame** under warm water, drain well.
-- [ ] Peel *2-3* **carrots** into ribbons or matchsticks for the salad.
+- [ ] **ASAP -- defrost the pork:** Pull the **pork loin** from the deep freezer (the loin, not the pork shoulder chunks) and defrost under cold running water. Keep the water running until it's fully thawed through.
+- [ ] Once thawed, slice the pork *thin against the grain*. Quick-marinate in the bulgogi mix: *4 tbsp* **soy sauce**, *2 tbsp* **sugar**, *1 tbsp* **sesame oil**, *1 inch* grated **ginger**, *3 cloves* grated **garlic**, sliced whites of *2 scallions*, a crack of **black pepper**. Even 30 min helps.
+- [ ] Peel *2-3* **carrots** into matchsticks for the wok.
 - [ ] Slice *3-4* **scallions** -- whites for the wok, greens for garnish.
-- [ ] Smash *1* **cucumber** (whack it, tear into rough chunks) for the kimchi salad.
-- [ ] Roughly chop a small handful of **walnuts**.
 - [ ] At **5:30** start **white rice** in the rice cooker.
-
-### Sous Chef - Assembly
-
-**Cucumber kimchi salad**: into a bowl with the smashed **cucumber**, a generous scoop of **kimchi** (roughly equal volume), *2 scallion greens* sliced thin, a few drops of **sesame oil**. Toss. Taste -- tart, spicy, crunchy. Refrigerate.
-
-**Carrot-edamame salad**: combine the **carrots** and drained **edamame** with a splash of **soy sauce**, *1 tsp* grated **ginger**, *1 tsp* **sesame oil**, a pinch of **sugar**. Toss. Refrigerate. Hold the **walnuts**, scallion greens, and **furikake** to scatter at the table.
 
 ### Chef - Wok Sequence
 
-**Wok dish -- Korean pork**: Wok *ripping hot*, thin film of **oil**. Lift the **pork slices** out of the marinade (reserve it) and lay them in a single layer -- *don't crowd*, work in batches. *Don't move* 60-90 seconds until the bottoms caramelize, then toss to sear the other side, ~30 seconds. The loin is *lean* -- pull it the moment it's seared and just cooked, don't dry it out. Once all the pork is back in, pour in a few spoonfuls of the **reserved marinade**, let it bubble and reduce to a *glossy glaze* coating the meat, ~1 min. Off heat. Toss in the **scallion whites**. ***Taste*** -- adjust soy or sugar.
+**Wok dish -- Korean pork with carrots and edamame**: Wok *ripping hot*, thin film of **oil**. Lift the **pork slices** out of the marinade (reserve it) and lay them in a single layer -- *don't crowd*, work in batches. *Don't move* 60-90 seconds until the bottoms caramelize, then toss to sear the other side, ~30 seconds. The loin is *lean* -- pull it the moment it's seared and just cooked, don't dry it out. Remove the pork.
 
-**Table**: **rice** in individual bowls. **Korean pork** in a center bowl on the lazy susan. **Cucumber kimchi salad** and **carrot-edamame salad** in shared dishes -- scatter **walnuts**, scallion greens, and **furikake** over the carrot salad as it lands.
+Splash more **oil** in the wok, still *ripping hot*. Add the **carrot matchsticks**, stir-fry 1-2 min until just tender-crisp. Add the **frozen edamame** straight from the bag, toss 1 min until heated through. Return the pork. Pour in a few spoonfuls of the **reserved marinade**, let it bubble and reduce to a *glossy glaze* coating everything, ~1 min. Off heat. Toss in the **scallion whites**. ***Taste*** -- adjust soy or sugar.
+
+**Table**: **rice** in individual bowls. **Korean pork** with carrots and edamame in a center bowl on the lazy susan. Scatter scallion greens over the top.
 
 ---
 
