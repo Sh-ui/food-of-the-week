@@ -9,6 +9,7 @@
 - [ ] Scallions - 2 bunches (Korean pork marinade + garnishes)
 - [ ] Fresh ginger - 1 large knob (Korean pork, glazed carrots, curry)
 - [ ] Carrots - ~1.25 lb (Korean pork stir-fry matchsticks + glazed carrots night)
+- [ ] Cucumber - 1 (kimchi salad)
 - [ ] Yukon Gold potatoes - ~2 lb (pumpkin curry chunks + smashed potatoes night)
 - [ ] Asparagus - 1 bunch (scampi)
 - [ ] Celery - 1 small head, with leaves (scampi)
@@ -37,6 +38,7 @@
 
 - [ ] Egg noodles - 12 oz (scampi)
 - [ ] Coconut milk - 1 can (pumpkin curry)
+- [ ] Kimchi - 1 jar (Korean cucumber salad)
 - [ ] Honey - small bottle (glazed carrots -- or sub the pantry sugar)
 - [x] Canned pumpkin (pantry)
 - [x] White rice (pantry)
@@ -93,7 +95,9 @@ Bulgogi-leaning **pork loin**, sliced thin against the grain and wok-fired *ripp
 White rice
 
 #### Cai:
-Carrot matchsticks and edamame -- stir-fried in the wok with the pork, picking up the bulgogi glaze. No separate salads tonight.
+Cucumber kimchi salad -- smashed **cucumber**, **kimchi**, sesame oil, scallion. Cold and sharp, made day-of.
+
+Carrot matchsticks and edamame -- stir-fried in the wok with the pork, picking up the bulgogi glaze.
 
 ### URGENT -- Defrost Pork Now
 
@@ -103,9 +107,14 @@ The pork was not thawed over the weekend. Sous chef team: pull the **pork loin**
 
 - [ ] **ASAP -- defrost the pork:** Pull the **pork loin** from the deep freezer (the loin, not the pork shoulder chunks) and defrost under cold running water. Keep the water running until it's fully thawed through.
 - [ ] Once thawed, slice the pork *thin against the grain*. Quick-marinate in the bulgogi mix: *4 tbsp* **soy sauce**, *2 tbsp* **sugar**, *1 tbsp* **sesame oil**, *1 inch* grated **ginger**, *3 cloves* grated **garlic**, sliced whites of *2 scallions*, a crack of **black pepper**. Even 30 min helps.
+- [ ] Smash *1* **cucumber** (whack it, tear into rough chunks) for the kimchi salad.
 - [ ] Peel *2-3* **carrots** into matchsticks for the wok.
 - [ ] Slice *3-4* **scallions** -- whites for the wok, greens for garnish.
 - [ ] At **5:30** start **white rice** in the rice cooker.
+
+### Sous Chef - Assembly
+
+**Cucumber kimchi salad**: into a bowl with the smashed **cucumber**, a generous scoop of **kimchi** (roughly equal volume), *2 scallion greens* sliced thin, a few drops of **sesame oil**. Toss. Taste -- tart, spicy, crunchy. Refrigerate.
 
 ### Chef - Wok Sequence
 
@@ -113,7 +122,7 @@ The pork was not thawed over the weekend. Sous chef team: pull the **pork loin**
 
 Splash more **oil** in the wok, still *ripping hot*. Add the **carrot matchsticks**, stir-fry 1-2 min until just tender-crisp. Add the **frozen edamame** straight from the bag, toss 1 min until heated through. Return the pork. Pour in a few spoonfuls of the **reserved marinade**, let it bubble and reduce to a *glossy glaze* coating everything, ~1 min. Off heat. Toss in the **scallion whites**. ***Taste*** -- adjust soy or sugar.
 
-**Table**: **rice** in individual bowls. **Korean pork** with carrots and edamame in a center bowl on the lazy susan. Scatter scallion greens over the top.
+**Table**: **rice** in individual bowls. **Korean pork** with carrots and edamame in a center bowl on the lazy susan. **Cucumber kimchi salad** in a shared dish. Scatter scallion greens over the top.
 
 ---
 
