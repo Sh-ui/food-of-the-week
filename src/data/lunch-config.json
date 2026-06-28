@@ -1,0 +1,29 @@
+{
+  "_comment": "Knobs for the lunch rotation. Edit between runs; changes take effect on the next build (npm run build / push). Item ids come from src/data/lunch-pool.json.",
+
+  "startDate": "2026-06-28",
+  "_startDate": "The very first lunch week (a Sunday). Don't change casually — it anchors the rotation. Weeks run Sun–Sat.",
+
+  "itemsPerWeek": 7,
+  "_itemsPerWeek": "How many lunches per week (one per day = 7). Lower it for fewer days; the page shows that many, starting Sunday.",
+
+  "autoGrocery": true,
+  "_autoGrocery": "Default state of the green 'Lunch' grocery section on the home page. true = auto-added/shown by default. (Each browser can still toggle it.)",
+
+  "exclude": [],
+  "_exclude": "Item ids to NEVER serve (snooze / dislike). Example: [\"jerky-trailmix\", \"deviled-eggs\"].",
+
+  "boost": [],
+  "_boost": "Item ids to serve more often (mom's favorites). They come back ~3 weeks sooner. Example: [\"banana-pb\", \"greekyogurt-berries\"].",
+
+  "pin": {},
+  "_pin": "Force specific lunches on a specific week. Keyed by that week's Sunday. Example: { \"2026-07-05\": [\"eggs-celery-carrots\", \"cucumber-hummus\"] }.",
+
+  "rotation": {
+    "maxPerProtein": 2,
+    "maxSomeEffort": 2,
+    "maxGrainBase": 4,
+    "softTarget": 2
+  },
+  "_rotation": "Variety guardrails per week: max items sharing a protein; max items needing 'some' prep; max grain-based (crackers/bread/etc.); minimum soft-texture items to aim for."
+}

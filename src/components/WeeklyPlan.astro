@@ -3,6 +3,7 @@ import ActionButton from './ActionButton.astro';
 import BackToCurrentWeekButton from './BackToCurrentWeekButton.astro';
 import Footer from './Footer.astro';
 import GroceryList from './GroceryList.astro';
+import LunchGroceryAddon from './LunchGroceryAddon.astro';
 import MealCard from './MealCard.astro';
 import StickyHeader from './StickyHeader.astro';
 import { getInstructionBadgeColor, getSubsectionScheme } from '../config/colors';
@@ -10,9 +11,10 @@ import type { WeekPlan } from '../utils/weekParser';
 
 interface Props {
   weekPlan: WeekPlan;
+  showLunchAddon?: boolean;
 }
 
-const { weekPlan } = Astro.props;
+const { weekPlan, showLunchAddon = false } = Astro.props;
 const base = import.meta.env.BASE_URL.endsWith('/') 
   ? import.meta.env.BASE_URL 
   : import.meta.env.BASE_URL + '/';
@@ -188,9 +190,13 @@ const heroRows = heroRowsFromMeals.length > 0 ? heroRowsFromMeals : heroRowsFrom
   </section>
   
   {weekPlan.groceryList.length > 0 && (
-    <GroceryList 
+    <GroceryList
       categories={weekPlan.groceryList}
     />
+  )}
+
+  {showLunchAddon && weekPlan.groceryList.length > 0 && (
+    <LunchGroceryAddon />
   )}
   
   <div class="flex flex-col gap-xl mobile:gap-lg">

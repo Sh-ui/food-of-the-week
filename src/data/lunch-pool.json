@@ -1,0 +1,1573 @@
+{
+  "version": 1,
+  "principles": [
+    "Always pair a carb with a protein.",
+    "Controlled carbs: 1 carb serving = 15 g carbs (see mom-lunch-source.md).",
+    "Favor high-fiber veg, healthy fats, lean/easy proteins.",
+    "Favor easy / soft / no-cook prep."
+  ],
+  "carbServingNote": "carbServings is an approximate count of 15 g carb servings, estimated from the nutritionist handout. Always check the food label.",
+  "count": 52,
+  "items": [
+    {
+      "id": "eggs-celery-carrots",
+      "name": "Hard-boiled eggs + celery + baby carrots",
+      "fridge": [
+        "2 hard-boiled eggs",
+        "Celery sticks",
+        "Baby carrots"
+      ],
+      "protein": "egg",
+      "base": "veg",
+      "carbServings": "≈0–1",
+      "effort": "easy",
+      "soft": false,
+      "tags": [
+        "high_fiber",
+        "lean_protein"
+      ],
+      "grocery": [
+        {
+          "text": "Hard-boiled eggs (or eggs to boil)",
+          "cat": "Protein"
+        },
+        {
+          "text": "Celery",
+          "cat": "Produce"
+        },
+        {
+          "text": "Baby carrots",
+          "cat": "Produce"
+        }
+      ],
+      "source": "pdf"
+    },
+    {
+      "id": "cracker-pb-banana",
+      "name": "Whole-wheat crackers + peanut butter + ½ banana",
+      "fridge": [
+        "3–5 whole-wheat crackers",
+        "1 Tbsp peanut butter",
+        "½ banana"
+      ],
+      "protein": "peanut_butter",
+      "base": "crackers",
+      "carbServings": "≈2",
+      "effort": "easy",
+      "soft": true,
+      "tags": [
+        "healthy_fat"
+      ],
+      "grocery": [
+        {
+          "text": "Whole-wheat crackers",
+          "cat": "Pantry"
+        },
+        {
+          "text": "Peanut butter",
+          "cat": "Pantry"
+        },
+        {
+          "text": "Bananas",
+          "cat": "Produce"
+        }
+      ],
+      "source": "pdf"
+    },
+    {
+      "id": "popcorn-nuts",
+      "name": "Popcorn + mixed nuts",
+      "fridge": [
+        "3 cups popcorn",
+        "3 Tbsp mixed nuts"
+      ],
+      "protein": "nuts",
+      "base": "popcorn",
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": false,
+      "tags": [
+        "healthy_fat",
+        "whole_grain"
+      ],
+      "grocery": [
+        {
+          "text": "Popcorn (plain / light)",
+          "cat": "Pantry"
+        },
+        {
+          "text": "Mixed nuts",
+          "cat": "Pantry"
+        }
+      ],
+      "source": "pdf"
+    },
+    {
+      "id": "crackers-cheese",
+      "name": "Whole-grain crackers + low-fat cheese",
+      "fridge": [
+        "4–5 whole-grain crackers",
+        "Low-fat cheese slices"
+      ],
+      "protein": "cheese",
+      "base": "crackers",
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": false,
+      "tags": [],
+      "grocery": [
+        {
+          "text": "Whole-grain crackers",
+          "cat": "Pantry"
+        },
+        {
+          "text": "Low-fat cheese slices",
+          "cat": "Dairy"
+        }
+      ],
+      "source": "pdf"
+    },
+    {
+      "id": "graham-pb",
+      "name": "Graham crackers + peanut butter",
+      "fridge": [
+        "3 graham cracker squares",
+        "1 Tbsp peanut butter"
+      ],
+      "protein": "peanut_butter",
+      "base": "crackers",
+      "carbServings": "≈1–2",
+      "effort": "easy",
+      "soft": true,
+      "tags": [
+        "healthy_fat"
+      ],
+      "grocery": [
+        {
+          "text": "Graham crackers",
+          "cat": "Pantry"
+        },
+        {
+          "text": "Peanut butter",
+          "cat": "Pantry"
+        }
+      ],
+      "source": "pdf"
+    },
+    {
+      "id": "turkey-cheese-sandwich",
+      "name": "Open turkey + cheese on whole-grain bread",
+      "fridge": [
+        "1 slice whole-grain bread",
+        "Slice of turkey",
+        "Slice of cheese",
+        "Mustard"
+      ],
+      "protein": "turkey",
+      "base": "bread",
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": false,
+      "tags": [
+        "lean_protein"
+      ],
+      "grocery": [
+        {
+          "text": "Whole-grain bread",
+          "cat": "Pantry"
+        },
+        {
+          "text": "Deli turkey",
+          "cat": "Protein"
+        },
+        {
+          "text": "Cheese slices",
+          "cat": "Dairy"
+        },
+        {
+          "text": "Mustard",
+          "cat": "Pantry"
+        }
+      ],
+      "source": "pdf"
+    },
+    {
+      "id": "saltines-pb",
+      "name": "Saltine crackers + peanut butter",
+      "fridge": [
+        "6 saltine crackers",
+        "1 Tbsp peanut butter"
+      ],
+      "protein": "peanut_butter",
+      "base": "crackers",
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": true,
+      "tags": [],
+      "grocery": [
+        {
+          "text": "Saltine crackers",
+          "cat": "Pantry"
+        },
+        {
+          "text": "Peanut butter",
+          "cat": "Pantry"
+        }
+      ],
+      "source": "pdf"
+    },
+    {
+      "id": "celery-pb-raisins",
+      "name": "Celery + peanut butter + raisins (ants on a log)",
+      "fridge": [
+        "2–3 celery sticks",
+        "1 Tbsp peanut butter",
+        "1 Tbsp raisins"
+      ],
+      "protein": "peanut_butter",
+      "base": "veg",
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": false,
+      "tags": [
+        "high_fiber",
+        "healthy_fat"
+      ],
+      "grocery": [
+        {
+          "text": "Celery",
+          "cat": "Produce"
+        },
+        {
+          "text": "Peanut butter",
+          "cat": "Pantry"
+        },
+        {
+          "text": "Raisins",
+          "cat": "Pantry"
+        }
+      ],
+      "source": "pdf"
+    },
+    {
+      "id": "snap-peas-hummus",
+      "name": "Sugar snap peas + hummus",
+      "fridge": [
+        "½ cup sugar snap peas",
+        "2 Tbsp hummus"
+      ],
+      "protein": "hummus",
+      "base": "veg",
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": false,
+      "tags": [
+        "high_fiber",
+        "legume"
+      ],
+      "grocery": [
+        {
+          "text": "Sugar snap peas",
+          "cat": "Produce"
+        },
+        {
+          "text": "Hummus",
+          "cat": "Dairy"
+        }
+      ],
+      "source": "pdf"
+    },
+    {
+      "id": "tuna-salad-pita",
+      "name": "Tuna or egg salad + ½ whole-wheat pita",
+      "fridge": [
+        "½ cup tuna or egg salad",
+        "½ whole-wheat pita (or 4–5 crackers)"
+      ],
+      "protein": "tuna",
+      "base": "pita",
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": true,
+      "tags": [
+        "lean_protein"
+      ],
+      "grocery": [
+        {
+          "text": "Tuna pouches (or eggs)",
+          "cat": "Protein"
+        },
+        {
+          "text": "Whole-wheat pita",
+          "cat": "Pantry"
+        },
+        {
+          "text": "Light mayo",
+          "cat": "Dairy"
+        }
+      ],
+      "source": "pdf"
+    },
+    {
+      "id": "english-muffin-nutbutter",
+      "name": "Light English muffin + nut butter or cheese",
+      "fridge": [
+        "1 light English muffin",
+        "1 Tbsp nut butter or cheese"
+      ],
+      "protein": "peanut_butter",
+      "base": "english_muffin",
+      "carbServings": "≈1–2",
+      "effort": "easy",
+      "soft": true,
+      "tags": [],
+      "grocery": [
+        {
+          "text": "Light English muffins",
+          "cat": "Pantry"
+        },
+        {
+          "text": "Nut butter",
+          "cat": "Pantry"
+        }
+      ],
+      "source": "pdf"
+    },
+    {
+      "id": "cottage-cheese-fruitcup",
+      "name": "Cottage cheese + small fruit cup",
+      "fridge": [
+        "½ cup low-fat cottage cheese",
+        "1 small fruit cup (in juice/water)"
+      ],
+      "protein": "cottage_cheese",
+      "base": "fruit",
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": true,
+      "tags": [
+        "dairy",
+        "lean_protein"
+      ],
+      "grocery": [
+        {
+          "text": "Low-fat cottage cheese",
+          "cat": "Dairy"
+        },
+        {
+          "text": "Fruit cups (in juice/water)",
+          "cat": "Pantry"
+        }
+      ],
+      "source": "pdf"
+    },
+    {
+      "id": "banana-pb",
+      "name": "½ banana + peanut butter",
+      "fridge": [
+        "½ banana",
+        "1 Tbsp peanut butter"
+      ],
+      "protein": "peanut_butter",
+      "base": "fruit",
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": true,
+      "tags": [
+        "healthy_fat"
+      ],
+      "grocery": [
+        {
+          "text": "Bananas",
+          "cat": "Produce"
+        },
+        {
+          "text": "Peanut butter",
+          "cat": "Pantry"
+        }
+      ],
+      "source": "pdf"
+    },
+    {
+      "id": "wheatthins-stringcheese",
+      "name": "Wheat Thins + string cheese",
+      "fridge": [
+        "10 multigrain Wheat Thins",
+        "1 string cheese"
+      ],
+      "protein": "cheese",
+      "base": "crackers",
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": false,
+      "tags": [],
+      "grocery": [
+        {
+          "text": "Multigrain Wheat Thins",
+          "cat": "Pantry"
+        },
+        {
+          "text": "String cheese",
+          "cat": "Dairy"
+        }
+      ],
+      "source": "pdf"
+    },
+    {
+      "id": "rice-pudding-nuts",
+      "name": "No-sugar-added rice pudding + nuts",
+      "fridge": [
+        "4 oz no-sugar-added rice pudding",
+        "2 Tbsp nuts"
+      ],
+      "protein": "nuts",
+      "base": "oat",
+      "carbServings": "≈1–2",
+      "effort": "easy",
+      "soft": true,
+      "tags": [],
+      "grocery": [
+        {
+          "text": "No-sugar-added rice pudding",
+          "cat": "Dairy"
+        },
+        {
+          "text": "Nuts",
+          "cat": "Pantry"
+        }
+      ],
+      "source": "pdf"
+    },
+    {
+      "id": "carrots-ranch",
+      "name": "Carrots + light ranch dip",
+      "fridge": [
+        "½ cup carrots",
+        "2 Tbsp light ranch dip"
+      ],
+      "protein": "dairy_dip",
+      "base": "veg",
+      "carbServings": "≈0–1",
+      "effort": "easy",
+      "soft": false,
+      "tags": [
+        "high_fiber"
+      ],
+      "grocery": [
+        {
+          "text": "Baby carrots",
+          "cat": "Produce"
+        },
+        {
+          "text": "Light ranch dip",
+          "cat": "Dairy"
+        }
+      ],
+      "source": "pdf"
+    },
+    {
+      "id": "egg-fruit",
+      "name": "Hard-boiled egg + a small piece of fruit",
+      "fridge": [
+        "1 hard-boiled egg",
+        "1 small piece of fruit"
+      ],
+      "protein": "egg",
+      "base": "fruit",
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": true,
+      "tags": [
+        "lean_protein"
+      ],
+      "grocery": [
+        {
+          "text": "Hard-boiled eggs (or eggs to boil)",
+          "cat": "Protein"
+        },
+        {
+          "text": "Apples / small fruit",
+          "cat": "Produce"
+        }
+      ],
+      "source": "pdf"
+    },
+    {
+      "id": "waffle-nutbutter",
+      "name": "Eggo waffle + nut butter",
+      "fridge": [
+        "1 Eggo waffle (toasted)",
+        "1 Tbsp nut butter"
+      ],
+      "protein": "peanut_butter",
+      "base": "waffle",
+      "carbServings": "≈1–2",
+      "effort": "some",
+      "soft": false,
+      "tags": [],
+      "grocery": [
+        {
+          "text": "Eggo waffles",
+          "cat": "Frozen"
+        },
+        {
+          "text": "Nut butter",
+          "cat": "Pantry"
+        }
+      ],
+      "source": "pdf"
+    },
+    {
+      "id": "applesauce-nuts",
+      "name": "Applesauce + mixed nuts",
+      "fridge": [
+        "½ cup applesauce",
+        "2 Tbsp mixed nuts"
+      ],
+      "protein": "nuts",
+      "base": "fruit",
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": true,
+      "tags": [],
+      "grocery": [
+        {
+          "text": "Unsweetened applesauce",
+          "cat": "Pantry"
+        },
+        {
+          "text": "Mixed nuts",
+          "cat": "Pantry"
+        }
+      ],
+      "source": "pdf"
+    },
+    {
+      "id": "cucumber-hummus",
+      "name": "Cucumber + hummus",
+      "fridge": [
+        "1 cup cucumber slices",
+        "2 Tbsp hummus"
+      ],
+      "protein": "hummus",
+      "base": "veg",
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": false,
+      "tags": [
+        "high_fiber",
+        "legume"
+      ],
+      "grocery": [
+        {
+          "text": "Cucumber",
+          "cat": "Produce"
+        },
+        {
+          "text": "Hummus",
+          "cat": "Dairy"
+        }
+      ],
+      "source": "pdf"
+    },
+    {
+      "id": "pepper-hummus",
+      "name": "Sweet pepper + hummus",
+      "fridge": [
+        "1 sweet pepper, sliced",
+        "2 Tbsp hummus"
+      ],
+      "protein": "hummus",
+      "base": "veg",
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": false,
+      "tags": [
+        "high_fiber",
+        "legume"
+      ],
+      "grocery": [
+        {
+          "text": "Sweet bell peppers",
+          "cat": "Produce"
+        },
+        {
+          "text": "Hummus",
+          "cat": "Dairy"
+        }
+      ],
+      "source": "pdf"
+    },
+    {
+      "id": "ricecake-pb",
+      "name": "Rice cake + peanut butter (or low-sugar jam)",
+      "fridge": [
+        "1 rice cake",
+        "1 Tbsp peanut butter or low-sugar jam"
+      ],
+      "protein": "peanut_butter",
+      "base": "rice_cake",
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": false,
+      "tags": [],
+      "grocery": [
+        {
+          "text": "Rice cakes",
+          "cat": "Pantry"
+        },
+        {
+          "text": "Peanut butter",
+          "cat": "Pantry"
+        }
+      ],
+      "source": "pdf"
+    },
+    {
+      "id": "deli-rolls-yogurt",
+      "name": "Deli meat + cheese roll-ups + light yogurt",
+      "fridge": [
+        "Rolled-up deli meat + cheese",
+        "4 oz light yogurt",
+        "2 Tbsp salsa"
+      ],
+      "protein": "deli",
+      "base": "none",
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": false,
+      "tags": [
+        "lean_protein"
+      ],
+      "grocery": [
+        {
+          "text": "Deli meat",
+          "cat": "Protein"
+        },
+        {
+          "text": "Cheese slices",
+          "cat": "Dairy"
+        },
+        {
+          "text": "Light yogurt",
+          "cat": "Dairy"
+        },
+        {
+          "text": "Salsa",
+          "cat": "Produce"
+        }
+      ],
+      "source": "pdf"
+    },
+    {
+      "id": "toast-cheese-egg",
+      "name": "Whole-wheat toast + cheese + hard-cooked egg",
+      "fridge": [
+        "1 slice whole-wheat toast",
+        "1 slice cheese",
+        "1 hard-cooked egg"
+      ],
+      "protein": "egg",
+      "base": "bread",
+      "carbServings": "≈1",
+      "effort": "some",
+      "soft": false,
+      "tags": [],
+      "grocery": [
+        {
+          "text": "Whole-wheat bread",
+          "cat": "Pantry"
+        },
+        {
+          "text": "Cheese slices",
+          "cat": "Dairy"
+        },
+        {
+          "text": "Eggs",
+          "cat": "Protein"
+        }
+      ],
+      "source": "pdf"
+    },
+    {
+      "id": "jello-fruit-cottage",
+      "name": "Sugar-free jello + fruit + cottage cheese",
+      "fridge": [
+        "1 cup sugar-free jello",
+        "½ cup fruit",
+        "½ cup cottage cheese"
+      ],
+      "protein": "cottage_cheese",
+      "base": "fruit",
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": true,
+      "tags": [],
+      "grocery": [
+        {
+          "text": "Sugar-free jello",
+          "cat": "Pantry"
+        },
+        {
+          "text": "Fruit",
+          "cat": "Produce"
+        },
+        {
+          "text": "Cottage cheese",
+          "cat": "Dairy"
+        }
+      ],
+      "source": "pdf"
+    },
+    {
+      "id": "animalcrackers-pb",
+      "name": "Animal crackers (or pretzel rods) + peanut butter",
+      "fridge": [
+        "8 animal crackers or 2 pretzel rods",
+        "1 Tbsp peanut butter"
+      ],
+      "protein": "peanut_butter",
+      "base": "crackers",
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": false,
+      "tags": [],
+      "grocery": [
+        {
+          "text": "Animal crackers / pretzel rods",
+          "cat": "Pantry"
+        },
+        {
+          "text": "Peanut butter",
+          "cat": "Pantry"
+        }
+      ],
+      "source": "pdf"
+    },
+    {
+      "id": "jerky-trailmix",
+      "name": "Beef jerky trail mix",
+      "fridge": [
+        "Beef jerky",
+        "Almonds, cashews, walnuts, pecans",
+        "Edamame"
+      ],
+      "protein": "beef_jerky",
+      "base": "none",
+      "carbServings": "≈0–1",
+      "effort": "easy",
+      "soft": false,
+      "tags": [
+        "lean_protein",
+        "healthy_fat"
+      ],
+      "grocery": [
+        {
+          "text": "Beef jerky",
+          "cat": "Protein"
+        },
+        {
+          "text": "Mixed nuts",
+          "cat": "Pantry"
+        },
+        {
+          "text": "Shelled edamame",
+          "cat": "Frozen"
+        }
+      ],
+      "source": "pdf"
+    },
+    {
+      "id": "cottage-celery",
+      "name": "Cottage cheese + celery",
+      "fridge": [
+        "½ cup cottage cheese",
+        "Celery sticks"
+      ],
+      "protein": "cottage_cheese",
+      "base": "veg",
+      "carbServings": "≈0–1",
+      "effort": "easy",
+      "soft": true,
+      "tags": [
+        "high_fiber",
+        "lean_protein"
+      ],
+      "grocery": [
+        {
+          "text": "Cottage cheese",
+          "cat": "Dairy"
+        },
+        {
+          "text": "Celery",
+          "cat": "Produce"
+        }
+      ],
+      "source": "pdf"
+    },
+    {
+      "id": "greekyogurt-celery",
+      "name": "Greek yogurt + celery",
+      "fridge": [
+        "¾ cup plain Greek yogurt",
+        "Celery sticks"
+      ],
+      "protein": "yogurt",
+      "base": "veg",
+      "carbServings": "≈0–1",
+      "effort": "easy",
+      "soft": true,
+      "tags": [
+        "high_fiber",
+        "lean_protein"
+      ],
+      "grocery": [
+        {
+          "text": "Plain Greek yogurt",
+          "cat": "Dairy"
+        },
+        {
+          "text": "Celery",
+          "cat": "Produce"
+        }
+      ],
+      "source": "pdf"
+    },
+    {
+      "id": "greekyogurt-nuts",
+      "name": "Greek yogurt + nuts",
+      "fridge": [
+        "¾ cup plain Greek yogurt",
+        "2 Tbsp nuts"
+      ],
+      "protein": "yogurt",
+      "base": "none",
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": true,
+      "tags": [
+        "healthy_fat",
+        "lean_protein"
+      ],
+      "grocery": [
+        {
+          "text": "Plain Greek yogurt",
+          "cat": "Dairy"
+        },
+        {
+          "text": "Nuts",
+          "cat": "Pantry"
+        }
+      ],
+      "source": "pdf"
+    },
+    {
+      "id": "deviled-eggs",
+      "name": "Deviled eggs (add tuna for a change)",
+      "fridge": [
+        "2–3 deviled egg halves",
+        "Optional: tuna in the center"
+      ],
+      "protein": "egg",
+      "base": "none",
+      "carbServings": "≈0",
+      "effort": "some",
+      "soft": true,
+      "tags": [
+        "lean_protein"
+      ],
+      "grocery": [
+        {
+          "text": "Eggs",
+          "cat": "Protein"
+        },
+        {
+          "text": "Light mayo",
+          "cat": "Dairy"
+        },
+        {
+          "text": "Tuna pouch (optional)",
+          "cat": "Protein"
+        }
+      ],
+      "source": "pdf"
+    },
+    {
+      "id": "egg-muffin-cups",
+      "name": "Egg muffin cups (meat, spinach, cheese)",
+      "fridge": [
+        "2 baked egg muffin cups"
+      ],
+      "protein": "egg",
+      "base": "none",
+      "carbServings": "≈0",
+      "effort": "some",
+      "soft": true,
+      "tags": [
+        "lean_protein",
+        "high_fiber"
+      ],
+      "grocery": [
+        {
+          "text": "Eggs",
+          "cat": "Protein"
+        },
+        {
+          "text": "Cooked meat",
+          "cat": "Protein"
+        },
+        {
+          "text": "Spinach",
+          "cat": "Produce"
+        },
+        {
+          "text": "Shredded cheese",
+          "cat": "Dairy"
+        }
+      ],
+      "source": "pdf"
+    },
+    {
+      "id": "flatout-veggie-wrap",
+      "name": "Flatout wrap with veggies + meat",
+      "fridge": [
+        "1 Flatout wrap",
+        "Veggies",
+        "Deli meat or cheese"
+      ],
+      "protein": "deli",
+      "base": "tortilla",
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": false,
+      "tags": [
+        "high_fiber",
+        "whole_grain"
+      ],
+      "grocery": [
+        {
+          "text": "Flatout / low-carb wraps",
+          "cat": "Pantry"
+        },
+        {
+          "text": "Mixed veggies",
+          "cat": "Produce"
+        },
+        {
+          "text": "Deli meat",
+          "cat": "Protein"
+        }
+      ],
+      "source": "pdf"
+    },
+    {
+      "id": "tuna-packet-peppers",
+      "name": "Tuna packet + celery or peppers",
+      "fridge": [
+        "1 tuna packet",
+        "Celery or pepper strips"
+      ],
+      "protein": "tuna",
+      "base": "veg",
+      "carbServings": "≈0–1",
+      "effort": "easy",
+      "soft": false,
+      "tags": [
+        "lean_protein",
+        "high_fiber"
+      ],
+      "grocery": [
+        {
+          "text": "Tuna pouches",
+          "cat": "Protein"
+        },
+        {
+          "text": "Celery / bell peppers",
+          "cat": "Produce"
+        }
+      ],
+      "source": "pdf"
+    },
+    {
+      "id": "tortilla-salsa-cheese",
+      "name": "Flour tortilla + salsa + cheese",
+      "fridge": [
+        "1 small flour tortilla",
+        "Salsa",
+        "Shredded cheese"
+      ],
+      "protein": "cheese",
+      "base": "tortilla",
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": true,
+      "tags": [],
+      "grocery": [
+        {
+          "text": "Small tortillas",
+          "cat": "Pantry"
+        },
+        {
+          "text": "Salsa",
+          "cat": "Produce"
+        },
+        {
+          "text": "Shredded cheese",
+          "cat": "Dairy"
+        }
+      ],
+      "source": "pdf"
+    },
+    {
+      "id": "cheese-crackers-grapes",
+      "name": "Cheese cubes + whole-grain crackers + grapes",
+      "fridge": [
+        "Cheese cubes",
+        "4–5 whole-grain crackers",
+        "17 grapes"
+      ],
+      "protein": "cheese",
+      "base": "crackers",
+      "carbServings": "≈2",
+      "effort": "easy",
+      "soft": false,
+      "tags": [],
+      "grocery": [
+        {
+          "text": "Cheese cubes",
+          "cat": "Dairy"
+        },
+        {
+          "text": "Whole-grain crackers",
+          "cat": "Pantry"
+        },
+        {
+          "text": "Grapes",
+          "cat": "Produce"
+        }
+      ],
+      "source": "lunch-buddy"
+    },
+    {
+      "id": "hummus-pita-cucumber",
+      "name": "Hummus + whole-wheat pita + cucumber",
+      "fridge": [
+        "2 Tbsp hummus",
+        "½ whole-wheat pita",
+        "Cucumber slices"
+      ],
+      "protein": "hummus",
+      "base": "pita",
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": true,
+      "tags": [
+        "legume",
+        "high_fiber"
+      ],
+      "grocery": [
+        {
+          "text": "Hummus",
+          "cat": "Dairy"
+        },
+        {
+          "text": "Whole-wheat pita",
+          "cat": "Pantry"
+        },
+        {
+          "text": "Cucumber",
+          "cat": "Produce"
+        }
+      ],
+      "source": "lunch-buddy"
+    },
+    {
+      "id": "cottage-pineapple-seeds",
+      "name": "Cottage cheese + pineapple + sunflower seeds",
+      "fridge": [
+        "½ cup cottage cheese",
+        "½ cup pineapple",
+        "1 Tbsp sunflower seeds"
+      ],
+      "protein": "cottage_cheese",
+      "base": "fruit",
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": true,
+      "tags": [],
+      "grocery": [
+        {
+          "text": "Cottage cheese",
+          "cat": "Dairy"
+        },
+        {
+          "text": "Pineapple (or cups)",
+          "cat": "Produce"
+        },
+        {
+          "text": "Sunflower seeds",
+          "cat": "Pantry"
+        }
+      ],
+      "source": "lunch-buddy"
+    },
+    {
+      "id": "yogurt-dressing-eggs-crackers",
+      "name": "Hard-boiled eggs + baby kale + crackers + yogurt dressing",
+      "fridge": [
+        "2 hard-boiled eggs",
+        "Baby kale",
+        "4–5 whole-wheat crackers",
+        "Yogurt dressing"
+      ],
+      "protein": "egg",
+      "base": "crackers",
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": false,
+      "tags": [
+        "high_fiber",
+        "lean_protein"
+      ],
+      "grocery": [
+        {
+          "text": "Hard-boiled eggs",
+          "cat": "Protein"
+        },
+        {
+          "text": "Baby kale",
+          "cat": "Produce"
+        },
+        {
+          "text": "Whole-wheat crackers",
+          "cat": "Pantry"
+        },
+        {
+          "text": "Greek yogurt dressing",
+          "cat": "Dairy"
+        }
+      ],
+      "source": "lunch-buddy"
+    },
+    {
+      "id": "turkey-pita-romaine",
+      "name": "Deli turkey + pita + romaine + yogurt dressing",
+      "fridge": [
+        "Deli turkey",
+        "½ whole-wheat pita",
+        "Romaine",
+        "Yogurt dressing"
+      ],
+      "protein": "turkey",
+      "base": "pita",
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": false,
+      "tags": [
+        "lean_protein",
+        "high_fiber"
+      ],
+      "grocery": [
+        {
+          "text": "Deli turkey",
+          "cat": "Protein"
+        },
+        {
+          "text": "Whole-wheat pita",
+          "cat": "Pantry"
+        },
+        {
+          "text": "Romaine",
+          "cat": "Produce"
+        },
+        {
+          "text": "Greek yogurt dressing",
+          "cat": "Dairy"
+        }
+      ],
+      "source": "lunch-buddy"
+    },
+    {
+      "id": "chicken-kale-cold",
+      "name": "Chilled chicken + baby kale + a few crackers",
+      "fridge": [
+        "Pre-cooked chicken",
+        "Baby kale",
+        "4–5 whole-wheat crackers"
+      ],
+      "protein": "chicken",
+      "base": "crackers",
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": false,
+      "tags": [
+        "lean_protein",
+        "high_fiber"
+      ],
+      "grocery": [
+        {
+          "text": "Pre-cooked chicken",
+          "cat": "Protein"
+        },
+        {
+          "text": "Baby kale",
+          "cat": "Produce"
+        },
+        {
+          "text": "Whole-wheat crackers",
+          "cat": "Pantry"
+        }
+      ],
+      "source": "lunch-buddy"
+    },
+    {
+      "id": "broccoli-cheese-kale",
+      "name": "Broccoli + cheese cubes + baby kale + yogurt dressing",
+      "fridge": [
+        "Broccoli florets",
+        "Cheese cubes",
+        "Baby kale",
+        "Yogurt dressing"
+      ],
+      "protein": "cheese",
+      "base": "veg",
+      "carbServings": "≈0–1",
+      "effort": "easy",
+      "soft": false,
+      "tags": [
+        "high_fiber"
+      ],
+      "grocery": [
+        {
+          "text": "Broccoli",
+          "cat": "Produce"
+        },
+        {
+          "text": "Cheese cubes",
+          "cat": "Dairy"
+        },
+        {
+          "text": "Baby kale",
+          "cat": "Produce"
+        },
+        {
+          "text": "Greek yogurt dressing",
+          "cat": "Dairy"
+        }
+      ],
+      "source": "lunch-buddy"
+    },
+    {
+      "id": "stringcheese-apple",
+      "name": "String cheese + apple",
+      "fridge": [
+        "1 string cheese",
+        "1 small apple"
+      ],
+      "protein": "cheese",
+      "base": "fruit",
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": false,
+      "tags": [],
+      "grocery": [
+        {
+          "text": "String cheese",
+          "cat": "Dairy"
+        },
+        {
+          "text": "Apples",
+          "cat": "Produce"
+        }
+      ],
+      "source": "web"
+    },
+    {
+      "id": "greekyogurt-berries",
+      "name": "Greek yogurt + berries",
+      "fridge": [
+        "¾ cup plain Greek yogurt",
+        "½ cup berries"
+      ],
+      "protein": "yogurt",
+      "base": "fruit",
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": true,
+      "tags": [
+        "high_fiber",
+        "lean_protein"
+      ],
+      "grocery": [
+        {
+          "text": "Plain Greek yogurt",
+          "cat": "Dairy"
+        },
+        {
+          "text": "Berries",
+          "cat": "Produce"
+        }
+      ],
+      "source": "web"
+    },
+    {
+      "id": "apple-pb",
+      "name": "Apple slices + peanut butter",
+      "fridge": [
+        "1 small apple, sliced",
+        "1 Tbsp peanut butter"
+      ],
+      "protein": "peanut_butter",
+      "base": "fruit",
+      "carbServings": "≈1–2",
+      "effort": "easy",
+      "soft": false,
+      "tags": [
+        "high_fiber",
+        "healthy_fat"
+      ],
+      "grocery": [
+        {
+          "text": "Apples",
+          "cat": "Produce"
+        },
+        {
+          "text": "Peanut butter",
+          "cat": "Pantry"
+        }
+      ],
+      "source": "web"
+    },
+    {
+      "id": "almondbutter-celery",
+      "name": "Celery + almond butter",
+      "fridge": [
+        "Celery sticks",
+        "1 Tbsp almond butter"
+      ],
+      "protein": "nuts",
+      "base": "veg",
+      "carbServings": "≈0–1",
+      "effort": "easy",
+      "soft": false,
+      "tags": [
+        "high_fiber",
+        "healthy_fat"
+      ],
+      "grocery": [
+        {
+          "text": "Celery",
+          "cat": "Produce"
+        },
+        {
+          "text": "Almond butter",
+          "cat": "Pantry"
+        }
+      ],
+      "source": "web"
+    },
+    {
+      "id": "tuna-avocado-crackers",
+      "name": "Tuna + avocado + whole-wheat crackers",
+      "fridge": [
+        "1 tuna pouch",
+        "¼ avocado",
+        "4–5 whole-wheat crackers"
+      ],
+      "protein": "tuna",
+      "base": "crackers",
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": true,
+      "tags": [
+        "lean_protein",
+        "healthy_fat"
+      ],
+      "grocery": [
+        {
+          "text": "Tuna pouches",
+          "cat": "Protein"
+        },
+        {
+          "text": "Avocado",
+          "cat": "Produce"
+        },
+        {
+          "text": "Whole-wheat crackers",
+          "cat": "Pantry"
+        }
+      ],
+      "source": "web"
+    },
+    {
+      "id": "med-hummus-rollup",
+      "name": "Mediterranean hummus roll-up",
+      "fridge": [
+        "Whole-wheat tortilla",
+        "Hummus",
+        "Spinach",
+        "Cucumber",
+        "Roasted red pepper"
+      ],
+      "protein": "hummus",
+      "base": "tortilla",
+      "carbServings": "≈1–2",
+      "effort": "easy",
+      "soft": true,
+      "tags": [
+        "legume",
+        "high_fiber"
+      ],
+      "grocery": [
+        {
+          "text": "Whole-wheat tortillas",
+          "cat": "Pantry"
+        },
+        {
+          "text": "Hummus",
+          "cat": "Dairy"
+        },
+        {
+          "text": "Spinach",
+          "cat": "Produce"
+        },
+        {
+          "text": "Cucumber",
+          "cat": "Produce"
+        },
+        {
+          "text": "Roasted red peppers (jar)",
+          "cat": "Pantry"
+        }
+      ],
+      "source": "web"
+    },
+    {
+      "id": "edamame-clementine",
+      "name": "Steamed edamame + a clementine",
+      "fridge": [
+        "1 cup steamed edamame",
+        "1 clementine"
+      ],
+      "protein": "edamame",
+      "base": "fruit",
+      "carbServings": "≈1",
+      "effort": "some",
+      "soft": true,
+      "tags": [
+        "legume",
+        "high_fiber",
+        "lean_protein"
+      ],
+      "grocery": [
+        {
+          "text": "Shelled edamame",
+          "cat": "Frozen"
+        },
+        {
+          "text": "Clementines",
+          "cat": "Produce"
+        }
+      ],
+      "source": "web"
+    },
+    {
+      "id": "avocado-egg-toast",
+      "name": "Avocado + hard-boiled egg on whole-grain toast",
+      "fridge": [
+        "1 slice whole-grain toast",
+        "¼ avocado, mashed",
+        "1 hard-boiled egg, sliced"
+      ],
+      "protein": "egg",
+      "base": "bread",
+      "carbServings": "≈1",
+      "effort": "some",
+      "soft": true,
+      "tags": [
+        "healthy_fat",
+        "lean_protein"
+      ],
+      "grocery": [
+        {
+          "text": "Whole-grain bread",
+          "cat": "Pantry"
+        },
+        {
+          "text": "Avocado",
+          "cat": "Produce"
+        },
+        {
+          "text": "Hard-boiled eggs",
+          "cat": "Protein"
+        }
+      ],
+      "source": "web"
+    },
+    {
+      "id": "cottage-tomato-toast",
+      "name": "Cottage cheese + tomato on whole-grain toast",
+      "fridge": [
+        "1 slice whole-grain toast",
+        "½ cup cottage cheese",
+        "Tomato slices"
+      ],
+      "protein": "cottage_cheese",
+      "base": "bread",
+      "carbServings": "≈1",
+      "effort": "some",
+      "soft": true,
+      "tags": [
+        "lean_protein"
+      ],
+      "grocery": [
+        {
+          "text": "Whole-grain bread",
+          "cat": "Pantry"
+        },
+        {
+          "text": "Cottage cheese",
+          "cat": "Dairy"
+        },
+        {
+          "text": "Tomatoes",
+          "cat": "Produce"
+        }
+      ],
+      "source": "web"
+    },
+    {
+      "id": "salmon-crackers-cucumber",
+      "name": "Smoked salmon + whole-wheat crackers + cucumber",
+      "fridge": [
+        "Smoked salmon",
+        "4–5 whole-wheat crackers",
+        "Cucumber slices"
+      ],
+      "protein": "salmon",
+      "base": "crackers",
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": true,
+      "tags": [
+        "healthy_fat",
+        "lean_protein"
+      ],
+      "grocery": [
+        {
+          "text": "Smoked salmon",
+          "cat": "Protein"
+        },
+        {
+          "text": "Whole-wheat crackers",
+          "cat": "Pantry"
+        },
+        {
+          "text": "Cucumber",
+          "cat": "Produce"
+        }
+      ],
+      "source": "web"
+    }
+  ]
+}

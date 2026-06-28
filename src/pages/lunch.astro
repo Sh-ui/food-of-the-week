@@ -1,0 +1,276 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+import lunchWeek from '../data/lunch-week.json';
+
+const base = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL
+  : import.meta.env.BASE_URL + '/';
+const homeHref = base;
+
+const days = lunchWeek.days ?? [];
+
+function shortDate(iso: string): string {
+  const [, m, d] = iso.split('-').map(Number);
+  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  return `${months[m - 1]} ${d}`;
+}
+---
+
+<Layout title={`Mom's Lunch — ${lunchWeek.weekTitle}`} noindex={true}>
+  <main class="lunch-theme max-w-container w-full mx-auto px-md pt-lg pb-lg mobile:px-sm">
+    <!-- Hero -->
+    <section class="text-center px-md py-lg flex flex-col items-center gap-sm">
+      <div class="lunch-hero-emoji" aria-hidden="true">🥪</div>
+      <h1 class="lunch-h1 m-0">Mom's Lunch</h1>
+      <p class="lunch-week m-0">{lunchWeek.weekTitle}</p>
+      <p class="lunch-tagline m-0">One easy lunch a day — just pull these from the fridge.</p>
+    </section>
+
+    <!-- Today banner (filled in by script; falls back to a friendly message) -->
+    <section id="today-banner" class="today-banner rounded-lg p-lg mb-xl">
+      <div class="today-label">Today</div>
+      <h2 id="today-name" class="today-name m-0">This week's lunches</h2>
+      <ul id="today-fridge" class="today-fridge"></ul>
+      <div id="today-meta" class="today-meta"></div>
+    </section>
+
+    <!-- 7-day list -->
+    <section class="flex flex-col gap-md" aria-label="This week's lunches">
+      {days.map((day) => (
+        <article
+          class="lunch-day rounded-lg p-md"
+          data-date={day.date}
+          data-name={day.name}
+          data-carb={day.carbServings}
+          data-soft={String(day.soft)}
+          data-effort={day.effort}
+        >
+          <div class="lunch-day-head">
+            <div class="lunch-dow">
+              <span class="dow-name">{day.dow}</span>
+              <span class="dow-date">{shortDate(day.date)}</span>
+            </div>
+            <span class="today-ribbon" hidden>TODAY</span>
+          </div>
+          <h3 class="lunch-name m-0">{day.name}</h3>
+          <div class="lunch-fridge-label">Pull from the fridge</div>
+          <ul class="lunch-fridge">
+            {day.fridge.map((f) => <li>{f}</li>)}
+          </ul>
+          <div class="lunch-chips">
+            <span class="chip chip-carb">{day.carbServings} carb serving{day.carbServings === '≈1' ? '' : 's'}</span>
+            {day.soft && <span class="chip chip-soft">soft</span>}
+            <span class="chip chip-effort">{day.effort === 'some' ? 'a little prep' : 'no-cook / easy'}</span>
+          </div>
+        </article>
+      ))}
+    </section>
+
+    <!-- footnotes -->
+    <section class="lunch-foot mt-xl">
+      <p class="lunch-note">
+        Carb counts are approximate (1 serving ≈ 15&nbsp;g carbs). {lunchWeek.carbServingNote}
+      </p>
+      <p class="lunch-note">
+        🛒 These ingredients are added automatically to the
+        <a href={homeHref} class="lunch-link">grocery list</a> for the week (look for the green “Lunch” section — you can toggle it off there).
+      </p>
+      <p class="lunch-note lunch-note-dim">
+        Pulled from a rotating list of {lunchWeek.poolSize} ideas — it changes every week so it never gets repetitive.
+      </p>
+    </section>
+
+    <Footer />
+  </main>
+</Layout>
+
+<script is:inline define:vars={{ days }}>
+  function localISO() {
+    const d = new Date();
+    const off = d.getTimezoneOffset() * 60000;
+    return new Date(d.getTime() - off).toISOString().slice(0, 10);
+  }
+  const DOW = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const todayISO = localISO();
+
+  const match = days.find((d) => d.date === todayISO);
+
+  // highlight the matching card
+  document.querySelectorAll('.lunch-day').forEach((el) => {
+    const isToday = el.getAttribute('data-date') === todayISO;
+    el.classList.toggle('is-today', isToday);
+    const ribbon = el.querySelector('.today-ribbon');
+    if (ribbon) ribbon.hidden = !isToday;
+  });
+
+  // fill the top banner
+  const nameEl = document.getElementById('today-name');
+  const fridgeEl = document.getElementById('today-fridge');
+  const metaEl = document.getElementById('today-meta');
+  const labelEl = document.querySelector('#today-banner .today-label');
+
+  if (match) {
+    const [y, m, d] = match.date.split('-').map(Number);
+    if (labelEl) labelEl.textContent = `Today · ${DOW[new Date(Date.UTC(y, m - 1, d)).getUTCDay()]}, ${MON[m - 1]} ${d}`;
+    if (nameEl) nameEl.textContent = match.name;
+    if (fridgeEl) fridgeEl.innerHTML = match.fridge.map((f) => `<li>${f}</li>`).join('');
+    if (metaEl) {
+      const chips = [`${match.carbServings} carb`, match.soft ? 'soft' : null, match.effort === 'some' ? 'a little prep' : 'no-cook / easy']
+        .filter(Boolean).map((t) => `<span class="chip">${t}</span>`).join('');
+      metaEl.innerHTML = chips;
+    }
+  } else {
+    if (labelEl) labelEl.textContent = 'This week';
+    if (nameEl) nameEl.textContent = "Here's the week's lunches";
+    if (fridgeEl) fridgeEl.innerHTML = '';
+    if (metaEl) metaEl.innerHTML = '';
+    document.getElementById('today-banner')?.classList.add('no-today');
+  }
+</script>
+
+<style>
+  /* ---- cool seafoam / mint accent (brown + crème base preserved) ---- */
+  .lunch-theme {
+    --mint: #7cc0ae;
+    --mint-deep: #3e8475;
+    --mint-bg: #eaf5f1;
+    --mint-bg-soft: #f1f8f5;
+    --mint-border: #bfe0d6;
+  }
+
+  .lunch-hero-emoji { font-size: 3rem; line-height: 1; }
+  .lunch-h1 {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    font-size: var(--font-size-h1);
+    line-height: 1.1;
+  }
+  .lunch-week { color: var(--mint-deep); font-weight: 600; font-size: 1.2rem; }
+  .lunch-tagline { color: var(--color-text-light); font-size: 1.05rem; }
+
+  /* today banner */
+  .today-banner {
+    background: linear-gradient(180deg, var(--mint-bg) 0%, var(--mint-bg-soft) 100%);
+    border: 1px solid var(--mint-border);
+    border-top: 5px solid var(--mint);
+    text-align: center;
+  }
+  .today-banner.no-today { background: var(--color-bg-alt); border-top-color: var(--color-border); }
+  .today-label {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--mint-deep);
+    margin-bottom: var(--spacing-xs);
+  }
+  .today-name {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    font-size: clamp(1.6rem, 4.5vw, 2.1rem);
+    line-height: 1.2;
+  }
+  .today-fridge {
+    list-style: none;
+    margin: var(--spacing-md) auto 0;
+    padding: 0;
+    display: inline-flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    text-align: left;
+  }
+  .today-fridge li {
+    position: relative;
+    padding-left: 1.6rem;
+    font-size: 1.2rem;
+    color: var(--color-text);
+  }
+  .today-fridge li::before {
+    content: '✓';
+    position: absolute; left: 0; top: 0;
+    color: var(--mint-deep); font-weight: 700;
+  }
+  .today-meta { margin-top: var(--spacing-md); display: flex; gap: var(--spacing-xs); justify-content: center; flex-wrap: wrap; }
+
+  /* day cards */
+  .lunch-day {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .lunch-day.is-today {
+    border: 1px solid var(--mint-border);
+    border-left: 5px solid var(--mint);
+    background: var(--mint-bg-soft);
+    box-shadow: 0 2px 12px rgba(124, 192, 174, 0.18);
+  }
+  .lunch-day-head { display: flex; justify-content: space-between; align-items: center; gap: var(--spacing-sm); }
+  .lunch-dow { display: flex; align-items: baseline; gap: var(--spacing-sm); }
+  .dow-name {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--mint-deep);
+    font-size: 1.05rem;
+  }
+  .dow-date { color: var(--color-text-muted); font-size: 0.9rem; }
+  .today-ribbon {
+    background: var(--mint);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 2px 8px;
+    border-radius: 999px;
+  }
+  .lunch-name {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    font-size: 1.35rem;
+    line-height: 1.25;
+    margin-top: var(--spacing-xs);
+  }
+  .lunch-fridge-label {
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.72rem;
+    color: var(--color-text-muted);
+    margin-top: var(--spacing-sm);
+  }
+  .lunch-fridge {
+    list-style: none; margin: var(--spacing-xs) 0 0; padding: 0;
+    display: flex; flex-direction: column; gap: 2px;
+  }
+  .lunch-fridge li {
+    position: relative; padding-left: 1.4rem;
+    font-size: 1.1rem; color: var(--color-text);
+  }
+  .lunch-fridge li::before {
+    content: '•'; position: absolute; left: 0.3rem; top: 0;
+    color: var(--mint); font-weight: 700;
+  }
+  .lunch-chips { display: flex; flex-wrap: wrap; gap: var(--spacing-xs); margin-top: var(--spacing-sm); }
+  .chip {
+    font-size: 0.78rem;
+    padding: 2px 10px;
+    border-radius: 999px;
+    background: var(--mint-bg);
+    color: var(--mint-deep);
+    border: 1px solid var(--mint-border);
+    white-space: nowrap;
+  }
+  .chip-effort { background: var(--color-bg-alt); color: var(--color-text-light); border-color: var(--color-border); }
+
+  /* footnotes */
+  .lunch-foot { border-top: 1px solid var(--color-border); padding-top: var(--spacing-lg); }
+  .lunch-note { color: var(--color-text-light); font-size: 0.95rem; margin-bottom: var(--spacing-sm); }
+  .lunch-note-dim { color: var(--color-text-muted); font-size: 0.88rem; }
+  .lunch-link { color: var(--mint-deep); font-weight: 600; text-decoration: none; }
+  .lunch-link:hover { text-decoration: underline; }
+
+  @media screen(mobile) {
+    .lunch-name { font-size: 1.5rem; }
+    .lunch-fridge li, .today-fridge li { font-size: 1.25rem; }
+  }
+</style>

@@ -3,12 +3,17 @@
   "type": "module",
   "version": "1.7.0",
   "scripts": {
+    "predev": "node scripts/build-lunch-pool.mjs && node scripts/generate-lunch-week.mjs",
     "dev": "astro dev",
     "start": "astro dev",
+    "prebuild": "node scripts/build-lunch-pool.mjs && node scripts/generate-lunch-week.mjs",
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint:ci": "astro check"
+    "lint:ci": "astro check",
+    "lunch:pool": "node scripts/build-lunch-pool.mjs",
+    "lunch:generate": "node scripts/generate-lunch-week.mjs",
+    "lunch": "node scripts/build-lunch-pool.mjs && node scripts/generate-lunch-week.mjs"
   },
   "dependencies": {
     "@astrojs/tailwind": "^6.0.2",

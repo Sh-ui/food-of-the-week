@@ -1,0 +1,149 @@
+{
+  "weekStart": "2026-06-28",
+  "weekTitle": "Week of June 28 - July 4, 2026",
+  "generatedAt": "2026-06-28T16:23:50.661Z",
+  "poolSize": 52,
+  "activePoolSize": 52,
+  "autoGrocery": true,
+  "carbServingNote": "carbServings is an approximate count of 15 g carb servings, estimated from the nutritionist handout. Always check the food label.",
+  "days": [
+    {
+      "date": "2026-06-28",
+      "dow": "Sunday",
+      "id": "hummus-pita-cucumber",
+      "name": "Hummus + whole-wheat pita + cucumber",
+      "fridge": [
+        "2 Tbsp hummus",
+        "½ whole-wheat pita",
+        "Cucumber slices"
+      ],
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": true,
+      "protein": "hummus"
+    },
+    {
+      "date": "2026-06-29",
+      "dow": "Monday",
+      "id": "rice-pudding-nuts",
+      "name": "No-sugar-added rice pudding + nuts",
+      "fridge": [
+        "4 oz no-sugar-added rice pudding",
+        "2 Tbsp nuts"
+      ],
+      "carbServings": "≈1–2",
+      "effort": "easy",
+      "soft": true,
+      "protein": "nuts"
+    },
+    {
+      "date": "2026-06-30",
+      "dow": "Tuesday",
+      "id": "cottage-celery",
+      "name": "Cottage cheese + celery",
+      "fridge": [
+        "½ cup cottage cheese",
+        "Celery sticks"
+      ],
+      "carbServings": "≈0–1",
+      "effort": "easy",
+      "soft": true,
+      "protein": "cottage_cheese"
+    },
+    {
+      "date": "2026-07-01",
+      "dow": "Wednesday",
+      "id": "tuna-salad-pita",
+      "name": "Tuna or egg salad + ½ whole-wheat pita",
+      "fridge": [
+        "½ cup tuna or egg salad",
+        "½ whole-wheat pita (or 4–5 crackers)"
+      ],
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": true,
+      "protein": "tuna"
+    },
+    {
+      "date": "2026-07-02",
+      "dow": "Thursday",
+      "id": "tuna-avocado-crackers",
+      "name": "Tuna + avocado + whole-wheat crackers",
+      "fridge": [
+        "1 tuna pouch",
+        "¼ avocado",
+        "4–5 whole-wheat crackers"
+      ],
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": true,
+      "protein": "tuna"
+    },
+    {
+      "date": "2026-07-03",
+      "dow": "Friday",
+      "id": "cottage-cheese-fruitcup",
+      "name": "Cottage cheese + small fruit cup",
+      "fridge": [
+        "½ cup low-fat cottage cheese",
+        "1 small fruit cup (in juice/water)"
+      ],
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": true,
+      "protein": "cottage_cheese"
+    },
+    {
+      "date": "2026-07-04",
+      "dow": "Saturday",
+      "id": "applesauce-nuts",
+      "name": "Applesauce + mixed nuts",
+      "fridge": [
+        "½ cup applesauce",
+        "2 Tbsp mixed nuts"
+      ],
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": true,
+      "protein": "nuts"
+    }
+  ],
+  "grocery": [
+    {
+      "name": "Produce",
+      "items": [
+        "Avocado",
+        "Celery",
+        "Cucumber"
+      ]
+    },
+    {
+      "name": "Protein",
+      "items": [
+        "Tuna pouches",
+        "Tuna pouches (or eggs)"
+      ]
+    },
+    {
+      "name": "Dairy",
+      "items": [
+        "Cottage cheese",
+        "Hummus",
+        "Light mayo",
+        "Low-fat cottage cheese",
+        "No-sugar-added rice pudding"
+      ]
+    },
+    {
+      "name": "Pantry",
+      "items": [
+        "Fruit cups (in juice/water)",
+        "Mixed nuts",
+        "Nuts",
+        "Unsweetened applesauce",
+        "Whole-wheat crackers",
+        "Whole-wheat pita"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "_comment": "AUTO-GENERATED audit trail (deterministic replay from lunch-config.startDate). Not an input — safe to delete; it is rebuilt every run.",
+  "startDate": "2026-06-28",
+  "updatedAt": "2026-06-28T16:23:50.661Z",
+  "weeks": [
+    {
+      "weekStart": "2026-06-28",
+      "items": [
+        "hummus-pita-cucumber",
+        "rice-pudding-nuts",
+        "cottage-celery",
+        "tuna-salad-pita",
+        "tuna-avocado-crackers",
+        "cottage-cheese-fruitcup",
+        "applesauce-nuts"
+      ]
+    }
+  ]
+}
