@@ -6,10 +6,10 @@
 
 ### Produce
 
-- [ ] Fennel - 1 bulb (Sausage Fennel Pasta)
-- [ ] Parsley - 1 bunch (Sausage Fennel gremolata + Eastern Med aromatic shower)
-- [ ] Lemons - 2-3 (Sausage Fennel + Eastern Med)
-- [ ] Kale or collard greens - 1 bunch (Thai Beef Stir-Fry)
+- [ ] Fennel - 1 bulb (Fennel Pasta)
+- [ ] Parsley - 1 bunch (Fennel Pasta gremolata + Med Pork aromatic shower)
+- [ ] Lemons - 2-3 (Fennel Pasta + Med Pork)
+- [ ] Kale or collard greens - 1 bunch (Thai Beef)
 - [ ] Fresh ginger - 1 knob (Thai Beef + Miso Salmon glaze)
 - [ ] Scallions - 1 bunch (Thai Beef garnish)
 - [x] Yellow onions (pantry)
@@ -17,29 +17,29 @@
 
 ### Protein
 
-- [ ] Ground beef 85/15 - 1 lb (Thai Beef Stir-Fry)
+- [ ] Ground beef 85/15 - 1 lb (Thai Beef)
 - [ ] Salmon fillets - 2-3 pieces, ~1-1.5 lb (Miso Salmon)
-- [x] Bratwurst - 4 (fridge/freezer -- Sausage Fennel Pasta)
-- [x] Pork shoulder chunks (deep freezer -- Eastern Med Pork)
+- [x] Bratwurst - 4 (fridge/freezer -- Fennel Pasta)
+- [x] Pork shoulder chunks (deep freezer -- Med Pork)
 
 ### Frozen
 
-- [ ] Shelled edamame - 1 bag (Miso Salmon sheet pan)
+- [ ] Shelled edamame - 1 bag (Miso Salmon)
 
 ### Pantry
 
-- [ ] Egg noodles - 8-10 oz (Sausage Fennel Pasta)
-- [ ] Anchovy paste - 1 tube (booster for Sausage Fennel wok fat)
-- [x] Canned white beans (Sausage Fennel cai + Eastern Med cai)
-- [x] Canned pumpkin (Eastern Med pumpkin spread)
-- [x] Quinoa -- ~1 dinner's worth (Eastern Med fan)
+- [ ] Egg noodles - 8-10 oz (Fennel Pasta)
+- [ ] Anchovy paste - 1 tube (booster for Fennel Pasta wok fat)
+- [x] Canned white beans (Fennel Pasta cai + Med Pork cai)
+- [x] Canned pumpkin (Med Pork pumpkin spread)
+- [x] Quinoa -- ~1 dinner's worth (Med Pork fan)
 - [x] White rice (pantry)
-- [x] Walnuts (Eastern Med garnish)
+- [x] Walnuts (Med Pork garnish)
 - [x] Fire roasted crushed tomatoes (pantry reserve)
-- [x] Dates (fridge -- Eastern Med garnish)
-- [x] Cherry pepper relish (fridge -- Sausage Fennel cai)
+- [x] Dates (fridge -- Med Pork garnish)
+- [x] Cherry pepper relish (fridge -- Fennel Pasta cai)
 - [x] White miso (fridge -- Miso Salmon glaze)
-- [x] Whole milk Greek yogurt (fridge -- Eastern Med cai)
+- [x] Whole milk Greek yogurt (fridge -- Med Pork cai)
 - [x] Dark soy, sesame oil, oyster sauce, fish sauce, cooking wine, sesame seeds, furikake (flavor cabinet)
 - [x] Cumin, cinnamon, allspice, sugar (cabinet)
 
@@ -61,8 +61,8 @@
 
 **Sunday:**
 
-- [ ] **Eastern Med pork bag** -- cube the pork shoulder into ~1-inch pieces. Toss with *2 tbsp* **olive oil**, *3 cloves* grated **garlic**, *1 tsp* **cumin**, *1/2 tsp* **cinnamon**, *1/2 tsp* **allspice**, *1 tsp* **salt**, zest of *1 lemon*. Vac seal flat. SV at **158°F for 4-8 hours** -- longer is fine, the fat renders and flavor deepens. Pull, cool on counter, refrigerate the bag.
-- [ ] **Spiced pumpkin spread** -- open *1 can* **pumpkin puree**. Stir in *2 tbsp* **olive oil**, *1 tsp* **cumin**, *1/2 tsp* **cinnamon**, *1/2 tsp* **allspice**, *1 clove* minced **garlic**, *2 tbsp* **lemon juice**, **salt** to taste. Smooth and fragrant. Cover and refrigerate. Pull out 20 min before Eastern Med night to serve room temp.
+- [ ] **Med Pork pork bag** -- cube the pork shoulder into ~1-inch pieces. Toss with *2 tbsp* **olive oil**, *3 cloves* grated **garlic**, *1 tsp* **cumin**, *1/2 tsp* **cinnamon**, *1/2 tsp* **allspice**, *1 tsp* **salt**, zest of *1 lemon*. Vac seal flat. SV at **158°F for 4-8 hours** -- longer is fine, the fat renders and flavor deepens. Pull, cool on counter, refrigerate the bag.
+- [ ] **Spiced pumpkin spread** -- open *1 can* **pumpkin puree**. Stir in *2 tbsp* **olive oil**, *1 tsp* **cumin**, *1/2 tsp* **cinnamon**, *1/2 tsp* **allspice**, *1 clove* minced **garlic**, *2 tbsp* **lemon juice**, **salt** to taste. Smooth and fragrant. Cover and refrigerate. Pull out 20 min before Med Pork night to serve room temp.
 - [ ] **Date-walnut garnish** -- roughly chop *6-8* **dates** + small handful **walnuts** + drizzle **olive oil** + pinch **salt**. Jar and refrigerate alongside the pumpkin spread.
 
 ### Workflow
@@ -71,7 +71,7 @@ Saturday is two bag moves and a possible salmon buy. Sunday is one focused hour:
 
 ### Protein Bags
 
-**Eastern Med pork bag**: ~0.75 lb pork shoulder cubes, SV 158°F / 4-8h, fully spiced with cumin, cinnamon, allspice, garlic, lemon. Sear cast iron night-of.
+**Med Pork pork bag**: ~0.75 lb pork shoulder cubes, SV 158°F / 4-8h, fully spiced with cumin, cinnamon, allspice, garlic, lemon. Sear cast iron night-of.
 
 ### Cai Bags
 
@@ -79,7 +79,7 @@ Saturday is two bag moves and a possible salmon buy. Sunday is one focused hour:
 
 ---
 
-## Sausage Fennel Pasta
+## Fennel Pasta
 
 ##### WokNightPrep
 ###### poach brats + gremolata + bean salad + 5:30 noodle water
@@ -126,7 +126,7 @@ Off heat: add the **egg noodles**, toss with a knob of **butter** and the remain
 
 ---
 
-## Sheet Pan Miso Salmon
+## Miso Salmon
 
 ##### Prep&Heat
 ###### miso glaze + sheet pan in + 5:30 rice
@@ -169,13 +169,13 @@ Toss the **greens** in a bowl with a few spoonfuls of **soy-ginger dressing** fr
 
 ---
 
-## Eastern Med Pork
+## Med Pork
 
 ##### Prep&Heat
 ###### pull cai + 4:30 quinoa + cast iron sear
 
 #### Anchor:
-Cubed **pork shoulder** from the Eastern Med SV bag, ripping cast iron sear, finished off-heat with a warm aromatic shower of minced **garlic**, chopped **parsley**, **lemon zest**, and rinsed diced **yellow onion**.
+Cubed **pork shoulder** from the Med Pork SV bag, ripping cast iron sear, finished off-heat with a warm aromatic shower of minced **garlic**, chopped **parsley**, **lemon zest**, and rinsed diced **yellow onion**.
 
 #### Fan:
 Quinoa -- rinse well, rice cooker at 4:30.
@@ -187,7 +187,7 @@ White bean salad with cherry pepper relish + yogurt dollop -- cold, sharp.
 
 ### Already Prepped
 
-- **Eastern Med pork bag** in the fridge from Sunday.
+- **Med Pork pork bag** in the fridge from Sunday.
 - **Spiced pumpkin spread** in the fridge from Sunday.
 - **Date-walnut jar** in the fridge from Sunday.
 
@@ -213,7 +213,7 @@ Splash in *1-2 tbsp* of the reserved **bag juices** + drizzle fresh **olive oil*
 
 ---
 
-## Thai Beef Stir-Fry
+## Thai Beef
 
 ##### Prep&Heat
 ###### 5:30 rice + one wok
