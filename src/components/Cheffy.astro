@@ -1,0 +1,42 @@
+---
+// Cheffy.astro -- corner mascot + state-machine host. STUB / SCAFFOLD.
+// Full design contract: ../../CHEFFY-SYSTEM.md ; checklist: ../../TODOS.md (Phase 3-4).
+//
+// Progressive enhancement only: the site must work fully without this component.
+// NOT yet mounted in Layout.astro -- wiring is the final build-out step so the
+// branch keeps behaving exactly like master until Cheffy is real.
+//
+// Props let a page opt out (e.g. print views) and pick a corner.
+import CheffyPanel from './CheffyPanel.astro';
+import dialogue from '../data/cheffy-dialogue.json';
+
+interface Props {
+  /** Hide Cheffy entirely on this page (default: shown). */
+  enabled?: boolean;
+  /** Screen corner to dock in. */
+  corner?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';
+}
+
+const { enabled = true, corner = 'bottom-right' } = Astro.props;
+const startNode = dialogue.start ?? 'root';
+---
+
+{enabled && (
+  <div
+    id="cheffy"
+    class="cheffy-root"
+    data-corner={corner}
+    data-state="idle"
+    data-start-node={startNode}
+    aria-live="polite"
+  >
+    {/* TODO(cheffy): SVG chef-hat with named eye/mouth parts + expression swap. */}
+    {/* TODO(cheffy): state machine idle | attention | dialogue | processing. */}
+    {/* TODO(cheffy): localStorage visitedWeeks[weekId] -> attention on new week. */}
+    <button type="button" class="cheffy-toggle" aria-expanded="false" aria-controls="cheffy-panel">
+      <span class="sr-only">Open Cheffy</span>
+      <span aria-hidden="true">👨‍🍳</span>
+    </button>
+    <CheffyPanel />
+  </div>
+)}

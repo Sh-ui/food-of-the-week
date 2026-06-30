@@ -1,0 +1,39 @@
+{
+  "_comment": "Cheffy dialogue tree (STUB). Data, not code -- copy and options change here without touching components. See CHEFFY-SYSTEM.md > Dialogue system.",
+
+  "start": "root",
+  "_start": "Id of the node Cheffy opens on.",
+
+  "_node_shape": "Each entry in 'nodes' is { text, expression?, input?, options:[{label, goto? , action?}] }. 'goto' moves to another node id; 'action' runs a handler. expression is one of: neutral|excited|thinking|sleepy. input:true shows a free-text field.",
+  "_actions": "Valid option 'action' values the runtime must implement: generate-ics | trigger-permission | navigate-to-archive | export-checklist | close.",
+
+  "nodes": {
+    "root": {
+      "text": "Hi, I'm Cheffy. Want a hand with this week?",
+      "expression": "excited",
+      "options": [
+        { "label": "Add cooking times to my calendar", "goto": "calendar" },
+        { "label": "Remind me at cook time", "action": "trigger-permission" },
+        { "label": "Export my checklist", "action": "export-checklist" },
+        { "label": "Find an old week", "goto": "search" },
+        { "label": "Never mind", "action": "close" }
+      ]
+    },
+    "calendar": {
+      "text": "I can add all of this week's times, or just one meal.",
+      "expression": "neutral",
+      "options": [
+        { "label": "Add all events", "action": "generate-ics" },
+        { "label": "Back", "goto": "root" }
+      ]
+    },
+    "search": {
+      "text": "Type a week or a meal name and I'll jump there.",
+      "expression": "thinking",
+      "input": true,
+      "options": [
+        { "label": "Back", "goto": "root" }
+      ]
+    }
+  }
+}

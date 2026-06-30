@@ -1,0 +1,42 @@
+---
+// CheffyPanel.astro -- the expand-on-click dialogue panel. STUB / SCAFFOLD.
+// Full design contract: ../../CHEFFY-SYSTEM.md (Dialogue system + Features).
+//
+// Renders the current dialogue node: text, options (goto / action), and an
+// optional free-text input for search/navigation. Data-driven from
+// src/data/cheffy-dialogue.json -- no hard-coded option lists.
+import dialogue from '../data/cheffy-dialogue.json';
+
+type DialogueOption = { label: string; goto?: string; action?: string };
+type DialogueNode = { text: string; expression?: string; input?: boolean; options: DialogueOption[] };
+
+const nodes = (dialogue.nodes ?? {}) as Record<string, DialogueNode>;
+const startId = dialogue.start ?? 'root';
+const start = nodes[startId];
+---
+
+<div id="cheffy-panel" class="cheffy-panel" role="dialog" aria-label="Cheffy" hidden>
+  {start ? (
+    <div class="cheffy-node" data-node={startId}>
+      <p class="cheffy-text">{start.text}</p>
+      {start.input && (
+        <input type="text" class="cheffy-input" placeholder="Search a week or meal..." />
+      )}
+      <ul class="cheffy-options">
+        {start.options.map((opt) => (
+          <li>
+            <button
+              type="button"
+              class="cheffy-option"
+              data-goto={opt.goto ?? null}
+              data-action={opt.action ?? null}
+            >{opt.label}</button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  ) : (
+    /* TODO(cheffy): populate src/data/cheffy-dialogue.json with a real tree. */
+    <p class="cheffy-text">Cheffy is still warming up the kitchen.</p>
+  )}
+</div>

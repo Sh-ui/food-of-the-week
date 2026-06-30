@@ -1,45 +1,110 @@
-# TODOS
+# Food of the Week - Development Roadmap (getting-cheffy)
 
-## Needs Done P1
- - [x] fix minor bug where grocery list slug url sometimes doesn't show up when scrolling down from the top of the page on first load.
- - [x] use index sequence override to setup info subsection specified theming and prune deprecated approach
-   - ```css
-      instructionSubsections: {
-        info: { bg: 'bg-alt', border: 'secondary', heading: 'primary' },
-        overrides: {
-          // 0: { scheme: 'salmon' },
-          // 2: { border: '#81E3F6' },
-          // 5: { bg: 'bg-alt', border: 'accent', heading: 'primary' },
-        }
-     ```
-
-## Needs Done P2
- - [ ] integrate ko-fi
-   - _put badge at bottom of README.md_
-   - _put 'buy me a coffee' link in the footer of the site_
-   - _add sponsors/funding section to the github repo_
- - [ ] integrate GoatCounter
-   - _use script line embedded in `Layout.astro`_
-   - _use generated API key + github action/deployment to push a log periodically to my email_
- - [ ] convert .mjs files to .ts files _*this actually might be more involved_
-   - see about converting `astro.config.mjs` to `.ts`
-   - easiest way to get rid of `tailwind.config.mjs` would be a [MIGRATION](MIGRATION.md) to `v4` 
-
-## Possible Features
-
-### Permalink Generation
-- [x] Archive permalink generation from archive folder
-  - _Generate stable URLs for archived weeks (e.g., `/archive/20251214-lamb-patties-week`)_
-  - _Allow navigation to specific archived meal plans by date/week identifier_
-
-### Theme & UI
-- [ ] Dark mode / light mode theme based on device detection
-- [ ] Optional theme toggle in footer
-- [ ] Hero section redesign - something more appropriate (maybe non-animated cheffy hat face? Or save for getting-cheffy branch?)
-
-### Stack Migration
-- [ ] Migrate to a new stack based on [MIGRATION.md](MIGRATION.md)
+This document is the ambitious feature roadmap kept on the `getting-cheffy` branch
+(the `master` branch keeps a slimmer list and points here). The design contract for
+the Cheffy work lives in [CHEFFY-SYSTEM.md](CHEFFY-SYSTEM.md); this file is the
+phased checklist. Tasks are organized into phases, each building on the previous.
 
 ---
 
-**Note:** Keeping it simple for now on the master branch. See [TODOS on getting-cheffy branch](https://github.com/sh-ui/food-of-the-week/blob/getting-cheffy/TODOS.md) for the more ambitious feature roadmap. 
+## Phase 1: Foundation and Housekeeping
+
+- [x] Add open source license (AGPL-3.0)
+- [x] Configure Dependabot for dependency security (`.github/dependabot.yml`)
+- [x] Clean up project documentation
+- [x] Review and update README with current features
+
+---
+
+## Phase 2: UI/UX Polish (Header and Navigation)
+
+- [x] Unified header (removed hamburger / mobile sub-header)
+- [x] Responsive print button (icon -> icon+name -> "Print"+name across breakpoints)
+- [x] Section selector dropdown with animated caret on mobile
+- [x] Desktop scroll behavior: nav slides to align, print button tracks section
+- [x] Scroll position states + fade transitions
+
+---
+
+## Phase 3: Cheffy Core Implementation
+
+> See [CHEFFY-SYSTEM.md](CHEFFY-SYSTEM.md) for the full design contract.
+
+### Character and UI
+
+- [ ] Design SVG chef hat with facial expressions
+  - [ ] Neutral expression
+  - [ ] Excited expression
+  - [ ] Blink animation
+  - [ ] Thinking expression
+  - [ ] Sleepy expression
+- [ ] Implement mouth states
+  - [ ] Neutral
+  - [ ] Smile
+  - [ ] Surprised
+  - [ ] Frown
+- [ ] Add notification dot indicator
+- [ ] Position Cheffy in corner with click-to-expand panel
+
+### Animated Demo Loop
+
+- [ ] Create animated SVG demonstration loop for README
+  - [ ] Blink animation
+  - [ ] Look left animation
+  - [ ] Look right animation
+  - [ ] Return to neutral/idle
+  - [ ] 2-3 second pause before loop restart
+- [ ] Save as `src/assets/cheffy-animated.svg` with SMIL animations
+
+### State Machine
+
+- [ ] Implement idle state (default)
+- [ ] Implement attention state (first visit this week, excited expression)
+- [ ] Implement dialogue state (panel open, options visible)
+- [ ] Implement processing state (thinking expression)
+- [ ] Set up localStorage tracking for `visitedWeeks[weekId]`
+
+### Dialogue System
+
+- [ ] Design JSON-based dialogue tree schema (`src/data/cheffy-dialogue.json`)
+- [ ] Implement text input support for search/navigation
+- [ ] Create action handlers
+  - [ ] generate-ics
+  - [ ] trigger-permission
+  - [ ] close
+  - [ ] navigate-to-archive
+  - [ ] export-checklist
+
+---
+
+## Phase 4: Cheffy Features
+
+### Calendar Event Sync
+
+- [ ] Implement time extraction from Markdown
+  - [ ] Regex for clock times (e.g., "3:00 PM")
+  - [ ] Semantic times (e.g., "dinner time")
+  - [ ] Duration extraction (e.g., "30 minutes")
+- [ ] Support structured `{time: ...}` annotation
+- [ ] Build ICS file generation
+- [ ] Create Google Calendar "Add All Events" link
+- [ ] Add per-recipe mini ICS export
+
+### Local Push Notifications
+
+- [ ] Set up service worker registration (`/public/sw.js`)
+- [ ] Implement notification permission flow via Cheffy dialogue
+- [ ] Integrate Alarm API / Notification Triggers API
+- [ ] Add graceful degradation for unsupported browsers (iOS Safari)
+
+### Checklist Import/Export
+
+- [ ] Design JSON export format with week ID and task states
+- [ ] Implement plain text export (markdown checkbox format)
+- [ ] Create import functionality with merge/overwrite options
+
+---
+
+**Note:** `master` keeps a deliberately simpler roadmap. This branch is where the
+Cheffy mascot/assistant gets built out per [CHEFFY-SYSTEM.md](CHEFFY-SYSTEM.md).
+</content>
