@@ -11,13 +11,50 @@
     "total_tokens": 0
   },
   "dod": "Fully build the Cheffy module on the getting-cheffy branch per CHEFFY-SYSTEM.md (the design contract / DoD). Cheffy is an animated SVG chef-hat corner assistant for the Food of the Week Astro site, progressive-enhancement only -- the site must build clean and behave exactly like master with Cheffy's JS disabled. Replace the scaffold stubs (src/components/Cheffy.astro, CheffyPanel.astro, src/data/cheffy-dialogue.json, src/utils/cheffyCalendar.ts, src/assets/cheffy-animated.svg, public/sw.js) with real implementations and wire <Cheffy /> into src/layouts/Layout.astro. Deliver, per CHEFFY-SYSTEM.md acceptance: (1) corner mascot with expression states + state machine (idle/attention/dialogue/processing) keyed off the existing per-week localStorage id; (2) data-driven dialogue panel; (3) calendar sync -- time extraction from the week Markdown + valid ICS add-all + per-recipe mini ICS + Google Calendar link, in cheffyCalendar.ts; (4) opt-in local notifications via public/sw.js triggered only from a dialogue action, degrading cleanly on unsupported browsers; (5) checklist JSON+Markdown export and import reusing GroceryList.astro localStorage state; (6) honor prefers-reduced-motion; (7) animated README demo SVG. Reuse existing conventions (LunchGroceryAddon.astro, Footer.astro, weekParser.ts, tailwind.config.mjs color system). Done = npm run build passes (astro check && astro build), no console errors on any page, all CHEFFY-SYSTEM.md acceptance bullets met.",
-  "dod_progress": [],
+  "dod_progress": [
+    {
+      "criterion": "calendar-engine: cheffyCalendar.ts time extraction from week Markdown + valid ICS (add-all + per-recipe mini) + Google Calendar template URL; UI-independent.",
+      "status": "done"
+    },
+    {
+      "criterion": "mascot-state-machine: Cheffy.astro corner SVG mascot with expression states + idle/attention/dialogue/processing state machine keyed off the per-week localStorage id (visitedWeeks).",
+      "status": "pending"
+    },
+    {
+      "criterion": "dialogue-panel: CheffyPanel.astro + cheffy-dialogue.json data-driven tree with goto navigation, free-text search node, and action dispatch.",
+      "status": "pending"
+    },
+    {
+      "criterion": "calendar-actions: generate-ics download + per-recipe mini export + Google Calendar link wired from the dialogue panel.",
+      "status": "pending"
+    },
+    {
+      "criterion": "local-notifications: public/sw.js opt-in local reminders triggered only via the trigger-permission dialogue action; clean degradation on unsupported browsers.",
+      "status": "pending"
+    },
+    {
+      "criterion": "checklist-export-import: JSON + Markdown export and import (merge/overwrite) reusing GroceryList.astro localStorage state.",
+      "status": "pending"
+    },
+    {
+      "criterion": "reduced-motion: prefers-reduced-motion honored across mascot/panel/animations; no layout shift.",
+      "status": "pending"
+    },
+    {
+      "criterion": "animated-readme-svg: src/assets/cheffy-animated.svg SMIL demo loop embedded in README.md.",
+      "status": "pending"
+    },
+    {
+      "criterion": "pe-build-gate: <Cheffy /> wired into Layout.astro; npm run build (astro check && astro build) passes; no console errors on any page; behaves exactly like master with Cheffy JS disabled.",
+      "status": "pending"
+    }
+  ],
   "gate": {
     "audit_pass": null,
     "last_audit": null
   },
   "last_iteration": null,
-  "last_strike": null,
+  "last_strike": "2026-06-30T23:55:00Z",
   "next_queue": [],
   "pacing": {
     "block_started_at": null,
@@ -48,5 +85,5 @@
     "troupe-haiku"
   ],
   "working_branch": null,
-  "workshop_debt": 0
+  "workshop_debt": 1
 }

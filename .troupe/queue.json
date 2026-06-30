@@ -1,7 +1,7 @@
 {
   "jobs": {
     "job_20260630_230118_direct_bootstrap_decompose_dod": {
-      "attempts": 0,
+      "attempts": 1,
       "audit": null,
       "blocked_reason": null,
       "budget": {
@@ -21,17 +21,207 @@
       "not_before": null,
       "objective": "Decompose the DoD hexagonally into parts (one per criterion), seed dod_progress (one entry per criterion), and arm the first part's rung structure (a PLAN(ner) rung -> BUILD -> TEST -> AUDIT, scoped) plus next_assignment (batch + dispatch_rules + warm_set). First pass: no prior session/brief -- see roles/director.md.",
       "priority": 50,
-      "result_ref": null,
+      "result_ref": "Bootstrap DIRECT complete: seeded 9 dod_progress criteria; decomposed Cheffy DoD into 9 parts; armed part 1 (calendar-engine) RESEARCH->PLAN->BUILD->TEST + next_assignment(head+batch+default-ascent+full warm_set).",
       "resume_mode": "fresh",
       "risk": [],
-      "status": "queued",
+      "status": "done",
       "title": "bootstrap: decompose DoD",
-      "updated_at": "2026-06-30T23:01:18.368920Z",
+      "updated_at": "2026-06-30T23:10:08.180476Z",
+      "weight": "light"
+    },
+    "job_20260630_233827_audit_audit_job_cheffy_calendar_build": {
+      "attempts": 1,
+      "audit": {
+        "attempts": 0,
+        "audit_of": "job_cheffy_calendar_build",
+        "auditor_job_id": null,
+        "last_verdict": null,
+        "max_attempts": 1,
+        "required": false,
+        "status": "n/a"
+      },
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "after_each_step"
+      },
+      "context_files": [],
+      "created_at": "2026-06-30T23:38:27.808125Z",
+      "criterion": null,
+      "cycle": {
+        "injected": true
+      },
+      "depends_on": [],
+      "dispatch": "AUDIT",
+      "failure_reason": null,
+      "id": "job_20260630_233827_audit_audit_job_cheffy_calendar_build",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 2,
+      "not_before": null,
+      "objective": "Cold, isolated audit of job_cheffy_calendar_build: falsify the builder's claims against the DoD. See roles/audit.md.",
+      "priority": 49,
+      "result_ref": null,
+      "resume_mode": "fresh",
+      "risk": [
+        "audit_required"
+      ],
+      "status": "done",
+      "title": "audit job_cheffy_calendar_build",
+      "updated_at": "2026-06-30T23:49:04.330617Z",
+      "weight": "standard"
+    },
+    "job_cheffy_calendar_build": {
+      "attempts": 1,
+      "audit": {
+        "attempts": 0,
+        "audit_of": null,
+        "auditor_job_id": "job_20260630_233827_audit_audit_job_cheffy_calendar_build",
+        "last_verdict": "pass",
+        "max_attempts": 2,
+        "required": true,
+        "status": "pass"
+      },
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "after_each_step"
+      },
+      "context_files": [
+        "src/utils/cheffyCalendar.ts",
+        "src/utils/weekParser.ts",
+        "FOOD-OF-THE-WEEK.md",
+        "CHEFFY-SYSTEM.md"
+      ],
+      "created_at": "2026-06-30T23:09:19.482686Z",
+      "criterion": null,
+      "cycle": {},
+      "depends_on": [
+        "job_cheffy_calendar_plan"
+      ],
+      "dispatch": "BUILD",
+      "failure_reason": null,
+      "id": "job_cheffy_calendar_build",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 2,
+      "not_before": null,
+      "objective": "Implement src/utils/cheffyCalendar.ts per the planner blueprint (auto-attached). Deliver real versions of the three exports, matching the existing stub signatures: extractCookingEvents(markdown, weekStart) -- parse the week Markdown for clock times, durations, semantic times, and any structured time override into CookingEvent[]; buildIcs(events) -- emit a valid RFC 5545 VCALENDAR with one VEVENT per event (UID, DTSTAMP, DTSTART, DTEND from durationMinutes, CRLF line endings, 75-octet line folding, proper text escaping), correct for BOTH a single event (per-recipe mini export) and the whole week (add-all); googleCalendarUrl(event) -- a prefilled calendar.google.com render action=TEMPLATE link. CONSTRAINTS: pure and dependency-free -- no new npm deps, no DOM/browser APIs, no Astro, no test framework. Contribution BEGINS and ENDS in this single file; do NOT touch the UI components, the dialogue JSON, or wire anything into a panel. ACCEPTANCE: astro check passes; for a real week markdown the functions return >=1 event and a structurally valid .ics string; exports keep the stub contract so existing imports stay valid.",
+      "priority": 50,
+      "result_ref": "src/utils/cheffyCalendar.ts",
+      "resume_mode": "fresh",
+      "risk": [],
+      "status": "done",
+      "title": "build: cheffyCalendar.ts implementation",
+      "updated_at": "2026-06-30T23:49:00.953193Z",
+      "weight": "standard"
+    },
+    "job_cheffy_calendar_plan": {
+      "attempts": 1,
+      "audit": null,
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "after_each_step"
+      },
+      "context_files": [],
+      "created_at": "2026-06-30T23:09:08.281890Z",
+      "criterion": "calendar-engine: cheffyCalendar.ts time extraction from week Markdown + valid ICS (add-all + per-recipe mini) + Google Calendar template URL; UI-independent.",
+      "cycle": {},
+      "depends_on": [
+        "job_cheffy_calendar_research"
+      ],
+      "dispatch": "PLAN",
+      "failure_reason": null,
+      "id": "job_cheffy_calendar_plan",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 2,
+      "not_before": null,
+      "objective": "Blueprint ONLY the calendar engine part: src/utils/cheffyCalendar.ts and its three already-stubbed exports (extractCookingEvents, buildIcs, googleCalendarUrl) plus helpers. BOUNDARY: pure, UI-independent logic only -- no DOM, no Astro component, no download trigger (download wiring is a separate later calendar-actions part). Using the auto-attached research note, specify exactly: (1) the CookingEvent extraction algorithm -- the parse/regex rules for the catalogued real time formats, duration to durationMinutes, semantic-time defaults, the optional structured time override, and how title and mealSlug are derived from the parsed ContentSection; (2) how the util receives raw markdown plus weekStart (the concrete data-access path from the page/parser); (3) the RFC 5545 VEVENT assembly -- UID scheme, DTSTAMP, DTSTART and DTEND from start plus durationMinutes, CRLF, line folding, text escaping -- covering both a single event (per-recipe mini export) and the whole week (add-all); (4) the Google Calendar template URL builder. Define the precise acceptance the builder must hit and exactly what the TEST rung will check (feed a real week .md, expect >=1 event and a structurally valid .ics). Keep it dependency-free (no ICS library, no test framework). Output the blueprint to your notes file for the builder.",
+      "priority": 50,
+      "result_ref": "notes/job_cheffy_calendar_plan.md",
+      "resume_mode": "fresh",
+      "risk": [],
+      "status": "done",
+      "title": "plan: calendar engine blueprint",
+      "updated_at": "2026-06-30T23:32:09.153318Z",
+      "weight": "standard"
+    },
+    "job_cheffy_calendar_research": {
+      "attempts": 1,
+      "audit": null,
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "after_each_step"
+      },
+      "context_files": [
+        "src/utils/cheffyCalendar.ts",
+        "src/utils/weekParser.ts",
+        "src/pages/index.astro",
+        "FOOD-OF-THE-WEEK.md",
+        "CHEFFY-SYSTEM.md"
+      ],
+      "created_at": "2026-06-30T23:08:56.581885Z",
+      "criterion": "calendar-engine: cheffyCalendar.ts time extraction from week Markdown + valid ICS (add-all + per-recipe mini) + Google Calendar template URL; UI-independent.",
+      "cycle": {},
+      "depends_on": [],
+      "dispatch": "RESEARCH",
+      "failure_reason": null,
+      "id": "job_cheffy_calendar_research",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 2,
+      "not_before": null,
+      "objective": "Ground the calendar engine for Cheffy (src/utils/cheffyCalendar.ts). Establish three things. (a) RFC 5545 requirements for a valid downloadable .ics: required VEVENT fields (UID, DTSTAMP, DTSTART, DTEND), date-time formatting (UTC Z vs local with TZID), CRLF line endings, 75-octet line folding, text escaping for comma semicolon backslash and newline, and an optional VALARM for reminders. (b) The Google Calendar render template URL format (action=TEMPLATE plus text, dates as YYYYMMDDThhmmss to YYYYMMDDThhmmss, details, location) for a no-download add-event link. (c) The REAL time and duration vocabulary in this repo week Markdown: sample FOOD-OF-THE-WEEK.md, WEEKEND.md and 2-3 archive/ md files and catalog the actual formats that appear (clock times like 3:00 PM or 5:30, semantic phrases like dinner time, durations like 30 minutes or 1 hour, and whether any structured time annotation exists), plus how weekParser.ts exposes content (does the page hand the util raw markdown or only structured ContentSection text) and how weekStart or the week date is derived (e.g. the archive filename date prefix or the H1 title). Deliver concrete findings: the minimal valid ICS skeleton, the Google URL param recipe, a catalogued list of real time patterns with example lines, and the data-access plan to get markdown plus weekStart into extractCookingEvents. Constraint: do NOT add an ICS library or a test framework; hand-rolled dependency-free is the target (flag any blocking reason if infeasible).",
+      "priority": 50,
+      "result_ref": "notes/job_cheffy_calendar_research.md",
+      "resume_mode": "fresh",
+      "risk": [],
+      "status": "done",
+      "title": "research: calendar engine (ICS + time extraction)",
+      "updated_at": "2026-06-30T23:19:52.526723Z",
+      "weight": "standard"
+    },
+    "job_cheffy_calendar_test": {
+      "attempts": 1,
+      "audit": null,
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "on_block_or_risk"
+      },
+      "context_files": [
+        "src/utils/cheffyCalendar.ts",
+        "FOOD-OF-THE-WEEK.md"
+      ],
+      "created_at": "2026-06-30T23:09:30.162081Z",
+      "criterion": "calendar-engine: cheffyCalendar.ts time extraction from week Markdown + valid ICS (add-all + per-recipe mini) + Google Calendar template URL; UI-independent.",
+      "cycle": {},
+      "depends_on": [
+        "job_cheffy_calendar_build"
+      ],
+      "dispatch": "TEST",
+      "failure_reason": null,
+      "id": "job_cheffy_calendar_test",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 1,
+      "not_before": null,
+      "objective": "Verify the calendar engine (src/utils/cheffyCalendar.ts) WITHOUT adding a test framework. (1) Run npm run build (or at minimum astro check) -- types and the project build must pass clean. (2) Write an EPHEMERAL verification only -- a throwaway node/tsx script in the scratchpad, NOT committed, NOT a vitest/jest suite -- that imports the util, feeds it a real week markdown file (FOOD-OF-THE-WEEK.md or an archive/ md) plus a weekStart, and asserts: extractCookingEvents returns >=1 CookingEvent with a sane title and a valid start Date; buildIcs output is a structurally valid ICS (contains BEGIN:VCALENDAR and END:VCALENDAR, at least one VEVENT carrying UID, DTSTAMP and DTSTART, uses CRLF line endings, and escapes commas/semicolons) for BOTH a single event (per-recipe mini) and the full list (add-all); googleCalendarUrl returns a well-formed calendar.google.com/calendar/render?action=TEMPLATE URL carrying the event text and dates params. Report PASS or FAIL per assertion and paste the actual generated ICS sample as evidence. If a real defect is found, do not paper over it -- escalate to BUILD per the ascent ladder.",
+      "priority": 50,
+      "result_ref": ".troupe/notes/job_cheffy_calendar_test_verify-script.mjs",
+      "resume_mode": "fresh",
+      "risk": [],
+      "status": "done",
+      "title": "test: calendar engine ICS validity",
+      "updated_at": "2026-06-30T23:52:58.092045Z",
       "weight": "light"
     }
   },
   "order": [
-    "job_20260630_230118_direct_bootstrap_decompose_dod"
+    "job_20260630_233827_audit_audit_job_cheffy_calendar_build",
+    "job_20260630_230118_direct_bootstrap_decompose_dod",
+    "job_cheffy_calendar_research",
+    "job_cheffy_calendar_plan",
+    "job_cheffy_calendar_build",
+    "job_cheffy_calendar_test"
   ],
   "policy": {
     "backoff_base_sec": 300,
@@ -40,6 +230,6 @@
     "heartbeat_timeout_sec": 900,
     "max_active": 1
   },
-  "updated_at": "2026-06-30T23:01:18.368941Z",
+  "updated_at": "2026-06-30T23:52:58.092049Z",
   "version": 1
 }

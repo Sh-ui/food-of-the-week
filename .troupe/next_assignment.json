@@ -1,10 +1,19 @@
 {
-  "batch": [],
+  "batch": [
+    "job_cheffy_calendar_plan",
+    "job_cheffy_calendar_build",
+    "job_cheffy_calendar_test"
+  ],
   "context_files": [],
-  "dispatch": "DIRECT",
+  "dispatch": "RESEARCH",
   "dispatch_rules": "default-ascent",
-  "next_task": "job_20260630_230118_direct_bootstrap_decompose_dod",
-  "notes": "Bootstrap -- no prior session.",
+  "next_task": "job_cheffy_calendar_research",
+  "notes": "Part 1/9 armed: calendar-engine (src/utils/cheffyCalendar.ts) -- RESEARCH -> PLAN -> BUILD -> TEST (AUDIT auto). Clean no-dep seam first. Director re-arms part 2 (mascot-state-machine) after this part audits.",
   "strike_timestamp": null,
-  "warm_set": []
+  "warm_set": [
+    "troupe-director",
+    "troupe-opus",
+    "troupe-sonnet",
+    "troupe-haiku"
+  ]
 }
