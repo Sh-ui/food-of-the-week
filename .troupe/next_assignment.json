@@ -1,0 +1,10 @@
+{
+  "batch": [],
+  "context_files": [],
+  "dispatch": "DIRECT",
+  "dispatch_rules": "default-ascent",
+  "next_task": "job_20260630_230118_direct_bootstrap_decompose_dod",
+  "notes": "Bootstrap -- no prior session.",
+  "strike_timestamp": null,
+  "warm_set": []
+}

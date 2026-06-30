@@ -1,0 +1,52 @@
+{
+  "active_task": null,
+  "aggregates": {
+    "block_tokens_used": 0,
+    "last_aggregated_ts": null,
+    "maintenance_tokens": 0,
+    "opus_share_pct": 0.0,
+    "opus_tokens": 0,
+    "phase_id": null,
+    "production_tokens": 0,
+    "total_tokens": 0
+  },
+  "dod": "Fully build the Cheffy module on the getting-cheffy branch per CHEFFY-SYSTEM.md (the design contract / DoD). Cheffy is an animated SVG chef-hat corner assistant for the Food of the Week Astro site, progressive-enhancement only -- the site must build clean and behave exactly like master with Cheffy's JS disabled. Replace the scaffold stubs (src/components/Cheffy.astro, CheffyPanel.astro, src/data/cheffy-dialogue.json, src/utils/cheffyCalendar.ts, src/assets/cheffy-animated.svg, public/sw.js) with real implementations and wire <Cheffy /> into src/layouts/Layout.astro. Deliver, per CHEFFY-SYSTEM.md acceptance: (1) corner mascot with expression states + state machine (idle/attention/dialogue/processing) keyed off the existing per-week localStorage id; (2) data-driven dialogue panel; (3) calendar sync -- time extraction from the week Markdown + valid ICS add-all + per-recipe mini ICS + Google Calendar link, in cheffyCalendar.ts; (4) opt-in local notifications via public/sw.js triggered only from a dialogue action, degrading cleanly on unsupported browsers; (5) checklist JSON+Markdown export and import reusing GroceryList.astro localStorage state; (6) honor prefers-reduced-motion; (7) animated README demo SVG. Reuse existing conventions (LunchGroceryAddon.astro, Footer.astro, weekParser.ts, tailwind.config.mjs color system). Done = npm run build passes (astro check && astro build), no console errors on any page, all CHEFFY-SYSTEM.md acceptance bullets met.",
+  "dod_progress": [],
+  "gate": {
+    "audit_pass": null,
+    "last_audit": null
+  },
+  "last_iteration": null,
+  "last_strike": null,
+  "next_queue": [],
+  "pacing": {
+    "block_started_at": null,
+    "last_heartbeat": null,
+    "soft_token_ceiling": null,
+    "ttl_ceiling_sec": 3300
+  },
+  "phase": "0",
+  "phase_name": "Bootstrap",
+  "production_active": true,
+  "project": "",
+  "queue": {
+    "active": 0,
+    "active_job_id": null,
+    "blocked": 0,
+    "failed": 0,
+    "path": "queue.json",
+    "queued": 0
+  },
+  "session": {
+    "session_id": null
+  },
+  "trust_level": null,
+  "warm_set": [
+    "troupe-director",
+    "troupe-opus",
+    "troupe-sonnet",
+    "troupe-haiku"
+  ],
+  "working_branch": null,
+  "workshop_debt": 0
+}
