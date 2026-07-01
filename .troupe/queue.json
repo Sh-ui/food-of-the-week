@@ -2344,22 +2344,17 @@
       "failure_reason": null,
       "id": "job_cheffy_p3_cardpanel_test",
       "last_checkpoint_ref": null,
-      "lease": {
-        "expires_at": "2026-07-02T00:05:42.001024Z",
-        "heartbeat_at": "2026-07-01T23:05:42.001024Z",
-        "leased_at": "2026-07-01T23:05:42.001024Z",
-        "owner": "stage-manager-20260701T230541Z-pid83006"
-      },
+      "lease": null,
       "max_attempts": 2,
       "not_before": null,
       "objective": "Verify the floating-card-panel build (DoD criterion 3) actually PROVES its claims -- PRESENTATION-ONLY, add no behavior. Confirm, each check written to falsify not just assert: npm run build (astro check and astro build) passes with no console errors on any page; with the panel OPEN, .cheffy-panel is position:fixed and inset from all FOUR screen edges (visible scrim margins, never 100vw by 100vh fullscreen) with width/height inside the min/max clamp at mobile ~390px, tablet ~820px, and desktop ~1440px; a fixed semi-transparent scrim element exists and layers above page content and coherently with the part-1 mascot (#cheffy z-index 200); open AND close both animate smoothly via transform/opacity with zero layout shift, and collapse to instant under prefers-reduced-motion while open/close visibility and dialogue state swaps still work; a clear close affordance works through the existing close/toggle path; and JS-off parity holds (site behaves like master with Cheffy JS disabled, panel not stuck open/broken). SCOPE FENCE -- do NOT edit Cheffy.astro or tailwind.config.mjs, do NOT touch behavior JS. Report PASS/FAIL per claim with the evidence that falsifies it.",
       "priority": 50,
-      "result_ref": null,
+      "result_ref": "/private/tmp/claude-501/-Users-ianschuepbach/93d664bf-cf88-4930-97a5-120f34f305ea/scratchpad/test_cheffy.mjs (32/32 checks passed)",
       "resume_mode": "fresh",
       "risk": [],
-      "status": "active",
+      "status": "done",
       "title": "test: floating-card-panel inset/scrim/clamp + open-close animation + JS-off parity",
-      "updated_at": "2026-07-01T23:05:42.001024Z",
+      "updated_at": "2026-07-01T23:15:05.130240Z",
       "weight": "standard"
     },
     "job_cheffy_readmesvg_build": {
@@ -2551,6 +2546,6 @@
     "heartbeat_timeout_sec": 900,
     "max_active": 1
   },
-  "updated_at": "2026-07-01T23:05:42.001114Z",
+  "updated_at": "2026-07-01T23:15:05.130244Z",
   "version": 1
 }
