@@ -70,6 +70,47 @@
       "updated_at": "2026-06-30T23:49:04.330617Z",
       "weight": "standard"
     },
+    "job_20260701_004258_audit_audit_job_cheffy_mascot_build": {
+      "attempts": 1,
+      "audit": {
+        "attempts": 0,
+        "audit_of": "job_cheffy_mascot_build",
+        "auditor_job_id": null,
+        "last_verdict": null,
+        "max_attempts": 1,
+        "required": false,
+        "status": "n/a"
+      },
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "after_each_step"
+      },
+      "context_files": [],
+      "created_at": "2026-07-01T00:42:58.487684Z",
+      "criterion": null,
+      "cycle": {
+        "injected": true
+      },
+      "depends_on": [],
+      "dispatch": "AUDIT",
+      "failure_reason": null,
+      "id": "job_20260701_004258_audit_audit_job_cheffy_mascot_build",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 2,
+      "not_before": null,
+      "objective": "Cold, isolated audit of job_cheffy_mascot_build: falsify the builder's claims against the DoD. See roles/audit.md.",
+      "priority": 49,
+      "result_ref": null,
+      "resume_mode": "fresh",
+      "risk": [
+        "audit_required"
+      ],
+      "status": "done",
+      "title": "audit job_cheffy_mascot_build",
+      "updated_at": "2026-07-01T00:55:43.772662Z",
+      "weight": "standard"
+    },
     "job_cheffy_calendar_build": {
       "attempts": 1,
       "audit": {
@@ -215,15 +256,15 @@
       "weight": "light"
     },
     "job_cheffy_mascot_build": {
-      "attempts": 0,
+      "attempts": 1,
       "audit": {
         "attempts": 0,
         "audit_of": null,
-        "auditor_job_id": null,
-        "last_verdict": null,
+        "auditor_job_id": "job_20260701_004258_audit_audit_job_cheffy_mascot_build",
+        "last_verdict": "pass",
         "max_attempts": 2,
         "required": true,
-        "status": "pending"
+        "status": "pass"
       },
       "blocked_reason": null,
       "budget": {
@@ -254,16 +295,16 @@
       "not_before": null,
       "objective": "Implement part 2 (mascot-state-machine) per the auto-attached planner blueprint. Replace the Cheffy.astro stub with: the real corner chef-hat SVG mascot (NAMED eye/mouth/dot parts, brand color tokens); the explicit state machine (exactly one of idle, attention, dialogue, processing on #cheffy[data-state]) with CSS-driven expression swap per the blueprint mapping; and the visitedWeeks localStorage logic -- derive weekId with the SAME slug rule as GroceryList.astro (page H1 lowercased, spaces to hyphens), first sight of a new week enters attention plus a notification dot, opening or dismissing the panel marks the week visited and returns to idle. Wire the toggle button to open/close the panel container (set aria-expanded and toggle hidden on #cheffy-panel) = the dialogue state, and expose a documented hook for later parts to set and clear processing. Honor prefers-reduced-motion (no idle motion, no layout shift). If the blueprint calls for it, add a pure importable src/utils/cheffyState.ts (zero relative imports) exporting deriveWeekId plus the visitedWeeks decision helpers, and have the inline script call it. CONSTRAINTS -- progressive enhancement is the hard rule: do NOT mount Cheffy in Layout.astro (deferred to the final pe-build-gate part); do NOT author the CheffyPanel dialogue tree, navigation, or search (that is part 3); do NOT touch cheffyCalendar, the dialogue JSON content, notifications, or checklist. Contribution BEGINS and ENDS in Cheffy.astro plus the optional cheffyState.ts. ACCEPTANCE: astro check passes; the component renders an SVG mascot with named expression parts and a single data-state among idle/attention/dialogue/processing; the visitedWeeks logic reuses the GroceryList weekId rule; reduced-motion disables idle motion; no console errors; props (enabled, corner) and the panel toggle contract stay intact so nothing else breaks and Layout still behaves like master.",
       "priority": 50,
-      "result_ref": null,
+      "result_ref": "6f59ec6",
       "resume_mode": "fresh",
       "risk": [],
-      "status": "queued",
+      "status": "done",
       "title": "build: Cheffy.astro mascot + state machine",
-      "updated_at": "2026-07-01T00:01:20.535172Z",
+      "updated_at": "2026-07-01T00:55:40.534164Z",
       "weight": "standard"
     },
     "job_cheffy_mascot_plan": {
-      "attempts": 0,
+      "attempts": 1,
       "audit": null,
       "blocked_reason": null,
       "budget": {
@@ -285,16 +326,16 @@
       "not_before": null,
       "objective": "Blueprint ONLY part 2 (mascot-state-machine). Using the auto-attached research note, specify exactly: (1) the Cheffy.astro mascot SVG markup -- the chef hat plus NAMED eye/mouth/dot parts, structured so expressions swap purely via CSS keyed on data-state and/or data-expression; give the part ids/classes and the full state-to-expression-to-visual mapping table (idle=neutral+occasional blink, attention=excited+notification dot, dialogue=neutral/smile, processing=thinking), using brand color tokens. (2) The explicit state machine -- states idle, attention, dialogue, processing; exactly one active at a time on #cheffy[data-state]; the transition table and the precise events that drive each transition IN THIS PART (idle<->attention from visitedWeeks; idle<->dialogue from the toggle button opening/closing the panel container). Define processing as a documented no-op hook that later parts (calendar-actions, notifications) will flip, not something part 2 triggers. (3) The visitedWeeks logic -- derive weekId reusing the exact GroceryList slug rule; the localStorage visitedWeeks shape (an object map keyed by weekId); first sight of a new week enters attention plus dot; opening or dismissing the panel marks the week visited and falls back to idle. Decide and specify the file split: a pure importable src/utils/cheffyState.ts (zero relative imports, part-1 pattern) exporting deriveWeekId plus visitedWeeks decision helpers with exact signatures, versus inlining -- recommend the util for testability. (4) The toggle/open-close wiring -- aria-expanded on the button, hidden on #cheffy-panel, toggling panel VISIBILITY only. Define the clean interface part 3 (dialogue-panel) plugs into; do NOT author the dialogue node tree, navigation, or search here. (5) prefers-reduced-motion handling for idle motion with no layout shift. (6) The BUILD boundary -- the builder touches ONLY Cheffy.astro plus the optional cheffyState.ts; must NOT mount Cheffy in Layout.astro, must NOT author CheffyPanel content, must NOT touch cheffyCalendar, dialogue JSON content, notifications, or checklist. Define precise acceptance and exactly what the TEST rung will check given no framework: astro check clean; ephemeral Node import test of the pure helpers (deriveWeekId equals the GroceryList key stem for a real H1, visitedWeeks transitions); static structural assertions that the rendered component has the named SVG parts and a single valid data-state; and that Layout.astro still does not import Cheffy. Output the blueprint to your notes file for the builder.",
       "priority": 50,
-      "result_ref": null,
+      "result_ref": "notes/job_cheffy_mascot_plan.md",
       "resume_mode": "fresh",
       "risk": [],
-      "status": "queued",
+      "status": "done",
       "title": "plan: mascot state machine blueprint",
-      "updated_at": "2026-07-01T00:01:06.867902Z",
+      "updated_at": "2026-07-01T00:15:34.185531Z",
       "weight": "standard"
     },
     "job_cheffy_mascot_research": {
-      "attempts": 0,
+      "attempts": 1,
       "audit": null,
       "blocked_reason": null,
       "budget": {
@@ -324,16 +365,16 @@
       "not_before": null,
       "objective": "Ground part 2 (mascot-state-machine) for Cheffy. Establish concretely: (1) THE canonical week identity -- GroceryList.astro derives its per-week localStorage key from the page H1 as grocery-list-(h1.textContent lowercased, spaces to hyphens). Confirm this is the same week id used elsewhere and catalog ALL per-week localStorage keys/namespaces in the repo, so visitedWeeks reuses the SAME identity (not a parallel one). Pin the exact slug rule and judge whether a small pure importable helper (deriveWeekId) is warranted for testability following the part-1 pattern of a zero-relative-import .ts. (2) The existing Astro client-script + scoped-style convention (see LunchGroceryAddon.astro and GroceryList.astro): how inline script tags hydrate per page, the DOMContentLoaded guard, scoped style tags, and reading the H1 at runtime. (3) The brand chef-hat visual + color tokens: the hat SVG already used (StickyHeader.astro, public/favicon.svg, src/assets/cheffy-animated.svg) and the CSS variables / tailwind tokens (tailwind.config.mjs, src/styles/global.css -- e.g. the primary, bg, and the F3CA40 hat-band color) so the mascot matches brand. (4) SVG expression-swap technique: drive the expressions (neutral, excited, thinking, sleepy) plus a blink and the mouth states (neutral, smile, surprised, frown) plus a notification dot by swapping NAMED parts via CSS keyed on data-state / data-expression (CSS-first so it degrades well). Produce the state-to-expression mapping per the CHEFFY-SYSTEM state table. (5) prefers-reduced-motion: confirm there is no existing handling and establish the pattern to gate idle blink/motion behind a no-preference media query with no layout shift. (6) The progressive-enhancement constraint: Cheffy stays UNMOUNTED in Layout.astro until the final pe-build-gate part, so it cannot be tested via the live site -- recommend a no-framework testability approach for the TEST rung (ephemeral Node import of the pure helper plus astro check plus static structural assertions). Deliver concrete findings and a recommended seam (pure util vs inline) to the notes file.",
       "priority": 50,
-      "result_ref": null,
+      "result_ref": "notes/job_cheffy_mascot_research.md",
       "resume_mode": "fresh",
       "risk": [],
-      "status": "queued",
+      "status": "done",
       "title": "research: mascot state machine (weekId seam + SVG expression swap)",
-      "updated_at": "2026-07-01T00:00:46.806931Z",
+      "updated_at": "2026-07-01T00:10:43.521300Z",
       "weight": "standard"
     },
     "job_cheffy_mascot_test": {
-      "attempts": 0,
+      "attempts": 1,
       "audit": null,
       "blocked_reason": null,
       "budget": {
@@ -360,17 +401,18 @@
       "not_before": null,
       "objective": "Verify part 2 (mascot-state-machine) WITHOUT adding a test framework. (1) Run npm run build (or at minimum astro check) -- types and the project build must pass clean, and the site must still behave exactly like master: since Cheffy is NOT mounted in Layout.astro, no page output should change. (2) Ephemeral verification only -- a throwaway node/tsx script in the scratchpad, NOT committed, NOT vitest/jest: if src/utils/cheffyState.ts exists, import it and assert deriveWeekId produces the SAME localStorage key stem that GroceryList.astro would produce for a real week H1 (derive the H1 from FOOD-OF-THE-WEEK.md), and that the visitedWeeks decision helpers return attention on first sight of a new weekId and idle/visited after marking it. (3) Static structural assertions on Cheffy.astro (and the built output): the SVG mascot has the NAMED expression parts (eyes, mouth, notification dot); the root element carries exactly one data-state among idle/attention/dialogue/processing; the toggle button controls #cheffy-panel via aria-controls and aria-expanded; and a prefers-reduced-motion rule gates the idle motion. Confirm the progressive-enhancement boundary is intact: Layout.astro does NOT import or mount Cheffy. Report PASS or FAIL per assertion with evidence (paste the derived key comparison and the matched markup). If a real defect is found, do not paper over it -- escalate to BUILD per the ascent ladder.",
       "priority": 50,
-      "result_ref": null,
+      "result_ref": ".troupe/notes/job_cheffy_mascot_test.md",
       "resume_mode": "fresh",
       "risk": [],
-      "status": "queued",
+      "status": "done",
       "title": "test: mascot state machine + PE boundary",
-      "updated_at": "2026-07-01T00:01:32.369865Z",
+      "updated_at": "2026-07-01T01:00:37.261154Z",
       "weight": "light"
     }
   },
   "order": [
     "job_20260630_233827_audit_audit_job_cheffy_calendar_build",
+    "job_20260701_004258_audit_audit_job_cheffy_mascot_build",
     "job_20260630_230118_direct_bootstrap_decompose_dod",
     "job_cheffy_calendar_research",
     "job_cheffy_calendar_plan",
@@ -388,6 +430,6 @@
     "heartbeat_timeout_sec": 900,
     "max_active": 1
   },
-  "updated_at": "2026-07-01T00:01:32.369884Z",
+  "updated_at": "2026-07-01T01:00:37.261159Z",
   "version": 1
 }

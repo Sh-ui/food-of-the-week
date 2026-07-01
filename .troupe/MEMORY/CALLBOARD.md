@@ -11,4 +11,4 @@ Async, non-blocking notice board (the backstage callboard). The Stage Manager an
 - No nested bullets, no headers per entry, no restating context. Link out, don't inline.
 - **Prune on action:** once the Producer acts on an entry, delete it. The board stays short.
 
-- [2026-06-30 fyi] Cheffy DoD decomposed into 9 parts; part 1 (calendar-engine) armed. No test framework in repo -- DoD "done" is `npm run build`. Directing calendar build hand-rolled + dependency-free (no ICS lib) and TEST via ephemeral script, not a committed vitest suite. Object here if you want a real test suite/library added.
+- [2026-07-01 fyi] Cheffy DoD: 2/9 parts done (calendar-engine, mascot-state-machine), both audit+test passed. Still no test framework -- TEST rungs stay ephemeral scripts, `npm run build` is the durable gate. Object here if you want a real test suite/library added.

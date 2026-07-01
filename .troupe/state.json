@@ -18,7 +18,7 @@
     },
     {
       "criterion": "mascot-state-machine: Cheffy.astro corner SVG mascot with expression states + idle/attention/dialogue/processing state machine keyed off the per-week localStorage id (visitedWeeks).",
-      "status": "pending"
+      "status": "done"
     },
     {
       "criterion": "dialogue-panel: CheffyPanel.astro + cheffy-dialogue.json data-driven tree with goto navigation, free-text search node, and action dispatch.",
@@ -54,7 +54,7 @@
     "last_audit": null
   },
   "last_iteration": null,
-  "last_strike": "2026-06-30T23:55:00Z",
+  "last_strike": "2026-07-01T01:05:00Z",
   "next_queue": [],
   "pacing": {
     "block_started_at": null,
@@ -85,5 +85,5 @@
     "troupe-haiku"
   ],
   "working_branch": null,
-  "workshop_debt": 1
+  "workshop_debt": 2
 }
