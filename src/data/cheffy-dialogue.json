@@ -5,7 +5,7 @@
   "_start": "Id of the node Cheffy opens on.",
 
   "_node_shape": "Each entry in 'nodes' is { text, expression?, input?, options:[{label, goto? , action?}] }. 'goto' moves to another node id; 'action' runs a handler. expression is one of: neutral|excited|thinking|sleepy -- NOTE: only neutral|excited|thinking are actually rendered by Cheffy.astro's SVG today; do not author 'sleepy'. input:true shows a free-text field.",
-  "_actions": "Valid option 'action' values the runtime must implement: generate-ics | trigger-permission | navigate-to-archive | export-checklist | close.",
+  "_actions": "Valid option 'action' values the runtime must implement: generate-ics | generate-ics-meal | open-google-calendar | trigger-permission | navigate-to-archive | export-checklist | close.",
 
   "nodes": {
     "root": {
@@ -24,6 +24,8 @@
       "expression": "neutral",
       "options": [
         { "label": "Add all events", "action": "generate-ics" },
+        { "label": "Export a single meal", "action": "generate-ics-meal" },
+        { "label": "Open in Google Calendar", "action": "open-google-calendar" },
         { "label": "Back", "goto": "root" }
       ]
     },

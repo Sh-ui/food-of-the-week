@@ -7,18 +7,62 @@
 // branch keeps behaving exactly like master until Cheffy is real.
 //
 // Props let a page opt out (e.g. print views) and pick a corner.
+import fs from 'fs';
+import path from 'path';
 import CheffyPanel from './CheffyPanel.astro';
 import dialogue from '../data/cheffy-dialogue.json';
+import { deriveWeekStart, extractCookingEvents, buildIcs, googleCalendarUrl }
+  from '../utils/cheffyCalendar';
 
 interface Props {
   /** Hide Cheffy entirely on this page (default: shown). */
   enabled?: boolean;
   /** Screen corner to dock in. */
   corner?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';
+  /** Relative path (from project root) to this page's week Markdown source, for
+   *  calendar-actions. Optional -- until a page threads it, the calendar island
+   *  stays empty and generate-ics/-meal/open-google-calendar handlers no-op. */
+  filename?: string;
 }
 
-const { enabled = true, corner = 'bottom-right' } = Astro.props;
+const { enabled = true, corner = 'bottom-right', filename } = Astro.props;
 const startNode = dialogue.start ?? 'root';
+
+// Build-time calendar data island -- see notes/job_cheffy_calactions_plan.md.
+// Runs in Node/SSR context (Buffer available), so it is safe to call buildIcs here.
+// NEVER call buildIcs/extractCookingEvents/deriveWeekStart from client code.
+let calendarIsland: {
+  weekIcs: string;
+  weekGoogleUrl: string | null;
+  meals: Array<{ mealSlug: string; label: string; ics: string; googleUrl: string }>;
+} = { weekIcs: '', weekGoogleUrl: null, meals: [] };
+
+if (filename) {
+  try {
+    const md = fs.readFileSync(path.join(process.cwd(), filename), 'utf-8');
+    const weekStart = deriveWeekStart(md, filename);
+    if (weekStart) {
+      const events = extractCookingEvents(md, weekStart);
+      if (events.length) {
+        calendarIsland.weekIcs = buildIcs(events);
+        calendarIsland.weekGoogleUrl = googleCalendarUrl(events[0]);
+        const bySlug = new Map<string, typeof events>();
+        for (const ev of events) {
+          const key = ev.mealSlug || 'cooking';
+          (bySlug.get(key) ?? bySlug.set(key, []).get(key)!).push(ev);
+        }
+        calendarIsland.meals = [...bySlug.entries()].map(([mealSlug, evs]) => ({
+          mealSlug,
+          label: (evs[0].title.split(' -- ')[0] || mealSlug).trim(),
+          ics: buildIcs(evs),
+          googleUrl: googleCalendarUrl(evs[0]),
+        }));
+      }
+    }
+  } catch {
+    // leave empty island -- never break the build
+  }
+}
 ---
 
 {enabled && (
@@ -66,6 +110,8 @@ const startNode = dialogue.start ?? 'root';
       </svg>
     </button>
     <CheffyPanel />
+    <script type="application/json" id="cheffy-week-ics" is:inline
+            set:html={JSON.stringify(calendarIsland)} />
   </div>
 )}
 
@@ -193,4 +239,11 @@ const startNode = dialogue.start ?? 'root';
   } else {
     initCheffy();
   }
+</script>
+
+<script>
+  // Registers the calendar-actions handlers (generate-ics, generate-ics-meal,
+  // open-google-calendar) against the part-3 action-dispatch registry. Bundled
+  // (not is:inline) so the ES import resolves; module-load side effect only.
+  import '../utils/cheffyCalendarActions';
 </script>
