@@ -7,6 +7,14 @@
 ![Version](https://img.shields.io/badge/version-1.7.0-blue.svg)
 ![Status](https://img.shields.io/website?url=https://sh-ui.github.io/food-of-the-week&label=status&up_color=success&down_color=critical&up_message=active&down_message=down)
 
+<p align="center">
+  <img src="src/assets/cheffy-animated.svg"
+       alt="Cheffy, the animated chef-hat mascot, cycling from idle to attention to a friendly dialogue smile"
+       width="200" height="200" />
+</p>
+
+<p align="center"><em>Meet <strong>Cheffy</strong> -- the corner kitchen mascot (on the <code>getting-cheffy</code> branch).</em></p>
+
 ## About
 
 A weekly meal planning system built with Astro that transforms a single structured markdown file into a published website with interactive grocery lists, printable recipes, and a hero quick-read summary. Built around a fan/cai family dinner model for a household of 6-8.
