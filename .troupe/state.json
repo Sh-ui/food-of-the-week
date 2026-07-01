@@ -30,11 +30,11 @@
     },
     {
       "criterion": "local-notifications: public/sw.js opt-in local reminders triggered only via the trigger-permission dialogue action; clean degradation on unsupported browsers.",
-      "status": "pending"
+      "status": "done"
     },
     {
       "criterion": "checklist-export-import: JSON + Markdown export and import (merge/overwrite) reusing GroceryList.astro localStorage state.",
-      "status": "pending"
+      "status": "done"
     },
     {
       "criterion": "reduced-motion: prefers-reduced-motion honored across mascot/panel/animations; no layout shift.",
@@ -54,7 +54,7 @@
     "last_audit": null
   },
   "last_iteration": null,
-  "last_strike": "2026-07-01T11:24:41Z",
+  "last_strike": "2026-07-01T13:15:00Z",
   "next_queue": [],
   "pacing": {
     "block_started_at": null,
@@ -85,5 +85,5 @@
     "troupe-haiku"
   ],
   "working_branch": null,
-  "workshop_debt": 4
+  "workshop_debt": 5
 }

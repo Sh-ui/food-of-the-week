@@ -146,15 +146,15 @@
       "weight": "light"
     },
     "cheffy_p6_checklist_build": {
-      "attempts": 0,
+      "attempts": 1,
       "audit": {
         "attempts": 0,
         "audit_of": null,
-        "auditor_job_id": null,
-        "last_verdict": null,
+        "auditor_job_id": "job_20260701_121841_audit_audit_cheffy_p6_checklist_build",
+        "last_verdict": "pass",
         "max_attempts": 2,
         "required": true,
-        "status": "pending"
+        "status": "pass"
       },
       "blocked_reason": null,
       "budget": {
@@ -183,14 +183,14 @@
       "not_before": null,
       "objective": "Build the checklist-export-import part per the Planner blueprint (auto-attached). This job is queue-gated behind the part-5 build so the shared Cheffy.astro import region is landed first -- append your import line BELOW part 5's, do not reorder or edit theirs. Deliver: (1) create src/utils/cheffyChecklist.ts registering an 'export-checklist' handler via the order-safe window.registerCheffyAction pattern (copy the register helper + blob-download from src/utils/cheffyCalendarActions.ts): JSON export + Markdown export of the current week's grocery checklist read from GroceryList.astro's EXACT localStorage key + checked-item set (single source of truth, no parallel key), and an IMPORT path with BOTH merge (union) and overwrite semantics that writes back into that same localStorage set and reflects into the live DOM if GroceryList is present (toggle checkboxes + classes) without reworking GroceryList's script; handler body wrapped so a throw cannot crash the panel. (2) if the import surface needs a dialogue affordance, add the MINIMAL option(s)/node to the existing checklist node in src/data/cheffy-dialogue.json only. (3) append ONE bundled script importing ../utils/cheffyChecklist to Cheffy.astro's trailing script region, mirroring the cheffyCalendarActions import. Acceptance (checkable): npm run build (astro check then astro build) passes clean; no console errors; Cheffy still NOT mounted in Layout.astro; master-parity with JS disabled; GroceryList.astro storage contract byte-unchanged; CheffyPanel.astro untouched. Contribution begins/ends at exactly these files.",
       "priority": 50,
-      "result_ref": null,
+      "result_ref": "4a585f4",
       "resume_mode": "fresh",
       "risk": [
         "code_change"
       ],
-      "status": "queued",
+      "status": "done",
       "title": "BUILD checklist-export-import (part 6)",
-      "updated_at": "2026-07-01T11:34:27.604630Z",
+      "updated_at": "2026-07-01T12:21:41.286242Z",
       "weight": "standard"
     },
     "cheffy_p6_checklist_plan": {
@@ -211,22 +211,17 @@
       "failure_reason": null,
       "id": "cheffy_p6_checklist_plan",
       "last_checkpoint_ref": null,
-      "lease": {
-        "expires_at": "2026-07-01T13:11:03.691358Z",
-        "heartbeat_at": "2026-07-01T12:11:03.691358Z",
-        "leased_at": "2026-07-01T12:11:03.691358Z",
-        "owner": "stage-manager-20260701T121103Z-pid30931"
-      },
+      "lease": null,
       "max_attempts": 2,
       "not_before": null,
       "objective": "Blueprint ONLY the checklist-export-import part, on the research note. Design a NEW src/utils/cheffyChecklist.ts that registers an 'export-checklist' handler via the order-safe window.registerCheffyAction pattern (mirror src/utils/cheffyCalendarActions.ts) and delivers: (1) JSON export + Markdown export of the current week's grocery checklist, reading GroceryList.astro's EXACT localStorage key and checked-item set as the single source of truth (no parallel key), downloaded via the same blob-download approach cheffyCalendarActions.ts uses. (2) an IMPORT path supporting BOTH merge (union) and overwrite semantics, writing back into that same localStorage set and reflecting into the live DOM if GroceryList is present on the page (checkboxes + classes) without reworking GroceryList's own script. Specify the import surface concretely: if it needs a dialogue affordance, add the MINIMAL option(s)/node to the existing checklist node in src/data/cheffy-dialogue.json (this part MAY edit that file), reusing the input:true free-text node pattern for paste-based import. Mount = ONE bundled script importing ../utils/cheffyChecklist appended to Cheffy.astro's trailing script region (mirror lines 244-249). BOUNDARY -- touch ONLY: new src/utils/cheffyChecklist.ts, src/data/cheffy-dialogue.json (checklist node only, if needed), src/components/Cheffy.astro (single import line). Do NOT rework CheffyPanel.astro or GroceryList.astro's storage contract. Note for the builder: this build is queue-gated behind the part-5 build so the shared Cheffy.astro import region does not collide -- append your import line below part 5's. Non-negotiables: npm run build stays green; no console errors; Cheffy stays NOT mounted in Layout.astro; master-parity with JS disabled. Write the build blueprint to your notes file.",
       "priority": 50,
-      "result_ref": null,
+      "result_ref": "notes/cheffy_p6_checklist_plan.md",
       "resume_mode": "fresh",
       "risk": [],
-      "status": "active",
+      "status": "done",
       "title": "PLAN checklist-export-import (part 6)",
-      "updated_at": "2026-07-01T12:11:03.691358Z",
+      "updated_at": "2026-07-01T12:15:14.719695Z",
       "weight": "standard"
     },
     "cheffy_p6_checklist_research": {
@@ -266,7 +261,7 @@
       "weight": "light"
     },
     "cheffy_p6_checklist_test": {
-      "attempts": 0,
+      "attempts": 2,
       "audit": null,
       "blocked_reason": null,
       "budget": {
@@ -293,12 +288,12 @@
       "not_before": null,
       "objective": "Verify the checklist-export-import part. Durable gate: npm run build (astro check then astro build) MUST pass clean (only committed test bar; no framework by design). Then ephemeral throwaway (uncommitted, scratchpad/Node) verification per repo convention: (a) assert src/utils/cheffyChecklist.ts reads AND writes the SAME localStorage key that GroceryList.astro uses -- round-trip a fixture checked-set through export then import then read-back, and confirm BOTH merge (union with an existing set) and overwrite (replace) behave as specified; (b) assert the JSON export parses and the Markdown export is well-formed/human-readable; (c) assert 'export-checklist' is registered and the handler is wrapped so a throw cannot escape; (d) if cheffy-dialogue.json was edited, assert the tree still has no dangling goto ids and only the checklist node changed; (e) grep built output (dist/) for master-parity -- Cheffy still not mounted, no cheffy markup leaks, no console errors. Prove each claim explicitly, report pass/fail per claim. On any failure escalate test-fail -> BUILD per the default ascent ladder.",
       "priority": 50,
-      "result_ref": null,
+      "result_ref": "/tmp/cheffy_p6_test_result.txt",
       "resume_mode": "fresh",
       "risk": [],
-      "status": "queued",
+      "status": "done",
       "title": "TEST checklist-export-import (part 6)",
-      "updated_at": "2026-07-01T11:34:38.202661Z",
+      "updated_at": "2026-07-01T13:10:06.847992Z",
       "weight": "light"
     },
     "job_20260630_230118_direct_bootstrap_decompose_dod": {
@@ -574,6 +569,47 @@
       "status": "done",
       "title": "audit cheffy_p5_notif_build",
       "updated_at": "2026-07-01T12:03:52.543418Z",
+      "weight": "standard"
+    },
+    "job_20260701_121841_audit_audit_cheffy_p6_checklist_build": {
+      "attempts": 1,
+      "audit": {
+        "attempts": 0,
+        "audit_of": "cheffy_p6_checklist_build",
+        "auditor_job_id": null,
+        "last_verdict": null,
+        "max_attempts": 1,
+        "required": false,
+        "status": "n/a"
+      },
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "after_each_step"
+      },
+      "context_files": [],
+      "created_at": "2026-07-01T12:18:41.030880Z",
+      "criterion": null,
+      "cycle": {
+        "injected": true
+      },
+      "depends_on": [],
+      "dispatch": "AUDIT",
+      "failure_reason": null,
+      "id": "job_20260701_121841_audit_audit_cheffy_p6_checklist_build",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 2,
+      "not_before": null,
+      "objective": "Cold, isolated audit of cheffy_p6_checklist_build: falsify the builder's claims against the DoD. See roles/audit.md.",
+      "priority": 49,
+      "result_ref": null,
+      "resume_mode": "fresh",
+      "risk": [
+        "audit_required"
+      ],
+      "status": "done",
+      "title": "audit cheffy_p6_checklist_build",
+      "updated_at": "2026-07-01T12:21:50.840640Z",
       "weight": "standard"
     },
     "job_cheffy_calactions_build": {
@@ -1289,6 +1325,7 @@
     "job_20260701_033305_audit_audit_job_cheffy_calactions_build",
     "job_20260701_040744_audit_audit_job_cheffy_readmesvg_build",
     "job_20260701_120106_audit_audit_cheffy_p5_notif_build",
+    "job_20260701_121841_audit_audit_cheffy_p6_checklist_build",
     "job_20260630_230118_direct_bootstrap_decompose_dod",
     "job_cheffy_calendar_research",
     "job_cheffy_calendar_plan",
@@ -1326,6 +1363,6 @@
     "heartbeat_timeout_sec": 900,
     "max_active": 1
   },
-  "updated_at": "2026-07-01T12:11:03.691421Z",
+  "updated_at": "2026-07-01T13:10:06.847997Z",
   "version": 1
 }

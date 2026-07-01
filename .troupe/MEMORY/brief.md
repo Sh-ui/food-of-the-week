@@ -1,9 +1,9 @@
 # Brief -- Cheffy module build (getting-cheffy branch)
 
 State-of-the-world orienting doc for the Director. Source: RESEARCH/PLAN/BUILD/TEST jots for
-parts 1-4 and 8 of 9, compressed and pruned after audit-pass at this Strike.
+parts 1-6 and 8 of 9, compressed and pruned after audit-pass at this Strike.
 
-## DoD progress: 5/9 criteria done
+## DoD progress: 7/9 criteria done
 
 - **DONE -- calendar-engine**: `src/utils/cheffyCalendar.ts` (audit-passed, build-verified).
 - **DONE -- mascot-state-machine**: `src/components/Cheffy.astro` (audit-passed, build-verified).
@@ -12,11 +12,20 @@ parts 1-4 and 8 of 9, compressed and pruned after audit-pass at this Strike.
 - **DONE -- calendar-actions**: `src/utils/cheffyCalendarActions.ts` (new, 102 lines) registers
   `generate-ics` into the part-3 action-dispatch registry; audit-passed, test-passed (22/22
   assertions), `npm run build` clean, `CheffyPanel.astro` byte-unchanged per audit.
+- **DONE -- local-notifications**: `src/utils/cheffyNotifications.ts` (new) + `public/sw.js`
+  (real `notificationclick`) register `trigger-permission`; audit-passed, test-passed
+  (feature-detect + fallback + no-op paths all verified present, handler throw-safe, `npm run
+  build` clean, master-parity held).
+- **DONE -- checklist-export-import**: `src/utils/cheffyChecklist.ts` (new) registers
+  `export-checklist`/`import-checklist` (JSON + Markdown export, merge/overwrite import) against
+  GroceryList.astro's exact localStorage contract; `cheffy-dialogue.json` checklist node gained
+  one "Import checklist" option only; audit-passed, test-passed.
 - **DONE -- animated-readme-svg**: `src/assets/cheffy-animated.svg` (60-line SMIL demo loop,
   8x `<animate>` on opacity/ry only, no external refs) embedded in `README.md` line 11;
   audit-passed, test-passed (xmllint well-formed, build green).
-- 4 remaining, all `pending`: local-notifications, checklist-export-import, reduced-motion,
-  pe-build-gate (final `<Cheffy />` mount into Layout + `npm run build` gate -- do this last).
+- 2 remaining, both `pending`: reduced-motion (cross-cutting CSS sweep, do after all interactive
+  surfaces land -- they now have), pe-build-gate (final `<Cheffy />` mount into Layout + `npm run
+  build` gate -- must be LAST, per prior process note).
 
 ## What shipped in part 1 (calendar-engine)
 
@@ -119,12 +128,54 @@ Both parts verified via ephemeral (uncommitted) Node scripts, not a committed te
 - Fully independent of all other parts (zero code coupling); the SVG is unreferenced by any
   `.astro` component, so no site-behavior/build-gate change -- 28 pages still build clean.
 
+## What shipped in part 5 (local-notifications)
+
+- `src/utils/cheffyNotifications.ts` -- NEW client action module, registers
+  `trigger-permission` via the order-safe `window.registerCheffyAction` seam (module-top shim
+  copied verbatim from `cheffyCalendarActions.ts`, self-contained -- does NOT import
+  `cheffyCalendar.ts`, which uses `Buffer`, a Node global unavailable client-side). Recovers cook
+  timestamps by parsing `DTSTART:YYYYMMDDTHHMMSSZ` directly out of the existing
+  `#cheffy-week-ics` island's `meals[].ics` strings (regex, string/number-only math) rather than
+  adding a new island field -- kept the island shape untouched (boundary constraint). Feature-
+  detects Notification Triggers (`'showTrigger' in Notification.prototype`) -- research found
+  this API effectively dead/unshipped in target browsers -- with a `setTimeout`-while-page-open
+  fallback, plus clean no-op branches for unsupported/denied. Whole handler wrapped in one
+  try/catch that cannot let a throw escape.
+- `public/sw.js` -- real `notificationclick`: closes the notification, focuses an existing tab
+  via `clients.matchAll`, falls back to `clients.openWindow`.
+- `src/components/Cheffy.astro` -- one new bundled `<script>` import line only (mirrors the
+  part-4 import block).
+
+## What shipped in part 6 (checklist-export-import)
+
+- `src/utils/cheffyChecklist.ts` -- NEW client action module, registers `export-checklist`
+  (JSON export + Markdown export of the current week's checked-item set, each as a Blob
+  download) and `import-checklist` (paste-based, merge/overwrite semantics). Reproduces
+  `GroceryList.astro`'s EXACT localStorage contract: key
+  `` `grocery-list-${slugifyWeekTitle(h1Text)}` `` (via the already-blessed pure
+  `cheffyState.ts` helper, safe to import client-side), value = flat JSON array of
+  `` `${category}::${index}::${item}` `` strings wrapped in a `Set`. No parallel key, no richer
+  value shape. Enumerates checked items by reading the live DOM (`.grocery-checkbox` +
+  `.locally-checked`), since no data island exists for grocery items.
+- **Divergence from research, deliberate**: import UI is NOT wired through the dialogue node's
+  `input:true` free-text box (would have required editing `CheffyPanel.astro`'s `renderNode()`,
+  out of bounds). Instead `import-checklist`'s handler dynamically appends a `<textarea>` +
+  Merge/Overwrite buttons into `ctx.panel.querySelector('.cheffy-node')`, mirroring the
+  `generate-ics-meal` button-list pattern from `cheffyCalendarActions.ts`. Zero
+  `CheffyPanel.astro` edits.
+- `src/data/cheffy-dialogue.json` -- checklist node gained one "Import checklist" option only
+  (plus a non-functional `_actions` comment update); no dangling goto ids introduced.
+- `src/components/Cheffy.astro` -- one new bundled `<script>` import line, appended after part
+  5's block.
+
 ## Open decision surfaced for the Producer (unresolved, see CALLBOARD)
 
 - Whether to add a light DOM smoke-test harness (happy-dom/Playwright) now that the panel has
   real interactive nav/search/action-dispatch logic with only `astro check` + manual audit
-  coverage, before parts 4-6 stack more handlers on it. Not yet answered -- do not duplicate
-  this decision elsewhere; it lives on the CALLBOARD until the Producer replies.
+  coverage. Parts 5-6 landed on the same bar as parts 4/8 (no harness added) per the Director's
+  prior no-block decision. Only pe-build-gate (mount) and reduced-motion (CSS-only) remain, so
+  this window is effectively closed -- flag to Producer as informational, not still "last
+  window."
 
 ## Open GAPs/decisions surfaced for later parts (not blocking, but relevant)
 
@@ -157,16 +208,21 @@ Both parts verified via ephemeral (uncommitted) Node scripts, not a committed te
 ## Process notes
 
 - DoD is decomposed into 9 hexagonal parts (1 per criterion), armed one at a time via
-  `next_assignment.json`; this Strike closes parts 4 (calendar-actions) and 8
-  (animated-readme-svg), the two-part batch the Director armed in parallel (zero shared files).
-  Director re-arms next -- local-notifications and checklist-export-import can now register
-  against the part-3/part-4-established action-dispatch + registration-mount seam;
-  reduced-motion is a cross-cutting CSS sweep best done after all interactive surfaces land;
-  pe-build-gate (final `<Cheffy />` mount + `npm run build` gate) MUST be last.
+  `next_assignment.json`; this Strike closes parts 5 (local-notifications) and 6
+  (checklist-export-import), the two-part batch the Director armed queue-gated in sequence (part
+  6's Cheffy.astro import appended below part 5's, shared-file conflict avoided by ordering, not
+  parallelism). Director re-arms next -- only 2 criteria remain: **reduced-motion** (cross-cutting
+  CSS sweep, now safe since all interactive surfaces -- mascot/panel/calendar/notifications/
+  checklist -- are landed) and **pe-build-gate** (final `<Cheffy />` mount into `Layout.astro` +
+  `npm run build` gate, which per the established process note MUST run last, i.e. after
+  reduced-motion). Suggested next arm: reduced-motion, then pe-build-gate to close the DoD.
 - No test framework in this repo by design -- TEST rungs use ephemeral throwaway verification
   scripts (scratchpad/Node, not committed, not vitest/jest), with `npm run build` as the durable
   pass/fail gate per CHEFFY-SYSTEM.md's acceptance bar.
 - No `.troupe/metrics.jsonl` telemetry file exists yet -- `state.json.aggregates` remain at zero;
   nothing to recompute this Strike.
-- Open standing CALLBOARD gate (DOM smoke harness) is still unanswered as of this Strike --
-  proceeding as-is per the prior milestone's decision; do not duplicate the entry.
+- Standing CALLBOARD gate (DOM smoke harness) is still unanswered by the Producer as of this
+  Strike -- left in place per the board's "only prune Producer-acted-on entries" rule. Note for
+  the Director: the window it was raised for (parts 5-6 stacking more handlers) has now closed
+  with only reduced-motion (CSS) and pe-build-gate (mount) left, so it may be moot going
+  forward -- worth a nudge to the Producer, not a unilateral prune.
