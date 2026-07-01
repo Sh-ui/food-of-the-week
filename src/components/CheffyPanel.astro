@@ -1,11 +1,15 @@
 ---
-// CheffyPanel.astro -- the expand-on-click dialogue panel. STUB / SCAFFOLD.
+// CheffyPanel.astro -- the expand-on-click dialogue panel + client-side runtime.
 // Full design contract: ../../CHEFFY-SYSTEM.md (Dialogue system + Features).
 //
-// Renders the current dialogue node: text, options (goto / action), and an
-// optional free-text input for search/navigation. Data-driven from
-// src/data/cheffy-dialogue.json -- no hard-coded option lists.
+// SSR renders the current dialogue node (text, options, optional free-text input) as
+// the JS-off fallback (start node only, no navigation). Data-driven from
+// src/data/cheffy-dialogue.json -- no hard-coded option lists. A bundled <script>
+// (below) takes over client-side traversal across the WHOLE nodes map once JS runs.
+import fs from 'fs';
+import path from 'path';
 import dialogue from '../data/cheffy-dialogue.json';
+import { parseWeekPlan } from '../utils/weekParser';
 
 type DialogueOption = { label: string; goto?: string; action?: string };
 type DialogueNode = { text: string; expression?: string; input?: boolean; options: DialogueOption[] };
@@ -13,6 +17,23 @@ type DialogueNode = { text: string; expression?: string; input?: boolean; option
 const nodes = (dialogue.nodes ?? {}) as Record<string, DialogueNode>;
 const startId = dialogue.start ?? 'root';
 const start = nodes[startId];
+
+// Build-time archive index -- reuses the SAME parsing source of truth as
+// src/pages/archive/[slug].astro (do NOT introduce a second parser / import.meta.glob).
+const archiveDir = path.join(process.cwd(), 'archive');
+const files = fs.existsSync(archiveDir)
+  ? fs.readdirSync(archiveDir).filter((n) => n.endsWith('.md')).sort((a, b) => b.localeCompare(a))
+  : [];
+const archiveIndex = await Promise.all(
+  files.map(async (file) => {
+    const wp = await parseWeekPlan(`archive/${file}`);
+    return {
+      slug: file.replace(/\.md$/, ''), // filename stem = the archive ROUTE slug, NOT slugifyWeekTitle(title)
+      title: wp.weekTitle,
+      meals: wp.meals.map((m) => m.title),
+    };
+  })
+);
 ---
 
 <div id="cheffy-panel" class="cheffy-panel" role="dialog" aria-label="Cheffy" hidden>
@@ -20,7 +41,7 @@ const start = nodes[startId];
     <div class="cheffy-node" data-node={startId}>
       <p class="cheffy-text">{start.text}</p>
       {start.input && (
-        <input type="text" class="cheffy-input" placeholder="Search a week or meal..." />
+        <input type="text" class="cheffy-input" placeholder="Search a week or meal..." aria-label="Search a week or meal" />
       )}
       <ul class="cheffy-options">
         {start.options.map((opt) => (
@@ -39,4 +60,193 @@ const start = nodes[startId];
     /* TODO(cheffy): populate src/data/cheffy-dialogue.json with a real tree. */
     <p class="cheffy-text">Cheffy is still warming up the kitchen.</p>
   )}
+  <script type="application/json" id="cheffy-archive-index" is:inline set:html={JSON.stringify(archiveIndex)} />
 </div>
+
+<script>
+  // Client-side dialogue runtime. Bundled (not is:inline / define:vars) so plain ES
+  // imports (JSON + the pure util) work exactly as Cheffy.astro's script imports
+  // cheffyState. Scoped to an already-OPEN panel -- never touches panel.hidden or
+  // aria-expanded; those stay owned by Cheffy.astro's toggle open/close (part 2).
+  import dialogueTree from '../data/cheffy-dialogue.json';
+  import { getNode, bestArchiveMatch, type DialogueNode, type ArchiveEntry } from '../utils/cheffyDialogue';
+
+  type Tree = { start: string; nodes: Record<string, DialogueNode> };
+  const dialogue = dialogueTree as unknown as Tree;
+
+  // -------------------------------------------------------------------------
+  // Action-dispatch registry -- the hexagonal port parts 4/5/6 plug into.
+  //
+  // window.cheffyActions: Record<string, (ctx: CheffyActionCtx) => void>
+  // window.registerCheffyAction(name, fn): documented seam for later parts to
+  // register a handler WITHOUT reworking this panel or reaching into closures.
+  //
+  // ctx contract (the port surface parts 4/5/6 receive):
+  //   {
+  //     root,            // #cheffy element
+  //     panel,           // #cheffy-panel element
+  //     dialogue,        // the full parsed dialogue tree
+  //     nodeId,          // current node id
+  //     index,           // ArchiveEntry[] build-time archive index
+  //     slug?,           // present for navigate-to-archive: the matched archive slug
+  //     query?,          // present for navigate-to-archive: the raw search query
+  //     setState,        // root.cheffySetState -- the part-2 state-machine hook
+  //     renderNode,       // (id: string) => void -- re-render the panel to another node
+  //     close,           // () => void -- collapse the panel via the part-2 path
+  //   }
+  //
+  // Unregistered actions fall through to a graceful "coming soon" default -- the
+  // panel NEVER throws before parts 4/5/6 land.
+  // -------------------------------------------------------------------------
+  (window as any).cheffyActions = (window as any).cheffyActions || {};
+  (window as any).registerCheffyAction = (name: string, fn: (ctx: any) => void) => {
+    (window as any).cheffyActions = (window as any).cheffyActions || {};
+    (window as any).cheffyActions[name] = fn;
+  };
+
+  function initCheffyDialogue(): void {
+    const root = document.getElementById('cheffy');
+    const panel = document.getElementById('cheffy-panel');
+    const toggle = root?.querySelector<HTMLButtonElement>('.cheffy-toggle');
+    const nodeContainer = panel?.querySelector<HTMLElement>('.cheffy-node');
+    if (!root || !panel || !toggle || !nodeContainer) return; // required element missing -- PE safety, no-op
+
+    const startNodeId = root.dataset.startNode || dialogue.start;
+
+    let archiveIndex: ArchiveEntry[] = [];
+    const indexEl = document.getElementById('cheffy-archive-index');
+    if (indexEl && indexEl.textContent) {
+      try {
+        archiveIndex = JSON.parse(indexEl.textContent) as ArchiveEntry[];
+      } catch {
+        archiveIndex = [];
+      }
+    }
+
+    function buildCtx(nodeId: string, extra?: Record<string, unknown>) {
+      return {
+        root,
+        panel,
+        dialogue,
+        nodeId,
+        index: archiveIndex,
+        setState: (root as any).cheffySetState,
+        renderNode,
+        close: () => {
+          if (toggle && toggle.getAttribute('aria-expanded') === 'true') toggle.click();
+        },
+        ...extra,
+      };
+    }
+
+    function dispatchAction(name: string, ctx: any): void {
+      const fn = (window as any).cheffyActions?.[name];
+      if (typeof fn === 'function') {
+        try {
+          fn(ctx);
+        } catch (e) {
+          console.error('[cheffy] action failed', name, e);
+        }
+      } else {
+        defaultAction(name, ctx);
+      }
+    }
+
+    function defaultAction(name: string, _ctx: any): void {
+      console.info('[cheffy] no handler for', name);
+      const textEl = nodeContainer!.querySelector('.cheffy-text');
+      if (textEl) textEl.textContent = "That's coming soon!";
+    }
+
+    function renderNode(id: string): void {
+      const node = getNode(dialogue, id);
+      if (!node || !nodeContainer) return;
+
+      root.setAttribute('data-expr-override', node.expression || 'neutral');
+
+      nodeContainer.setAttribute('data-node', id);
+      nodeContainer.replaceChildren();
+
+      const textEl = document.createElement('p');
+      textEl.className = 'cheffy-text';
+      textEl.textContent = node.text;
+      nodeContainer.appendChild(textEl);
+
+      if (node.input) {
+        const inputEl = document.createElement('input');
+        inputEl.type = 'text';
+        inputEl.className = 'cheffy-input';
+        inputEl.placeholder = 'Search a week or meal...';
+        inputEl.setAttribute('aria-label', 'Search a week or meal');
+        inputEl.addEventListener('keydown', (e) => {
+          if (e.key !== 'Enter') return;
+          e.preventDefault();
+          const value = inputEl.value;
+          const match = bestArchiveMatch(archiveIndex, value);
+          if (match) {
+            dispatchAction('navigate-to-archive', buildCtx(id, { slug: match.slug, query: value }));
+          } else {
+            textEl.textContent = "I couldn't find that one.";
+          }
+        });
+        nodeContainer.appendChild(inputEl);
+      }
+
+      const list = document.createElement('ul');
+      list.className = 'cheffy-options';
+      for (const opt of node.options) {
+        const li = document.createElement('li');
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'cheffy-option';
+        if (opt.goto) btn.dataset.goto = opt.goto;
+        if (opt.action) btn.dataset.action = opt.action;
+        btn.textContent = opt.label;
+        li.appendChild(btn);
+        list.appendChild(li);
+      }
+      nodeContainer.appendChild(list);
+
+      nodeContainer.setAttribute('tabindex', '-1');
+      nodeContainer.focus();
+    }
+
+    // Event delegation on a STABLE parent so listeners survive renderNode() re-renders.
+    panel.addEventListener('click', (e) => {
+      const target = (e.target as HTMLElement)?.closest<HTMLElement>('.cheffy-option');
+      if (!target || !nodeContainer.contains(target)) return;
+      const goto = target.dataset.goto;
+      const action = target.dataset.action;
+      if (goto) {
+        renderNode(goto);
+      } else if (action) {
+        const currentId = nodeContainer.dataset.node || startNodeId;
+        dispatchAction(action, buildCtx(currentId));
+      }
+    });
+
+    // Part-3-owned actions: pure navigation, zero Cheffy.astro JS edits.
+    (window as any).registerCheffyAction('close', () => {
+      if (toggle.getAttribute('aria-expanded') === 'true') toggle.click();
+    });
+    (window as any).registerCheffyAction('navigate-to-archive', (ctx: any) => {
+      if (ctx.slug) window.location.href = '/archive/' + ctx.slug;
+    });
+
+    // Open/close sync -- order-independent w.r.t. Cheffy.astro's script.
+    const observer = new MutationObserver(() => {
+      if (!panel.hidden) {
+        renderNode(startNodeId);
+      } else {
+        root.removeAttribute('data-expr-override');
+      }
+    });
+    observer.observe(panel, { attributes: true, attributeFilter: ['hidden'] });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCheffyDialogue);
+  } else {
+    initCheffyDialogue();
+  }
+</script>

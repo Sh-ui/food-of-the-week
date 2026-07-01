@@ -108,6 +108,19 @@ const startNode = dialogue.start ?? 'root';
       animation: cheffy-blink 4.5s ease-in-out infinite;
     }
   }
+
+  /* per-node expression override, set by the CheffyPanel dialogue runtime (data-expr-override on #cheffy) */
+  #cheffy[data-expr-override] [data-expr],
+  #cheffy[data-expr-override] [data-mouth] { display: none; }
+
+  #cheffy[data-expr-override="neutral"]  [data-expr="neutral"],
+  #cheffy[data-expr-override="excited"]  [data-expr="excited"],
+  #cheffy[data-expr-override="thinking"] [data-expr="thinking"] { display: block; }
+
+  /* mouth mapping mirrors the state mapping (excited->smile, thinking/neutral->neutral) */
+  #cheffy[data-expr-override="neutral"]  [data-mouth="neutral"],
+  #cheffy[data-expr-override="thinking"] [data-mouth="neutral"],
+  #cheffy[data-expr-override="excited"]  [data-mouth="smile"] { display: block; }
 </style>
 
 <script>
