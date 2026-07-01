@@ -64,7 +64,7 @@
   },
   "phase": "0",
   "phase_name": "Bootstrap",
-  "production_active": true,
+  "production_active": false,
   "project": "",
   "queue": {
     "active": 0,
