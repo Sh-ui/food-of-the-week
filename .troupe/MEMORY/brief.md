@@ -1,17 +1,22 @@
 # Brief -- Cheffy module build (getting-cheffy branch)
 
 State-of-the-world orienting doc for the Director. Source: RESEARCH/PLAN/BUILD/TEST jots for
-parts 1-3/9, compressed and pruned after audit-pass at this Strike.
+parts 1-4 and 8 of 9, compressed and pruned after audit-pass at this Strike.
 
-## DoD progress: 3/9 criteria done
+## DoD progress: 5/9 criteria done
 
 - **DONE -- calendar-engine**: `src/utils/cheffyCalendar.ts` (audit-passed, build-verified).
 - **DONE -- mascot-state-machine**: `src/components/Cheffy.astro` (audit-passed, build-verified).
 - **DONE -- dialogue-panel**: `src/components/CheffyPanel.astro` runtime + `src/data/cheffy-dialogue.json`
   authored tree + `src/utils/cheffyDialogue.ts` (audit-passed, build-verified).
-- 6 remaining, all `pending`: calendar-actions, local-notifications,
-  checklist-export-import, reduced-motion, animated-readme-svg, pe-build-gate (final
-  wiring + `npm run build` gate -- do this last).
+- **DONE -- calendar-actions**: `src/utils/cheffyCalendarActions.ts` (new, 102 lines) registers
+  `generate-ics` into the part-3 action-dispatch registry; audit-passed, test-passed (22/22
+  assertions), `npm run build` clean, `CheffyPanel.astro` byte-unchanged per audit.
+- **DONE -- animated-readme-svg**: `src/assets/cheffy-animated.svg` (60-line SMIL demo loop,
+  8x `<animate>` on opacity/ry only, no external refs) embedded in `README.md` line 11;
+  audit-passed, test-passed (xmllint well-formed, build green).
+- 4 remaining, all `pending`: local-notifications, checklist-export-import, reduced-motion,
+  pe-build-gate (final `<Cheffy />` mount into Layout + `npm run build` gate -- do this last).
 
 ## What shipped in part 1 (calendar-engine)
 
@@ -88,6 +93,32 @@ Both parts verified via ephemeral (uncommitted) Node scripts, not a committed te
 - Part-2 open/close/state behavior confirmed unchanged; `Cheffy` still NOT mounted in
   `Layout.astro` (deferred to the final pe-build-gate part).
 
+## What shipped in part 4 (calendar-actions)
+
+- `src/utils/cheffyCalendarActions.ts` -- NEW file (102 lines), the wiring layer that consumes
+  the audit-passed `cheffyCalendar.ts` engine (`extractCookingEvents`/`buildIcs`/
+  `googleCalendarUrl`/`deriveWeekStart`) and registers a `generate-ics` handler via
+  `window.registerCheffyAction`, established as the registration-mount pattern for later parts.
+  Delivers: add-all `.ics` download of the whole week's `CookingEvent[]`, a per-recipe mini
+  single-event `.ics` export, and a Google Calendar template link opening in a new tab.
+- Per-week `CookingEvent` data reaches the handler via a build-time data island on each page
+  (`index.astro`/`weekend.astro`/`archive/[slug].astro`), per the planner's data-path -- did NOT
+  edit `CheffyPanel.astro`.
+- `src/components/Cheffy.astro` -- small additive edit (part of the same diff) plus a
+  `src/data/cheffy-dialogue.json` tweak (4 lines) to route the calendar node's action id.
+- Confirmed: `sw.js`/`GroceryList.astro`/notifications/checklist untouched; `Cheffy` still NOT
+  mounted in `Layout.astro`; master-parity held (no `cheffy` string in any built page).
+
+## What shipped in part 8 (animated-readme-svg)
+
+- `src/assets/cheffy-animated.svg` -- new 60-line SMIL demo loop reusing the mascot's expression
+  groups from part 2's `Cheffy.astro`; all 8 `<animate>` elements target `opacity`/`ry` on their
+  own parent element only (no `animateTransform`/`set`, no `href`/`xlink`/`url()` external refs).
+  Verified well-formed via `xmllint`.
+- `README.md` -- embeds the SVG via `<img src="src/assets/cheffy-animated.svg">` at line 11.
+- Fully independent of all other parts (zero code coupling); the SVG is unreferenced by any
+  `.astro` component, so no site-behavior/build-gate change -- 28 pages still build clean.
+
 ## Open decision surfaced for the Producer (unresolved, see CALLBOARD)
 
 - Whether to add a light DOM smoke-test harness (happy-dom/Playwright) now that the panel has
@@ -126,12 +157,16 @@ Both parts verified via ephemeral (uncommitted) Node scripts, not a committed te
 ## Process notes
 
 - DoD is decomposed into 9 hexagonal parts (1 per criterion), armed one at a time via
-  `next_assignment.json`; this Strike closes part 3 (dialogue-panel). Director re-arms next --
-  any of calendar-actions / local-notifications / checklist-export-import can now register
-  against the part-3 action-dispatch seam; reduced-motion, animated-readme-svg, and
-  pe-build-gate remain independent of that seam.
+  `next_assignment.json`; this Strike closes parts 4 (calendar-actions) and 8
+  (animated-readme-svg), the two-part batch the Director armed in parallel (zero shared files).
+  Director re-arms next -- local-notifications and checklist-export-import can now register
+  against the part-3/part-4-established action-dispatch + registration-mount seam;
+  reduced-motion is a cross-cutting CSS sweep best done after all interactive surfaces land;
+  pe-build-gate (final `<Cheffy />` mount + `npm run build` gate) MUST be last.
 - No test framework in this repo by design -- TEST rungs use ephemeral throwaway verification
   scripts (scratchpad/Node, not committed, not vitest/jest), with `npm run build` as the durable
   pass/fail gate per CHEFFY-SYSTEM.md's acceptance bar.
 - No `.troupe/metrics.jsonl` telemetry file exists yet -- `state.json.aggregates` remain at zero;
   nothing to recompute this Strike.
+- Open standing CALLBOARD gate (DOM smoke harness) is still unanswered as of this Strike --
+  proceeding as-is per the prior milestone's decision; do not duplicate the entry.

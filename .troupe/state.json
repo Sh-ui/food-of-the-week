@@ -26,7 +26,7 @@
     },
     {
       "criterion": "calendar-actions: generate-ics download + per-recipe mini export + Google Calendar link wired from the dialogue panel.",
-      "status": "pending"
+      "status": "done"
     },
     {
       "criterion": "local-notifications: public/sw.js opt-in local reminders triggered only via the trigger-permission dialogue action; clean degradation on unsupported browsers.",
@@ -42,7 +42,7 @@
     },
     {
       "criterion": "animated-readme-svg: src/assets/cheffy-animated.svg SMIL demo loop embedded in README.md.",
-      "status": "pending"
+      "status": "done"
     },
     {
       "criterion": "pe-build-gate: <Cheffy /> wired into Layout.astro; npm run build (astro check && astro build) passes; no console errors on any page; behaves exactly like master with Cheffy JS disabled.",
@@ -54,7 +54,7 @@
     "last_audit": null
   },
   "last_iteration": null,
-  "last_strike": "2026-07-01T01:55:00Z",
+  "last_strike": "2026-07-01T11:24:41Z",
   "next_queue": [],
   "pacing": {
     "block_started_at": null,
@@ -85,5 +85,5 @@
     "troupe-haiku"
   ],
   "working_branch": null,
-  "workshop_debt": 3
+  "workshop_debt": 4
 }

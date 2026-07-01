@@ -909,7 +909,7 @@
       "weight": "light"
     },
     "job_cheffy_readmesvg_test": {
-      "attempts": 0,
+      "attempts": 1,
       "audit": null,
       "blocked_reason": null,
       "budget": {
@@ -931,12 +931,12 @@
       "not_before": null,
       "objective": "Verify the animated-readme-svg part (8/9). Confirm src/assets/cheffy-animated.svg is well-formed XML and contains valid SMIL animation elements -- parse it and check that <animate>/<animateTransform>/<set> targets resolve to real element ids/attributes and there are NO external references. Confirm README.md embeds or points at the asset and the reference resolves. Run npm run build (astro check && astro build) -- must remain green -- and confirm no site behavior change. Report pass/fail per claim; on any failure escalate per the ascent ladder (test-fail -> BUILD).",
       "priority": 50,
-      "result_ref": null,
+      "result_ref": "PASS: xmllint well-formed; 8x <animate> (no animateTransform/set) all target attributeName opacity/ry on own parent element, no href/xlink/url() external refs; README.md line 11 img src=src/assets/cheffy-animated.svg resolves to existing file; npm run build (astro check && astro build) green, 28 pages built, SVG unreferenced by any .astro component so no site-behavior change",
       "resume_mode": "fresh",
       "risk": [],
-      "status": "queued",
+      "status": "done",
       "title": "test: animated-readme-svg verification",
-      "updated_at": "2026-07-01T02:47:45.004140Z",
+      "updated_at": "2026-07-01T11:20:49.345631Z",
       "weight": "standard"
     }
   },
@@ -974,6 +974,6 @@
     "heartbeat_timeout_sec": 900,
     "max_active": 1
   },
-  "updated_at": "2026-07-01T04:09:37.825547Z",
+  "updated_at": "2026-07-01T11:20:49.345634Z",
   "version": 1
 }
