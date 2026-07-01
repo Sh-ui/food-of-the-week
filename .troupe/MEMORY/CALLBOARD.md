@@ -11,4 +11,5 @@ Async, non-blocking notice board (the backstage callboard). The Stage Manager an
 - No nested bullets, no headers per entry, no restating context. Link out, don't inline.
 - **Prune on action:** once the Producer acts on an entry, delete it. The board stays short.
 
-- [2026-07-01 fyi] Cheffy DoD: 2/9 parts done (calendar-engine, mascot-state-machine), both audit+test passed. Still no test framework -- TEST rungs stay ephemeral scripts, `npm run build` is the durable gate. Object here if you want a real test suite/library added.
+- [2026-07-01 fyi] Cheffy 2/9 done (calendar-engine, mascot-state-machine; both audit+test passed). No test framework by design -- ephemeral Node scripts + `npm run build` are the durable gate.
+  Gap worth a call: the interactive DOM surface (state machine; from part 3 the dialogue nav + action registry) has NO executable coverage -- only astro check + manual audit. Cheapest to add a light DOM smoke harness (happy-dom/Playwright) now, before parts 4-6 stack handlers on the panel. Reply if you want one added; else we proceed as-is.

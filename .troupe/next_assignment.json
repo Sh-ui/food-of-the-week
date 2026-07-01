@@ -1,14 +1,14 @@
 {
   "batch": [
-    "job_cheffy_mascot_plan",
-    "job_cheffy_mascot_build",
-    "job_cheffy_mascot_test"
+    "job_cheffy_dialogue_plan",
+    "job_cheffy_dialogue_build",
+    "job_cheffy_dialogue_test"
   ],
   "context_files": [],
   "dispatch": "RESEARCH",
   "dispatch_rules": "default-ascent",
-  "next_task": "job_cheffy_mascot_research",
-  "notes": "Part 2/9 armed: mascot-state-machine (Cheffy.astro SVG mascot + idle/attention/dialogue/processing state machine keyed off visitedWeeks) -- RESEARCH -> PLAN -> BUILD -> TEST (AUDIT auto). Seam: reuse GroceryList weekId (H1 slug); extract pure src/utils/cheffyState.ts (zero-relative-import, part-1 pattern) so TEST can verify without a framework. Boundary: do NOT mount in Layout (part 9), do NOT author the dialogue tree/nav (part 3), do NOT touch calendar/notifications/checklist. Director re-arms part 3 (dialogue-panel) after this part audits.",
+  "next_task": "job_cheffy_dialogue_research",
+  "notes": "Part 3/9 armed: dialogue-panel (CheffyPanel.astro full client-side dialogue runtime + real cheffy-dialogue.json tree + action-dispatch registry) -- RESEARCH -> PLAN -> BUILD -> TEST (AUDIT auto). Seam: CheffyPanel currently SERVER-renders only the start node; part 3 makes it navigate the whole nodes map CLIENT-side, drives the mascot per node via the part-2 cheffySetState hook on #cheffy, and defines the action-dispatch REGISTRY (data-action -> handler + graceful default) that parts 4/5/6 plug their handler into. OWNS + fully implements: close + navigate-to-archive + free-text search resolution against existing /archive/[slug] routes. Boundary: do NOT implement generate-ics/trigger-permission/export-checklist logic (parts 4/5/6 register handlers), do NOT mount <Cheffy /> in Layout (part 9), do NOT touch cheffyCalendar.ts/public/sw.js/GroceryList.astro, do NOT regress part-2 open/close/state behavior, do NOT add motion that breaks prefers-reduced-motion (part 7). Pure traversal + search-matcher logic goes in a zero-relative-import util (cheffyState.ts / cheffyCalendar.ts pattern) so TEST verifies with an ephemeral Node script; npm run build (astro check && astro build) stays the durable gate. Director re-arms part 4 (calendar-actions) after this part audits: calendar-actions registers the generate-ics handler into the part-3 registry + wires cheffyCalendar.ts ICS download / per-recipe mini export / Google Calendar link.",
   "strike_timestamp": null,
   "warm_set": [
     "troupe-director",
