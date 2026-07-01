@@ -152,6 +152,153 @@
       "updated_at": "2026-07-01T01:52:23.001550Z",
       "weight": "standard"
     },
+    "job_cheffy_calactions_build": {
+      "attempts": 0,
+      "audit": {
+        "attempts": 0,
+        "audit_of": null,
+        "auditor_job_id": null,
+        "last_verdict": null,
+        "max_attempts": 2,
+        "required": true,
+        "status": "pending"
+      },
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "after_each_step"
+      },
+      "context_files": [
+        "src/utils/cheffyCalendar.ts",
+        "src/pages/index.astro",
+        "src/pages/weekend.astro",
+        "src/pages/archive/[slug].astro",
+        "src/components/CheffyPanel.astro",
+        "src/components/Cheffy.astro",
+        "CHEFFY-SYSTEM.md"
+      ],
+      "created_at": "2026-07-01T02:47:10.966831Z",
+      "criterion": "calendar-actions: generate-ics download + per-recipe mini export + Google Calendar link wired from the dialogue panel.",
+      "cycle": {},
+      "depends_on": [
+        "job_cheffy_calactions_plan"
+      ],
+      "dispatch": "BUILD",
+      "failure_reason": null,
+      "id": "job_cheffy_calactions_build",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 2,
+      "not_before": null,
+      "objective": "Implement the calendar-actions wiring per the planner blueprint (auto-attached). Register generate-ics into the part-3 action-dispatch registry so the dialogue calendar node triggers: (a) an add-all .ics download of the whole week's CookingEvents, (b) a per-recipe mini single-event .ics export, (c) a Google Calendar template link opening in a new tab -- all via cheffyCalendar.ts (extractCookingEvents/buildIcs/googleCalendarUrl/deriveWeekStart). Feed per-week events through the data-path the planner specifies (build-time data island on each page) WITHOUT editing CheffyPanel.astro. Contribution BEGINS/ENDS in the planner's named files; do NOT mount Cheffy in Layout, do NOT touch sw.js / GroceryList.astro / notifications / checklist. ACCEPTANCE: generate-ics yields a structurally valid multi-event VCALENDAR download; per-recipe mini yields a valid single-event .ics; the Google Calendar link resolves to a correct render?action=TEMPLATE URL with the right dates; CheffyPanel.astro is unchanged; npm run build (astro check && astro build) passes with no new console errors; site still behaves like master with Cheffy JS disabled.",
+      "priority": 50,
+      "result_ref": null,
+      "resume_mode": "fresh",
+      "risk": [],
+      "status": "queued",
+      "title": "build: calendar-actions wiring",
+      "updated_at": "2026-07-01T02:47:10.966834Z",
+      "weight": "standard"
+    },
+    "job_cheffy_calactions_plan": {
+      "attempts": 0,
+      "audit": null,
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "on_block_or_risk"
+      },
+      "context_files": [],
+      "created_at": "2026-07-01T02:47:01.186681Z",
+      "criterion": "calendar-actions: generate-ics download + per-recipe mini export + Google Calendar link wired from the dialogue panel.",
+      "cycle": {},
+      "depends_on": [
+        "job_cheffy_calactions_research"
+      ],
+      "dispatch": "PLAN",
+      "failure_reason": null,
+      "id": "job_cheffy_calactions_plan",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 1,
+      "not_before": null,
+      "objective": "Blueprint ONLY the calendar-actions wiring (part 4/9), grounded on the auto-attached research note. Register a generate-ics handler (add-all ICS download + per-recipe mini single-event export) plus a Google Calendar link into the part-3 action-dispatch registry, feeding per-week CookingEvents WITHOUT editing CheffyPanel.astro (register from cheffyCalendar.ts or a small new init file per the research data-path finding). BOUNDARY: consume the audit-passed cheffyCalendar.ts as-is (no engine changes unless a real bug is found); do NOT mount Cheffy in Layout (that is part 9 / pe-build-gate); do NOT touch notifications (sw.js / trigger-permission) or checklist (export-checklist / GroceryList.astro); do NOT regress part-2/part-3 behavior; MAY flip the #cheffy processing state during generation via the part-2 hook. Specify the exact files to touch, the per-page data-island contract, and concrete acceptance checks for the builder.",
+      "priority": 50,
+      "result_ref": null,
+      "resume_mode": "fresh",
+      "risk": [],
+      "status": "queued",
+      "title": "plan: calendar-actions wiring blueprint",
+      "updated_at": "2026-07-01T02:47:01.186683Z",
+      "weight": "light"
+    },
+    "job_cheffy_calactions_research": {
+      "attempts": 1,
+      "audit": null,
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "before_after_each_step"
+      },
+      "context_files": [
+        "src/components/CheffyPanel.astro",
+        "src/utils/cheffyCalendar.ts",
+        "src/utils/cheffyDialogue.ts",
+        "src/pages/index.astro",
+        "src/pages/weekend.astro",
+        "src/pages/archive/[slug].astro",
+        "src/components/Cheffy.astro",
+        "CHEFFY-SYSTEM.md"
+      ],
+      "created_at": "2026-07-01T02:46:52.232822Z",
+      "criterion": "calendar-actions: generate-ics download + per-recipe mini export + Google Calendar link wired from the dialogue panel.",
+      "cycle": {},
+      "depends_on": [],
+      "dispatch": "RESEARCH",
+      "failure_reason": null,
+      "id": "job_cheffy_calactions_research",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 3,
+      "not_before": null,
+      "objective": "Assess + gather grounded facts for calendar-actions (part 4/9): wiring the audit-passed cheffyCalendar.ts engine (extractCookingEvents/buildIcs/googleCalendarUrl/deriveWeekStart) into the part-3 dialogue action-dispatch registry. ESTABLISH on repo evidence: (1) the exact part-3 registration seam -- read CheffyPanel.astro for window.registerCheffyAction / window.cheffyActions and the handler arg shape { root, panel, dialogue, nodeId, index, slug?, query?, setState, renderNode, close }; (2) HOW a per-week list of CookingEvents reaches a generate-ics handler at RUNTIME given Cheffy is NOT yet mounted in Layout (build-time data-island script vs component prop) AND where the registration script must LIVE so CheffyPanel.astro stays UNTOUCHED (register from cheffyCalendar.ts or a small new init file, per the brief -- not the panel); (3) the three call sites that already parseWeekPlan(filename) and what raw markdown + weekStart each feeds extractCookingEvents -- index.astro (FOOD-OF-THE-WEEK.md), weekend.astro (WEEKEND.md), archive/[slug].astro (filename prop); (4) browser mechanics: Blob + URL.createObjectURL + anchor-download for add-all ICS and per-recipe mini single-event ICS, plus opening googleCalendarUrl in a new tab; (5) whether cheffyCalendar.ts exports are import-safe in a client bundle (no Node-only APIs). Web-check only a genuinely uncertain browser-API detail. Output a concrete seam + data-path recommendation for the Planner.",
+      "priority": 50,
+      "result_ref": "notes/job_cheffy_calactions_research.md",
+      "resume_mode": "fresh",
+      "risk": [],
+      "status": "done",
+      "title": "research: calendar-actions seam + runtime data-path",
+      "updated_at": "2026-07-01T03:05:53.601414Z",
+      "weight": "heavy"
+    },
+    "job_cheffy_calactions_test": {
+      "attempts": 0,
+      "audit": null,
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "after_each_step"
+      },
+      "context_files": [],
+      "created_at": "2026-07-01T02:47:19.402415Z",
+      "criterion": "calendar-actions: generate-ics download + per-recipe mini export + Google Calendar link wired from the dialogue panel.",
+      "cycle": {},
+      "depends_on": [
+        "job_cheffy_calactions_build"
+      ],
+      "dispatch": "TEST",
+      "failure_reason": null,
+      "id": "job_cheffy_calactions_test",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 2,
+      "not_before": null,
+      "objective": "Verify the calendar-actions part (4/9). With an ephemeral (uncommitted) Node script, exercise cheffyCalendar.ts against a real week markdown to confirm: buildIcs emits a valid multi-event VCALENDAR (CRLF endings, 75-octet folding, escaped text, VEVENT count == events) for add-all AND a valid single-event .ics for per-recipe mini; googleCalendarUrl produces a correct calendar.google.com render?action=TEMPLATE URL with matching UTC dates. Confirm the registration wires generate-ics WITHOUT editing CheffyPanel.astro (inspect the diff -- panel must be byte-unchanged). Run npm run build (astro check && astro build) as the durable gate -- must pass with no new console errors -- and confirm master-parity with Cheffy JS disabled. Report pass/fail per claim; on any failure escalate per the ascent ladder (test-fail -> BUILD).",
+      "priority": 50,
+      "result_ref": null,
+      "resume_mode": "fresh",
+      "risk": [],
+      "status": "queued",
+      "title": "test: calendar-actions verification",
+      "updated_at": "2026-07-01T02:47:19.402418Z",
+      "weight": "standard"
+    },
     "job_cheffy_calendar_build": {
       "attempts": 1,
       "audit": {
@@ -600,6 +747,115 @@
       "title": "test: mascot state machine + PE boundary",
       "updated_at": "2026-07-01T01:00:37.261154Z",
       "weight": "light"
+    },
+    "job_cheffy_readmesvg_build": {
+      "attempts": 0,
+      "audit": {
+        "attempts": 0,
+        "audit_of": null,
+        "auditor_job_id": null,
+        "last_verdict": null,
+        "max_attempts": 2,
+        "required": true,
+        "status": "pending"
+      },
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "on_block_or_risk"
+      },
+      "context_files": [
+        "src/assets/cheffy-animated.svg",
+        "README.md",
+        "src/components/Cheffy.astro",
+        "CHEFFY-SYSTEM.md"
+      ],
+      "created_at": "2026-07-01T02:47:37.051970Z",
+      "criterion": "animated-readme-svg: src/assets/cheffy-animated.svg SMIL demo loop embedded in README.md.",
+      "cycle": {},
+      "depends_on": [
+        "job_cheffy_readmesvg_plan"
+      ],
+      "dispatch": "BUILD",
+      "failure_reason": null,
+      "id": "job_cheffy_readmesvg_build",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 1,
+      "not_before": null,
+      "objective": "Author src/assets/cheffy-animated.svg per the planner blueprint (auto-attached): a standalone, self-contained SMIL-animated demo loop of the Cheffy mascot cycling through its authored expression/state looks, reusing the shapes and brand color tokens from src/components/Cheffy.astro (no JS, no external references, no new deps). Embed it in README.md per the blueprint. Contribution BEGINS/ENDS in these two files -- do NOT touch any component/util/page or the build config. ACCEPTANCE: the SVG is well-formed XML and animates standalone when opened in a browser; README.md renders the embedded demo; npm run build (astro check && astro build) is unaffected and passes; no new dependencies.",
+      "priority": 50,
+      "result_ref": null,
+      "resume_mode": "fresh",
+      "risk": [],
+      "status": "queued",
+      "title": "build: animated-readme-svg asset + embed",
+      "updated_at": "2026-07-01T02:47:37.051976Z",
+      "weight": "light"
+    },
+    "job_cheffy_readmesvg_plan": {
+      "attempts": 0,
+      "audit": null,
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "on_block_or_risk"
+      },
+      "context_files": [
+        "src/assets/cheffy-animated.svg",
+        "README.md",
+        "src/components/Cheffy.astro",
+        "CHEFFY-SYSTEM.md"
+      ],
+      "created_at": "2026-07-01T02:47:28.814405Z",
+      "criterion": "animated-readme-svg: src/assets/cheffy-animated.svg SMIL demo loop embedded in README.md.",
+      "cycle": {},
+      "depends_on": [],
+      "dispatch": "PLAN",
+      "failure_reason": null,
+      "id": "job_cheffy_readmesvg_plan",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 1,
+      "not_before": null,
+      "objective": "Blueprint the animated-readme-svg part (8/9). RESEARCH is intentionally SKIPPED: the mascot SVG and its expression/state groups already exist in src/components/Cheffy.astro (part 2), SMIL (animate/animateTransform/set) is a settled standard, and there are NO external API/standard unknowns -- so blueprint directly from the in-repo mascot. Design a STANDALONE looping demo SVG at src/assets/cheffy-animated.svg (SMIL-animated, self-contained, no JS, no external references) that storyboards Cheffy cycling through its authored looks (idle -> attention with notification dot -> dialogue/excited -> back), reusing the shapes and brand color tokens from Cheffy.astro; plus the README.md embed. BOUNDARY: pure asset + README only -- touches NO component/util/page, adds NO deps, does not alter site build behavior; keep the loop gentle/reduced-motion-considerate. Output the storyboard frames, timings, and the exact README embed snippet + acceptance checks for the builder.",
+      "priority": 50,
+      "result_ref": null,
+      "resume_mode": "fresh",
+      "risk": [],
+      "status": "queued",
+      "title": "plan: animated-readme-svg storyboard",
+      "updated_at": "2026-07-01T02:47:28.814408Z",
+      "weight": "light"
+    },
+    "job_cheffy_readmesvg_test": {
+      "attempts": 0,
+      "audit": null,
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "after_each_step"
+      },
+      "context_files": [],
+      "created_at": "2026-07-01T02:47:45.004137Z",
+      "criterion": "animated-readme-svg: src/assets/cheffy-animated.svg SMIL demo loop embedded in README.md.",
+      "cycle": {},
+      "depends_on": [
+        "job_cheffy_readmesvg_build"
+      ],
+      "dispatch": "TEST",
+      "failure_reason": null,
+      "id": "job_cheffy_readmesvg_test",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 2,
+      "not_before": null,
+      "objective": "Verify the animated-readme-svg part (8/9). Confirm src/assets/cheffy-animated.svg is well-formed XML and contains valid SMIL animation elements -- parse it and check that <animate>/<animateTransform>/<set> targets resolve to real element ids/attributes and there are NO external references. Confirm README.md embeds or points at the asset and the reference resolves. Run npm run build (astro check && astro build) -- must remain green -- and confirm no site behavior change. Report pass/fail per claim; on any failure escalate per the ascent ladder (test-fail -> BUILD).",
+      "priority": 50,
+      "result_ref": null,
+      "resume_mode": "fresh",
+      "risk": [],
+      "status": "queued",
+      "title": "test: animated-readme-svg verification",
+      "updated_at": "2026-07-01T02:47:45.004140Z",
+      "weight": "standard"
     }
   },
   "order": [
@@ -618,7 +874,14 @@
     "job_cheffy_dialogue_research",
     "job_cheffy_dialogue_plan",
     "job_cheffy_dialogue_build",
-    "job_cheffy_dialogue_test"
+    "job_cheffy_dialogue_test",
+    "job_cheffy_calactions_research",
+    "job_cheffy_calactions_plan",
+    "job_cheffy_calactions_build",
+    "job_cheffy_calactions_test",
+    "job_cheffy_readmesvg_plan",
+    "job_cheffy_readmesvg_build",
+    "job_cheffy_readmesvg_test"
   ],
   "policy": {
     "backoff_base_sec": 300,
@@ -627,6 +890,6 @@
     "heartbeat_timeout_sec": 900,
     "max_active": 1
   },
-  "updated_at": "2026-07-01T02:29:55.558068Z",
+  "updated_at": "2026-07-01T03:05:53.601418Z",
   "version": 1
 }

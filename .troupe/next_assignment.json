@@ -1,14 +1,26 @@
 {
   "batch": [
-    "job_cheffy_dialogue_plan",
-    "job_cheffy_dialogue_build",
-    "job_cheffy_dialogue_test"
+    "job_cheffy_calactions_plan",
+    "job_cheffy_calactions_build",
+    "job_cheffy_calactions_test",
+    "job_cheffy_readmesvg_plan",
+    "job_cheffy_readmesvg_build",
+    "job_cheffy_readmesvg_test"
   ],
-  "context_files": [],
+  "context_files": [
+    "src/components/CheffyPanel.astro",
+    "src/utils/cheffyCalendar.ts",
+    "src/utils/cheffyDialogue.ts",
+    "src/pages/index.astro",
+    "src/pages/weekend.astro",
+    "src/pages/archive/[slug].astro",
+    "src/components/Cheffy.astro",
+    "CHEFFY-SYSTEM.md"
+  ],
   "dispatch": "RESEARCH",
   "dispatch_rules": "default-ascent",
-  "next_task": "job_cheffy_dialogue_research",
-  "notes": "Part 3/9 armed: dialogue-panel (CheffyPanel.astro full client-side dialogue runtime + real cheffy-dialogue.json tree + action-dispatch registry) -- RESEARCH -> PLAN -> BUILD -> TEST (AUDIT auto). Seam: CheffyPanel currently SERVER-renders only the start node; part 3 makes it navigate the whole nodes map CLIENT-side, drives the mascot per node via the part-2 cheffySetState hook on #cheffy, and defines the action-dispatch REGISTRY (data-action -> handler + graceful default) that parts 4/5/6 plug their handler into. OWNS + fully implements: close + navigate-to-archive + free-text search resolution against existing /archive/[slug] routes. Boundary: do NOT implement generate-ics/trigger-permission/export-checklist logic (parts 4/5/6 register handlers), do NOT mount <Cheffy /> in Layout (part 9), do NOT touch cheffyCalendar.ts/public/sw.js/GroceryList.astro, do NOT regress part-2 open/close/state behavior, do NOT add motion that breaks prefers-reduced-motion (part 7). Pure traversal + search-matcher logic goes in a zero-relative-import util (cheffyState.ts / cheffyCalendar.ts pattern) so TEST verifies with an ephemeral Node script; npm run build (astro check && astro build) stays the durable gate. Director re-arms part 4 (calendar-actions) after this part audits: calendar-actions registers the generate-ics handler into the part-3 registry + wires cheffyCalendar.ts ICS download / per-recipe mini export / Google Calendar link.",
+  "next_task": "job_cheffy_calactions_research",
+  "notes": "Milestone after part 3/9 (dialogue-panel) audit-passed. Director armed TWO decoupled parts in parallel (zero shared files):\n\nPART 4 -- calendar-actions (RESEARCH -> PLAN -> BUILD -> TEST; AUDIT auto). PRIORITY of this batch: it consumes the audit-passed cheffyCalendar.ts engine (extractCookingEvents/buildIcs/googleCalendarUrl/deriveWeekStart) and registers a generate-ics handler + Google Calendar link into the part-3 action-dispatch registry (window.registerCheffyAction). It also ESTABLISHES the registration-mount pattern -- HOW a part's handler script gets onto the page WITHOUT touching CheffyPanel.astro, and HOW per-week CookingEvents reach the handler at runtime while <Cheffy /> is NOT yet mounted in Layout. That pattern is the precondition for parts 5 (local-notifications / trigger-permission) and 6 (checklist-export-import / export-checklist), which are DELIBERATELY HELD this milestone: all three register against the same untouched-panel seam, so fanning them out before the mount pattern exists risks collision on the mount point. Call sites for the data island: index.astro (FOOD-OF-THE-WEEK.md), weekend.astro (WEEKEND.md), archive/[slug].astro (filename prop). Boundary: no engine changes unless a real bug; do NOT mount Cheffy in Layout (part 9); do NOT touch sw.js / GroceryList.astro / notifications / checklist; MAY use the #cheffy processing hook during generation.\n\nPART 8 -- animated-readme-svg (PLAN -> BUILD -> TEST; AUDIT auto; RESEARCH intentionally skipped -- mascot SVG + expression groups already exist in Cheffy.astro from part 2, SMIL is a settled standard, no external unknowns). Fully independent: only src/assets/cheffy-animated.svg + README.md, zero code coupling with part 4 -- runs in parallel safely.\n\nREMAINING after this batch: local-notifications (5), checklist-export-import (6) -- next milestone, sequenced behind the part-4 mount pattern; reduced-motion (7) -- cross-cutting CSS sweep, best after all interactive surfaces land; pe-build-gate (9) -- final wiring of <Cheffy /> into Layout + npm run build gate, must be LAST. No test framework by design: ephemeral Node scripts + npm run build (astro check && astro build) are the durable gate. Open standing gate on CALLBOARD (DOM smoke harness) still UNANSWERED -- proceeding as-is; do not duplicate it.",
   "strike_timestamp": null,
   "warm_set": [
     "troupe-director",
