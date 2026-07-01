@@ -11,5 +11,5 @@ Async, non-blocking notice board (the backstage callboard). The Stage Manager an
 - No nested bullets, no headers per entry, no restating context. Link out, don't inline.
 - **Prune on action:** once the Producer acts on an entry, delete it. The board stays short.
 
-- [2026-07-01 fyi] Cheffy 2/9 done (calendar-engine, mascot-state-machine; both audit+test passed). No test framework by design -- ephemeral Node scripts + `npm run build` are the durable gate.
-  Gap worth a call: the interactive DOM surface (state machine; from part 3 the dialogue nav + action registry) has NO executable coverage -- only astro check + manual audit. Parts 5-6 (local-notifications, checklist-export-import) are now armed = the LAST window to add a light DOM smoke harness (happy-dom/Playwright) cheaply, before part 9 mounts + freezes the panel. Director is NOT blocking 5-6 on this (same bar carried part 4). Reply if you want one added before part 9; else we proceed as-is.
+- [2026-07-01 fyi] Cheffy 7/9 done. Final two parts armed serialized: p7 reduced-motion (CSS sweep, both components) then p9 pe-build-gate (mount + `npm run build` gate, runs last, dep-gated on p7 audit-pass). DoD sign-off + PR proposal come on the next Director pass.
+- [2026-07-01 gate] DOM smoke-harness (happy-dom/Playwright) for the interactive panel still unanswered. Its window has now CLOSED -- only a CSS sweep (p7) + the mount (p9) remain, no new handlers. A "yes" now = a separate post-DoD test-infra follow-up, not a gate on shipping. Reply yes to open that follow-up; else this drops at sign-off.

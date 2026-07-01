@@ -1,27 +1,23 @@
 {
   "batch": [
-    "cheffy_p5_notif_research",
-    "cheffy_p5_notif_plan",
-    "cheffy_p5_notif_build",
-    "cheffy_p5_notif_test",
-    "cheffy_p6_checklist_research",
-    "cheffy_p6_checklist_plan",
-    "cheffy_p6_checklist_build",
-    "cheffy_p6_checklist_test"
+    "cheffy_p7_reducedmotion_research",
+    "cheffy_p7_reducedmotion_plan",
+    "cheffy_p7_reducedmotion_build",
+    "cheffy_p7_reducedmotion_test",
+    "cheffy_p9_buildgate_plan",
+    "cheffy_p9_buildgate_build",
+    "cheffy_p9_buildgate_test"
   ],
   "context_files": [
     "src/components/Cheffy.astro",
     "src/components/CheffyPanel.astro",
-    "src/components/GroceryList.astro",
-    "src/utils/cheffyCalendarActions.ts",
-    "src/data/cheffy-dialogue.json",
-    "public/sw.js",
+    "src/layouts/Layout.astro",
     "CHEFFY-SYSTEM.md"
   ],
   "dispatch": "RESEARCH",
   "dispatch_rules": "default-ascent",
-  "next_task": "cheffy_p5_notif_research",
-  "notes": "Milestone after parts 4 (calendar-actions) + 8 (animated-readme-svg) audit-passed. 5/9 criteria done. Director armed the next batch: parts 5 (local-notifications) and 6 (checklist-export-import), each a full RESEARCH -> PLAN -> BUILD -> TEST chain (AUDIT auto-enqueued by the builder).\n\nPIPELINED PAIR, not a naive parallel pair. Both parts register a handler against the SAME untouched-panel action-dispatch seam established by parts 3/4 (window.registerCheffyAction) AND both must append a single bundled <script> import to the SAME trailing region of Cheffy.astro (mirroring the cheffyCalendarActions import at Cheffy.astro lines 244-249). That shared Cheffy.astro mount is a real file collision, so this is NOT zero-shared-files like the part-4/8 pair was. Guard: part 6's BUILD (cheffy_p6_checklist_build) depends on BOTH its own plan AND part 5's BUILD (cheffy_p5_notif_build, audit-passed) -- so the shared Cheffy.astro import edit is serialized (part 6 appends its import BELOW part 5's landed one). Part 6's RESEARCH + PLAN carry NO cross-dependency, so they run in whatever gap the part-5 chain leaves (the coordinator's batch walk falls through to runnable siblings on dep-wait).\n\nPART 5 -- local-notifications: implement public/sw.js (real notificationclick focus/open) + NEW src/utils/cheffyNotifications.ts registering 'trigger-permission' (permission -> SW register('/sw.js') -> schedule this week's cooking-time reminders from the existing #cheffy-week-ics island; Notification Triggers with a setTimeout fallback; clean no-op/degrade where unsupported or denied; handler wrapped so a throw never crashes the panel) + ONE import line in Cheffy.astro. Target Android Pixel + Chrome, NO iOS-specific path. Touch ONLY those 3 files; notifications dialogue node + trigger-permission action already exist -- do NOT re-author cheffy-dialogue.json or touch CheffyPanel.astro.\n\nPART 6 -- checklist-export-import: NEW src/utils/cheffyChecklist.ts registering 'export-checklist' -- JSON + Markdown export of the week's grocery checklist reusing GroceryList.astro's EXACT localStorage key + checked-set (single source of truth, no parallel key), plus a merge/overwrite IMPORT writing back to that same set (+ DOM reflect if GroceryList present) + minimal checklist-node option(s) in cheffy-dialogue.json if the import surface needs them + ONE import line in Cheffy.astro. Do NOT rework CheffyPanel.astro or GroceryList.astro's storage contract.\n\nDEFERRED to the next Director pass (NOT armed here): part 7 reduced-motion -- a cross-cutting CSS sweep across Cheffy.astro/CheffyPanel.astro that must land AFTER parts 5-6 so it covers their new interactive surfaces (and it also touches Cheffy.astro, so it cannot parallelize cleanly with them); part 9 pe-build-gate -- the final <Cheffy /> mount into Layout.astro + npm run build gate, MUST be last (after every interactive surface). Sequence next milestone: 7, then 9.\n\nDurable gate = npm run build (astro check then astro build); no test framework by design -- TEST rungs use ephemeral throwaway Node scripts. Standing CALLBOARD gate (DOM smoke harness) still UNANSWERED -- Director decided NOT to block parts 5-6 on it (same astro-check + cold-audit bar that carried part 4's handler); proceeding as-is. Do NOT duplicate that gate entry.",
+  "next_task": "cheffy_p7_reducedmotion_research",
+  "notes": "Milestone after parts 5 (local-notifications) + 6 (checklist-export-import) audit-passed. 7/9 criteria done. Director armed the FINAL two parts, SERIALIZED (not parallel): part 7 (reduced-motion) then part 9 (pe-build-gate). This closes the DoD.\n\nSEQUENCING (enforced by deps, not by trust): part 9's PLAN depends on cheffy_p7_reducedmotion_build, which is audit_required -- so part 9 cannot lease until part 7's build reaches done (= its cold audit PASSED). The coordinator walks the batch and simply won't make part 9 runnable until part 7 is audit-passed. Part 9 is therefore guaranteed LAST, after every interactive surface AND reduced-motion have landed and been audited. Do NOT hand-lease part 9 ahead of that gate.\n\nPART 7 -- reduced-motion (criterion: reduced-motion): full RESEARCH -> PLAN -> BUILD -> TEST chain, all LIGHT weight (this is a CSS-only sweep, not new behavior). A single cross-cutting @media (prefers-reduced-motion: reduce) treatment across BOTH src/components/Cheffy.astro AND src/components/CheffyPanel.astro that neutralizes every animation/transition now present after parts 2-6 (mascot idle -- part 2 already covers this one -- attention/notification-dot pulse, processing spinner, panel open/close, dialogue expression transitions, hover/focus). No layout shift, no hidden content: only motion stops; opacity/visibility state swaps stay functional. CSS-only -- touch ONLY the two components' <style> blocks; do NOT touch Layout.astro. BUILD is audit_required; AUDIT auto-enqueued by the builder. TEST = per-selector coverage inspection + npm run build green.\n\nPART 9 -- pe-build-gate (criterion: pe-build-gate): PLAN -> BUILD -> TEST (RESEARCH intentionally SKIPPED -- the mount contract is pinned by CHEFFY-SYSTEM.md + Layout.astro's existing structure; noted in the PLAN objective). The final <Cheffy /> mount into src/layouts/Layout.astro (import + render once at end-of-body) -- the single site-wide switch that turns Cheffy on. BUILD (standard, audit_required) touches ONLY Layout.astro; AUDIT auto-enqueued. TEST (standard) is the DURABLE DoD GATE: npm run build (astro check then astro build) green with zero errors, no console errors on any of the 28 pages, and master-parity with Cheffy JS disabled (progressive enhancement -- markup + deferred script only). A clean part-9 audit+test signs off the whole DoD; the Director will then post the PR proposal to CALLBOARD.\n\nDurable gate = npm run build (astro check then astro build); no test framework by design -- TEST rungs use ephemeral throwaway Node/manual verification, never a committed vitest/jest. Standing CALLBOARD gate (DOM smoke harness) remains UNANSWERED by the Producer -- the Director has nudged it to informational (its window closed: only a CSS sweep + the mount remain, no new interactive handlers). Do NOT block parts 7/9 on it and do NOT duplicate that board entry.",
   "strike_timestamp": null,
   "warm_set": [
     "troupe-director",

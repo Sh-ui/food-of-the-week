@@ -296,6 +296,258 @@
       "updated_at": "2026-07-01T13:10:06.847992Z",
       "weight": "light"
     },
+    "cheffy_p7_reducedmotion_build": {
+      "attempts": 0,
+      "audit": {
+        "attempts": 0,
+        "audit_of": null,
+        "auditor_job_id": null,
+        "last_verdict": null,
+        "max_attempts": 2,
+        "required": true,
+        "status": "pending"
+      },
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "on_block_or_risk"
+      },
+      "context_files": [
+        "src/components/Cheffy.astro",
+        "src/components/CheffyPanel.astro"
+      ],
+      "created_at": "2026-07-01T13:20:20.069571Z",
+      "criterion": "reduced-motion: prefers-reduced-motion honored across mascot/panel/animations; no layout shift.",
+      "cycle": {},
+      "depends_on": [
+        "cheffy_p7_reducedmotion_plan"
+      ],
+      "dispatch": "BUILD",
+      "failure_reason": null,
+      "id": "cheffy_p7_reducedmotion_build",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 1,
+      "not_before": null,
+      "objective": "Apply the part-7 reduced-motion CSS sweep per the Planner blueprint (auto-attached). CSS-only edit to the <style> blocks of BOTH src/components/Cheffy.astro AND src/components/CheffyPanel.astro -- you MUST touch both files -- adding/extending prefers-reduced-motion:reduce coverage for every animation/transition the blueprint lists (mascot idle, attention/notification-dot pulse, processing spinner, panel open/close, dialogue expression transitions, hover/focus transitions). No JS, no DOM/HTML changes, no new files, no edits to any other file (NOT Layout.astro -- that is part 9). Acceptance (checkable): every animated/transitioned selector across these two components has a reduced-motion neutralization; NO layout shift and NO hidden content under reduce (opacity/visibility state swaps stay functional, only motion stops -- do not introduce display:none/height:0/width:0); npm run build (astro check then astro build) passes clean; Cheffy still NOT mounted in Layout.astro; master-parity holds. Your contribution begins and ends at exactly these two files.",
+      "priority": 50,
+      "result_ref": null,
+      "resume_mode": "fresh",
+      "risk": [],
+      "status": "queued",
+      "title": "BUILD reduced-motion (part 7)",
+      "updated_at": "2026-07-01T13:20:20.069574Z",
+      "weight": "light"
+    },
+    "cheffy_p7_reducedmotion_plan": {
+      "attempts": 1,
+      "audit": null,
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "on_block_or_risk"
+      },
+      "context_files": [],
+      "created_at": "2026-07-01T13:20:10.979533Z",
+      "criterion": null,
+      "cycle": {},
+      "depends_on": [
+        "cheffy_p7_reducedmotion_research"
+      ],
+      "dispatch": "PLAN",
+      "failure_reason": null,
+      "id": "cheffy_p7_reducedmotion_plan",
+      "last_checkpoint_ref": null,
+      "lease": {
+        "expires_at": "2026-07-01T13:55:20.123704Z",
+        "heartbeat_at": "2026-07-01T13:25:20.123704Z",
+        "leased_at": "2026-07-01T13:25:20.123704Z",
+        "owner": "stage-manager-20260701T132520Z-pid34143"
+      },
+      "max_attempts": 1,
+      "not_before": null,
+      "objective": "Blueprint the ONE cross-cutting reduced-motion sweep for part 7. Scope: a single @media (prefers-reduced-motion: reduce) treatment spanning BOTH src/components/Cheffy.astro and src/components/CheffyPanel.astro that neutralizes EVERY animation/transition catalogued by the research note (auto-attached) -- mascot idle motion (confirm/extend part 2's existing block), notification-dot/attention pulse, processing spinner, panel open/close transition, dialogue expression transitions, any hover/focus transitions. Specify the EXACT selectors and EXACT declarations (animation:none / transition:none, or animation-duration:0.01ms per the reduce-not-remove pattern where an instant end-state is needed) so there is NO layout shift and NO content is hidden -- opacity/visibility state swaps stay instant and functional, only motion stops. CSS-only: no JS, no HTML/DOM changes, no new files. Boundary: touch ONLY the <style> blocks of these two components; do NOT edit Layout.astro (that is part 9). Keep it light -- this is a CSS sweep, not new behavior.",
+      "priority": 50,
+      "result_ref": null,
+      "resume_mode": "fresh",
+      "risk": [],
+      "status": "active",
+      "title": "PLAN reduced-motion (part 7)",
+      "updated_at": "2026-07-01T13:25:20.123704Z",
+      "weight": "light"
+    },
+    "cheffy_p7_reducedmotion_research": {
+      "attempts": 1,
+      "audit": null,
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "on_block_or_risk"
+      },
+      "context_files": [
+        "src/components/Cheffy.astro",
+        "src/components/CheffyPanel.astro",
+        "CHEFFY-SYSTEM.md"
+      ],
+      "created_at": "2026-07-01T13:19:59.717411Z",
+      "criterion": "reduced-motion: prefers-reduced-motion honored across mascot/panel/animations; no layout shift.",
+      "cycle": {},
+      "depends_on": [],
+      "dispatch": "RESEARCH",
+      "failure_reason": null,
+      "id": "cheffy_p7_reducedmotion_research",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 1,
+      "not_before": null,
+      "objective": "Assess + catalog reduced-motion coverage across the WHOLE Cheffy surface now that parts 2-6 have landed. Establish: (a) a COMPLETE inventory of every CSS @keyframes, animation, and transition in src/components/Cheffy.astro AND src/components/CheffyPanel.astro -- mascot idle motion, attention/notification-dot pulse, processing spinner, panel open/close transition, dialogue node/expression transitions, hover/focus transitions; (b) which of these are ALREADY inside a prefers-reduced-motion:reduce block (part 2 added one for idle motion ONLY) vs which are NEW/uncovered from parts 3-6; (c) the correct reduced-motion technique that removes motion WITHOUT layout shift (neutralize animation/transition but keep opacity/visibility state swaps instant and functional -- never collapse dimensions or hide content). Deliverable: a per-selector coverage table (covered vs to-cover) so the Planner can blueprint ONE cross-cutting sweep touching both files. Web-check current best practice only if the no-layout-shift pattern is unclear. Seam = the two components + the CHEFFY-SYSTEM.md reduced-motion acceptance bullet.",
+      "priority": 50,
+      "result_ref": "notes/cheffy_p7_reducedmotion_research.md",
+      "resume_mode": "fresh",
+      "risk": [],
+      "status": "done",
+      "title": "RESEARCH reduced-motion (part 7)",
+      "updated_at": "2026-07-01T13:25:02.759120Z",
+      "weight": "light"
+    },
+    "cheffy_p7_reducedmotion_test": {
+      "attempts": 0,
+      "audit": null,
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "on_block_or_risk"
+      },
+      "context_files": [
+        "src/components/Cheffy.astro",
+        "src/components/CheffyPanel.astro"
+      ],
+      "created_at": "2026-07-01T13:20:28.491405Z",
+      "criterion": null,
+      "cycle": {},
+      "depends_on": [
+        "cheffy_p7_reducedmotion_build"
+      ],
+      "dispatch": "TEST",
+      "failure_reason": null,
+      "id": "cheffy_p7_reducedmotion_test",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 1,
+      "not_before": null,
+      "objective": "Verify part-7 reduced-motion by inspection + build gate (no test framework -- ephemeral/manual verification only). Prove and report: (1) every CSS @keyframes/animation/transition present in src/components/Cheffy.astro AND src/components/CheffyPanel.astro is neutralized under a @media (prefers-reduced-motion: reduce) rule -- enumerate each animation:/transition:/@keyframes occurrence and match it to a reduce override; report any UNCOVERED animation; (2) no selector under reduce collapses layout or hides content (no display:none/height:0/width:0 introduced by the sweep -- motion-only removal, no layout shift); (3) npm run build (astro check then astro build) is green. Deliver the per-selector coverage result; if any animation is uncovered or any check fails, report it precisely for the audit -- do not paper over it.",
+      "priority": 50,
+      "result_ref": null,
+      "resume_mode": "fresh",
+      "risk": [],
+      "status": "queued",
+      "title": "TEST reduced-motion (part 7)",
+      "updated_at": "2026-07-01T13:20:28.491408Z",
+      "weight": "light"
+    },
+    "cheffy_p9_buildgate_build": {
+      "attempts": 0,
+      "audit": {
+        "attempts": 0,
+        "audit_of": null,
+        "auditor_job_id": null,
+        "last_verdict": null,
+        "max_attempts": 2,
+        "required": true,
+        "status": "pending"
+      },
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "after_each_step"
+      },
+      "context_files": [
+        "src/layouts/Layout.astro"
+      ],
+      "created_at": "2026-07-01T13:23:42.072180Z",
+      "criterion": "pe-build-gate: <Cheffy /> wired into Layout.astro; npm run build (astro check && astro build) passes; no console errors on any page; behaves exactly like master with Cheffy JS disabled.",
+      "cycle": {},
+      "depends_on": [
+        "cheffy_p9_buildgate_plan"
+      ],
+      "dispatch": "BUILD",
+      "failure_reason": null,
+      "id": "cheffy_p9_buildgate_build",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 2,
+      "not_before": null,
+      "objective": "Add the final <Cheffy /> mount to src/layouts/Layout.astro per the Planner blueprint (auto-attached) -- exactly TWO lines: import Cheffy from the components dir in the frontmatter + a single <Cheffy /> element at the blueprinted root-of-body position so it renders once on every page as a corner overlay. This is the DoD-closing pe-build-gate part; it MUST be the last interactive surface wired (reduced-motion, part 7, has already landed audit-passed). Touch ONLY Layout.astro; no rework of existing markup, no other file. Acceptance (checkable): (1) npm run build (astro check THEN astro build) passes clean across ALL pages; (2) <Cheffy /> renders on every page (index, weekend, every archive slug); (3) NO console errors on any page; (4) progressive-enhancement holds -- with Cheffy client JS disabled the site behaves exactly like master (mascot inert, no layout break, no thrown errors); (5) built static HTML is valid (Astro handles the island mount correctly, no stray unhydrated markup breaking static output). Your contribution begins and ends at Layout.astro. This build acceptance IS the whole-DoD acceptance gate -- verify the full site, not just the diff.",
+      "priority": 50,
+      "result_ref": null,
+      "resume_mode": "fresh",
+      "risk": [],
+      "status": "queued",
+      "title": "Part 9 pe-build-gate: mount <Cheffy /> into Layout.astro + final build gate",
+      "updated_at": "2026-07-01T13:23:42.072184Z",
+      "weight": "standard"
+    },
+    "cheffy_p9_buildgate_plan": {
+      "attempts": 0,
+      "audit": null,
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "on_block_or_risk"
+      },
+      "context_files": [
+        "src/layouts/Layout.astro"
+      ],
+      "created_at": "2026-07-01T13:23:28.356458Z",
+      "criterion": null,
+      "cycle": {},
+      "depends_on": [
+        "cheffy_p7_reducedmotion_build"
+      ],
+      "dispatch": "PLAN",
+      "failure_reason": null,
+      "id": "cheffy_p9_buildgate_plan",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 1,
+      "not_before": null,
+      "objective": "Blueprint the FINAL <Cheffy /> mount into src/layouts/Layout.astro (part 9, pe-build-gate) -- the DoD-closing part. RESEARCH rung intentionally SKIPPED: scope is a genuinely trivial two-line change (import of src/components/Cheffy.astro + a single <Cheffy /> element), no API/standard/seam discovery needed. Blueprint: (1) the exact import statement and where it goes in Layout.astro frontmatter; (2) the exact placement of the <Cheffy /> element in the layout tree -- it must render once on EVERY page as a fixed corner overlay, so place it at the root of <body> (e.g. just before the closing body tag or after the main slot/content), NOT inside a page-specific region; confirm it does not disturb existing DOM/layout flow. Boundary: Layout.astro ONLY, exactly two lines added (import + element); no rework of Layout existing markup, no other file (part 7 reduced-motion has already landed -- do not touch its files). State the acceptance the builder must hit: npm run build clean, Cheffy renders on every page, and with Cheffy JS disabled the site behaves exactly like master (progressive-enhancement).",
+      "priority": 50,
+      "result_ref": null,
+      "resume_mode": "fresh",
+      "risk": [],
+      "status": "queued",
+      "title": "Part 9 pe-build-gate: blueprint final Cheffy mount into Layout.astro",
+      "updated_at": "2026-07-01T13:23:28.356461Z",
+      "weight": "light"
+    },
+    "cheffy_p9_buildgate_test": {
+      "attempts": 0,
+      "audit": null,
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "on_block_or_risk"
+      },
+      "context_files": [
+        "src/layouts/Layout.astro"
+      ],
+      "created_at": "2026-07-01T13:23:54.212292Z",
+      "criterion": null,
+      "cycle": {},
+      "depends_on": [
+        "cheffy_p9_buildgate_build"
+      ],
+      "dispatch": "TEST",
+      "failure_reason": null,
+      "id": "cheffy_p9_buildgate_test",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 1,
+      "not_before": null,
+      "objective": "Verify part-9 pe-build-gate -- the final DoD gate -- by build + inspection (no test framework; ephemeral/manual verification + npm run build only). Prove and report: (1) npm run build (astro check then astro build) is green end-to-end; (2) <Cheffy /> is present in the built output of representative pages (index, weekend, one archive slug) -- the mount actually renders site-wide; (3) progressive-enhancement / master-parity: with Cheffy JS not executing, the rendered pages match master behavior -- no layout shift, no visible breakage, no console errors, no thrown exceptions on load; (4) confirm ONLY Layout.astro changed for this part (two lines). Deliver the build result + per-page render confirmation precisely; if any page errors, any console error appears, or parity breaks, report it exactly for the audit -- do not paper over it.",
+      "priority": 50,
+      "result_ref": null,
+      "resume_mode": "fresh",
+      "risk": [],
+      "status": "queued",
+      "title": "Part 9 pe-build-gate: verify final mount + full build gate",
+      "updated_at": "2026-07-01T13:23:54.212299Z",
+      "weight": "light"
+    },
     "job_20260630_230118_direct_bootstrap_decompose_dod": {
       "attempts": 1,
       "audit": null,
@@ -1354,7 +1606,17 @@
     "cheffy_p6_checklist_research",
     "cheffy_p6_checklist_plan",
     "cheffy_p6_checklist_build",
-    "cheffy_p6_checklist_test"
+    "cheffy_p6_checklist_test",
+    "cheffy_p7_reducedmotion_research",
+    "cheffy_p7_reducedmotion_plan",
+    "cheffy_p7_reducedmotion_build",
+    "cheffy_p7_reducedmotion_test",
+    "cheffy_p9_buildgate_plan",
+    "cheffy_p9_buildgate_plan",
+    "cheffy_p9_buildgate_build",
+    "cheffy_p9_buildgate_build",
+    "cheffy_p9_buildgate_test",
+    "cheffy_p9_buildgate_test"
   ],
   "policy": {
     "backoff_base_sec": 300,
@@ -1363,6 +1625,6 @@
     "heartbeat_timeout_sec": 900,
     "max_active": 1
   },
-  "updated_at": "2026-07-01T13:10:06.847997Z",
+  "updated_at": "2026-07-01T13:25:20.123855Z",
   "version": 1
 }
