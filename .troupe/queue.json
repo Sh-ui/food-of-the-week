@@ -297,12 +297,12 @@
       "weight": "light"
     },
     "cheffy_p7_reducedmotion_build": {
-      "attempts": 0,
+      "attempts": 2,
       "audit": {
-        "attempts": 0,
+        "attempts": 1,
         "audit_of": null,
-        "auditor_job_id": null,
-        "last_verdict": null,
+        "auditor_job_id": "job_20260701_135602_audit_audit_cheffy_p7_reducedmotion_build",
+        "last_verdict": "no_verdict",
         "max_attempts": 2,
         "required": true,
         "status": "pending"
@@ -330,12 +330,12 @@
       "not_before": null,
       "objective": "Apply the part-7 reduced-motion CSS sweep per the Planner blueprint (auto-attached). CSS-only edit to the <style> blocks of BOTH src/components/Cheffy.astro AND src/components/CheffyPanel.astro -- you MUST touch both files -- adding/extending prefers-reduced-motion:reduce coverage for every animation/transition the blueprint lists (mascot idle, attention/notification-dot pulse, processing spinner, panel open/close, dialogue expression transitions, hover/focus transitions). No JS, no DOM/HTML changes, no new files, no edits to any other file (NOT Layout.astro -- that is part 9). Acceptance (checkable): every animated/transitioned selector across these two components has a reduced-motion neutralization; NO layout shift and NO hidden content under reduce (opacity/visibility state swaps stay functional, only motion stops -- do not introduce display:none/height:0/width:0); npm run build (astro check then astro build) passes clean; Cheffy still NOT mounted in Layout.astro; master-parity holds. Your contribution begins and ends at exactly these two files.",
       "priority": 50,
-      "result_ref": null,
+      "result_ref": "5446c8e",
       "resume_mode": "fresh",
       "risk": [],
-      "status": "queued",
+      "status": "awaiting_audit",
       "title": "BUILD reduced-motion (part 7)",
-      "updated_at": "2026-07-01T13:20:20.069574Z",
+      "updated_at": "2026-07-01T13:56:02.552869Z",
       "weight": "light"
     },
     "cheffy_p7_reducedmotion_plan": {
@@ -356,22 +356,17 @@
       "failure_reason": null,
       "id": "cheffy_p7_reducedmotion_plan",
       "last_checkpoint_ref": null,
-      "lease": {
-        "expires_at": "2026-07-01T13:55:20.123704Z",
-        "heartbeat_at": "2026-07-01T13:25:20.123704Z",
-        "leased_at": "2026-07-01T13:25:20.123704Z",
-        "owner": "stage-manager-20260701T132520Z-pid34143"
-      },
+      "lease": null,
       "max_attempts": 1,
       "not_before": null,
       "objective": "Blueprint the ONE cross-cutting reduced-motion sweep for part 7. Scope: a single @media (prefers-reduced-motion: reduce) treatment spanning BOTH src/components/Cheffy.astro and src/components/CheffyPanel.astro that neutralizes EVERY animation/transition catalogued by the research note (auto-attached) -- mascot idle motion (confirm/extend part 2's existing block), notification-dot/attention pulse, processing spinner, panel open/close transition, dialogue expression transitions, any hover/focus transitions. Specify the EXACT selectors and EXACT declarations (animation:none / transition:none, or animation-duration:0.01ms per the reduce-not-remove pattern where an instant end-state is needed) so there is NO layout shift and NO content is hidden -- opacity/visibility state swaps stay instant and functional, only motion stops. CSS-only: no JS, no HTML/DOM changes, no new files. Boundary: touch ONLY the <style> blocks of these two components; do NOT edit Layout.astro (that is part 9). Keep it light -- this is a CSS sweep, not new behavior.",
       "priority": 50,
-      "result_ref": null,
+      "result_ref": "notes/cheffy_p7_reducedmotion_plan.md",
       "resume_mode": "fresh",
       "risk": [],
-      "status": "active",
+      "status": "done",
       "title": "PLAN reduced-motion (part 7)",
-      "updated_at": "2026-07-01T13:25:20.123704Z",
+      "updated_at": "2026-07-01T13:27:32.454393Z",
       "weight": "light"
     },
     "cheffy_p7_reducedmotion_research": {
@@ -862,6 +857,88 @@
       "status": "done",
       "title": "audit cheffy_p6_checklist_build",
       "updated_at": "2026-07-01T12:21:50.840640Z",
+      "weight": "standard"
+    },
+    "job_20260701_134929_audit_audit_cheffy_p7_reducedmotion_build": {
+      "attempts": 1,
+      "audit": {
+        "attempts": 0,
+        "audit_of": "cheffy_p7_reducedmotion_build",
+        "auditor_job_id": null,
+        "last_verdict": null,
+        "max_attempts": 1,
+        "required": false,
+        "status": "n/a"
+      },
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "after_each_step"
+      },
+      "context_files": [],
+      "created_at": "2026-07-01T13:49:29.955607Z",
+      "criterion": null,
+      "cycle": {
+        "injected": true
+      },
+      "depends_on": [],
+      "dispatch": "AUDIT",
+      "failure_reason": null,
+      "id": "job_20260701_134929_audit_audit_cheffy_p7_reducedmotion_build",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 2,
+      "not_before": null,
+      "objective": "Cold, isolated audit of cheffy_p7_reducedmotion_build: falsify the builder's claims against the DoD. See roles/audit.md.",
+      "priority": 49,
+      "result_ref": null,
+      "resume_mode": "fresh",
+      "risk": [
+        "audit_required"
+      ],
+      "status": "done",
+      "title": "audit cheffy_p7_reducedmotion_build",
+      "updated_at": "2026-07-01T13:56:12.793396Z",
+      "weight": "standard"
+    },
+    "job_20260701_135602_audit_audit_cheffy_p7_reducedmotion_build": {
+      "attempts": 0,
+      "audit": {
+        "attempts": 0,
+        "audit_of": "cheffy_p7_reducedmotion_build",
+        "auditor_job_id": null,
+        "last_verdict": null,
+        "max_attempts": 1,
+        "required": false,
+        "status": "n/a"
+      },
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "after_each_step"
+      },
+      "context_files": [],
+      "created_at": "2026-07-01T13:56:02.552945Z",
+      "criterion": null,
+      "cycle": {
+        "injected": true
+      },
+      "depends_on": [],
+      "dispatch": "AUDIT",
+      "failure_reason": null,
+      "id": "job_20260701_135602_audit_audit_cheffy_p7_reducedmotion_build",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 2,
+      "not_before": null,
+      "objective": "Cold, isolated audit of cheffy_p7_reducedmotion_build: falsify the builder's claims against the DoD. See roles/audit.md.",
+      "priority": 49,
+      "result_ref": null,
+      "resume_mode": "fresh",
+      "risk": [
+        "audit_required"
+      ],
+      "status": "queued",
+      "title": "audit cheffy_p7_reducedmotion_build",
+      "updated_at": "2026-07-01T13:56:02.552949Z",
       "weight": "standard"
     },
     "job_cheffy_calactions_build": {
@@ -1578,6 +1655,8 @@
     "job_20260701_040744_audit_audit_job_cheffy_readmesvg_build",
     "job_20260701_120106_audit_audit_cheffy_p5_notif_build",
     "job_20260701_121841_audit_audit_cheffy_p6_checklist_build",
+    "job_20260701_134929_audit_audit_cheffy_p7_reducedmotion_build",
+    "job_20260701_135602_audit_audit_cheffy_p7_reducedmotion_build",
     "job_20260630_230118_direct_bootstrap_decompose_dod",
     "job_cheffy_calendar_research",
     "job_cheffy_calendar_plan",
@@ -1625,6 +1704,6 @@
     "heartbeat_timeout_sec": 900,
     "max_active": 1
   },
-  "updated_at": "2026-07-01T13:25:20.123855Z",
+  "updated_at": "2026-07-01T13:56:12.793400Z",
   "version": 1
 }
