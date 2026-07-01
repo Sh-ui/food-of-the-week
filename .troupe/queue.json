@@ -1,5 +1,306 @@
 {
   "jobs": {
+    "cheffy_p5_notif_build": {
+      "attempts": 1,
+      "audit": {
+        "attempts": 0,
+        "audit_of": null,
+        "auditor_job_id": "job_20260701_120106_audit_audit_cheffy_p5_notif_build",
+        "last_verdict": "pass",
+        "max_attempts": 2,
+        "required": true,
+        "status": "pass"
+      },
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "after_each_step"
+      },
+      "context_files": [
+        "public/sw.js",
+        "src/components/Cheffy.astro",
+        "src/utils/cheffyCalendarActions.ts"
+      ],
+      "created_at": "2026-07-01T11:33:35.951728Z",
+      "criterion": "local-notifications: public/sw.js opt-in local reminders triggered only via the trigger-permission dialogue action; clean degradation on unsupported browsers.",
+      "cycle": {},
+      "depends_on": [
+        "cheffy_p5_notif_plan"
+      ],
+      "dispatch": "BUILD",
+      "failure_reason": null,
+      "id": "cheffy_p5_notif_build",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 2,
+      "not_before": null,
+      "objective": "Build the local-notifications part per the Planner blueprint (auto-attached). Deliver exactly three files: (1) implement public/sw.js -- real notificationclick focus/open of the week + any showNotification handling (replace the stub TODOs). (2) create src/utils/cheffyNotifications.ts registering a 'trigger-permission' handler via the order-safe window.registerCheffyAction pattern (copy the module-top register helper from src/utils/cheffyCalendarActions.ts): on invoke -> Notification.requestPermission() -> navigator.serviceWorker.register('/sw.js') -> schedule THIS week's cooking-time reminders read from the #cheffy-week-ics island already on the page; feature-detect Notification Triggers (TimestampTrigger) with a setTimeout-while-page-open fallback; clean no-op + in-panel message where unsupported or denied; wrap handler body so a throw is caught and never crashes the panel. Target Android Pixel + Chrome; no iOS-specific code. (3) append ONE bundled script importing ../utils/cheffyNotifications to Cheffy.astro's trailing script region, directly mirroring the cheffyCalendarActions import at lines 244-249. Acceptance (checkable): npm run build (astro check then astro build) passes clean; no console errors on any page; Cheffy still NOT mounted in Layout.astro; master-parity holds with Cheffy JS disabled (no behavior change vs master); CheffyPanel.astro and src/data/cheffy-dialogue.json remain byte-unchanged. Your contribution begins and ends at exactly these three files -- do not touch any others.",
+      "priority": 50,
+      "result_ref": "uncommitted diff: public/sw.js, src/components/Cheffy.astro (new script block), src/utils/cheffyNotifications.ts (new file); HEAD=836a8c8",
+      "resume_mode": "fresh",
+      "risk": [
+        "code_change"
+      ],
+      "status": "done",
+      "title": "BUILD local-notifications (part 5)",
+      "updated_at": "2026-07-01T12:03:34.651615Z",
+      "weight": "standard"
+    },
+    "cheffy_p5_notif_plan": {
+      "attempts": 1,
+      "audit": null,
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "after_each_step"
+      },
+      "context_files": [],
+      "created_at": "2026-07-01T11:33:20.200887Z",
+      "criterion": null,
+      "cycle": {},
+      "depends_on": [
+        "cheffy_p5_notif_research"
+      ],
+      "dispatch": "PLAN",
+      "failure_reason": null,
+      "id": "cheffy_p5_notif_plan",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 2,
+      "not_before": null,
+      "objective": "Blueprint ONLY the local-notifications part, on the research note. Design: (1) a NEW src/utils/cheffyNotifications.ts that registers a 'trigger-permission' handler on window.registerCheffyAction using the order-safe module-top pattern from src/utils/cheffyCalendarActions.ts; on invoke it requests Notification permission, registers /sw.js, and schedules reminders for THIS week's cooking times (reuse the #cheffy-week-ics island already emitted by Cheffy.astro -- do not recompute times client-side; note Buffer is a Node global unavailable in the client bundle, so keep all schedule math string/number-based). Feature-detect Notification Triggers (TimestampTrigger) with a setTimeout-while-page-open fallback, and a graceful in-panel 'not supported / permission denied' message that never throws and never blocks the panel. Target Android Pixel + Chrome; do NOT design an iOS-specific path. (2) the public/sw.js implementation: notificationclick -> focus/open the week; any showNotification handling. Mount = ONE bundled script that imports ../utils/cheffyNotifications, appended to Cheffy.astro's trailing script region, mirroring the cheffyCalendarActions import at lines 244-249. BOUNDARY -- touch ONLY: public/sw.js, new src/utils/cheffyNotifications.ts, src/components/Cheffy.astro (single import line). Do NOT edit CheffyPanel.astro or cheffy-dialogue.json (the notifications node + trigger-permission action already exist). Non-negotiables: npm run build (astro check then astro build) stays green; no console errors; Cheffy stays NOT mounted in Layout.astro; master-parity holds with Cheffy JS disabled. Write the build blueprint to your notes file for the builder.",
+      "priority": 50,
+      "result_ref": "notes/cheffy_p5_notif_plan.md",
+      "resume_mode": "fresh",
+      "risk": [],
+      "status": "done",
+      "title": "PLAN local-notifications (part 5)",
+      "updated_at": "2026-07-01T11:53:55.482941Z",
+      "weight": "standard"
+    },
+    "cheffy_p5_notif_research": {
+      "attempts": 1,
+      "audit": null,
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "on_block_or_risk"
+      },
+      "context_files": [
+        "public/sw.js",
+        "src/components/Cheffy.astro",
+        "src/utils/cheffyCalendarActions.ts",
+        "src/data/cheffy-dialogue.json",
+        "CHEFFY-SYSTEM.md"
+      ],
+      "created_at": "2026-07-01T11:31:35.310189Z",
+      "criterion": null,
+      "cycle": {},
+      "depends_on": [],
+      "dispatch": "RESEARCH",
+      "failure_reason": null,
+      "id": "cheffy_p5_notif_research",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 1,
+      "not_before": null,
+      "objective": "Establish grounded facts to build opt-in local cooking-time reminders. Research: (a) the browser flow -- navigator.serviceWorker.register('/sw.js'), Notification.requestPermission(), ServiceWorkerRegistration.showNotification(); (b) the Notification Triggers API (TimestampTrigger / showTrigger) -- current support (Chromium/Android/Pixel) + how to feature-detect it, PLUS the setTimeout-while-page-open fallback for browsers without it and a clean no-op path where unsupported (no Notification / no SW). Target is an Android Pixel + Chrome primarily; do NOT design any iOS-specific path. (c) the cooking-time data source ALREADY on the page: the #cheffy-week-ics JSON island built in Cheffy.astro carries per-week/per-meal ICS + times -- confirm whether to reuse it or add a small parallel times island (prefer reuse; note the exact fields available). Confirm the seam: register 'trigger-permission' via the SAME order-safe window.registerCheffyAction pattern used in src/utils/cheffyCalendarActions.ts, mounted by a SINGLE bundled import line appended to Cheffy.astro; the notifications dialogue node + trigger-permission action id ALREADY exist in cheffy-dialogue.json (do NOT re-author the tree). Deliverable: exact APIs, feature-detection code shape, the degradation matrix, and the times-data path the Planner will blueprint against.",
+      "priority": 50,
+      "result_ref": "notes/cheffy_p5_notif_research.md",
+      "resume_mode": "fresh",
+      "risk": [],
+      "status": "done",
+      "title": "RESEARCH local-notifications (part 5)",
+      "updated_at": "2026-07-01T11:48:48.714413Z",
+      "weight": "light"
+    },
+    "cheffy_p5_notif_test": {
+      "attempts": 1,
+      "audit": null,
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "on_block_or_risk"
+      },
+      "context_files": [
+        "public/sw.js",
+        "src/components/Cheffy.astro"
+      ],
+      "created_at": "2026-07-01T11:33:48.367969Z",
+      "criterion": null,
+      "cycle": {},
+      "depends_on": [
+        "cheffy_p5_notif_build"
+      ],
+      "dispatch": "TEST",
+      "failure_reason": null,
+      "id": "cheffy_p5_notif_test",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 1,
+      "not_before": null,
+      "objective": "Verify the local-notifications part. Durable gate: npm run build (astro check then astro build) MUST pass clean -- this is the only committed test bar (no test framework by design). Then ephemeral throwaway (uncommitted, scratchpad/Node) verification per repo convention: (a) assert src/utils/cheffyNotifications.ts registers 'trigger-permission' and that its feature-detection + degradation branches are structurally present (Notification-Triggers path, setTimeout fallback path, unsupported/denied no-op path) and the handler body is wrapped so a throw cannot escape; (b) assert public/sw.js is valid JS and handles notificationclick; (c) grep the built output (dist/) to confirm master-parity -- Cheffy is still not mounted, no cheffy markup leaks into built pages, expected behavior with JS disabled; (d) confirm no console errors surface in the build. Prove each claim explicitly and report pass/fail per claim. If the build or a claim fails, escalate test-fail -> BUILD per the default ascent ladder.",
+      "priority": 50,
+      "result_ref": "/private/tmp/claude-501/-Users-ianschuepbach/fe5730d1-b80d-454b-8a9e-38670fd2ee49/scratchpad/cheffy_p5_notif_build.log",
+      "resume_mode": "fresh",
+      "risk": [],
+      "status": "done",
+      "title": "TEST local-notifications (part 5)",
+      "updated_at": "2026-07-01T12:07:27.363580Z",
+      "weight": "light"
+    },
+    "cheffy_p6_checklist_build": {
+      "attempts": 0,
+      "audit": {
+        "attempts": 0,
+        "audit_of": null,
+        "auditor_job_id": null,
+        "last_verdict": null,
+        "max_attempts": 2,
+        "required": true,
+        "status": "pending"
+      },
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "after_each_step"
+      },
+      "context_files": [
+        "src/utils/cheffyChecklist.ts",
+        "src/components/GroceryList.astro",
+        "src/data/cheffy-dialogue.json",
+        "src/components/Cheffy.astro",
+        "src/utils/cheffyCalendarActions.ts"
+      ],
+      "created_at": "2026-07-01T11:34:27.604627Z",
+      "criterion": "checklist-export-import: JSON + Markdown export and import (merge/overwrite) reusing GroceryList.astro localStorage state.",
+      "cycle": {},
+      "depends_on": [
+        "cheffy_p6_checklist_plan",
+        "cheffy_p5_notif_build"
+      ],
+      "dispatch": "BUILD",
+      "failure_reason": null,
+      "id": "cheffy_p6_checklist_build",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 2,
+      "not_before": null,
+      "objective": "Build the checklist-export-import part per the Planner blueprint (auto-attached). This job is queue-gated behind the part-5 build so the shared Cheffy.astro import region is landed first -- append your import line BELOW part 5's, do not reorder or edit theirs. Deliver: (1) create src/utils/cheffyChecklist.ts registering an 'export-checklist' handler via the order-safe window.registerCheffyAction pattern (copy the register helper + blob-download from src/utils/cheffyCalendarActions.ts): JSON export + Markdown export of the current week's grocery checklist read from GroceryList.astro's EXACT localStorage key + checked-item set (single source of truth, no parallel key), and an IMPORT path with BOTH merge (union) and overwrite semantics that writes back into that same localStorage set and reflects into the live DOM if GroceryList is present (toggle checkboxes + classes) without reworking GroceryList's script; handler body wrapped so a throw cannot crash the panel. (2) if the import surface needs a dialogue affordance, add the MINIMAL option(s)/node to the existing checklist node in src/data/cheffy-dialogue.json only. (3) append ONE bundled script importing ../utils/cheffyChecklist to Cheffy.astro's trailing script region, mirroring the cheffyCalendarActions import. Acceptance (checkable): npm run build (astro check then astro build) passes clean; no console errors; Cheffy still NOT mounted in Layout.astro; master-parity with JS disabled; GroceryList.astro storage contract byte-unchanged; CheffyPanel.astro untouched. Contribution begins/ends at exactly these files.",
+      "priority": 50,
+      "result_ref": null,
+      "resume_mode": "fresh",
+      "risk": [
+        "code_change"
+      ],
+      "status": "queued",
+      "title": "BUILD checklist-export-import (part 6)",
+      "updated_at": "2026-07-01T11:34:27.604630Z",
+      "weight": "standard"
+    },
+    "cheffy_p6_checklist_plan": {
+      "attempts": 1,
+      "audit": null,
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "after_each_step"
+      },
+      "context_files": [],
+      "created_at": "2026-07-01T11:34:14.211070Z",
+      "criterion": null,
+      "cycle": {},
+      "depends_on": [
+        "cheffy_p6_checklist_research"
+      ],
+      "dispatch": "PLAN",
+      "failure_reason": null,
+      "id": "cheffy_p6_checklist_plan",
+      "last_checkpoint_ref": null,
+      "lease": {
+        "expires_at": "2026-07-01T13:11:03.691358Z",
+        "heartbeat_at": "2026-07-01T12:11:03.691358Z",
+        "leased_at": "2026-07-01T12:11:03.691358Z",
+        "owner": "stage-manager-20260701T121103Z-pid30931"
+      },
+      "max_attempts": 2,
+      "not_before": null,
+      "objective": "Blueprint ONLY the checklist-export-import part, on the research note. Design a NEW src/utils/cheffyChecklist.ts that registers an 'export-checklist' handler via the order-safe window.registerCheffyAction pattern (mirror src/utils/cheffyCalendarActions.ts) and delivers: (1) JSON export + Markdown export of the current week's grocery checklist, reading GroceryList.astro's EXACT localStorage key and checked-item set as the single source of truth (no parallel key), downloaded via the same blob-download approach cheffyCalendarActions.ts uses. (2) an IMPORT path supporting BOTH merge (union) and overwrite semantics, writing back into that same localStorage set and reflecting into the live DOM if GroceryList is present on the page (checkboxes + classes) without reworking GroceryList's own script. Specify the import surface concretely: if it needs a dialogue affordance, add the MINIMAL option(s)/node to the existing checklist node in src/data/cheffy-dialogue.json (this part MAY edit that file), reusing the input:true free-text node pattern for paste-based import. Mount = ONE bundled script importing ../utils/cheffyChecklist appended to Cheffy.astro's trailing script region (mirror lines 244-249). BOUNDARY -- touch ONLY: new src/utils/cheffyChecklist.ts, src/data/cheffy-dialogue.json (checklist node only, if needed), src/components/Cheffy.astro (single import line). Do NOT rework CheffyPanel.astro or GroceryList.astro's storage contract. Note for the builder: this build is queue-gated behind the part-5 build so the shared Cheffy.astro import region does not collide -- append your import line below part 5's. Non-negotiables: npm run build stays green; no console errors; Cheffy stays NOT mounted in Layout.astro; master-parity with JS disabled. Write the build blueprint to your notes file.",
+      "priority": 50,
+      "result_ref": null,
+      "resume_mode": "fresh",
+      "risk": [],
+      "status": "active",
+      "title": "PLAN checklist-export-import (part 6)",
+      "updated_at": "2026-07-01T12:11:03.691358Z",
+      "weight": "standard"
+    },
+    "cheffy_p6_checklist_research": {
+      "attempts": 1,
+      "audit": null,
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "on_block_or_risk"
+      },
+      "context_files": [
+        "src/components/GroceryList.astro",
+        "src/components/CheffyPanel.astro",
+        "src/components/Cheffy.astro",
+        "src/utils/cheffyCalendarActions.ts",
+        "src/data/cheffy-dialogue.json",
+        "CHEFFY-SYSTEM.md"
+      ],
+      "created_at": "2026-07-01T11:34:01.125865Z",
+      "criterion": null,
+      "cycle": {},
+      "depends_on": [],
+      "dispatch": "RESEARCH",
+      "failure_reason": null,
+      "id": "cheffy_p6_checklist_research",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 1,
+      "not_before": null,
+      "objective": "Establish grounded facts to build grocery checklist export + import. Research: (a) GroceryList.astro's localStorage contract EXACTLY -- the week-specific key derivation (see loadCheckedItems / saveCheckedItems / getItemKey around lines 44-63) and the stored value shape (a JSON array of checked item-keys, a Set serialized). Reuse this key + shape as the single source of truth; do NOT invent a parallel key. (b) how to enumerate the current week's grocery items and which are checked, to build a JSON export and a human-readable Markdown checklist export. (c) the import UX inside a NODE-BASED dialogue panel: CheffyPanel supports an input:true free-text node (see the 'search' node in cheffy-dialogue.json + how CheffyPanel's runtime reads it) -- decide paste-JSON/paste-Markdown vs a file input, and define merge-vs-overwrite semantics against the existing localStorage set (merge = union of checked keys; overwrite = replace). (d) the registration/mount seam: register 'export-checklist' via the SAME order-safe window.registerCheffyAction pattern as src/utils/cheffyCalendarActions.ts, mounted by a single bundled import appended to Cheffy.astro. NOTE the checklist dialogue node already exists with the export-checklist action; an import affordance may need a small option/node added to that checklist node in cheffy-dialogue.json (this part MAY touch cheffy-dialogue.json). Deliverable: exact localStorage key + value shape, the item-enumeration path, the two export formats, and the chosen import surface + merge semantics the Planner will blueprint against.",
+      "priority": 50,
+      "result_ref": "notes/cheffy_p6_checklist_research.md",
+      "resume_mode": "fresh",
+      "risk": [],
+      "status": "done",
+      "title": "RESEARCH checklist-export-import (part 6)",
+      "updated_at": "2026-07-01T12:10:27.595846Z",
+      "weight": "light"
+    },
+    "cheffy_p6_checklist_test": {
+      "attempts": 0,
+      "audit": null,
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "on_block_or_risk"
+      },
+      "context_files": [
+        "src/utils/cheffyChecklist.ts",
+        "src/components/GroceryList.astro",
+        "src/data/cheffy-dialogue.json",
+        "src/components/Cheffy.astro"
+      ],
+      "created_at": "2026-07-01T11:34:38.202659Z",
+      "criterion": null,
+      "cycle": {},
+      "depends_on": [
+        "cheffy_p6_checklist_build"
+      ],
+      "dispatch": "TEST",
+      "failure_reason": null,
+      "id": "cheffy_p6_checklist_test",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 1,
+      "not_before": null,
+      "objective": "Verify the checklist-export-import part. Durable gate: npm run build (astro check then astro build) MUST pass clean (only committed test bar; no framework by design). Then ephemeral throwaway (uncommitted, scratchpad/Node) verification per repo convention: (a) assert src/utils/cheffyChecklist.ts reads AND writes the SAME localStorage key that GroceryList.astro uses -- round-trip a fixture checked-set through export then import then read-back, and confirm BOTH merge (union with an existing set) and overwrite (replace) behave as specified; (b) assert the JSON export parses and the Markdown export is well-formed/human-readable; (c) assert 'export-checklist' is registered and the handler is wrapped so a throw cannot escape; (d) if cheffy-dialogue.json was edited, assert the tree still has no dangling goto ids and only the checklist node changed; (e) grep built output (dist/) for master-parity -- Cheffy still not mounted, no cheffy markup leaks, no console errors. Prove each claim explicitly, report pass/fail per claim. On any failure escalate test-fail -> BUILD per the default ascent ladder.",
+      "priority": 50,
+      "result_ref": null,
+      "resume_mode": "fresh",
+      "risk": [],
+      "status": "queued",
+      "title": "TEST checklist-export-import (part 6)",
+      "updated_at": "2026-07-01T11:34:38.202661Z",
+      "weight": "light"
+    },
     "job_20260630_230118_direct_bootstrap_decompose_dod": {
       "attempts": 1,
       "audit": null,
@@ -232,6 +533,47 @@
       "status": "done",
       "title": "audit job_cheffy_readmesvg_build",
       "updated_at": "2026-07-01T04:09:37.825544Z",
+      "weight": "standard"
+    },
+    "job_20260701_120106_audit_audit_cheffy_p5_notif_build": {
+      "attempts": 1,
+      "audit": {
+        "attempts": 0,
+        "audit_of": "cheffy_p5_notif_build",
+        "auditor_job_id": null,
+        "last_verdict": null,
+        "max_attempts": 1,
+        "required": false,
+        "status": "n/a"
+      },
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "after_each_step"
+      },
+      "context_files": [],
+      "created_at": "2026-07-01T12:01:06.139071Z",
+      "criterion": null,
+      "cycle": {
+        "injected": true
+      },
+      "depends_on": [],
+      "dispatch": "AUDIT",
+      "failure_reason": null,
+      "id": "job_20260701_120106_audit_audit_cheffy_p5_notif_build",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 2,
+      "not_before": null,
+      "objective": "Cold, isolated audit of cheffy_p5_notif_build: falsify the builder's claims against the DoD. See roles/audit.md.",
+      "priority": 49,
+      "result_ref": null,
+      "resume_mode": "fresh",
+      "risk": [
+        "audit_required"
+      ],
+      "status": "done",
+      "title": "audit cheffy_p5_notif_build",
+      "updated_at": "2026-07-01T12:03:52.543418Z",
       "weight": "standard"
     },
     "job_cheffy_calactions_build": {
@@ -946,6 +1288,7 @@
     "job_20260701_014758_audit_audit_job_cheffy_dialogue_build",
     "job_20260701_033305_audit_audit_job_cheffy_calactions_build",
     "job_20260701_040744_audit_audit_job_cheffy_readmesvg_build",
+    "job_20260701_120106_audit_audit_cheffy_p5_notif_build",
     "job_20260630_230118_direct_bootstrap_decompose_dod",
     "job_cheffy_calendar_research",
     "job_cheffy_calendar_plan",
@@ -965,7 +1308,16 @@
     "job_cheffy_calactions_test",
     "job_cheffy_readmesvg_plan",
     "job_cheffy_readmesvg_build",
-    "job_cheffy_readmesvg_test"
+    "job_cheffy_readmesvg_test",
+    "cheffy_p5_notif_research",
+    "cheffy_p5_notif_plan",
+    "cheffy_p5_notif_plan",
+    "cheffy_p5_notif_build",
+    "cheffy_p5_notif_test",
+    "cheffy_p6_checklist_research",
+    "cheffy_p6_checklist_plan",
+    "cheffy_p6_checklist_build",
+    "cheffy_p6_checklist_test"
   ],
   "policy": {
     "backoff_base_sec": 300,
@@ -974,6 +1326,6 @@
     "heartbeat_timeout_sec": 900,
     "max_active": 1
   },
-  "updated_at": "2026-07-01T11:20:49.345634Z",
+  "updated_at": "2026-07-01T12:11:03.691421Z",
   "version": 1
 }

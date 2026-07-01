@@ -1,26 +1,27 @@
 {
   "batch": [
-    "job_cheffy_calactions_plan",
-    "job_cheffy_calactions_build",
-    "job_cheffy_calactions_test",
-    "job_cheffy_readmesvg_plan",
-    "job_cheffy_readmesvg_build",
-    "job_cheffy_readmesvg_test"
+    "cheffy_p5_notif_research",
+    "cheffy_p5_notif_plan",
+    "cheffy_p5_notif_build",
+    "cheffy_p5_notif_test",
+    "cheffy_p6_checklist_research",
+    "cheffy_p6_checklist_plan",
+    "cheffy_p6_checklist_build",
+    "cheffy_p6_checklist_test"
   ],
   "context_files": [
-    "src/components/CheffyPanel.astro",
-    "src/utils/cheffyCalendar.ts",
-    "src/utils/cheffyDialogue.ts",
-    "src/pages/index.astro",
-    "src/pages/weekend.astro",
-    "src/pages/archive/[slug].astro",
     "src/components/Cheffy.astro",
+    "src/components/CheffyPanel.astro",
+    "src/components/GroceryList.astro",
+    "src/utils/cheffyCalendarActions.ts",
+    "src/data/cheffy-dialogue.json",
+    "public/sw.js",
     "CHEFFY-SYSTEM.md"
   ],
   "dispatch": "RESEARCH",
   "dispatch_rules": "default-ascent",
-  "next_task": "job_cheffy_calactions_research",
-  "notes": "Milestone after part 3/9 (dialogue-panel) audit-passed. Director armed TWO decoupled parts in parallel (zero shared files):\n\nPART 4 -- calendar-actions (RESEARCH -> PLAN -> BUILD -> TEST; AUDIT auto). PRIORITY of this batch: it consumes the audit-passed cheffyCalendar.ts engine (extractCookingEvents/buildIcs/googleCalendarUrl/deriveWeekStart) and registers a generate-ics handler + Google Calendar link into the part-3 action-dispatch registry (window.registerCheffyAction). It also ESTABLISHES the registration-mount pattern -- HOW a part's handler script gets onto the page WITHOUT touching CheffyPanel.astro, and HOW per-week CookingEvents reach the handler at runtime while <Cheffy /> is NOT yet mounted in Layout. That pattern is the precondition for parts 5 (local-notifications / trigger-permission) and 6 (checklist-export-import / export-checklist), which are DELIBERATELY HELD this milestone: all three register against the same untouched-panel seam, so fanning them out before the mount pattern exists risks collision on the mount point. Call sites for the data island: index.astro (FOOD-OF-THE-WEEK.md), weekend.astro (WEEKEND.md), archive/[slug].astro (filename prop). Boundary: no engine changes unless a real bug; do NOT mount Cheffy in Layout (part 9); do NOT touch sw.js / GroceryList.astro / notifications / checklist; MAY use the #cheffy processing hook during generation.\n\nPART 8 -- animated-readme-svg (PLAN -> BUILD -> TEST; AUDIT auto; RESEARCH intentionally skipped -- mascot SVG + expression groups already exist in Cheffy.astro from part 2, SMIL is a settled standard, no external unknowns). Fully independent: only src/assets/cheffy-animated.svg + README.md, zero code coupling with part 4 -- runs in parallel safely.\n\nREMAINING after this batch: local-notifications (5), checklist-export-import (6) -- next milestone, sequenced behind the part-4 mount pattern; reduced-motion (7) -- cross-cutting CSS sweep, best after all interactive surfaces land; pe-build-gate (9) -- final wiring of <Cheffy /> into Layout + npm run build gate, must be LAST. No test framework by design: ephemeral Node scripts + npm run build (astro check && astro build) are the durable gate. Open standing gate on CALLBOARD (DOM smoke harness) still UNANSWERED -- proceeding as-is; do not duplicate it.",
+  "next_task": "cheffy_p5_notif_research",
+  "notes": "Milestone after parts 4 (calendar-actions) + 8 (animated-readme-svg) audit-passed. 5/9 criteria done. Director armed the next batch: parts 5 (local-notifications) and 6 (checklist-export-import), each a full RESEARCH -> PLAN -> BUILD -> TEST chain (AUDIT auto-enqueued by the builder).\n\nPIPELINED PAIR, not a naive parallel pair. Both parts register a handler against the SAME untouched-panel action-dispatch seam established by parts 3/4 (window.registerCheffyAction) AND both must append a single bundled <script> import to the SAME trailing region of Cheffy.astro (mirroring the cheffyCalendarActions import at Cheffy.astro lines 244-249). That shared Cheffy.astro mount is a real file collision, so this is NOT zero-shared-files like the part-4/8 pair was. Guard: part 6's BUILD (cheffy_p6_checklist_build) depends on BOTH its own plan AND part 5's BUILD (cheffy_p5_notif_build, audit-passed) -- so the shared Cheffy.astro import edit is serialized (part 6 appends its import BELOW part 5's landed one). Part 6's RESEARCH + PLAN carry NO cross-dependency, so they run in whatever gap the part-5 chain leaves (the coordinator's batch walk falls through to runnable siblings on dep-wait).\n\nPART 5 -- local-notifications: implement public/sw.js (real notificationclick focus/open) + NEW src/utils/cheffyNotifications.ts registering 'trigger-permission' (permission -> SW register('/sw.js') -> schedule this week's cooking-time reminders from the existing #cheffy-week-ics island; Notification Triggers with a setTimeout fallback; clean no-op/degrade where unsupported or denied; handler wrapped so a throw never crashes the panel) + ONE import line in Cheffy.astro. Target Android Pixel + Chrome, NO iOS-specific path. Touch ONLY those 3 files; notifications dialogue node + trigger-permission action already exist -- do NOT re-author cheffy-dialogue.json or touch CheffyPanel.astro.\n\nPART 6 -- checklist-export-import: NEW src/utils/cheffyChecklist.ts registering 'export-checklist' -- JSON + Markdown export of the week's grocery checklist reusing GroceryList.astro's EXACT localStorage key + checked-set (single source of truth, no parallel key), plus a merge/overwrite IMPORT writing back to that same set (+ DOM reflect if GroceryList present) + minimal checklist-node option(s) in cheffy-dialogue.json if the import surface needs them + ONE import line in Cheffy.astro. Do NOT rework CheffyPanel.astro or GroceryList.astro's storage contract.\n\nDEFERRED to the next Director pass (NOT armed here): part 7 reduced-motion -- a cross-cutting CSS sweep across Cheffy.astro/CheffyPanel.astro that must land AFTER parts 5-6 so it covers their new interactive surfaces (and it also touches Cheffy.astro, so it cannot parallelize cleanly with them); part 9 pe-build-gate -- the final <Cheffy /> mount into Layout.astro + npm run build gate, MUST be last (after every interactive surface). Sequence next milestone: 7, then 9.\n\nDurable gate = npm run build (astro check then astro build); no test framework by design -- TEST rungs use ephemeral throwaway Node scripts. Standing CALLBOARD gate (DOM smoke harness) still UNANSWERED -- Director decided NOT to block parts 5-6 on it (same astro-check + cold-audit bar that carried part 4's handler); proceeding as-is. Do NOT duplicate that gate entry.",
   "strike_timestamp": null,
   "warm_set": [
     "troupe-director",
