@@ -1,228 +1,115 @@
 # Brief -- Cheffy module build (getting-cheffy branch)
 
 State-of-the-world orienting doc for the Director. Source: RESEARCH/PLAN/BUILD/TEST jots for
-parts 1-6 and 8 of 9, compressed and pruned after audit-pass at this Strike.
+all 9 parts, compressed and pruned after audit-pass at this Strike.
 
-## DoD progress: 7/9 criteria done
+## DoD progress: 9/9 criteria done -- DoD COMPLETE
 
-- **DONE -- calendar-engine**: `src/utils/cheffyCalendar.ts` (audit-passed, build-verified).
-- **DONE -- mascot-state-machine**: `src/components/Cheffy.astro` (audit-passed, build-verified).
-- **DONE -- dialogue-panel**: `src/components/CheffyPanel.astro` runtime + `src/data/cheffy-dialogue.json`
-  authored tree + `src/utils/cheffyDialogue.ts` (audit-passed, build-verified).
-- **DONE -- calendar-actions**: `src/utils/cheffyCalendarActions.ts` (new, 102 lines) registers
-  `generate-ics` into the part-3 action-dispatch registry; audit-passed, test-passed (22/22
-  assertions), `npm run build` clean, `CheffyPanel.astro` byte-unchanged per audit.
-- **DONE -- local-notifications**: `src/utils/cheffyNotifications.ts` (new) + `public/sw.js`
-  (real `notificationclick`) register `trigger-permission`; audit-passed, test-passed
-  (feature-detect + fallback + no-op paths all verified present, handler throw-safe, `npm run
-  build` clean, master-parity held).
-- **DONE -- checklist-export-import**: `src/utils/cheffyChecklist.ts` (new) registers
-  `export-checklist`/`import-checklist` (JSON + Markdown export, merge/overwrite import) against
-  GroceryList.astro's exact localStorage contract; `cheffy-dialogue.json` checklist node gained
-  one "Import checklist" option only; audit-passed, test-passed.
-- **DONE -- animated-readme-svg**: `src/assets/cheffy-animated.svg` (60-line SMIL demo loop,
-  8x `<animate>` on opacity/ry only, no external refs) embedded in `README.md` line 11;
-  audit-passed, test-passed (xmllint well-formed, build green).
-- 2 remaining, both `pending`: reduced-motion (cross-cutting CSS sweep, do after all interactive
-  surfaces land -- they now have), pe-build-gate (final `<Cheffy />` mount into Layout + `npm run
-  build` gate -- must be LAST, per prior process note).
+All nine CHEFFY-SYSTEM.md acceptance criteria are `done` in `state.json.dod_progress`
+(reconciled this Strike): calendar-engine, mascot-state-machine, dialogue-panel,
+calendar-actions, local-notifications, checklist-export-import, reduced-motion,
+animated-readme-svg, pe-build-gate. All 45 queue jobs (research/plan/build/test/audit across
+9 parts + bootstrap decompose) are `status: done`, 0 queued/active/blocked/failed. Nothing
+left to arm on this DoD. `production_active` is left `true` in `state.json` -- flip is a
+Director sign-off decision, not unilaterally taken by Strike; the next Director pass should
+review and close out (PR proposal already flagged on CALLBOARD by the prior Strike).
 
-## What shipped in part 1 (calendar-engine)
+## What shipped in part 7 (reduced-motion) -- closed this Strike
 
-`src/utils/cheffyCalendar.ts` implements, pure/dependency-free (only `marked`, already a
-runtime dep -- no new deps, no test framework):
+- CSS-only sweep, `Cheffy.astro`'s `<style>` block ONLY. Research (full-file reads +
+  repo-wide grep) found the entire Cheffy motion surface is exactly one animation
+  (`@keyframes cheffy-blink`, idle eye `transform: scaleY()`), already correctly gated by
+  its own `@media (prefers-reduced-motion: no-preference)` block -- left byte-for-byte
+  untouched. Everything else in the OBJECTIVE (dot pulse, processing spinner, panel
+  open/close transition, dialogue/expression transitions, hover/focus transitions) does not
+  exist in code -- those are all instant `display`/`hidden` state flips, nothing to
+  neutralize.
+- Added ONE defensive cross-cutting guard at the end of the `<style>` block: `@media
+  (prefers-reduced-motion: reduce) { #cheffy, #cheffy * { animation-duration: 0.01ms
+  !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms
+  !important; } }` -- "reduce, not remove" pattern (state swaps stay functional, only
+  motion stops), scoped to `#cheffy` so it never reaches the rest of the page.
+  `CheffyPanel.astro` untouched (no `<style>` block, no motion). `Layout.astro` untouched
+  (that's part 9). Audit-passed, build-verified.
 
-- `extractCookingEvents(markdown: string, weekStart: Date): CookingEvent[]` -- self-contained
-  markdown lexing via `marked.lexer()` (does NOT import `weekParser.ts` -- a local `slugify` is
-  inlined instead, specifically so the file has zero relative imports and can be `import`ed
-  directly by Node's native TS-stripping runtime in a no-framework test script). Walks H2 meals
-  (skips first H2 = grocery list), scans the H6 quickRead line first, then prose, then a
-  "dinner time" semantic fallback, for clock times. Bare `H:MM` with no AM/PM defaults to PM
-  (dinner-prep app convention).
-- `buildIcs(events: CookingEvent[]): string` -- hand-rolled RFC 5545 VCALENDAR/VEVENT, CRLF line
-  endings, 75-octet line folding, text escaping, UTC `Z` datetimes only (no VTIMEZONE/TZID).
-  Works for both add-all (whole list) and per-recipe mini export (single-event array) via the
-  same function.
-- `googleCalendarUrl(event: CookingEvent): string` -- `calendar.google.com/calendar/render`
-  template URL, shares the same `toIcsUtc()` formatter as `buildIcs` (single source of truth for
-  date formatting).
-- `deriveWeekStart(markdown, filename?): Date | null` -- exported pure helper (beyond the 3
-  stubbed exports), title-first then archive-filename-prefix fallback. Needed by the
-  calendar-actions part that wires this into the pages.
+## What shipped in part 9 (pe-build-gate) -- closed this Strike, DoD-closing part
 
-## What shipped in part 2 (mascot-state-machine)
+- Exactly two lines added to `src/layouts/Layout.astro`: the `Cheffy` import grouped with
+  the existing frontmatter imports, and `<Cheffy />` placed as the last child of `<body>`
+  (root level, sibling of `<slot />`, not nested in page content) -- one mount per page via
+  the shared Layout. Bare `<Cheffy />` is correct: all three component props
+  (`enabled`/`corner`/`filename`) are optional with working defaults, no prop threading
+  needed from Layout.
+- `npm run build` (`astro check && astro build`) confirmed clean: 0 errors/0 warnings/0
+  hints across 32 files checked, 28 pages built. Master-parity held -- the mount is inert
+  without JS, no existing markup restyled (Cheffy's CSS is fully scoped to
+  `.cheffy-*`/`#cheffy`), no `<head>` changes.
+- This was the final DoD-closing action -- all 9 CHEFFY-SYSTEM.md criteria now `done`.
 
-`src/components/Cheffy.astro` replaces the stub with:
+## What shipped earlier (parts 1-6, 8) -- summary retained from prior Strikes
 
-- A real corner chef-hat SVG mascot with NAMED eye/mouth/notification-dot parts, using brand
-  color tokens; expressions swap purely via CSS keyed on `data-state`/`data-expression`.
-- The explicit state machine -- exactly one of `idle`, `attention`, `dialogue`, `processing` on
-  `#cheffy[data-state]`. `processing` is a documented no-op hook for later parts
-  (calendar-actions, local-notifications) to flip -- part 2 does not trigger it itself.
-- `visitedWeeks` localStorage logic keyed off `deriveWeekId`, which reuses the SAME slug rule as
-  `GroceryList.astro` (page H1 lowercased, spaces to hyphens) -- no parallel week-identity
-  namespace introduced. First sight of a new week enters `attention` + notification dot; opening
-  or dismissing the panel marks the week visited and returns to `idle`.
-- Toggle button opens/closes `#cheffy-panel` (sets `aria-expanded`, toggles `hidden`) = the
-  `dialogue` state -- this is ONLY visibility wiring; the dialogue node tree/nav/search
-  (part 3, dialogue-panel) is untouched.
-- Pure helper `src/utils/cheffyState.ts` (zero relative imports, same pattern as part 1) exports
-  `deriveWeekId` + the `visitedWeeks` decision helpers, verified by an ephemeral Node script
-  against a real week H1.
-- `prefers-reduced-motion` disables idle motion with no layout shift.
-- Confirmed intact: `Cheffy` is still NOT mounted in `Layout.astro` (deferred to the final
-  pe-build-gate part) -- site behaves exactly like master.
+- **Part 1 (calendar-engine)**: `src/utils/cheffyCalendar.ts` -- pure, zero-relative-import,
+  markdown-lexing time extraction (`extractCookingEvents`), hand-rolled RFC 5545 ICS builder
+  (`buildIcs`, add-all + per-recipe mini via the same fn), Google Calendar template URL
+  (`googleCalendarUrl`), `deriveWeekStart` helper. No new deps beyond `marked` (already a
+  runtime dep).
+- **Part 2 (mascot-state-machine)**: `src/components/Cheffy.astro` -- corner chef-hat SVG
+  with CSS-driven expression swaps, explicit `idle/attention/dialogue/processing` state
+  machine on `#cheffy[data-state]` (`processing` a documented no-op hook for later parts),
+  `visitedWeeks` localStorage keyed off `deriveWeekId` (reuses `GroceryList.astro`'s exact
+  slug rule). Pure helper `src/utils/cheffyState.ts` for weekId/visitedWeeks logic.
+- **Part 3 (dialogue-panel)**: `src/utils/cheffyDialogue.ts` (pure tree-traversal/search
+  helpers) + `src/data/cheffy-dialogue.json` (authored tree, no dangling gotos) +
+  `CheffyPanel.astro` became the client runtime (build-time archive index island, node
+  rendering, goto nav, free-text search, and the `window.registerCheffyAction` dispatch
+  registry seam that parts 4-6 plug into without reworking the panel).
+- **Part 4 (calendar-actions)**: `src/utils/cheffyCalendarActions.ts` (new, 102 lines) wires
+  the part-1 engine into `generate-ics` (add-all download, per-recipe mini export, Google
+  Calendar link) via the registry seam. Per-week `CookingEvent` data reaches it via a
+  build-time data island on each page.
+- **Part 5 (local-notifications)**: `src/utils/cheffyNotifications.ts` registers
+  `trigger-permission` (self-contained, does NOT import `cheffyCalendar.ts` which uses
+  `Buffer`); parses `DTSTART` directly from the existing `#cheffy-week-ics` island rather
+  than adding a new island field. Feature-detects Notification Triggers (found effectively
+  dead in target browsers) with a `setTimeout` fallback, clean no-op on unsupported/denied,
+  whole handler try/catch-wrapped. `public/sw.js` gained a real `notificationclick`
+  (focus-existing-tab via `clients.matchAll`, fallback `clients.openWindow`).
+- **Part 6 (checklist-export-import)**: `src/utils/cheffyChecklist.ts` registers
+  `export-checklist` (JSON + Markdown Blob downloads) and `import-checklist`
+  (paste-based, merge/overwrite), reproducing `GroceryList.astro`'s exact localStorage
+  contract (key `grocery-list-${slugifyWeekTitle}`, `Set` of
+  `${category}::${index}::${item}` strings). Import UI is a dynamically-appended
+  textarea + buttons (not wired through the dialogue's `input:true` node) to avoid editing
+  `CheffyPanel.astro`.
+- **Part 8 (animated-readme-svg)**: `src/assets/cheffy-animated.svg` -- 60-line SMIL demo
+  loop reusing part 2's expression groups, 8 `<animate>` on `opacity`/`ry` only (no external
+  refs), embedded in `README.md` line 11. Fully decoupled from the rest of Cheffy -- no
+  site-behavior/build-gate impact.
 
-Both parts verified via ephemeral (uncommitted) Node scripts, not a committed test framework --
-`npm run build` remains the only durable gate per the DoD's acceptance bar.
+All parts audit-passed and build-verified (`npm run build` clean throughout); no committed
+test framework in this repo by design -- TEST rungs used ephemeral, uncommitted Node
+verification scripts, with `npm run build` as the durable pass/fail gate per
+CHEFFY-SYSTEM.md's acceptance bar.
 
-## What shipped in part 3 (dialogue-panel)
+## Open items for the Producer / next Director pass
 
-- `src/utils/cheffyDialogue.ts` -- NEW pure, zero-relative-import util (mirrors
-  `cheffyState.ts`/`cheffyCalendar.ts`): `getNode`, `findDanglingGotos`, `usedActions`,
-  `matchArchive`, `bestArchiveMatch`, plus the 5-value `VALID_ACTIONS` const
-  (`generate-ics`/`trigger-permission`/`navigate-to-archive`/`export-checklist`/`close`).
-  Verified by an ephemeral Node TEST script (dangling-goto check, action-coverage check,
-  search-match fixtures).
-- `src/data/cheffy-dialogue.json` -- fleshed into the real authored tree (root -> calendar/
-  notifications/checklist/search/close), no dangling goto ids; expressions limited to
-  `neutral|excited|thinking` only (the SVG has no `sleepy` group).
-- `src/components/CheffyPanel.astro` -- became the client-side dialogue RUNTIME: build-time
-  archive index (reuses `parseWeekPlan`, same pattern as `archive/[slug].astro`, slug =
-  filename stem not a re-slugified title) inlined as a JSON data island; a bundled `<script>`
-  does node rendering/goto navigation, free-text search -> `navigate-to-archive`, and an
-  idempotent `window.cheffyActions` / `window.registerCheffyAction` dispatch registry with a
-  graceful "coming soon" default -- this is the documented seam parts 4/5/6 (calendar-actions,
-  local-notifications, checklist-export-import) plug their handlers into WITHOUT reworking the
-  panel. This part registers only the two pure-navigation actions it owns: `close` (reuses the
-  part-2 toggle/closePanel path) and `navigate-to-archive`.
-- `src/components/Cheffy.astro` -- CSS-only additive edit: a `data-expr-override` style block
-  so the dialogue runtime can drive per-node mascot expression without touching part-2 JS or
-  the `idle/attention/dialogue/processing` state machine itself.
-- Part-2 open/close/state behavior confirmed unchanged; `Cheffy` still NOT mounted in
-  `Layout.astro` (deferred to the final pe-build-gate part).
-
-## What shipped in part 4 (calendar-actions)
-
-- `src/utils/cheffyCalendarActions.ts` -- NEW file (102 lines), the wiring layer that consumes
-  the audit-passed `cheffyCalendar.ts` engine (`extractCookingEvents`/`buildIcs`/
-  `googleCalendarUrl`/`deriveWeekStart`) and registers a `generate-ics` handler via
-  `window.registerCheffyAction`, established as the registration-mount pattern for later parts.
-  Delivers: add-all `.ics` download of the whole week's `CookingEvent[]`, a per-recipe mini
-  single-event `.ics` export, and a Google Calendar template link opening in a new tab.
-- Per-week `CookingEvent` data reaches the handler via a build-time data island on each page
-  (`index.astro`/`weekend.astro`/`archive/[slug].astro`), per the planner's data-path -- did NOT
-  edit `CheffyPanel.astro`.
-- `src/components/Cheffy.astro` -- small additive edit (part of the same diff) plus a
-  `src/data/cheffy-dialogue.json` tweak (4 lines) to route the calendar node's action id.
-- Confirmed: `sw.js`/`GroceryList.astro`/notifications/checklist untouched; `Cheffy` still NOT
-  mounted in `Layout.astro`; master-parity held (no `cheffy` string in any built page).
-
-## What shipped in part 8 (animated-readme-svg)
-
-- `src/assets/cheffy-animated.svg` -- new 60-line SMIL demo loop reusing the mascot's expression
-  groups from part 2's `Cheffy.astro`; all 8 `<animate>` elements target `opacity`/`ry` on their
-  own parent element only (no `animateTransform`/`set`, no `href`/`xlink`/`url()` external refs).
-  Verified well-formed via `xmllint`.
-- `README.md` -- embeds the SVG via `<img src="src/assets/cheffy-animated.svg">` at line 11.
-- Fully independent of all other parts (zero code coupling); the SVG is unreferenced by any
-  `.astro` component, so no site-behavior/build-gate change -- 28 pages still build clean.
-
-## What shipped in part 5 (local-notifications)
-
-- `src/utils/cheffyNotifications.ts` -- NEW client action module, registers
-  `trigger-permission` via the order-safe `window.registerCheffyAction` seam (module-top shim
-  copied verbatim from `cheffyCalendarActions.ts`, self-contained -- does NOT import
-  `cheffyCalendar.ts`, which uses `Buffer`, a Node global unavailable client-side). Recovers cook
-  timestamps by parsing `DTSTART:YYYYMMDDTHHMMSSZ` directly out of the existing
-  `#cheffy-week-ics` island's `meals[].ics` strings (regex, string/number-only math) rather than
-  adding a new island field -- kept the island shape untouched (boundary constraint). Feature-
-  detects Notification Triggers (`'showTrigger' in Notification.prototype`) -- research found
-  this API effectively dead/unshipped in target browsers -- with a `setTimeout`-while-page-open
-  fallback, plus clean no-op branches for unsupported/denied. Whole handler wrapped in one
-  try/catch that cannot let a throw escape.
-- `public/sw.js` -- real `notificationclick`: closes the notification, focuses an existing tab
-  via `clients.matchAll`, falls back to `clients.openWindow`.
-- `src/components/Cheffy.astro` -- one new bundled `<script>` import line only (mirrors the
-  part-4 import block).
-
-## What shipped in part 6 (checklist-export-import)
-
-- `src/utils/cheffyChecklist.ts` -- NEW client action module, registers `export-checklist`
-  (JSON export + Markdown export of the current week's checked-item set, each as a Blob
-  download) and `import-checklist` (paste-based, merge/overwrite semantics). Reproduces
-  `GroceryList.astro`'s EXACT localStorage contract: key
-  `` `grocery-list-${slugifyWeekTitle(h1Text)}` `` (via the already-blessed pure
-  `cheffyState.ts` helper, safe to import client-side), value = flat JSON array of
-  `` `${category}::${index}::${item}` `` strings wrapped in a `Set`. No parallel key, no richer
-  value shape. Enumerates checked items by reading the live DOM (`.grocery-checkbox` +
-  `.locally-checked`), since no data island exists for grocery items.
-- **Divergence from research, deliberate**: import UI is NOT wired through the dialogue node's
-  `input:true` free-text box (would have required editing `CheffyPanel.astro`'s `renderNode()`,
-  out of bounds). Instead `import-checklist`'s handler dynamically appends a `<textarea>` +
-  Merge/Overwrite buttons into `ctx.panel.querySelector('.cheffy-node')`, mirroring the
-  `generate-ics-meal` button-list pattern from `cheffyCalendarActions.ts`. Zero
-  `CheffyPanel.astro` edits.
-- `src/data/cheffy-dialogue.json` -- checklist node gained one "Import checklist" option only
-  (plus a non-functional `_actions` comment update); no dangling goto ids introduced.
-- `src/components/Cheffy.astro` -- one new bundled `<script>` import line, appended after part
-  5's block.
-
-## Open decision surfaced for the Producer (unresolved, see CALLBOARD)
-
-- Whether to add a light DOM smoke-test harness (happy-dom/Playwright) now that the panel has
-  real interactive nav/search/action-dispatch logic with only `astro check` + manual audit
-  coverage. Parts 5-6 landed on the same bar as parts 4/8 (no harness added) per the Director's
-  prior no-block decision. Only pe-build-gate (mount) and reduced-motion (CSS-only) remain, so
-  this window is effectively closed -- flag to Producer as informational, not still "last
-  window."
-
-## Open GAPs/decisions surfaced for later parts (not blocking, but relevant)
-
-- **cheffyCalendar signature kept as raw markdown + Date**, not the parsed `ContentSection[]`
-  research floated -- the calendar-actions wiring part must `fs.readFileSync` the same file each
-  page already passes to `parseWeekPlan(filename)` and call
-  `extractCookingEvents(raw, deriveWeekStart(raw, filename) ?? <fallback>)`. Call sites:
-  `src/pages/index.astro` (default `FOOD-OF-THE-WEEK.md`), `src/pages/weekend.astro`
-  (`WEEKEND.md`), `src/pages/archive/[slug].astro` (`filename` prop).
-- No timezone data exists anywhere in source content -- all clock times assumed local
-  build/runtime timezone (accepted as fine for a single-household app).
-- One archive file (`archive/20250105-bison-chicken-sausage.md`) has a filename/H1-title year
-  mismatch; `deriveWeekStart` resolves title-wins per that file's likely-correct authored intent.
-- VALARM reminders and DESCRIPTION fields are optional nice-to-haves, not built -- only relevant
-  if local-notifications or calendar-actions parts want a "before" reminder later.
-- `processing` state on `#cheffy` is a live hook, unused so far -- calendar-actions and
-  local-notifications are the expected next consumers.
-- `cheffyState.ts` (weekId + visitedWeeks helpers), `cheffyCalendar.ts` (time/ICS helpers), and
-  now `cheffyDialogue.ts` (tree traversal + search) are the three pure, zero-relative-import
-  utils established so far; later parts should follow the same seam pattern (importable,
-  no-framework-testable) where practical.
-- **The action-dispatch registry is the real integration seam for parts 4/5/6**: register a
-  handler via `window.registerCheffyAction(name, fn)` where `name` is one of
-  `generate-ics`/`trigger-permission`/`export-checklist`; the handler receives
-  `{ root, panel, dialogue, nodeId, index, slug?, query?, setState, renderNode, close }`. Do NOT
-  rework `CheffyPanel.astro` to add these -- register from each part's own new/existing file
-  (e.g. `cheffyCalendar.ts` or a small init script) so the panel stays untouched by parts 4-6.
-  Errors thrown inside a registered handler are caught and logged, never crash the panel.
+- **DOM smoke-test harness (happy-dom/Playwright) for the interactive panel** -- raised by a
+  prior Strike, still unanswered by the Producer. The window it was raised for (more
+  handlers stacking onto the panel) is now closed since the DoD is complete; a "yes" today
+  would open a separate post-DoD test-infra follow-up, not a gate on shipping. Still on
+  CALLBOARD as a `gate` entry pending a reply -- not pruned (unresolved, Strike does not
+  unilaterally resolve Producer gates).
+- **PR proposal**: DoD is complete; the next Director pass should review the 9/9 sign-off
+  and decide on `production_active` + PR out of `getting-cheffy`.
+- No `.troupe/metrics.jsonl` telemetry file has ever existed on this project --
+  `state.json.aggregates` remain at zero across every Strike; nothing to recompute.
 
 ## Process notes
 
-- DoD is decomposed into 9 hexagonal parts (1 per criterion), armed one at a time via
-  `next_assignment.json`; this Strike closes parts 5 (local-notifications) and 6
-  (checklist-export-import), the two-part batch the Director armed queue-gated in sequence (part
-  6's Cheffy.astro import appended below part 5's, shared-file conflict avoided by ordering, not
-  parallelism). Director re-arms next -- only 2 criteria remain: **reduced-motion** (cross-cutting
-  CSS sweep, now safe since all interactive surfaces -- mascot/panel/calendar/notifications/
-  checklist -- are landed) and **pe-build-gate** (final `<Cheffy />` mount into `Layout.astro` +
-  `npm run build` gate, which per the established process note MUST run last, i.e. after
-  reduced-motion). Suggested next arm: reduced-motion, then pe-build-gate to close the DoD.
-- No test framework in this repo by design -- TEST rungs use ephemeral throwaway verification
-  scripts (scratchpad/Node, not committed, not vitest/jest), with `npm run build` as the durable
-  pass/fail gate per CHEFFY-SYSTEM.md's acceptance bar.
-- No `.troupe/metrics.jsonl` telemetry file exists yet -- `state.json.aggregates` remain at zero;
-  nothing to recompute this Strike.
-- Standing CALLBOARD gate (DOM smoke harness) is still unanswered by the Producer as of this
-  Strike -- left in place per the board's "only prune Producer-acted-on entries" rule. Note for
-  the Director: the window it was raised for (parts 5-6 stacking more handlers) has now closed
-  with only reduced-motion (CSS) and pe-build-gate (mount) left, so it may be moot going
-  forward -- worth a nudge to the Producer, not a unilateral prune.
+- DoD was decomposed into 9 hexagonal parts (1 per criterion), armed serially via
+  `next_assignment.json`, audited individually. `pe-build-gate` (part 9) was correctly
+  sequenced LAST, after `reduced-motion` (part 7), per the process constraint carried
+  through every prior brief.
+- Working tree at this Strike: `.troupe/queue.json` (job-status writes from the p7/p9
+  rungs) plus `src/data/lunch-history.json`/`src/data/lunch-week.json` (unrelated, routine
+  weekly-content-generator churn, not Cheffy) are the only diffs against the last commit.

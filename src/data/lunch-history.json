@@ -1,7 +1,7 @@
 {
   "_comment": "AUTO-GENERATED audit trail (deterministic replay from lunch-config.startDate). Not an input — safe to delete; it is rebuilt every run.",
   "startDate": "2026-06-28",
-  "updatedAt": "2026-07-01T13:55:29.875Z",
+  "updatedAt": "2026-07-01T16:41:22.108Z",
   "weeks": [
     {
       "weekStart": "2026-06-28",

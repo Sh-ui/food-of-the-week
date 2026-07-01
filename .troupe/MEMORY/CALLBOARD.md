@@ -11,5 +11,5 @@ Async, non-blocking notice board (the backstage callboard). The Stage Manager an
 - No nested bullets, no headers per entry, no restating context. Link out, don't inline.
 - **Prune on action:** once the Producer acts on an entry, delete it. The board stays short.
 
-- [2026-07-01 fyi] Cheffy 7/9 done. Final two parts armed serialized: p7 reduced-motion (CSS sweep, both components) then p9 pe-build-gate (mount + `npm run build` gate, runs last, dep-gated on p7 audit-pass). DoD sign-off + PR proposal come on the next Director pass.
-- [2026-07-01 gate] DOM smoke-harness (happy-dom/Playwright) for the interactive panel still unanswered. Its window has now CLOSED -- only a CSS sweep (p7) + the mount (p9) remain, no new handlers. A "yes" now = a separate post-DoD test-infra follow-up, not a gate on shipping. Reply yes to open that follow-up; else this drops at sign-off.
+- [2026-07-01 fyi] Cheffy 9/9 done -- DoD complete (p7 reduced-motion + p9 pe-build-gate closed this Strike; `npm run build` clean, master-parity held). Awaiting Director sign-off pass + PR proposal.
+- [2026-07-01 gate] DOM smoke-harness (happy-dom/Playwright) for the interactive panel still unanswered. DoD is now complete with no committed test framework, so a "yes" = a separate post-DoD test-infra follow-up, not a gate on shipping. Reply yes to open that follow-up; else this drops at sign-off.

@@ -302,10 +302,10 @@
         "attempts": 1,
         "audit_of": null,
         "auditor_job_id": "job_20260701_135602_audit_audit_cheffy_p7_reducedmotion_build",
-        "last_verdict": "no_verdict",
+        "last_verdict": "pass",
         "max_attempts": 2,
         "required": true,
-        "status": "pending"
+        "status": "pass"
       },
       "blocked_reason": null,
       "budget": {
@@ -333,9 +333,9 @@
       "result_ref": "5446c8e",
       "resume_mode": "fresh",
       "risk": [],
-      "status": "awaiting_audit",
+      "status": "done",
       "title": "BUILD reduced-motion (part 7)",
-      "updated_at": "2026-07-01T13:56:02.552869Z",
+      "updated_at": "2026-07-01T14:01:14.644475Z",
       "weight": "light"
     },
     "cheffy_p7_reducedmotion_plan": {
@@ -403,7 +403,7 @@
       "weight": "light"
     },
     "cheffy_p7_reducedmotion_test": {
-      "attempts": 0,
+      "attempts": 1,
       "audit": null,
       "blocked_reason": null,
       "budget": {
@@ -428,24 +428,24 @@
       "not_before": null,
       "objective": "Verify part-7 reduced-motion by inspection + build gate (no test framework -- ephemeral/manual verification only). Prove and report: (1) every CSS @keyframes/animation/transition present in src/components/Cheffy.astro AND src/components/CheffyPanel.astro is neutralized under a @media (prefers-reduced-motion: reduce) rule -- enumerate each animation:/transition:/@keyframes occurrence and match it to a reduce override; report any UNCOVERED animation; (2) no selector under reduce collapses layout or hides content (no display:none/height:0/width:0 introduced by the sweep -- motion-only removal, no layout shift); (3) npm run build (astro check then astro build) is green. Deliver the per-selector coverage result; if any animation is uncovered or any check fails, report it precisely for the audit -- do not paper over it.",
       "priority": 50,
-      "result_ref": null,
+      "result_ref": "/private/tmp/claude-501/-Users-ianschuepbach/fe5730d1-b80d-454b-8a9e-38670fd2ee49/scratchpad/cheffy_p7_reducedmotion_build.log",
       "resume_mode": "fresh",
       "risk": [],
-      "status": "queued",
+      "status": "done",
       "title": "TEST reduced-motion (part 7)",
-      "updated_at": "2026-07-01T13:20:28.491408Z",
+      "updated_at": "2026-07-01T14:11:53.957348Z",
       "weight": "light"
     },
     "cheffy_p9_buildgate_build": {
-      "attempts": 0,
+      "attempts": 1,
       "audit": {
         "attempts": 0,
         "audit_of": null,
-        "auditor_job_id": null,
-        "last_verdict": null,
+        "auditor_job_id": "job_20260701_142915_audit_audit_cheffy_p9_buildgate_build",
+        "last_verdict": "pass",
         "max_attempts": 2,
         "required": true,
-        "status": "pending"
+        "status": "pass"
       },
       "blocked_reason": null,
       "budget": {
@@ -469,16 +469,16 @@
       "not_before": null,
       "objective": "Add the final <Cheffy /> mount to src/layouts/Layout.astro per the Planner blueprint (auto-attached) -- exactly TWO lines: import Cheffy from the components dir in the frontmatter + a single <Cheffy /> element at the blueprinted root-of-body position so it renders once on every page as a corner overlay. This is the DoD-closing pe-build-gate part; it MUST be the last interactive surface wired (reduced-motion, part 7, has already landed audit-passed). Touch ONLY Layout.astro; no rework of existing markup, no other file. Acceptance (checkable): (1) npm run build (astro check THEN astro build) passes clean across ALL pages; (2) <Cheffy /> renders on every page (index, weekend, every archive slug); (3) NO console errors on any page; (4) progressive-enhancement holds -- with Cheffy client JS disabled the site behaves exactly like master (mascot inert, no layout break, no thrown errors); (5) built static HTML is valid (Astro handles the island mount correctly, no stray unhydrated markup breaking static output). Your contribution begins and ends at Layout.astro. This build acceptance IS the whole-DoD acceptance gate -- verify the full site, not just the diff.",
       "priority": 50,
-      "result_ref": null,
+      "result_ref": "e8d0323",
       "resume_mode": "fresh",
       "risk": [],
-      "status": "queued",
+      "status": "done",
       "title": "Part 9 pe-build-gate: mount <Cheffy /> into Layout.astro + final build gate",
-      "updated_at": "2026-07-01T13:23:42.072184Z",
+      "updated_at": "2026-07-01T16:14:03.977652Z",
       "weight": "standard"
     },
     "cheffy_p9_buildgate_plan": {
-      "attempts": 0,
+      "attempts": 1,
       "audit": null,
       "blocked_reason": null,
       "budget": {
@@ -502,16 +502,16 @@
       "not_before": null,
       "objective": "Blueprint the FINAL <Cheffy /> mount into src/layouts/Layout.astro (part 9, pe-build-gate) -- the DoD-closing part. RESEARCH rung intentionally SKIPPED: scope is a genuinely trivial two-line change (import of src/components/Cheffy.astro + a single <Cheffy /> element), no API/standard/seam discovery needed. Blueprint: (1) the exact import statement and where it goes in Layout.astro frontmatter; (2) the exact placement of the <Cheffy /> element in the layout tree -- it must render once on EVERY page as a fixed corner overlay, so place it at the root of <body> (e.g. just before the closing body tag or after the main slot/content), NOT inside a page-specific region; confirm it does not disturb existing DOM/layout flow. Boundary: Layout.astro ONLY, exactly two lines added (import + element); no rework of Layout existing markup, no other file (part 7 reduced-motion has already landed -- do not touch its files). State the acceptance the builder must hit: npm run build clean, Cheffy renders on every page, and with Cheffy JS disabled the site behaves exactly like master (progressive-enhancement).",
       "priority": 50,
-      "result_ref": null,
+      "result_ref": "notes/cheffy_p9_buildgate_plan.md",
       "resume_mode": "fresh",
       "risk": [],
-      "status": "queued",
+      "status": "done",
       "title": "Part 9 pe-build-gate: blueprint final Cheffy mount into Layout.astro",
-      "updated_at": "2026-07-01T13:23:28.356461Z",
+      "updated_at": "2026-07-01T14:13:54.045747Z",
       "weight": "light"
     },
     "cheffy_p9_buildgate_test": {
-      "attempts": 0,
+      "attempts": 2,
       "audit": null,
       "blocked_reason": null,
       "budget": {
@@ -535,12 +535,12 @@
       "not_before": null,
       "objective": "Verify part-9 pe-build-gate -- the final DoD gate -- by build + inspection (no test framework; ephemeral/manual verification + npm run build only). Prove and report: (1) npm run build (astro check then astro build) is green end-to-end; (2) <Cheffy /> is present in the built output of representative pages (index, weekend, one archive slug) -- the mount actually renders site-wide; (3) progressive-enhancement / master-parity: with Cheffy JS not executing, the rendered pages match master behavior -- no layout shift, no visible breakage, no console errors, no thrown exceptions on load; (4) confirm ONLY Layout.astro changed for this part (two lines). Deliver the build result + per-page render confirmation precisely; if any page errors, any console error appears, or parity breaks, report it exactly for the audit -- do not paper over it.",
       "priority": 50,
-      "result_ref": null,
+      "result_ref": ".troupe/notes/cheffy_p9_buildgate_test_build.log",
       "resume_mode": "fresh",
       "risk": [],
-      "status": "queued",
+      "status": "done",
       "title": "Part 9 pe-build-gate: verify final mount + full build gate",
-      "updated_at": "2026-07-01T13:23:54.212299Z",
+      "updated_at": "2026-07-01T16:53:00.578424Z",
       "weight": "light"
     },
     "job_20260630_230118_direct_bootstrap_decompose_dod": {
@@ -926,12 +926,7 @@
       "failure_reason": null,
       "id": "job_20260701_135602_audit_audit_cheffy_p7_reducedmotion_build",
       "last_checkpoint_ref": null,
-      "lease": {
-        "expires_at": "2026-07-01T14:56:41.053671Z",
-        "heartbeat_at": "2026-07-01T13:56:41.053671Z",
-        "leased_at": "2026-07-01T13:56:41.053671Z",
-        "owner": "stage-manager-20260701T135641Z-pid37653"
-      },
+      "lease": null,
       "max_attempts": 2,
       "not_before": null,
       "objective": "Cold, isolated audit of cheffy_p7_reducedmotion_build: falsify the builder's claims against the DoD. See roles/audit.md.",
@@ -941,9 +936,50 @@
       "risk": [
         "audit_required"
       ],
-      "status": "active",
+      "status": "done",
       "title": "audit cheffy_p7_reducedmotion_build",
-      "updated_at": "2026-07-01T13:56:41.053671Z",
+      "updated_at": "2026-07-01T14:10:06.944488Z",
+      "weight": "standard"
+    },
+    "job_20260701_142915_audit_audit_cheffy_p9_buildgate_build": {
+      "attempts": 2,
+      "audit": {
+        "attempts": 0,
+        "audit_of": "cheffy_p9_buildgate_build",
+        "auditor_job_id": null,
+        "last_verdict": null,
+        "max_attempts": 1,
+        "required": false,
+        "status": "n/a"
+      },
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "after_each_step"
+      },
+      "context_files": [],
+      "created_at": "2026-07-01T14:29:15.565493Z",
+      "criterion": null,
+      "cycle": {
+        "injected": true
+      },
+      "depends_on": [],
+      "dispatch": "AUDIT",
+      "failure_reason": null,
+      "id": "job_20260701_142915_audit_audit_cheffy_p9_buildgate_build",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 2,
+      "not_before": null,
+      "objective": "Cold, isolated audit of cheffy_p9_buildgate_build: falsify the builder's claims against the DoD. See roles/audit.md.",
+      "priority": 49,
+      "result_ref": null,
+      "resume_mode": "fresh",
+      "risk": [
+        "audit_required"
+      ],
+      "status": "done",
+      "title": "audit cheffy_p9_buildgate_build",
+      "updated_at": "2026-07-01T16:14:13.982950Z",
       "weight": "standard"
     },
     "job_cheffy_calactions_build": {
@@ -1662,6 +1698,7 @@
     "job_20260701_121841_audit_audit_cheffy_p6_checklist_build",
     "job_20260701_134929_audit_audit_cheffy_p7_reducedmotion_build",
     "job_20260701_135602_audit_audit_cheffy_p7_reducedmotion_build",
+    "job_20260701_142915_audit_audit_cheffy_p9_buildgate_build",
     "job_20260630_230118_direct_bootstrap_decompose_dod",
     "job_cheffy_calendar_research",
     "job_cheffy_calendar_plan",
@@ -1709,6 +1746,6 @@
     "heartbeat_timeout_sec": 900,
     "max_active": 1
   },
-  "updated_at": "2026-07-01T13:56:41.053784Z",
+  "updated_at": "2026-07-01T16:53:00.578428Z",
   "version": 1
 }

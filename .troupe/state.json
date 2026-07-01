@@ -38,7 +38,7 @@
     },
     {
       "criterion": "reduced-motion: prefers-reduced-motion honored across mascot/panel/animations; no layout shift.",
-      "status": "pending"
+      "status": "done"
     },
     {
       "criterion": "animated-readme-svg: src/assets/cheffy-animated.svg SMIL demo loop embedded in README.md.",
@@ -46,7 +46,7 @@
     },
     {
       "criterion": "pe-build-gate: <Cheffy /> wired into Layout.astro; npm run build (astro check && astro build) passes; no console errors on any page; behaves exactly like master with Cheffy JS disabled.",
-      "status": "pending"
+      "status": "done"
     }
   ],
   "gate": {
@@ -54,7 +54,7 @@
     "last_audit": null
   },
   "last_iteration": null,
-  "last_strike": "2026-07-01T13:15:00Z",
+  "last_strike": "2026-07-01T16:53:00Z",
   "next_queue": [],
   "pacing": {
     "block_started_at": null,
@@ -85,5 +85,5 @@
     "troupe-haiku"
   ],
   "working_branch": null,
-  "workshop_debt": 5
+  "workshop_debt": 6
 }
