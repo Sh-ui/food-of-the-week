@@ -56,3 +56,11 @@ builds would conflict. Parts 1-2 done; part 3 (floating-card-panel) is next, tou
 `npm run build` (astro check && astro build) passes, no console errors on any page, the
 Opus visual-review verdict PASSES criteria 1-4 at all three breakpoints against the
 committed screenshots, and the site behaves exactly like master with Cheffy JS disabled.
+
+## Arming gotchas (workshop 2026-07-01)
+
+- Test rungs MUST be armed `dispatch: TEST`, not `BUILD`. P1/P2 `_test` jobs were armed
+  as BUILD (a verify-objective routed into the builder lane); P3 corrected this to TEST.
+  When arming P4/P5/P5b, use TEST for verify rungs, BUILD only for implement rungs.
+- P5b visual-review is dispatched to an OPUS actor (troupe-opus/Planner or the Director),
+  never Sonnet -- it is the ONLY sign-off for visual criteria 1-4.
