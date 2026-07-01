@@ -113,3 +113,24 @@ CHEFFY-SYSTEM.md's acceptance bar.
 - Working tree at this Strike: `.troupe/queue.json` (job-status writes from the p7/p9
   rungs) plus `src/data/lunch-history.json`/`src/data/lunch-week.json` (unrelated, routine
   weekly-content-generator churn, not Cheffy) are the only diffs against the last commit.
+
+## 2026-07-01 -- /troupe walkthrough (trust=auto) finding + fix
+
+Walkthrough verified the Cheffy DoD with the build gate + 3 cold isolated auditors.
+Result: 8/9 criteria genuinely done as recorded; **calendar-actions (part 4) was NOT
+truly done** despite its `done` mark.
+
+- Defect: `Cheffy.astro` gates calendar-island build on `if (filename)`, but `<Cheffy />`
+  was mounted in `Layout.astro` with no props and no page threaded `filename`. So the ICS
+  island was empty on every page and `generate-ics`/`-meal`/`open-google-calendar` no-op'd
+  in production. Build stayed green because Cheffy degrades silently -- why the gate missed it.
+- Fix (this pass, verified against built HTML): added `cheffyFilename` prop to `Layout.astro`,
+  passed to `<Cheffy filename={...} />`; threaded `FOOD-OF-THE-WEEK.md` (index), `WEEKEND.md`
+  (weekend), and `filename` (archive/[slug]). lunch/fancai correctly omit it. `dist/index.html`,
+  `dist/weekend`, `dist/archive/*` now each emit one real `BEGIN:VCALENDAR` island; lunch/fancai
+  emit zero. `npm run build` still 0/0/0, 28 pages, exit 0. DoD now truly 9/9.
+- Also corrected the stale "STUB / not mounted" header comment in `Cheffy.astro`.
+- Walkthrough written to `docs/walkthroughs/cheffy-module.md`.
+
+Process note: this is the "don't trust the builder" catch working as intended -- a criterion
+marked `done` that passed the build but was dead end-to-end, surfaced only by cold audit.

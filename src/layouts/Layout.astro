@@ -2,9 +2,14 @@
 interface Props {
   title: string;
   noindex?: boolean;
+  /** Relative path (from project root) to this page's week Markdown source, so
+   *  Cheffy's calendar-actions (ICS / Google Calendar) have real times to work
+   *  from. Omit on pages with no cooking-week Markdown (lunch, fancai) -- the
+   *  calendar island then stays empty and those actions cleanly no-op. */
+  cheffyFilename?: string;
 }
 
-const { title, noindex = false } = Astro.props;
+const { title, noindex = false, cheffyFilename } = Astro.props;
 import '../styles/global.css';
 import Cheffy from '../components/Cheffy.astro';
 
@@ -32,6 +37,6 @@ const faviconHref = baseUrl + 'favicon.svg';
   </head>
   <body>
     <slot />
-    <Cheffy />
+    <Cheffy filename={cheffyFilename} />
   </body>
 </html>

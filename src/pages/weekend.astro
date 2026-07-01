@@ -7,6 +7,6 @@ import { parseWeekPlan } from '../utils/weekParser';
 const weekPlan = await parseWeekPlan('WEEKEND.md');
 ---
 
-<Layout title={weekPlan.weekTitle}>
+<Layout title={weekPlan.weekTitle} cheffyFilename="WEEKEND.md">
   <WeeklyPlan weekPlan={weekPlan} />
 </Layout>
