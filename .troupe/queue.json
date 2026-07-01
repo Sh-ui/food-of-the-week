@@ -1012,7 +1012,7 @@
       "weight": "light"
     },
     "job_20260701_182045_direct_bootstrap_decompose_dod": {
-      "attempts": 0,
+      "attempts": 1,
       "audit": null,
       "blocked_reason": null,
       "budget": {
@@ -1027,6 +1027,40 @@
       "failure_reason": null,
       "id": "job_20260701_182045_direct_bootstrap_decompose_dod",
       "last_checkpoint_ref": null,
+      "lease": {
+        "expires_at": "2026-07-01T18:53:19.646009Z",
+        "heartbeat_at": "2026-07-01T18:23:19.646009Z",
+        "leased_at": "2026-07-01T18:23:19.646009Z",
+        "owner": "stage-manager-20260701T182319Z-pid64734"
+      },
+      "max_attempts": 1,
+      "not_before": null,
+      "objective": "Decompose the DoD hexagonally into parts (one per criterion), seed dod_progress (one entry per criterion), and arm the first part's rung structure (a PLAN(ner) rung -> BUILD -> TEST -> AUDIT, scoped) plus next_assignment (batch + dispatch_rules + warm_set). First pass: no prior session/brief -- see roles/director.md.",
+      "priority": 50,
+      "result_ref": null,
+      "resume_mode": "fresh",
+      "risk": [],
+      "status": "active",
+      "title": "bootstrap: decompose DoD",
+      "updated_at": "2026-07-01T18:23:19.646009Z",
+      "weight": "light"
+    },
+    "job_20260701_182839_direct_bootstrap_decompose_dod": {
+      "attempts": 0,
+      "audit": null,
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "on_block_or_risk"
+      },
+      "context_files": [],
+      "created_at": "2026-07-01T18:28:39.931226Z",
+      "criterion": null,
+      "cycle": {},
+      "depends_on": [],
+      "dispatch": "DIRECT",
+      "failure_reason": null,
+      "id": "job_20260701_182839_direct_bootstrap_decompose_dod",
+      "last_checkpoint_ref": null,
       "lease": null,
       "max_attempts": 1,
       "not_before": null,
@@ -1037,7 +1071,7 @@
       "risk": [],
       "status": "queued",
       "title": "bootstrap: decompose DoD",
-      "updated_at": "2026-07-01T18:20:45.777436Z",
+      "updated_at": "2026-07-01T18:28:39.931235Z",
       "weight": "light"
     },
     "job_cheffy_calactions_build": {
@@ -1797,7 +1831,8 @@
     "cheffy_p9_buildgate_test",
     "cheffy_p9_buildgate_test",
     "job_20260701_181534_direct_bootstrap_decompose_dod",
-    "job_20260701_182045_direct_bootstrap_decompose_dod"
+    "job_20260701_182045_direct_bootstrap_decompose_dod",
+    "job_20260701_182839_direct_bootstrap_decompose_dod"
   ],
   "policy": {
     "backoff_base_sec": 300,
@@ -1806,6 +1841,6 @@
     "heartbeat_timeout_sec": 900,
     "max_active": 1
   },
-  "updated_at": "2026-07-01T18:20:45.777505Z",
+  "updated_at": "2026-07-01T18:28:39.931324Z",
   "version": 1
 }

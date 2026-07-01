@@ -3,7 +3,7 @@
   "context_files": [],
   "dispatch": "DIRECT",
   "dispatch_rules": "default-ascent",
-  "next_task": "job_20260701_182045_direct_bootstrap_decompose_dod",
+  "next_task": "job_20260701_182839_direct_bootstrap_decompose_dod",
   "notes": "Cheffy DoD is 9/9 complete as of this Strike (cheffy_p7_reducedmotion + cheffy_p9_buildgate audit-passed and closed). No batch armed -- nothing left to arm on this DoD. Awaiting the next Director pass to review sign-off (state.json.dod_progress all done) and decide on production_active + PR proposal. See MEMORY/brief.md for the full state-of-the-world.",
   "strike_timestamp": "2026-07-01T16:53:00Z",
   "warm_set": [

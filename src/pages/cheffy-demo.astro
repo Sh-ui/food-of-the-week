@@ -1,0 +1,201 @@
+---
+// cheffy-demo.astro -- BESPOKE, non-shipping demo harness for exercising every
+// Cheffy feature interactively (incl. the hard-to-trigger ones: mascot states,
+// "new week" attention, and local notifications). noindex; not linked from nav.
+// Serves the REAL current week so Cheffy has real content + a real calendar island.
+import Layout from '../layouts/Layout.astro';
+import WeeklyPlan from '../components/WeeklyPlan.astro';
+import { parseWeekPlan } from '../utils/weekParser';
+
+const weekPlan = await parseWeekPlan(); // FOOD-OF-THE-WEEK.md (current week)
+---
+
+<Layout title={`Cheffy Demo -- ${weekPlan.weekTitle}`} noindex={true} cheffyFilename="FOOD-OF-THE-WEEK.md">
+  <div id="cheffy-demo-controls" aria-label="Cheffy demo controls">
+    <div class="cdc-head">
+      <strong>CHEFFY DEMO</strong>
+      <button type="button" id="cdc-collapse" title="collapse">-</button>
+    </div>
+    <div class="cdc-body">
+      <p class="cdc-hint">Drives the real component. The mascot lives bottom-right.</p>
+
+      <div class="cdc-row"><span>state</span><b id="cdc-state">--</b></div>
+
+      <div class="cdc-grid">
+        <button type="button" data-state="idle">idle</button>
+        <button type="button" data-state="attention">attention</button>
+        <button type="button" data-state="dialogue">dialogue</button>
+        <button type="button" data-state="processing">processing</button>
+      </div>
+
+      <div class="cdc-grid">
+        <button type="button" id="cdc-open">open panel</button>
+        <button type="button" id="cdc-close">close panel</button>
+      </div>
+
+      <button type="button" id="cdc-reset" class="cdc-wide">reset "new week" (reload -&gt; attention)</button>
+      <button type="button" id="cdc-notif" class="cdc-wide">fire test reminder (~5s)</button>
+
+      <p class="cdc-status" id="cdc-secure">context: --</p>
+      <p class="cdc-hint">Everything else -- dialogue tree, search, calendar ICS/Google, checklist export/import -- is reachable by opening the panel and clicking through.</p>
+    </div>
+  </div>
+
+  <WeeklyPlan weekPlan={weekPlan} showLunchAddon={true} />
+</Layout>
+
+<style>
+  #cheffy-demo-controls {
+    position: fixed; top: 8px; left: 8px; z-index: 9999;
+    width: 232px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 12px; line-height: 1.35; color: #1a1a1a;
+    background: #fffdf7; border: 2px solid #c9a227; border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(0,0,0,.18); overflow: hidden;
+  }
+  #cheffy-demo-controls .cdc-head {
+    display: flex; align-items: center; justify-content: space-between;
+    background: #c9a227; color: #2a2200; padding: 5px 9px; letter-spacing: .04em;
+  }
+  #cheffy-demo-controls .cdc-head button {
+    all: unset; cursor: pointer; font-weight: 700; padding: 0 6px; line-height: 1;
+  }
+  #cheffy-demo-controls .cdc-body { padding: 9px; display: grid; gap: 7px; }
+  #cheffy-demo-controls.collapsed .cdc-body { display: none; }
+  #cheffy-demo-controls .cdc-hint { margin: 0; color: #6b5e2a; font-size: 11px; }
+  #cheffy-demo-controls .cdc-row { display: flex; justify-content: space-between; }
+  #cheffy-demo-controls .cdc-row b { color: #8a6d00; }
+  #cheffy-demo-controls .cdc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+  #cheffy-demo-controls button:not(.cdc-head button) {
+    cursor: pointer; border: 1px solid #c9a227; background: #fff; color: #4a3d00;
+    border-radius: 6px; padding: 6px 4px; font: inherit;
+  }
+  #cheffy-demo-controls button:not(.cdc-head button):hover { background: #fdf3d0; }
+  #cheffy-demo-controls .cdc-wide { width: 100%; }
+  #cheffy-demo-controls .cdc-status { margin: 0; font-size: 11px; font-weight: 700; }
+  #cdc-toast {
+    position: fixed; top: 12px; left: 50%; transform: translateX(-50%);
+    z-index: 10000; max-width: 88vw; background: #2a2200; color: #fff8e1;
+    border: 2px solid #c9a227; border-radius: 10px; padding: 10px 14px;
+    font-family: ui-monospace, Menlo, monospace; font-size: 13px;
+    box-shadow: 0 6px 20px rgba(0,0,0,.3); opacity: 0; transition: opacity .2s;
+    pointer-events: none;
+  }
+  #cdc-toast.show { opacity: 1; }
+</style>
+
+<script>
+  // Bespoke demo wiring -- talks ONLY to the real component's public seams
+  // (root.cheffySetState, the .cheffy-toggle button, the visitedWeeks key,
+  // window.cheffyActions) plus the real /sw.js for a near-future test reminder.
+  function boot() {
+    var controls = document.getElementById('cheffy-demo-controls');
+    var root = document.getElementById('cheffy');
+    if (!controls) return;
+
+    // --- toast helper -------------------------------------------------------
+    var toastEl = document.getElementById('cdc-toast');
+    if (!toastEl) {
+      toastEl = document.createElement('div');
+      toastEl.id = 'cdc-toast';
+      document.body.appendChild(toastEl);
+    }
+    var toastTimer = 0;
+    function toast(msg, ms) {
+      toastEl.textContent = msg;
+      toastEl.classList.add('show');
+      window.clearTimeout(toastTimer);
+      toastTimer = window.setTimeout(function () { toastEl.classList.remove('show'); }, ms || 3500);
+    }
+    function setState(s) { if (root && root.cheffySetState) root.cheffySetState(s); }
+
+    // --- collapse -----------------------------------------------------------
+    var collapseBtn = document.getElementById('cdc-collapse');
+    if (collapseBtn) collapseBtn.addEventListener('click', function () { controls.classList.toggle('collapsed'); });
+
+    // --- force mascot state -------------------------------------------------
+    var stateBtns = controls.querySelectorAll('button[data-state]');
+    Array.prototype.forEach.call(stateBtns, function (b) {
+      b.addEventListener('click', function () {
+        if (root && root.cheffySetState) setState(b.getAttribute('data-state'));
+        else toast('Mascot not mounted on this page.');
+      });
+    });
+
+    // --- live state readout -------------------------------------------------
+    var stateEl = document.getElementById('cdc-state');
+    function reflect() { if (stateEl && root) stateEl.textContent = root.getAttribute('data-state') || '--'; }
+    if (root) {
+      reflect();
+      new MutationObserver(reflect).observe(root, { attributes: true, attributeFilter: ['data-state'] });
+    }
+
+    // --- open / close the real panel ---------------------------------------
+    var toggle = root ? root.querySelector('.cheffy-toggle') : null;
+    var openBtn = document.getElementById('cdc-open');
+    var closeBtn = document.getElementById('cdc-close');
+    if (openBtn) openBtn.addEventListener('click', function () {
+      if (toggle && toggle.getAttribute('aria-expanded') !== 'true') toggle.click();
+    });
+    if (closeBtn) closeBtn.addEventListener('click', function () {
+      if (toggle && toggle.getAttribute('aria-expanded') === 'true') toggle.click();
+    });
+
+    // --- reset "new week" ---------------------------------------------------
+    var resetBtn = document.getElementById('cdc-reset');
+    if (resetBtn) resetBtn.addEventListener('click', function () {
+      try { localStorage.removeItem('visitedWeeks'); } catch (e) {}
+      toast('Cleared visitedWeeks -- reloading; mascot returns to "attention".');
+      setTimeout(function () { location.reload(); }, 700);
+    });
+
+    // --- secure-context / support readout -----------------------------------
+    var secureEl = document.getElementById('cdc-secure');
+    var swOk = 'serviceWorker' in navigator;
+    var notifOk = 'Notification' in window;
+    var secure = window.isSecureContext;
+    if (secureEl) {
+      secureEl.textContent = secure
+        ? 'context: secure OK (SW ' + (swOk ? 'yes' : 'no') + ', Notif ' + (notifOk ? 'yes' : 'no') + ')'
+        : 'context: INSECURE -- notifications simulated';
+      secureEl.style.color = (secure && swOk && notifOk) ? '#1f7a1f' : '#a11';
+    }
+
+    // --- fire a near-future test reminder (real SW when possible) -----------
+    function simulate() {
+      var t = document.createElement('div');
+      t.id = 'cdc-toast';
+      t.style.top = '60px';
+      t.textContent = '(simulated) Time to cook! -- real OS notification would appear here.';
+      document.body.appendChild(t);
+      requestAnimationFrame(function () { t.classList.add('show'); });
+      setTimeout(function () { t.remove(); }, 5000);
+    }
+    var notifBtn = document.getElementById('cdc-notif');
+    if (notifBtn) notifBtn.addEventListener('click', function () {
+      if (secure && swOk && notifOk) {
+        Promise.resolve(Notification.requestPermission()).then(function (perm) {
+          if (perm !== 'granted') { toast('Permission not granted -- enable notifications in browser settings.'); return; }
+          setState('processing');
+          return navigator.serviceWorker.register('/sw.js').then(function (reg) {
+            return navigator.serviceWorker.ready.then(function () {
+              toast('Real reminder scheduled via /sw.js -- arrives in ~5s. Keep this tab open.');
+              setTimeout(function () {
+                reg.showNotification('Time to cook!', {
+                  body: 'Demo reminder -- this is the real service-worker notification path.',
+                  tag: 'cheffy-demo-reminder'
+                }).catch(function () { simulate(); });
+                setState('idle');
+              }, 5000);
+            });
+          });
+        }).catch(function () { toast('SW/notify failed here -- showing the simulated flow instead.'); simulate(); });
+      } else {
+        toast('Insecure context: showing the simulated notification flow (real ones need HTTPS/localhost).');
+        setTimeout(simulate, 1200);
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
+  else boot();
+</script>
