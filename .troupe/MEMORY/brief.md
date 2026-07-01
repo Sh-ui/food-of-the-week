@@ -134,3 +134,16 @@ truly done** despite its `done` mark.
 
 Process note: this is the "don't trust the builder" catch working as intended -- a criterion
 marked `done` that passed the build but was dead end-to-end, surfaced only by cold audit.
+
+## 2026-07-01 -- CORRECTION: prior "9/9" was BEHAVIOR-only; presentation layer missing
+
+Live-DOM inspection of the running demo (localhost:4443/cheffy-demo) proved the mascot's
+VISUAL/LAYOUT layer was never built, even though every behavior criterion is real:
+- #cheffy root = position:static, full-width, at the bottom of page flow (NOT fixed/docked).
+- .cheffy-svg (the hat) renders 0x0 -- no width/height -> invisible.
+- .cheffy-toggle = 4px-wide default browser button -- no bubble/shadow/hat.
+- CheffyPanel.astro has NO <style> block -> renders inline, not a floating panel.
+- data-corner attribute is set but consumed by ZERO css rules.
+Process lesson: the walkthrough audits verified behavior-in-code, never a rendered pixel; the
+DoD had no visual criteria + no screenshot gate. Next DoD is presentation-only with a
+committed headless-screenshot acceptance gate at mobile/tablet/desktop breakpoints.

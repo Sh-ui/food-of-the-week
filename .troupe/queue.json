@@ -982,6 +982,35 @@
       "updated_at": "2026-07-01T16:14:13.982950Z",
       "weight": "standard"
     },
+    "job_20260701_181534_direct_bootstrap_decompose_dod": {
+      "attempts": 0,
+      "audit": null,
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "on_block_or_risk"
+      },
+      "context_files": [],
+      "created_at": "2026-07-01T18:15:34.204173Z",
+      "criterion": null,
+      "cycle": {},
+      "depends_on": [],
+      "dispatch": "DIRECT",
+      "failure_reason": null,
+      "id": "job_20260701_181534_direct_bootstrap_decompose_dod",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 1,
+      "not_before": null,
+      "objective": "Decompose the DoD hexagonally into parts (one per criterion), seed dod_progress (one entry per criterion), and arm the first part's rung structure (a PLAN(ner) rung -> BUILD -> TEST -> AUDIT, scoped) plus next_assignment (batch + dispatch_rules + warm_set). First pass: no prior session/brief -- see roles/director.md.",
+      "priority": 50,
+      "result_ref": null,
+      "resume_mode": "fresh",
+      "risk": [],
+      "status": "queued",
+      "title": "bootstrap: decompose DoD",
+      "updated_at": "2026-07-01T18:15:34.204179Z",
+      "weight": "light"
+    },
     "job_cheffy_calactions_build": {
       "attempts": 1,
       "audit": {
@@ -1737,7 +1766,8 @@
     "cheffy_p9_buildgate_build",
     "cheffy_p9_buildgate_build",
     "cheffy_p9_buildgate_test",
-    "cheffy_p9_buildgate_test"
+    "cheffy_p9_buildgate_test",
+    "job_20260701_181534_direct_bootstrap_decompose_dod"
   ],
   "policy": {
     "backoff_base_sec": 300,
@@ -1746,6 +1776,6 @@
     "heartbeat_timeout_sec": 900,
     "max_active": 1
   },
-  "updated_at": "2026-07-01T16:53:00.578428Z",
+  "updated_at": "2026-07-01T18:15:34.204248Z",
   "version": 1
 }
