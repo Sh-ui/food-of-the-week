@@ -1,0 +1,8 @@
+{
+  "job_id": "job_cheffy_p3_cardpanel_build",
+  "lease_owner": "stage-manager-20260701T211537Z-pid79888",
+  "step": "reduced-motion-fix-added",
+  "status": "in_progress",
+  "summary": "Added @media (prefers-reduced-motion: reduce) block to CheffyPanel.astro <style> block, setting transition-duration: 0.01ms !important on #cheffy-panel and .cheffy-scrim (matching the Cheffy.astro sweep's duration). No other changes. About to verify with npm run build.",
+  "next": "run npm run build to verify, then mark-awaiting-audit + enqueue-audit"
+}

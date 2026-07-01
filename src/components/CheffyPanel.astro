@@ -63,6 +63,118 @@ const archiveIndex = await Promise.all(
   <script type="application/json" id="cheffy-archive-index" is:inline set:html={JSON.stringify(archiveIndex)} />
 </div>
 
+<div class="cheffy-scrim" aria-hidden="true"></div>
+
+<style>
+  /* --- 2a: component-local custom props -- drive both card size and inset --- */
+  .cheffy-panel {
+    --cheffy-inset: clamp(1rem, 4vw, 2rem);
+    /* min() caps the card at a fixed target while never exceeding the viewport
+       minus its own inset on both sides -- this is what keeps the card from
+       EVER reading as a fullscreen sheet, on any viewport. */
+    --cheffy-card-w: min(24rem, calc(100vw - 2 * var(--cheffy-inset)));
+    --cheffy-card-h: min(30rem, calc(100dvh - 2 * var(--cheffy-inset)));
+  }
+
+  /* --- 2b: the inset floating card itself --- */
+  .cheffy-panel {
+    position: fixed;
+    z-index: 2;
+    /* non-none so the [hidden] attribute (below) has a real display value to
+       toggle to/from -- required for the display+overlay discrete transition. */
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: var(--cheffy-card-w);
+    height: var(--cheffy-card-h);
+    max-width: calc(100vw - 2 * var(--cheffy-inset));
+    max-height: calc(100dvh - 2 * var(--cheffy-inset));
+    overflow-y: auto;
+    padding: 1.25rem;
+    gap: 0.75rem;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.22);
+
+    /* --- 2d: open/close animation (transform + opacity only, no layout shift) --- */
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition: opacity 0.22s ease, transform 0.22s ease,
+                display 0.22s allow-discrete, overlay 0.22s allow-discrete;
+  }
+
+  /* --- 2c: corner anchoring -- keyed off #cheffy[data-corner], set by part 1 --- */
+  /* #cheffy is owned by Cheffy.astro (different scope id), so it must be      */
+  /* wrapped in :global() -- otherwise Astro's per-file scoping attribute gets */
+  /* appended to a selector that the real element never carries, and the rule */
+  /* silently never matches.                                                  */
+  :global(#cheffy[data-corner="bottom-right"]) .cheffy-panel { right: var(--cheffy-inset); bottom: var(--cheffy-inset); }
+  :global(#cheffy[data-corner="bottom-left"])  .cheffy-panel { left:  var(--cheffy-inset); bottom: var(--cheffy-inset); }
+  :global(#cheffy[data-corner="top-right"])    .cheffy-panel { right: var(--cheffy-inset); top:    var(--cheffy-inset); }
+  :global(#cheffy[data-corner="top-left"])     .cheffy-panel { left:  var(--cheffy-inset); top:    var(--cheffy-inset); }
+
+  /* closed state -- owned entirely by the part-2 toggle setting panel.hidden.  */
+  /* display is intentionally left unset here so the UA [hidden]{display:none}  */
+  /* rule wins once the transition settles; allow-discrete keeps it painted as   */
+  /* display:flex for the duration of the fade/slide out.                       */
+  .cheffy-panel[hidden] {
+    opacity: 0;
+    transform: translateY(0.75rem) scale(0.96);
+    pointer-events: none;
+  }
+
+  @starting-style {
+    .cheffy-panel:not([hidden]) {
+      opacity: 0;
+      transform: translateY(0.75rem) scale(0.96);
+    }
+  }
+
+  /* --- 2e: the scrim -- visible only while the panel is open, above page       */
+  /* content but below the panel and the toggle (see :global rule below).       */
+  .cheffy-scrim {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+    background: color-mix(in srgb, var(--color-text) 45%, transparent);
+    transition: opacity 0.22s ease, display 0.22s allow-discrete, overlay 0.22s allow-discrete;
+  }
+
+  #cheffy-panel:not([hidden]) ~ .cheffy-scrim {
+    display: block;
+    opacity: 1;
+  }
+
+  @starting-style {
+    #cheffy-panel:not([hidden]) ~ .cheffy-scrim {
+      opacity: 0;
+    }
+  }
+
+  /* Close affordance: keep the mascot toggle (the existing close path) above
+     the scrim so it stays clickable while the panel is open. Targets an
+     element owned by Cheffy.astro via :global -- no edits to that file. */
+  :global(#cheffy .cheffy-toggle) {
+    position: relative;
+    z-index: 3;
+  }
+
+  /* Reduced-motion sweep -- scoped to this component's own elements, since       */
+  /* Astro's CSS scoping does not cross component boundaries (the Cheffy.astro   */
+  /* sweep only reaches #cheffy and its descendants, not this file's #cheffy-    */
+  /* panel / .cheffy-scrim, which live as siblings outside that subtree).        */
+  @media (prefers-reduced-motion: reduce) {
+    #cheffy-panel,
+    .cheffy-scrim {
+      transition-duration: 0.01ms !important;
+    }
+  }
+</style>
+
 <script>
   // Client-side dialogue runtime. Bundled (not is:inline / define:vars) so plain ES
   // imports (JSON + the pure util) work exactly as Cheffy.astro's script imports

@@ -1233,6 +1233,88 @@
       "updated_at": "2026-07-01T20:01:00.357945Z",
       "weight": "standard"
     },
+    "job_20260701_203746_audit_audit_job_cheffy_p3_cardpanel_build": {
+      "attempts": 1,
+      "audit": {
+        "attempts": 0,
+        "audit_of": "job_cheffy_p3_cardpanel_build",
+        "auditor_job_id": null,
+        "last_verdict": null,
+        "max_attempts": 1,
+        "required": false,
+        "status": "n/a"
+      },
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "after_each_step"
+      },
+      "context_files": [],
+      "created_at": "2026-07-01T20:37:46.822168Z",
+      "criterion": null,
+      "cycle": {
+        "injected": true
+      },
+      "depends_on": [],
+      "dispatch": "AUDIT",
+      "failure_reason": null,
+      "id": "job_20260701_203746_audit_audit_job_cheffy_p3_cardpanel_build",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 2,
+      "not_before": null,
+      "objective": "Cold, isolated audit of job_cheffy_p3_cardpanel_build: falsify the builder's claims against the DoD. See roles/audit.md.",
+      "priority": 49,
+      "result_ref": null,
+      "resume_mode": "fresh",
+      "risk": [
+        "audit_required"
+      ],
+      "status": "done",
+      "title": "audit job_cheffy_p3_cardpanel_build",
+      "updated_at": "2026-07-01T21:15:15.553525Z",
+      "weight": "standard"
+    },
+    "job_20260701_211801_audit_audit_job_cheffy_p3_cardpanel_build": {
+      "attempts": 1,
+      "audit": {
+        "attempts": 0,
+        "audit_of": "job_cheffy_p3_cardpanel_build",
+        "auditor_job_id": null,
+        "last_verdict": null,
+        "max_attempts": 1,
+        "required": false,
+        "status": "n/a"
+      },
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "after_each_step"
+      },
+      "context_files": [],
+      "created_at": "2026-07-01T21:18:01.703158Z",
+      "criterion": null,
+      "cycle": {
+        "injected": true
+      },
+      "depends_on": [],
+      "dispatch": "AUDIT",
+      "failure_reason": null,
+      "id": "job_20260701_211801_audit_audit_job_cheffy_p3_cardpanel_build",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 2,
+      "not_before": null,
+      "objective": "Cold, isolated audit of job_cheffy_p3_cardpanel_build: falsify the builder's claims against the DoD. See roles/audit.md.",
+      "priority": 49,
+      "result_ref": null,
+      "resume_mode": "fresh",
+      "risk": [
+        "audit_required"
+      ],
+      "status": "done",
+      "title": "audit job_cheffy_p3_cardpanel_build",
+      "updated_at": "2026-07-01T23:05:24.111727Z",
+      "weight": "standard"
+    },
     "job_cheffy_calactions_build": {
       "attempts": 1,
       "audit": {
@@ -2131,15 +2213,15 @@
       "weight": "standard"
     },
     "job_cheffy_p3_cardpanel_build": {
-      "attempts": 0,
+      "attempts": 2,
       "audit": {
         "attempts": 0,
         "audit_of": null,
-        "auditor_job_id": null,
-        "last_verdict": null,
+        "auditor_job_id": "job_20260701_211801_audit_audit_job_cheffy_p3_cardpanel_build",
+        "last_verdict": "pass",
         "max_attempts": 2,
         "required": true,
-        "status": "pending"
+        "status": "pass"
       },
       "blocked_reason": null,
       "budget": {
@@ -2158,24 +2240,24 @@
       "dispatch": "BUILD",
       "failure_reason": null,
       "id": "job_cheffy_p3_cardpanel_build",
-      "last_checkpoint_ref": null,
+      "last_checkpoint_ref": "checkpoints/job_cheffy_p3_cardpanel_build.json",
       "lease": null,
       "max_attempts": 2,
-      "not_before": null,
+      "not_before": "2026-07-01T21:20:11.725282Z",
       "objective": "Implement ONLY the floating-card-panel presentation contract (DoD criterion 3) per the auto-attached Planner blueprint, in src/components/CheffyPanel.astro ONLY. Deliver: (a) a NEW style block styling .cheffy-panel as ONE inset floating card that scales across viewports -- inset from ALL screen edges over a visible scrim, one consistent size clamped by min/max via clamp() and min(), so desktop/tablet read as a floating corner card and a phone (narrower than the card min) near-fills but stays the SAME inset card with visible margins/scrim, NEVER a distinct fullscreen mode; (b) a fixed semi-transparent scrim element (page visible around the card), z-index layered above page content and coherent with the part-1 mascot (#cheffy z-index 200); (c) SMOOTH open AND close animation (transform/opacity only, zero layout shift) per the blueprint's approach, WITHOUT editing Cheffy.astro -- do NOT touch panel.hidden or aria-expanded (owned by the part-2 toggle); (d) a clear close affordance routed through the EXISTING close action/toggle path; (e) reduced-motion collapses motion to instant while keeping open/close visibility and dialogue state swaps functional. Use EXISTING --color-* brand tokens ONLY. ACCEPTANCE the audit will falsify: npm run build (astro check and astro build) passes with no console errors on any page; with the panel open, .cheffy-panel computes to position:fixed, inset from all four edges (non-zero margins so a scrim shows) at 390/820/1440px widths, width/height within the min/max clamp (never 100vw by 100vh fullscreen); a scrim element is present, fixed, semi-transparent, above page content; open and close both animate (or are instant under prefers-reduced-motion) with no layout shift; JS-off parity preserved and the site still behaves like master with Cheffy JS disabled. SCOPE FENCE -- edit src/components/CheffyPanel.astro ONLY; do NOT edit Cheffy.astro (parts 1-2 / the toggle + mount), do NOT add or change tailwind.config.mjs tokens (crit4), do NOT add the screenshot script (crit5), do NOT touch behavior JS. NOTE: this build is deliberately NOT --criterion-tagged -- visual criterion 3 is signed off ONLY by the later Opus visual-review rung (5b), never by this Sonnet audit.",
       "priority": 50,
-      "result_ref": null,
-      "resume_mode": "fresh",
+      "result_ref": "src/components/CheffyPanel.astro: added prefers-reduced-motion media block (0.01ms transition-duration on #cheffy-panel and .cheffy-scrim); npm run build verified",
+      "resume_mode": "from_checkpoint",
       "risk": [
         "code_change"
       ],
-      "status": "queued",
+      "status": "done",
       "title": "build: floating-card-panel -- inset scaling card + scrim + smooth open/close",
-      "updated_at": "2026-07-01T20:11:40.583272Z",
+      "updated_at": "2026-07-01T23:05:20.376971Z",
       "weight": "standard"
     },
     "job_cheffy_p3_cardpanel_plan": {
-      "attempts": 0,
+      "attempts": 1,
       "audit": null,
       "blocked_reason": null,
       "budget": {
@@ -2200,16 +2282,16 @@
       "not_before": null,
       "objective": "Blueprint ONLY the floating-card-panel part (DoD criterion 3), grounded in the auto-attached research note. Produce a step-checkpointed BUILD blueprint for a SINGLE floating card UX that scales across all viewports, implemented in src/components/CheffyPanel.astro ONLY (a new style block + minimal scrim markup) with ZERO edits to Cheffy.astro (parts 1-2 own it) and no behavior-JS changes. Specify, from the research: (1) INSET FLOATING CARD -- exact clamp() and min() width+height, inset from all edges, min/max clamp, corner anchoring vs data-corner, so desktop/tablet read as a floating corner card and a phone (narrower than the card min) near-fills but stays the SAME inset card with visible scrim margins, NEVER a fullscreen mode; give concrete values at ~390/~820/~1440px. (2) SCRIM -- a fixed semi-transparent scrim element + its z-index layering vs the part-1 mascot (#cheffy z-index 200) and page content, page visible around the card, click-scrim-to-close routed through the EXISTING toggle/close path. (3) SMOOTH OPEN AND CLOSE ANIMATION -- the approach the research recommended that needs NO Cheffy.astro edit (e.g. @starting-style plus transition-behavior allow-discrete on [hidden], or aria-expanded/data-state driven), transform/opacity only (zero layout shift), collapsing to instant under prefers-reduced-motion while open/close visibility and dialogue state swaps still work. (4) CLOSE AFFORDANCE -- a clear close control routed through the existing close action/toggle path (no new panel.hidden or aria-expanded mutation), plus whether a visible X is needed beyond dialogue options. Use existing --color-* tokens ONLY (no new tokens -- that is crit4). Define acceptance the Sonnet build-audit can falsify (computed position:fixed, four-edge inset with non-zero scrim margins, size within min/max clamp at all three widths, scrim present, both open and close animate or are instant under reduced-motion, JS-off parity). BOUNDARY: crit3 is signed off ONLY by the later Opus 5b visual-review, so the BUILD is deliberately NOT --criterion-tagged -- state that in the blueprint. If research surfaced that a smooth CLOSE is impossible without a Cheffy.astro toggle hook, ESCALATE (plan-scope-wrong -> DIRECT) rather than silently editing the shared file. Presentation-only -- do NOT touch behavior JS.",
       "priority": 50,
-      "result_ref": null,
+      "result_ref": "notes/job_cheffy_p3_cardpanel_plan.md",
       "resume_mode": "fresh",
       "risk": [],
-      "status": "queued",
+      "status": "done",
       "title": "plan: floating-card-panel -- inset scaling card + scrim + smooth open/close (crit3)",
-      "updated_at": "2026-07-01T20:11:26.249034Z",
+      "updated_at": "2026-07-01T20:30:24.161451Z",
       "weight": "light"
     },
     "job_cheffy_p3_cardpanel_research": {
-      "attempts": 0,
+      "attempts": 1,
       "audit": null,
       "blocked_reason": null,
       "budget": {
@@ -2234,16 +2316,16 @@
       "not_before": null,
       "objective": "PRESENTATION-ONLY, do NOT build -- gather grounded facts for the floating-card-panel part (DoD criterion 3) so the Planner blueprints on evidence. Current state to CONFIRM: src/components/CheffyPanel.astro has NO style block and Cheffy.astro has no .cheffy-panel CSS, so the dialogue panel is essentially unstyled today; establish that the part-3 floating-card CSS should land as a NEW style block in CheffyPanel.astro and must NOT be added to Cheffy.astro's shared style block (it holds parts 1-2). Nail down the exact facts and minimal edits for: (a) OPEN/CLOSE ANIMATION SEAM -- #cheffy-panel is shown/hidden via panel.hidden set by Cheffy.astro's .cheffy-toggle (around lines 310-320); the panel's own script observes hidden mutations and MUST NOT touch panel.hidden or aria-expanded (those are owned by the part-2 toggle). hidden equals display:none which cannot be transitioned. Establish the exact MINIMAL approach to a SMOOTH open AND close animation that keeps Cheffy.astro UNTOUCHED -- evaluate (1) modern @starting-style plus transition-behavior: allow-discrete on the [hidden] to visible swap for both enter and exit, (2) driving a separate scrim+card whose visibility keys off .cheffy-toggle[aria-expanded=true] or #cheffy[data-state=dialogue] without using hidden, vs (3) any genuine need for a Cheffy.astro hook. Recommend the approach needing ZERO Cheffy.astro edits; if a smooth CLOSE is truly impossible without a toggle hook, say so explicitly and specify the smallest coordinated change (a seam finding that may need Director re-scope). (b) SCRIM/BACKDROP -- there is no scrim element today; specify a fixed full-viewport semi-transparent scrim (page visible around the card edges) added inside CheffyPanel.astro, its z-index relative to the part-1 mascot (#cheffy is z-index 200) and page content, and click-scrim-to-close routed through the EXISTING toggle/close path, not a new hidden mutation. (c) INSET CLAMP SIZING (the crux of crit3) -- specify exact CSS for ONE floating card that scales across ALL viewports: always inset from ALL screen edges over the scrim, one consistent size clamped by min/max via clamp() and min(), so desktop/tablet read as a floating corner card and a phone narrower than the card min near-fills but stays the SAME inset card with visible margins/scrim, NEVER a distinct fullscreen mode. Give concrete inset, min-width/height, max-width/height, and how the card anchors (docks near the mascot corner honoring data-corner, or centered) at ~390px, ~820px, ~1440px. (d) CLOSE AFFORDANCE -- the dialogue tree already has a close action and .cheffy-option, and the panel registers a close action that clicks the toggle; specify whether a visible X close control is needed beyond dialogue options and how it routes through the existing close path. (e) ZERO LAYOUT SHIFT + REDUCED MOTION -- card/scrim motion must be transform/opacity only (no reflow) and collapse to instant under prefers-reduced-motion while keeping open/close visibility and dialogue state swaps functional; confirm whether Cheffy.astro's existing #cheffy, #cheffy star reduced-motion sweep already covers the panel (it renders inside #cheffy) or a panel-scoped rule is needed. Use EXISTING brand tokens (--color-* from tailwind.config.mjs) -- do NOT add tokens (that is crit4). Report the seam (CheffyPanel.astro new style block + any scrim markup), the precise minimal edits, exact clamp/inset/z-index values, the recommended animation approach, and any risk to the part-1 mount contract, the Cheffy.astro toggle ownership, or JS-off parity. Behavior JS (state machine/dialogue/calendar/ICS/checklist/notifications) is already built -- do NOT touch it.",
       "priority": 50,
-      "result_ref": null,
+      "result_ref": "notes/job_cheffy_p3_cardpanel_research.md",
       "resume_mode": "fresh",
       "risk": [],
-      "status": "queued",
+      "status": "done",
       "title": "research: floating-card-panel layout + scrim + inset clamp + open/close animation seam",
-      "updated_at": "2026-07-01T20:11:10.912852Z",
+      "updated_at": "2026-07-01T20:24:05.222002Z",
       "weight": "light"
     },
     "job_cheffy_p3_cardpanel_test": {
-      "attempts": 0,
+      "attempts": 1,
       "audit": null,
       "blocked_reason": null,
       "budget": {
@@ -2262,7 +2344,12 @@
       "failure_reason": null,
       "id": "job_cheffy_p3_cardpanel_test",
       "last_checkpoint_ref": null,
-      "lease": null,
+      "lease": {
+        "expires_at": "2026-07-02T00:05:42.001024Z",
+        "heartbeat_at": "2026-07-01T23:05:42.001024Z",
+        "leased_at": "2026-07-01T23:05:42.001024Z",
+        "owner": "stage-manager-20260701T230541Z-pid83006"
+      },
       "max_attempts": 2,
       "not_before": null,
       "objective": "Verify the floating-card-panel build (DoD criterion 3) actually PROVES its claims -- PRESENTATION-ONLY, add no behavior. Confirm, each check written to falsify not just assert: npm run build (astro check and astro build) passes with no console errors on any page; with the panel OPEN, .cheffy-panel is position:fixed and inset from all FOUR screen edges (visible scrim margins, never 100vw by 100vh fullscreen) with width/height inside the min/max clamp at mobile ~390px, tablet ~820px, and desktop ~1440px; a fixed semi-transparent scrim element exists and layers above page content and coherently with the part-1 mascot (#cheffy z-index 200); open AND close both animate smoothly via transform/opacity with zero layout shift, and collapse to instant under prefers-reduced-motion while open/close visibility and dialogue state swaps still work; a clear close affordance works through the existing close/toggle path; and JS-off parity holds (site behaves like master with Cheffy JS disabled, panel not stuck open/broken). SCOPE FENCE -- do NOT edit Cheffy.astro or tailwind.config.mjs, do NOT touch behavior JS. Report PASS/FAIL per claim with the evidence that falsifies it.",
@@ -2270,9 +2357,9 @@
       "result_ref": null,
       "resume_mode": "fresh",
       "risk": [],
-      "status": "queued",
+      "status": "active",
       "title": "test: floating-card-panel inset/scrim/clamp + open-close animation + JS-off parity",
-      "updated_at": "2026-07-01T20:11:51.228324Z",
+      "updated_at": "2026-07-01T23:05:42.001024Z",
       "weight": "standard"
     },
     "job_cheffy_readmesvg_build": {
@@ -2400,6 +2487,8 @@
     "job_20260701_191844_audit_audit_job_cheffy_p1_mascot_test",
     "job_20260701_195151_audit_audit_job_cheffy_p2_hatbubble_build",
     "job_20260701_195750_audit_audit_job_cheffy_p2_hatbubble_test",
+    "job_20260701_203746_audit_audit_job_cheffy_p3_cardpanel_build",
+    "job_20260701_211801_audit_audit_job_cheffy_p3_cardpanel_build",
     "job_20260630_230118_direct_bootstrap_decompose_dod",
     "job_cheffy_calendar_research",
     "job_cheffy_calendar_plan",
@@ -2462,6 +2551,6 @@
     "heartbeat_timeout_sec": 900,
     "max_active": 1
   },
-  "updated_at": "2026-07-01T20:11:51.228398Z",
+  "updated_at": "2026-07-01T23:05:42.001114Z",
   "version": 1
 }
