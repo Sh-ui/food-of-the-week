@@ -1,14 +1,14 @@
 {
   "batch": [
-    "job_cheffy_calendar_plan",
-    "job_cheffy_calendar_build",
-    "job_cheffy_calendar_test"
+    "job_cheffy_mascot_plan",
+    "job_cheffy_mascot_build",
+    "job_cheffy_mascot_test"
   ],
   "context_files": [],
   "dispatch": "RESEARCH",
   "dispatch_rules": "default-ascent",
-  "next_task": "job_cheffy_calendar_research",
-  "notes": "Part 1/9 armed: calendar-engine (src/utils/cheffyCalendar.ts) -- RESEARCH -> PLAN -> BUILD -> TEST (AUDIT auto). Clean no-dep seam first. Director re-arms part 2 (mascot-state-machine) after this part audits.",
+  "next_task": "job_cheffy_mascot_research",
+  "notes": "Part 2/9 armed: mascot-state-machine (Cheffy.astro SVG mascot + idle/attention/dialogue/processing state machine keyed off visitedWeeks) -- RESEARCH -> PLAN -> BUILD -> TEST (AUDIT auto). Seam: reuse GroceryList weekId (H1 slug); extract pure src/utils/cheffyState.ts (zero-relative-import, part-1 pattern) so TEST can verify without a framework. Boundary: do NOT mount in Layout (part 9), do NOT author the dialogue tree/nav (part 3), do NOT touch calendar/notifications/checklist. Director re-arms part 3 (dialogue-panel) after this part audits.",
   "strike_timestamp": null,
   "warm_set": [
     "troupe-director",
