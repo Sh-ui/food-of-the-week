@@ -1069,6 +1069,88 @@
       "updated_at": "2026-07-01T18:40:52.486534Z",
       "weight": "light"
     },
+    "job_20260701_184807_audit_audit_job_cheffy_p1_mascot_build": {
+      "attempts": 1,
+      "audit": {
+        "attempts": 0,
+        "audit_of": "job_cheffy_p1_mascot_build",
+        "auditor_job_id": null,
+        "last_verdict": null,
+        "max_attempts": 1,
+        "required": false,
+        "status": "n/a"
+      },
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "after_each_step"
+      },
+      "context_files": [],
+      "created_at": "2026-07-01T18:48:07.918509Z",
+      "criterion": null,
+      "cycle": {
+        "injected": true
+      },
+      "depends_on": [],
+      "dispatch": "AUDIT",
+      "failure_reason": null,
+      "id": "job_20260701_184807_audit_audit_job_cheffy_p1_mascot_build",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 2,
+      "not_before": null,
+      "objective": "Cold, isolated audit of job_cheffy_p1_mascot_build: falsify the builder's claims against the DoD. See roles/audit.md.",
+      "priority": 49,
+      "result_ref": null,
+      "resume_mode": "fresh",
+      "risk": [
+        "audit_required"
+      ],
+      "status": "done",
+      "title": "audit job_cheffy_p1_mascot_build",
+      "updated_at": "2026-07-01T19:01:29.336961Z",
+      "weight": "standard"
+    },
+    "job_20260701_191844_audit_audit_job_cheffy_p1_mascot_test": {
+      "attempts": 0,
+      "audit": {
+        "attempts": 0,
+        "audit_of": "job_cheffy_p1_mascot_test",
+        "auditor_job_id": null,
+        "last_verdict": null,
+        "max_attempts": 1,
+        "required": false,
+        "status": "n/a"
+      },
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "after_each_step"
+      },
+      "context_files": [],
+      "created_at": "2026-07-01T19:18:44.855503Z",
+      "criterion": null,
+      "cycle": {
+        "injected": true
+      },
+      "depends_on": [],
+      "dispatch": "AUDIT",
+      "failure_reason": null,
+      "id": "job_20260701_191844_audit_audit_job_cheffy_p1_mascot_test",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 2,
+      "not_before": null,
+      "objective": "Cold, isolated audit of job_cheffy_p1_mascot_test: falsify the builder's claims against the DoD. See roles/audit.md.",
+      "priority": 49,
+      "result_ref": null,
+      "resume_mode": "fresh",
+      "risk": [
+        "audit_required"
+      ],
+      "status": "queued",
+      "title": "audit job_cheffy_p1_mascot_test",
+      "updated_at": "2026-07-01T19:18:44.855510Z",
+      "weight": "standard"
+    },
     "job_cheffy_calactions_build": {
       "attempts": 1,
       "audit": {
@@ -1666,15 +1748,15 @@
       "weight": "light"
     },
     "job_cheffy_p1_mascot_build": {
-      "attempts": 0,
+      "attempts": 1,
       "audit": {
         "attempts": 0,
         "audit_of": null,
-        "auditor_job_id": null,
-        "last_verdict": null,
+        "auditor_job_id": "job_20260701_184807_audit_audit_job_cheffy_p1_mascot_build",
+        "last_verdict": "pass",
         "max_attempts": 2,
         "required": true,
-        "status": "pending"
+        "status": "pass"
       },
       "blocked_reason": null,
       "budget": {
@@ -1705,13 +1787,13 @@
       "risk": [
         "code_change"
       ],
-      "status": "queued",
+      "status": "done",
       "title": "build: floating-mascot position:fixed corner-dock + JS-off parity",
-      "updated_at": "2026-07-01T18:38:45.721717Z",
+      "updated_at": "2026-07-01T18:56:01.337508Z",
       "weight": "standard"
     },
     "job_cheffy_p1_mascot_plan": {
-      "attempts": 0,
+      "attempts": 1,
       "audit": null,
       "blocked_reason": null,
       "budget": {
@@ -1736,9 +1818,9 @@
       "result_ref": null,
       "resume_mode": "fresh",
       "risk": [],
-      "status": "queued",
+      "status": "done",
       "title": "plan: floating-mascot positioning/mount blueprint",
-      "updated_at": "2026-07-01T18:38:34.856502Z",
+      "updated_at": "2026-07-01T18:46:38.877454Z",
       "weight": "light"
     },
     "job_cheffy_p1_mascot_research": {
@@ -1762,12 +1844,7 @@
       "failure_reason": null,
       "id": "job_cheffy_p1_mascot_research",
       "last_checkpoint_ref": null,
-      "lease": {
-        "expires_at": "2026-07-01T19:11:18.733439Z",
-        "heartbeat_at": "2026-07-01T18:41:18.733439Z",
-        "leased_at": "2026-07-01T18:41:18.733439Z",
-        "owner": "stage-manager-20260701T184118Z-pid67418"
-      },
+      "lease": null,
       "max_attempts": 1,
       "not_before": null,
       "objective": "PRESENTATION-ONLY. Establish, on the working branch, exactly how the Cheffy mascot is currently mounted+styled and what the floating-mascot contract (DoD criterion 1) requires -- gather grounded facts, do NOT build. Nail down: (a) is #cheffy server-rendered in Layout.astro or JS-injected, and what CSS currently positions it; (b) what 'position:fixed, docked to data-corner (default bottom-right), z-indexed above page content, out of document flow, present on every page' concretely needs vs the current CSS, including the z-index/stacking-context ceiling from tailwind.config.mjs and the existing sticky header/modals so the mascot sits above content but below modals; (c) the crux: what 'JS-off leaves it hidden/inert AND the site byte-identical to master' concretely requires -- build the site, diff the rendered HTML/DOM of the working branch vs master with Cheffy JS disabled, and identify the exact mechanism that keeps #cheffy hidden+zero-layout-impact without JS (e.g. CSS hidden until a JS-added .cheffy-ready class). Report the seam files, the precise minimal changes needed, and any risk to byte-identical parity. Behavior (state machine/dialogue/calendar/ICS/checklist/notifications) is already built -- do NOT touch it.",
@@ -1775,14 +1852,22 @@
       "result_ref": null,
       "resume_mode": "fresh",
       "risk": [],
-      "status": "active",
+      "status": "done",
       "title": "research: floating-mascot mount+positioning contract",
-      "updated_at": "2026-07-01T18:41:18.733439Z",
+      "updated_at": "2026-07-01T18:44:59.900088Z",
       "weight": "light"
     },
     "job_cheffy_p1_mascot_test": {
-      "attempts": 0,
-      "audit": null,
+      "attempts": 2,
+      "audit": {
+        "attempts": 0,
+        "audit_of": null,
+        "auditor_job_id": "job_20260701_191844_audit_audit_job_cheffy_p1_mascot_test",
+        "last_verdict": null,
+        "max_attempts": 2,
+        "required": true,
+        "status": "pending"
+      },
       "blocked_reason": null,
       "budget": {
         "checkpoint_mode": "after_each_step"
@@ -1797,7 +1882,7 @@
       "depends_on": [
         "job_cheffy_p1_mascot_build"
       ],
-      "dispatch": "TEST",
+      "dispatch": "BUILD",
       "failure_reason": null,
       "id": "job_cheffy_p1_mascot_test",
       "last_checkpoint_ref": null,
@@ -1809,9 +1894,9 @@
       "result_ref": null,
       "resume_mode": "fresh",
       "risk": [],
-      "status": "queued",
+      "status": "awaiting_audit",
       "title": "test: verify floating-mascot contract + master parity (JS off)",
-      "updated_at": "2026-07-01T18:38:55.830109Z",
+      "updated_at": "2026-07-01T19:18:44.855534Z",
       "weight": "standard"
     },
     "job_cheffy_readmesvg_build": {
@@ -1935,6 +2020,8 @@
     "job_20260701_134929_audit_audit_cheffy_p7_reducedmotion_build",
     "job_20260701_135602_audit_audit_cheffy_p7_reducedmotion_build",
     "job_20260701_142915_audit_audit_cheffy_p9_buildgate_build",
+    "job_20260701_184807_audit_audit_job_cheffy_p1_mascot_build",
+    "job_20260701_191844_audit_audit_job_cheffy_p1_mascot_test",
     "job_20260630_230118_direct_bootstrap_decompose_dod",
     "job_cheffy_calendar_research",
     "job_cheffy_calendar_plan",
@@ -1989,6 +2076,6 @@
     "heartbeat_timeout_sec": 900,
     "max_active": 1
   },
-  "updated_at": "2026-07-01T18:41:53.037713Z",
+  "updated_at": "2026-07-01T19:18:44.855585Z",
   "version": 1
 }

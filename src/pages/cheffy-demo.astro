@@ -89,24 +89,24 @@ const weekPlan = await parseWeekPlan(); // FOOD-OF-THE-WEEK.md (current week)
   // window.cheffyActions) plus the real /sw.js for a near-future test reminder.
   function boot() {
     var controls = document.getElementById('cheffy-demo-controls');
-    var root = document.getElementById('cheffy');
+    var root = document.getElementById('cheffy') as (HTMLElement & { cheffySetState?: (state: string) => void }) | null;
     if (!controls) return;
 
     // --- toast helper -------------------------------------------------------
-    var toastEl = document.getElementById('cdc-toast');
+    var toastEl = document.getElementById('cdc-toast') as HTMLElement;
     if (!toastEl) {
       toastEl = document.createElement('div');
       toastEl.id = 'cdc-toast';
       document.body.appendChild(toastEl);
     }
     var toastTimer = 0;
-    function toast(msg, ms) {
+    function toast(msg: string, ms?: number) {
       toastEl.textContent = msg;
       toastEl.classList.add('show');
       window.clearTimeout(toastTimer);
       toastTimer = window.setTimeout(function () { toastEl.classList.remove('show'); }, ms || 3500);
     }
-    function setState(s) { if (root && root.cheffySetState) root.cheffySetState(s); }
+    function setState(s: string) { if (root && root.cheffySetState) root.cheffySetState(s); }
 
     // --- collapse -----------------------------------------------------------
     var collapseBtn = document.getElementById('cdc-collapse');
@@ -130,7 +130,7 @@ const weekPlan = await parseWeekPlan(); // FOOD-OF-THE-WEEK.md (current week)
     }
 
     // --- open / close the real panel ---------------------------------------
-    var toggle = root ? root.querySelector('.cheffy-toggle') : null;
+    var toggle = root ? (root.querySelector('.cheffy-toggle') as HTMLElement | null) : null;
     var openBtn = document.getElementById('cdc-open');
     var closeBtn = document.getElementById('cdc-close');
     if (openBtn) openBtn.addEventListener('click', function () {
