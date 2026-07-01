@@ -4,7 +4,19 @@ State-of-the-world orienting doc for the Director. This DoD was RE-AIMED: the ea
 9-criterion *behavior* DoD is DONE and superseded. Do NOT rebuild behavior. Build only the
 missing visual/layout/presentation layer per CHEFFY-SYSTEM.md.
 
-## DoD progress: 0/6 -- presentation layer NOT started
+## DoD progress: 0/6 flipped, part 1 mechanically complete -- criterion 1 still `pending`
+(awaits mandatory Opus visual-review sign-off per its own text, not a Sonnet-only pass)
+
+Part 1 (floating-mascot) is DONE end-to-end and audit-passed: `job_cheffy_p1_mascot_plan`,
+`_research`, `_build`, `_test` are all `done`, both `_build` and `_test` audits are `pass`.
+`#cheffy` is now `position:fixed`, corner-docked via `data-corner` (default bottom-right,
+z-index 200), out of document flow, present on every page, and hidden/inert with JS off
+(`.cheffy-root{display:none}` default, `initCheffy()` adds `.cheffy-ready` after DOM
+verification). Only `src/components/Cheffy.astro` changed (one `<style>` block + one JS
+line). `reconcile-dod` was run this Strike and correctly left criterion 1 `pending` --
+DoD text mandates the criteria 1-4 checkboxes are signed off ONLY by the Opus
+visual-review verdict (criterion 6/5b), not by Sonnet build/test audits alone. Next up:
+Director arms part 2 (hat-bubble).
 
 `state.json.dod_progress` reseeded to SIX pending criteria (all `pending`):
 

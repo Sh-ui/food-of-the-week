@@ -1111,7 +1111,7 @@
       "weight": "standard"
     },
     "job_20260701_191844_audit_audit_job_cheffy_p1_mascot_test": {
-      "attempts": 0,
+      "attempts": 1,
       "audit": {
         "attempts": 0,
         "audit_of": "job_cheffy_p1_mascot_test",
@@ -1146,9 +1146,9 @@
       "risk": [
         "audit_required"
       ],
-      "status": "queued",
+      "status": "done",
       "title": "audit job_cheffy_p1_mascot_test",
-      "updated_at": "2026-07-01T19:18:44.855510Z",
+      "updated_at": "2026-07-01T19:32:32.847705Z",
       "weight": "standard"
     },
     "job_cheffy_calactions_build": {
@@ -1863,10 +1863,10 @@
         "attempts": 0,
         "audit_of": null,
         "auditor_job_id": "job_20260701_191844_audit_audit_job_cheffy_p1_mascot_test",
-        "last_verdict": null,
+        "last_verdict": "pass",
         "max_attempts": 2,
         "required": true,
-        "status": "pending"
+        "status": "pass"
       },
       "blocked_reason": null,
       "budget": {
@@ -1894,9 +1894,9 @@
       "result_ref": null,
       "resume_mode": "fresh",
       "risk": [],
-      "status": "awaiting_audit",
+      "status": "done",
       "title": "test: verify floating-mascot contract + master parity (JS off)",
-      "updated_at": "2026-07-01T19:18:44.855534Z",
+      "updated_at": "2026-07-01T19:32:24.891417Z",
       "weight": "standard"
     },
     "job_cheffy_readmesvg_build": {
@@ -2076,6 +2076,6 @@
     "heartbeat_timeout_sec": 900,
     "max_active": 1
   },
-  "updated_at": "2026-07-01T19:18:44.855585Z",
+  "updated_at": "2026-07-01T19:32:32.847711Z",
   "version": 1
 }
