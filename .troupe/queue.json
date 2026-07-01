@@ -1151,6 +1151,88 @@
       "updated_at": "2026-07-01T19:32:32.847705Z",
       "weight": "standard"
     },
+    "job_20260701_195151_audit_audit_job_cheffy_p2_hatbubble_build": {
+      "attempts": 1,
+      "audit": {
+        "attempts": 0,
+        "audit_of": "job_cheffy_p2_hatbubble_build",
+        "auditor_job_id": null,
+        "last_verdict": null,
+        "max_attempts": 1,
+        "required": false,
+        "status": "n/a"
+      },
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "after_each_step"
+      },
+      "context_files": [],
+      "created_at": "2026-07-01T19:51:51.312322Z",
+      "criterion": null,
+      "cycle": {
+        "injected": true
+      },
+      "depends_on": [],
+      "dispatch": "AUDIT",
+      "failure_reason": null,
+      "id": "job_20260701_195151_audit_audit_job_cheffy_p2_hatbubble_build",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 2,
+      "not_before": null,
+      "objective": "Cold, isolated audit of job_cheffy_p2_hatbubble_build: falsify the builder's claims against the DoD. See roles/audit.md.",
+      "priority": 49,
+      "result_ref": null,
+      "resume_mode": "fresh",
+      "risk": [
+        "audit_required"
+      ],
+      "status": "done",
+      "title": "audit job_cheffy_p2_hatbubble_build",
+      "updated_at": "2026-07-01T19:54:41.667654Z",
+      "weight": "standard"
+    },
+    "job_20260701_195750_audit_audit_job_cheffy_p2_hatbubble_test": {
+      "attempts": 1,
+      "audit": {
+        "attempts": 0,
+        "audit_of": "job_cheffy_p2_hatbubble_test",
+        "auditor_job_id": null,
+        "last_verdict": null,
+        "max_attempts": 1,
+        "required": false,
+        "status": "n/a"
+      },
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "after_each_step"
+      },
+      "context_files": [],
+      "created_at": "2026-07-01T19:57:50.360159Z",
+      "criterion": null,
+      "cycle": {
+        "injected": true
+      },
+      "depends_on": [],
+      "dispatch": "AUDIT",
+      "failure_reason": null,
+      "id": "job_20260701_195750_audit_audit_job_cheffy_p2_hatbubble_test",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 2,
+      "not_before": null,
+      "objective": "Cold, isolated audit of job_cheffy_p2_hatbubble_test: falsify the builder's claims against the DoD. See roles/audit.md.",
+      "priority": 49,
+      "result_ref": null,
+      "resume_mode": "fresh",
+      "risk": [
+        "audit_required"
+      ],
+      "status": "done",
+      "title": "audit job_cheffy_p2_hatbubble_test",
+      "updated_at": "2026-07-01T20:01:00.357945Z",
+      "weight": "standard"
+    },
     "job_cheffy_calactions_build": {
       "attempts": 1,
       "audit": {
@@ -1904,11 +1986,11 @@
       "audit": {
         "attempts": 0,
         "audit_of": null,
-        "auditor_job_id": null,
-        "last_verdict": null,
+        "auditor_job_id": "job_20260701_195151_audit_audit_job_cheffy_p2_hatbubble_build",
+        "last_verdict": "pass",
         "max_attempts": 2,
         "required": true,
-        "status": "pending"
+        "status": "pass"
       },
       "blocked_reason": null,
       "budget": {
@@ -1928,24 +2010,19 @@
       "failure_reason": null,
       "id": "job_cheffy_p2_hatbubble_build",
       "last_checkpoint_ref": null,
-      "lease": {
-        "expires_at": "2026-07-01T20:49:42.329309Z",
-        "heartbeat_at": "2026-07-01T19:49:42.329309Z",
-        "leased_at": "2026-07-01T19:49:42.329309Z",
-        "owner": "stage-manager-20260701T194942Z-pid74490"
-      },
+      "lease": null,
       "max_attempts": 2,
       "not_before": null,
       "objective": "Implement ONLY the hat-bubble presentation contract (DoD criterion 2) per the auto-attached Planner blueprint, in src/components/Cheffy.astro only. Deliver: the visible chef-hat SVG at a real ~56-64px size inside a circular .cheffy-toggle bubble button with background, shadow, and hover/press affordances (using existing --color-* brand tokens); a gentle idle float/bob animation added alongside the existing cheffy-blink, both transform-based (zero layout shift) and gated behind prefers-reduced-motion; the four states idle/attention/dialogue/processing each visually distinct via the existing expr/mouth mapping (refine for distinctness, do not rename -- there is NO 'sleepy'); and the .cheffy-dot notification dot correct and visible only in the attention state. ACCEPTANCE the audit will falsify: npm run build (astro check and astro build) passes with no console errors; .cheffy-svg computed width is >0 and lands ~56-64px; .cheffy-toggle has a non-transparent background + box-shadow + hover (:hover) and press (:active) rules; float/bob AND blink keyframes exist and sit inside prefers-reduced-motion guards; the four data-state values render distinct expr+mouth combinations; .cheffy-dot displays only under #cheffy[data-state=attention]. SCOPE FENCE -- do NOT change the Part-1 mount/position CSS or break JS-off parity; do NOT add or edit tailwind.config.mjs tokens (crit4); do NOT touch the panel (crit3) or add the screenshot script (crit5); do NOT touch behavior JS. Keep the diff to Cheffy.astro mascot markup + its style block. NOTE: this build is deliberately NOT --criterion-tagged -- visual criterion 2 is signed off ONLY by the later Opus visual-review rung (5b), never by this Sonnet audit.",
       "priority": 50,
-      "result_ref": null,
+      "result_ref": "ff4d3413e0514758f617ba16ae2e430992fe48b1",
       "resume_mode": "fresh",
       "risk": [
         "code_change"
       ],
-      "status": "active",
+      "status": "done",
       "title": "build: hat-bubble SVG sizing + bubble button + idle blink/bob + expressions + notif dot",
-      "updated_at": "2026-07-01T19:49:42.329309Z",
+      "updated_at": "2026-07-01T19:54:37.861010Z",
       "weight": "standard"
     },
     "job_cheffy_p2_hatbubble_plan": {
@@ -2013,15 +2090,15 @@
       "weight": "light"
     },
     "job_cheffy_p2_hatbubble_test": {
-      "attempts": 0,
+      "attempts": 1,
       "audit": {
         "attempts": 0,
         "audit_of": null,
-        "auditor_job_id": null,
-        "last_verdict": null,
+        "auditor_job_id": "job_20260701_195750_audit_audit_job_cheffy_p2_hatbubble_test",
+        "last_verdict": "pass",
         "max_attempts": 2,
         "required": true,
-        "status": "pending"
+        "status": "pass"
       },
       "blocked_reason": null,
       "budget": {
@@ -2048,9 +2125,9 @@
       "result_ref": null,
       "resume_mode": "fresh",
       "risk": [],
-      "status": "queued",
+      "status": "done",
       "title": "test: verify hat-bubble contract (sizing/button/anim/expressions/dot) + no crit1 regression",
-      "updated_at": "2026-07-01T19:43:31.410918Z",
+      "updated_at": "2026-07-01T20:00:56.946201Z",
       "weight": "standard"
     },
     "job_cheffy_readmesvg_build": {
@@ -2176,6 +2253,8 @@
     "job_20260701_142915_audit_audit_cheffy_p9_buildgate_build",
     "job_20260701_184807_audit_audit_job_cheffy_p1_mascot_build",
     "job_20260701_191844_audit_audit_job_cheffy_p1_mascot_test",
+    "job_20260701_195151_audit_audit_job_cheffy_p2_hatbubble_build",
+    "job_20260701_195750_audit_audit_job_cheffy_p2_hatbubble_test",
     "job_20260630_230118_direct_bootstrap_decompose_dod",
     "job_cheffy_calendar_research",
     "job_cheffy_calendar_plan",
@@ -2234,6 +2313,6 @@
     "heartbeat_timeout_sec": 900,
     "max_active": 1
   },
-  "updated_at": "2026-07-01T19:49:42.329402Z",
+  "updated_at": "2026-07-01T20:01:00.357951Z",
   "version": 1
 }
