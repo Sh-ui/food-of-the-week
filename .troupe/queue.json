@@ -111,6 +111,47 @@
       "updated_at": "2026-07-01T00:55:43.772662Z",
       "weight": "standard"
     },
+    "job_20260701_014758_audit_audit_job_cheffy_dialogue_build": {
+      "attempts": 1,
+      "audit": {
+        "attempts": 0,
+        "audit_of": "job_cheffy_dialogue_build",
+        "auditor_job_id": null,
+        "last_verdict": null,
+        "max_attempts": 1,
+        "required": false,
+        "status": "n/a"
+      },
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "after_each_step"
+      },
+      "context_files": [],
+      "created_at": "2026-07-01T01:47:58.293606Z",
+      "criterion": null,
+      "cycle": {
+        "injected": true
+      },
+      "depends_on": [],
+      "dispatch": "AUDIT",
+      "failure_reason": null,
+      "id": "job_20260701_014758_audit_audit_job_cheffy_dialogue_build",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 2,
+      "not_before": null,
+      "objective": "Cold, isolated audit of job_cheffy_dialogue_build: falsify the builder's claims against the DoD. See roles/audit.md.",
+      "priority": 49,
+      "result_ref": null,
+      "resume_mode": "fresh",
+      "risk": [
+        "audit_required"
+      ],
+      "status": "done",
+      "title": "audit job_cheffy_dialogue_build",
+      "updated_at": "2026-07-01T01:52:23.001550Z",
+      "weight": "standard"
+    },
     "job_cheffy_calendar_build": {
       "attempts": 1,
       "audit": {
@@ -256,15 +297,15 @@
       "weight": "light"
     },
     "job_cheffy_dialogue_build": {
-      "attempts": 0,
+      "attempts": 1,
       "audit": {
         "attempts": 0,
         "audit_of": null,
-        "auditor_job_id": null,
-        "last_verdict": null,
+        "auditor_job_id": "job_20260701_014758_audit_audit_job_cheffy_dialogue_build",
+        "last_verdict": "pass",
         "max_attempts": 2,
         "required": true,
-        "status": "pending"
+        "status": "pass"
       },
       "blocked_reason": null,
       "budget": {
@@ -293,16 +334,16 @@
       "not_before": null,
       "objective": "Execute the Planner blueprint (auto-attached) for part 3/9 dialogue-panel. Scope + checkable acceptance: (1) CheffyPanel.astro renders the current dialogue node from the JSON and navigates CLIENT-SIDE via goto across the whole nodes map (root -> calendar -> back etc.); options are data-driven, no hard-coded lists. (2) A free-text search node accepts input and navigates to a matching archive week or meal (navigate-to-archive works end to end against existing /archive/[slug] routes). (3) close collapses the panel to idle reusing the part-2 path; each node expression drives the mascot via the part-2 cheffySetState hook. (4) The three deferred actions -- generate-ics, trigger-permission, export-checklist -- are dispatched through the action registry and hit a graceful default (no throw; coming-soon/no-op), with a clearly documented registration seam for parts 4/5/6. (5) Pure traversal/search logic lives in a zero-relative-import util verified by an ephemeral Node script. (6) src/data/cheffy-dialogue.json fleshed into the real authored tree, no dangling goto ids. Boundary: <Cheffy /> stays NOT mounted in Layout.astro (part 9); do NOT implement calendar/notification/checklist action logic (parts 4/5/6); do NOT touch cheffyCalendar.ts, public/sw.js, GroceryList.astro; do NOT add motion that violates prefers-reduced-motion. Part-2 open/close/state behavior must remain intact. Done = npm run build (astro check and astro build) passes, no console errors on any page.",
       "priority": 50,
-      "result_ref": null,
+      "result_ref": "b165eeb",
       "resume_mode": "fresh",
       "risk": [],
-      "status": "queued",
+      "status": "done",
       "title": "build: dialogue-panel -- CheffyPanel runtime + dialogue.json tree + action registry",
-      "updated_at": "2026-07-01T01:13:53.712166Z",
+      "updated_at": "2026-07-01T01:52:15.647633Z",
       "weight": "standard"
     },
     "job_cheffy_dialogue_plan": {
-      "attempts": 0,
+      "attempts": 1,
       "audit": null,
       "blocked_reason": null,
       "budget": {
@@ -324,16 +365,16 @@
       "not_before": null,
       "objective": "Blueprint the ONE part -- dialogue-panel (part 3/9) -- on the research note (auto-attached). Design, for the builder to execute: (A) CheffyPanel.astro becomes the full CLIENT-SIDE dialogue runtime -- render the current node (text, expression, options, optional free-text input), client-side goto navigation across the WHOLE nodes map (not just the start node), and drive the mascot per node via the part-2 cheffySetState hook (dialogue/processing + expression). (B) An ACTION-DISPATCH REGISTRY contract -- a data-action to handler map with a graceful default -- the hexagonal boundary parts 4/5/6 plug their handler into (generate-ics, trigger-permission, export-checklist) WITHOUT reworking the panel; specify the exact registration seam (e.g. a documented window/root hook) and the graceful no-op/coming-soon default so the panel never throws before those parts land. (C) Fully implement the two pure-navigation actions this part OWNS: close (reuse the part-2 closePanel path) and navigate-to-archive + the free-text search resolution (client navigation to existing /archive/[slug] routes, using the index approach research picked). (D) Flesh src/data/cheffy-dialogue.json from stub into the real authored tree (data, not code) per schema, exposing all five actions + the search node, no dangling goto ids. (E) Put pure logic (dialogue-tree traversal, search matcher) in a ZERO-RELATIVE-IMPORT util (mirror cheffyState.ts / cheffyCalendar.ts) so the TEST rung verifies it with an ephemeral Node script. Boundary the plan must enforce: do NOT implement the three deferred actions logic, do NOT touch cheffyCalendar.ts/sw.js/GroceryList.astro, do NOT mount Cheffy in Layout (part 9), do NOT add motion that violates prefers-reduced-motion (part 7); must not regress part-2 open/close/state behavior; npm run build stays the durable gate.",
       "priority": 50,
-      "result_ref": null,
+      "result_ref": "notes/job_cheffy_dialogue_plan.md",
       "resume_mode": "fresh",
       "risk": [],
-      "status": "queued",
+      "status": "done",
       "title": "plan: dialogue-panel -- CheffyPanel runtime + tree + action-dispatch registry",
-      "updated_at": "2026-07-01T01:13:42.133249Z",
+      "updated_at": "2026-07-01T01:38:06.427928Z",
       "weight": "light"
     },
     "job_cheffy_dialogue_research": {
-      "attempts": 0,
+      "attempts": 1,
       "audit": null,
       "blocked_reason": null,
       "budget": {
@@ -361,16 +402,16 @@
       "not_before": null,
       "objective": "Ground part 3/9 (dialogue-panel) before it is blueprinted. Establish, with repo + web evidence: (1) The Astro-idiomatic way to ship the FULL dialogue nodes map (src/data/cheffy-dialogue.json) to the browser for CLIENT-SIDE node switching -- CheffyPanel.astro currently server-renders only the start node; compare importing the JSON inside the client script (Astro/Vite JSON import) vs define:vars vs an inlined script type=application/json data island; pick the PE-safe, no-bloat option (site must still behave with JS off). (2) How to enumerate archive weeks + meals for the free-text search node: how src/pages/archive/[slug].astro routing + slugs are produced, the slug rule already fixed in parts 1-2 (GroceryList weekId = H1 lowercased, spaces to hyphens; see cheffyState.ts deriveWeekId), the meal-name source (H2 headings via the same marked lexing parts 1-2 used), and whether a client-consumable index of {slug,title,meals} must be built at compile time (import.meta.glob over archive/*.md) or derived cheaply. (3) The EXACT part-2 seam to build on WITHOUT regressing it: the cheffySetState hook on #cheffy, the #cheffy-panel element, data-start-node, and the aria-expanded/hidden toggle contract in Cheffy.astro -- cite the current lines so the action-dispatch registry is designed additively. (4) A11y conventions for an in-page expandable dialogue (focus management; role=dialog + aria-live=polite already present). Boundary: this part OWNS CheffyPanel.astro + cheffy-dialogue.json only; it does NOT implement generate-ics/trigger-permission/export-checklist logic (parts 4/5/6) and does NOT mount Cheffy in Layout (part 9).",
       "priority": 50,
-      "result_ref": null,
+      "result_ref": "notes/job_cheffy_dialogue_research.md",
       "resume_mode": "fresh",
       "risk": [],
-      "status": "queued",
+      "status": "done",
       "title": "research: dialogue-panel runtime + search index + part-2 seam",
-      "updated_at": "2026-07-01T01:13:30.275450Z",
+      "updated_at": "2026-07-01T01:22:28.640559Z",
       "weight": "light"
     },
     "job_cheffy_dialogue_test": {
-      "attempts": 0,
+      "attempts": 1,
       "audit": null,
       "blocked_reason": null,
       "budget": {
@@ -398,12 +439,12 @@
       "not_before": null,
       "objective": "Verify part 3/9 dialogue-panel actually proves its claims. Checks: (1) Dialogue graph integrity -- every option goto points to an existing node id, no dangling/unreachable nodes, the start node resolves (ephemeral Node script over cheffy-dialogue.json + the pure traversal util). (2) Search resolution -- a known archive week title and a known meal name each resolve to the correct /archive/[slug] route via the search matcher util. (3) Action dispatch -- all five action values are handled: close + navigate-to-archive perform real navigation/collapse; generate-ics, trigger-permission, export-checklist hit the graceful default WITHOUT throwing (registration seam present for parts 4/5/6). (4) PE + regression -- <Cheffy /> still NOT mounted in Layout; part-2 open/close/state behavior intact. (5) Durable gate -- npm run build (astro check and astro build) passes clean, no console errors on any page. Use ephemeral throwaway Node scripts (scratchpad, not committed, no vitest/jest) for the pure utils; npm run build is the pass/fail gate. Each test must map to the exact claim it proves -- do not assert-and-move-on; if a claim cannot be exercised without the deferred parts (4/5/6), assert the graceful-default path instead.",
       "priority": 50,
-      "result_ref": null,
+      "result_ref": "TEST rung job_cheffy_dialogue_test: all 5 checks PASS (graph integrity, search resolution, action dispatch, PE/regression, npm run build clean 0 errors/0 warnings).",
       "resume_mode": "fresh",
       "risk": [],
-      "status": "queued",
+      "status": "done",
       "title": "test: dialogue-panel -- nav graph + search + action dispatch + build gate",
-      "updated_at": "2026-07-01T01:14:05.486616Z",
+      "updated_at": "2026-07-01T02:29:55.558063Z",
       "weight": "standard"
     },
     "job_cheffy_mascot_build": {
@@ -564,6 +605,7 @@
   "order": [
     "job_20260630_233827_audit_audit_job_cheffy_calendar_build",
     "job_20260701_004258_audit_audit_job_cheffy_mascot_build",
+    "job_20260701_014758_audit_audit_job_cheffy_dialogue_build",
     "job_20260630_230118_direct_bootstrap_decompose_dod",
     "job_cheffy_calendar_research",
     "job_cheffy_calendar_plan",
@@ -585,6 +627,6 @@
     "heartbeat_timeout_sec": 900,
     "max_active": 1
   },
-  "updated_at": "2026-07-01T01:14:05.486646Z",
+  "updated_at": "2026-07-01T02:29:55.558068Z",
   "version": 1
 }
