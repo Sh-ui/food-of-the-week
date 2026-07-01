@@ -901,7 +901,7 @@
       "weight": "standard"
     },
     "job_20260701_135602_audit_audit_cheffy_p7_reducedmotion_build": {
-      "attempts": 0,
+      "attempts": 1,
       "audit": {
         "attempts": 0,
         "audit_of": "cheffy_p7_reducedmotion_build",
@@ -926,7 +926,12 @@
       "failure_reason": null,
       "id": "job_20260701_135602_audit_audit_cheffy_p7_reducedmotion_build",
       "last_checkpoint_ref": null,
-      "lease": null,
+      "lease": {
+        "expires_at": "2026-07-01T14:56:41.053671Z",
+        "heartbeat_at": "2026-07-01T13:56:41.053671Z",
+        "leased_at": "2026-07-01T13:56:41.053671Z",
+        "owner": "stage-manager-20260701T135641Z-pid37653"
+      },
       "max_attempts": 2,
       "not_before": null,
       "objective": "Cold, isolated audit of cheffy_p7_reducedmotion_build: falsify the builder's claims against the DoD. See roles/audit.md.",
@@ -936,9 +941,9 @@
       "risk": [
         "audit_required"
       ],
-      "status": "queued",
+      "status": "active",
       "title": "audit cheffy_p7_reducedmotion_build",
-      "updated_at": "2026-07-01T13:56:02.552949Z",
+      "updated_at": "2026-07-01T13:56:41.053671Z",
       "weight": "standard"
     },
     "job_cheffy_calactions_build": {
@@ -1704,6 +1709,6 @@
     "heartbeat_timeout_sec": 900,
     "max_active": 1
   },
-  "updated_at": "2026-07-01T13:56:12.793400Z",
+  "updated_at": "2026-07-01T13:56:41.053784Z",
   "version": 1
 }
