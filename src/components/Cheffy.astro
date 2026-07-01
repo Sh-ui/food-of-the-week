@@ -116,6 +116,36 @@ if (filename) {
 )}
 
 <style>
+  /* --- mount contract (part 1): out of document flow, corner-docked, hidden --- */
+  /* until JS marks it ready. JS-off => stays display:none, inert, zero layout   */
+  /* impact -- site renders byte-identical to master with Cheffy disabled.       */
+  .cheffy-root {
+    display: none;
+  }
+
+  .cheffy-root.cheffy-ready {
+    display: block;
+    position: fixed;
+    z-index: 200;
+  }
+
+  .cheffy-root.cheffy-ready[data-corner="bottom-right"] {
+    right: 1.5rem;
+    bottom: 1.5rem;
+  }
+  .cheffy-root.cheffy-ready[data-corner="bottom-left"] {
+    left: 1.5rem;
+    bottom: 1.5rem;
+  }
+  .cheffy-root.cheffy-ready[data-corner="top-right"] {
+    right: 1.5rem;
+    top: 1.5rem;
+  }
+  .cheffy-root.cheffy-ready[data-corner="top-left"] {
+    left: 1.5rem;
+    top: 1.5rem;
+  }
+
   /* fills/strokes -- brand tokens */
   .cheffy-hat  { fill: var(--color-bg);        stroke: var(--color-primary); stroke-width: 4; stroke-linejoin: round; }
   .cheffy-band { fill: var(--color-secondary); stroke: var(--color-primary); stroke-width: 4; }
@@ -208,6 +238,8 @@ if (filename) {
     const toggle = root.querySelector<HTMLButtonElement>('.cheffy-toggle');
     const panel  = document.getElementById('cheffy-panel');
     if (!toggle || !panel) return;
+
+    root.classList.add('cheffy-ready');   // mount contract: only reveal once JS has initialized
 
     const weekId = getWeekIdFromDocument();
     const visited = loadVisited();
