@@ -6,6 +6,7 @@ interface Props {
 
 const { title, noindex = false } = Astro.props;
 import '../styles/global.css';
+import Cheffy from '../components/Cheffy.astro';
 
 // Ensure proper path joining for favicon (BASE_URL may or may not have trailing slash)
 const baseUrl = import.meta.env.BASE_URL.endsWith('/') 
@@ -31,5 +32,6 @@ const faviconHref = baseUrl + 'favicon.svg';
   </head>
   <body>
     <slot />
+    <Cheffy />
   </body>
 </html>
