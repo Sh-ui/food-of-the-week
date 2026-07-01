@@ -42,7 +42,7 @@
     "last_audit": null
   },
   "last_iteration": null,
-  "last_strike": "2026-07-01T19:34:53Z",
+  "last_strike": "2026-07-01T20:04:13Z",
   "next_queue": [],
   "pacing": {
     "block_started_at": null,
@@ -73,5 +73,5 @@
     "troupe-haiku"
   ],
   "working_branch": null,
-  "workshop_debt": 7
+  "workshop_debt": 8
 }
