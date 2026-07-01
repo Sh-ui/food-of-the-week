@@ -167,6 +167,21 @@ if (filename) {
   #cheffy[data-expr-override="neutral"]  [data-mouth="neutral"],
   #cheffy[data-expr-override="thinking"] [data-mouth="neutral"],
   #cheffy[data-expr-override="excited"]  [data-mouth="smile"] { display: block; }
+
+  /* --- reduced-motion sweep (part 7): neutralize ALL motion on the Cheffy    */
+  /* subtree without hiding content or shifting layout. Scoped to #cheffy so it */
+  /* never reaches the rest of the page (Layout is part 9). "Reduce, not remove"*/
+  /* pattern: animations collapse to an instant end-state (0.01ms, single run)  */
+  /* and transitions become instant -- opacity/visibility/display state swaps   */
+  /* stay fully functional, only their motion stops.                            */
+  @media (prefers-reduced-motion: reduce) {
+    #cheffy,
+    #cheffy * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
 </style>
 
 <script>
