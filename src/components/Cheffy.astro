@@ -30,13 +30,154 @@ const startNode = dialogue.start ?? 'root';
     data-start-node={startNode}
     aria-live="polite"
   >
-    {/* TODO(cheffy): SVG chef-hat with named eye/mouth parts + expression swap. */}
-    {/* TODO(cheffy): state machine idle | attention | dialogue | processing. */}
-    {/* TODO(cheffy): localStorage visitedWeeks[weekId] -> attention on new week. */}
     <button type="button" class="cheffy-toggle" aria-expanded="false" aria-controls="cheffy-panel">
       <span class="sr-only">Open Cheffy</span>
-      <span aria-hidden="true">👨‍🍳</span>
+      <svg class="cheffy-svg" viewBox="0 0 200 200" role="img" aria-hidden="true" focusable="false">
+        <!-- hat: static, never swapped -->
+        <path class="cheffy-hat" d="M60 90 q-30 -5 -28 -35 q0 -28 30 -28 q8 -22 38 -22 q30 0 38 22 q30 0 30 28 q2 30 -28 35 z"/>
+        <rect class="cheffy-band" x="58" y="88" width="84" height="34" rx="8"/>
+
+        <!-- EYES: one <g data-part="eyes"> containing one child per expression -->
+        <g class="cheffy-eyes" data-part="eyes">
+          <g data-expr="neutral">
+            <circle class="eye" cx="86" cy="62" r="5"/>
+            <circle class="eye" cx="114" cy="62" r="5"/>
+          </g>
+          <g data-expr="excited">
+            <circle class="eye" cx="86" cy="60" r="6"/>
+            <circle class="eye" cx="114" cy="60" r="6"/>
+          </g>
+          <g data-expr="thinking">
+            <!-- half-lidded / looking-up eyes; no blink -->
+            <path class="eye" d="M81 62 q5 -4 10 0" fill="none" stroke-width="3"/>
+            <path class="eye" d="M109 62 q5 -4 10 0" fill="none" stroke-width="3"/>
+          </g>
+        </g>
+
+        <!-- MOUTH: one <g data-part="mouth"> containing one child per mouth shape -->
+        <g class="cheffy-mouth" data-part="mouth">
+          <path data-mouth="neutral" d="M88 76 h24" fill="none" stroke-width="4" stroke-linecap="round"/>
+          <path data-mouth="smile" d="M86 74 q14 12 28 0" fill="none" stroke-width="4" stroke-linecap="round"/>
+          <circle data-mouth="surprised" cx="100" cy="78" r="5" fill="none" stroke-width="4"/>
+        </g>
+
+        <!-- notification dot: CSS-shown only in attention -->
+        <circle class="cheffy-dot" data-part="notification-dot" cx="150" cy="30" r="10"/>
+      </svg>
     </button>
     <CheffyPanel />
   </div>
 )}
+
+<style>
+  /* fills/strokes -- brand tokens */
+  .cheffy-hat  { fill: var(--color-bg);        stroke: var(--color-primary); stroke-width: 4; stroke-linejoin: round; }
+  .cheffy-band { fill: var(--color-secondary); stroke: var(--color-primary); stroke-width: 4; }
+  .cheffy-eyes .eye,
+  .cheffy-mouth [data-mouth] { fill: var(--color-primary); stroke: var(--color-primary); }
+  .cheffy-dot  { fill: var(--color-accent); }
+
+  /* --- expression swap: everything hidden, state re-shows exactly one --- */
+  #cheffy [data-expr],
+  #cheffy [data-mouth]  { display: none; }
+  #cheffy .cheffy-dot   { display: none; }
+
+  /* eyes per state */
+  #cheffy[data-state="idle"]       [data-expr="neutral"],
+  #cheffy[data-state="dialogue"]   [data-expr="neutral"],
+  #cheffy[data-state="attention"]  [data-expr="excited"],
+  #cheffy[data-state="processing"] [data-expr="thinking"] { display: block; }
+
+  /* mouth per state (dialogue -> smile; attention -> surprised; idle/processing -> neutral) */
+  #cheffy[data-state="idle"]       [data-mouth="neutral"],
+  #cheffy[data-state="processing"] [data-mouth="neutral"],
+  #cheffy[data-state="attention"]  [data-mouth="surprised"],
+  #cheffy[data-state="dialogue"]   [data-mouth="smile"] { display: block; }
+
+  /* notification dot only in attention */
+  #cheffy[data-state="attention"] .cheffy-dot { display: block; }
+
+  @keyframes cheffy-blink {
+    0%, 92%, 100% { transform: scaleY(1); }
+    95%           { transform: scaleY(0.1); }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    #cheffy[data-state="idle"] [data-expr="neutral"] .eye {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: cheffy-blink 4.5s ease-in-out infinite;
+    }
+  }
+</style>
+
+<script>
+  import { slugifyWeekTitle, isNewWeek, markVisited, initialStateFor,
+           type VisitedWeeks } from '../utils/cheffyState';
+
+  const VISITED_KEY = 'visitedWeeks';   // GLOBAL key, object map -- NOT per-week
+
+  function getWeekIdFromDocument(): string {
+    const title = document.querySelector('h1')?.textContent || 'current-week';
+    return slugifyWeekTitle(title);
+  }
+  function loadVisited(): VisitedWeeks {
+    try { return JSON.parse(localStorage.getItem(VISITED_KEY) || '{}'); }
+    catch { return {}; }
+  }
+  function saveVisited(v: VisitedWeeks): void {
+    localStorage.setItem(VISITED_KEY, JSON.stringify(v));
+  }
+
+  function initCheffy(): void {
+    const root = document.getElementById('cheffy');
+    if (!root) return;                                   // absent on this page -> no-op
+    const toggle = root.querySelector<HTMLButtonElement>('.cheffy-toggle');
+    const panel  = document.getElementById('cheffy-panel');
+    if (!toggle || !panel) return;
+
+    const weekId = getWeekIdFromDocument();
+    const visited = loadVisited();
+    const isNew = isNewWeek(visited, weekId);
+
+    // --- single source of truth for the active state ---
+    function setState(s: 'idle' | 'attention' | 'dialogue' | 'processing') {
+      root.setAttribute('data-state', s);
+    }
+
+    // first paint: new week -> attention(+dot), else idle
+    setState(initialStateFor(isNew));
+
+    // mark the week visited (clears attention path) + fall back to idle
+    function visit() {
+      if (isNewWeek(loadVisited(), weekId)) saveVisited(markVisited(loadVisited(), weekId));
+    }
+
+    // --- toggle / open-close wiring (panel VISIBILITY only) ---
+    function openPanel() {
+      panel.hidden = false;
+      toggle.setAttribute('aria-expanded', 'true');
+      visit();
+      setState('dialogue');
+    }
+    function closePanel() {
+      panel.hidden = true;
+      toggle.setAttribute('aria-expanded', 'false');
+      visit();
+      setState('idle');
+    }
+    toggle.addEventListener('click', () => {
+      (toggle.getAttribute('aria-expanded') === 'true') ? closePanel() : openPanel();
+    });
+
+    // processing: documented NO-OP hook for later parts (calendar-actions, notifications).
+    // They will call setState('processing') / setState('idle') around async work.
+    // Part 2 never triggers it. Expose the hook so later parts don't reach into internals:
+    (root as any).cheffySetState = setState;   // minimal seam; refine in a later part
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCheffy);
+  } else {
+    initCheffy();
+  }
+</script>
