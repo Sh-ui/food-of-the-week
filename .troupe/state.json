@@ -13,40 +13,28 @@
   "dod": "Polish the Cheffy module's PRESENTATION layer on the getting-cheffy branch so it matches the intended floating corner-assistant UX. Behavior is already built and working (state machine, dialogue tree, calendar/ICS, checklist, notifications) -- do NOT rebuild behavior; build only the missing visual/layout layer. Per CHEFFY-SYSTEM.md. Acceptance: (1) floating-mascot: #cheffy is position:fixed, docked to a screen corner (default bottom-right, honoring data-corner), z-indexed above page content, out of document flow, present on every page; JS-off leaves it hidden/inert with the site byte-identical to master. (2) hat-bubble: the chef-hat SVG renders at a real visible size (~56-64px) inside a circular bubble button with background, shadow, and hover/press affordances; the idle micro-animation (blink + a gentle float/bob) visibly plays; the four expression states (idle/attention/dialogue/processing) are visually distinct; attention shows the notification dot. (3) floating-card-panel: ONE floating card UX that SCALES across all viewports (not separate per-breakpoint layouts). The card is always inset from all screen edges over a visible backdrop/scrim so the page shows around its edges; it has a consistent comfortable size clamped by min/max, so on desktop/tablet it reads as a floating corner card and on a phone (screen smaller than the card's min) it near-fills the viewport while STILL being the same inset floating card with visible margins/scrim -- never a distinct fullscreen mode. Opens over content (not inline), has a clear close affordance, and animates open/close smoothly. (4) polish: brand tokens (tailwind.config.mjs colors), spacing, and typography consistent with the site; no layout shift on load or open; prefers-reduced-motion collapses motion to instant while keeping all layout/visibility/state swaps functional. (5) screenshot-gate: add scripts/screenshot-cheffy.mjs -- a headless-Chrome (Playwright) script that boots the built site and captures, into committed docs/cheffy-shots/: mascot idle, mascot attention, and panel-open, each at mobile (~390px), tablet (~820px), and desktop (~1440px) widths. Two-part verification, BOTH required: (5a) a Sonnet cold auditor verifies via computed styles that #cheffy is position:fixed, .cheffy-svg width>0, and the panel is an inset overlay with a scrim within the min/max clamp, and that all nine screenshots exist; (5b) MANDATORY Opus visual-review rung -- the Director MUST arm a dedicated review rung dispatched to an Opus actor (troupe-opus/Planner or the Director itself, NOT Sonnet, NOT the human Producer, NOT the host). That Opus actor opens each committed PNG in docs/cheffy-shots/ with the Read tool (which renders images) and judges criteria 1-4 against the actual pixels at every breakpoint/state -- floating docked bubble, visible sized animated-looking hat, inset floating card with visible backdrop margins, polish/consistency -- and records a per-criterion PASS/FAIL visual verdict with notes to notes/cheffy-visual-review.md. The visual criteria (1-4) are signed off ONLY by this Opus verdict; a Sonnet-only or computed-style-only pass does NOT satisfy them. Done = npm run build (astro check && astro build) passes, no console errors on any page, the Opus visual-review verdict PASSES criteria 1-4 at all three breakpoints against the committed screenshots, and the site behaves exactly like master with Cheffy JS disabled.",
   "dod_progress": [
     {
-      "criterion": "calendar-engine: cheffyCalendar.ts time extraction from week Markdown + valid ICS (add-all + per-recipe mini) + Google Calendar template URL; UI-independent.",
-      "status": "done"
+      "criterion": "floating-mascot: #cheffy is position:fixed, docked to a screen corner (default bottom-right, honoring data-corner), z-indexed above page content, out of document flow, present on every page; JS-off leaves it hidden/inert and the site byte-identical to master.",
+      "status": "pending"
     },
     {
-      "criterion": "mascot-state-machine: Cheffy.astro corner SVG mascot with expression states + idle/attention/dialogue/processing state machine keyed off the per-week localStorage id (visitedWeeks).",
-      "status": "done"
+      "criterion": "hat-bubble: chef-hat SVG renders at a real visible size (~56-64px) inside a circular bubble button with background, shadow, and hover/press affordances; idle micro-animation (blink + gentle float/bob) plays; the four expression states (idle/attention/dialogue/processing) are visually distinct; attention shows the notification dot.",
+      "status": "pending"
     },
     {
-      "criterion": "dialogue-panel: CheffyPanel.astro + cheffy-dialogue.json data-driven tree with goto navigation, free-text search node, and action dispatch.",
-      "status": "done"
+      "criterion": "floating-card-panel: ONE floating card UX that scales across all viewports -- always inset from all screen edges over a visible backdrop/scrim, one consistent size clamped by min/max (desktop/tablet floating corner card; phone near-fills but stays the same inset floating card with visible margins/scrim, never a distinct fullscreen mode); opens over content with a clear close affordance and smooth open/close animation.",
+      "status": "pending"
     },
     {
-      "criterion": "calendar-actions: generate-ics download + per-recipe mini export + Google Calendar link wired from the dialogue panel.",
-      "status": "done"
+      "criterion": "polish: brand tokens (tailwind.config.mjs colors), spacing, and typography consistent with the site; no layout shift on load or open; prefers-reduced-motion collapses motion to instant while keeping all layout/visibility/state swaps functional.",
+      "status": "pending"
     },
     {
-      "criterion": "local-notifications: public/sw.js opt-in local reminders triggered only via the trigger-permission dialogue action; clean degradation on unsupported browsers.",
-      "status": "done"
+      "criterion": "screenshot-gate: scripts/screenshot-cheffy.mjs (Playwright headless-Chrome) boots the built site and captures mascot idle, mascot attention, and panel-open at mobile ~390px / tablet ~820px / desktop ~1440px into committed docs/cheffy-shots/ (9 PNGs); Sonnet cold auditor (5a) verifies via computed styles that #cheffy is position:fixed, .cheffy-svg width>0, and the panel is an inset overlay+scrim within the min/max clamp, and that all nine screenshots exist.",
+      "status": "pending"
     },
     {
-      "criterion": "checklist-export-import: JSON + Markdown export and import (merge/overwrite) reusing GroceryList.astro localStorage state.",
-      "status": "done"
-    },
-    {
-      "criterion": "reduced-motion: prefers-reduced-motion honored across mascot/panel/animations; no layout shift.",
-      "status": "done"
-    },
-    {
-      "criterion": "animated-readme-svg: src/assets/cheffy-animated.svg SMIL demo loop embedded in README.md.",
-      "status": "done"
-    },
-    {
-      "criterion": "pe-build-gate: <Cheffy /> wired into Layout.astro; npm run build (astro check && astro build) passes; no console errors on any page; behaves exactly like master with Cheffy JS disabled.",
-      "status": "done"
+      "criterion": "visual-review (5b): mandatory Opus visual-review rung -- an Opus actor opens each committed PNG in docs/cheffy-shots/ with the Read tool, judges criteria 1-4 against the pixels at every breakpoint/state, and records a per-criterion PASS/FAIL verdict to notes/cheffy-visual-review.md; visual criteria 1-4 are signed off ONLY by this Opus verdict.",
+      "status": "pending"
     }
   ],
   "gate": {

@@ -1,11 +1,17 @@
 {
-  "batch": [],
-  "context_files": [],
-  "dispatch": "DIRECT",
+  "batch": [
+    "job_cheffy_p1_mascot_plan",
+    "job_cheffy_p1_mascot_build",
+    "job_cheffy_p1_mascot_test"
+  ],
+  "context_files": [
+    "CHEFFY-SYSTEM.md"
+  ],
+  "dispatch": "RESEARCH",
   "dispatch_rules": "default-ascent",
-  "next_task": "job_20260701_182839_direct_bootstrap_decompose_dod",
-  "notes": "Cheffy DoD is 9/9 complete as of this Strike (cheffy_p7_reducedmotion + cheffy_p9_buildgate audit-passed and closed). No batch armed -- nothing left to arm on this DoD. Awaiting the next Director pass to review sign-off (state.json.dod_progress all done) and decide on production_active + PR proposal. See MEMORY/brief.md for the full state-of-the-world.",
-  "strike_timestamp": "2026-07-01T16:53:00Z",
+  "next_task": "job_cheffy_p1_mascot_research",
+  "notes": "BOOTSTRAP decomposition of the NEW presentation-polish DoD (supersedes the old 9-done behavior progress -- dod_progress reseeded to 6 pending criteria). Six hexagonal parts, one per criterion, built in this order (each visual part touches Cheffy.astro/CheffyPanel.astro CSS, so serialize to avoid diff collisions):\n  P1 floating-mascot (crit1)     -- ARMED NOW: research->plan->build->test (+auto AUDIT).\n  P2 hat-bubble (crit2)          -- arm next: SVG sizing+bubble button+idle blink/bob+4 expression states+notif dot.\n  P3 floating-card-panel (crit3) -- arm after P2: ONE inset floating card that SCALES (min/max clamp, scrim, never a distinct fullscreen), smooth open/close.\n  P4 polish (crit4)              -- arm after P3: tailwind brand tokens/spacing/typography, no layout shift, prefers-reduced-motion -> instant.\n  P5 screenshot-gate (crit5)     -- arm after P1-P4 all audit-passed (shots must show FINAL pixels): scripts/screenshot-cheffy.mjs (Playwright) -> 9 PNGs in docs/cheffy-shots/ (idle/attention/panel-open x 390/820/1440). Its auto AUDIT = the Sonnet 5a cold check (computed styles + all 9 PNGs exist). Tag this BUILD --criterion <crit5 string> so reconcile-dod flips crit5.\n  P5b visual-review (crit5b)     -- arm LAST, depends on P5 committing the 9 PNGs. MANDATORY OPUS rung: dispatch PLAN (->troupe-opus) or DIRECT (->troupe-director), NEVER Sonnet/Haiku/host. Objective: open EACH committed PNG in docs/cheffy-shots/ with the Read tool, judge crit1-4 against the pixels at every breakpoint/state, write per-criterion PASS/FAIL to notes/cheffy-visual-review.md. Tag it --criterion <crit5b string>.\n\nTAGGING POLICY (DoD override): P1-P4 BUILDs are deliberately NOT --criterion-tagged. The visual criteria 1-4 are signed off ONLY by the Opus 5b verdict -- a Sonnet/computed-style pass does NOT satisfy them. So crit1-4 stay 'pending' through their Sonnet audits and are flipped to 'done' by the DIRECTOR at sign-off (direct dod_progress write, per walkthrough.md) ONLY after notes/cheffy-visual-review.md records PASS for that criterion at all 3 breakpoints. reconcile-dod handles only crit5 (P5 build) and crit5b (P5b review job).\n\nSIGN-OFF GATE (DoD 'Done'): npm run build passes, no console errors on any page, the Opus 5b verdict PASSES crit1-4 at all three breakpoints against the committed screenshots, and the site behaves exactly like master with Cheffy JS disabled. Then Director writes the [pr] proposal to MEMORY/CALLBOARD.md and sets production_active=false.\n\nBehavior (state machine/dialogue/calendar/ICS/checklist/notifications) is already built and working -- every rung is PRESENTATION-ONLY; do NOT rebuild or touch behavior JS.",
+  "strike_timestamp": "2026-07-01T18:39:35.355824Z",
   "warm_set": [
     "troupe-director",
     "troupe-opus",

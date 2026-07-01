@@ -1003,10 +1003,10 @@
       "not_before": null,
       "objective": "Decompose the DoD hexagonally into parts (one per criterion), seed dod_progress (one entry per criterion), and arm the first part's rung structure (a PLAN(ner) rung -> BUILD -> TEST -> AUDIT, scoped) plus next_assignment (batch + dispatch_rules + warm_set). First pass: no prior session/brief -- see roles/director.md.",
       "priority": 50,
-      "result_ref": null,
+      "result_ref": "retired duplicate decompose (host cleanup, re-aim churn)",
       "resume_mode": "fresh",
       "risk": [],
-      "status": "queued",
+      "status": "done",
       "title": "bootstrap: decompose DoD",
       "updated_at": "2026-07-01T18:15:34.204179Z",
       "weight": "light"
@@ -1027,26 +1027,21 @@
       "failure_reason": null,
       "id": "job_20260701_182045_direct_bootstrap_decompose_dod",
       "last_checkpoint_ref": null,
-      "lease": {
-        "expires_at": "2026-07-01T18:53:19.646009Z",
-        "heartbeat_at": "2026-07-01T18:23:19.646009Z",
-        "leased_at": "2026-07-01T18:23:19.646009Z",
-        "owner": "stage-manager-20260701T182319Z-pid64734"
-      },
+      "lease": null,
       "max_attempts": 1,
       "not_before": null,
       "objective": "Decompose the DoD hexagonally into parts (one per criterion), seed dod_progress (one entry per criterion), and arm the first part's rung structure (a PLAN(ner) rung -> BUILD -> TEST -> AUDIT, scoped) plus next_assignment (batch + dispatch_rules + warm_set). First pass: no prior session/brief -- see roles/director.md.",
       "priority": 50,
-      "result_ref": null,
+      "result_ref": "retired duplicate decompose (host cleanup, re-aim churn)",
       "resume_mode": "fresh",
       "risk": [],
-      "status": "active",
+      "status": "done",
       "title": "bootstrap: decompose DoD",
       "updated_at": "2026-07-01T18:23:19.646009Z",
       "weight": "light"
     },
     "job_20260701_182839_direct_bootstrap_decompose_dod": {
-      "attempts": 0,
+      "attempts": 1,
       "audit": null,
       "blocked_reason": null,
       "budget": {
@@ -1069,9 +1064,9 @@
       "result_ref": null,
       "resume_mode": "fresh",
       "risk": [],
-      "status": "queued",
+      "status": "done",
       "title": "bootstrap: decompose DoD",
-      "updated_at": "2026-07-01T18:28:39.931235Z",
+      "updated_at": "2026-07-01T18:40:52.486534Z",
       "weight": "light"
     },
     "job_cheffy_calactions_build": {
@@ -1670,6 +1665,155 @@
       "updated_at": "2026-07-01T01:00:37.261154Z",
       "weight": "light"
     },
+    "job_cheffy_p1_mascot_build": {
+      "attempts": 0,
+      "audit": {
+        "attempts": 0,
+        "audit_of": null,
+        "auditor_job_id": null,
+        "last_verdict": null,
+        "max_attempts": 2,
+        "required": true,
+        "status": "pending"
+      },
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "after_each_step"
+      },
+      "context_files": [
+        "src/components/Cheffy.astro",
+        "src/layouts/Layout.astro",
+        "tailwind.config.mjs"
+      ],
+      "created_at": "2026-07-01T18:38:45.721709Z",
+      "criterion": null,
+      "cycle": {},
+      "depends_on": [
+        "job_cheffy_p1_mascot_plan"
+      ],
+      "dispatch": "BUILD",
+      "failure_reason": null,
+      "id": "job_cheffy_p1_mascot_build",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 2,
+      "not_before": null,
+      "objective": "Implement ONLY the floating-mascot positioning/mount contract (DoD criterion 1) per the auto-attached Planner blueprint. Make #cheffy: position:fixed, docked to a screen corner (default bottom-right, honoring data-corner), z-indexed above page content, out of document flow, present on every page via the Layout.astro mount; and with Cheffy JS disabled the element is hidden/inert and the site renders byte-identical to master (no layout shift, no visible mascot). ACCEPTANCE the audit will falsify: npm run build (astro check && astro build) passes; #cheffy computed position is fixed and docked to the default/data-corner; JS-off DOM+visual matches master. SCOPE FENCE -- do NOT change the hat SVG sizing/animation (crit 2), the panel scaling/scrim (crit 3), brand tokens/typography (crit 4), or add the screenshot script (crit 5); do NOT touch behavior JS (state machine/dialogue/calendar/ICS/checklist/notifications). Keep the diff to the container mount + its CSS. NOTE: this build is deliberately NOT --criterion-tagged -- visual criterion 1 is signed off ONLY by the later Opus visual-review rung (5b), never by this Sonnet audit.",
+      "priority": 50,
+      "result_ref": null,
+      "resume_mode": "fresh",
+      "risk": [
+        "code_change"
+      ],
+      "status": "queued",
+      "title": "build: floating-mascot position:fixed corner-dock + JS-off parity",
+      "updated_at": "2026-07-01T18:38:45.721717Z",
+      "weight": "standard"
+    },
+    "job_cheffy_p1_mascot_plan": {
+      "attempts": 0,
+      "audit": null,
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "on_block_or_risk"
+      },
+      "context_files": [],
+      "created_at": "2026-07-01T18:38:34.856498Z",
+      "criterion": null,
+      "cycle": {},
+      "depends_on": [
+        "job_cheffy_p1_mascot_research"
+      ],
+      "dispatch": "PLAN",
+      "failure_reason": null,
+      "id": "job_cheffy_p1_mascot_plan",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 1,
+      "not_before": null,
+      "objective": "Blueprint ONLY the floating-mascot part (DoD criterion 1) for the builder, on the research note that auto-attaches. Define the exact, file-scoped diff to make #cheffy: position:fixed, docked to a screen corner honoring data-corner (default bottom-right), z-indexed above page content and out of document flow, present on every page via the Layout.astro mount, and hidden/inert with Cheffy JS disabled so the site stays byte-identical to master (no layout shift, no visible mascot). Specify the precise CSS/markup edits and the JS-off hiding mechanism the research identified, plus checkable acceptance the builder+tester can prove. BOUNDARY: Cheffy.astro container + Layout mount + the minimal tailwind/z-index token only. Do NOT blueprint the hat-bubble SVG sizing/animation (crit 2), the panel scaling/scrim (crit 3), brand tokens/typography polish (crit 4), or the screenshot script (crit 5) -- those are separate later parts. If the part is mis-scoped or too big, escalate --to-dispatch DIRECT rather than expand it.",
+      "priority": 50,
+      "result_ref": null,
+      "resume_mode": "fresh",
+      "risk": [],
+      "status": "queued",
+      "title": "plan: floating-mascot positioning/mount blueprint",
+      "updated_at": "2026-07-01T18:38:34.856502Z",
+      "weight": "light"
+    },
+    "job_cheffy_p1_mascot_research": {
+      "attempts": 1,
+      "audit": null,
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "on_block_or_risk"
+      },
+      "context_files": [
+        "CHEFFY-SYSTEM.md",
+        "src/components/Cheffy.astro",
+        "src/layouts/Layout.astro",
+        "tailwind.config.mjs"
+      ],
+      "created_at": "2026-07-01T18:38:25.447726Z",
+      "criterion": null,
+      "cycle": {},
+      "depends_on": [],
+      "dispatch": "RESEARCH",
+      "failure_reason": null,
+      "id": "job_cheffy_p1_mascot_research",
+      "last_checkpoint_ref": null,
+      "lease": {
+        "expires_at": "2026-07-01T19:11:18.733439Z",
+        "heartbeat_at": "2026-07-01T18:41:18.733439Z",
+        "leased_at": "2026-07-01T18:41:18.733439Z",
+        "owner": "stage-manager-20260701T184118Z-pid67418"
+      },
+      "max_attempts": 1,
+      "not_before": null,
+      "objective": "PRESENTATION-ONLY. Establish, on the working branch, exactly how the Cheffy mascot is currently mounted+styled and what the floating-mascot contract (DoD criterion 1) requires -- gather grounded facts, do NOT build. Nail down: (a) is #cheffy server-rendered in Layout.astro or JS-injected, and what CSS currently positions it; (b) what 'position:fixed, docked to data-corner (default bottom-right), z-indexed above page content, out of document flow, present on every page' concretely needs vs the current CSS, including the z-index/stacking-context ceiling from tailwind.config.mjs and the existing sticky header/modals so the mascot sits above content but below modals; (c) the crux: what 'JS-off leaves it hidden/inert AND the site byte-identical to master' concretely requires -- build the site, diff the rendered HTML/DOM of the working branch vs master with Cheffy JS disabled, and identify the exact mechanism that keeps #cheffy hidden+zero-layout-impact without JS (e.g. CSS hidden until a JS-added .cheffy-ready class). Report the seam files, the precise minimal changes needed, and any risk to byte-identical parity. Behavior (state machine/dialogue/calendar/ICS/checklist/notifications) is already built -- do NOT touch it.",
+      "priority": 50,
+      "result_ref": null,
+      "resume_mode": "fresh",
+      "risk": [],
+      "status": "active",
+      "title": "research: floating-mascot mount+positioning contract",
+      "updated_at": "2026-07-01T18:41:18.733439Z",
+      "weight": "light"
+    },
+    "job_cheffy_p1_mascot_test": {
+      "attempts": 0,
+      "audit": null,
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "after_each_step"
+      },
+      "context_files": [
+        "src/components/Cheffy.astro",
+        "src/layouts/Layout.astro"
+      ],
+      "created_at": "2026-07-01T18:38:55.830104Z",
+      "criterion": null,
+      "cycle": {},
+      "depends_on": [
+        "job_cheffy_p1_mascot_build"
+      ],
+      "dispatch": "TEST",
+      "failure_reason": null,
+      "id": "job_cheffy_p1_mascot_test",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 2,
+      "not_before": null,
+      "objective": "Verify ONLY the floating-mascot contract (DoD criterion 1) for the audited build -- prove each claim with how you checked, do not merely assert. Confirm: #cheffy computed position is fixed and docked to the default corner AND to a non-default data-corner; its z-index sits above page content; it is out of document flow (no effect on sibling layout); it is present on every page family (home, a week page, an archive page). Confirm with Cheffy JS disabled the site renders byte-identical to master -- diff built HTML/DOM against master and confirm no layout shift and no visible mascot. npm run build (astro check && astro build) passes with no console errors on any page. If a check fails, escalate --to-dispatch BUILD with the exact failing assertion. Do NOT test hat sizing/animation (crit 2), the panel (crit 3), tokens/typography (crit 4), or screenshots (crit 5) -- later parts.",
+      "priority": 50,
+      "result_ref": null,
+      "resume_mode": "fresh",
+      "risk": [],
+      "status": "queued",
+      "title": "test: verify floating-mascot contract + master parity (JS off)",
+      "updated_at": "2026-07-01T18:38:55.830109Z",
+      "weight": "standard"
+    },
     "job_cheffy_readmesvg_build": {
       "attempts": 1,
       "audit": {
@@ -1832,7 +1976,11 @@
     "cheffy_p9_buildgate_test",
     "job_20260701_181534_direct_bootstrap_decompose_dod",
     "job_20260701_182045_direct_bootstrap_decompose_dod",
-    "job_20260701_182839_direct_bootstrap_decompose_dod"
+    "job_20260701_182839_direct_bootstrap_decompose_dod",
+    "job_cheffy_p1_mascot_research",
+    "job_cheffy_p1_mascot_plan",
+    "job_cheffy_p1_mascot_build",
+    "job_cheffy_p1_mascot_test"
   ],
   "policy": {
     "backoff_base_sec": 300,
@@ -1841,6 +1989,6 @@
     "heartbeat_timeout_sec": 900,
     "max_active": 1
   },
-  "updated_at": "2026-07-01T18:28:39.931324Z",
+  "updated_at": "2026-07-01T18:41:53.037713Z",
   "version": 1
 }
