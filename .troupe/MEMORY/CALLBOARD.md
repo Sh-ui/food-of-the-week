@@ -11,4 +11,5 @@ Async, non-blocking notice board (the backstage callboard). The Stage Manager an
 - No nested bullets, no headers per entry, no restating context. Link out, don't inline.
 - **Prune on action:** once the Producer acts on an entry, delete it. The board stays short.
 
+- [2026-07-01 fyi] Part 1 (floating-mascot) audit-passed clean; Part 2 (hat-bubble) armed. For the 5b review: crit2's "four expression states" = the four #cheffy data-state values (idle/attention/dialogue/processing), NOT four expr variants -- the SVG has 3 data-expr eye groups (neutral/excited/thinking) + 3 mouths + the notif dot; there is NO "sleepy" state (bootstrap paraphrase was loose).
 - [2026-07-01 defer] DOM smoke-harness (happy-dom/Playwright) for the interactive panel -- parked as a post-ship test-infra follow-up, NOT a ship blocker (no committed test framework by design; `npm run build` is the durable gate). Open only if wanted after ship.

@@ -1899,6 +1899,160 @@
       "updated_at": "2026-07-01T19:32:24.891417Z",
       "weight": "standard"
     },
+    "job_cheffy_p2_hatbubble_build": {
+      "attempts": 1,
+      "audit": {
+        "attempts": 0,
+        "audit_of": null,
+        "auditor_job_id": null,
+        "last_verdict": null,
+        "max_attempts": 2,
+        "required": true,
+        "status": "pending"
+      },
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "after_each_step"
+      },
+      "context_files": [
+        "src/components/Cheffy.astro",
+        "tailwind.config.mjs"
+      ],
+      "created_at": "2026-07-01T19:43:20.217697Z",
+      "criterion": null,
+      "cycle": {},
+      "depends_on": [
+        "job_cheffy_p2_hatbubble_plan"
+      ],
+      "dispatch": "BUILD",
+      "failure_reason": null,
+      "id": "job_cheffy_p2_hatbubble_build",
+      "last_checkpoint_ref": null,
+      "lease": {
+        "expires_at": "2026-07-01T20:49:42.329309Z",
+        "heartbeat_at": "2026-07-01T19:49:42.329309Z",
+        "leased_at": "2026-07-01T19:49:42.329309Z",
+        "owner": "stage-manager-20260701T194942Z-pid74490"
+      },
+      "max_attempts": 2,
+      "not_before": null,
+      "objective": "Implement ONLY the hat-bubble presentation contract (DoD criterion 2) per the auto-attached Planner blueprint, in src/components/Cheffy.astro only. Deliver: the visible chef-hat SVG at a real ~56-64px size inside a circular .cheffy-toggle bubble button with background, shadow, and hover/press affordances (using existing --color-* brand tokens); a gentle idle float/bob animation added alongside the existing cheffy-blink, both transform-based (zero layout shift) and gated behind prefers-reduced-motion; the four states idle/attention/dialogue/processing each visually distinct via the existing expr/mouth mapping (refine for distinctness, do not rename -- there is NO 'sleepy'); and the .cheffy-dot notification dot correct and visible only in the attention state. ACCEPTANCE the audit will falsify: npm run build (astro check and astro build) passes with no console errors; .cheffy-svg computed width is >0 and lands ~56-64px; .cheffy-toggle has a non-transparent background + box-shadow + hover (:hover) and press (:active) rules; float/bob AND blink keyframes exist and sit inside prefers-reduced-motion guards; the four data-state values render distinct expr+mouth combinations; .cheffy-dot displays only under #cheffy[data-state=attention]. SCOPE FENCE -- do NOT change the Part-1 mount/position CSS or break JS-off parity; do NOT add or edit tailwind.config.mjs tokens (crit4); do NOT touch the panel (crit3) or add the screenshot script (crit5); do NOT touch behavior JS. Keep the diff to Cheffy.astro mascot markup + its style block. NOTE: this build is deliberately NOT --criterion-tagged -- visual criterion 2 is signed off ONLY by the later Opus visual-review rung (5b), never by this Sonnet audit.",
+      "priority": 50,
+      "result_ref": null,
+      "resume_mode": "fresh",
+      "risk": [
+        "code_change"
+      ],
+      "status": "active",
+      "title": "build: hat-bubble SVG sizing + bubble button + idle blink/bob + expressions + notif dot",
+      "updated_at": "2026-07-01T19:49:42.329309Z",
+      "weight": "standard"
+    },
+    "job_cheffy_p2_hatbubble_plan": {
+      "attempts": 1,
+      "audit": null,
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "on_block_or_risk"
+      },
+      "context_files": [],
+      "created_at": "2026-07-01T19:43:07.478123Z",
+      "criterion": null,
+      "cycle": {},
+      "depends_on": [
+        "job_cheffy_p2_hatbubble_research"
+      ],
+      "dispatch": "PLAN",
+      "failure_reason": null,
+      "id": "job_cheffy_p2_hatbubble_plan",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 1,
+      "not_before": null,
+      "objective": "Blueprint ONLY the hat-bubble part (DoD criterion 2) for the builder, on the research note that auto-attaches. Define the exact, file-scoped diff to src/components/Cheffy.astro that: (1) sizes the visible chef-hat SVG to ~56-64px inside a circular bubble button (.cheffy-toggle) meeting a >=44px touch target; (2) gives that button real bubble chrome -- background, shadow, and hover/press affordances -- using EXISTING brand tokens (do not add tailwind tokens; that is crit4); (3) adds a gentle transform-based idle float/bob keyframe alongside the existing blink, both gated behind prefers-reduced-motion so reduced-motion collapses them to instant with layout/state swaps intact and zero layout shift; (4) ensures the FOUR states idle/attention/dialogue/processing each read visually distinct (expr/mouth/dot mapping already exists -- refine only for distinctness at real size, do not rename); (5) keeps the .cheffy-dot notification dot correct for the attention state. Specify precise CSS/markup edits and checkable acceptance the builder+tester can prove (computed svg width >0 at target size, button has background+shadow, hover/press rules present, bob+blink keyframes exist and are reduced-motion-gated, the four data-state values yield distinct expr+mouth combos, dot visible only in attention, npm run build passes). BOUNDARY: Cheffy.astro markup + its style block only. Do NOT blueprint the panel scaling/scrim (crit3), brand-token/typography polish or tailwind.config edits (crit4), or the screenshot script (crit5); do NOT touch behavior JS. There is NO 'sleepy' state -- the four states are idle/attention/dialogue/processing. If the part is mis-scoped or too big, escalate --to-dispatch DIRECT rather than expand it.",
+      "priority": 50,
+      "result_ref": "notes/job_cheffy_p2_hatbubble_plan.md",
+      "resume_mode": "fresh",
+      "risk": [],
+      "status": "done",
+      "title": "plan: hat-bubble sizing/button/idle-anim/expression blueprint",
+      "updated_at": "2026-07-01T19:49:23.708792Z",
+      "weight": "light"
+    },
+    "job_cheffy_p2_hatbubble_research": {
+      "attempts": 1,
+      "audit": null,
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "on_block_or_risk"
+      },
+      "context_files": [
+        "CHEFFY-SYSTEM.md",
+        "src/components/Cheffy.astro",
+        "tailwind.config.mjs"
+      ],
+      "created_at": "2026-07-01T19:42:55.633898Z",
+      "criterion": null,
+      "cycle": {},
+      "depends_on": [],
+      "dispatch": "RESEARCH",
+      "failure_reason": null,
+      "id": "job_cheffy_p2_hatbubble_research",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 1,
+      "not_before": null,
+      "objective": "PRESENTATION-ONLY, do NOT build -- gather grounded facts for the hat-bubble part (DoD criterion 2) so the Planner blueprints on evidence. In src/components/Cheffy.astro the mascot is a button.cheffy-toggle wrapping svg.cheffy-svg (viewBox 0 0 200 200) with a static .cheffy-hat path, data-expr eye groups (neutral/excited/thinking), data-mouth shapes (neutral/smile/surprised), a .cheffy-dot notification circle, and an existing cheffy-blink idle keyframe. Nail down exact current values and the minimal edits for: (a) SIZING -- what dimensions .cheffy-svg and .cheffy-toggle render at today and precisely what CSS lands the visible hat at ~56-64px inside a touch-friendly (>=44px) target; (b) BUBBLE BUTTON -- .cheffy-toggle is a bare button today; what a circular bubble needs (background, shadow, hover and press states) using the EXISTING brand tokens (--color-* from tailwind.config.mjs), not new tokens; (c) IDLE ANIMATION -- confirm the blink exists and specify a gentle transform-based float/bob keyframe with zero layout shift, gated behind prefers-reduced-motion (a reduced-motion sweep already exists at #cheffy scope -- verify it neutralizes the bob); (d) EXPRESSION STATES -- the DoD FOUR states are idle/attention/dialogue/processing (already wired via #cheffy[data-state=...] CSS mapping the 3 expr groups + 3 mouths); confirm the exact state->expr->mouth mapping and what makes each of the four read VISUALLY DISTINCT at real size (there is NO 'sleepy' state -- do not invent one); (e) NOTIFICATION DOT -- .cheffy-dot shows only in attention; confirm its size/position/contrast. Report the seam (Cheffy.astro markup + its style block), the precise minimal edits, and any risk to the Part-1 mount contract or JS-off parity. Behavior JS (state machine/dialogue/calendar/ICS/checklist/notifications) is already built -- do NOT touch it.",
+      "priority": 50,
+      "result_ref": "notes/job_cheffy_p2_hatbubble_research.md",
+      "resume_mode": "fresh",
+      "risk": [],
+      "status": "done",
+      "title": "research: hat-bubble sizing + bubble button + idle anim + expression states",
+      "updated_at": "2026-07-01T19:46:36.573704Z",
+      "weight": "light"
+    },
+    "job_cheffy_p2_hatbubble_test": {
+      "attempts": 0,
+      "audit": {
+        "attempts": 0,
+        "audit_of": null,
+        "auditor_job_id": null,
+        "last_verdict": null,
+        "max_attempts": 2,
+        "required": true,
+        "status": "pending"
+      },
+      "blocked_reason": null,
+      "budget": {
+        "checkpoint_mode": "after_each_step"
+      },
+      "context_files": [
+        "src/components/Cheffy.astro"
+      ],
+      "created_at": "2026-07-01T19:43:31.410914Z",
+      "criterion": null,
+      "cycle": {},
+      "depends_on": [
+        "job_cheffy_p2_hatbubble_build"
+      ],
+      "dispatch": "BUILD",
+      "failure_reason": null,
+      "id": "job_cheffy_p2_hatbubble_test",
+      "last_checkpoint_ref": null,
+      "lease": null,
+      "max_attempts": 2,
+      "not_before": null,
+      "objective": "Verify ONLY the hat-bubble contract (DoD criterion 2) for the audited build -- prove each claim with HOW you checked, do not merely assert. Confirm in src/components/Cheffy.astro and the built output: (a) the visible chef-hat SVG renders at a real ~56-64px size (.cheffy-svg computed/attribute dimensions >0 at target); (b) .cheffy-toggle is a circular bubble button with a non-transparent background, a box-shadow, and hover (:hover) + press (:active) affordance rules; (c) an idle float/bob keyframe AND the blink keyframe both exist and are gated behind prefers-reduced-motion, and under prefers-reduced-motion reduce the motion collapses to instant while the expr/mouth/dot state swaps still apply (no layout shift either way); (d) the four states idle/attention/dialogue/processing each select a DISTINCT expr+mouth combination (walk each data-state value); (e) the .cheffy-dot notification dot shows only under #cheffy[data-state=attention] and is hidden otherwise; (f) npm run build (astro check and astro build) passes with no console errors; (g) the Part-1 mount contract and JS-off master parity are NOT regressed. If a check fails, escalate --to-dispatch BUILD with the exact failing assertion. Do NOT test the panel (crit3), tokens/typography (crit4), or screenshots (crit5) -- later parts. NOTE: pixel-level visual judgement of criterion 2 is the Opus 5b rung's job, not yours -- verify only the mechanically checkable facts.",
+      "priority": 50,
+      "result_ref": null,
+      "resume_mode": "fresh",
+      "risk": [],
+      "status": "queued",
+      "title": "test: verify hat-bubble contract (sizing/button/anim/expressions/dot) + no crit1 regression",
+      "updated_at": "2026-07-01T19:43:31.410918Z",
+      "weight": "standard"
+    },
     "job_cheffy_readmesvg_build": {
       "attempts": 1,
       "audit": {
@@ -2067,7 +2221,11 @@
     "job_cheffy_p1_mascot_research",
     "job_cheffy_p1_mascot_plan",
     "job_cheffy_p1_mascot_build",
-    "job_cheffy_p1_mascot_test"
+    "job_cheffy_p1_mascot_test",
+    "job_cheffy_p2_hatbubble_research",
+    "job_cheffy_p2_hatbubble_plan",
+    "job_cheffy_p2_hatbubble_build",
+    "job_cheffy_p2_hatbubble_test"
   ],
   "policy": {
     "backoff_base_sec": 300,
@@ -2076,6 +2234,6 @@
     "heartbeat_timeout_sec": 900,
     "max_active": 1
   },
-  "updated_at": "2026-07-01T19:32:32.847711Z",
+  "updated_at": "2026-07-01T19:49:42.329402Z",
   "version": 1
 }
