@@ -21,6 +21,7 @@ import path from 'path';
 export interface GroceryItem {
   text: string;
   globallyChecked: boolean;
+  isLunch?: boolean;
 }
 
 export interface ListCategory {

@@ -27,6 +27,11 @@ export default {
         'cooked-bg': '#f0ede6',
         'cooked-text': '#8a887f',
         'cooked-border': '#d8d4c9',
+
+        // Lunch item marker (cooler palette, per-row distinction inside the merged grocery list)
+        'lunch': '#3e8475',
+        'lunch-light': '#7cc0ae',
+        'lunch-border': '#bfe0d6',
       },
       instructionPalette: [
         { name: 'salmon', color: '#D78A76' },

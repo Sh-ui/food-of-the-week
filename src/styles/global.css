@@ -25,7 +25,10 @@
   --color-cooked-bg: theme('colors.cooked-bg');
   --color-cooked-text: theme('colors.cooked-text');
   --color-cooked-border: theme('colors.cooked-border');
-  
+  --color-lunch: theme('colors.lunch');
+  --color-lunch-light: theme('colors.lunch-light');
+  --color-lunch-border: theme('colors.lunch-border');
+
   /* Spacing */
   --spacing-xs: theme('spacing.xs');
   --spacing-sm: theme('spacing.sm');

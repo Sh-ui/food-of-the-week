@@ -3,21 +3,28 @@ import ActionButton from './ActionButton.astro';
 import BackToCurrentWeekButton from './BackToCurrentWeekButton.astro';
 import Footer from './Footer.astro';
 import GroceryList from './GroceryList.astro';
-import LunchGroceryAddon from './LunchGroceryAddon.astro';
 import MealCard from './MealCard.astro';
 import StickyHeader from './StickyHeader.astro';
 import { getInstructionBadgeColor, getSubsectionScheme } from '../config/colors';
+import { mergeLunchGrocery } from '../utils/mergeLunchGrocery';
+import lunchWeek from '../data/lunch-week.json';
 import type { WeekPlan } from '../utils/weekParser';
 
 interface Props {
   weekPlan: WeekPlan;
-  showLunchAddon?: boolean;
+  foldLunchIntoGrocery?: boolean;
 }
 
-const { weekPlan, showLunchAddon = false } = Astro.props;
-const base = import.meta.env.BASE_URL.endsWith('/') 
-  ? import.meta.env.BASE_URL 
+const { weekPlan, foldLunchIntoGrocery = false } = Astro.props;
+const base = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL
   : import.meta.env.BASE_URL + '/';
+
+const lunchGroceryCategories = foldLunchIntoGrocery ? lunchWeek.grocery ?? [] : [];
+const lunchDefaultOn = (lunchWeek as { autoGrocery?: boolean }).autoGrocery !== false;
+const groceryCategories = lunchGroceryCategories.length > 0
+  ? mergeLunchGrocery(weekPlan.groceryList, lunchGroceryCategories)
+  : weekPlan.groceryList;
 
 interface HeroRow {
   id: string;
@@ -189,14 +196,12 @@ const heroRows = heroRowsFromMeals.length > 0 ? heroRowsFromMeals : heroRowsFrom
     )}
   </section>
   
-  {weekPlan.groceryList.length > 0 && (
+  {groceryCategories.length > 0 && (
     <GroceryList
-      categories={weekPlan.groceryList}
+      categories={groceryCategories}
+      hasLunchItems={lunchGroceryCategories.length > 0}
+      lunchDefaultOn={lunchDefaultOn}
     />
-  )}
-
-  {showLunchAddon && weekPlan.groceryList.length > 0 && (
-    <LunchGroceryAddon />
   )}
   
   <div class="flex flex-col gap-xl mobile:gap-lg">
