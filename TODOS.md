@@ -35,11 +35,11 @@
 ### Theme & UI
 - [ ] Dark mode / light mode theme based on device detection
 - [ ] Optional theme toggle in footer
-- [ ] Hero section redesign - something more appropriate (maybe non-animated cheffy hat face? Or save for getting-cheffy branch?)
+- [x] Cheffy mascot landed (rig + dialogue + panel); README hero uses `public/cheffy-animated.svg`
 
 ### Stack Migration
 - [ ] Migrate to a new stack based on [MIGRATION.md](MIGRATION.md)
 
 ---
 
-**Note:** Keeping it simple for now on the master branch. See [TODOS on getting-cheffy branch](https://github.com/sh-ui/food-of-the-week/blob/getting-cheffy/TODOS.md) for the more ambitious feature roadmap. 
+**Note:** The Cheffy corner assistant has landed -- see [CHEFFY-SYSTEM.md](CHEFFY-SYSTEM.md) for its architecture and editing guides (`src/data/cheffy-*.json`). 

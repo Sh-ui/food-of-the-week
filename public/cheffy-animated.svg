@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="14 -14 172 182" width="180" height="190" role="img" aria-label="Cheffy, the Food of the Week kitchen helper">
+  <!-- Self-contained SMIL demo loop of the Cheffy rig (same anatomy as
+       src/utils/cheffyRig.ts). Blink -> glance left -> glance right -> idle.
+       No CSS/JS so it animates inline on GitHub. Regenerate by hand if the
+       rig anatomy changes; ink is the site primary #494331. -->
+  <g fill="#494331">
+    <!-- gentle idle bob for the whole figure -->
+    <animateTransform attributeName="transform" type="translate"
+      values="0 0; 0 -2.5; 0 0" keyTimes="0; .5; 1"
+      dur="3.6s" repeatCount="indefinite" additive="sum"/>
+
+    <!-- eyes (paint under the hat, like the live rig) -->
+    <g>
+      <!-- shared gaze: hold -> left -> right -> center -->
+      <animateTransform attributeName="transform" type="translate"
+        values="0 0; 0 0; -4.5 1; -4.5 1; 4.5 1; 4.5 1; 0 0; 0 0"
+        keyTimes="0; .3; .37; .5; .57; .7; .77; 1"
+        dur="9s" repeatCount="indefinite" additive="sum"/>
+      <g transform="translate(82 118)">
+        <circle r="10">
+          <animateTransform attributeName="transform" type="scale"
+            values="1 1; 1 1; 1 .08; 1 1; 1 1; 1 .08; 1 1; 1 1"
+            keyTimes="0; .18; .2; .22; .58; .6; .62; 1"
+            dur="9s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+      <g transform="translate(118 118)">
+        <circle r="10">
+          <animateTransform attributeName="transform" type="scale"
+            values="1 1; 1 1; 1 .08; 1 1; 1 1; 1 .08; 1 1; 1 1"
+            keyTimes="0; .18; .2; .22; .58; .6; .62; 1"
+            dur="9s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+    </g>
+
+    <!-- hat cloud: three lobes + tapered base -->
+    <circle cx="56" cy="58" r="27"/>
+    <circle cx="100" cy="42" r="38"/>
+    <circle cx="144" cy="58" r="27"/>
+    <path d="M31 58 H169 L162 93 Q161 100 152 100 H48 Q39 100 38 93 Z"/>
+
+    <!-- brim -->
+    <path d="M58 142 Q100 142 142 142" fill="none" stroke="#494331"
+      stroke-width="18" stroke-linecap="round"/>
+  </g>
+</svg>
