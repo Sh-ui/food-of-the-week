@@ -1,0 +1,177 @@
+---
+// cheffy-demo.astro -- Cheffy rig playground.
+// Dev/QA surface: exercises every pose, ambient event, behavior mode, and
+// state-machine state against the REAL corner-mounted Cheffy instance (the
+// same one Layout mounts everywhere) -- no duplicate mascot, no duplicate ids.
+// The page-level style below just renders that instance extra large.
+import Layout from '../layouts/Layout.astro';
+import CheffyStatic from '../components/CheffyStatic.astro';
+import posesJson from '../data/cheffy-poses.json';
+import { REST, type RigParams } from '../utils/cheffyRig';
+
+const poseNames = Object.keys(posesJson.poses ?? {});
+const aliasNames = Object.keys(posesJson.aliases ?? {});
+
+// Sanitized pose params for the static gallery (mirror of the client-side
+// sanitizer in Cheffy.astro: numeric rig keys only).
+function poseParams(name: string): Partial<RigParams> {
+  const src = (posesJson.poses as Record<string, Record<string, unknown>>)[name] ?? {};
+  const out: Record<string, number> = {};
+  for (const k in src) {
+    if (k in REST && typeof src[k] === 'number') out[k] = src[k] as number;
+  }
+  return out as Partial<RigParams>;
+}
+---
+
+<Layout title="Cheffy Playground" noindex={true} cheffyFilename="FOOD-OF-THE-WEEK.md">
+  <main class="playground">
+    <h1>Cheffy Playground</h1>
+    <p class="hint">
+      Drives the real corner instance (enlarged on this page). Poses come from
+      <code>src/data/cheffy-poses.json</code>; dialogue from
+      <code>src/data/cheffy-dialogue.json</code>.
+    </p>
+
+    <section>
+      <h2>Pose gallery (static)</h2>
+      <div class="gallery">
+        {poseNames.map((n) => (
+          <figure>
+            <CheffyStatic pose={poseParams(n)} size="5.5rem" />
+            <figcaption>{n}</figcaption>
+          </figure>
+        ))}
+      </div>
+    </section>
+
+    <section>
+      <h2>Poses</h2>
+      <div class="btn-row" data-group="pose">
+        {poseNames.map((n) => <button type="button" data-pose={n}>{n}</button>)}
+      </div>
+      <p class="hint">Aliases: {aliasNames.join(', ')}</p>
+    </section>
+
+    <section>
+      <h2>Ambient events</h2>
+      <div class="btn-row" data-group="event">
+        <button type="button" data-event="blink">blink</button>
+        <button type="button" data-event="bounce">bounce</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>Behavior mode</h2>
+      <div class="btn-row" data-group="mode">
+        <button type="button" data-mode="dormant">dormant</button>
+        <button type="button" data-mode="subtle">subtle</button>
+        <button type="button" data-mode="lively">lively</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>State machine</h2>
+      <div class="btn-row" data-group="state">
+        <button type="button" data-state-btn="idle">idle</button>
+        <button type="button" data-state-btn="attention">attention</button>
+        <button type="button" data-state-btn="dialogue">dialogue</button>
+        <button type="button" data-state-btn="processing">processing</button>
+      </div>
+      <div class="btn-row">
+        <button type="button" id="reset-week">reset "new week" flag</button>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .playground {
+    max-width: 34rem;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 12rem;
+  }
+  h2 {
+    margin-bottom: 0.5rem;
+  }
+  section {
+    margin-top: 1.5rem;
+  }
+  .btn-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .btn-row button {
+    font: 500 0.9rem var(--font-sans, sans-serif);
+    color: var(--color-primary);
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+  }
+  .btn-row button:hover {
+    background: var(--color-secondary);
+  }
+  .btn-row button[aria-pressed='true'] {
+    background: var(--color-secondary);
+    border-color: var(--color-primary);
+  }
+  .hint {
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+  }
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .gallery figure {
+    margin: 0;
+    text-align: center;
+  }
+  .gallery figcaption {
+    font-size: 0.8rem;
+    color: var(--color-text-light);
+  }
+
+  /* render the real corner Cheffy extra large on this page */
+  :global(#cheffy .cheffy-svg) {
+    width: 16rem;
+    height: 16rem;
+  }
+</style>
+
+<script>
+  function api(): any {
+    return (window as any).cheffy;
+  }
+
+  function pressed(group: HTMLElement, btn: HTMLElement): void {
+    group.querySelectorAll('button').forEach((b) => b.removeAttribute('aria-pressed'));
+    btn.setAttribute('aria-pressed', 'true');
+  }
+
+  document.addEventListener('click', (e) => {
+    const btn = (e.target as HTMLElement)?.closest<HTMLElement>('button');
+    if (!btn || !api()) return;
+    const group = btn.closest<HTMLElement>('.btn-row');
+
+    if (btn.dataset.pose) {
+      api().setExpr(btn.dataset.pose); // attribute interface, survives applyState
+      if (group) pressed(group, btn);
+    } else if (btn.dataset.event) {
+      api()[btn.dataset.event]();
+    } else if (btn.dataset.mode) {
+      api().setMode(btn.dataset.mode);
+      if (group) pressed(group, btn);
+    } else if (btn.dataset.stateBtn) {
+      api().setState(btn.dataset.stateBtn);
+      if (group) pressed(group, btn);
+    } else if (btn.id === 'reset-week') {
+      localStorage.removeItem('visitedWeeks');
+      location.reload();
+    }
+  });
+</script>

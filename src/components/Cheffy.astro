@@ -1,0 +1,520 @@
+---
+// Cheffy.astro -- corner mascot: SVG rig adapter + state-machine host.
+//
+// Architecture (see CHEFFY-SYSTEM.md): this component is only the ADAPTER that
+// binds the hexagonal units to the DOM. The units themselves know nothing
+// about each other or this file:
+//   cheffyRig.ts       pure geometry: rig params -> SVG attribute strings
+//   cheffy-poses.json  named expressions as data (human-editable)
+//   cheffyMotion.ts    generic spring engine
+//   cheffyBehavior.ts  ambient personality director (blink/glance/sleep/bounce)
+// The dialogue panel (CheffyPanel.astro) talks to the mascot ONLY through DOM
+// attributes on #cheffy (data-state, data-expr-override) -- no imports across.
+//
+// Progressive enhancement: the site works fully without this component; with
+// JS off it stays display:none and has zero layout impact.
+import fs from 'fs';
+import path from 'path';
+import CheffyPanel from './CheffyPanel.astro';
+import dialogue from '../data/cheffy-dialogue.json';
+import { ANATOMY, REST, computeFrame } from '../utils/cheffyRig';
+import { deriveWeekStart, extractCookingEvents, buildIcs, googleCalendarUrl }
+  from '../utils/cheffyCalendar';
+
+interface Props {
+  /** Hide Cheffy entirely on this page (default: shown). */
+  enabled?: boolean;
+  /** Screen corner to dock in. */
+  corner?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';
+  /** Ambient personality for this page. dormant = plain tucked hat until
+   *  hovered; subtle = occasional blink/glance, dozes when idle; lively =
+   *  frequent ambience + bounces (auto-selected during attention state). */
+  personality?: 'dormant' | 'subtle' | 'lively';
+  /** Relative path (from project root) to this page's week Markdown source,
+   *  for calendar-actions. Optional -- without it the calendar island stays
+   *  empty and calendar handlers cleanly no-op. */
+  filename?: string;
+}
+
+const {
+  enabled = true,
+  corner = 'bottom-right',
+  personality = 'subtle',
+  filename,
+} = Astro.props;
+const startNode = dialogue.start ?? 'root';
+
+// SSR-render the rig's rest frame so the first paint is already the open
+// neutral face (no attribute pop when the adapter script boots).
+const rest = computeFrame(REST);
+
+// Build-time calendar data island. Node/SSR context only -- NEVER call
+// buildIcs/extractCookingEvents/deriveWeekStart from client code.
+let calendarIsland: {
+  weekIcs: string;
+  weekGoogleUrl: string | null;
+  meals: Array<{ mealSlug: string; label: string; ics: string; googleUrl: string }>;
+} = { weekIcs: '', weekGoogleUrl: null, meals: [] };
+
+if (filename) {
+  try {
+    const md = fs.readFileSync(path.join(process.cwd(), filename), 'utf-8');
+    const weekStart = deriveWeekStart(md, filename);
+    if (weekStart) {
+      const events = extractCookingEvents(md, weekStart);
+      if (events.length) {
+        calendarIsland.weekIcs = buildIcs(events);
+        calendarIsland.weekGoogleUrl = googleCalendarUrl(events[0]);
+        const bySlug = new Map<string, typeof events>();
+        for (const ev of events) {
+          const key = ev.mealSlug || 'cooking';
+          (bySlug.get(key) ?? bySlug.set(key, []).get(key)!).push(ev);
+        }
+        calendarIsland.meals = [...bySlug.entries()].map(([mealSlug, evs]) => ({
+          mealSlug,
+          label: (evs[0].title.split(' -- ')[0] || mealSlug).trim(),
+          ics: buildIcs(evs),
+          googleUrl: googleCalendarUrl(evs[0]),
+        }));
+      }
+    }
+  } catch {
+    // leave empty island -- never break the build
+  }
+}
+---
+
+{enabled && (
+  <div
+    id="cheffy"
+    class="cheffy-root"
+    data-corner={corner}
+    data-state="idle"
+    data-personality={personality}
+    data-start-node={startNode}
+    aria-live="polite"
+  >
+    <button type="button" class="cheffy-toggle" aria-expanded="false" aria-controls="cheffy-panel">
+      <span class="sr-only">Open Cheffy, the kitchen helper</span>
+      <svg
+        class="cheffy-svg"
+        viewBox={ANATOMY.viewBox}
+        role="img"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <g class="cheffy-figure" transform={rest.figureTransform}>
+          {/* eyes render FIRST so they slide behind the (same-ink) hat when hidden */}
+          <g class="cheffy-eye" data-eye="l" transform={rest.eyeLTransform}>
+            <clipPath id="cheffy-lid-l">
+              <polygon points={rest.lidLPoints} />
+            </clipPath>
+            <circle r={ANATOMY.eyeR} clip-path="url(#cheffy-lid-l)" />
+          </g>
+          <g class="cheffy-eye" data-eye="r" transform={rest.eyeRTransform}>
+            <clipPath id="cheffy-lid-r">
+              <polygon points={rest.lidRPoints} />
+            </clipPath>
+            <circle r={ANATOMY.eyeR} clip-path="url(#cheffy-lid-r)" />
+          </g>
+
+          <g class="cheffy-hat">
+            {ANATOMY.cloudLobes.map((c) => <circle cx={c.cx} cy={c.cy} r={c.r} />)}
+            <path d={ANATOMY.cloudBaseD} />
+          </g>
+
+          {/* brim: one thick round-capped stroke; straight bar OR bent mouth */}
+          <path
+            class="cheffy-brim"
+            d={rest.brimD}
+            fill="none"
+            stroke-width={rest.brimW}
+            stroke-linecap="round"
+          />
+        </g>
+
+        {/* notification dot: CSS-shown only in attention */}
+        <circle class="cheffy-dot" data-part="notification-dot" cx="164" cy="26" r="11" />
+      </svg>
+    </button>
+    <CheffyPanel />
+    <script type="application/json" id="cheffy-week-ics" is:inline
+            set:html={JSON.stringify(calendarIsland)} />
+  </div>
+)}
+
+<style>
+  /* Mount contract: out of document flow, corner-docked, hidden until JS
+     marks it ready. JS-off => stays display:none, inert, zero layout impact. */
+  .cheffy-root {
+    display: none;
+  }
+
+  .cheffy-root.cheffy-ready {
+    display: block;
+    position: fixed;
+    z-index: 200;
+  }
+
+  .cheffy-root.cheffy-ready[data-corner="bottom-right"] { right: 1.25rem; bottom: 1.25rem; }
+  .cheffy-root.cheffy-ready[data-corner="bottom-left"]  { left: 1.25rem;  bottom: 1.25rem; }
+  .cheffy-root.cheffy-ready[data-corner="top-right"]    { right: 1.25rem; top: 1.25rem; }
+  .cheffy-root.cheffy-ready[data-corner="top-left"]     { left: 1.25rem;  top: 1.25rem; }
+
+  /* Cream chip button -- soft circle FAB, mascot rig inside. */
+  .cheffy-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 4.5rem;
+    height: 4.5rem;
+    min-width: 44px;   /* touch-target floor */
+    min-height: 44px;
+    padding: 0;
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    background: var(--color-bg);
+    box-shadow: 0 2px 8px rgba(63, 63, 55, 0.15);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .cheffy-svg {
+    width: 3.4rem;
+    height: 3.4rem;
+    display: block;
+    overflow: visible; /* bounces/tilts may briefly poke past the chip */
+  }
+
+  .cheffy-toggle:hover {
+    background: var(--color-bg-alt);
+    box-shadow: 0 4px 12px rgba(63, 63, 55, 0.2);
+  }
+  .cheffy-toggle:active {
+    box-shadow: 0 1px 4px rgba(63, 63, 55, 0.22);
+  }
+
+  .cheffy-toggle:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  /* Single-ink silhouette -- the site's primary token, like the header hat. */
+  .cheffy-hat circle,
+  .cheffy-hat path   { fill: var(--color-primary); }
+  .cheffy-brim       { stroke: var(--color-primary); }
+  .cheffy-eye circle { fill: var(--color-primary); }
+  .cheffy-dot        { fill: var(--color-accent); display: none; }
+
+  #cheffy[data-state="attention"] .cheffy-dot { display: block; }
+
+  /* Reduced-motion sweep, scoped to the Cheffy subtree ("reduce, not remove"):
+     state/expression swaps stay functional, motion collapses to instant. The
+     adapter script also snaps springs + skips ambience under this query. */
+  @media (prefers-reduced-motion: reduce) {
+    #cheffy,
+    #cheffy * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+</style>
+
+<script>
+  // ---- rig adapter: springs rig params between poses and paints the SVG ----
+  import { REST, computeFrame, type RigParams } from '../utils/cheffyRig';
+  import { createSprings, createLoop, FEELS, type SpringFeel } from '../utils/cheffyMotion';
+  import { createBehavior, type Behavior, type BehaviorMode } from '../utils/cheffyBehavior';
+  import posesJson from '../data/cheffy-poses.json';
+  import { slugifyWeekTitle, isNewWeek, markVisited, initialStateFor,
+           type VisitedWeeks } from '../utils/cheffyState';
+
+  const VISITED_KEY = 'visitedWeeks'; // GLOBAL key, object map -- NOT per-week
+
+  type PoseName = string;
+  interface ResolvedPose { params: Partial<RigParams>; feel: SpringFeel }
+
+  // Sanitize the human-edited poses file: strip _doc keys, resolve aliases,
+  // keep only numeric rig params. Bad entries degrade to neutral, never throw.
+  const POSES: Record<PoseName, ResolvedPose> = {};
+  {
+    const raw = (posesJson as any).poses ?? {};
+    for (const name in raw) {
+      const src = raw[name] ?? {};
+      const params: Record<string, number> = {};
+      for (const k in src) {
+        if (k in REST && typeof src[k] === 'number') params[k] = src[k];
+      }
+      POSES[name] = {
+        params: params as Partial<RigParams>,
+        feel: FEELS[src.motion as string] ?? FEELS.default,
+      };
+    }
+    const aliases = (posesJson as any).aliases ?? {};
+    for (const a in aliases) {
+      if (POSES[aliases[a]]) POSES[a] = POSES[aliases[a]];
+    }
+    if (!POSES.neutral) POSES.neutral = { params: {}, feel: FEELS.default };
+  }
+
+  function getWeekIdFromDocument(): string {
+    const title = document.querySelector('h1')?.textContent || 'current-week';
+    return slugifyWeekTitle(title);
+  }
+  function loadVisited(): VisitedWeeks {
+    try { return JSON.parse(localStorage.getItem(VISITED_KEY) || '{}'); }
+    catch { return {}; }
+  }
+  function saveVisited(v: VisitedWeeks): void {
+    localStorage.setItem(VISITED_KEY, JSON.stringify(v));
+  }
+
+  function initCheffy(): void {
+    const root = document.getElementById('cheffy');
+    if (!root) return; // absent on this page -> no-op
+    const toggle = root.querySelector<HTMLButtonElement>('.cheffy-toggle');
+    const panel = document.getElementById('cheffy-panel');
+    const svg = root.querySelector<SVGSVGElement>('.cheffy-svg');
+    if (!toggle || !panel || !svg) return;
+
+    // --- paint targets ---
+    const figureEl = svg.querySelector<SVGGElement>('.cheffy-figure')!;
+    const brimEl = svg.querySelector<SVGPathElement>('.cheffy-brim')!;
+    const eyeLEl = svg.querySelector<SVGGElement>('[data-eye="l"]')!;
+    const eyeREl = svg.querySelector<SVGGElement>('[data-eye="r"]')!;
+    const lidLEl = svg.querySelector<SVGPolygonElement>('#cheffy-lid-l polygon')!;
+    const lidREl = svg.querySelector<SVGPolygonElement>('#cheffy-lid-r polygon')!;
+
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const springs = createSprings<keyof RigParams>({ ...REST });
+    function paint(): void {
+      const f = computeFrame(springs.values as RigParams);
+      figureEl.setAttribute('transform', f.figureTransform);
+      brimEl.setAttribute('d', f.brimD);
+      brimEl.setAttribute('stroke-width', String(f.brimW));
+      eyeLEl.setAttribute('transform', f.eyeLTransform);
+      eyeREl.setAttribute('transform', f.eyeRTransform);
+      lidLEl.setAttribute('points', f.lidLPoints);
+      lidREl.setAttribute('points', f.lidRPoints);
+    }
+    const loop = createLoop((dt) => {
+      const moving = springs.tick(dt);
+      paint();
+      return moving;
+    });
+
+    // --- pose layering: base pose + transient overlays -> spring targets ---
+    let basePose: PoseName = 'neutral';
+    let glance: { x: number; y: number } | null = null; // ambient glance / gaze-tracking
+    let blinkTimer: ReturnType<typeof setTimeout> | null = null;
+
+    function retarget(feel?: SpringFeel): void {
+      const pose = POSES[basePose] ?? POSES.neutral;
+      const t: Record<string, number> = { ...(REST as any), ...(pose.params as any) };
+      if (glance && basePose !== 'hidden' && basePose !== 'sleepy') {
+        t.lookX = glance.x;
+        t.lookY = glance.y;
+      }
+      if (reducedMotion) {
+        springs.snap(t as Partial<Record<keyof RigParams, number>>);
+        paint();
+      } else {
+        springs.setTargets(t as Partial<Record<keyof RigParams, number>>, feel ?? pose.feel);
+        loop.wake();
+      }
+    }
+
+    function setPose(name: PoseName): void {
+      basePose = POSES[name] ? name : 'neutral';
+      retarget();
+    }
+
+    function blink(): void {
+      if (reducedMotion || basePose === 'hidden' || basePose === 'sleepy') return;
+      springs.setTargets({ eyeLOpen: 0.06, eyeROpen: 0.06 }, FEELS.snappy);
+      loop.wake();
+      if (blinkTimer) clearTimeout(blinkTimer);
+      blinkTimer = setTimeout(() => retarget(FEELS.snappy), 120);
+    }
+
+    function bounce(): void {
+      if (reducedMotion || basePose === 'hidden') return;
+      springs.setTargets({ bob: -9, squash: 1.08 }, FEELS.snappy);
+      loop.wake();
+      setTimeout(() => retarget(FEELS.snappy), 150);
+    }
+
+    // --- ambient behavior director ---
+    const personality = (root.dataset.personality || 'subtle') as BehaviorMode;
+    let behavior: Behavior | null = null;
+    if (!reducedMotion) {
+      behavior = createBehavior({
+        mode: personality,
+        onEvent(ev) {
+          switch (ev.type) {
+            case 'blink': blink(); break;
+            case 'bounce': bounce(); break;
+            case 'glance':
+              glance = { x: ev.x, y: ev.y };
+              retarget(FEELS.soft);
+              setTimeout(() => { glance = null; retarget(FEELS.soft); }, ev.holdMs);
+              break;
+            case 'sleep': applyState(); break;
+            case 'wake': applyState(); break;
+          }
+        },
+      });
+    }
+
+    // --- state machine -> base pose mapping ---
+    // Panel and action handlers talk to the mascot ONLY via these attributes.
+    function currentState(): string {
+      return root.getAttribute('data-state') || 'idle';
+    }
+
+    function applyState(): void {
+      const override = root.getAttribute('data-expr-override');
+      if (override) { setPose(override); return; }
+      switch (currentState()) {
+        case 'attention': setPose('excited'); break;
+        case 'dialogue': setPose('happy'); break;
+        case 'processing': setPose('thinking'); break;
+        default: // idle
+          if (behavior?.asleep) setPose('sleepy');
+          else if (personality === 'dormant') setPose('hidden');
+          else setPose('neutral');
+      }
+    }
+
+    new MutationObserver(applyState).observe(root, {
+      attributes: true,
+      attributeFilter: ['data-state', 'data-expr-override'],
+    });
+
+    function setState(s: 'idle' | 'attention' | 'dialogue' | 'processing'): void {
+      root.setAttribute('data-state', s);
+    }
+    (root as any).cheffySetState = setState; // seam used by panel ctx + actions
+
+    // --- activity + gaze tracking ---
+    function signalActivity(): void {
+      behavior?.activity();
+    }
+    window.addEventListener('scroll', signalActivity, { passive: true });
+
+    // Eyes follow the pointer when it comes near; drift back when it leaves.
+    if (!reducedMotion && personality !== 'dormant') {
+      let gazeRaf = 0;
+      window.addEventListener('pointermove', (e) => {
+        signalActivity();
+        if (gazeRaf) return;
+        gazeRaf = requestAnimationFrame(() => {
+          gazeRaf = 0;
+          if (currentState() !== 'idle' || behavior?.asleep) return;
+          const r = svg.getBoundingClientRect();
+          const cx = r.left + r.width / 2;
+          const cy = r.top + r.height / 2;
+          const dx = e.clientX - cx;
+          const dy = e.clientY - cy;
+          const dist = Math.hypot(dx, dy);
+          if (dist < 260) {
+            glance = {
+              x: Math.max(-5, Math.min(5, dx / 24)),
+              y: Math.max(-4, Math.min(4, dy / 30)),
+            };
+            retarget(FEELS.soft);
+          } else if (glance) {
+            glance = null;
+            retarget(FEELS.soft);
+          }
+        });
+      }, { passive: true });
+    }
+
+    // Hover on a dormant mascot: peek out. Leave: tuck back in.
+    if (personality === 'dormant') {
+      toggle.addEventListener('pointerenter', () => {
+        if (currentState() === 'idle') setPose('happy');
+      });
+      toggle.addEventListener('pointerleave', () => {
+        if (currentState() === 'idle') applyState();
+      });
+    }
+
+    // --- week identity + first-visit attention ---
+    root.classList.add('cheffy-ready'); // mount contract: reveal only once JS runs
+
+    const weekId = getWeekIdFromDocument();
+    const isNew = isNewWeek(loadVisited(), weekId);
+    setState(initialStateFor(isNew));
+    if (isNew && behavior) behavior.setMode('lively'); // attention context = lively
+
+    function visit(): void {
+      if (isNewWeek(loadVisited(), weekId)) saveVisited(markVisited(loadVisited(), weekId));
+      if (behavior && behavior.mode === 'lively' && personality !== 'lively') {
+        behavior.setMode(personality); // attention resolved -> back to page default
+      }
+    }
+
+    // --- toggle / open-close wiring (panel VISIBILITY only) ---
+    function openPanel(): void {
+      panel.hidden = false;
+      toggle.setAttribute('aria-expanded', 'true');
+      behavior?.pause();
+      visit();
+      setState('dialogue');
+    }
+    function closePanel(): void {
+      panel.hidden = true;
+      toggle.setAttribute('aria-expanded', 'false');
+      behavior?.resume();
+      visit();
+      setState('idle');
+    }
+    toggle.addEventListener('click', () => {
+      toggle.getAttribute('aria-expanded') === 'true' ? closePanel() : openPanel();
+    });
+
+    // greet on load: a tiny bounce once the face is on screen (non-dormant)
+    if (!reducedMotion && personality !== 'dormant') {
+      setTimeout(bounce, 600);
+    }
+
+    applyState();
+    paint();
+
+    // Debug/playground seam (used by /cheffy-demo and visual tests).
+    (window as any).cheffy = {
+      setPose, setState, blink, bounce,
+      // pose via the same attribute interface the dialogue panel uses --
+      // survives applyState() re-derivations, unlike raw setPose
+      setExpr: (name: string | null) =>
+        name
+          ? root.setAttribute('data-expr-override', name)
+          : root.removeAttribute('data-expr-override'),
+      setMode: (m: BehaviorMode) => behavior?.setMode(m),
+      poses: Object.keys(POSES),
+      // debug seam (playground + visual tests)
+      _debug: { springs, paint, retarget, reducedMotion, loop },
+    };
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCheffy);
+  } else {
+    initCheffy();
+  }
+</script>
+
+<script>
+  // Action-handler registrations (module-load side effects against the panel's
+  // registry): calendar (generate-ics, generate-ics-meal, open-google-calendar),
+  // notifications (trigger-permission), checklist (export-/import-checklist).
+  import '../utils/cheffyCalendarActions';
+  import '../utils/cheffyNotifications';
+  import '../utils/cheffyChecklist';
+</script>

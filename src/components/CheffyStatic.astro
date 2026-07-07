@@ -1,0 +1,54 @@
+---
+// CheffyStatic.astro -- non-interactive, SSR-only render of one Cheffy pose.
+// Same geometry source as the live mascot (cheffyRig), zero client JS.
+// Used by the /cheffy-demo pose gallery; reusable anywhere a frozen Cheffy
+// face is wanted (docs, README art, print).
+import { ANATOMY, computeFrame, resolvePose, type RigParams } from '../utils/cheffyRig';
+
+interface Props {
+  /** Partial rig params for the pose (already-merged pose data). */
+  pose?: Partial<RigParams>;
+  /** CSS size, e.g. "6rem". */
+  size?: string;
+}
+
+const { pose = {}, size = '6rem' } = Astro.props;
+const f = computeFrame(resolvePose(pose));
+const uid = 'cfs-' + Math.random().toString(36).slice(2, 8); // unique clip ids per instance
+---
+
+<svg
+  class="cheffy-static"
+  viewBox={ANATOMY.viewBox}
+  role="img"
+  aria-hidden="true"
+  focusable="false"
+  style={`width:${size};height:${size}`}
+>
+  <g transform={f.figureTransform}>
+    <g transform={f.eyeLTransform}>
+      <clipPath id={`${uid}-l`}><polygon points={f.lidLPoints} /></clipPath>
+      <circle r={ANATOMY.eyeR} clip-path={`url(#${uid}-l)`} />
+    </g>
+    <g transform={f.eyeRTransform}>
+      <clipPath id={`${uid}-r`}><polygon points={f.lidRPoints} /></clipPath>
+      <circle r={ANATOMY.eyeR} clip-path={`url(#${uid}-r)`} />
+    </g>
+    <g>
+      {ANATOMY.cloudLobes.map((c) => <circle cx={c.cx} cy={c.cy} r={c.r} />)}
+      <path d={ANATOMY.cloudBaseD} />
+    </g>
+    <path d={f.brimD} fill="none" stroke-width={f.brimW} stroke-linecap="round" />
+  </g>
+</svg>
+
+<style>
+  .cheffy-static circle,
+  .cheffy-static path {
+    fill: var(--color-primary);
+  }
+  .cheffy-static path[fill='none'] {
+    fill: none;
+    stroke: var(--color-primary);
+  }
+</style>
