@@ -315,6 +315,10 @@ const archiveIndex = await Promise.all(
     const toggle = root?.querySelector<HTMLButtonElement>('.cheffy-toggle');
     const nodeContainer = panel?.querySelector<HTMLElement>('.cheffy-node');
     if (!root || !panel || !toggle || !nodeContainer) return; // required element missing -- PE safety, no-op
+    // Idempotency guard -- same rationale as initCheffy(): never stack the
+    // click listener / MutationObserver on an already-initialized panel.
+    if ((panel as any).__cheffyDialogueInit) return;
+    (panel as any).__cheffyDialogueInit = true;
 
     const startNodeId = root.dataset.startNode || dialogue.start;
 

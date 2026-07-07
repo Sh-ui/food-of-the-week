@@ -303,6 +303,12 @@ if (filename) {
   function initCheffy(): void {
     const root = document.getElementById('cheffy');
     if (!root) return; // absent on this page -> no-op
+    // Idempotency guard: window listeners / observers below are wired once per
+    // page. If this ever re-runs against the same DOM (e.g. View Transitions
+    // are added later), bail instead of stacking listeners. A NEW #cheffy
+    // element (fresh DOM swap) re-inits cleanly because the flag lives on it.
+    if ((root as any).__cheffyInit) return;
+    (root as any).__cheffyInit = true;
     const toggle = root.querySelector<HTMLButtonElement>('.cheffy-toggle');
     const panel = document.getElementById('cheffy-panel');
     const svg = root.querySelector<SVGSVGElement>('.cheffy-svg');
