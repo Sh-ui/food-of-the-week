@@ -1,0 +1,218 @@
+---
+// cheffy-lab.astro -- rig tuning bench (dev tool, not linked from the site).
+//
+// Renders the brand reference sheet next to a live 2x4 grid of rig poses laid
+// out to rhyme with it, with every anatomy dimension exposed as a knob.
+// Knobs drive a rebuilt Anatomy object through the SAME computeFrame code the
+// production mascot uses -- what you tune here is exactly what ships once the
+// winning numbers are baked into ANATOMY in cheffyRig.ts.
+//
+// Programmatic API (for automated visual iteration):
+//   window.lab.get()            -> current knob values
+//   window.lab.set({k: v, ...}) -> update + repaint
+//   window.lab.anatomy()        -> the derived Anatomy object (copy into rig)
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Cheffy Lab</title>
+  </head>
+  <body>
+    <main>
+      <h1>Cheffy Lab</h1>
+      <section class="panel">
+        <h2>Reference</h2>
+        <img id="ref" src="/cheffy-ref.png" alt="Brand reference sheet" />
+      </section>
+      <section class="panel">
+        <h2>Rig</h2>
+        <div id="grid"></div>
+      </section>
+      <section class="panel">
+        <h2>Knobs</h2>
+        <div id="knobs"></div>
+        <pre id="readout"></pre>
+      </section>
+    </main>
+
+    <style>
+      body { margin: 0; font: 14px/1.4 system-ui, sans-serif; background: #fff; color: #222; }
+      main { max-width: 1100px; margin: 0 auto; padding: 1rem; }
+      .panel { margin-bottom: 1.25rem; }
+      h1 { font-size: 1.2rem; } h2 { font-size: 0.95rem; color: #666; }
+      #ref { width: 100%; max-width: 1000px; display: block; }
+      #grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; background: #fff; }
+      #grid figure { margin: 0; text-align: center; }
+      #grid figcaption { font-size: 0.75rem; color: #888; }
+      #grid svg { width: 100%; height: auto; display: block; }
+      #knobs { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 0.25rem 1rem; }
+      #knobs label { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; }
+      #knobs label span.name { width: 7.5rem; }
+      #knobs input[type=range] { flex: 1; }
+      #knobs span.val { width: 3rem; text-align: right; font-variant-numeric: tabular-nums; }
+      #readout { font-size: 0.75rem; background: #f5f5f5; padding: 0.5rem; overflow-x: auto; }
+    </style>
+
+    <script>
+      import { REST, computeFrame, resolvePose, HAT_ICON_D, hatPlacement, type Anatomy, type RigParams } from '../utils/cheffyRig';
+      import posesJson from '../data/cheffy-poses.json';
+
+      // ---- knob spec: name -> [default, min, max, step] -------------------
+      const SPEC: Record<string, [number, number, number, number]> = {
+        hatScale:     [6.8, 5, 9, 0.05],   // header-icon crown: scale
+        hatBottomY:   [92, 75, 110, 0.5],  // crown bottom edge y
+        eyeHalfGap:   [17, 10, 30, 0.5],   // eye center distance from midline
+        eyeY:         [116, 100, 145, 0.5],
+        eyeR:         [11, 6, 16, 0.25],
+        brimY:        [142, 120, 165, 0.5],
+        brimLen:      [47.5, 25, 60, 0.5],
+        brimW:        [20, 8, 28, 0.5],
+        bendDepth:    [44, 20, 70, 0.5],
+      };
+      const knobs: Record<string, number> = {};
+      for (const k in SPEC) knobs[k] = SPEC[k][0];
+
+      function anatomyFrom(k: Record<string, number>): Anatomy {
+        return {
+          viewBox: '18 -30 164 198',
+          hatD: HAT_ICON_D,
+          hatTransform: hatPlacement(k.hatScale, k.hatBottomY),
+          eyeLX: 100 - k.eyeHalfGap,
+          eyeRX: 100 + k.eyeHalfGap,
+          eyeY: k.eyeY,
+          eyeR: k.eyeR,
+          brimY: k.brimY,
+          brimX: 100,
+          bendDepth: k.bendDepth,
+          anchorX: 100,
+          anchorY: 190,
+        };
+      }
+
+      // Pose params from the shared poses file, but brim rest dims come from
+      // knobs (so brimLen/brimW knobs affect poses that don't override them).
+      function poseParams(name: string): Partial<RigParams> {
+        const src = ((posesJson as any).poses ?? {})[name] ?? {};
+        const out: Record<string, number> = {
+          brimLen: knobs.brimLen, brimW: knobs.brimW,
+        };
+        for (const key in src) {
+          if (key in REST && typeof src[key] === 'number') out[key] = src[key];
+        }
+        return out as Partial<RigParams>;
+      }
+
+      // Grid laid out to rhyme with the reference sheet (2 rows x 4).
+      const GRID = [
+        'hidden', 'sleepy', 'neutral', 'thinking',
+        'happy', 'wink', 'scowl', 'surprised',
+      ];
+
+      const NS = 'http://www.w3.org/2000/svg';
+      interface Face {
+        svg: SVGSVGElement; figure: SVGGElement; brim: SVGPathElement;
+        eyeL: SVGGElement; eyeR: SVGGElement;
+        lidL: SVGPolygonElement; lidR: SVGPolygonElement;
+        hat: SVGGElement;
+      }
+      const faces: Array<{ pose: string; f: Face }> = [];
+
+      function el<T extends SVGElement>(tag: string, attrs: Record<string, string> = {}): T {
+        const e = document.createElementNS(NS, tag) as unknown as T;
+        for (const a in attrs) e.setAttribute(a, attrs[a]);
+        return e;
+      }
+
+      function buildFace(uid: string): Face {
+        const svg = el<SVGSVGElement>('svg', { viewBox: '18 -30 164 198' });
+        const figure = el<SVGGElement>('g', { fill: '#111' });
+        const mk = (id: string) => {
+          const g = el<SVGGElement>('g');
+          const clip = el<SVGClipPathElement>('clipPath', { id });
+          const poly = el<SVGPolygonElement>('polygon');
+          clip.appendChild(poly);
+          const c = el<SVGCircleElement>('circle', { 'clip-path': `url(#${id})` });
+          g.append(clip, c);
+          return { g, poly, c };
+        };
+        const L = mk(`${uid}-l`), R = mk(`${uid}-r`);
+        const hat = el<SVGGElement>('g');
+        const brim = el<SVGPathElement>('path', { fill: 'none', stroke: '#111', 'stroke-linecap': 'butt' });
+        figure.append(L.g, R.g, hat, brim);
+        svg.appendChild(figure);
+        return { svg, figure, brim, eyeL: L.g, eyeR: R.g, lidL: L.poly, lidR: R.poly, hat };
+      }
+
+      function paintFace(face: Face, pose: string, a: Anatomy): void {
+        face.hat.setAttribute('transform', a.hatTransform);
+        face.hat.replaceChildren(el('path', { d: a.hatD, fill: '#111' }));
+        face.eyeL.querySelector('circle')!.setAttribute('r', String(a.eyeR));
+        face.eyeR.querySelector('circle')!.setAttribute('r', String(a.eyeR));
+        const f = computeFrame(resolvePose(poseParams(pose)), a);
+        face.figure.setAttribute('transform', f.figureTransform);
+        face.brim.setAttribute('d', f.brimD);
+        face.brim.setAttribute('stroke-width', String(f.brimW));
+        face.eyeL.setAttribute('transform', f.eyeLTransform);
+        face.eyeR.setAttribute('transform', f.eyeRTransform);
+        face.lidL.setAttribute('points', f.lidLPoints);
+        face.lidR.setAttribute('points', f.lidRPoints);
+      }
+
+      function repaint(): void {
+        const a = anatomyFrom(knobs);
+        for (const { pose, f } of faces) paintFace(f, pose, a);
+        (document.getElementById('readout') as HTMLElement).textContent =
+          'knobs = ' + JSON.stringify(knobs) + '\n\nanatomy = ' + JSON.stringify(a, null, 1);
+        document.querySelectorAll('#knobs input').forEach((i) => {
+          const inp = i as HTMLInputElement;
+          inp.value = String(knobs[inp.dataset.k!]);
+          inp.closest('label')!.querySelector('.val')!.textContent = String(knobs[inp.dataset.k!]);
+        });
+      }
+
+      // build grid
+      const grid = document.getElementById('grid')!;
+      GRID.forEach((pose, i) => {
+        const fig = document.createElement('figure');
+        const face = buildFace(`lab${i}`);
+        fig.appendChild(face.svg);
+        const cap = document.createElement('figcaption');
+        cap.textContent = pose;
+        fig.appendChild(cap);
+        grid.appendChild(fig);
+        faces.push({ pose, f: face });
+      });
+
+      // build knob sliders
+      const knobBox = document.getElementById('knobs')!;
+      for (const k in SPEC) {
+        const [dflt, min, max, step] = SPEC[k];
+        const label = document.createElement('label');
+        label.innerHTML =
+          `<span class="name">${k}</span>` +
+          `<input type="range" data-k="${k}" min="${min}" max="${max}" step="${step}" value="${dflt}">` +
+          `<span class="val">${dflt}</span>`;
+        label.querySelector('input')!.addEventListener('input', (e) => {
+          knobs[k] = Number((e.target as HTMLInputElement).value);
+          repaint();
+        });
+        knobBox.appendChild(label);
+      }
+
+      (window as any).lab = {
+        get: () => ({ ...knobs }),
+        set: (patch: Record<string, number>) => {
+          Object.assign(knobs, patch);
+          repaint();
+        },
+        anatomy: () => anatomyFrom(knobs),
+        repaint,
+      };
+
+      repaint();
+    </script>
+  </body>
+</html>

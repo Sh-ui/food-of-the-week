@@ -1,7 +1,7 @@
 {
   "_comment": "Cheffy expression poses. Data, not code -- tweak numbers here to change how Cheffy emotes, without touching components. Each pose is a partial override of REST in src/utils/cheffyRig.ts; anything omitted stays at its rest value. Dialogue nodes reference these by name via their 'expression' field.",
 
-  "_params": "bob/shiftX (px offsets, -up), tilt (deg), squash (1=none <1 squat >1 stretch), brimDy (px, -34 tucks brim into hat), brimBend (-1 frown..+1 smile), brimLen (half-length), brimW (stroke width), lookX/lookY (gaze px), eyesDy (structural, -36 hides eyes in hat), eyeL/RScale (size), eyeL/ROpen (1 round..0 shut), lidTopL/R (upper lid drop 0..1), lidBotL/R (lower lid rise 0..1, 0.5=sleepy dome), lidAngleL/R (deg, brow tilt -- mirrored automatically so + angles read as a scowl on both eyes)",
+  "_params": "bob/shiftX (px offsets, -up), tilt (deg), squash (1=none <1 squat >1 stretch), brimDy (px, -21 tucks brim into hat-band position), brimBend (-1 frown..+1 smile; |bend|>0.15 switches to round mouth caps, otherwise the brim is a sharp bar), brimLen (half-length), brimW (stroke width), lookX/lookY (gaze px), eyesDy (structural, -40 hides eyes in hat), lidTopL/R (upper lid drop 0..1), lidBotL/R (lower lid rise 0..1, 0.5=sleepy dome), lidAngleL/R (deg, brow tilt -- mirrored automatically so + angles read as a scowl on both eyes). Eyes NEVER scale or squash -- closed eye = lidTop 0.42 + lidBot 0.42 (bold center band).",
 
   "_motion": "Optional per-pose 'motion': 'soft' | 'default' | 'snappy' picks the spring feel used to enter the pose.",
 
@@ -10,61 +10,59 @@
 
     "hidden": {
       "_": "Plain hat icon: brim tucked up to become the hat band, eyes inside the hat.",
-      "brimDy": -28, "brimLen": 42, "brimW": 18, "brimBend": 0,
-      "eyesDy": -36,
+      "brimDy": -26, "brimLen": 47.5, "brimW": 20, "brimBend": 0,
+      "eyesDy": -40,
       "motion": "soft"
     },
 
     "excited": {
-      "eyeLScale": 1.3, "eyeRScale": 1.3,
-      "brimBend": 0.35, "brimLen": 36, "brimW": 14,
+      "_": "Big smile + a lift. Eyes stay wide open at their fixed size.",
+      "brimBend": 0.55, "brimLen": 30, "brimW": 14,
       "bob": -3, "squash": 1.04,
       "motion": "snappy"
     },
 
     "happy": {
-      "_": "Brim drops slightly and bends into a proper smile-mouth.",
-      "brimDy": 2, "brimBend": 0.85, "brimLen": 24, "brimW": 11,
-      "lidBotL": 0.2, "lidBotR": 0.2,
+      "_": "The squared brim itself curves into the smile (same bar, no caps swap).",
+      "brimDy": 4, "brimBend": 1, "brimLen": 26, "brimW": 13,
+      "lidBotL": 0.15, "lidBotR": 0.15,
       "motion": "snappy"
     },
 
     "thinking": {
       "lookX": 4, "lookY": -3,
-      "lidTopL": 0.25, "lidTopR": 0.25,
+      "lidTopL": 0.3, "lidTopR": 0.3,
       "tilt": -2,
-      "brimLen": 34, "brimW": 15,
       "motion": "soft"
     },
 
     "sleepy": {
-      "lidBotL": 0.5, "lidBotR": 0.5,
-      "eyeLOpen": 0.85, "eyeROpen": 0.85,
-      "bob": 2, "squash": 0.97, "tilt": 1.5,
-      "brimLen": 40,
+      "_": "Half-domes resting on the brim (eyes drop via eyesDy, never resize).",
+      "lidBotL": 0.5, "lidBotR": 0.5, "eyesDy": 12,
+      "bob": 2, "squash": 0.98, "tilt": 1.5,
       "motion": "soft"
     },
 
     "wink": {
-      "eyeROpen": 0.08,
-      "brimBend": 0.6, "brimLen": 26, "brimW": 12, "brimDy": 1,
+      "_": "Right eye closes to a sliver (occlusion, not squash).",
+      "lidTopR": 0.42, "lidBotR": 0.42,
+      "brimBend": 0.8, "brimLen": 26, "brimW": 13, "brimDy": 3,
       "tilt": 2,
       "motion": "snappy"
     },
 
     "scowl": {
       "_": "Determined. Angled upper lids + slight frown of the brim.",
-      "lidTopL": 0.3, "lidTopR": 0.3, "lidAngleL": 18, "lidAngleR": 18,
-      "eyeLOpen": 0.8, "eyeROpen": 0.8,
-      "brimBend": -0.4, "brimLen": 28, "brimW": 13,
+      "lidTopL": 0.32, "lidTopR": 0.32, "lidAngleL": 18, "lidAngleR": 18,
+      "brimBend": -0.12, "brimLen": 32, "brimW": 17,
       "squash": 0.98,
       "motion": "snappy"
     },
 
     "surprised": {
-      "eyeLScale": 1.45, "eyeRScale": 1.45,
-      "brimBend": -0.1, "brimLen": 16, "brimW": 14, "brimDy": 4,
-      "bob": -4, "squash": 1.06,
+      "_": "Small round mouth + a lift. Eye size never changes.",
+      "brimBend": -0.08, "brimLen": 11, "brimW": 16, "brimDy": 5,
+      "bob": -4, "squash": 1.05,
       "motion": "snappy"
     }
   },

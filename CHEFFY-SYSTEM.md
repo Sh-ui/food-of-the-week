@@ -47,13 +47,16 @@ is the only adapter that binds them to the DOM. Swap or reuse any of them freely
 
 One persistent set of shapes, morphed by ~21 numeric params (see `RigParams`):
 
-- **Hat cloud**: union of three lobe circles + tapered base slab. Static.
-- **Brim**: a single thick round-capped stroke. Straight = brim bar; bent =
-  smile/frown mouth; slid up = the hat's band (plain-icon mode). `brimDy`,
+- **Hat**: the EXACT header icon (Tabler chef-hat path from
+  StickyHeader.astro) scaled into rig space -- never redrawn. Static.
+- **Brim**: ONE squared-off (butt-capped) stroke, always. Straight = sharp
+  brim bar; bent = the same bar curving into a smile/frown mouth (end faces
+  stay square); slid up = the icon's band (plain-icon mode). `brimDy`,
   `brimBend`, `brimLen`, `brimW`.
-- **Eyes**: circles with gaze (`lookX/Y`), size, vertical squash (blink/wink),
-  and lid clip polygons (`lidTop/Bot/Angle`) for sleepy domes and scowl brows.
-  They hide *inside* the hat (`eyesDy`) because they paint underneath it.
+- **Eyes**: constant-size circles -- they NEVER scale or squash. All emotion
+  is occlusion via lid clip polygons (`lidTop/Bot/Angle`: blink/wink bands,
+  sleepy domes, scowl brows) or position (gaze `lookX/Y`; they hide *inside*
+  the hat via `eyesDy` because they paint underneath it).
 - **Figure**: whole-mascot `bob`, `tilt`, `squash` (anchored at bottom center)
   for bounces and squash-and-stretch.
 
@@ -108,6 +111,9 @@ it get cleanly no-op calendar handlers.
 ## Dev surface
 
 - `/cheffy-demo` -- static pose gallery + live pose/event/mode/state controls.
+- `/cheffy-lab` -- anatomy tuning bench: reference sheet (public/cheffy-ref.png)
+  vs live rig grid, every skeleton dimension on a knob (`window.lab` API);
+  bake winning numbers into `ANATOMY`.
 - `window.cheffy` -- debug seam: `setExpr`, `setState`, `blink`, `bounce`,
   `setMode`, `poses`, `_debug` (springs/paint/loop internals for tests).
   NOTE: rAF is suspended in hidden tabs; drive `_debug.springs.tick()` +

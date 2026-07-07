@@ -6,14 +6,19 @@
 // cheffyMotion.ts springs the parameters between poses; poses themselves are
 // data in src/data/cheffy-poses.json.
 //
-// Anatomy (viewBox 0 0 200 200):
-//   - hat cloud: static path, three lobes, flat bottom at y=100
-//   - eyes: two circles in the gap below the cloud (cy 120), modulated by
-//     look/scale/squash params plus a lid clip polygon (sleep domes, scowl)
-//   - brim: a single thick round-capped stroke. Straight = the hat's brim
-//     bar; bent = a mouth. Slides up to tuck into the hat (plain-icon mode).
-//   - figure: whole-mascot bob / tilt / squash-stretch, anchored at the
-//     bottom center so bounces read as weight.
+// Design language (see the brand reference sheet + public/cheffy-ref.png):
+// measured, graphical, flat-iconic --
+//   - hat: THE header icon (exact Tabler chef-hat path from
+//     StickyHeader.astro), scaled into rig space. Never redrawn by hand.
+//   - brim: ONE squared-off (butt-capped) stroke, always. As a brim or the
+//     hat band it reads as a sharp rectangle; as a mouth it is the SAME
+//     squared bar simply curving -- the end faces stay square, tilting with
+//     the curve. Never round caps.
+//   - eyes: constant-size circles. They NEVER scale, squash, or stretch --
+//     all modulation is occlusion (lid clip polygons: blink slivers, sleepy
+//     domes, scowl brows) or position (gaze, hide-inside-hat)
+//   - figure: whole-mascot bob / tilt / squash for weight; the parts keep
+//     their own shapes
 //
 // All parameters are plain numbers so any spring/tween engine can drive them.
 
@@ -25,21 +30,17 @@ export interface RigParams {
   squash: number;   // 1 = none; <1 squashes (wide+short), >1 stretches
 
   // brim (doubles as mouth)
-  brimDy: number;   // y offset from rest (rest y = 142); -34 = tucked into hat
+  brimDy: number;   // y offset from rest; negative tucks it up into the hat
   brimBend: number; // -1..1; + bends into a smile, - into a frown
   brimLen: number;  // half-length of the stroke centerline
   brimW: number;    // stroke width
 
-  // eyes -- shared gaze
+  // eyes -- shared gaze + structural offset. NO size/squash params by design.
   lookX: number;    // -5..5 gaze shift
   lookY: number;    // -4..4
-  eyesDy: number;   // structural y offset (e.g. -36 hides eyes behind the cloud)
+  eyesDy: number;   // structural y offset (e.g. -46 hides eyes behind the hat)
 
-  // per-eye (L = viewer's left)
-  eyeLScale: number;  // overall size multiplier
-  eyeRScale: number;
-  eyeLOpen: number;   // vertical squash 0..1 (0 = closed line, 1 = round)
-  eyeROpen: number;
+  // per-eye occlusion (L = viewer's left). This is the ONLY way eyes emote.
   lidTopL: number;    // 0..1 upper lid drop (cuts circle from the top)
   lidTopR: number;
   lidBotL: number;    // 0..1 lower lid rise (0.5 = sleepy dome)
@@ -51,40 +52,66 @@ export interface RigParams {
 /** Rest-state parameters -- the open, neutral face. */
 export const REST: RigParams = {
   bob: 0, shiftX: 0, tilt: 0, squash: 1,
-  brimDy: 0, brimBend: 0, brimLen: 42, brimW: 18,
+  brimDy: 0, brimBend: 0, brimLen: 47.5, brimW: 20,
   lookX: 0, lookY: 0, eyesDy: 0,
-  eyeLScale: 1, eyeRScale: 1, eyeLOpen: 1, eyeROpen: 1,
   lidTopL: 0, lidTopR: 0, lidBotL: 0, lidBotR: 0,
   lidAngleL: 0, lidAngleR: 0,
 };
 
-// Fixed anatomy constants (single source of truth for the SVG skeleton).
-export const ANATOMY = {
-  viewBox: '14 -14 172 182',
-  /** The hat cloud is a same-ink union of primitives: three lobe circles over
-   *  a base slab. Overlapping fills read as one silhouette -- much easier to
-   *  keep the three lobes iconic than a single hand-tuned path. */
-  cloudLobes: [
-    { cx: 56, cy: 58, r: 27 },   // left lobe
-    { cx: 100, cy: 42, r: 38 },  // center lobe (bigger, taller)
-    { cx: 144, cy: 58, r: 27 },  // right lobe
-  ],
-  /** Base slab: tapers inward toward the flat bottom (y=100) so the hat
-   *  doesn't read as a straight-sided wall. Eyes hide behind this when
-   *  tucked into the hat. */
-  cloudBaseD: 'M31 58 H169 L162 93 Q161 100 152 100 H48 Q39 100 38 93 Z',
-  eyeLX: 82,
-  eyeRX: 118,
-  eyeY: 118,
-  eyeR: 10,
+/** The rig's fixed skeleton. Injectable so the /cheffy-lab tuning page can
+ *  drive it with live knobs; everything else uses the ANATOMY default. */
+export interface Anatomy {
+  viewBox: string;
+  /** The hat crown. THE brand hat -- the exact Tabler chef-hat path used in
+   *  the site header (StickyHeader.astro), placed via hatTransform. */
+  hatD: string;
+  hatTransform: string;
+  eyeLX: number;
+  eyeRX: number;
+  eyeY: number;
+  eyeR: number;
+  brimY: number;
+  brimX: number;
+  /** Control-point drop at full bend (visual dip is half this -- quadratic). */
+  bendDepth: number;
+  /** Squash/bounce anchor. */
+  anchorX: number;
+  anchorY: number;
+}
+
+/** Exact crown path from the header icon (Tabler chef-hat, 24-grid). Its
+ *  straight bottom edge sits at y=16 spanning x 5..19; eyes tuck behind it. */
+export const HAT_ICON_D =
+  'M12 2a5 5 0 0 1 4.533 2.888l.06 .137l.136 -.009a5 5 0 0 1 4.99 3.477' +
+  'l.063 .213a5 5 0 0 1 -2.696 5.831l-.087 .037v1.428a1 1 0 0 1 -1 1' +
+  'l-12 .004a1 1 0 0 1 -.993 -.883l-.007 -.117v-1.433l-.123 -.055' +
+  'a5 5 0 0 1 -2.6 -3.001l-.064 -.223a5 5 0 0 1 5.193 -6.27l.066 -.142' +
+  'a5 5 0 0 1 4.302 -2.877z';
+
+/** Place the 24-grid icon into rig space: scale s, center on x=100, crown
+ *  bottom edge on y=bottom. */
+export function hatPlacement(s: number, bottom: number): string {
+  return `translate(${r2(100 - 12 * s)} ${r2(bottom - 16.005 * s)}) scale(${r2(s)})`;
+}
+
+// Default anatomy (single source of truth for the SVG skeleton).
+// Hat: header icon at 6.8x -> 136 wide, crown bottom edge y=92 (x 52..148).
+// Icon's own band, at this scale, is a 95x20 bar centered on y~116 -- the
+// 'hidden' pose parks the brim exactly there, reproducing the brand icon.
+export const ANATOMY: Anatomy = {
+  viewBox: '18 -30 164 198',
+  hatD: HAT_ICON_D,
+  hatTransform: hatPlacement(6.8, 92),
+  eyeLX: 83,
+  eyeRX: 117,
+  eyeY: 116,
+  eyeR: 11,
   brimY: 142,
   brimX: 100,
-  /** How far the brim centerline dips at full bend. */
-  bendDepth: 24,
-  /** Squash/bounce anchor. */
+  bendDepth: 44,
   anchorX: 100,
   anchorY: 190,
-} as const;
+};
 
 export interface RigFrame {
   figureTransform: string;
@@ -97,13 +124,10 @@ export interface RigFrame {
   lidRPoints: string;
 }
 
-const MIN_OPEN = 0.06; // closed eye still renders as a thin line, not nothing
-
-function eyeTransform(cx: number, p: RigParams, scale: number, open: number): string {
+function eyeTransform(cx: number, p: RigParams, a: Anatomy): string {
   const x = cx + p.lookX;
-  const y = ANATOMY.eyeY + p.eyesDy + p.lookY;
-  const sy = Math.max(MIN_OPEN, open) * scale;
-  return `translate(${r2(x)} ${r2(y)}) scale(${r2(scale)} ${r2(sy)})`;
+  const y = a.eyeY + p.eyesDy + p.lookY;
+  return `translate(${r2(x)} ${r2(y)})`;
 }
 
 /**
@@ -112,8 +136,8 @@ function eyeTransform(cx: number, p: RigParams, scale: number, open: number): st
  * lower lid rises from the bottom (lidBot). `mirror` flips the lid tilt so
  * scowls angle inward on both eyes.
  */
-function lidPolygon(lidTop: number, lidBot: number, lidAngle: number, mirror: 1 | -1): string {
-  const s = ANATOMY.eyeR + 4; // pad so an un-lidded eye is never clipped
+function lidPolygon(lidTop: number, lidBot: number, lidAngle: number, mirror: 1 | -1, a: Anatomy): string {
+  const s = a.eyeR + 4; // pad so an un-lidded eye is never clipped
   const topC = -s + clamp01(lidTop) * 2 * s;
   const dt = Math.tan((lidAngle * Math.PI) / 180) * s * mirror;
   const yB = s - clamp01(lidBot) * 2 * s;
@@ -126,8 +150,8 @@ function lidPolygon(lidTop: number, lidBot: number, lidAngle: number, mirror: 1 
 }
 
 /** Compute one frame of SVG attributes from rig parameters. */
-export function computeFrame(p: RigParams): RigFrame {
-  const { anchorX, anchorY, brimX, brimY, bendDepth, eyeLX, eyeRX } = ANATOMY;
+export function computeFrame(p: RigParams, a: Anatomy = ANATOMY): RigFrame {
+  const { anchorX, anchorY, brimX, brimY, bendDepth } = a;
 
   const sy = p.squash;
   const sx = 2 - p.squash; // volume-ish preservation
@@ -146,12 +170,16 @@ export function computeFrame(p: RigParams): RigFrame {
     figureTransform,
     brimD,
     brimW: Math.max(1, p.brimW),
-    eyeLTransform: eyeTransform(eyeLX, p, p.eyeLScale, p.eyeLOpen),
-    eyeRTransform: eyeTransform(eyeRX, p, p.eyeRScale, p.eyeROpen),
-    lidLPoints: lidPolygon(p.lidTopL, p.lidBotL, p.lidAngleL, 1),
-    lidRPoints: lidPolygon(p.lidTopR, p.lidBotR, p.lidAngleR, -1),
+    eyeLTransform: eyeTransform(a.eyeLX, p, a),
+    eyeRTransform: eyeTransform(a.eyeRX, p, a),
+    lidLPoints: lidPolygon(p.lidTopL, p.lidBotL, p.lidAngleL, 1, a),
+    lidRPoints: lidPolygon(p.lidTopR, p.lidBotR, p.lidAngleR, -1, a),
   };
 }
+
+/** Lid values for a closed eye (blink/wink): both lids meet at center,
+ *  leaving a bold short band (reads as a drawn line, not a squashed eye). */
+export const CLOSED_LID = { lidTop: 0.42, lidBot: 0.42 } as const;
 
 /** Merge a partial pose over REST into a full parameter set. */
 export function resolvePose(partial: Partial<RigParams>): RigParams {

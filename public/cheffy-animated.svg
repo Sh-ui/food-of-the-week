@@ -1,8 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="14 -14 172 182" width="180" height="190" role="img" aria-label="Cheffy, the Food of the Week kitchen helper">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="18 -14 164 182" width="170" height="188" role="img" aria-label="Cheffy, the Food of the Week kitchen helper">
   <!-- Self-contained SMIL demo loop of the Cheffy rig (same anatomy as
-       src/utils/cheffyRig.ts). Blink -> glance left -> glance right -> idle.
-       No CSS/JS so it animates inline on GitHub. Regenerate by hand if the
-       rig anatomy changes; ink is the site primary #494331. -->
+       src/utils/cheffyRig.ts: header-icon hat at 6.8x, crown bottom y=92;
+       eyes r=11 at (83,116)/(117,116); squared brim bar 95x20 at y=142).
+       Blink is a FORM SWITCH (circle swaps to a closed-lid band for a beat --
+       eyes never squash or scale), then a glance left/right. No CSS/JS so it
+       animates inline on GitHub. Ink = site primary #494331. -->
   <g fill="#494331">
     <!-- gentle idle bob for the whole figure -->
     <animateTransform attributeName="transform" type="translate"
@@ -16,32 +18,40 @@
         values="0 0; 0 0; -4.5 1; -4.5 1; 4.5 1; 4.5 1; 0 0; 0 0"
         keyTimes="0; .3; .37; .5; .57; .7; .77; 1"
         dur="9s" repeatCount="indefinite" additive="sum"/>
-      <g transform="translate(82 118)">
-        <circle r="10">
-          <animateTransform attributeName="transform" type="scale"
-            values="1 1; 1 1; 1 .08; 1 1; 1 1; 1 .08; 1 1; 1 1"
-            keyTimes="0; .18; .2; .22; .58; .6; .62; 1"
+      <g transform="translate(83 116)">
+        <circle r="11">
+          <animate attributeName="opacity" calcMode="discrete"
+            values="1;0;1;1;0;1" keyTimes="0;.18;.22;.58;.6;.64"
             dur="9s" repeatCount="indefinite"/>
         </circle>
+        <!-- closed-lid band (blink form) -->
+        <rect x="-11" y="-4.5" width="22" height="9" opacity="0">
+          <animate attributeName="opacity" calcMode="discrete"
+            values="0;1;0;0;1;0" keyTimes="0;.18;.22;.58;.6;.64"
+            dur="9s" repeatCount="indefinite"/>
+        </rect>
       </g>
-      <g transform="translate(118 118)">
-        <circle r="10">
-          <animateTransform attributeName="transform" type="scale"
-            values="1 1; 1 1; 1 .08; 1 1; 1 1; 1 .08; 1 1; 1 1"
-            keyTimes="0; .18; .2; .22; .58; .6; .62; 1"
+      <g transform="translate(117 116)">
+        <circle r="11">
+          <animate attributeName="opacity" calcMode="discrete"
+            values="1;0;1;1;0;1" keyTimes="0;.18;.22;.58;.6;.64"
             dur="9s" repeatCount="indefinite"/>
         </circle>
+        <rect x="-11" y="-4.5" width="22" height="9" opacity="0">
+          <animate attributeName="opacity" calcMode="discrete"
+            values="0;1;0;0;1;0" keyTimes="0;.18;.22;.58;.6;.64"
+            dur="9s" repeatCount="indefinite"/>
+        </rect>
       </g>
     </g>
 
-    <!-- hat cloud: three lobes + tapered base -->
-    <circle cx="56" cy="58" r="27"/>
-    <circle cx="100" cy="42" r="38"/>
-    <circle cx="144" cy="58" r="27"/>
-    <path d="M31 58 H169 L162 93 Q161 100 152 100 H48 Q39 100 38 93 Z"/>
+    <!-- hat: the exact header icon (Tabler chef-hat), 6.8x, bottom edge y=92 -->
+    <g transform="translate(18.4 -16.83) scale(6.8)">
+      <path d="M12 2a5 5 0 0 1 4.533 2.888l.06 .137l.136 -.009a5 5 0 0 1 4.99 3.477l.063 .213a5 5 0 0 1 -2.696 5.831l-.087 .037v1.428a1 1 0 0 1 -1 1l-12 .004a1 1 0 0 1 -.993 -.883l-.007 -.117v-1.433l-.123 -.055a5 5 0 0 1 -2.6 -3.001l-.064 -.223a5 5 0 0 1 5.193 -6.27l.066 -.142a5 5 0 0 1 4.302 -2.877z"/>
+    </g>
 
-    <!-- brim -->
-    <path d="M58 142 Q100 142 142 142" fill="none" stroke="#494331"
-      stroke-width="18" stroke-linecap="round"/>
+    <!-- brim: squared-off bar (butt caps) -->
+    <path d="M52.5 142 L147.5 142" fill="none" stroke="#494331"
+      stroke-width="20" stroke-linecap="butt"/>
   </g>
 </svg>

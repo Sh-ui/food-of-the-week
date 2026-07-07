@@ -128,18 +128,17 @@ if (filename) {
             <circle r={ANATOMY.eyeR} clip-path="url(#cheffy-lid-r)" />
           </g>
 
-          <g class="cheffy-hat">
-            {ANATOMY.cloudLobes.map((c) => <circle cx={c.cx} cy={c.cy} r={c.r} />)}
-            <path d={ANATOMY.cloudBaseD} />
+          <g class="cheffy-hat" transform={ANATOMY.hatTransform}>
+            <path d={ANATOMY.hatD} />
           </g>
 
-          {/* brim: one thick round-capped stroke; straight bar OR bent mouth */}
+          {/* brim: ONE squared-off stroke -- bar, band, or curving mouth; never round caps */}
           <path
             class="cheffy-brim"
             d={rest.brimD}
             fill="none"
             stroke-width={rest.brimW}
-            stroke-linecap="round"
+            stroke-linecap="butt"
           />
         </g>
 
@@ -230,7 +229,6 @@ if (filename) {
   }
 
   /* Single-ink silhouette; color routed through cheffy-config.json. */
-  .cheffy-hat circle,
   .cheffy-hat path   { fill: var(--cheffy-ink); }
   .cheffy-brim       { stroke: var(--cheffy-ink); }
   .cheffy-eye circle { fill: var(--cheffy-ink); }
@@ -253,7 +251,7 @@ if (filename) {
 
 <script>
   // ---- rig adapter: springs rig params between poses and paints the SVG ----
-  import { REST, computeFrame, type RigParams } from '../utils/cheffyRig';
+  import { REST, computeFrame, CLOSED_LID, type RigParams } from '../utils/cheffyRig';
   import { createSprings, createLoop, FEELS, type SpringFeel } from '../utils/cheffyMotion';
   import { createBehavior, type Behavior, type BehaviorMode } from '../utils/cheffyBehavior';
   import posesJson from '../data/cheffy-poses.json';
@@ -369,7 +367,11 @@ if (filename) {
 
     function blink(): void {
       if (reducedMotion || basePose === 'hidden' || basePose === 'sleepy') return;
-      springs.setTargets({ eyeLOpen: 0.06, eyeROpen: 0.06 }, FEELS.snappy);
+      // Occlusion blink: lids close to a sliver. Eyes never scale (brand rule).
+      springs.setTargets({
+        lidTopL: CLOSED_LID.lidTop, lidTopR: CLOSED_LID.lidTop,
+        lidBotL: CLOSED_LID.lidBot, lidBotR: CLOSED_LID.lidBot,
+      }, FEELS.snappy);
       loop.wake();
       if (blinkTimer) clearTimeout(blinkTimer);
       blinkTimer = setTimeout(() => retarget(FEELS.snappy), 120);

@@ -34,11 +34,10 @@ const uid = 'cfs-' + Math.random().toString(36).slice(2, 8); // unique clip ids 
       <clipPath id={`${uid}-r`}><polygon points={f.lidRPoints} /></clipPath>
       <circle r={ANATOMY.eyeR} clip-path={`url(#${uid}-r)`} />
     </g>
-    <g>
-      {ANATOMY.cloudLobes.map((c) => <circle cx={c.cx} cy={c.cy} r={c.r} />)}
-      <path d={ANATOMY.cloudBaseD} />
+    <g transform={ANATOMY.hatTransform}>
+      <path d={ANATOMY.hatD} />
     </g>
-    <path d={f.brimD} fill="none" stroke-width={f.brimW} stroke-linecap="round" />
+    <path d={f.brimD} fill="none" stroke-width={f.brimW} stroke-linecap="butt" />
   </g>
 </svg>
 
