@@ -4,7 +4,7 @@
   "start": "root",
   "_start": "Id of the node Cheffy opens on.",
 
-  "_node_shape": "Each entry in 'nodes' is { text, expression?, input?, options:[{label, goto? , action?}] }. 'goto' moves to another node id; 'action' runs a handler. expression is one of: neutral|excited|thinking|sleepy -- NOTE: only neutral|excited|thinking are actually rendered by Cheffy.astro's SVG today; do not author 'sleepy'. input:true shows a free-text field.",
+  "_node_shape": "Each entry in 'nodes' is { text, expression?, input?, options:[{label, goto? , action?}] }. 'goto' moves to another node id; 'action' runs a handler. expression may be ANY pose or alias from src/data/cheffy-poses.json (neutral, hidden, excited, happy, thinking, sleepy, wink, scowl, surprised, determined, smile, ...); unknown names fall back to neutral. input:true shows a free-text field.",
   "_actions": "Valid option 'action' values the runtime must implement: generate-ics | generate-ics-meal | open-google-calendar | trigger-permission | navigate-to-archive | export-checklist | import-checklist | close.",
 
   "nodes": {

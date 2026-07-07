@@ -12,7 +12,7 @@ export type DialogueTree = { start: string; nodes: Record<string, DialogueNode> 
 export type ArchiveEntry = { slug: string; title: string; meals: string[] };
 
 /** Valid action values the runtime knows about (the 5 from CHEFFY-SYSTEM.md). */
-export const VALID_ACTIONS = ['generate-ics', 'trigger-permission', 'navigate-to-archive', 'export-checklist', 'close'] as const;
+export const VALID_ACTIONS = ['generate-ics', 'generate-ics-meal', 'open-google-calendar', 'trigger-permission', 'navigate-to-archive', 'export-checklist', 'import-checklist', 'close'] as const;
 
 /** Look up a node by id. Total -- returns undefined for a missing id, never throws. */
 export function getNode(tree: DialogueTree, id: string): DialogueNode | undefined {

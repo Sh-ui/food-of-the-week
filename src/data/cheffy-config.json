@@ -1,0 +1,17 @@
+{
+  "_comment": "Cheffy presentation config. Data, not code -- site-wide mascot appearance lives here; edit and rebuild, no component changes needed. Per-page Layout/Cheffy props still override 'corner' and 'personality'.",
+
+  "chip": true,
+  "_chip": "true = mascot sits on a soft circular chip button; false = the silhouette floats free as the button.",
+
+  "colors": {
+    "ink": "var(--color-primary)",
+    "chipBg": "var(--color-bg)",
+    "chipBorder": "var(--color-border)"
+  },
+  "_colors": "Any CSS color or var(). ink = the whole silhouette (hat, brim, eyes). chipBg/chipBorder only matter when chip=true.",
+
+  "corner": "bottom-right",
+  "personality": "subtle",
+  "_personality": "Default ambience: dormant | subtle | lively. Archive pages pass 'dormant' via Layout regardless."
+}

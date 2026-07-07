@@ -73,7 +73,7 @@ const archiveIndex = await Promise.all(
        minus its own inset on both sides -- this is what keeps the card from
        EVER reading as a fullscreen sheet, on any viewport. */
     --cheffy-card-w: min(24rem, calc(100vw - 2 * var(--cheffy-inset)));
-    --cheffy-card-h: min(30rem, calc(100dvh - 2 * var(--cheffy-inset)));
+    --cheffy-card-h: min(30rem, calc(100dvh - var(--cheffy-clear, 6rem) - var(--cheffy-inset)));
   }
 
   /* --- 2b: the inset floating card itself --- */
@@ -86,16 +86,16 @@ const archiveIndex = await Promise.all(
     flex-direction: column;
     box-sizing: border-box;
     width: var(--cheffy-card-w);
-    height: var(--cheffy-card-h);
+    height: auto; /* speech bubble sizes to its content */
     max-width: calc(100vw - 2 * var(--cheffy-inset));
-    max-height: calc(100dvh - 2 * var(--cheffy-inset));
+    max-height: var(--cheffy-card-h);
     overflow-y: auto;
     padding: 1.25rem;
     gap: 0.75rem;
     background: var(--color-bg);
     border: 1px solid var(--color-border);
     border-radius: 12px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 8px 30px rgba(63, 63, 55, 0.18);
 
     /* --- 2d: open/close animation (transform + opacity only, no layout shift) --- */
     opacity: 1;
@@ -109,10 +109,15 @@ const archiveIndex = await Promise.all(
   /* wrapped in :global() -- otherwise Astro's per-file scoping attribute gets */
   /* appended to a selector that the real element never carries, and the rule */
   /* silently never matches.                                                  */
-  :global(#cheffy[data-corner="bottom-right"]) .cheffy-panel { right: var(--cheffy-inset); bottom: var(--cheffy-inset); }
-  :global(#cheffy[data-corner="bottom-left"])  .cheffy-panel { left:  var(--cheffy-inset); bottom: var(--cheffy-inset); }
-  :global(#cheffy[data-corner="top-right"])    .cheffy-panel { right: var(--cheffy-inset); top:    var(--cheffy-inset); }
-  :global(#cheffy[data-corner="top-left"])     .cheffy-panel { left:  var(--cheffy-inset); top:    var(--cheffy-inset); }
+  /* Bubble clears the mascot chip (~4.5rem + breathing room) so the tail can
+     point at it instead of the card covering it. */
+  .cheffy-panel {
+    --cheffy-clear: calc(var(--cheffy-inset) + 5.4rem);
+  }
+  :global(#cheffy[data-corner="bottom-right"]) .cheffy-panel { right: var(--cheffy-inset); bottom: var(--cheffy-clear); }
+  :global(#cheffy[data-corner="bottom-left"])  .cheffy-panel { left:  var(--cheffy-inset); bottom: var(--cheffy-clear); }
+  :global(#cheffy[data-corner="top-right"])    .cheffy-panel { right: var(--cheffy-inset); top:    var(--cheffy-clear); }
+  :global(#cheffy[data-corner="top-left"])     .cheffy-panel { left:  var(--cheffy-inset); top:    var(--cheffy-clear); }
 
   /* closed state -- owned entirely by the part-2 toggle setting panel.hidden.  */
   /* display is intentionally left unset here so the UA [hidden]{display:none}  */
@@ -140,7 +145,7 @@ const archiveIndex = await Promise.all(
     display: none;
     opacity: 0;
     pointer-events: none;
-    background: color-mix(in srgb, var(--color-text) 45%, transparent);
+    background: color-mix(in srgb, var(--color-text) 22%, transparent);
     transition: opacity 0.22s ease, display 0.22s allow-discrete, overlay 0.22s allow-discrete;
   }
 
@@ -162,6 +167,94 @@ const archiveIndex = await Promise.all(
     position: relative;
     z-index: 3;
   }
+
+  /* --- inner content: Cheffy's line, option buttons, search input ---------- */
+  /* Rendered both at SSR (fallback) and by renderNode(), so style by class.   */
+  .cheffy-panel :global(.cheffy-text) {
+    margin: 0;
+    font-family: var(--font-heading, 'Aleo', serif);
+    font-size: 1.15rem;
+    line-height: 1.45;
+    color: var(--color-text);
+  }
+
+  .cheffy-panel :global(.cheffy-options) {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .cheffy-panel :global(.cheffy-option) {
+    display: block;
+    width: 100%;
+    text-align: left;
+    font-family: var(--font-sans, 'Work Sans', sans-serif);
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: var(--color-text);
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 0.55rem 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+  }
+  .cheffy-panel :global(.cheffy-option:hover) {
+    background: var(--color-secondary);
+    border-color: color-mix(in srgb, var(--color-secondary) 60%, var(--color-primary));
+  }
+  .cheffy-panel :global(.cheffy-option:focus-visible) {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 1px;
+  }
+  /* last option is always the dismiss/back path -- render it quieter */
+  .cheffy-panel :global(.cheffy-options li:last-child .cheffy-option) {
+    background: transparent;
+    border-color: transparent;
+    color: var(--color-text-light);
+  }
+  .cheffy-panel :global(.cheffy-options li:last-child .cheffy-option:hover) {
+    background: var(--color-bg-alt);
+    color: var(--color-text);
+  }
+
+  .cheffy-panel :global(.cheffy-input) {
+    font-family: var(--font-sans, 'Work Sans', sans-serif);
+    font-size: 0.95rem;
+    color: var(--color-text);
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 0.5rem 0.7rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .cheffy-panel :global(.cheffy-input:focus-visible) {
+    outline: 2px solid var(--color-secondary);
+    outline-offset: 0;
+    border-color: var(--color-primary);
+  }
+
+  /* speech-bubble tail pointing at the mascot chip (bottom corners only;
+     top corners just omit the tail) */
+  .cheffy-panel::after {
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    width: 14px;
+    height: 14px;
+    background: var(--color-bg);
+    border-right: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    transform: rotate(45deg);
+  }
+  :global(#cheffy[data-corner="bottom-right"]) .cheffy-panel::after { right: 1.6rem; }
+  :global(#cheffy[data-corner="bottom-left"])  .cheffy-panel::after { left: 1.6rem; }
+  :global(#cheffy[data-corner="top-right"])    .cheffy-panel::after,
+  :global(#cheffy[data-corner="top-left"])     .cheffy-panel::after { display: none; }
 
   /* Reduced-motion sweep -- scoped to this component's own elements, since       */
   /* Astro's CSS scoping does not cross component boundaries (the Cheffy.astro   */

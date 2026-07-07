@@ -17,6 +17,7 @@ import fs from 'fs';
 import path from 'path';
 import CheffyPanel from './CheffyPanel.astro';
 import dialogue from '../data/cheffy-dialogue.json';
+import config from '../data/cheffy-config.json';
 import { ANATOMY, REST, computeFrame } from '../utils/cheffyRig';
 import { deriveWeekStart, extractCookingEvents, buildIcs, googleCalendarUrl }
   from '../utils/cheffyCalendar';
@@ -36,13 +37,20 @@ interface Props {
   filename?: string;
 }
 
+// Site-wide presentation defaults come from cheffy-config.json (data, not
+// code); per-page props override corner/personality.
 const {
   enabled = true,
-  corner = 'bottom-right',
-  personality = 'subtle',
+  corner = (config.corner as Props['corner']) ?? 'bottom-right',
+  personality = (config.personality as Props['personality']) ?? 'subtle',
   filename,
 } = Astro.props;
 const startNode = dialogue.start ?? 'root';
+const chip = config.chip !== false;
+const inkStyle =
+  `--cheffy-ink:${config.colors?.ink || 'var(--color-primary)'};` +
+  `--cheffy-chip-bg:${config.colors?.chipBg || 'var(--color-bg)'};` +
+  `--cheffy-chip-border:${config.colors?.chipBorder || 'var(--color-border)'};`;
 
 // SSR-render the rig's rest frame so the first paint is already the open
 // neutral face (no attribute pop when the adapter script boots).
@@ -89,10 +97,12 @@ if (filename) {
     id="cheffy"
     class="cheffy-root"
     data-corner={corner}
+    data-chip={chip ? 'true' : 'false'}
     data-state="idle"
     data-personality={personality}
     data-start-node={startNode}
     aria-live="polite"
+    style={inkStyle}
   >
     <button type="button" class="cheffy-toggle" aria-expanded="false" aria-controls="cheffy-panel">
       <span class="sr-only">Open Cheffy, the kitchen helper</span>
@@ -161,39 +171,57 @@ if (filename) {
   .cheffy-root.cheffy-ready[data-corner="top-right"]    { right: 1.25rem; top: 1.25rem; }
   .cheffy-root.cheffy-ready[data-corner="top-left"]     { left: 1.25rem;  top: 1.25rem; }
 
-  /* Cream chip button -- soft circle FAB, mascot rig inside. */
+  /* Toggle button. Chip vs free-float is data-driven from cheffy-config.json. */
   .cheffy-toggle {
     display: flex;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    width: 4.5rem;
-    height: 4.5rem;
     min-width: 44px;   /* touch-target floor */
     min-height: 44px;
     padding: 0;
-    border: 1px solid var(--color-border);
-    border-radius: 50%;
-    background: var(--color-bg);
-    box-shadow: 0 2px 8px rgba(63, 63, 55, 0.15);
+    border: 0;
+    background: none;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
-    transition: background-color 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  /* chip mode: soft circle FAB, mascot rig inside */
+  [data-chip='true'] .cheffy-toggle {
+    width: 4.5rem;
+    height: 4.5rem;
+    border: 1px solid var(--cheffy-chip-border);
+    border-radius: 50%;
+    background: var(--cheffy-chip-bg);
+    box-shadow: 0 2px 8px rgba(63, 63, 55, 0.15);
+    transition: box-shadow 0.15s ease, filter 0.15s ease;
+  }
+  [data-chip='true'] .cheffy-svg {
+    width: 3.4rem;
+    height: 3.4rem;
+  }
+  [data-chip='true'] .cheffy-toggle:hover {
+    filter: brightness(0.985);
+    box-shadow: 0 4px 12px rgba(63, 63, 55, 0.2);
+  }
+  [data-chip='true'] .cheffy-toggle:active {
+    box-shadow: 0 1px 4px rgba(63, 63, 55, 0.22);
+  }
+
+  /* free-float mode: the silhouette IS the button */
+  [data-chip='false'] .cheffy-svg {
+    width: 4.25rem;
+    height: 4.25rem;
+    filter: drop-shadow(0 2px 3px rgba(63, 63, 55, 0.25));
+    transition: filter 0.2s ease;
+  }
+  [data-chip='false'] .cheffy-toggle:hover .cheffy-svg {
+    filter: drop-shadow(0 4px 8px rgba(63, 63, 55, 0.3));
   }
 
   .cheffy-svg {
-    width: 3.4rem;
-    height: 3.4rem;
     display: block;
     overflow: visible; /* bounces/tilts may briefly poke past the chip */
-  }
-
-  .cheffy-toggle:hover {
-    background: var(--color-bg-alt);
-    box-shadow: 0 4px 12px rgba(63, 63, 55, 0.2);
-  }
-  .cheffy-toggle:active {
-    box-shadow: 0 1px 4px rgba(63, 63, 55, 0.22);
   }
 
   .cheffy-toggle:focus-visible {
@@ -201,11 +229,11 @@ if (filename) {
     outline-offset: 2px;
   }
 
-  /* Single-ink silhouette -- the site's primary token, like the header hat. */
+  /* Single-ink silhouette; color routed through cheffy-config.json. */
   .cheffy-hat circle,
-  .cheffy-hat path   { fill: var(--color-primary); }
-  .cheffy-brim       { stroke: var(--color-primary); }
-  .cheffy-eye circle { fill: var(--color-primary); }
+  .cheffy-hat path   { fill: var(--cheffy-ink); }
+  .cheffy-brim       { stroke: var(--cheffy-ink); }
+  .cheffy-eye circle { fill: var(--cheffy-ink); }
   .cheffy-dot        { fill: var(--color-accent); display: none; }
 
   #cheffy[data-state="attention"] .cheffy-dot { display: block; }
@@ -449,7 +477,9 @@ if (filename) {
     root.classList.add('cheffy-ready'); // mount contract: reveal only once JS runs
 
     const weekId = getWeekIdFromDocument();
-    const isNew = isNewWeek(loadVisited(), weekId);
+    // Dormant pages (archives) never buzz for attention -- that celebration
+    // belongs to the current-week pages only.
+    const isNew = personality !== 'dormant' && isNewWeek(loadVisited(), weekId);
     setState(initialStateFor(isNew));
     if (isNew && behavior) behavior.setMode('lively'); // attention context = lively
 
