@@ -13,5 +13,11 @@
 
   "corner": "bottom-right",
   "personality": "subtle",
-  "_personality": "Default ambience: dormant | subtle | lively. Archive pages pass 'dormant' via Layout regardless."
+  "_personality": "Default ambience: dormant | subtle | lively. Archive pages pass 'dormant' via Layout regardless.",
+
+  "notifications": {
+    "lunchTime": "11:00",
+    "syncReminder": { "dow": "Sunday", "time": "09:00" }
+  },
+  "_notifications": "Local reminder knobs. lunchTime = daily lunch ping (24h local). syncReminder = the end-of-week 'come re-sync next week's reminders' ping: fires the first <dow> at <time> after everything else in the synced week."
 }
