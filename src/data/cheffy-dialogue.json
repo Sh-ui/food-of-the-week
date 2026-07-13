@@ -5,17 +5,18 @@
   "_start": "Id of the node Cheffy opens on.",
 
   "_node_shape": "Each entry in 'nodes' is { text, expression?, input?, options:[{label, goto? , action?}] }. 'goto' moves to another node id; 'action' runs a handler. expression may be ANY pose or alias from src/data/cheffy-poses.json (neutral, hidden, excited, happy, thinking, sleepy, wink, scowl, surprised, determined, smile, ...); unknown names fall back to neutral. input:true shows a free-text field. A 'goto' starting with '#' is a DYNAMIC ref (built at runtime by cheffyDialogue.ts's resolveDynamicNode, not looked up here) -- e.g. '#archive-browse:0', '#archive-week:<slug>', '#archive-results:<query>'. Static and dynamic gotos can point at each other freely.",
-  "_actions": "Valid option 'action' values the runtime must implement: generate-ics | generate-ics-meal | open-google-calendar | trigger-permission | navigate-to-archive | export-checklist | import-checklist | close.",
+  "_actions": "Valid option 'action' values the runtime must implement: generate-ics | generate-ics-meal | open-google-calendar | trigger-permission | notification-status | clear-reminders | navigate-to-archive | navigate-to-lunch | export-checklist | import-checklist | close.",
 
   "nodes": {
     "root": {
-      "text": "Hi, I'm Cheffy. Want a hand with this week?",
+      "text": "Hi, I'm Cheffy! What can I do for you?",
       "expression": "excited",
       "options": [
-        { "label": "Add cooking times to my calendar", "goto": "calendar" },
-        { "label": "Remind me at cook time", "goto": "notifications" },
+        { "label": "Remind me this week", "goto": "notifications" },
+        { "label": "Add cook times to my calendar", "goto": "calendar" },
         { "label": "Export my checklist", "goto": "checklist" },
-        { "label": "Find an old week", "goto": "archive" },
+        { "label": "Peek at old weeks", "goto": "archive" },
+        { "label": "What's for lunch?", "goto": "lunch" },
         { "label": "Never mind", "action": "close" }
       ]
     },
@@ -29,7 +30,7 @@
       ]
     },
     "calendar": {
-      "text": "I can add all of this week's cooking times to your calendar.",
+      "text": "I can add this week's cook times to your calendar -- with a heads-up alarm built in.",
       "expression": "neutral",
       "options": [
         { "label": "Add all events", "action": "generate-ics" },
@@ -39,10 +40,12 @@
       ]
     },
     "notifications": {
-      "text": "I can send you a reminder right when it's time to cook.",
-      "expression": "neutral",
+      "text": "I can ping you at cook times and lunch times, plus a nudge when the new week's menu lands. Reminders only know THIS week -- when I nudge you, pop back in and re-sync.",
+      "expression": "determined",
       "options": [
-        { "label": "Turn on reminders", "action": "trigger-permission" },
+        { "label": "Sync this week's reminders", "action": "trigger-permission" },
+        { "label": "What's coming up?", "action": "notification-status" },
+        { "label": "Turn reminders off", "action": "clear-reminders" },
         { "label": "Back", "goto": "root" }
       ]
     },
@@ -61,6 +64,15 @@
       "input": true,
       "options": [
         { "label": "Back", "goto": "archive" }
+      ]
+    },
+    "lunch": {
+      "text": "Mom's lunch plan lives on its own page -- one easy lunch a day, already folded into the grocery list.",
+      "expression": "happy",
+      "options": [
+        { "label": "Take me to the lunch page", "action": "navigate-to-lunch" },
+        { "label": "Remind me at lunch time", "goto": "notifications" },
+        { "label": "Back", "goto": "root" }
       ]
     }
   }

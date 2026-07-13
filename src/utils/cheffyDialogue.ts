@@ -12,7 +12,7 @@ export type DialogueTree = { start: string; nodes: Record<string, DialogueNode> 
 export type ArchiveEntry = { slug: string; title: string; meals: string[] };
 
 /** Valid action values the runtime knows about (the 5 from CHEFFY-SYSTEM.md). */
-export const VALID_ACTIONS = ['generate-ics', 'generate-ics-meal', 'open-google-calendar', 'trigger-permission', 'navigate-to-archive', 'export-checklist', 'import-checklist', 'close'] as const;
+export const VALID_ACTIONS = ['generate-ics', 'generate-ics-meal', 'open-google-calendar', 'trigger-permission', 'notification-status', 'clear-reminders', 'navigate-to-archive', 'navigate-to-lunch', 'export-checklist', 'import-checklist', 'close'] as const;
 
 /** Look up a node by id. Total -- returns undefined for a missing id, never throws. */
 export function getNode(tree: DialogueTree, id: string): DialogueNode | undefined {
@@ -24,7 +24,9 @@ export function findDanglingGotos(tree: DialogueTree): string[] {
   const dangling: string[] = [];
   for (const node of Object.values(tree.nodes)) {
     for (const opt of node.options) {
-      if (opt.goto && !tree.nodes[opt.goto]) dangling.push(opt.goto);
+      // '#'-prefixed gotos are dynamic refs resolved at runtime by
+      // resolveDynamicNode(), not static node ids -- never report as dangling.
+      if (opt.goto && !opt.goto.startsWith('#') && !tree.nodes[opt.goto]) dangling.push(opt.goto);
     }
   }
   return dangling;

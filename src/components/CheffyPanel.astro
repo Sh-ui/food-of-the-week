@@ -448,6 +448,12 @@ const archiveIndex = await Promise.all(
         : import.meta.env.BASE_URL + '/';
       window.location.href = base + 'archive/' + ctx.slug;
     });
+    (window as any).registerCheffyAction('navigate-to-lunch', () => {
+      const base = import.meta.env.BASE_URL.endsWith('/')
+        ? import.meta.env.BASE_URL
+        : import.meta.env.BASE_URL + '/';
+      window.location.href = base + 'lunch/';
+    });
 
     // Open/close sync -- order-independent w.r.t. Cheffy.astro's script.
     const observer = new MutationObserver(() => {
