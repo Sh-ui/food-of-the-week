@@ -93,9 +93,9 @@ Cabbage thoran -- shredded cabbage quick-fried with mustard seed and turmeric, d
 
 ### Sous Chef - Prep (optional -- Chef can do solo, ~10 min)
 
-- [ ] Dice *1* **onion**, mince *3-4* **garlic** cloves. Peel and dice *2* **carrots**.
+- [ ] Dice *1* **onion**, mince *3-4* **garlic** cloves. Peel and dice *3* **carrots**.
 - [ ] Shred *half* the **cabbage** head thinly (reserve the other half for Chipotle Pork slaw).
-- [ ] Chop **cilantro**, cut **limes** into wedges.
+- [ ] Chop *half a bunch* of **cilantro**, cut **limes** into wedges.
 
 ### Chef - Cooking
 
