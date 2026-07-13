@@ -5,8 +5,10 @@
 
 Cheffy is an animated SVG chef-hat character in the corner of every page. Mostly
 idle, he perks up on a new week, opens a speech-bubble dialogue on click, and
-offers utilities built on the week's meal plan: calendar export (ICS / Google),
-cook-time notifications, grocery-checklist export/import, and archive search.
+offers utilities built on the week's meal plan: calendar export (ICS / Google,
+alarm included), weekly-synced local reminders (cook times + mom's lunches + a
+re-sync nudge), grocery-checklist export/import, and in-panel archive
+browsing/search.
 
 **Progressive enhancement only.** The site works fully without him: with JS off
 the mount stays `display:none` with zero layout impact.
@@ -24,11 +26,13 @@ is the only adapter that binds them to the DOM. Swap or reuse any of them freely
 | `src/utils/cheffyBehavior.ts` | pure code | Ambient personality director: blink/glance/bounce/doze events on randomized timers per mode. |
 | `src/data/cheffy-dialogue.json` | **data** | The dialogue tree: nodes, options, `goto`/`action`, per-node `expression`. |
 | `src/data/cheffy-config.json` | **data** | Presentation: chip vs free-float, ink/chip colors, default corner + personality. |
-| `src/utils/cheffyDialogue.ts` | pure code | Tree traversal, validation helpers, archive search. |
+| `src/utils/cheffyDialogue.ts` | pure code | Tree traversal, validation helpers, archive search, dynamic `#` node builders (browse/preview/results). |
 | `src/utils/cheffyState.ts` | pure code | Week identity + visited-weeks helpers. |
-| `src/utils/cheffyCalendar.ts` | pure code (Node-only) | Markdown -> cooking events -> ICS / Google URL. Never import client-side. |
+| `src/utils/cheffySchedule.ts` | pure code | Week reminder schedule: cook times (ICS DTSTARTs) + daily lunches + the end-of-week re-sync nudge -> one sorted `ScheduledNotification[]`. |
+| `src/utils/cheffyScheduleStore.ts` | adapter | IndexedDB persistence for the synced schedule (`cheffy-db`/`schedule`; constants duplicated in `public/sw.js` -- keep in lockstep). |
+| `src/utils/cheffyCalendar.ts` | pure code (Node-only) | Markdown -> cooking events -> ICS (with VALARM) / Google URL. Never import client-side. |
 | `src/utils/cheffyCalendarActions.ts` | adapter | Registers `generate-ics`, `generate-ics-meal`, `open-google-calendar` handlers. |
-| `src/utils/cheffyNotifications.ts` | adapter | Registers `trigger-permission` (service worker `public/sw.js`). |
+| `src/utils/cheffyNotifications.ts` | adapter | Registers `trigger-permission` (weekly sync), `notification-status`, `clear-reminders`. |
 | `src/utils/cheffyChecklist.ts` | adapter | Registers `export-checklist`, `import-checklist`. |
 | `src/components/Cheffy.astro` | adapter | Mounts the SVG rig; binds springs + behavior + state machine. |
 | `src/components/CheffyPanel.astro` | adapter | Speech-bubble panel + dialogue runtime + action registry. |
@@ -101,12 +105,54 @@ Eyes track the pointer within ~260px of the mascot in idle.
 `{ text, expression?, input?, options: [{ label, goto? | action? }] }`.
 Valid `action` values live in `VALID_ACTIONS` (`cheffyDialogue.ts`) and must
 have a registered handler: `generate-ics`, `generate-ics-meal`,
-`open-google-calendar`, `trigger-permission`, `navigate-to-archive`,
+`open-google-calendar`, `trigger-permission`, `notification-status`,
+`clear-reminders`, `navigate-to-archive`, `navigate-to-lunch`,
 `export-checklist`, `import-checklist`, `close`.
+
+### Dynamic nodes (`#` gotos)
+
+A `goto` starting with `#` is resolved at runtime by `resolveDynamicNode()`
+(`cheffyDialogue.ts`) instead of the static tree -- pure builders that turn the
+build-time archive index into panel nodes:
+
+- `#archive-browse:<page>` -- paginated newest-first week list
+- `#archive-week:<slug>` -- one week's preview (title + meals + "Take me there")
+- `#archive-results:<query>` -- ranked search hits (the `search` node's input
+  routes here on Enter; title matches outrank meal-only matches)
+
+Static and dynamic gotos point at each other freely; unresolvable refs land on
+a graceful fallback node. `findDanglingGotos()` skips `#` refs.
 
 Calendar actions need the page's week Markdown: pages pass `cheffyFilename`
 to `Layout`, which threads it to the build-time calendar island. Pages without
 it get cleanly no-op calendar handlers.
+
+## Feature: Local reminders
+
+The weekly sync model -- reminders are LOCAL (no push server; GitHub Pages is
+static) and only ever know the currently-published week:
+
+1. `Cheffy.astro` embeds two build-time islands: `#cheffy-week-ics` (cook
+   times) and `#cheffy-lunch-week` (mom's 7 lunches from `lunch-week.json`).
+2. "Sync this week's reminders" (`trigger-permission`) asks permission, then
+   `cheffySchedule.ts` builds the flat schedule: every cook time, one lunch
+   ping per day (`notifications.lunchTime` knob, default 11:00), and a final
+   "New week is up!" nudge on the first `syncReminder.dow`+`time` (default
+   Sunday 09:00) strictly after everything else -- the loop that brings the
+   user back to re-sync each week.
+3. The schedule persists to IndexedDB (`cheffyScheduleStore.ts`);
+   `public/sw.js` delivers due-unfired entries on ANY wake -- periodic
+   background sync (`cheffy-schedule` tag, installed-PWA best-effort), SW
+   activate, or a page poke -- with a 24h staleness window. An open tab keeps
+   millisecond precision via setTimeout. Late-but-delivered beats never.
+4. `manifest.webmanifest` + `public/icons/` make the site installable
+   ("Add to Home Screen" materially improves closed-site delivery on Android).
+5. The never-miss channel stays the calendar: exported ICS now carries a
+   VALARM per event (`notifications.calendarAlarmMinutes` knob, default 15).
+
+Knobs live in `cheffy-config.json` under `notifications`, fail-soft resolved
+by `resolveNotificationConfig()`. Delivery honesty: `notification-status`
+("What's coming up?") reads the store; `clear-reminders` wipes it.
 
 ## Dev surface
 
