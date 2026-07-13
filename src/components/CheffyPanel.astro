@@ -176,6 +176,9 @@ const archiveIndex = await Promise.all(
     font-size: 1.15rem;
     line-height: 1.45;
     color: var(--color-text);
+    /* Dynamic nodes (e.g. archive week previews) embed literal '\n' to
+       separate the title from the meal list -- render those as line breaks. */
+    white-space: pre-line;
   }
 
   .cheffy-panel :global(.cheffy-options) {
@@ -274,7 +277,7 @@ const archiveIndex = await Promise.all(
   // cheffyState. Scoped to an already-OPEN panel -- never touches panel.hidden or
   // aria-expanded; those stay owned by Cheffy.astro's toggle open/close (part 2).
   import dialogueTree from '../data/cheffy-dialogue.json';
-  import { getNode, bestArchiveMatch, type DialogueNode, type ArchiveEntry } from '../utils/cheffyDialogue';
+  import { getNode, resolveDynamicNode, type DialogueNode, type ArchiveEntry } from '../utils/cheffyDialogue';
 
   type Tree = { start: string; nodes: Record<string, DialogueNode> };
   const dialogue = dialogueTree as unknown as Tree;
@@ -368,7 +371,7 @@ const archiveIndex = await Promise.all(
     }
 
     function renderNode(id: string): void {
-      const node = getNode(dialogue, id);
+      const node = id.startsWith('#') ? resolveDynamicNode(id, { index: archiveIndex }) : getNode(dialogue, id);
       if (!node || !nodeContainer) return;
 
       root.setAttribute('data-expr-override', node.expression || 'neutral');
@@ -390,13 +393,7 @@ const archiveIndex = await Promise.all(
         inputEl.addEventListener('keydown', (e) => {
           if (e.key !== 'Enter') return;
           e.preventDefault();
-          const value = inputEl.value;
-          const match = bestArchiveMatch(archiveIndex, value);
-          if (match) {
-            dispatchAction('navigate-to-archive', buildCtx(id, { slug: match.slug, query: value }));
-          } else {
-            textEl.textContent = "I couldn't find that one.";
-          }
+          renderNode('#archive-results:' + inputEl.value);
         });
         nodeContainer.appendChild(inputEl);
       }
@@ -430,7 +427,12 @@ const archiveIndex = await Promise.all(
         renderNode(goto);
       } else if (action) {
         const currentId = nodeContainer.dataset.node || startNodeId;
-        dispatchAction(action, buildCtx(currentId));
+        // Dynamic week-preview nodes carry their slug in the node id itself
+        // ('#archive-week:<slug>') -- surface it so action handlers written
+        // against the ctx.slug contract (e.g. navigate-to-archive) work
+        // unchanged whether the current node is static or dynamic.
+        const extra = currentId.startsWith('#archive-week:') ? { slug: currentId.slice('#archive-week:'.length) } : undefined;
+        dispatchAction(action, buildCtx(currentId, extra));
       }
     });
 

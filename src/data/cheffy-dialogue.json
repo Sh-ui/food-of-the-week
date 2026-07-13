@@ -4,7 +4,7 @@
   "start": "root",
   "_start": "Id of the node Cheffy opens on.",
 
-  "_node_shape": "Each entry in 'nodes' is { text, expression?, input?, options:[{label, goto? , action?}] }. 'goto' moves to another node id; 'action' runs a handler. expression may be ANY pose or alias from src/data/cheffy-poses.json (neutral, hidden, excited, happy, thinking, sleepy, wink, scowl, surprised, determined, smile, ...); unknown names fall back to neutral. input:true shows a free-text field.",
+  "_node_shape": "Each entry in 'nodes' is { text, expression?, input?, options:[{label, goto? , action?}] }. 'goto' moves to another node id; 'action' runs a handler. expression may be ANY pose or alias from src/data/cheffy-poses.json (neutral, hidden, excited, happy, thinking, sleepy, wink, scowl, surprised, determined, smile, ...); unknown names fall back to neutral. input:true shows a free-text field. A 'goto' starting with '#' is a DYNAMIC ref (built at runtime by cheffyDialogue.ts's resolveDynamicNode, not looked up here) -- e.g. '#archive-browse:0', '#archive-week:<slug>', '#archive-results:<query>'. Static and dynamic gotos can point at each other freely.",
   "_actions": "Valid option 'action' values the runtime must implement: generate-ics | generate-ics-meal | open-google-calendar | trigger-permission | navigate-to-archive | export-checklist | import-checklist | close.",
 
   "nodes": {
@@ -15,8 +15,17 @@
         { "label": "Add cooking times to my calendar", "goto": "calendar" },
         { "label": "Remind me at cook time", "goto": "notifications" },
         { "label": "Export my checklist", "goto": "checklist" },
-        { "label": "Find an old week", "goto": "search" },
+        { "label": "Find an old week", "goto": "archive" },
         { "label": "Never mind", "action": "close" }
+      ]
+    },
+    "archive": {
+      "text": "Want to browse old weeks, or hunt for a dish?",
+      "expression": "thinking",
+      "options": [
+        { "label": "Browse recent weeks", "goto": "#archive-browse:0" },
+        { "label": "Search by dish or week", "goto": "search" },
+        { "label": "Back", "goto": "root" }
       ]
     },
     "calendar": {
@@ -47,11 +56,11 @@
       ]
     },
     "search": {
-      "text": "Type a week or a meal name and I'll jump there.",
+      "text": "Name a dish or a week - I'll dig through my cookbook.",
       "expression": "thinking",
       "input": true,
       "options": [
-        { "label": "Back", "goto": "root" }
+        { "label": "Back", "goto": "archive" }
       ]
     }
   }
