@@ -18,6 +18,7 @@ import path from 'path';
 import CheffyPanel from './CheffyPanel.astro';
 import dialogue from '../data/cheffy-dialogue.json';
 import config from '../data/cheffy-config.json';
+import lunchWeek from '../data/lunch-week.json';
 import { ANATOMY, REST, computeFrame } from '../utils/cheffyRig';
 import { deriveWeekStart, extractCookingEvents, buildIcs, googleCalendarUrl }
   from '../utils/cheffyCalendar';
@@ -56,6 +57,16 @@ const inkStyle =
 // neutral face (no attribute pop when the adapter script boots).
 const rest = computeFrame(REST);
 
+// Build-time lunch-week data island (fail-soft -- lunch-week.json is generated
+// by scripts/generate-lunch-week.mjs; a missing/malformed file degrades to an
+// empty island, never breaks the build).
+const lunchIsland = {
+  weekStart: (lunchWeek as any).weekStart ?? '',
+  days: (((lunchWeek as any).days ?? []) as any[]).map((d) => ({ date: d.date, dow: d.dow, name: d.name })),
+};
+
+const alarmMin = (config as any).notifications?.calendarAlarmMinutes ?? 15;
+
 // Build-time calendar data island. Node/SSR context only -- NEVER call
 // buildIcs/extractCookingEvents/deriveWeekStart from client code.
 let calendarIsland: {
@@ -71,7 +82,7 @@ if (filename) {
     if (weekStart) {
       const events = extractCookingEvents(md, weekStart);
       if (events.length) {
-        calendarIsland.weekIcs = buildIcs(events);
+        calendarIsland.weekIcs = buildIcs(events, { alarmMinutes: alarmMin });
         calendarIsland.weekGoogleUrl = googleCalendarUrl(events[0]);
         const bySlug = new Map<string, typeof events>();
         for (const ev of events) {
@@ -81,7 +92,7 @@ if (filename) {
         calendarIsland.meals = [...bySlug.entries()].map(([mealSlug, evs]) => ({
           mealSlug,
           label: (evs[0].title.split(' -- ')[0] || mealSlug).trim(),
-          ics: buildIcs(evs),
+          ics: buildIcs(evs, { alarmMinutes: alarmMin }),
           googleUrl: googleCalendarUrl(evs[0]),
         }));
       }
@@ -149,6 +160,7 @@ if (filename) {
     <CheffyPanel />
     <script type="application/json" id="cheffy-week-ics" is:inline
             set:html={JSON.stringify(calendarIsland)} />
+    <script type="application/json" id="cheffy-lunch-week" is:inline set:html={JSON.stringify(lunchIsland)} />
   </div>
 )}
 

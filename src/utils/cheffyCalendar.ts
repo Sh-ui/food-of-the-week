@@ -298,8 +298,18 @@ function eventEnd(event: CookingEvent): Date {
 /**
  * Build a valid ICS document covering the given events.
  * Pass one event for the per-recipe mini export, or the whole week for "Add all".
+ *
+ * opts.alarmMinutes controls the VALARM baked into every VEVENT -- the
+ * "never-miss" channel that fires even if Cheffy's local notifications are
+ * unavailable/denied/the site is closed, because the reminder lives in the
+ * calendar app itself. Omitted/undefined -> default 15-minute-before alarm.
+ * Explicit null -> no VALARM at all (old pre-alarm behavior, still used for
+ * callers that don't want one). 0 or negative minutes still emit an alarm,
+ * triggering at/after the event start (TRIGGER:PT0M).
  */
-export function buildIcs(events: CookingEvent[]): string {
+export function buildIcs(events: CookingEvent[], opts?: { alarmMinutes?: number | null }): string {
+  const alarmMinutes = opts?.alarmMinutes === undefined ? 15 : opts.alarmMinutes;
+
   const lines: string[] = [];
   lines.push('BEGIN:VCALENDAR');
   lines.push('VERSION:2.0');
@@ -315,6 +325,14 @@ export function buildIcs(events: CookingEvent[]): string {
     lines.push(`DTSTART:${toIcsUtc(event.start)}`);
     lines.push(`DTEND:${toIcsUtc(end)}`);
     lines.push(`SUMMARY:${escapeIcsText(event.title)}`);
+    if (alarmMinutes !== null && alarmMinutes !== undefined) {
+      const trigger = alarmMinutes > 0 ? `-PT${alarmMinutes}M` : 'PT0M';
+      lines.push('BEGIN:VALARM');
+      lines.push('ACTION:DISPLAY');
+      lines.push(`DESCRIPTION:${escapeIcsText(event.title)}`);
+      lines.push(`TRIGGER:${trigger}`);
+      lines.push('END:VALARM');
+    }
     lines.push('END:VEVENT');
   });
 
