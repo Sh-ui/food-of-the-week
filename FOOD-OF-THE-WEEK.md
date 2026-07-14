@@ -2,7 +2,7 @@
 
 # Week of July 12-18, 2026
 
-> Tight-budget week. Everything leans on the freezer and pantry -- the only real shop is fresh produce (~$15). Pork shoulder is braised once on the weekend and split two ways: half Mexican (adobo), half North African (harissa), so one cheap cut carries two very different nights.
+> Tight-budget week. Everything leans on the freezer and pantry -- the only real shop is fresh produce (~$15). Pork shoulder was the original plan but couldn't be found in the deep freezer, so the two pork nights pivoted: Tuesday becomes turkey tacos (frozen patties crumbled into taco meat), and the end of the week picks up a harissa shakshuka -- eggs poached in the fire-roasted tomatoes and harissa that were already in the pantry.
 
 ## Grocery List
 
@@ -10,38 +10,40 @@
 
 - [ ] Yellow onions - 1 bag (OUT -- aromatic base for every meal)
 - [ ] Garlic - 1-2 heads (OUT -- aromatic base for every meal)
-- [ ] Green cabbage - 1 large head (Lentil Curry thoran + Chipotle Pork slaw -- one head, two nights)
-- [ ] Carrots - 1 lb (Lentil Curry body + Harissa Pork carrot salad)
-- [ ] Cilantro - 1 bunch (Lentil Curry + Chipotle Pork garnish)
-- [ ] Limes - 3-4 (Lentil Curry + Chipotle Pork slaw)
+- [x] Green cabbage - 1 large head (Lentil Curry thoran + Turkey Taco slaw -- one head, two nights; taco portion already cut)
+- [ ] Carrots - 1 lb (Lentil Curry body + Shakshuka carrot salad)
+- [ ] Cilantro - 1 bunch (Lentil Curry + Turkey Taco garnish)
+- [ ] Limes - 3-4 (Lentil Curry + Turkey Taco slaw)
 - [ ] Cucumber - 1 (Tilapia cucumber-yogurt salad)
 - [ ] Lemon - 1 (Tilapia + pearl couscous)
 - [ ] Frozen peas - small bag (into the dal -- optional)
 
 ### Protein
 
-- [x] Pork shoulder chunks (deep freezer -- braised once on the weekend, shredded, split adobo + harissa)
+- ~~Pork shoulder chunks (deep freezer -- couldn't find it, never cooked)~~
+- [x] Turkey burger patties (freezer -- crumbled into taco meat for Tuesday)
 - [x] Tilapia fillets (freezer -- bakes straight from frozen, no thaw)
 - [x] Seasoned lentil pouch (freezer -- heats from frozen, the curry base)
+- [x] Eggs (fridge -- shakshuka)
 
 ### Dairy
 
-- [x] Whole-milk Greek yogurt (fridge -- cucumber salad + harissa pork drizzle + curry cooling dollop)
+- [x] Whole-milk Greek yogurt (fridge -- cucumber salad + shakshuka drizzle + curry cooling dollop)
 
 ### Pantry
 
 - [x] Coconut milk (pantry -- Lentil Curry sauce)
-- [x] White rice (pantry -- Lentil Curry + Chipotle Pork)
-- [x] Quinoa (pantry, ~1 dinner -- Harissa Pork)
+- [x] White rice (pantry -- Lentil Curry + Turkey Tacos)
+- [x] Quinoa (pantry, ~1 dinner -- Harissa Shakshuka)
 - [x] Pearl couscous (pantry -- Tilapia night)
-- [x] Refried beans - 1 can (pantry -- Chipotle Pork warm side)
-- [x] Fire-roasted crushed tomatoes - 1 can (pantry -- Harissa Pork braise finish)
+- [x] Refried beans - 1 can (pantry -- Turkey Taco warm side)
+- [x] Fire-roasted crushed tomatoes - 1 can (pantry -- Harissa Shakshuka base)
 
 ### Flavor Cabinet
 
-- [x] Harissa paste (fridge -- Harissa Pork)
-- [x] Chipotle peppers in adobo (fridge -- Chipotle Pork)
-- [x] Ground cumin, coriander, turmeric, paprika, mustard seed (check -- Curry thoran + carrot salad)
+- [x] Harissa paste (fridge -- Harissa Shakshuka)
+- [x] Chipotle peppers in adobo (fridge -- Turkey Taco seasoning, optional)
+- [x] Ground cumin, coriander, turmeric, paprika, mustard seed (check -- Curry thoran + taco seasoning + carrot salad)
 - [x] Sesame oil, cooking oils, salt, sugar
 
 ---
@@ -49,23 +51,11 @@
 ## Weekend Prep
 
 ##### BatchDay
-###### saturday: thaw pork / sunday: braise pork + shred + split adobo/harissa
+###### ~~pork braise scrapped -- couldn't find the pork in the deep freezer~~
 
 ### Prep Checklist
 
-**One real cook all week: the pork shoulder braise.** Braise it plain on Sunday, shred, and split the pile into two tubs -- one gets a spoon of adobo stirred in (Chipotle Pork), one stays plain to finish in harissa later (Harissa Pork). Both pork nights then become reheat-and-assemble. Everything else -- tilapia, lentils -- cooks straight from frozen night-of with zero thaw.
-
-- [ ] **Saturday:** move **pork shoulder chunks** from deep freezer to fridge to thaw overnight.
-- [ ] **Sunday:** braise and shred the pork (see below), split into two labeled tubs, refrigerate.
-
-### Sunday Pork Braise
-
-Pat the thawed **pork shoulder chunks** dry, season with **salt** and **pepper**. Brown in a heavy pot in a thin film of oil, a few minutes a side. Add *1* rough-chopped **onion** and *3-4* smashed **garlic** cloves, pour in water or stock to come halfway up the meat. Cover, low simmer **2.5-3 hr** (or oven at 300F) until the pork shreds with a fork.
-
-Shred with two forks. **Split into two tubs:**
-
-- **Tub A (Chipotle):** stir in *1-2* minced **chipotle peppers in adobo** plus a spoon of the sauce and a ladle of braise liquid. Label, refrigerate.
-- **Tub B (Harissa):** leave plain with a little braise liquid to keep it moist. Label, refrigerate -- it gets finished in harissa on its night.
+**No batch cook this week.** The pork shoulder couldn't be found in the deep freezer, so the braise never happened. Both pork nights pivoted to pantry/freezer plays that cook night-of: turkey tacos (Tuesday) and harissa shakshuka (end of week). Everything else -- tilapia, lentils -- still cooks straight from frozen night-of with zero thaw.
 
 ### Workflow
 
@@ -94,7 +84,7 @@ Cabbage thoran -- shredded cabbage quick-fried with mustard seed and turmeric, d
 ### Sous Chef - Prep (optional -- Chef can do solo, ~10 min)
 
 - [ ] Dice *1* **onion**, mince *3-4* **garlic** cloves. Peel and dice *3* **carrots**.
-- [ ] Shred *half* the **cabbage** head thinly (reserve the other half for Chipotle Pork slaw).
+- [ ] Shred *half* the **cabbage** head thinly (reserve the other half for Turkey Taco slaw).
 - [ ] Chop *half a bunch* of **cilantro**, cut **limes** into wedges.
 
 ### Chef - Cooking
@@ -140,67 +130,67 @@ Pearl couscous: dry-toast the couscous in a pot with a little oil until golden, 
 
 ---
 
-## Chipotle Pork
+## Turkey Tacos
 
-##### Prep&Heat
-###### reheat pork tub A + 5:30 rice + cabbage-lime slaw
+##### CookFromFrozen
+###### crumble turkey patties into taco meat + 5:30 rice + cabbage-lime slaw
 
 #### Anchor:
-Reserved **pork Tub A** (already in adobo from the Sunday braise), warmed through until saucy and a little crisp at the edges.
+Frozen **turkey burger patties** crumbled straight into a hot skillet and freeballed into taco meat -- seasoned with **cumin**, **paprika**, **garlic**, **salt**, and a little **chipotle adobo** sauce if you want heat. No recipe, just vibe it.
 
 #### Fan:
 White rice -- rice cooker at 5:30.
 
 #### Cai:
-Cabbage-lime slaw -- the reserved half **cabbage** shredded, tossed with **lime**, oil, and **salt**. Cold, raw, cuts the rich pork.
+Cabbage-lime slaw -- **cabbage** (already cut) tossed with **lime**, oil, and **salt**. Cold, raw, cuts the rich meat.
 
 ### Already Prepped
 
-- **Pork Tub A** (shredded, in adobo) in the fridge from Sunday.
+- **Cabbage** already cut and ready.
 
 ### Sous Chef - Prep (optional -- Chef can do solo, ~10 min)
 
-- [ ] Shred the reserved half **cabbage** thinly. Toss with **lime** juice, a drizzle of oil, **salt**. Refrigerate.
+- [x] ~~Shred the cabbage~~ -- already done.
 - [ ] Chop **cilantro**, cut **limes** into wedges.
 - [ ] Open the can of **refried beans** into a small pot.
 
 ### Chef - Cooking
 
-Warm **pork Tub A** in a skillet over medium, 5-6 min, letting some edges catch and crisp. Warm the **refried beans** with a splash of water until loose and spoonable. At **5:30**, start **white rice**.
+Pull **turkey burger patties** from the freezer. Hot skillet, film of oil, drop the patties in and let them sear a minute, then start breaking them apart with a spatula as they thaw and cook. Crumble into small bits. Season as it cooks: **cumin**, **paprika**, **garlic powder** (or minced garlic), **salt**, and optionally a spoonful of **chipotle adobo** sauce for smokiness. Cook 8-10 min until browned and crumbly. Warm the **refried beans** with a splash of water until loose and spoonable. At **5:30**, start **white rice**.
 
-**Table**: rice in bowls, pork on top, refried beans as a warm schmear on the side, slaw piled on. **Cilantro** and **lime** wedges out -- build your own bowl.
+**Table**: rice in bowls, taco meat on top, refried beans as a warm schmear on the side, slaw piled on. **Cilantro** and **lime** wedges out -- build your own bowl.
 
 ---
 
-## Harissa Pork
+## Harissa Shakshuka
 
-##### Prep&Heat
-###### reheat pork tub B in harissa + quinoa + carrot salad
+##### OnePan
+###### eggs in harissa-tomato sauce + quinoa + carrot salad
 
 #### Anchor:
-Reserved **pork Tub B** (plain) finished in **harissa** and **fire-roasted tomatoes** -- deep, smoky, North African heat, a completely different plate from the Chipotle night off the same braise.
+**Eggs** poached in a skillet of **fire-roasted tomatoes** simmered with **harissa**, **onion**, **garlic**, and **cumin** -- smoky, spicy, North African comfort food. One pan, no protein to thaw.
 
 #### Fan:
-Quinoa -- rinsed, simmered, fluffed. Rotates the grain off rice.
+Quinoa -- rinsed, simmered, fluffed. Rotates the grain off rice. Soaks up the sauce.
 
 #### Cai:
 Moroccan carrot salad -- **carrots** softened, dressed warm with **cumin**, **garlic**, **lemon** or **lime**, and a touch of **harissa**. A cooling swipe of **yogurt** at the table.
 
 ### Already Prepped
 
-- **Pork Tub B** (shredded, plain) in the fridge from Sunday.
+- Nothing to thaw -- everything is pantry and fridge.
 
 ### Sous Chef - Prep (optional -- Chef can do solo, ~10 min)
 
+- [ ] Dice *1* **onion**, mince *2-3* **garlic** cloves.
 - [ ] Peel and slice the remaining **carrots** into coins.
-- [ ] Mince *1-2* **garlic** cloves for the carrot salad.
 
 ### Chef - Cooking
 
 Quinoa: rinse, simmer in ~2x water with a pinch of **salt**, covered, 12-15 min until the germ uncurls; fluff.
 
-Warm **pork Tub B** in a skillet, stir in a spoon of **harissa** and the **fire-roasted tomatoes**, simmer 5-6 min until glossy and reduced. ***Taste*** -- adjust harissa for heat and salt.
+Shakshuka: oil in a deep skillet over medium, soften **onion** and **garlic** 4-5 min. Stir in a generous spoon of **harissa**, **cumin**, and **paprika**, bloom 30 sec. Pour in the can of **fire-roasted tomatoes**, simmer 8-10 min until thick. ***Taste*** -- adjust harissa for heat and salt. Make *4-6* wells, crack an **egg** into each, cover, cook 5-7 min until whites are set and yolks are still runny.
 
 Carrot salad: simmer or steam the **carrot** coins 4-5 min just to tender, drain, toss warm with **garlic**, **cumin**, a squeeze of **lemon/lime**, oil, **salt**, and a small dab of **harissa**.
 
-**Table**: quinoa in bowls, harissa pork spooned over, carrot salad alongside, a swipe of **yogurt** on the table to cool it.
+**Table**: quinoa in bowls, shakshuka spooned over (get the sauce), carrot salad alongside, a swipe of **yogurt** on the table to cool it.
