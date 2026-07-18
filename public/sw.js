@@ -129,14 +129,31 @@ self.addEventListener('message', (event) => {
   }
 });
 
-// Focus an already-open tab for this site if one exists, else open the week URL.
+// Land on the notification's target URL: focus an already-open tab for this
+// site AND steer it there (a lunch ping must end on /lunch even if the home
+// page is what's open), else open a fresh window.
 self.addEventListener('notificationclick', (event) => {
   event.notification.close();
   const url = (event.notification.data && event.notification.data.url) || '/';
   event.waitUntil((async () => {
-    const wins = await self.clients.matchAll({ type: 'window', includeUncontrolled: true });
+    const scopePath = new URL(self.registration.scope).pathname;
+    const all = await self.clients.matchAll({ type: 'window', includeUncontrolled: true });
+    // Only steer tabs that live under OUR scope -- other projects on the same
+    // GitHub Pages origin are not ours to hijack.
+    const wins = all.filter((c) => {
+      try { return new URL(c.url).pathname.startsWith(scopePath); } catch (_) { return false; }
+    });
     for (const c of wins) {
-      if ('focus' in c) { try { await c.focus(); } catch (_) {} return; }
+      if ('focus' in c) {
+        try { await c.focus(); } catch (_) {}
+        try {
+          const here = new URL(c.url);
+          if (here.pathname !== url && 'navigate' in c) await c.navigate(url);
+        } catch (_) {
+          // navigation refused -- focused tab is still the site, good enough
+        }
+        return;
+      }
     }
     if (self.clients.openWindow) return self.clients.openWindow(url);
   })());

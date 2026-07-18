@@ -35,7 +35,7 @@ const { categories, hasLunchItems = false, lunchDefaultOn = true } = Astro.props
         <h3 class="mt-0 mb-md text-primary text-[1.4rem] mobile:text-[1.75rem] mobile:mb-md">{category.name}</h3>
         <ul class="grocery-items flex flex-col gap-sm">
           {category.items.map((item, index) => (
-            <li class={`flex items-center grocery-item ${item.globallyChecked ? 'globally-checked' : ''} ${item.isLunch ? 'lunch-item' : ''}`}>
+            <li class={`flex items-center grocery-item ${item.globallyChecked ? 'globally-checked' : ''} ${item.isLunch ? 'lunch-item' : ''} ${item.coversLunch ? 'covers-lunch' : ''}`}>
               <label class="flex items-center cursor-pointer w-full p-[calc(var(--spacing-xs)+2px)] rounded transition-colors hover:bg-[rgba(44,95,45,0.05)] text-[1.1rem] leading-relaxed mobile:p-sm mobile:text-[1.3rem]">
         <input
           type="checkbox"
@@ -232,6 +232,19 @@ const { categories, hasLunchItems = false, lunchDefaultOn = true } = Astro.props
 
   #grocery-categories.hide-lunch-items .lunch-item {
     display: none;
+  }
+
+  /* Main-list item that also covers a lunch ingredient: same mint dot, normal
+     text, and it NEVER hides behind the lunch toggle (dinner still needs it). */
+  .grocery-item.covers-lunch .item-text::before {
+    content: '';
+    display: inline-block;
+    width: 0.5em;
+    height: 0.5em;
+    margin-right: 0.5em;
+    border-radius: 50%;
+    background: var(--color-lunch-light);
+    vertical-align: middle;
   }
 
   /* Lunch toggle switch */

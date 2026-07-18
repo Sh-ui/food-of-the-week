@@ -4,6 +4,9 @@
   "startDate": "2026-06-28",
   "_startDate": "The very first lunch week (a Sunday). Don't change casually — it anchors the rotation. Weeks run Sun–Sat.",
 
+  "timezone": "America/New_York",
+  "_timezone": "IANA timezone that decides what 'today' is when picking the week. Keeps CI (UTC) from rolling to the new week on Saturday evening US time. Invalid values fall back to UTC with a warning.",
+
   "itemsPerWeek": 7,
   "_itemsPerWeek": "How many lunches per week (one per day = 7). Lower it for fewer days; the page shows that many, starting Sunday.",
 

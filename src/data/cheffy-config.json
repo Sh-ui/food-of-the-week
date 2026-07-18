@@ -16,9 +16,10 @@
   "_personality": "Default ambience: dormant | subtle | lively. Archive pages pass 'dormant' via Layout regardless.",
 
   "notifications": {
+    "lunchEnabled": true,
     "lunchTime": "11:00",
     "syncReminder": { "dow": "Sunday", "time": "09:00" },
     "calendarAlarmMinutes": 15
   },
-  "_notifications": "Local reminder knobs. lunchTime = daily lunch ping (24h local). syncReminder = the end-of-week 'come re-sync next week's reminders' ping: fires the first <dow> at <time> after everything else in the synced week. calendarAlarmMinutes = minutes-before VALARM baked into exported calendar events (the never-miss channel)."
+  "_notifications": "Local reminder knobs. lunchEnabled = include the daily lunch pings in the weekly sync (false = cook times + sync nudge only). lunchTime = daily lunch ping (24h local). syncReminder = the end-of-week 'come re-sync next week's reminders' ping: fires the first <dow> at <time> after everything else in the synced week. calendarAlarmMinutes = minutes-before VALARM baked into exported calendar events (the never-miss channel)."
 }

@@ -22,11 +22,15 @@ edit FOOD-OF-THE-WEEK.md  →  git push  →  GitHub Action runs `npm run build`
 Local `npm run dev` and `npm run build` do the same via `predev` / `prebuild`. Nothing to
 remember, nothing to commit back.
 
-**How it can be stateless:** the rotation is fully **deterministic**. On each run it replays
-the whole schedule in memory from `startDate` up to the current week, so the same date +
-same config always produce the same plan — no state file to keep in sync, no commit-back in
-CI. (`src/data/lunch-history.json` is written as a read-only *audit trail*; it's rebuilt
-every run and safe to delete.)
+**The current week is FROZEN:** the committed `src/data/lunch-week.json` is the source of
+truth for its own week. As long as it covers the current week (and its item ids still
+exist in the pool), every build reuses it verbatim -- pool or config edits mid-week can
+NEVER reshuffle what mom already saw. Past weeks recorded in `src/data/lunch-history.json`
+are trusted the same way. Only the Sunday rollover selects a new week, deterministically
+(same date + same committed state + same config => same plan, in CI and locally). Grocery
+additions are rebuilt from the frozen day ids each run, so `/lunch` and the grocery
+section can never disagree. To reshuffle the current week on purpose:
+`npm run lunch:generate -- --force` (then commit).
 
 ## The knobs — `src/data/lunch-config.json`
 
@@ -80,8 +84,8 @@ cycles, and re-running a week is byte-identical.
 |------|---------|
 | `src/data/lunch-config.json` | **The knobs** (the only file you normally touch) |
 | `src/data/lunch-pool.json` | The big list (generated from the builder) |
-| `src/data/lunch-week.json` | This week's plan + grocery additions (generated each build) |
-| `src/data/lunch-history.json` | Audit trail of the replayed schedule (generated; informational) |
+| `src/data/lunch-week.json` | This week's plan + grocery additions (**committed state** -- frozen for its week) |
+| `src/data/lunch-history.json` | Which items served which week (**committed state** -- authoritative past) |
 | `scripts/build-lunch-pool.mjs` | Defines the pool |
 | `scripts/generate-lunch-week.mjs` | Deterministic rotation engine |
 | `src/pages/lunch.astro` | Mom's `/lunch` page (cool mint theme, `noindex`) |
@@ -94,9 +98,9 @@ Wiring: `package.json` `predev`/`prebuild` run the generator; `index.astro` pass
 ## Notes
 
 - Carb counts are **estimates** (1 serving ≈ 15 g carbs). Always check the label.
-- Twisting a knob recomputes the whole schedule, so a change can reshuffle the *current*
-  week — fine for mom (she only sees this week), and within a week the plan is stable as
-  long as you don't change knobs.
+- Knob and pool changes take effect from the **next** week's selection; the current week
+  stays frozen. `exclude` still stops an item's *future* appearances immediately, but the
+  frozen week keeps showing it until Sunday (use `--force` if it must go now).
 - Privacy: `noindex, nofollow`, only linked from the footer. For a hard lock later, put the
   site behind Cloudflare Access or a static password.
 

@@ -144,7 +144,7 @@ describe('buildLunchNotifications', () => {
 });
 
 describe('buildSyncReminder', () => {
-  const config: NotificationConfig = { lunchTime: '11:00', syncReminder: { dow: 'Sunday', time: '09:00' } };
+  const config: NotificationConfig = { lunchEnabled: true, lunchTime: '11:00', syncReminder: { dow: 'Sunday', time: '09:00' } };
 
   test('afterMs on a Wednesday -> lands next Sunday 09:00 local', () => {
     // 2026-07-15 is a Wednesday.
@@ -253,5 +253,31 @@ describe('buildWeekSchedule', () => {
     });
     assert.equal(schedule.length, 1);
     assert.equal(schedule[0].kind, 'sync');
+  });
+
+  test('lunchEnabled=false drops lunch pings but keeps cook + sync', () => {
+    const now = new Date(2026, 6, 13, 8, 0).getTime();
+    const config: NotificationConfig = {
+      lunchEnabled: false,
+      lunchTime: '11:00',
+      syncReminder: { dow: 'Sunday', time: '09:00' },
+    };
+    const days: LunchDay[] = [{ date: '2026-07-14', dow: 'Tuesday', name: 'Greek yogurt + berries' }];
+    const schedule = buildWeekSchedule({
+      meals: [{ label: 'Tacos', ics: 'DTSTART:20260715T220000Z' }],
+      lunchDays: days,
+      config,
+      urls: { week: '/week', lunch: '/lunch', home: '/' },
+      now,
+    });
+    assert.equal(schedule.filter((n) => n.kind === 'lunch').length, 0);
+    assert.equal(schedule.filter((n) => n.kind === 'cook').length, 1);
+    assert.equal(schedule.filter((n) => n.kind === 'sync').length, 1);
+  });
+
+  test('resolveNotificationConfig folds lunchEnabled fail-soft', () => {
+    assert.equal(resolveNotificationConfig({ lunchEnabled: false }).lunchEnabled, false);
+    assert.equal(resolveNotificationConfig({ lunchEnabled: 'nope' }).lunchEnabled, true);
+    assert.equal(resolveNotificationConfig(null).lunchEnabled, true);
   });
 });

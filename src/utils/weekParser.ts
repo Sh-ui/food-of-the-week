@@ -22,6 +22,8 @@ export interface GroceryItem {
   text: string;
   globallyChecked: boolean;
   isLunch?: boolean;
+  /** Main-list item that also covers a lunch ingredient (dot-marked, never toggled away). */
+  coversLunch?: boolean;
 }
 
 export interface ListCategory {

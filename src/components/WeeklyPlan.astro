@@ -106,10 +106,11 @@ const heroRows = heroRowsFromMeals.length > 0 ? heroRowsFromMeals : heroRowsFrom
  
 ---
 
-<StickyHeader 
+<StickyHeader
   shortTitle={shortTitle}
   meals={mealsForNav}
   hasGroceryList={weekPlan.groceryList.length > 0}
+  lunchHref={foldLunchIntoGrocery && (lunchWeek.days ?? []).length > 0 ? `${base}lunch/` : undefined}
 />
 
 <div class="max-w-container w-full mx-auto overflow-x-hidden px-md pt-0 pb-lg mobile:px-sm">
@@ -117,7 +118,7 @@ const heroRows = heroRowsFromMeals.length > 0 ? heroRowsFromMeals : heroRowsFrom
   <section class="text-center px-md py-xl min-h-[40vh] flex flex-col items-center justify-center gap-lg mobile:min-h-[30vh] mobile:px-sm" id="top">
     <h1 class="mb-0">{weekPlan.weekTitle}</h1>
     <!-- Hero Action Bar: Print Full Week + Links & Info -->
-    <div class="hero-action-bar flex items-center justify-center gap-md">
+    <div class="hero-action-bar flex flex-wrap items-center justify-center gap-md mobile:gap-sm">
       <BackToCurrentWeekButton />
       <ActionButton 
         variant="primary" 
@@ -133,8 +134,18 @@ const heroRows = heroRowsFromMeals.length > 0 ? heroRowsFromMeals : heroRowsFrom
         </svg>
         Print Full Week
       </ActionButton>
-      <ActionButton 
-        variant="ghost" 
+      {foldLunchIntoGrocery && (lunchWeek.days ?? []).length > 0 && (
+        <ActionButton
+          variant="ghost"
+          href={`${base}lunch/`}
+          size="md"
+          class="hero-action-btn hero-lunch-btn border"
+        >
+          🥪 Lunch
+        </ActionButton>
+      )}
+      <ActionButton
+        variant="ghost"
         href={`${base}fancai`}
         size="md"
         class="hero-action-btn border border-border"
@@ -223,5 +234,15 @@ const heroRows = heroRowsFromMeals.length > 0 ? heroRowsFromMeals : heroRowsFrom
 <style>
   /* All layout/spacing now handled by Tailwind utilities */
   /* Kept only for semantic class names used by other components */
+
+  /* Lunch button rides the lunch page's mint identity so it reads as "mom's
+     lunch corner" at a glance. :global -- class lands on ActionButton's DOM. */
+  :global(.hero-lunch-btn) {
+    color: var(--color-lunch);
+    border-color: var(--color-lunch-border);
+  }
+  :global(.hero-lunch-btn:hover) {
+    background: rgba(124, 192, 174, 0.15);
+  }
 </style>
 

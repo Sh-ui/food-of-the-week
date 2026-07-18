@@ -10,9 +10,11 @@ interface Props {
   meals: MealNavItem[];
   hasGroceryList: boolean;
   articleMode?: boolean;
+  /** When set, a mint Lunch link (to mom's /lunch page) joins the nav + dropdown. */
+  lunchHref?: string;
 }
 
-const { shortTitle, meals, hasGroceryList, articleMode = false } = Astro.props;
+const { shortTitle, meals, hasGroceryList, articleMode = false, lunchHref } = Astro.props;
 ---
 
 <header class="sticky-header" id="sticky-header" data-scrolled="false">
@@ -38,7 +40,13 @@ const { shortTitle, meals, hasGroceryList, articleMode = false } = Astro.props;
           Grocery
         </a>
       )}
-      
+
+      {lunchHref && (
+        <a href={lunchHref} class="nav-btn lunch-nav-btn">
+          🥪 Lunch
+        </a>
+      )}
+
       {meals.map((meal) => (
         <a 
           href={`#print-section-${meal.id}`} 
@@ -76,7 +84,13 @@ const { shortTitle, meals, hasGroceryList, articleMode = false } = Astro.props;
           Grocery List
         </a>
       )}
-    
+
+      {lunchHref && (
+        <a href={lunchHref} class="dropdown-link lunch-nav-btn">
+          🥪 Mom's Lunch
+        </a>
+      )}
+
       {meals.map((meal) => (
         <a 
           href={`#print-section-${meal.id}`} 
@@ -218,6 +232,17 @@ const { shortTitle, meals, hasGroceryList, articleMode = false } = Astro.props;
     display: flex;
     align-items: center;
     gap: var(--spacing-xs);
+    /* Never slide under the absolutely-positioned Print/Info cluster on
+       crowded weeks: stop short of it and scroll (scrollbar hidden). */
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    margin-right: 96px;
+  }
+
+  .nav-buttons::-webkit-scrollbar {
+    display: none;
   }
 
   /* ============================================
@@ -256,6 +281,17 @@ const { shortTitle, meals, hasGroceryList, articleMode = false } = Astro.props;
 
   .nav-btn.cooked.active {
     background: var(--color-cooked-bg);
+  }
+
+  /* Lunch link wears the lunch page's mint so it reads as a doorway, not a
+     same-page section jump like its neighbors. */
+  .lunch-nav-btn {
+    color: var(--color-lunch);
+    font-weight: 600;
+  }
+
+  .lunch-nav-btn:hover {
+    background: rgba(124, 192, 174, 0.15);
   }
 
   /* ============================================

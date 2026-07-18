@@ -4,6 +4,11 @@ on:
   # Trigger the workflow on push to master branch
   push:
     branches: [ master ]
+  # Sunday-morning rollover build: the lunch week only advances when a build
+  # runs, so guarantee one every Sunday (11:00 UTC = 6-7am Eastern) even if
+  # nobody pushes that day.
+  schedule:
+    - cron: '0 11 * * 0'
   # Allow manual trigger from Actions tab
   workflow_dispatch:
 
@@ -22,21 +27,44 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
     steps:
       - name: Checkout
         uses: actions/checkout@v6
-      
+
       - name: Setup Node
         uses: actions/setup-node@v6
         with:
           node-version: '20'
           cache: 'npm'
-      
+
       - name: Install dependencies
         run: npm ci
-      
+
       - name: Build with Astro
         run: npm run build
+
+      # The lunch rotation freezes the current week via committed state
+      # (see LUNCH-SYSTEM.md). When the prebuild generator rolls to a new
+      # week (or regenerates the pool), commit that state back so every
+      # later build this week reuses it verbatim.
+      # Best-effort: a rejected push (concurrent push, branch protection) must
+      # never block the deploy itself -- the generator is deterministic, so an
+      # uncommitted rollover just regenerates identically next build.
+      - name: Commit lunch rotation state
+        continue-on-error: true
+        run: |
+          FILES="src/data/lunch-week.json src/data/lunch-history.json src/data/lunch-pool.json"
+          if ! git diff --quiet -- $FILES; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add $FILES
+            git commit -m "Freeze lunch week state [skip ci]"
+            git push || echo "push rejected -- state stays uncommitted, deploy continues"
+          fi
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4

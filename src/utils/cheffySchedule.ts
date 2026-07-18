@@ -30,11 +30,13 @@ export type LunchDay = { date: string; dow: string; name: string };
 export type SyncReminderConfig = { dow: string; time: string }; // e.g. { dow: 'Sunday', time: '09:00' }
 
 export type NotificationConfig = {
+  lunchEnabled: boolean; // false = weekly sync skips the daily lunch pings entirely
   lunchTime: string; // 'HH:MM' 24h local, default '11:00'
   syncReminder: SyncReminderConfig; // default { dow: 'Sunday', time: '09:00' }
 };
 
 export const DEFAULT_NOTIFICATION_CONFIG: NotificationConfig = {
+  lunchEnabled: true,
   lunchTime: '11:00',
   syncReminder: { dow: 'Sunday', time: '09:00' },
 };
@@ -80,10 +82,11 @@ function dowLabel(index: number): string {
 export function resolveNotificationConfig(raw: unknown): NotificationConfig {
   const defaults = DEFAULT_NOTIFICATION_CONFIG;
   if (!raw || typeof raw !== 'object') {
-    return { lunchTime: defaults.lunchTime, syncReminder: { ...defaults.syncReminder } };
+    return { lunchEnabled: defaults.lunchEnabled, lunchTime: defaults.lunchTime, syncReminder: { ...defaults.syncReminder } };
   }
 
   const r = raw as Record<string, unknown>;
+  const lunchEnabled = typeof r.lunchEnabled === 'boolean' ? r.lunchEnabled : defaults.lunchEnabled;
   const lunchTime = parseTimeHHMM(r.lunchTime) ? (r.lunchTime as string).trim() : defaults.lunchTime;
 
   const rawSync = r.syncReminder && typeof r.syncReminder === 'object' ? (r.syncReminder as Record<string, unknown>) : {};
@@ -91,7 +94,7 @@ export function resolveNotificationConfig(raw: unknown): NotificationConfig {
   const dow = dowIdx >= 0 ? dowLabel(dowIdx) : defaults.syncReminder.dow;
   const time = parseTimeHHMM(rawSync.time) ? (rawSync.time as string).trim() : defaults.syncReminder.time;
 
-  return { lunchTime, syncReminder: { dow, time } };
+  return { lunchEnabled, lunchTime, syncReminder: { dow, time } };
 }
 
 /** Every DTSTART:YYYYMMDDTHHMMSSZ in an ICS blob -> epoch ms (UTC). Total, never throws. */
@@ -230,7 +233,9 @@ export function buildWeekSchedule(input: {
   const now = Number.isFinite(safe.now) ? safe.now : Date.now();
 
   const cook = buildCookNotifications(Array.isArray(safe.meals) ? safe.meals : [], urls?.week ?? '');
-  const lunch = buildLunchNotifications(Array.isArray(safe.lunchDays) ? safe.lunchDays : [], config.lunchTime, urls?.lunch ?? '');
+  const lunch = config.lunchEnabled === false
+    ? []
+    : buildLunchNotifications(Array.isArray(safe.lunchDays) ? safe.lunchDays : [], config.lunchTime, urls?.lunch ?? '');
   const rest = [...cook, ...lunch];
 
   // Anchor strictly after BOTH the latest scheduled entry and now -- syncing late

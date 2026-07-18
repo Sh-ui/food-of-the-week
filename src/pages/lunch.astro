@@ -19,6 +19,8 @@ function shortDate(iso: string): string {
 
 <Layout title={`Mom's Lunch — ${lunchWeek.weekTitle}`} noindex={true}>
   <main class="lunch-theme max-w-container w-full mx-auto px-md pt-lg pb-lg mobile:px-sm">
+    <a href={homeHref} class="lunch-home-link">← Full week &amp; grocery list</a>
+
     <!-- Hero -->
     <section class="text-center px-md py-lg flex flex-col items-center gap-sm">
       <div class="lunch-hero-emoji" aria-hidden="true">🥪</div>
@@ -139,6 +141,18 @@ function shortDate(iso: string): string {
     --mint-bg-soft: #f1f8f5;
     --mint-border: #bfe0d6;
   }
+
+  .lunch-home-link {
+    display: inline-block;
+    color: var(--mint-deep);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.95rem;
+    padding: 4px 8px;
+    margin-left: -8px;
+    border-radius: 6px;
+  }
+  .lunch-home-link:hover { background: var(--mint-bg); }
 
   .lunch-hero-emoji { font-size: 3rem; line-height: 1; }
   .lunch-h1 {

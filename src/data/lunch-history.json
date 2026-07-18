@@ -1,7 +1,6 @@
 {
-  "_comment": "AUTO-GENERATED audit trail (deterministic replay from lunch-config.startDate). Not an input — safe to delete; it is rebuilt every run.",
+  "_comment": "COMMITTED STATE: which lunch ids served which week. Weeks listed here are trusted verbatim on later runs (pool edits cannot rewrite the past). Delete only to restart the rotation from lunch-config.startDate.",
   "startDate": "2026-06-28",
-  "updatedAt": "2026-07-13T01:19:26.213Z",
   "weeks": [
     {
       "weekStart": "2026-06-28",

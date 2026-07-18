@@ -136,7 +136,8 @@ static) and only ever know the currently-published week:
    times) and `#cheffy-lunch-week` (mom's 7 lunches from `lunch-week.json`).
 2. "Sync this week's reminders" (`trigger-permission`) asks permission, then
    `cheffySchedule.ts` builds the flat schedule: every cook time, one lunch
-   ping per day (`notifications.lunchTime` knob, default 11:00), and a final
+   ping per day (`notifications.lunchTime` knob, default 11:00; drop them
+   entirely with `notifications.lunchEnabled: false`), and a final
    "New week is up!" nudge on the first `syncReminder.dow`+`time` (default
    Sunday 09:00) strictly after everything else -- the loop that brings the
    user back to re-sync each week.
