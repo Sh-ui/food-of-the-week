@@ -1,198 +1,234 @@
 <!-- https://sh-ui.github.io/food-of-the-week/ -->
 
-# Week of July 12-18, 2026
+# Week of July 19-25, 2026
 
-> Tight-budget week. Everything leans on the freezer and pantry -- the only real shop is fresh produce (~$15). Pork shoulder was the original plan but couldn't be found in the deep freezer, so the two pork nights pivoted: Wednesday becomes chipotle turkey bowls (frozen patties crumbled into seasoned meat over rice), and the end of the week picks up a harissa shakshuka -- eggs poached in the fire-roasted tomatoes and harissa that were already in the pantry.
+> Survival-mode week for four. One prep: sous vide the mujadarrah onions today (hands-off, 24 hours). Every dinner cooks night-of. One chicken purchase split across two nights in completely different preparations. Italian sausages from the freezer and dry lentils from the pantry fill the other two. Vegetables bought in bulk at Aldi stretch across the full week: onions, bell peppers, zucchini, broccoli, cucumber.
 
 ## Grocery List
 
 ### Produce
 
-- [ ] Yellow onions - 1 bag (OUT -- aromatic base for every meal)
-- [ ] Garlic - 1-2 heads (OUT -- aromatic base for every meal)
-- [x] Green cabbage - 1 large head (Lentil Curry thoran + Chipotle Turkey Bowl slaw -- one head, two nights; bowl portion already cut)
-- [ ] Carrots - 1 lb (Lentil Curry body + Shakshuka carrot salad)
-- [ ] Cilantro - 1 bunch (Lentil Curry + Chipotle Turkey Bowl garnish)
-- [ ] Limes - 3-4 (Lentil Curry + Chipotle Turkey Bowl slaw)
-- [ ] Cucumber - 1 (Tilapia cucumber-yogurt salad)
-- [ ] Lemon - 1 (Tilapia + pearl couscous)
-- [ ] Frozen peas - small bag (into the dal -- optional)
+- [ ] Yellow onions - 1 large bag (SV caramelized onions for Mujadarrah eat 4-5 alone, plus every other night)
+- [ ] Bell peppers - 2-3 (Biang Biang stir-fry + Sausage Couscous roast)
+- [ ] Zucchini - 3-4 (Biang Biang matchstick stir-fry + Sausage Couscous roast cubes)
+- [ ] Broccoli - 1 head (Miso Chicken sheet pan)
+- [ ] Cucumber - 2 (Miso Chicken smashed cucumber + Mujadarrah salad)
+- [ ] Lemon - 2 (Sausage Couscous + Mujadarrah + Miso Chicken)
+- [x] Garlic (on hand)
 
 ### Protein
 
-- ~~Pork shoulder chunks (deep freezer -- couldn't find it, never cooked)~~
-- [x] Turkey burger patties (freezer -- crumbled into chipotle meat for Wednesday)
-- [x] Tilapia fillets (freezer -- bakes straight from frozen, no thaw)
-- [x] Seasoned lentil pouch (freezer -- heats from frozen, the curry base)
-- [x] Eggs (fridge -- shakshuka)
+- [ ] Boneless chicken thighs - 1 larger pack (split: half for Biang Biang stir-fry, half for Miso Chicken sheet pan)
+- [x] Italian sausages (freezer -- move to fridge Tuesday morning for Wednesday night)
+- [x] Dry lentils (pantry)
 
 ### Dairy
 
-- [x] Whole-milk Greek yogurt (fridge -- cucumber salad + chipotle bowl dollop + shakshuka drizzle + curry cooling dollop)
+- [x] Greek yogurt (fridge -- Mujadarrah + Miso Chicken)
 
 ### Pantry
 
-- [x] Coconut milk (pantry -- Lentil Curry sauce)
-- [x] White rice (pantry -- Lentil Curry + Chipotle Turkey Bowl)
-- [x] Quinoa (pantry, ~1 dinner -- Harissa Shakshuka)
-- [x] Pearl couscous (pantry -- Tilapia night)
-- [x] Refried beans - 1 can (pantry -- Chipotle Turkey Bowl warm side)
-- [x] Tortilla chips (pantry -- Chipotle Turkey Bowl)
-- [x] Salsa (fridge -- Chipotle Turkey Bowl)
-- [x] Fire-roasted crushed tomatoes - 1 can (pantry -- Harissa Shakshuka base)
+- [x] Dried biang biang noodles (pantry)
+- [x] Pearl couscous (pantry)
+- [x] White rice (pantry)
+- [x] Dry lentils (pantry)
+- [x] Canned black beans (pantry -- Miso Chicken night cai)
+- [x] Miso (fridge -- Miso Chicken glaze)
+- [x] Shrimp paste block (pantry -- Biang Biang sauce)
+- [x] Tomato paste (pantry -- Sausage Couscous ratatouille slurry)
+- [x] Chicken bouillon (pantry -- Sausage Couscous ratatouille slurry)
 
 ### Flavor Cabinet
 
-- [x] Harissa paste (fridge -- Harissa Shakshuka)
-- [x] Chipotle peppers in adobo (fridge -- Chipotle Turkey Bowl seasoning, optional)
-- [x] Ground cumin, coriander, turmeric, paprika, mustard seed (check -- Curry thoran + chipotle bowl seasoning + carrot salad)
-- [x] Sesame oil, cooking oils, salt, sugar
+- [x] Dark soy, black vinegar, sesame oil, chili crisp, sesame seeds (Biang Biang + Miso Chicken)
+- [x] Rice wine vinegar, soy sauce, sugar (dressings)
+- [x] Cumin (Mujadarrah)
+- [x] Various cooking oils, salt, butter
 
 ---
 
 ## Weekend Prep
 
 ##### BatchDay
-###### ~~pork braise scrapped -- couldn't find the pork in the deep freezer~~
+###### 4:00 saute onions + 4:10 seal bag + drop in bath at 185F
 
 ### Prep Checklist
 
-**No batch cook this week.** The pork shoulder couldn't be found in the deep freezer, so the braise never happened. Both pork nights pivoted to pantry/freezer plays that cook night-of: chipotle turkey bowls (Wednesday) and harissa shakshuka (end of week). Everything else -- tilapia, lentils -- still cooks straight from frozen night-of with zero thaw.
+**One prep today: sous vide the caramelized onions for Thursday's mujadarrah.** These need 24 hours in the bath, so start today and they're ready any time after Monday. Hands-off after the bag goes in.
 
-### Workflow
+### SV Caramelized Onions (for Mujadarrah)
 
-Zero weekday cooking beyond reheating and one fresh cai each night. Every meal runs solo -- if the sous chef crew is out on a given night, the Chef can handle it alone in the times noted.
+- [ ] Halve *4-5* **yellow onions** root-to-tip, then slice into *1/4-inch* wedges.
+- [ ] **Pre-saute (not optional)**: large skillet, *1 tbsp* **butter**, medium-high heat. Cook the sliced onions *5-8 min* stirring occasionally, until translucent and just starting to pick up color. This drives off gas that would puff and burst the bag in the bath. Season with a generous pinch of **salt**.
+- [ ] Transfer the sauteed onions to a vacuum bag (or zip-top for water displacement). Add *1 tbsp* **butter** and a *tiny pinch* of **sugar** (~1/4 tsp -- feeds the Maillard, not sweetness). Spread flat in an even layer.
+- [ ] Seal and drop into the sous vide bath at **185F**. Cook **24 hours**. The onions will emerge deeply mahogany, jammy, and uniformly caramelized.
+- [ ] When done: drain through a fine-mesh strainer. **Save the bag juices** -- pour them into the lentil-rice pot on Thursday night. They're liquid gold.
+
+The bag can sit in the fridge after the bath for up to 3 days if Thursday shifts.
 
 ---
 
-## Coconut Lentil Curry
+## Biang Biang Noodles
 
 ##### Prep&Heat
-###### prep + 5:30 rice + cabbage thoran
+###### 5:15 prep chicken + veg + 5:30 cold side
 
 #### Anchor:
-The **seasoned lentil pouch** simmered from frozen into **coconut milk** with **onion**, **garlic**, **carrot**, and a handful of **peas** -- a quick, creamy dal that tastes slow-cooked. A squeeze of **lime** and a dollop of **yogurt** at the table.
+Sliced **chicken thigh** stir-fried fast in the wok with **shrimp paste**, **dark soy**, **black vinegar**, and **chili crisp**. Julienned **zucchini** matchsticks stir-fried first until just colored, pulled out, folded back in at the end to keep their texture.
 
 #### Fan:
-White rice -- rice cooker at 5:30.
+**Biang biang noodles** -- thick, chewy wheat noodles boiled and tossed in the stir-fry sauce.
 
 #### Cai:
-Cabbage thoran -- shredded cabbage quick-fried with mustard seed and turmeric, dry and fragrant, not saucy.
+Cold dressed side -- shredded **bell pepper** and **cucumber** strips in rice vinegar, sesame oil, a pinch of sugar, and sesame seeds.
 
 ### Already Prepped
 
-- Nothing to thaw -- the **lentil pouch** heats straight from frozen.
+- Nothing -- everything night-of.
 
-### Sous Chef - Prep (optional -- Chef can do solo, ~10 min)
+### Sous Chef - Prep (5:15)
 
-- [ ] Dice *1* **onion**, mince *3-4* **garlic** cloves. Peel and dice *3* **carrots**.
-- [ ] Shred *half* the **cabbage** head thinly (reserve the other half for Chipotle Turkey Bowl slaw).
-- [ ] Chop *half a bunch* of **cilantro**, cut **limes** into wedges.
+- [ ] Slice *half* the **chicken thigh** pack into *thin strips* against the grain (~1/4 inch). Set near the stove.
+- [ ] Julienne *1-2* **zucchini** into *short matchsticks* -- about 2 inches long, 1/4 inch thick. Not too thin or they'll wilt to nothing. Set near the stove.
+- [ ] Slice *1* **bell pepper** into thin strips. Split into two piles: half raw for the cold side, half for the stir-fry.
+- [ ] Shred or julienne *half a* **cucumber** for the cold side.
+- [ ] Mince *3-4* **garlic** cloves. Set near the stove.
 
-### Chef - Cooking
+### Sous Chef - Assembly (5:30)
 
-Warm oil in a pot over medium, soften **onion**, **garlic**, and **carrot** 4-5 min. Drop in the **lentil pouch** (from frozen -- give it a minute to loosen), pour in **coconut milk**, add a splash of water. Simmer 8-10 min until the carrots are tender and it's creamy. Stir in **peas** the last 2 min. ***Taste*** -- adjust salt, finish with **lime**.
+**Cold side**: toss the raw **bell pepper** strips and **cucumber** with *1 tbsp* **rice vinegar**, *1 tsp* **sesame oil**, a pinch of **sugar**, **salt**, and **sesame seeds**. Refrigerate.
 
-Meanwhile, thoran: hot pan, splash of oil, a pinch of **mustard seed** until it pops, add shredded **cabbage** and a pinch of **turmeric** and **salt**. Toss 3-4 min -- keep it crisp and dry. At **5:30**, start **white rice**.
+### Chef - Cooking (when home)
 
-**Table**: rice in bowls, curry ladled over, thoran alongside. **Yogurt**, **cilantro**, and **lime** wedges on the table.
+Boil a big pot of water. Cook the **biang biang noodles** per package (usually 5-7 min for thick noodles -- test for chew, not soft). Drain, toss with a splash of **sesame oil** to keep from sticking. These stick fast so cook them right before the wok, not ahead.
+
+Wok, ripping hot, film of oil. **Zucchini first** -- spread the matchsticks in a single layer, sear *hard* without moving for 60-90 seconds until they pick up color on one side. Toss once, 30 more seconds. **Pull them out** onto a plate. They'll go back in at the end.
+
+Same wok, add oil if dry. Sear the **chicken** strips in a single layer -- don't crowd, work in batches if needed. Let the bottom faces get golden, ~90 seconds. Flip, 30 more seconds. Push chicken to the side.
+
+Add a knob of **shrimp paste** (~1 tsp, it's intense) and the **minced garlic** to the open wok surface. Stir-fry 30 seconds until fragrant. Add the stir-fry **bell pepper** strips, toss 1 minute. Season: **dark soy** (1-2 tbsp for color and salt), **black vinegar** (1 tbsp for tang), **chili crisp** (to taste).
+
+Toss the drained **noodles** into the wok. Fold in the **reserved zucchini**. Toss everything together until coated. ***Taste*** -- adjust soy for salt, vinegar for acid.
+
+**Table**: noodles heaped in bowls. Cold dressed side alongside. Extra **chili crisp** on the table.
 
 ---
 
-## Baked Tilapia + Couscous
+## Miso Chicken + Broccoli
 
 ##### SousChefDish
-###### 5:30 couscous + oven tilapia from frozen + cucumber salad
+###### 8:00am move sausages from freezer to fridge + 5:00 prep broccoli + 5:15 bean salad + cucumber + 5:30 rice
 
 #### Anchor:
-**Tilapia** baked straight from frozen -- rubbed with oil, **lemon**, and spice, roasted until it flakes. No thaw, no pan to babysit.
-
-#### Fan:
-Pearl couscous -- toasted in the pot, then simmered in its own water until it drinks it up. No draining, no straining, no sticking.
-
-#### Cai:
-Cool cucumber-yogurt salad -- diced **cucumber** folded into **Greek yogurt** with **lemon**, salt, and a little oil.
-
-### Already Prepped
-
-- **Tilapia** stays frozen until go-time -- nothing to prep ahead.
-
-### Sous Chef - Prep (optional -- Chef can do solo, ~10 min)
-
-- [ ] Dice **cucumber**. Fold into **Greek yogurt** with a squeeze of **lemon**, **salt**, a drizzle of oil. Refrigerate.
-- [ ] Cut the other half of the **lemon** into wedges.
-
-### Chef - Cooking
-
-Oven to 425F, line a sheet pan with foil. Rub the frozen **tilapia** with oil, **salt**, **paprika** or **cumin**, and a squeeze of **lemon**. Bake **18-22 min** from frozen until it flakes at the thickest point (a few minutes longer than thawed fish).
-
-Pearl couscous: dry-toast the couscous in a pot with a little oil until golden, 2-3 min. Add water (about 1.25x the couscous by volume) and a pinch of **salt**, cover, simmer **10-12 min** until absorbed. Fluff.
-
-**Table**: couscous in a shared bowl, tilapia on top or alongside, cucumber-yogurt salad cold in a small dish, **lemon** wedges out.
-
----
-
-## Chipotle Turkey Bowls
-
-##### CookFromFrozen
-###### crumble turkey patties into chipotle meat + 5:30 rice + cabbage-lime slaw
-
-#### Anchor:
-Frozen **turkey burger patties** crumbled straight into a hot skillet and freeballed into chipotle-seasoned meat -- **cumin**, **paprika**, **garlic**, **salt**, and a little **chipotle adobo** sauce if you want heat. No recipe, just vibe it.
+**Boneless chicken thighs** rubbed with a **miso**-**soy**-**sesame oil**-**garlic** paste, sheet pan roasted at high heat until caramelized and charred at the edges. The miso sugars burn into a savory-sweet crust.
 
 #### Fan:
 White rice -- rice cooker at 5:30.
 
 #### Cai:
-Cabbage-lime slaw -- **cabbage** (already cut) tossed with **lime**, oil, and **salt**. Cold, raw, cuts the rich meat.
+**Japanese black bean salad** -- canned black beans dressed warm with sesame oil, rice vinegar, grated ginger, soy sauce, a touch of sugar. A riff on the white bean salad pattern, but the flavor grammar is east-Asian -- think fermented black bean sauce territory, not southwestern.
+
+**Smashed cucumber** -- cucumber whacked with the flat of a knife, torn into chunks, dressed with rice vinegar, sesame oil, sesame seeds, salt. Cold, crunchy, 5 minutes.
 
 ### Already Prepped
 
-- **Cabbage** already cut and ready.
+- Nothing -- everything night-of.
 
-### Sous Chef - Prep (optional -- Chef can do solo, ~10 min)
+### Sous Chef - Prep (5:00)
 
-- [x] ~~Shred the cabbage~~ -- already done.
-- [ ] Chop **cilantro**, cut **limes** into wedges.
-- [ ] Open the can of **refried beans** into a small pot.
+- [ ] Cut **broccoli** into florets. Toss with oil, **salt**, spread on a sheet pan.
 
-### Chef - Cooking
+### Sous Chef - Assembly (5:15)
 
-Pull **turkey burger patties** from the freezer. Hot skillet, film of oil, drop the patties in and let them sear a minute, then start breaking them apart with a spatula as they thaw and cook. Crumble into small bits. Season as it cooks: **cumin**, **paprika**, **garlic powder** (or minced garlic), **salt**, and optionally a spoonful of **chipotle adobo** sauce for smokiness. Cook 8-10 min until browned and crumbly. Warm the **refried beans** with a splash of water until loose and spoonable. At **5:30**, start **white rice**.
+**Black bean salad**: drain and rinse the **black beans**. Warm gently in a small pot with a splash of water. Off heat, toss with *1 tbsp* **sesame oil**, *1 tbsp* **rice vinegar**, *1 tsp* grated **ginger**, *1 tsp* **soy sauce**, pinch of **sugar**. Finely slice some **onion**, scatter on top.
 
-**Table**: rice in bowls, chipotle turkey on top, refried beans as a warm schmear on the side, slaw piled on. **Salsa**, **yogurt**, **cilantro**, **lime** wedges, and **chips** on the table -- build your own bowl.
+**Smashed cucumber**: smash **cucumber** -- flat of a knife, tear into rough chunks. Dress with **rice vinegar**, **sesame oil**, **sesame seeds**, **salt**.
+
+**At 5:30**: start **white rice** in the rice cooker.
+
+### Defrost for tomorrow
+
+**This morning (Tuesday)**: move the **Italian sausages** from the freezer to the fridge. They need 24 hours to thaw for Wednesday night.
+
+### Chef - Cooking (when home)
+
+**Preheat oven to 425F.** Mix the miso rub: *2 tbsp* **miso**, *1 tbsp* **soy sauce**, *1 tbsp* **sesame oil**, *2* minced **garlic** cloves, pinch of **sugar**. Rub generously over the remaining **chicken thighs** (the half reserved from Monday's split). Arrange on the sheet pan alongside the broccoli. Roast **20-25 min** until the chicken is charred at the edges, broccoli tender with brown tips.
+
+**Table**: rice in bowls. Chicken and broccoli from the sheet pan. Black bean salad and smashed cucumber in shared dishes.
 
 ---
 
-## Harissa Shakshuka
+## Sausage + Roasted Veg Couscous
 
-##### OnePan
-###### eggs in harissa-tomato sauce + quinoa + carrot salad
+##### SousChefDish
+###### 5:00 prep veg + mix slurry + slice sausage
 
 #### Anchor:
-**Eggs** poached in a skillet of **fire-roasted tomatoes** simmered with **harissa**, **onion**, **garlic**, and **cumin** -- smoky, spicy, North African comfort food. One pan, no protein to thaw.
+**Italian sausage** coins, seared hard until the casings blister and the edges crisp. Served over the couscous with the roasted vegetables.
 
 #### Fan:
-Quinoa -- rinsed, simmered, fluffed. Rotates the grain off rice. Soaks up the sauce.
+**Pearl couscous** -- dry-toasted in oil until golden, then simmered. Big, chewy, pasta-like.
 
 #### Cai:
-Moroccan carrot salad -- **carrots** softened, dressed warm with **cumin**, **garlic**, **lemon** or **lime**, and a touch of **harissa**. A cooling swipe of **yogurt** at the table.
+Ratatouille-roasted vegetables -- **zucchini** cubes, **bell pepper** strips, and **onion** wedges coated in a **tomato paste** + **chicken bouillon** slurry, roasted at high heat until charred and jammy. The vegetables are the volume of this meal -- sausage is the flavor, veg is the body.
 
 ### Already Prepped
 
-- Nothing to thaw -- everything is pantry and fridge.
+- **Italian sausages** thawed in the fridge (moved from freezer Tuesday morning).
 
-### Sous Chef - Prep (optional -- Chef can do solo, ~10 min)
+### Sous Chef - Prep (5:00)
 
-- [ ] Dice *1* **onion**, mince *2-3* **garlic** cloves.
-- [ ] Peel and slice the remaining **carrots** into coins.
+- [ ] Cut *2* **zucchini** into *3/4-inch cubes*. Cut *1-2* **bell peppers** into *wide strips*. Cut *1* **onion** into *thick wedges*.
+- [ ] Mix the slurry: *2 tbsp* **tomato paste**, *1 tsp* **chicken bouillon** dissolved in *1 tbsp* warm water, *2 tbsp* oil, **salt**, pepper. Toss the cut veg in it until evenly coated.
+- [ ] Slice the thawed **sausages** into *1-inch coins*.
 
-### Chef - Cooking
+### Chef - Cooking (when home)
 
-Quinoa: rinse, simmer in ~2x water with a pinch of **salt**, covered, 12-15 min until the germ uncurls; fluff.
+**Preheat oven to 425F.** Spread the slurry-coated vegetables on a sheet pan in a single layer -- don't crowd or they steam. Roast **25-30 min**, flipping once halfway, until charred at the edges and tender.
 
-Shakshuka: oil in a deep skillet over medium, soften **onion** and **garlic** 4-5 min. Stir in a generous spoon of **harissa**, **cumin**, and **paprika**, bloom 30 sec. Pour in the can of **fire-roasted tomatoes**, simmer 8-10 min until thick. ***Taste*** -- adjust harissa for heat and salt. Make *4-6* wells, crack an **egg** into each, cover, cook 5-7 min until whites are set and yolks are still runny.
+While veg roasts: hot skillet, film of oil. Sear **sausage** coins cut-side down until deeply browned and blistered, *3-4 min per side*. Don't move them until the crust sets. Remove to a plate.
 
-Carrot salad: simmer or steam the **carrot** coins 4-5 min just to tender, drain, toss warm with **garlic**, **cumin**, a squeeze of **lemon/lime**, oil, **salt**, and a small dab of **harissa**.
+Pearl couscous: dry-toast in a pot with a splash of oil until golden, *2-3 min*. Add water (about *1.25x* the couscous by volume), pinch of **salt**. Cover, simmer **10-12 min** until absorbed. Fluff.
 
-**Table**: quinoa in bowls, shakshuka spooned over (get the sauce), carrot salad alongside, a swipe of **yogurt** on the table to cool it.
+**Table**: couscous in a wide shared bowl. Pile the roasted vegetables over it. Nestle the sausage coins into the veg. Squeeze of **lemon** over everything.
+
+---
+
+## Mujadarrah
+
+##### OnePan
+###### 5:00 drain onions + save juices + 5:05 lentils on + 5:15 salad
+
+#### Anchor:
+**Mujadarrah** -- **lentils** simmered with **rice**, cumin, and a bay leaf, crowned with a towering pile of **sous vide caramelized onions** from Sunday's prep. The onions are the whole point. Middle Eastern home food at its most elemental.
+
+#### Fan:
+The rice is built into the dish -- lentils and rice cook together in one pot.
+
+#### Cai:
+**Yogurt** -- plain **Greek yogurt** dolloped on top. Cool, tangy, cuts the sweet onions.
+
+Simple raw salad -- diced **cucumber** and raw **onion**, dressed with **lemon** juice, olive oil, **salt**. Clean and bright.
+
+### Already Prepped
+
+- **SV caramelized onions** from Sunday's prep (bag in the fridge).
+
+### Sous Chef - Prep (5:00)
+
+- [ ] Drain the **SV onion bag** through a fine-mesh strainer into a small bowl. **Save the juices** -- they go into the lentil pot.
+- [ ] Rinse *1 cup* **lentils**, pick over for stones. In a pot, combine with *3 cups water* and the **reserved onion bag juices**. Bring to a boil, reduce to a simmer.
+
+### Sous Chef - Assembly (5:15)
+
+**Salad**: dice *1* **cucumber** and a little raw **onion**. Dress with **lemon** juice, oil, **salt**. Refrigerate.
+
+### Chef - Cooking (when home)
+
+The lentils should be tender by now (15-20 min simmer). Add *1 cup* **rice** (rinsed), *1 tsp* **cumin**, a bay leaf, **salt**, and enough water to cover by about an inch. Bring back to a simmer, cover, cook **15-18 min** until rice is done and water is absorbed. Kill heat, let it sit covered *5 min*. Fluff gently.
+
+***Taste*** the lentil-rice -- adjust salt and cumin.
+
+Optional pan finish -- hot skillet, film of **butter** or oil. Spread *half* the drained SV onions in a single layer, let them sear without stirring *2-3 min* until crispy at the edges. Textural contrast to the jammy pile.
+
+**Table**: mound the lentil-rice on a platter. Pile the **caramelized onions** on top -- half pan-crisped for crunch, half jammy straight from the bag. **Yogurt** in a bowl. **Salad** alongside. Everyone builds their own plate.
