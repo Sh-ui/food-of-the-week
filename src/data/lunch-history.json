@@ -37,6 +37,18 @@
         "cottage-pineapple-seeds",
         "broccoli-cheese-kale"
       ]
+    },
+    {
+      "weekStart": "2026-07-19",
+      "items": [
+        "cracker-pb-banana",
+        "animalcrackers-pb",
+        "cheese-crackers-grapes",
+        "edamame-clementine",
+        "cucumber-hummus",
+        "almondbutter-celery",
+        "tuna-packet-peppers"
+      ]
     }
   ]
 }

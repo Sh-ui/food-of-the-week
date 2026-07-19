@@ -1,154 +1,151 @@
 {
-  "weekStart": "2026-07-12",
-  "weekTitle": "Week of July 12-18, 2026",
+  "weekStart": "2026-07-19",
+  "weekTitle": "Week of July 19-25, 2026",
   "poolSize": 52,
   "activePoolSize": 52,
   "autoGrocery": true,
   "carbServingNote": "carbServings is an approximate count of 15 g carb servings, estimated from the nutritionist handout. Always check the food label.",
   "days": [
     {
-      "date": "2026-07-12",
+      "date": "2026-07-19",
       "dow": "Sunday",
-      "id": "med-hummus-rollup",
-      "name": "Mediterranean hummus roll-up",
+      "id": "cracker-pb-banana",
+      "name": "Whole-wheat crackers + peanut butter + ½ banana",
       "fridge": [
-        "Whole-wheat tortilla",
-        "Hummus",
-        "Spinach",
-        "Cucumber",
-        "Roasted red pepper"
+        "3–5 whole-wheat crackers",
+        "1 Tbsp peanut butter",
+        "½ banana"
       ],
-      "carbServings": "≈1–2",
+      "carbServings": "≈2",
       "effort": "easy",
       "soft": true,
+      "protein": "peanut_butter"
+    },
+    {
+      "date": "2026-07-20",
+      "dow": "Monday",
+      "id": "animalcrackers-pb",
+      "name": "Animal crackers (or pretzel rods) + peanut butter",
+      "fridge": [
+        "8 animal crackers or 2 pretzel rods",
+        "1 Tbsp peanut butter"
+      ],
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": false,
+      "protein": "peanut_butter"
+    },
+    {
+      "date": "2026-07-21",
+      "dow": "Tuesday",
+      "id": "cheese-crackers-grapes",
+      "name": "Cheese cubes + whole-grain crackers + grapes",
+      "fridge": [
+        "Cheese cubes",
+        "4–5 whole-grain crackers",
+        "17 grapes"
+      ],
+      "carbServings": "≈2",
+      "effort": "easy",
+      "soft": false,
+      "protein": "cheese"
+    },
+    {
+      "date": "2026-07-22",
+      "dow": "Wednesday",
+      "id": "edamame-clementine",
+      "name": "Steamed edamame + a clementine",
+      "fridge": [
+        "1 cup steamed edamame",
+        "1 clementine"
+      ],
+      "carbServings": "≈1",
+      "effort": "some",
+      "soft": true,
+      "protein": "edamame"
+    },
+    {
+      "date": "2026-07-23",
+      "dow": "Thursday",
+      "id": "cucumber-hummus",
+      "name": "Cucumber + hummus",
+      "fridge": [
+        "1 cup cucumber slices",
+        "2 Tbsp hummus"
+      ],
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": false,
       "protein": "hummus"
     },
     {
-      "date": "2026-07-13",
-      "dow": "Monday",
-      "id": "egg-fruit",
-      "name": "Hard-boiled egg + a small piece of fruit",
-      "fridge": [
-        "1 hard-boiled egg",
-        "1 small piece of fruit"
-      ],
-      "carbServings": "≈1",
-      "effort": "easy",
-      "soft": true,
-      "protein": "egg"
-    },
-    {
-      "date": "2026-07-14",
-      "dow": "Tuesday",
-      "id": "banana-pb",
-      "name": "½ banana + peanut butter",
-      "fridge": [
-        "½ banana",
-        "1 Tbsp peanut butter"
-      ],
-      "carbServings": "≈1",
-      "effort": "easy",
-      "soft": true,
-      "protein": "peanut_butter"
-    },
-    {
-      "date": "2026-07-15",
-      "dow": "Wednesday",
-      "id": "greekyogurt-berries",
-      "name": "Greek yogurt + berries",
-      "fridge": [
-        "¾ cup plain Greek yogurt",
-        "½ cup berries"
-      ],
-      "carbServings": "≈1",
-      "effort": "easy",
-      "soft": true,
-      "protein": "yogurt"
-    },
-    {
-      "date": "2026-07-16",
-      "dow": "Thursday",
-      "id": "saltines-pb",
-      "name": "Saltine crackers + peanut butter",
-      "fridge": [
-        "6 saltine crackers",
-        "1 Tbsp peanut butter"
-      ],
-      "carbServings": "≈1",
-      "effort": "easy",
-      "soft": true,
-      "protein": "peanut_butter"
-    },
-    {
-      "date": "2026-07-17",
+      "date": "2026-07-24",
       "dow": "Friday",
-      "id": "cottage-pineapple-seeds",
-      "name": "Cottage cheese + pineapple + sunflower seeds",
+      "id": "almondbutter-celery",
+      "name": "Celery + almond butter",
       "fridge": [
-        "½ cup cottage cheese",
-        "½ cup pineapple",
-        "1 Tbsp sunflower seeds"
-      ],
-      "carbServings": "≈1",
-      "effort": "easy",
-      "soft": true,
-      "protein": "cottage_cheese"
-    },
-    {
-      "date": "2026-07-18",
-      "dow": "Saturday",
-      "id": "broccoli-cheese-kale",
-      "name": "Broccoli + cheese cubes + baby kale + yogurt dressing",
-      "fridge": [
-        "Broccoli florets",
-        "Cheese cubes",
-        "Baby kale",
-        "Yogurt dressing"
+        "Celery sticks",
+        "1 Tbsp almond butter"
       ],
       "carbServings": "≈0–1",
       "effort": "easy",
       "soft": false,
-      "protein": "cheese"
+      "protein": "nuts"
+    },
+    {
+      "date": "2026-07-25",
+      "dow": "Saturday",
+      "id": "tuna-packet-peppers",
+      "name": "Tuna packet + celery or peppers",
+      "fridge": [
+        "1 tuna packet",
+        "Celery or pepper strips"
+      ],
+      "carbServings": "≈0–1",
+      "effort": "easy",
+      "soft": false,
+      "protein": "tuna"
     }
   ],
   "grocery": [
     {
       "name": "Produce",
       "items": [
-        "Apples / small fruit",
-        "Baby kale",
         "Bananas",
-        "Berries",
-        "Broccoli",
+        "Celery",
+        "Celery / bell peppers",
+        "Clementines",
         "Cucumber",
-        "Pineapple (or cups)",
-        "Spinach"
+        "Grapes"
       ]
     },
     {
       "name": "Protein",
       "items": [
-        "Hard-boiled eggs (or eggs to boil)"
+        "Tuna pouches"
       ]
     },
     {
       "name": "Dairy",
       "items": [
         "Cheese cubes",
-        "Cottage cheese",
-        "Greek yogurt dressing",
-        "Hummus",
-        "Plain Greek yogurt"
+        "Hummus"
+      ]
+    },
+    {
+      "name": "Frozen",
+      "items": [
+        "Shelled edamame"
       ]
     },
     {
       "name": "Pantry",
       "items": [
+        "Almond butter",
+        "Animal crackers / pretzel rods",
         "Peanut butter",
-        "Roasted red peppers (jar)",
-        "Saltine crackers",
-        "Sunflower seeds",
-        "Whole-wheat tortillas"
+        "Whole-grain crackers",
+        "Whole-wheat crackers"
       ]
     }
   ]
