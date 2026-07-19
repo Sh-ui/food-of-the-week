@@ -53,16 +53,16 @@
     {
       "date": "2026-07-22",
       "dow": "Wednesday",
-      "id": "edamame-clementine",
-      "name": "Steamed edamame + a clementine",
+      "id": "lox-bal-thins",
+      "name": "Lox + Bal Thins",
       "fridge": [
-        "1 cup steamed edamame",
-        "1 clementine"
+        "2–3 slices lox (smoked salmon)",
+        "4–5 Bal Thins crackers"
       ],
       "carbServings": "≈1",
-      "effort": "some",
+      "effort": "easy",
       "soft": true,
-      "protein": "edamame"
+      "protein": "salmon"
     },
     {
       "date": "2026-07-23",
@@ -114,7 +114,6 @@
         "Bananas",
         "Celery",
         "Celery / bell peppers",
-        "Clementines",
         "Cucumber",
         "Grapes"
       ]
@@ -130,12 +129,6 @@
       "items": [
         "Cheese cubes",
         "Hummus"
-      ]
-    },
-    {
-      "name": "Frozen",
-      "items": [
-        "Shelled edamame"
       ]
     },
     {

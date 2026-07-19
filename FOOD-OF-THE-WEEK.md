@@ -9,19 +9,17 @@
 ### Produce
 
 - [ ] Yellow onions - 1 large bag (SV caramelized onions for Mujadarrah eat 4-5 alone, plus every other night)
-- [ ] Bell peppers - 2-3 (Biang Biang stir-fry + Sausage Couscous roast)
-- [ ] Zucchini - 3-4 (Biang Biang matchstick stir-fry + Sausage Couscous roast cubes)
-- [ ] Broccoli - 1 head (Miso Chicken sheet pan)
+- [ ] Bell peppers - 2-3 (Biang Biang stir-fry + Sausage Couscous)
+- [ ] Zucchini - 3-4 (Biang Biang matchstick stir-fry + Sausage Couscous cubes)
+- [ ] Broccoli - 1 head (Miso Chicken)
 - [ ] Cucumber - 2 (Miso Chicken smashed cucumber + Mujadarrah salad)
 - [ ] Lemon - 2 (Sausage Couscous + Mujadarrah + Miso Chicken)
 - [x] Garlic (on hand)
 
 ### Protein
 
-- [ ] Boneless chicken thighs - 1 larger pack (split: half for Biang Biang stir-fry, half for Miso Chicken sheet pan)
+- [ ] Boneless chicken thighs - 1 larger pack (split: half for Biang Biang stir-fry, half for Miso Chicken)
 - [x] Italian sausages (freezer -- move to fridge Tuesday morning for Wednesday night)
-- [x] Dry lentils (pantry)
-
 ### Dairy
 
 - [x] Greek yogurt (fridge -- Mujadarrah + Miso Chicken)
@@ -71,7 +69,7 @@ The bag can sit in the fridge after the bath for up to 3 days if Thursday shifts
 ## Biang Biang Noodles
 
 ##### Prep&Heat
-###### 5:15 prep chicken + veg + 5:30 cold side
+###### 5:15 prep + 5:30 cold side
 
 #### Anchor:
 Sliced **chicken thigh** stir-fried fast in the wok with **shrimp paste**, **dark soy**, **black vinegar**, and **chili crisp**. Julienned **zucchini** matchsticks stir-fried first until just colored, pulled out, folded back in at the end to keep their texture.
@@ -114,10 +112,10 @@ Toss the drained **noodles** into the wok. Fold in the **reserved zucchini**. To
 
 ---
 
-## Miso Chicken + Broccoli
+## Miso Chicken
 
 ##### SousChefDish
-###### 8:00am move sausages from freezer to fridge + 5:00 prep broccoli + 5:15 bean salad + cucumber + 5:30 rice
+###### 8:00am defrost + 5:00 prep + 5:30 rice
 
 #### Anchor:
 **Boneless chicken thighs** rubbed with a **miso**-**soy**-**sesame oil**-**garlic** paste, sheet pan roasted at high heat until caramelized and charred at the edges. The miso sugars burn into a savory-sweet crust.
@@ -158,10 +156,10 @@ White rice -- rice cooker at 5:30.
 
 ---
 
-## Sausage + Roasted Veg Couscous
+## Sausage Couscous
 
 ##### SousChefDish
-###### 5:00 prep veg + mix slurry + slice sausage
+###### 5:00 prep
 
 #### Anchor:
 **Italian sausage** coins, seared hard until the casings blister and the edges crisp. Served over the couscous with the roasted vegetables.
@@ -179,10 +177,12 @@ Ratatouille-roasted vegetables -- **zucchini** cubes, **bell pepper** strips, an
 ### Sous Chef - Prep (5:00)
 
 - [ ] Cut *2* **zucchini** into *3/4-inch cubes*. Cut *1-2* **bell peppers** into *wide strips*. Cut *1* **onion** into *thick wedges*.
-- [ ] Mix the slurry: *2 tbsp* **tomato paste**, *1 tsp* **chicken bouillon** dissolved in *1 tbsp* warm water, *2 tbsp* oil, **salt**, pepper. Toss the cut veg in it until evenly coated.
-- [ ] Slice the thawed **sausages** into *1-inch coins*.
 
 ### Chef - Cooking (when home)
+
+Mix the slurry: *2 tbsp* **tomato paste**, *1 tsp* **chicken bouillon** dissolved in *1 tbsp* warm water, *2 tbsp* oil, **salt**, pepper. Toss the cut veg in it until evenly coated.
+
+Slice the thawed **sausages** into *1-inch coins*.
 
 **Preheat oven to 425F.** Spread the slurry-coated vegetables on a sheet pan in a single layer -- don't crowd or they steam. Roast **25-30 min**, flipping once halfway, until charred at the edges and tender.
 
@@ -197,7 +197,7 @@ Pearl couscous: dry-toast in a pot with a splash of oil until golden, *2-3 min*.
 ## Mujadarrah
 
 ##### OnePan
-###### 5:00 drain onions + save juices + 5:05 lentils on + 5:15 salad
+###### 5:00 prep + 5:05 lentils + 5:15 salad
 
 #### Anchor:
 **Mujadarrah** -- **lentils** simmered with **rice**, cumin, and a bay leaf, crowned with a towering pile of **sous vide caramelized onions** from Sunday's prep. The onions are the whole point. Middle Eastern home food at its most elemental.
