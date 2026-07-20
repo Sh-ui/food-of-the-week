@@ -8,6 +8,10 @@ interface Props {
 }
 
 const { categories, hasLunchItems = false, lunchDefaultOn = true } = Astro.props;
+
+const hasCheckedItems = categories.some((category) =>
+  category.items.some((item) => item.globallyChecked)
+);
 ---
 
 <div id="grocery-list" class="slug-anchor" aria-hidden="true"></div>
@@ -18,18 +22,29 @@ const { categories, hasLunchItems = false, lunchDefaultOn = true } = Astro.props
 >
   <div class="flex justify-between items-center gap-md flex-wrap mb-lg">
     <h2>Grocery List</h2>
-    {hasLunchItems && (
-      <label class="lunch-toggle flex items-center gap-sm cursor-pointer" title="Fold mom's lunch groceries into the list">
-        <span class="lunch-toggle-label">🥪 Lunch</span>
-        <span class="lunch-switch">
-          <input type="checkbox" id="lunch-grocery-toggle" checked={lunchDefaultOn} />
-          <span class="lunch-slider"></span>
-        </span>
-      </label>
-    )}
+    <div class="flex items-center gap-md flex-wrap">
+      {hasCheckedItems && (
+        <label class="lunch-toggle flex items-center gap-sm cursor-pointer" title="Hide items already checked off">
+          <span class="lunch-toggle-label checked-toggle-label">✓ Hide checked</span>
+          <span class="lunch-switch">
+            <input type="checkbox" id="checked-grocery-toggle" checked />
+            <span class="lunch-slider checked-slider"></span>
+          </span>
+        </label>
+      )}
+      {hasLunchItems && (
+        <label class="lunch-toggle flex items-center gap-sm cursor-pointer" title="Fold mom's lunch groceries into the list">
+          <span class="lunch-toggle-label">🥪 Lunch</span>
+          <span class="lunch-switch">
+            <input type="checkbox" id="lunch-grocery-toggle" checked={lunchDefaultOn} />
+            <span class="lunch-slider"></span>
+          </span>
+        </label>
+      )}
+    </div>
   </div>
 
-  <div class="grid gap-lg" id="grocery-categories">
+  <div class={`grid gap-lg ${hasCheckedItems ? 'hide-checked-items' : ''}`} id="grocery-categories">
     {categories.map((category) => (
       <div class="grocery-category bg-bg-alt p-md rounded-md mobile:p-lg">
         <h3 class="mt-0 mb-md text-primary text-[1.4rem] mobile:text-[1.75rem] mobile:mb-md">{category.name}</h3>
@@ -112,12 +127,23 @@ const { categories, hasLunchItems = false, lunchDefaultOn = true } = Astro.props
     });
   }
 
-  // Fold/unfold lunch items in place (per-row color coding, not a separate section).
-  // A category made up entirely of lunch items collapses along with them.
-  function updateCategoryVisibility(hideLunch: boolean): void {
+  // Fold/unfold lunch items and hide checked-off items in place (per-row, not a
+  // separate section). A category whose every item is hidden by an active filter
+  // collapses along with them. Reads current filter state from the container so
+  // both toggles share one visibility pass.
+  function refreshCategoryVisibility(): void {
+    const container = document.getElementById('grocery-categories');
+    if (!container) return;
+    const hideLunch = container.classList.contains('hide-lunch-items');
+    const hideChecked = container.classList.contains('hide-checked-items');
+
     document.querySelectorAll<HTMLElement>('.grocery-category').forEach((category) => {
       const items = Array.from(category.querySelectorAll('.grocery-item'));
-      const hasVisibleItem = items.some((item) => !hideLunch || !item.classList.contains('lunch-item'));
+      const hasVisibleItem = items.some((item) => {
+        const hiddenByLunch = hideLunch && item.classList.contains('lunch-item');
+        const hiddenByChecked = hideChecked && item.classList.contains('globally-checked');
+        return !hiddenByLunch && !hiddenByChecked;
+      });
       category.style.display = hasVisibleItem ? '' : 'none';
     });
   }
@@ -132,12 +158,34 @@ const { categories, hasLunchItems = false, lunchDefaultOn = true } = Astro.props
     const isOn = stored === null ? toggle.checked : stored === 'true';
     toggle.checked = isOn;
     container.classList.toggle('hide-lunch-items', !isOn);
-    updateCategoryVisibility(!isOn);
+    refreshCategoryVisibility();
 
     toggle.addEventListener('change', () => {
       container.classList.toggle('hide-lunch-items', !toggle.checked);
       localStorage.setItem(TOGGLE_KEY, String(toggle.checked));
-      updateCategoryVisibility(!toggle.checked);
+      refreshCategoryVisibility();
+    });
+  }
+
+  // Toggle to hide items already checked off in the source ("globally checked",
+  // rendered grayed out). On by default, so shopping lists start uncluttered.
+  function initializeCheckedToggle(): void {
+    const TOGGLE_KEY = 'grocery-hide-checked-enabled';
+    const toggle = document.getElementById('checked-grocery-toggle') as HTMLInputElement | null;
+    const container = document.getElementById('grocery-categories');
+    if (!toggle || !container) return;
+
+    const stored = localStorage.getItem(TOGGLE_KEY);
+    // Default ON (hide checked) when there's no stored preference.
+    const isOn = stored === null ? true : stored === 'true';
+    toggle.checked = isOn;
+    container.classList.toggle('hide-checked-items', isOn);
+    refreshCategoryVisibility();
+
+    toggle.addEventListener('change', () => {
+      container.classList.toggle('hide-checked-items', toggle.checked);
+      localStorage.setItem(TOGGLE_KEY, String(toggle.checked));
+      refreshCategoryVisibility();
     });
   }
 
@@ -146,10 +194,12 @@ const { categories, hasLunchItems = false, lunchDefaultOn = true } = Astro.props
     document.addEventListener('DOMContentLoaded', () => {
       initializeCheckboxes();
       initializeLunchToggle();
+      initializeCheckedToggle();
     });
   } else {
     initializeCheckboxes();
     initializeLunchToggle();
+    initializeCheckedToggle();
   }
 </script>
 
@@ -234,6 +284,11 @@ const { categories, hasLunchItems = false, lunchDefaultOn = true } = Astro.props
     display: none;
   }
 
+  /* Hide items already checked off in the source (grayed out) when the toggle is on */
+  #grocery-categories.hide-checked-items .grocery-item.globally-checked {
+    display: none;
+  }
+
   /* Main-list item that also covers a lunch ingredient: same mint dot, normal
      text, and it NEVER hides behind the lunch toggle (dinner still needs it). */
   .grocery-item.covers-lunch .item-text::before {
@@ -252,6 +307,16 @@ const { categories, hasLunchItems = false, lunchDefaultOn = true } = Astro.props
     font-size: 0.95rem;
     color: var(--color-lunch);
     font-weight: 600;
+  }
+
+  /* "Hide checked" toggle: neutral color + gray track so it reads as distinct
+     from the mint lunch toggle sitting beside it. */
+  .checked-toggle-label {
+    color: var(--color-text-muted, #9a9a91);
+  }
+
+  .lunch-switch input:checked + .lunch-slider.checked-slider {
+    background: var(--color-text-muted, #9a9a91);
   }
 
   .lunch-switch {
