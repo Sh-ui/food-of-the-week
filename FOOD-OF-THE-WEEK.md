@@ -66,52 +66,6 @@ The bag can sit in the fridge after the bath for up to 3 days if Thursday shifts
 
 ---
 
-## Biang Biang Noodles
-
-##### Prep&Heat
-###### 5:15 prep + 5:30 cold side
-
-#### Anchor:
-Sliced **chicken thigh** stir-fried fast in the wok with **shrimp paste**, **dark soy**, **black vinegar**, and **chili crisp**. Julienned **zucchini** matchsticks stir-fried first until just colored, pulled out, folded back in at the end to keep their texture.
-
-#### Fan:
-**Biang biang noodles** -- thick, chewy wheat noodles boiled and tossed in the stir-fry sauce.
-
-#### Cai:
-Cold dressed side -- shredded **bell pepper** and **cucumber** strips in rice vinegar, sesame oil, a pinch of sugar, and sesame seeds.
-
-### Already Prepped
-
-- Nothing -- everything night-of.
-
-### Sous Chef - Prep (5:15)
-
-- [ ] Slice *half* the **chicken thigh** pack into *thin strips* against the grain (~1/4 inch). Set near the stove.
-- [ ] Julienne *1-2* **zucchini** into *short matchsticks* -- about 2 inches long, 1/4 inch thick. Not too thin or they'll wilt to nothing. Set near the stove.
-- [ ] Slice *1* **bell pepper** into thin strips. Split into two piles: half raw for the cold side, half for the stir-fry.
-- [ ] Shred or julienne *half a* **cucumber** for the cold side.
-- [ ] Mince *3-4* **garlic** cloves. Set near the stove.
-
-### Sous Chef - Assembly (5:30)
-
-**Cold side**: toss the raw **bell pepper** strips and **cucumber** with *1 tbsp* **rice vinegar**, *1 tsp* **sesame oil**, a pinch of **sugar**, **salt**, and **sesame seeds**. Refrigerate.
-
-### Chef - Cooking (when home)
-
-Boil a big pot of water. Cook the **biang biang noodles** per package (usually 5-7 min for thick noodles -- test for chew, not soft). Drain, toss with a splash of **sesame oil** to keep from sticking. These stick fast so cook them right before the wok, not ahead.
-
-Wok, ripping hot, film of oil. **Zucchini first** -- spread the matchsticks in a single layer, sear *hard* without moving for 60-90 seconds until they pick up color on one side. Toss once, 30 more seconds. **Pull them out** onto a plate. They'll go back in at the end.
-
-Same wok, add oil if dry. Sear the **chicken** strips in a single layer -- don't crowd, work in batches if needed. Let the bottom faces get golden, ~90 seconds. Flip, 30 more seconds. Push chicken to the side.
-
-Add a knob of **shrimp paste** (~1 tsp, it's intense) and the **minced garlic** to the open wok surface. Stir-fry 30 seconds until fragrant. Add the stir-fry **bell pepper** strips, toss 1 minute. Season: **dark soy** (1-2 tbsp for color and salt), **black vinegar** (1 tbsp for tang), **chili crisp** (to taste).
-
-Toss the drained **noodles** into the wok. Fold in the **reserved zucchini**. Toss everything together until coated. ***Taste*** -- adjust soy for salt, vinegar for acid.
-
-**Table**: noodles heaped in bowls. Cold dressed side alongside. Extra **chili crisp** on the table.
-
----
-
 ## Miso Chicken
 
 ##### SousChefDish
@@ -134,7 +88,7 @@ White rice -- rice cooker at 5:30.
 
 ### Sous Chef - Prep (5:00)
 
-- [ ] Cut **broccoli** into florets. Toss with oil, **salt**, spread on a sheet pan.
+- [x] Cut **broccoli** into florets. Toss with oil, **salt**, spread on a sheet pan.
 
 ### Sous Chef - Assembly (5:15)
 
@@ -176,7 +130,9 @@ Ratatouille-roasted vegetables -- **zucchini** cubes, **bell pepper** strips, an
 
 ### Sous Chef - Prep (5:00)
 
-- [ ] Cut *2* **zucchini** into *3/4-inch cubes*. Cut *1-2* **bell peppers** into *wide strips*. Cut *1* **onion** into *thick wedges*.
+- [ ] Cut *2* **zucchini** into *3/4-inch cubes*.
+- [ ] Cut *1-2* **bell peppers** into *wide strips*.
+- [ ] Cut *1* **onion** into *thick wedges*.
 
 ### Chef - Cooking (when home)
 
@@ -232,3 +188,49 @@ The lentils should be tender by now (15-20 min simmer). Add *1 cup* **rice** (ri
 Optional pan finish -- hot skillet, film of **butter** or oil. Spread *half* the drained SV onions in a single layer, let them sear without stirring *2-3 min* until crispy at the edges. Textural contrast to the jammy pile.
 
 **Table**: mound the lentil-rice on a platter. Pile the **caramelized onions** on top -- half pan-crisped for crunch, half jammy straight from the bag. **Yogurt** in a bowl. **Salad** alongside. Everyone builds their own plate.
+
+---
+
+## Biang Biang Noodles
+
+##### Prep&Heat
+###### 5:15 prep + 5:30 cold side
+
+#### Anchor:
+Sliced **chicken thigh** stir-fried fast in the wok with **shrimp paste**, **dark soy**, **black vinegar**, and **chili crisp**. Julienned **zucchini** matchsticks stir-fried first until just colored, pulled out, folded back in at the end to keep their texture.
+
+#### Fan:
+**Biang biang noodles** -- thick, chewy wheat noodles boiled and tossed in the stir-fry sauce.
+
+#### Cai:
+Cold dressed side -- shredded **bell pepper** and **cucumber** strips in rice vinegar, sesame oil, a pinch of sugar, and sesame seeds.
+
+### Already Prepped
+
+- Nothing -- everything night-of.
+
+### Sous Chef - Prep (5:15)
+
+- [ ] Slice *half* the **chicken thigh** pack into *thin strips* against the grain (~1/4 inch). Set near the stove.
+- [ ] Julienne *1-2* **zucchini** into *short matchsticks* -- about 2 inches long, 1/4 inch thick. Not too thin or they'll wilt to nothing. Set near the stove.
+- [ ] Slice *1* **bell pepper** into thin strips. Split into two piles: half raw for the cold side, half for the stir-fry.
+- [ ] Shred or julienne *half a* **cucumber** for the cold side.
+- [ ] Mince *3-4* **garlic** cloves. Set near the stove.
+
+### Sous Chef - Assembly (5:30)
+
+**Cold side**: toss the raw **bell pepper** strips and **cucumber** with *1 tbsp* **rice vinegar**, *1 tsp* **sesame oil**, a pinch of **sugar**, **salt**, and **sesame seeds**. Refrigerate.
+
+### Chef - Cooking (when home)
+
+Boil a big pot of water. Cook the **biang biang noodles** per package (usually 5-7 min for thick noodles -- test for chew, not soft). Drain, toss with a splash of **sesame oil** to keep from sticking. These stick fast so cook them right before the wok, not ahead.
+
+Wok, ripping hot, film of oil. **Zucchini first** -- spread the matchsticks in a single layer, sear *hard* without moving for 60-90 seconds until they pick up color on one side. Toss once, 30 more seconds. **Pull them out** onto a plate. They'll go back in at the end.
+
+Same wok, add oil if dry. Sear the **chicken** strips in a single layer -- don't crowd, work in batches if needed. Let the bottom faces get golden, ~90 seconds. Flip, 30 more seconds. Push chicken to the side.
+
+Add a knob of **shrimp paste** (~1 tsp, it's intense) and the **minced garlic** to the open wok surface. Stir-fry 30 seconds until fragrant. Add the stir-fry **bell pepper** strips, toss 1 minute. Season: **dark soy** (1-2 tbsp for color and salt), **black vinegar** (1 tbsp for tang), **chili crisp** (to taste).
+
+Toss the drained **noodles** into the wok. Fold in the **reserved zucchini**. Toss everything together until coated. ***Taste*** -- adjust soy for salt, vinegar for acid.
+
+**Table**: noodles heaped in bowls. Cold dressed side alongside. Extra **chili crisp** on the table.
