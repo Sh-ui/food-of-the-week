@@ -49,6 +49,18 @@
         "almondbutter-celery",
         "tuna-packet-peppers"
       ]
+    },
+    {
+      "weekStart": "2026-07-26",
+      "items": [
+        "yogurt-dressing-eggs-crackers",
+        "stringcheese-apple",
+        "crackers-cheese",
+        "deviled-eggs",
+        "edamame-clementine",
+        "snap-peas-hummus",
+        "pepper-hummus"
+      ]
     }
   ]
 }

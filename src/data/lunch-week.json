@@ -1,76 +1,90 @@
 {
-  "weekStart": "2026-07-19",
-  "weekTitle": "Week of July 19-25, 2026",
+  "weekStart": "2026-07-26",
+  "weekTitle": "Week of July 26 - August 1, 2026",
   "poolSize": 52,
   "activePoolSize": 52,
   "autoGrocery": true,
   "carbServingNote": "carbServings is an approximate count of 15 g carb servings, estimated from the nutritionist handout. Always check the food label.",
   "days": [
     {
-      "date": "2026-07-19",
+      "date": "2026-07-26",
       "dow": "Sunday",
-      "id": "cracker-pb-banana",
-      "name": "Whole-wheat crackers + peanut butter + ½ banana",
+      "id": "yogurt-dressing-eggs-crackers",
+      "name": "Hard-boiled eggs + baby kale + crackers + yogurt dressing",
       "fridge": [
-        "3–5 whole-wheat crackers",
-        "1 Tbsp peanut butter",
-        "½ banana"
-      ],
-      "carbServings": "≈2",
-      "effort": "easy",
-      "soft": true,
-      "protein": "peanut_butter"
-    },
-    {
-      "date": "2026-07-20",
-      "dow": "Monday",
-      "id": "animalcrackers-pb",
-      "name": "Animal crackers (or pretzel rods) + peanut butter",
-      "fridge": [
-        "8 animal crackers or 2 pretzel rods",
-        "1 Tbsp peanut butter"
+        "2 hard-boiled eggs",
+        "Baby kale",
+        "4–5 whole-wheat crackers",
+        "Yogurt dressing"
       ],
       "carbServings": "≈1",
       "effort": "easy",
       "soft": false,
-      "protein": "peanut_butter"
+      "protein": "egg"
     },
     {
-      "date": "2026-07-21",
-      "dow": "Tuesday",
-      "id": "cheese-crackers-grapes",
-      "name": "Cheese cubes + whole-grain crackers + grapes",
+      "date": "2026-07-27",
+      "dow": "Monday",
+      "id": "stringcheese-apple",
+      "name": "String cheese + apple",
       "fridge": [
-        "Cheese cubes",
-        "4–5 whole-grain crackers",
-        "17 grapes"
+        "1 string cheese",
+        "1 small apple"
       ],
-      "carbServings": "≈2",
+      "carbServings": "≈1",
       "effort": "easy",
       "soft": false,
       "protein": "cheese"
     },
     {
-      "date": "2026-07-22",
-      "dow": "Wednesday",
-      "id": "lox-bal-thins",
-      "name": "Lox + Bal Thins",
+      "date": "2026-07-28",
+      "dow": "Tuesday",
+      "id": "crackers-cheese",
+      "name": "Whole-grain crackers + low-fat cheese",
       "fridge": [
-        "2–3 slices lox (smoked salmon)",
-        "4–5 Bal Thins crackers"
+        "4–5 whole-grain crackers",
+        "Low-fat cheese slices"
       ],
       "carbServings": "≈1",
       "effort": "easy",
-      "soft": true,
-      "protein": "salmon"
+      "soft": false,
+      "protein": "cheese"
     },
     {
-      "date": "2026-07-23",
-      "dow": "Thursday",
-      "id": "cucumber-hummus",
-      "name": "Cucumber + hummus",
+      "date": "2026-07-29",
+      "dow": "Wednesday",
+      "id": "deviled-eggs",
+      "name": "Deviled eggs (add tuna for a change)",
       "fridge": [
-        "1 cup cucumber slices",
+        "2–3 deviled egg halves",
+        "Optional: tuna in the center"
+      ],
+      "carbServings": "≈0",
+      "effort": "some",
+      "soft": true,
+      "protein": "egg"
+    },
+    {
+      "date": "2026-07-30",
+      "dow": "Thursday",
+      "id": "edamame-clementine",
+      "name": "Steamed edamame + a clementine",
+      "fridge": [
+        "1 cup steamed edamame",
+        "1 clementine"
+      ],
+      "carbServings": "≈1",
+      "effort": "some",
+      "soft": true,
+      "protein": "edamame"
+    },
+    {
+      "date": "2026-07-31",
+      "dow": "Friday",
+      "id": "snap-peas-hummus",
+      "name": "Sugar snap peas + hummus",
+      "fridge": [
+        "½ cup sugar snap peas",
         "2 Tbsp hummus"
       ],
       "carbServings": "≈1",
@@ -79,64 +93,58 @@
       "protein": "hummus"
     },
     {
-      "date": "2026-07-24",
-      "dow": "Friday",
-      "id": "almondbutter-celery",
-      "name": "Celery + almond butter",
-      "fridge": [
-        "Celery sticks",
-        "1 Tbsp almond butter"
-      ],
-      "carbServings": "≈0–1",
-      "effort": "easy",
-      "soft": false,
-      "protein": "nuts"
-    },
-    {
-      "date": "2026-07-25",
+      "date": "2026-08-01",
       "dow": "Saturday",
-      "id": "tuna-packet-peppers",
-      "name": "Tuna packet + celery or peppers",
+      "id": "pepper-hummus",
+      "name": "Sweet pepper + hummus",
       "fridge": [
-        "1 tuna packet",
-        "Celery or pepper strips"
+        "1 sweet pepper, sliced",
+        "2 Tbsp hummus"
       ],
-      "carbServings": "≈0–1",
+      "carbServings": "≈1",
       "effort": "easy",
       "soft": false,
-      "protein": "tuna"
+      "protein": "hummus"
     }
   ],
   "grocery": [
     {
       "name": "Produce",
       "items": [
-        "Bananas",
-        "Celery",
-        "Celery / bell peppers",
-        "Cucumber",
-        "Grapes"
+        "Apples",
+        "Baby kale",
+        "Clementines",
+        "Sugar snap peas",
+        "Sweet bell peppers"
       ]
     },
     {
       "name": "Protein",
       "items": [
-        "Tuna pouches"
+        "Eggs",
+        "Hard-boiled eggs",
+        "Tuna pouch (optional)"
       ]
     },
     {
       "name": "Dairy",
       "items": [
-        "Cheese cubes",
-        "Hummus"
+        "Greek yogurt dressing",
+        "Hummus",
+        "Light mayo",
+        "Low-fat cheese slices",
+        "String cheese"
+      ]
+    },
+    {
+      "name": "Frozen",
+      "items": [
+        "Shelled edamame"
       ]
     },
     {
       "name": "Pantry",
       "items": [
-        "Almond butter",
-        "Animal crackers / pretzel rods",
-        "Peanut butter",
         "Whole-grain crackers",
         "Whole-wheat crackers"
       ]
