@@ -1,4 +1,4 @@
-<!-- https://sh-ui.github.io/food-of-the-week/ -->
+<!-- DRAFT -- not yet published to FOOD-OF-THE-WEEK.md -->
 
 # Week of July 26 - August 1, 2026
 
