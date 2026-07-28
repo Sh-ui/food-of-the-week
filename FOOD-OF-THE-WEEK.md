@@ -156,13 +156,10 @@ The ziti.
 
 ### Sous Chef - Assembly (5:30)
 
-- [ ] Blend the **cottage cheese** smooth -- immersion blender in a bowl, 30 seconds.
-- [ ] Season the cottage cheese with **salt**, **black pepper**, and a handful of grated **Parmesan**. Cover and set aside.
 - [ ] Dress the slaw: juice of *1* **lemon**, *3 tbsp* **olive oil**, **salt**, plenty of **black pepper**, shaved **Parmesan**.
 - [ ] ***Taste the slaw.***
 - [ ] Refrigerate the slaw. Dressing it now mellows the raw onion by dinner.
-- [ ] **Preheat the oven to 400F.**
-- [ ] Take the **meat mix** out of the fridge.
+- [ ] **Preheat the oven to 425F.**
 - [ ] Stage the stove: the pot bowl, **canned tomatoes**, **tomato paste**, **anchovies**, the box of **ziti**, **chicken Better Than Bouillon**.
 
 ### Chef - Cooking (when home)
