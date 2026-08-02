@@ -61,6 +61,18 @@
         "snap-peas-hummus",
         "pepper-hummus"
       ]
+    },
+    {
+      "weekStart": "2026-08-02",
+      "items": [
+        "deli-rolls-yogurt",
+        "popcorn-nuts",
+        "celery-pb-raisins",
+        "avocado-egg-toast",
+        "cottage-tomato-toast",
+        "ricecake-pb",
+        "carrots-ranch"
+      ]
     }
   ]
 }
