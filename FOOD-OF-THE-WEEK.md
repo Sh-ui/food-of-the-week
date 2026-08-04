@@ -1,6 +1,6 @@
 <!-- https://sh-ui.github.io/food-of-the-week/ -->
 
-# Week of August 4 - August 7, 2026
+# Week of August 4-7, 2026
 
 > Late start -- planning lands Tuesday afternoon, so tonight cooks from frozen and the store run happens before dinner. Grandma is back, so every night sets a full table: anchor, fan, and two cai. The ButcherBox from July 27 is still whole; this week leans on four of its items and leaves the rest frozen. The whole chicken and the baby back ribs are too long for a 5:45 arrival and wait for the weekend.
 
@@ -14,7 +14,7 @@
 - [ ] Garlic - 2 heads (all meals)
 - [ ] Lemons - 4 (Meals 1, 3, 4)
 - [ ] Scallions - 2 bunches (Meals 1, 2)
-- [ ] Bagged salad mix - 1 bag (Meal 1)
+- [ ] Asian bagged salad kit - 1 bag (Meal 1 -- whichever looks good; it brings its own dressing)
 - [ ] Yellow onions - 4 (all meals)
 - [ ] Roma tomatoes - 10-12 (Meals 2, 3, 4)
 - [ ] Bell peppers - 3 (Meal 2)
@@ -46,7 +46,6 @@
 - [ ] Oyster sauce (Meal 2)
 - [ ] Cornstarch (Meal 2)
 - [ ] Dijon mustard (Meal 3)
-- [ ] Bottled sesame or soy-ginger dressing (Meal 1 second cai)
 - [ ] Ground coriander (Meal 4)
 - [x] White rice
 - [x] Canned peeled tomatoes, tomato paste
@@ -72,9 +71,9 @@
 White rice.
 
 #### Cai:
-**Smashed cucumber** -- cucumbers cracked open with the flat of a knife, salted, dressed with garlic, soy, rice wine vinegar, and sesame oil.
+**Smashed cucumber** -- cut into pucks, smashed flat against the board, rough chopped, then salted and dressed with garlic, soy, rice wine vinegar, and sesame oil.
 
-**Dressed greens** -- bagged salad mix with bottled sesame dressing. Thirty seconds, and it fills the table.
+**Asian salad kit** -- whatever bag looked good at the store, dumped and tossed with its own packet. Thirty seconds, and it fills the table.
 
 ### Already Prepped
 
@@ -94,14 +93,16 @@ White rice.
 
 ### Sous Chef - Assembly (5:30)
 
-- [ ] Lay *2* **cucumbers** on the board and crack them open with the flat of a knife, then tear into rough bite-size chunks.
+- [ ] Cut *2* **cucumbers** crosswise into scallop-sized pucks.
+- [ ] Smash each puck with the flat end of a knife against the cutting board until it splits open.
+- [ ] Rough chop the smashed pucks into bite-size pieces.
 - [ ] Toss the cucumber with *1 tsp* **salt** and leave in a colander *10 min*.
 - [ ] Shake the cucumber dry and put it in the garlic salad bowl.
 - [ ] Dress it: *1 tbsp* **soy sauce**, *1 tbsp* **rice wine vinegar**, *2 tsp* **sesame oil**, *1 tsp* **sugar**, **sesame seeds**.
 - [ ] ***Taste the cucumber.*** It should be loud -- garlicky and sharp. It is the counterweight to all that butter.
 - [ ] Refrigerate the cucumber.
 - [ ] Stage the stove: the garlic bowl, **butter**, **red pepper flake**, the scallions, the lemon halves, the dried shrimp.
-- [ ] Leave the **bagged greens** and the **bottled dressing** out. They get tossed at the last minute, not now.
+- [ ] Leave the **salad kit** out with its dressing packet. It gets tossed at the last minute, not now.
 
 ### Chef - Cooking (when home)
 
@@ -113,7 +114,9 @@ Pull the shrimp to a plate. Drop the heat to *medium*, more **butter**, then the
 
 Kill the heat. Squeeze in both **lemon** halves and scrape the bottom. Return the shrimp and any juices, toss to coat, scatter the **scallion** greens. ***Taste***: salt, and more lemon than feels right.
 
-**Table**: rice in bowls, shrimp and all the pan butter spooned over. Cucumber and greens in shared dishes. Lemon wedges out.
+Dump the **salad kit** into a bowl with its packet and toss while the shrimp rest. Dressed any earlier and it wilts.
+
+**Table**: rice in bowls, shrimp and all the pan butter spooned over. Cucumber and salad in shared dishes. Lemon wedges out.
 
 ---
 
