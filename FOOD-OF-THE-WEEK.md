@@ -11,8 +11,8 @@
 **Tonight's four, grab these first:** cucumbers, garlic, lemons, scallions. Meal 1 needs nothing else fresh.
 
 - [ ] Cucumbers - 5 (Meals 1, 2, 4)
-- [ ] Garlic - 2 heads (all meals)
-- [ ] Lemons - 4 (Meals 1, 3, 4)
+- [x] Garlic - 2 heads (all meals)
+- [x] Lemons - 4 (Meals 1, 3, 4)
 - [ ] Scallions - 2 bunches (Meals 1, 2)
 - [ ] Asian bagged salad kit - 1 bag (Meal 1 -- whichever looks good; it brings its own dressing)
 - [ ] Yellow onions - 4 (all meals)
@@ -43,10 +43,10 @@
 - [ ] Canned white beans - 2 cans (Meal 3)
 - [ ] Crusty bread - 1 loaf (Meal 3)
 - [ ] Pita or flatbread - 1 pack (Meal 4)
-- [ ] Oyster sauce (Meal 2)
-- [ ] Cornstarch (Meal 2)
-- [ ] Dijon mustard (Meal 3)
-- [ ] Ground coriander (Meal 4)
+- [x] Oyster sauce (Meal 2)
+- [x] Cornstarch (Meal 2)
+- [x] Dijon mustard (Meal 3)
+- [x] Ground coriander (Meal 4)
 - [x] White rice
 - [x] Canned peeled tomatoes, tomato paste
 - [x] Better Than Bouillon - chicken and vegetable
