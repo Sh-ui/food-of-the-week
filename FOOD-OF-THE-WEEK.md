@@ -62,7 +62,7 @@
 ## Garlic Shrimp Rice
 
 ##### CookFromFrozen
-###### 4:30 thaw + 5:00 rice + 5:15 prep
+###### 4:30 thaw + 5:15 prep + 5:30 rice
 
 #### Anchor:
 **Shrimp** seared hard in **butter** with **garlic**, **red pepper flake**, and **lemon**, finished with **scallion**. Straight from the freezer -- a cold-water bath is the only thaw it needs.
@@ -83,7 +83,6 @@ White rice.
 
 - [ ] **Move the flat iron steaks from the deep freezer to the fridge.** Do this first, before anything else -- Wednesday's dinner has no other chance to thaw.
 - [ ] Put the sealed bag of **shrimp** in a bowl of cold water at *4:30*. Weigh it down with a plate. *15-20 min*.
-- [ ] Start the **white rice** in the rice cooker at *5:00*. It needs nothing from the store, so it goes on before the shopper is back.
 - [ ] Mince *6* **garlic** cloves into a small bowl for the shrimp pan.
 - [ ] Mince *2* more **garlic** cloves into a separate salad bowl.
 - [ ] Slice *3* **scallions** thin, greens and whites separated.
@@ -93,6 +92,7 @@ White rice.
 
 ### Sous Chef - Assembly (5:30)
 
+- [ ] Start the **white rice** in the rice cooker.
 - [ ] Cut *2* **cucumbers** crosswise into scallop-sized pucks.
 - [ ] Smash each puck with the flat end of a knife against the cutting board until it splits open.
 - [ ] Rough chop the smashed pucks into bite-size pieces.
