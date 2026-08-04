@@ -1,4 +1,4 @@
-<!-- DRAFT -- not yet published to FOOD-OF-THE-WEEK.md -->
+<!-- https://sh-ui.github.io/food-of-the-week/ -->
 
 # Week of July 26 - August 1, 2026
 
@@ -35,7 +35,6 @@
 - [x] Canned peeled tomatoes, tomato paste
 - [x] White rice
 - [x] Vermont curry cubes
-- [x] Tortillas
 - [x] Better Than Bouillon - chicken and vegetable
 - [x] Anchovies
 
@@ -94,17 +93,21 @@ White rice.
 
 ### Sous Chef - Prep (5:15)
 
-- [ ] Dice *1* **yellow onion** and mince *3* **garlic** cloves. One bowl -- both go in the pot.
-- [ ] Peel and cut *3-4* **carrots** into *half-inch* chunks, into the same bowl. Big chunks, they have to survive the simmer. **Leave the rest of the carrots -- Tuesday's slaw needs them.**
-- [ ] Shred *one third* of the **cabbage** thin, into a separate bowl. **A third and stop** -- the head has to cover Tuesday and Wednesday too.
-- [ ] Julienne *1* **cucumber** into the cabbage bowl. Seed it first if it's watery. Match the cabbage shred.
-- [ ] Halve *1* **lemon**. Cut one half into wedges for the table.
+- [ ] Dice *1* **yellow onion** into the pot bowl.
+- [ ] Mince *3* **garlic** cloves into the pot bowl.
+- [ ] Peel and cut *3-4* **carrots** into *half-inch* chunks, into the pot bowl. Big chunks -- they have to survive the simmer. **Leave the rest of the carrots; Tuesday's slaw needs them.**
+- [ ] Shred *one third* of the **cabbage** thin into a separate salad bowl. **A third and stop** -- the head covers Tuesday and Wednesday too.
+- [ ] Julienne *1* **cucumber** into the salad bowl. Seed it first if it's watery. Match the cabbage shred.
+- [ ] Halve *1* **lemon**.
+- [ ] Cut one lemon half into wedges for the table.
 
 ### Sous Chef - Assembly (5:30)
 
-- [ ] Dress the salad: *1 tbsp* **sesame oil**, *1 tbsp* **rice wine vinegar**, juice of the **lemon** half, **salt**, **sesame seeds**. ***Taste it*** -- it should be sharp and salty enough to stand up to the curry. More vinegar if it reads flat. Refrigerate.
+- [ ] Dress the salad: *1 tbsp* **sesame oil**, *1 tbsp* **rice wine vinegar**, juice of the other **lemon** half, **salt**, **sesame seeds**.
+- [ ] ***Taste the salad.*** It should be sharp and salty enough to stand up to the curry. More vinegar if it reads flat.
+- [ ] Refrigerate the salad.
 - [ ] Start the **white rice** in the rice cooker.
-- [ ] Stage the stove: the onion-carrot-garlic bowl, the **curry cubes**, **frozen peas**, **frozen roasted sweet potatoes**, **chicken Better Than Bouillon**.
+- [ ] Stage the stove: the pot bowl, **curry cubes**, **frozen peas**, **frozen roasted sweet potatoes**, **chicken Better Than Bouillon**.
 
 ### Chef - Cooking (when home)
 
@@ -142,18 +145,22 @@ The ziti.
 
 ### Sous Chef - Prep (5:00)
 
-- [ ] Dice *1* **yellow onion**, *3-4* stalks of **celery**, mince *4* **garlic** cloves. One bowl -- all three hit the pot together. **Only 3-4 stalks; the rest of the bunch is Wednesday's chili.**
-- [ ] Shred *one third* of the **cabbage** into a separate bowl, a touch thicker than Monday's.
-- [ ] Julienne *1-2* **carrots** and **exactly 1 bell pepper** into the cabbage bowl. **The other 2 peppers are Wednesday's.**
-- [ ] Slice a paper-thin sliver of raw **white onion** into the cabbage bowl -- a quarter onion at most.
+- [ ] Dice *1* **yellow onion** into the pot bowl.
+- [ ] Dice *3-4* stalks of **celery** into the pot bowl. **Only 3-4 stalks; the rest of the bunch is Wednesday's chili.**
+- [ ] Mince *4* **garlic** cloves into the pot bowl.
+- [ ] Shred *one third* of the **cabbage** into a separate slaw bowl, a touch thicker than Monday's.
+- [ ] Julienne *1-2* **carrots** into the slaw bowl.
+- [ ] Julienne **exactly 1 bell pepper** into the slaw bowl. **The other 2 peppers are Wednesday's.**
+- [ ] Slice a paper-thin sliver of raw **white onion** into the slaw bowl -- a quarter onion at most.
 - [ ] Tear the **mozzarella sticks** into rough pieces.
 
 ### Sous Chef - Assembly (5:30)
 
-- [ ] Blend the **cottage cheese** smooth -- immersion blender in a bowl, 30 seconds. Season with **salt**, **black pepper**, a handful of grated **Parmesan**. Cover, set aside.
-- [ ] Dress the slaw: juice of *1* **lemon**, *3 tbsp* **olive oil**, **salt**, plenty of **black pepper**, shaved **Parmesan**. ***Taste it***. Refrigerate -- dressing it now mellows the raw onion by dinner.
-- [ ] **Preheat the oven to 400F.**
-- [ ] Stage the stove: the **meat mix** out of the fridge, the aromatic bowl, **canned tomatoes**, **tomato paste**, **anchovies**, the box of **ziti**, **chicken Better Than Bouillon**.
+- [ ] Dress the slaw: juice of *1* **lemon**, *3 tbsp* **olive oil**, **salt**, plenty of **black pepper**, shaved **Parmesan**.
+- [ ] ***Taste the slaw.***
+- [ ] Refrigerate the slaw. Dressing it now mellows the raw onion by dinner.
+- [ ] **Preheat the oven to 425F.**
+- [ ] Stage the stove: the pot bowl, **canned tomatoes**, **tomato paste**, **anchovies**, the box of **ziti**, **chicken Better Than Bouillon**.
 
 ### Chef - Cooking (when home)
 
@@ -199,22 +206,25 @@ Swirl the **cottage cheese** through in rough ribbons. Scatter the **mozzarella*
 
 ### Sous Chef - Prep (5:00)
 
-- [ ] Dice *1-2* **yellow onions** and mince *5-6* **garlic** cloves into one bowl.
-- [ ] Dice **all the remaining celery** and the last *2* **bell peppers** into the same bowl. Use everything -- nothing is being saved past tonight.
+- [ ] Dice *1-2* **yellow onions** into the pot bowl.
+- [ ] Mince *5-6* **garlic** cloves into the pot bowl.
+- [ ] Dice **all the remaining celery** into the pot bowl.
+- [ ] Dice the last *2* **bell peppers** into the pot bowl. Use everything -- nothing is being saved past tonight.
 - [ ] Shred the last *third* of the **cabbage** thin into its own bowl. **Raw topping -- this never goes in the pot.**
-- [ ] Slice *1* **cucumber**, chop the **cheddar cubes** small, cut **lime** and **lemon** wedges.
+- [ ] Slice *1* **cucumber** for the condiment plate.
+- [ ] Chop the **cheddar cubes** small for the condiment plate.
+- [ ] Cut **lime** and **lemon** wedges.
 - [ ] Move both bags of **Mexican rice** to the counter to thaw.
 
 ### Sous Chef - Assembly (5:30)
 
-- [ ] Dress the cabbage with the juice of *1* **lime** and a pinch of **salt**. ***Taste it***. Refrigerate.
-- [ ] Build the condiment plate: **Greek yogurt**, sliced cucumber, chopped cheddar, lime and lemon wedges. Everything stays in its own pile -- the table assembles, not you.
-- [ ] Set out the **tostada shells** and a sheet pan of oiled, salted **tortillas** ready for the oven.
-- [ ] Stage the stove: the aromatic bowl, **canned tomatoes**, **tomato paste**, thawed **white beans**, **vegetable Better Than Bouillon**, the spices.
+- [ ] Dress the cabbage with the juice of *1* **lime** and a pinch of **salt**.
+- [ ] ***Taste the cabbage.*** Refrigerate.
+- [ ] Build the condiment plate: **Greek yogurt**, sliced cucumber, chopped cheddar, lime and lemon wedges. Each in its own pile -- the table assembles, not you.
+- [ ] Set out the **tostada shells**.
+- [ ] Stage the stove: the pot bowl, **canned tomatoes**, **tomato paste**, thawed **white beans**, **vegetable Better Than Bouillon**, **cumin**, **chili powder**, **smoked paprika**.
 
 ### Chef - Cooking (when home)
-
-**Oven to 400F.**
 
 Brown the **ground beef** hard in a Dutch oven over *high* -- untouched two minutes, then break up.
 
@@ -225,7 +235,5 @@ Add the onion, garlic, celery, and peppers. *5 min*. Add *2 tbsp* **tomato paste
 Deglaze with the **canned tomatoes**, crushing the whole ones by hand. Add the **white beans** and a spoonful of **vegetable bouillon** with a cup of water. Season with **salt**, **pepper**, a pinch of **sugar**, **MSG**.
 
 Simmer on *low*. Thirty minutes minimum, longer is better. ***Taste*** before serving -- it needs more salt than you think, and a squeeze of lime at the end.
-
-**Tortillas** into the oven while it simmers: *8-10 min* at *400F*, flipping once, until rigid and blistered.
 
 **Table**: chili over warmed **Mexican rice**. Tostada shells stacked. Cabbage and the condiment plate in the middle.
