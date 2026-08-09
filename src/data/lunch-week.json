@@ -1,20 +1,20 @@
 {
-  "weekStart": "2026-08-02",
-  "weekTitle": "Week of August 2-8, 2026",
+  "weekStart": "2026-08-09",
+  "weekTitle": "Week of August 9-15, 2026",
   "poolSize": 52,
   "activePoolSize": 52,
   "autoGrocery": true,
   "carbServingNote": "carbServings is an approximate count of 15 g carb servings, estimated from the nutritionist handout. Always check the food label.",
   "days": [
     {
-      "date": "2026-08-02",
+      "date": "2026-08-09",
       "dow": "Sunday",
-      "id": "deli-rolls-yogurt",
-      "name": "Deli meat + cheese roll-ups + light yogurt",
+      "id": "flatout-veggie-wrap",
+      "name": "Flatout wrap with veggies + meat",
       "fridge": [
-        "Rolled-up deli meat + cheese",
-        "4 oz light yogurt",
-        "2 Tbsp salsa"
+        "1 Flatout wrap",
+        "Veggies",
+        "Deli meat or cheese"
       ],
       "carbServings": "≈1",
       "effort": "easy",
@@ -22,129 +22,133 @@
       "protein": "deli"
     },
     {
-      "date": "2026-08-03",
+      "date": "2026-08-10",
       "dow": "Monday",
-      "id": "popcorn-nuts",
-      "name": "Popcorn + mixed nuts",
+      "id": "eggs-celery-carrots",
+      "name": "Hard-boiled eggs + celery + baby carrots",
       "fridge": [
-        "3 cups popcorn",
-        "3 Tbsp mixed nuts"
+        "2 hard-boiled eggs",
+        "Celery sticks",
+        "Baby carrots"
       ],
-      "carbServings": "≈1",
+      "carbServings": "≈0–1",
       "effort": "easy",
       "soft": false,
-      "protein": "nuts"
+      "protein": "egg"
     },
     {
-      "date": "2026-08-04",
+      "date": "2026-08-11",
       "dow": "Tuesday",
-      "id": "celery-pb-raisins",
-      "name": "Celery + peanut butter + raisins (ants on a log)",
+      "id": "turkey-pita-romaine",
+      "name": "Deli turkey + pita + romaine + yogurt dressing",
       "fridge": [
-        "2–3 celery sticks",
-        "1 Tbsp peanut butter",
-        "1 Tbsp raisins"
+        "Deli turkey",
+        "½ whole-wheat pita",
+        "Romaine",
+        "Yogurt dressing"
       ],
       "carbServings": "≈1",
       "effort": "easy",
       "soft": false,
-      "protein": "peanut_butter"
+      "protein": "turkey"
     },
     {
-      "date": "2026-08-05",
+      "date": "2026-08-12",
       "dow": "Wednesday",
-      "id": "avocado-egg-toast",
-      "name": "Avocado + hard-boiled egg on whole-grain toast",
+      "id": "egg-muffin-cups",
+      "name": "Egg muffin cups (meat, spinach, cheese)",
       "fridge": [
-        "1 slice whole-grain toast",
-        "¼ avocado, mashed",
-        "1 hard-boiled egg, sliced"
+        "2 baked egg muffin cups"
       ],
-      "carbServings": "≈1",
+      "carbServings": "≈0",
       "effort": "some",
       "soft": true,
       "protein": "egg"
     },
     {
-      "date": "2026-08-06",
+      "date": "2026-08-13",
       "dow": "Thursday",
-      "id": "cottage-tomato-toast",
-      "name": "Cottage cheese + tomato on whole-grain toast",
+      "id": "tuna-salad-pita",
+      "name": "Tuna or egg salad + ½ whole-wheat pita",
       "fridge": [
-        "1 slice whole-grain toast",
-        "½ cup cottage cheese",
-        "Tomato slices"
+        "½ cup tuna or egg salad",
+        "½ whole-wheat pita (or 4–5 crackers)"
       ],
       "carbServings": "≈1",
-      "effort": "some",
+      "effort": "easy",
       "soft": true,
-      "protein": "cottage_cheese"
+      "protein": "tuna"
     },
     {
-      "date": "2026-08-07",
+      "date": "2026-08-14",
       "dow": "Friday",
-      "id": "ricecake-pb",
-      "name": "Rice cake + peanut butter (or low-sugar jam)",
+      "id": "wheatthins-stringcheese",
+      "name": "Wheat Thins + string cheese",
       "fridge": [
-        "1 rice cake",
-        "1 Tbsp peanut butter or low-sugar jam"
+        "10 multigrain Wheat Thins",
+        "1 string cheese"
       ],
       "carbServings": "≈1",
       "effort": "easy",
       "soft": false,
-      "protein": "peanut_butter"
+      "protein": "cheese"
     },
     {
-      "date": "2026-08-08",
+      "date": "2026-08-15",
       "dow": "Saturday",
-      "id": "carrots-ranch",
-      "name": "Carrots + light ranch dip",
+      "id": "chicken-kale-cold",
+      "name": "Chilled chicken + baby kale + a few crackers",
       "fridge": [
-        "½ cup carrots",
-        "2 Tbsp light ranch dip"
+        "Pre-cooked chicken",
+        "Baby kale",
+        "4–5 whole-wheat crackers"
       ],
-      "carbServings": "≈0–1",
+      "carbServings": "≈1",
       "effort": "easy",
       "soft": false,
-      "protein": "dairy_dip"
+      "protein": "chicken"
     }
   ],
   "grocery": [
     {
       "name": "Produce",
       "items": [
-        "Avocado",
         "Baby carrots",
+        "Baby kale",
         "Celery",
-        "Salsa",
-        "Tomatoes"
+        "Mixed veggies",
+        "Romaine",
+        "Spinach"
       ]
     },
     {
       "name": "Protein",
       "items": [
+        "Cooked meat",
         "Deli meat",
-        "Hard-boiled eggs"
+        "Deli turkey",
+        "Eggs",
+        "Hard-boiled eggs (or eggs to boil)",
+        "Pre-cooked chicken",
+        "Tuna pouches (or eggs)"
       ]
     },
     {
       "name": "Dairy",
       "items": [
-        "Cheese slices",
-        "Cottage cheese",
-        "Light ranch dip",
-        "Light yogurt"
+        "Greek yogurt dressing",
+        "Light mayo",
+        "Shredded cheese",
+        "String cheese"
       ]
     },
     {
       "name": "Pantry",
       "items": [
-        "Mixed nuts",
-        "Peanut butter",
-        "Popcorn (plain / light)",
-        "Raisins",
-        "Rice cakes",
-        "Whole-grain bread"
+        "Flatout / low-carb wraps",
+        "Multigrain Wheat Thins",
+        "Whole-wheat crackers",
+        "Whole-wheat pita"
       ]
     }
   ]

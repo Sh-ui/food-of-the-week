@@ -73,6 +73,18 @@
         "ricecake-pb",
         "carrots-ranch"
       ]
+    },
+    {
+      "weekStart": "2026-08-09",
+      "items": [
+        "flatout-veggie-wrap",
+        "eggs-celery-carrots",
+        "turkey-pita-romaine",
+        "egg-muffin-cups",
+        "tuna-salad-pita",
+        "wheatthins-stringcheese",
+        "chicken-kale-cold"
+      ]
     }
   ]
 }
