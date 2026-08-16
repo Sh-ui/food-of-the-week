@@ -85,6 +85,18 @@
         "wheatthins-stringcheese",
         "chicken-kale-cold"
       ]
+    },
+    {
+      "weekStart": "2026-08-16",
+      "items": [
+        "turkey-cheese-sandwich",
+        "apple-pb",
+        "jerky-trailmix",
+        "toast-cheese-egg",
+        "waffle-nutbutter",
+        "hummus-pita-cucumber",
+        "applesauce-nuts"
+      ]
     }
   ]
 }

@@ -1,51 +1,21 @@
 {
-  "weekStart": "2026-08-09",
-  "weekTitle": "Week of August 9-15, 2026",
+  "weekStart": "2026-08-16",
+  "weekTitle": "Week of August 16-22, 2026",
   "poolSize": 52,
   "activePoolSize": 52,
   "autoGrocery": true,
   "carbServingNote": "carbServings is an approximate count of 15 g carb servings, estimated from the nutritionist handout. Always check the food label.",
   "days": [
     {
-      "date": "2026-08-09",
+      "date": "2026-08-16",
       "dow": "Sunday",
-      "id": "flatout-veggie-wrap",
-      "name": "Flatout wrap with veggies + meat",
+      "id": "turkey-cheese-sandwich",
+      "name": "Open turkey + cheese on whole-grain bread",
       "fridge": [
-        "1 Flatout wrap",
-        "Veggies",
-        "Deli meat or cheese"
-      ],
-      "carbServings": "≈1",
-      "effort": "easy",
-      "soft": false,
-      "protein": "deli"
-    },
-    {
-      "date": "2026-08-10",
-      "dow": "Monday",
-      "id": "eggs-celery-carrots",
-      "name": "Hard-boiled eggs + celery + baby carrots",
-      "fridge": [
-        "2 hard-boiled eggs",
-        "Celery sticks",
-        "Baby carrots"
-      ],
-      "carbServings": "≈0–1",
-      "effort": "easy",
-      "soft": false,
-      "protein": "egg"
-    },
-    {
-      "date": "2026-08-11",
-      "dow": "Tuesday",
-      "id": "turkey-pita-romaine",
-      "name": "Deli turkey + pita + romaine + yogurt dressing",
-      "fridge": [
-        "Deli turkey",
-        "½ whole-wheat pita",
-        "Romaine",
-        "Yogurt dressing"
+        "1 slice whole-grain bread",
+        "Slice of turkey",
+        "Slice of cheese",
+        "Mustard"
       ],
       "carbServings": "≈1",
       "effort": "easy",
@@ -53,101 +23,133 @@
       "protein": "turkey"
     },
     {
-      "date": "2026-08-12",
-      "dow": "Wednesday",
-      "id": "egg-muffin-cups",
-      "name": "Egg muffin cups (meat, spinach, cheese)",
+      "date": "2026-08-17",
+      "dow": "Monday",
+      "id": "apple-pb",
+      "name": "Apple slices + peanut butter",
       "fridge": [
-        "2 baked egg muffin cups"
+        "1 small apple, sliced",
+        "1 Tbsp peanut butter"
       ],
-      "carbServings": "≈0",
+      "carbServings": "≈1–2",
+      "effort": "easy",
+      "soft": false,
+      "protein": "peanut_butter"
+    },
+    {
+      "date": "2026-08-18",
+      "dow": "Tuesday",
+      "id": "jerky-trailmix",
+      "name": "Beef jerky trail mix",
+      "fridge": [
+        "Beef jerky",
+        "Almonds, cashews, walnuts, pecans",
+        "Edamame"
+      ],
+      "carbServings": "≈0–1",
+      "effort": "easy",
+      "soft": false,
+      "protein": "beef_jerky"
+    },
+    {
+      "date": "2026-08-19",
+      "dow": "Wednesday",
+      "id": "toast-cheese-egg",
+      "name": "Whole-wheat toast + cheese + hard-cooked egg",
+      "fridge": [
+        "1 slice whole-wheat toast",
+        "1 slice cheese",
+        "1 hard-cooked egg"
+      ],
+      "carbServings": "≈1",
       "effort": "some",
-      "soft": true,
+      "soft": false,
       "protein": "egg"
     },
     {
-      "date": "2026-08-13",
+      "date": "2026-08-20",
       "dow": "Thursday",
-      "id": "tuna-salad-pita",
-      "name": "Tuna or egg salad + ½ whole-wheat pita",
+      "id": "waffle-nutbutter",
+      "name": "Eggo waffle + nut butter",
       "fridge": [
-        "½ cup tuna or egg salad",
-        "½ whole-wheat pita (or 4–5 crackers)"
+        "1 Eggo waffle (toasted)",
+        "1 Tbsp nut butter"
+      ],
+      "carbServings": "≈1–2",
+      "effort": "some",
+      "soft": false,
+      "protein": "peanut_butter"
+    },
+    {
+      "date": "2026-08-21",
+      "dow": "Friday",
+      "id": "hummus-pita-cucumber",
+      "name": "Hummus + whole-wheat pita + cucumber",
+      "fridge": [
+        "2 Tbsp hummus",
+        "½ whole-wheat pita",
+        "Cucumber slices"
       ],
       "carbServings": "≈1",
       "effort": "easy",
       "soft": true,
-      "protein": "tuna"
+      "protein": "hummus"
     },
     {
-      "date": "2026-08-14",
-      "dow": "Friday",
-      "id": "wheatthins-stringcheese",
-      "name": "Wheat Thins + string cheese",
-      "fridge": [
-        "10 multigrain Wheat Thins",
-        "1 string cheese"
-      ],
-      "carbServings": "≈1",
-      "effort": "easy",
-      "soft": false,
-      "protein": "cheese"
-    },
-    {
-      "date": "2026-08-15",
+      "date": "2026-08-22",
       "dow": "Saturday",
-      "id": "chicken-kale-cold",
-      "name": "Chilled chicken + baby kale + a few crackers",
+      "id": "applesauce-nuts",
+      "name": "Applesauce + mixed nuts",
       "fridge": [
-        "Pre-cooked chicken",
-        "Baby kale",
-        "4–5 whole-wheat crackers"
+        "½ cup applesauce",
+        "2 Tbsp mixed nuts"
       ],
       "carbServings": "≈1",
       "effort": "easy",
-      "soft": false,
-      "protein": "chicken"
+      "soft": true,
+      "protein": "nuts"
     }
   ],
   "grocery": [
     {
       "name": "Produce",
       "items": [
-        "Baby carrots",
-        "Baby kale",
-        "Celery",
-        "Mixed veggies",
-        "Romaine",
-        "Spinach"
+        "Apples",
+        "Cucumber"
       ]
     },
     {
       "name": "Protein",
       "items": [
-        "Cooked meat",
-        "Deli meat",
+        "Beef jerky",
         "Deli turkey",
-        "Eggs",
-        "Hard-boiled eggs (or eggs to boil)",
-        "Pre-cooked chicken",
-        "Tuna pouches (or eggs)"
+        "Eggs"
       ]
     },
     {
       "name": "Dairy",
       "items": [
-        "Greek yogurt dressing",
-        "Light mayo",
-        "Shredded cheese",
-        "String cheese"
+        "Cheese slices",
+        "Hummus"
+      ]
+    },
+    {
+      "name": "Frozen",
+      "items": [
+        "Eggo waffles",
+        "Shelled edamame"
       ]
     },
     {
       "name": "Pantry",
       "items": [
-        "Flatout / low-carb wraps",
-        "Multigrain Wheat Thins",
-        "Whole-wheat crackers",
+        "Mixed nuts",
+        "Mustard",
+        "Nut butter",
+        "Peanut butter",
+        "Unsweetened applesauce",
+        "Whole-grain bread",
+        "Whole-wheat bread",
         "Whole-wheat pita"
       ]
     }
