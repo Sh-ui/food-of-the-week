@@ -1,301 +1,247 @@
 <!-- https://sh-ui.github.io/food-of-the-week/ -->
 
-# Week of August 4-7, 2026
+# Week of August 24-27, 2026
 
-> Late start -- planning lands Tuesday afternoon, so tonight cooks from frozen and the store run happens before dinner. Grandma is back, so every night sets a full table: anchor, fan, and two cai. The ButcherBox from July 27 is still whole; this week leans on four of its items and leaves the rest frozen. The whole chicken and the baby back ribs are too long for a 5:45 arrival and wait for the weekend.
+> Fan cai structure, Western flavors this week -- every table is still anchor plus two cai plus a starch, but the ingredient list is an Aldi run, not an Asian market run. Monday's steak goes creamy: mushrooms, garlic, thyme, and a splash of cream, over egg noodles instead of rice. Tuesday's shrimp is simple garlic butter with green beans cooked right in the pan. Wednesday keeps the orzo-stew method from last week -- it's already Western, just leaner on soy. Thursday's pork loin was rubbed and vacuum sealed Sunday; it sous vides Thursday, then gets a honey mustard glaze instead of a wok finish -- English pub flavors, not Chinese.
 
 ## Grocery List
 
 ### Produce
 
-**Tonight's four, grab these first:** cucumbers, garlic, lemons, scallions. Meal 1 needs nothing else fresh.
+**Sunday prep needs these first:** mushrooms, garlic, onions, green beans, cabbage, potatoes.
 
-- [ ] Cucumbers - 5 (Meals 1, 2, 4)
-- [x] Garlic - 2 heads (all meals)
-- [x] Lemons - 4 (Meals 1, 3, 4)
-- [ ] Scallions - 2 bunches (Meals 1, 2)
-- [ ] Asian bagged salad kit - 1 bag (Meal 1 -- whichever looks good; it brings its own dressing)
-- [ ] Yellow onions - 4 (all meals)
-- [ ] Roma tomatoes - 10-12 (Meals 2, 3, 4)
-- [ ] Bell peppers - 3 (Meal 2)
-- [ ] Fresh ginger - 1 knob (Meal 2)
-- [ ] Carrots - 5 medium (Meals 2, 3)
-- [ ] Green cabbage - 1 small head (Meal 3)
-- [ ] Parsley - 1 bunch (Meal 4)
-- [ ] Mint - 1 bunch (Meal 4, optional)
+- [ ] Mushrooms - 8 oz (Sunday prep, Monday)
+- [ ] Garlic - 2 heads (Sunday prep, all meals)
+- [ ] Yellow onions - 2 (Sunday prep, Mon, Wed)
+- [ ] Green beans - 1 lb (Sunday prep, Tuesday)
+- [ ] Green cabbage - reuse Saturday's half head (Thursday cai)
+- [ ] Apple - 2 (Thursday cai)
+- [ ] Potatoes - 2 lb (Sunday prep, Thursday mash)
+- [ ] Roma tomatoes - 4 (Tuesday cai, optional)
+- [ ] Lemon - 1 (Tuesday)
+- [ ] Fresh thyme - 1 bunch, or dried on hand (Monday, Thursday)
+- [ ] Fresh parsley - 1 bunch, optional (Tuesday)
 
 ### Protein
 
-- [x] Raw wild-caught shrimp (ButcherBox, deep freezer -- Meal 1)
-- [x] Flat iron steaks (ButcherBox, deep freezer -- Meal 2)
-- [x] Bratwurst 3-pack (ButcherBox, deep freezer -- Meal 3)
-- [x] Ground beef 85/15 (ButcherBox, deep freezer -- Meal 4)
+- [x] Flat iron steak - 1 pack (ButcherBox, freezer -- Monday)
+- [x] Raw wild-caught shrimp (ButcherBox, freezer -- Tuesday)
+- [x] Ground beef 85/15 - 1 pack (ButcherBox, freezer -- Wednesday)
+- [x] Pork loin roast (ButcherBox -- rubbed and vac-sealed Sunday, sous vide Thursday, see WEEKEND.md)
 
 ### Dairy
 
-- [ ] Whole milk Greek yogurt - 1 tub (Meal 4)
-- [x] Butter
-- [x] Parmesan
+- [ ] Heavy cream - 1 pint (Monday)
+- [ ] Milk - for the mash (Thursday)
+- [ ] Butter
+- [ ] Parmesan - a wedge or shaker (Wednesday)
 
 ### Pantry
 
-- [ ] Lo mein or ramen noodles - 1 lb (Meal 2)
-- [ ] Canned white beans - 2 cans (Meal 3)
-- [ ] Crusty bread - 1 loaf (Meal 3)
-- [ ] Pita or flatbread - 1 pack (Meal 4)
-- [x] Oyster sauce (Meal 2)
-- [x] Cornstarch (Meal 2)
-- [x] Dijon mustard (Meal 3)
-- [x] Ground coriander (Meal 4)
+- [ ] Egg noodles - 12 oz (Monday)
+- [ ] Orzo - 2 cups (Wednesday)
+- [ ] Frozen peas - 1 bag (Wednesday, Thursday)
 - [x] White rice
+- [x] Cornstarch
 - [x] Canned peeled tomatoes, tomato paste
-- [x] Better Than Bouillon - chicken and vegetable
+- [x] Better Than Bouillon - chicken and vegetable, beef if you have it
 
 ### Flavor Cabinet
 
-- [x] Soy sauce, rice wine vinegar, sesame oil, sesame seeds, MSG, sugar
-- [x] Cumin, paprika, smoked paprika, red pepper flake
+- [ ] Whole grain or Dijon mustard (Thursday)
+- [ ] Honey (Thursday)
+- [ ] Worcestershire sauce (Wednesday, Monday)
 - [x] Olive oil, salt, black pepper
+- [x] Cumin, paprika, smoked paprika, red pepper flake
 
 ---
 
-## Garlic Shrimp Rice
-
-##### CookFromFrozen
-###### 4:30 thaw + 5:15 prep + 5:30 rice
-
-#### Anchor:
-**Shrimp** seared hard in **butter** with **garlic**, **red pepper flake**, and **lemon**, finished with **scallion**. Straight from the freezer -- a cold-water bath is the only thaw it needs.
-
-#### Fan:
-White rice.
-
-#### Cai:
-**Smashed cucumber** -- cut into pucks, smashed flat against the board, rough chopped, then salted and dressed with garlic, soy, rice wine vinegar, and sesame oil.
-
-**Asian salad kit** -- whatever bag looked good at the store, dumped and tossed with its own packet. Thirty seconds, and it fills the table.
-
-### Already Prepped
-
-- Nothing. Everything for tonight is frozen or comes home with the store run.
-
-### Sous Chef - Prep (5:15)
-
-- [ ] **Move the flat iron steaks from the deep freezer to the fridge.** Do this first, before anything else -- Wednesday's dinner has no other chance to thaw.
-- [ ] Put the sealed bag of **shrimp** in a bowl of cold water at *4:30*. Weigh it down with a plate. *15-20 min*.
-- [ ] Mince *6* **garlic** cloves into a small bowl for the shrimp pan.
-- [ ] Mince *2* more **garlic** cloves into a separate salad bowl.
-- [ ] Slice *3* **scallions** thin, greens and whites separated.
-- [ ] Halve *2* **lemons**.
-- [ ] Cut one lemon into wedges for the table.
-- [ ] Drain the thawed **shrimp** and spread on paper towel. Pat *very* dry -- wet shrimp steams instead of searing.
-
-### Sous Chef - Assembly (5:30)
-
-- [ ] Start the **white rice** in the rice cooker.
-- [ ] Cut *2* **cucumbers** crosswise into scallop-sized pucks.
-- [ ] Smash each puck with the flat end of a knife against the cutting board until it splits open.
-- [ ] Rough chop the smashed pucks into bite-size pieces.
-- [ ] Toss the cucumber with *1 tsp* **salt** and leave in a colander *10 min*.
-- [ ] Shake the cucumber dry and put it in the garlic salad bowl.
-- [ ] Dress it: *1 tbsp* **soy sauce**, *1 tbsp* **rice wine vinegar**, *2 tsp* **sesame oil**, *1 tsp* **sugar**, **sesame seeds**.
-- [ ] ***Taste the cucumber.*** It should be loud -- garlicky and sharp. It is the counterweight to all that butter.
-- [ ] Refrigerate the cucumber.
-- [ ] Stage the stove: the garlic bowl, **butter**, **red pepper flake**, the scallions, the lemon halves, the dried shrimp.
-- [ ] Leave the **salad kit** out with its dressing packet. It gets tossed at the last minute, not now.
-
-### Chef - Cooking (when home)
-
-Get a wide skillet properly hot over *medium-high*. A big knob of **butter**, and the moment it stops foaming, the **shrimp** go in a single layer. Do not crowd -- two batches if you have to.
-
-*90 seconds* a side. They are done the instant they curl into a loose C and turn opaque. A tight O means overcooked.
-
-Pull the shrimp to a plate. Drop the heat to *medium*, more **butter**, then the **garlic** and a big pinch of **red pepper flake**. *45 seconds* -- garlic burns fast in butter and the whole pan turns bitter if it goes.
-
-Kill the heat. Squeeze in both **lemon** halves and scrape the bottom. Return the shrimp and any juices, toss to coat, scatter the **scallion** greens. ***Taste***: salt, and more lemon than feels right.
-
-Dump the **salad kit** into a bowl with its packet and toss while the shrimp rest. Dressed any earlier and it wilts.
-
-**Table**: rice in bowls, shrimp and all the pan butter spooned over. Cucumber and salad in shared dishes. Lemon wedges out.
-
----
-
-## Pepper Steak Noodles
-
-##### WokNight
-###### 8:00am defrost + 5:00 prep + 5:30 noodles
-
-#### Anchor:
-**Flat iron** sliced thin against the grain, tossed in cornstarch and soy, seared hard and returned to a wok of **onion**, **bell pepper**, **ginger**, and **garlic** in an oyster sauce glaze. A little steak stretched across a lot of vegetable.
-
-#### Fan:
-Lo mein noodles.
-
-#### Cai:
-**Carrot cucumber ribbons** -- peeled into wide strips, dressed with rice wine vinegar, sesame oil, and sugar.
-
-**Tomato and scallion** -- sliced roma tomatoes with scallion, sesame oil, salt, and a pinch of sugar.
-
-### Already Prepped
-
-- **Flat iron steaks** moved to the fridge Tuesday evening. They should be pliable but still cold.
-
-### Sous Chef - Prep (5:00)
-
-- [ ] **Move the bratwurst from the deep freezer to the fridge** at *8:00am*. Thursday's dinner depends on it.
-- [ ] Slice *2* **yellow onions** into thick petals into the wok bowl.
-- [ ] Cut *3* **bell peppers** into wide strips into the wok bowl.
-- [ ] Mince *5* **garlic** cloves into a small dish.
-- [ ] Peel and mince a *thumb* of **ginger** into the same dish.
-- [ ] Slice *3* **scallions**, greens and whites separated.
-- [ ] Peel *3* **carrots** into wide ribbons into a salad bowl. Keep peeling past the core -- stop when it gets woody.
-- [ ] Peel *1* **cucumber** into ribbons into the same bowl.
-- [ ] Slice *4* **roma tomatoes** into thick rounds onto a plate.
-- [ ] Leave the **steak** in the fridge. The chef slices it.
-
-### Sous Chef - Assembly (5:30)
-
-- [ ] Dress the ribbon salad: *2 tbsp* **rice wine vinegar**, *1 tbsp* **sesame oil**, *1 tsp* **sugar**, **salt**, **sesame seeds**.
-- [ ] ***Taste the ribbons.*** Sweet-sour and cold.
-- [ ] Refrigerate the ribbons.
-- [ ] Dress the tomatoes: a drizzle of **sesame oil**, a scatter of **scallion** greens, **salt**, a pinch of **sugar**. Leave at room temperature -- cold tomatoes taste like nothing.
-- [ ] Boil the **noodles** *1 min* short of the package time, drain, rinse cold, toss with a little **sesame oil** so they do not glue together.
-- [ ] Stage the stove: the wok bowl, the ginger-garlic dish, the scallion whites, **oyster sauce**, **soy sauce**, **cornstarch**, **sugar**, the drained noodles.
-
-### Chef - Cooking (when home)
-
-Slice the **flat iron** thin *against the grain*, on a bias. Flat iron has one seam of connective tissue down the middle -- cut around it, not through it.
-
-Toss the slices with *1 tbsp* **cornstarch**, *1 tbsp* **soy sauce**, and a splash of water until every piece is slick. *5 min* while the wok heats.
-
-Wok on *high* until it smokes. Oil, then the **steak** in one layer. *60-90 seconds* untouched, toss once, out. It should still be pink -- it goes back in later.
-
-More oil. **Onion** and **pepper** in, *2 min*, hard and fast. They want char and snap, not softness.
-
-**Ginger**, **garlic**, and **scallion** whites, *30 seconds*.
-
-*2 tbsp* **oyster sauce**, *1 tbsp* **soy sauce**, *1 tsp* **sugar**, and a splash of water. Let it bubble and tighten, *30 seconds*.
-
-Steak back in with its resting juices, toss, off the heat. ***Taste***: it should be glossy and salty enough to carry the plain noodles.
-
-**Table**: noodles in a big bowl, steak and peppers over. Ribbons and tomatoes alongside.
-
----
-
-## Brats and Beans
+## Creamy Mushroom Beef
 
 ##### Prep&Heat
-###### 8:00am defrost + 5:00 prep + 5:15 slaw
+###### 8:00am defrost + 5:00 prep + 5:15 noodles
 
 #### Anchor:
-**Bratwurst** browned, sliced into coins, and braised back into a skillet of **onion**, **garlic**, **white beans**, and **tomato** with smoked paprika and mustard. Three sausages feed five when the beans do the work.
-
-#### Fan:
-Crusty bread, torn at the table.
+**Flat iron**, sliced thin and seared hard, pulled out while **mushrooms** brown in the same pan with **garlic** and **thyme**, then a splash of stock and **heavy cream** simmered down into a sauce the steak goes back into. Stroganoff-shaped, not a glaze -- the mushrooms and cream are the dish, not a side of it.
 
 #### Cai:
-**Mustard slaw** -- shredded cabbage and carrot, lemon, olive oil, Dijon, plenty of black pepper.
+**Garlic green beans** -- blanched, then finished in butter and garlic. Simple, bright against the cream.
 
-**Sliced tomato** -- thick rounds, olive oil, flaky salt. Nothing else.
+**Side salad** -- whatever bagged greens look good, a basic vinaigrette (olive oil, vinegar, mustard, salt).
 
 ### Already Prepped
 
-- **Bratwurst** thawed in the fridge since Wednesday morning.
+- Sliced **mushrooms**, diced **onion**, and minced **garlic** from Sunday's batch prep.
 
 ### Sous Chef - Prep (5:00)
 
-- [ ] **Move the ground beef from the deep freezer to the fridge** at *8:00am*. Friday's kofta needs the full day.
-- [ ] Dice *1* **yellow onion** into the pan bowl.
-- [ ] Mince *4* **garlic** cloves into the pan bowl.
-- [ ] Open and drain *2 cans* of **white beans**. Rinse until the water runs clear.
-- [ ] Shred *half* the **cabbage** thin into a slaw bowl. **Half and stop** -- the rest keeps for the weekend.
-- [ ] Grate or julienne *2* **carrots** into the slaw bowl.
-- [ ] Slice *4* **roma tomatoes** into thick rounds onto a plate.
-- [ ] Halve *1* **lemon**.
-- [ ] Leave the **bratwurst** in the fridge. The chef browns them whole and slices after.
+- [ ] Pull the mushroom, onion, and garlic bags from the fridge.
+- [ ] Trim *1 lb* **green beans** (or pull Sunday's trimmed bag).
+- [ ] Bring a pot of salted water to a boil for the noodles and the green beans.
 
 ### Sous Chef - Assembly (5:15)
 
-- [ ] Dress the slaw: juice of *1* **lemon**, *3 tbsp* **olive oil**, *1 tbsp* **Dijon**, **salt**, a lot of **black pepper**.
-- [ ] ***Taste the slaw.*** The mustard should bite. It is cutting through a skillet of sausage fat.
-- [ ] Refrigerate the slaw. An hour dressed is better than five minutes.
-- [ ] Dress the tomatoes: **olive oil** and **salt** only. Room temperature.
-- [ ] Stage the stove: the pan bowl, the drained beans, **canned tomatoes**, **tomato paste**, **smoked paprika**, **Dijon**, **chicken Better Than Bouillon**.
-- [ ] Set the **bread** out on the board with a knife.
+- [ ] Blanch the **green beans** *3 min* in the boiling water, pull with tongs into ice water, drain.
+- [ ] Whisk the vinaigrette: *3 tbsp* olive oil, *1 tbsp* vinegar, *1 tsp* mustard, **salt**, **pepper**.
+- [ ] Boil the **egg noodles** to package time in the same pot, drain, toss with a little butter so they don't stick.
+- [ ] Stage the stove: the mushrooms, onion, garlic, thyme, a splash of **Worcestershire**, the **heavy cream**.
+- [ ] Leave the **flat iron** in the fridge. The chef slices it.
 
 ### Chef - Cooking (when home)
 
-Brown the **bratwurst** whole in a dry skillet over *medium*, turning until dark on all sides, *8 min*. Whole first, sliced after -- coins bleed out and go dry.
+Slice the **flat iron** thin against the grain, on a bias, cutting around the seam of connective tissue rather than through it. Season with **salt** and **pepper**.
 
-Out to the board. Slice into *half-inch* coins.
+Cast iron or wide skillet, *high*, oil until it shimmers. Steak in a single layer, *90 seconds* a side for a real crust. Pull to a plate -- it finishes cooking later in the sauce.
 
-Onion and garlic into the sausage fat, *5 min* until soft and picking up the brown from the bottom.
+Drop heat to *medium*, more oil if the pan's dry. **Mushrooms** in, don't stir for *2 min* to let them brown, then toss and give them *3 more min* until deeply golden.
 
-*1 tbsp* **tomato paste** and a heavy spoonful of **smoked paprika**. Fry until the paste darkens, *2 min*.
+**Onion** and **garlic** in, *2 min* until soft. *1 tsp* chopped **thyme**. A splash of **Worcestershire**.
 
-**Canned tomatoes** crushed by hand, the **white beans**, a spoonful of **bouillon**, and a cup of water. Season with **salt**, **pepper**, a spoonful of **Dijon**.
+*1/2 cup* stock or water to deglaze, scrape the bottom, let it reduce by half, *2 min*.
 
-Sausage coins back in. Simmer *15 min* on *low*, uncovered, until it thickens enough that a spoon leaves a track. Mash a ladle of the beans against the side to build body. ***Taste***: more mustard for sharpness, more salt than you think.
+*3/4 cup* **heavy cream** in, simmer *3-4 min* until it coats the back of a spoon. ***Taste***: salt, pepper, more thyme if it's flat.
 
-**Table**: skillet straight to a trivet in the middle. Bread torn to scoop. Slaw and tomatoes alongside.
+Steak and its resting juices back in, toss just to warm through, *1 min* -- don't let it overcook now.
+
+**Table**: noodles in bowls, beef and mushroom sauce spooned over. Green beans and salad alongside.
 
 ---
 
-## Beef Kofta
+## Garlic Butter Shrimp & Green Beans
 
-##### Prep&Heat+
-###### 5:00 prep + 5:30 rice
+##### WokNight
+###### 4:30 thaw + 5:15 prep + 5:30 rice
 
 #### Anchor:
-**Ground beef** worked with grated **onion**, **garlic**, cumin, coriander, and **parsley**, shaped into logs and seared hard in a skillet. The grated onion is what keeps them juicy.
-
-#### Fan:
-White rice and warm pita.
+**Shrimp** seared hard in **butter** and **garlic**, **green beans** cooked in the same pan so they pick up the same fat, finished with **lemon** and a scatter of parsley. One pan, shrimp and vegetable together.
 
 #### Cai:
-**Garlic yogurt** -- Greek yogurt with garlic, lemon, salt, and grated cucumber.
+**Sliced tomato** -- roma tomatoes, olive oil, salt, black pepper.
 
-**Chopped salad** -- tomato, cucumber, parsley, onion, lemon, olive oil.
+**Buttered corn** -- a can or bag of corn, butter, salt, pepper.
 
 ### Already Prepped
 
-- **Ground beef** thawed in the fridge since Thursday morning.
+- **Green beans**, trimmed, and minced **garlic** from Sunday's batch prep.
 
-### Sous Chef - Prep (5:00)
+### Sous Chef - Prep (5:15)
 
-- [ ] Grate *1* **yellow onion** on the coarse side of a box grater into a bowl.
-- [ ] Squeeze the grated onion in a clean towel and *keep the juice out* of the meat bowl. Wet onion makes kofta fall apart in the pan.
-- [ ] Mince *4* **garlic** cloves into the meat bowl.
-- [ ] Chop *half* the **parsley** fine into the meat bowl.
-- [ ] Chop the other *half* of the **parsley** into a salad bowl.
-- [ ] Mince *2* more **garlic** cloves into a small yogurt bowl.
-- [ ] Grate *1* **cucumber** into the yogurt bowl, then squeeze the water out with your hands.
-- [ ] Dice *3* **roma tomatoes** small into the salad bowl.
-- [ ] Dice *1* **cucumber** small into the salad bowl.
-- [ ] Dice *a quarter* **yellow onion** very fine into the salad bowl.
-- [ ] Halve *2* **lemons**.
+- [ ] Put the sealed **shrimp** in a bowl of cold water at *4:30*. Weigh it down with a plate. *15-20 min*.
+- [ ] Slice *3* **roma tomatoes** onto a plate.
+- [ ] Pull the green bean and garlic bags from the fridge.
+- [ ] Drain the thawed **shrimp**, pat *very* dry on paper towel.
 
 ### Sous Chef - Assembly (5:30)
 
 - [ ] Start the **white rice** in the rice cooker.
-- [ ] Finish the yogurt: *2 cups* **Greek yogurt**, juice of *half* a **lemon**, **salt**. Stir.
-- [ ] ***Taste the yogurt.*** Garlicky and salty, not bland. It is a sauce, not a side of plain yogurt.
-- [ ] Refrigerate the yogurt.
-- [ ] Dress the chopped salad: juice of *1* **lemon**, *3 tbsp* **olive oil**, **salt**, **black pepper**.
-- [ ] ***Taste the salad.*** Refrigerate.
-- [ ] Stage the stove: the meat bowl, the squeezed **onion**, **cumin**, **ground coriander**, **paprika**, **salt**, **black pepper**.
-- [ ] Set the **pita** out next to the stove for the chef to warm.
+- [ ] Dress the tomatoes: olive oil, **salt**, **pepper**.
+- [ ] Stage the stove: **butter**, the garlic, the green beans, a **lemon**, red pepper flake, chopped parsley if you have it.
 
 ### Chef - Cooking (when home)
 
-Into the **ground beef**: the squeezed **onion**, **garlic**, **parsley**, *2 tsp* **cumin**, *1 tsp* **coriander**, *1 tsp* **paprika**, *2 tsp* **salt**, plenty of **black pepper**.
+Wide skillet, *medium-high*, a big knob of **butter**. **Green beans** in first, *4-5 min*, tossing occasionally, until they're blistered and just tender.
 
-Knead it hard for a full *2 minutes*. Kofta is the one place where overworking is the point -- the meat has to turn tacky and hold together, or it crumbles in the pan.
+Push the beans to one side, more **butter**, **shrimp** in a single layer. *90 seconds* a side, until curled into a loose C and opaque.
 
-Shape into *10-12* fat logs, roughly a thumb's length. Wet hands stop it sticking.
+**Garlic** and a pinch of **red pepper flake** in, *30 seconds* -- garlic burns fast, keep it moving.
 
-Cast iron over *medium-high*, thin film of oil. Kofta in with room between them. *3 min* untouched to build a real crust, then roll and give the other faces *3-4 min*. Work in two batches -- crowding steams them grey.
+Off heat, squeeze in the **lemon**, toss everything together, scatter parsley. ***Taste***: salt, and more lemon than feels right.
 
-Rest on a plate while you warm the **pita** in the empty skillet, *20 seconds* a side in the beef fat.
+Warm the **corn** in a small pot with butter, salt, and pepper, *2-3 min*.
 
-**Table**: rice and pita out, kofta piled on a platter. Yogurt and chopped salad in shared bowls -- the plate gets built by hand.
+**Table**: rice in bowls, shrimp and green beans over. Tomatoes and corn alongside.
+
+---
+
+## Tomato Beef Orzo
+
+##### EarlyHold
+###### 1:00 prep + 1:30 cook + hold
+
+**Standing Wednesday pattern:** Mom and Zoe leave early. This is one pot, orzo instead of rice -- the pasta cooks straight in the tomato sauce like a quick risotto, so fan and cai merge into a single dish that holds on low or reheats clean whenever the door opens. No rice cooker, no last-minute stir-fry, nothing to wilt.
+
+**The technique, generally:** brown the protein and aromatics, stir in the dry orzo for a minute to toast it, then add liquid at roughly *2:1* by volume (broth, tomato, wine, whatever's on hand) and simmer *10-15 min*, stirring more as it thickens, adding water if it dries out before the orzo's soft. Finish with something frozen and green at the very end -- peas, edamame -- and a handful of grated cheese if you want it richer. This works with almost any protein and pantry scraps; it is the fallback for any week that needs an early-hold dinner.
+
+#### Anchor + Fan, together:
+**Ground beef**, browned with **onion** and **garlic**, built into a tomato sauce with a splash of **Worcestershire**, then **orzo** stirred in and simmered directly in the sauce until it's thick and creamy. Frozen peas go in at the end for color and snap, **parmesan** stirred in to finish.
+
+#### Cai:
+**Cucumber onion salad** -- whatever's left from Saturday's jar, or a fast version: sliced cucumber, vinegar, sugar, salt. Already cold, zero day-of work if there's leftover.
+
+### Already Prepped
+
+- **Ground beef** thawed in the fridge since Monday.
+
+### Sous Chef - Prep (1:00)
+
+- [ ] Dice *1* **yellow onion**.
+- [ ] Mince *4* **garlic** cloves.
+
+### Chef/Sous Chef - Cooking (1:00-2:30, before she leaves)
+
+Brown the **ground beef** in a wide pot over *medium-high*, breaking it up, *5-6 min*. Drain excess fat if heavy.
+
+**Onion** and **garlic** in, *3 min* until soft.
+
+*1 tbsp* **tomato paste**, fry *1 min* until it darkens.
+
+*2 cups* **orzo** in, stir *1 min* to toast the grains in the fat.
+
+**Diced tomatoes**, a can of **crushed tomatoes**, *1 tbsp* **Worcestershire**, a spoonful of **bouillon**, and enough water to hit roughly *2:1* liquid to orzo by volume -- start with *4 cups*, more if it looks dry.
+
+Simmer *uncovered*, *medium-low*, *10-15 min*, stirring more often as it thickens. ***Taste and add water*** if the orzo isn't soft yet and the pot's gone dry -- it's forgiving, unlike rice, so don't panic.
+
+When the orzo is soft, stir in *1 cup* **frozen peas** off the heat, then a big handful of grated **parmesan**.
+
+***Taste***: more Worcestershire for depth, more parmesan if it needs body.
+
+Turn off, lid on. It holds for hours -- reheat gently over low with a splash of water when it's time to eat.
+
+**Table**: pot straight to a trivet, bowls out. Cucumber salad alongside.
+
+---
+
+## Sous Vide Honey Mustard Pork
+
+##### SousVidePrep+
+###### 12:00pm bath + 5:00 prep + 5:30 mash
+
+#### Anchor:
+Sunday's herb-rubbed, vacuum-sealed **pork loin**, sous vide to temperature, seared hard for a crust, then glazed with **honey**, **whole grain mustard**, and **butter**. The bath does the doneness; the glaze does the flavor -- an English pub plate, not a stir-fry.
+
+#### Cai:
+**Apple cabbage slaw** -- Sunday's shredded cabbage, apple matchsticks, mayo, cider vinegar, a spoon of the same mustard.
+
+**Buttered peas** -- frozen peas, butter, salt, pepper. Ninety seconds, done.
+
+### Already Prepped
+
+- **Pork loin**, rubbed and vacuum sealed since Sunday. **Cabbage**, shredded from Saturday's batch.
+
+### Sous Chef - Prep (12:00pm)
+
+- [ ] **Start the sous vide bath at *140F*** and drop the sealed pork loin bag in straight from the fridge. *2.5-3 hours* depending on thickness. (The circulator has a remote app -- this can be started from work if nobody's home yet.)
+- [ ] Later, at *5:00*: peel and cube *2 lb* **potatoes** for the mash.
+- [ ] Cut *2* **apples** into matchsticks for the slaw.
+
+### Sous Chef - Assembly (5:15)
+
+- [ ] Boil the **potatoes** in salted water until fork-tender, *15-18 min*.
+- [ ] Toss the **cabbage** and **apple** with *1/4 cup* **mayo**, *1 tbsp* **cider vinegar**, *1 tsp* **mustard**, **salt**. ***Taste.*** Refrigerate.
+- [ ] Stage the stove: **honey**, **whole grain mustard**, **butter**.
+
+### Chef - Cooking (when home)
+
+Drain the **potatoes**, mash with **butter** and warm **milk** until smooth. **Salt** and **pepper** to taste. Keep covered and warm.
+
+Pull the pork loin from the bath, out of the bag, and pat it *very* dry.
+
+Cast iron, *very hot*, thin film of oil. Sear the loin hard on all sides, *2-3 min* total, just to build real crust -- it's already cooked through.
+
+Drop heat to *low*, pan still hot. *2 tbsp* **honey**, *2 tbsp* **whole grain mustard**, *1 tbsp* **butter**, melted together and bubbling, *1-2 min*. Brush or spoon over the pork, turning to coat.
+
+Rest *5 min*, then slice thin.
+
+Warm the **frozen peas** in a small pot with butter, salt, and pepper, *90 seconds*.
+
+**Table**: mash in bowls, pork sliced and drizzled with the pan glaze. Slaw and peas alongside.
