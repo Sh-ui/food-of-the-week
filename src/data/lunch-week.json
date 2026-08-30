@@ -1,106 +1,109 @@
 {
-  "weekStart": "2026-08-23",
-  "weekTitle": "Week of August 23-29, 2026",
+  "weekStart": "2026-08-30",
+  "weekTitle": "Week of August 30 - September 5, 2026",
   "poolSize": 52,
   "activePoolSize": 52,
   "autoGrocery": true,
   "carbServingNote": "carbServings is an approximate count of 15 g carb servings, estimated from the nutritionist handout. Always check the food label.",
   "days": [
     {
-      "date": "2026-08-23",
+      "date": "2026-08-30",
       "dow": "Sunday",
-      "id": "cottage-cheese-fruitcup",
-      "name": "Cottage cheese + small fruit cup",
+      "id": "salmon-crackers-cucumber",
+      "name": "Smoked salmon + whole-wheat crackers + cucumber",
       "fridge": [
-        "½ cup low-fat cottage cheese",
-        "1 small fruit cup (in juice/water)"
+        "Smoked salmon",
+        "4–5 whole-wheat crackers",
+        "Cucumber slices"
       ],
       "carbServings": "≈1",
       "effort": "easy",
       "soft": true,
-      "protein": "cottage_cheese"
+      "protein": "salmon"
     },
     {
-      "date": "2026-08-24",
+      "date": "2026-08-31",
       "dow": "Monday",
-      "id": "cottage-celery",
-      "name": "Cottage cheese + celery",
+      "id": "tortilla-salsa-cheese",
+      "name": "Flour tortilla + salsa + cheese",
       "fridge": [
-        "½ cup cottage cheese",
+        "1 small flour tortilla",
+        "Salsa",
+        "Shredded cheese"
+      ],
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": true,
+      "protein": "cheese"
+    },
+    {
+      "date": "2026-09-01",
+      "dow": "Tuesday",
+      "id": "greekyogurt-celery",
+      "name": "Greek yogurt + celery",
+      "fridge": [
+        "¾ cup plain Greek yogurt",
         "Celery sticks"
       ],
       "carbServings": "≈0–1",
       "effort": "easy",
       "soft": true,
-      "protein": "cottage_cheese"
-    },
-    {
-      "date": "2026-08-25",
-      "dow": "Tuesday",
-      "id": "tuna-avocado-crackers",
-      "name": "Tuna + avocado + whole-wheat crackers",
-      "fridge": [
-        "1 tuna pouch",
-        "¼ avocado",
-        "4–5 whole-wheat crackers"
-      ],
-      "carbServings": "≈1",
-      "effort": "easy",
-      "soft": true,
-      "protein": "tuna"
-    },
-    {
-      "date": "2026-08-26",
-      "dow": "Wednesday",
-      "id": "rice-pudding-nuts",
-      "name": "No-sugar-added rice pudding + nuts",
-      "fridge": [
-        "4 oz no-sugar-added rice pudding",
-        "2 Tbsp nuts"
-      ],
-      "carbServings": "≈1–2",
-      "effort": "easy",
-      "soft": true,
-      "protein": "nuts"
-    },
-    {
-      "date": "2026-08-27",
-      "dow": "Thursday",
-      "id": "greekyogurt-nuts",
-      "name": "Greek yogurt + nuts",
-      "fridge": [
-        "¾ cup plain Greek yogurt",
-        "2 Tbsp nuts"
-      ],
-      "carbServings": "≈1",
-      "effort": "easy",
-      "soft": true,
       "protein": "yogurt"
     },
     {
-      "date": "2026-08-28",
-      "dow": "Friday",
-      "id": "english-muffin-nutbutter",
-      "name": "Light English muffin + nut butter or cheese",
+      "date": "2026-09-02",
+      "dow": "Wednesday",
+      "id": "jello-fruit-cottage",
+      "name": "Sugar-free jello + fruit + cottage cheese",
       "fridge": [
-        "1 light English muffin",
-        "1 Tbsp nut butter or cheese"
+        "1 cup sugar-free jello",
+        "½ cup fruit",
+        "½ cup cottage cheese"
       ],
-      "carbServings": "≈1–2",
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": true,
+      "protein": "cottage_cheese"
+    },
+    {
+      "date": "2026-09-03",
+      "dow": "Thursday",
+      "id": "banana-pb",
+      "name": "½ banana + peanut butter",
+      "fridge": [
+        "½ banana",
+        "1 Tbsp peanut butter"
+      ],
+      "carbServings": "≈1",
       "effort": "easy",
       "soft": true,
       "protein": "peanut_butter"
     },
     {
-      "date": "2026-08-29",
-      "dow": "Saturday",
-      "id": "graham-pb",
-      "name": "Graham crackers + peanut butter",
+      "date": "2026-09-04",
+      "dow": "Friday",
+      "id": "cottage-pineapple-seeds",
+      "name": "Cottage cheese + pineapple + sunflower seeds",
       "fridge": [
-        "3 graham cracker squares",
+        "½ cup cottage cheese",
+        "½ cup pineapple",
+        "1 Tbsp sunflower seeds"
+      ],
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": true,
+      "protein": "cottage_cheese"
+    },
+    {
+      "date": "2026-09-05",
+      "dow": "Saturday",
+      "id": "saltines-pb",
+      "name": "Saltine crackers + peanut butter",
+      "fridge": [
+        "6 saltine crackers",
         "1 Tbsp peanut butter"
       ],
-      "carbServings": "≈1–2",
+      "carbServings": "≈1",
       "effort": "easy",
       "soft": true,
       "protein": "peanut_butter"
@@ -110,34 +113,36 @@
     {
       "name": "Produce",
       "items": [
-        "Avocado",
-        "Celery"
+        "Bananas",
+        "Celery",
+        "Cucumber",
+        "Fruit",
+        "Pineapple (or cups)",
+        "Salsa"
       ]
     },
     {
       "name": "Protein",
       "items": [
-        "Tuna pouches"
+        "Smoked salmon"
       ]
     },
     {
       "name": "Dairy",
       "items": [
         "Cottage cheese",
-        "Low-fat cottage cheese",
-        "No-sugar-added rice pudding",
-        "Plain Greek yogurt"
+        "Plain Greek yogurt",
+        "Shredded cheese"
       ]
     },
     {
       "name": "Pantry",
       "items": [
-        "Fruit cups (in juice/water)",
-        "Graham crackers",
-        "Light English muffins",
-        "Nut butter",
-        "Nuts",
         "Peanut butter",
+        "Saltine crackers",
+        "Small tortillas",
+        "Sugar-free jello",
+        "Sunflower seeds",
         "Whole-wheat crackers"
       ]
     }

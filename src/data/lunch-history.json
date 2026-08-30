@@ -109,6 +109,18 @@
         "english-muffin-nutbutter",
         "graham-pb"
       ]
+    },
+    {
+      "weekStart": "2026-08-30",
+      "items": [
+        "salmon-crackers-cucumber",
+        "tortilla-salsa-cheese",
+        "greekyogurt-celery",
+        "jello-fruit-cottage",
+        "banana-pb",
+        "cottage-pineapple-seeds",
+        "saltines-pb"
+      ]
     }
   ]
 }
