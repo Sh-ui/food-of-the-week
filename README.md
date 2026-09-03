@@ -2,6 +2,10 @@
 
 > Weekly meal planning system for a household of 6-8
 
+| The week at a glance | Grocery list, mid-shop |
+|:---:|:---:|
+| ![Hero summary: the week's meals with codename badges and timing quick-reads](docs/hero-week-view.png) | ![Interactive grocery checklist with checked-off items persisted in localStorage](docs/grocery-checklist.png) |
+
 **[View or Edit This Week's Plan](FOOD-OF-THE-WEEK.md)** ⇒ [Live Site at food.schuepbach.work](https://sh-ui.github.io/food-of-the-week)
 
 ![Version](https://img.shields.io/badge/version-1.7.0-blue.svg)
