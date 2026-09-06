@@ -1,149 +1,156 @@
 {
-  "weekStart": "2026-08-30",
-  "weekTitle": "Week of August 30 - September 5, 2026",
+  "weekStart": "2026-09-06",
+  "weekTitle": "Week of September 6-12, 2026",
   "poolSize": 52,
   "activePoolSize": 52,
   "autoGrocery": true,
   "carbServingNote": "carbServings is an approximate count of 15 g carb servings, estimated from the nutritionist handout. Always check the food label.",
   "days": [
     {
-      "date": "2026-08-30",
+      "date": "2026-09-06",
       "dow": "Sunday",
-      "id": "salmon-crackers-cucumber",
-      "name": "Smoked salmon + whole-wheat crackers + cucumber",
-      "fridge": [
-        "Smoked salmon",
-        "4–5 whole-wheat crackers",
-        "Cucumber slices"
-      ],
-      "carbServings": "≈1",
-      "effort": "easy",
-      "soft": true,
-      "protein": "salmon"
-    },
-    {
-      "date": "2026-08-31",
-      "dow": "Monday",
-      "id": "tortilla-salsa-cheese",
-      "name": "Flour tortilla + salsa + cheese",
-      "fridge": [
-        "1 small flour tortilla",
-        "Salsa",
-        "Shredded cheese"
-      ],
-      "carbServings": "≈1",
-      "effort": "easy",
-      "soft": true,
-      "protein": "cheese"
-    },
-    {
-      "date": "2026-09-01",
-      "dow": "Tuesday",
-      "id": "greekyogurt-celery",
-      "name": "Greek yogurt + celery",
+      "id": "greekyogurt-berries",
+      "name": "Greek yogurt + berries",
       "fridge": [
         "¾ cup plain Greek yogurt",
-        "Celery sticks"
+        "½ cup berries"
       ],
-      "carbServings": "≈0–1",
+      "carbServings": "≈1",
       "effort": "easy",
       "soft": true,
       "protein": "yogurt"
     },
     {
-      "date": "2026-09-02",
+      "date": "2026-09-07",
+      "dow": "Monday",
+      "id": "egg-fruit",
+      "name": "Hard-boiled egg + a small piece of fruit",
+      "fridge": [
+        "1 hard-boiled egg",
+        "1 small piece of fruit"
+      ],
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": true,
+      "protein": "egg"
+    },
+    {
+      "date": "2026-09-08",
+      "dow": "Tuesday",
+      "id": "med-hummus-rollup",
+      "name": "Mediterranean hummus roll-up",
+      "fridge": [
+        "Whole-wheat tortilla",
+        "Hummus",
+        "Spinach",
+        "Cucumber",
+        "Roasted red pepper"
+      ],
+      "carbServings": "≈1–2",
+      "effort": "easy",
+      "soft": true,
+      "protein": "hummus"
+    },
+    {
+      "date": "2026-09-09",
       "dow": "Wednesday",
-      "id": "jello-fruit-cottage",
-      "name": "Sugar-free jello + fruit + cottage cheese",
+      "id": "broccoli-cheese-kale",
+      "name": "Broccoli + cheese cubes + baby kale + yogurt dressing",
       "fridge": [
-        "1 cup sugar-free jello",
-        "½ cup fruit",
-        "½ cup cottage cheese"
+        "Broccoli florets",
+        "Cheese cubes",
+        "Baby kale",
+        "Yogurt dressing"
       ],
-      "carbServings": "≈1",
+      "carbServings": "≈0–1",
       "effort": "easy",
-      "soft": true,
-      "protein": "cottage_cheese"
+      "soft": false,
+      "protein": "cheese"
     },
     {
-      "date": "2026-09-03",
+      "date": "2026-09-10",
       "dow": "Thursday",
-      "id": "banana-pb",
-      "name": "½ banana + peanut butter",
+      "id": "cracker-pb-banana",
+      "name": "Whole-wheat crackers + peanut butter + ½ banana",
       "fridge": [
-        "½ banana",
-        "1 Tbsp peanut butter"
+        "3–5 whole-wheat crackers",
+        "1 Tbsp peanut butter",
+        "½ banana"
       ],
-      "carbServings": "≈1",
+      "carbServings": "≈2",
       "effort": "easy",
       "soft": true,
       "protein": "peanut_butter"
     },
     {
-      "date": "2026-09-04",
+      "date": "2026-09-11",
       "dow": "Friday",
-      "id": "cottage-pineapple-seeds",
-      "name": "Cottage cheese + pineapple + sunflower seeds",
+      "id": "cheese-crackers-grapes",
+      "name": "Cheese cubes + whole-grain crackers + grapes",
       "fridge": [
-        "½ cup cottage cheese",
-        "½ cup pineapple",
-        "1 Tbsp sunflower seeds"
+        "Cheese cubes",
+        "4–5 whole-grain crackers",
+        "17 grapes"
       ],
-      "carbServings": "≈1",
+      "carbServings": "≈2",
       "effort": "easy",
-      "soft": true,
-      "protein": "cottage_cheese"
+      "soft": false,
+      "protein": "cheese"
     },
     {
-      "date": "2026-09-05",
+      "date": "2026-09-12",
       "dow": "Saturday",
-      "id": "saltines-pb",
-      "name": "Saltine crackers + peanut butter",
+      "id": "almondbutter-celery",
+      "name": "Celery + almond butter",
       "fridge": [
-        "6 saltine crackers",
-        "1 Tbsp peanut butter"
+        "Celery sticks",
+        "1 Tbsp almond butter"
       ],
-      "carbServings": "≈1",
+      "carbServings": "≈0–1",
       "effort": "easy",
-      "soft": true,
-      "protein": "peanut_butter"
+      "soft": false,
+      "protein": "nuts"
     }
   ],
   "grocery": [
     {
       "name": "Produce",
       "items": [
+        "Apples / small fruit",
+        "Baby kale",
         "Bananas",
+        "Berries",
+        "Broccoli",
         "Celery",
         "Cucumber",
-        "Fruit",
-        "Pineapple (or cups)",
-        "Salsa"
+        "Grapes",
+        "Spinach"
       ]
     },
     {
       "name": "Protein",
       "items": [
-        "Smoked salmon"
+        "Hard-boiled eggs (or eggs to boil)"
       ]
     },
     {
       "name": "Dairy",
       "items": [
-        "Cottage cheese",
-        "Plain Greek yogurt",
-        "Shredded cheese"
+        "Cheese cubes",
+        "Greek yogurt dressing",
+        "Hummus",
+        "Plain Greek yogurt"
       ]
     },
     {
       "name": "Pantry",
       "items": [
+        "Almond butter",
         "Peanut butter",
-        "Saltine crackers",
-        "Small tortillas",
-        "Sugar-free jello",
-        "Sunflower seeds",
-        "Whole-wheat crackers"
+        "Roasted red peppers (jar)",
+        "Whole-grain crackers",
+        "Whole-wheat crackers",
+        "Whole-wheat tortillas"
       ]
     }
   ]
