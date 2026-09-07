@@ -1,247 +1,283 @@
 <!-- https://sh-ui.github.io/food-of-the-week/ -->
 
-# Week of August 24-27, 2026
+# Week of September 7-11, 2026
 
-> Fan cai structure, Western flavors this week -- every table is still anchor plus two cai plus a starch, but the ingredient list is an Aldi run, not an Asian market run. Monday's steak goes creamy: mushrooms, garlic, thyme, and a splash of cream, over egg noodles instead of rice. Tuesday's shrimp is simple garlic butter with green beans cooked right in the pan. Wednesday keeps the orzo-stew method from last week -- it's already Western, just leaner on soy. Thursday's pork loin was rubbed and vacuum sealed Sunday; it sous vides Thursday, then gets a honey mustard glaze instead of a wok finish -- English pub flavors, not Chinese.
+> Whole Foods haul plus a deep freezer dig -- heirloom tomatoes, eggplant, dino kale, and Korean radish are the fresh clock, and the whole chicken, pork loin, and a pound of ground beef are the protein backbone. Fan/cai structure throughout: Monday and Tuesday lean Mediterranean and pan-Asian respectively, Wednesday is a one-pot for mom to handle solo, Thursday is a fast wok night. The sous vide runs Tuesday for the spatchcock chicken. Bread is fan once, rice the other three. Quick-pickled radish and the olive bar salad stretch across dinners and Zoe's bentos all week.
 
 ## Grocery List
 
 ### Produce
 
-**Sunday prep needs these first:** mushrooms, garlic, onions, green beans, cabbage, potatoes.
+**Already bought (Whole Foods, Monday):**
 
-- [ ] Mushrooms - 8 oz (Sunday prep, Monday)
-- [ ] Garlic - 2 heads (Sunday prep, all meals)
-- [ ] Yellow onions - 2 (Sunday prep, Mon, Wed)
-- [ ] Green beans - 1 lb (Sunday prep, Tuesday)
-- [ ] Green cabbage - reuse Saturday's half head (Thursday cai)
-- [ ] Apple - 2 (Thursday cai)
-- [ ] Potatoes - 2 lb (Sunday prep, Thursday mash)
-- [ ] Roma tomatoes - 4 (Tuesday cai, optional)
-- [ ] Lemon - 1 (Tuesday)
-- [ ] Fresh thyme - 1 bunch, or dried on hand (Monday, Thursday)
-- [ ] Fresh parsley - 1 bunch, optional (Tuesday)
+- [x] Heirloom tomatoes - 2.87 lb
+- [x] Eggplant - 1.12 lb
+- [x] English cucumbers - 2
+- [x] Dino kale - 1 bunch
+- [x] Korean radish - 1
+- [x] Green onions (scallions) - 1 bunch
+- [x] Garlic
+- [x] Sweet potatoes - 2.61 lb (long, easy to coin)
+- [x] Keitt mangoes - 3
+
+**Already in the fridge:**
+
+- [x] Carrots
+- [x] Greens (salad)
+- [x] Potatoes
+- [x] Onions
+- [x] Lemons and limes
 
 ### Protein
 
-- [x] Flat iron steak - 1 pack (ButcherBox, freezer -- Monday)
-- [x] Raw wild-caught shrimp (ButcherBox, freezer -- Tuesday)
-- [x] Ground beef 85/15 - 1 pack (ButcherBox, freezer -- Wednesday)
-- [x] Pork loin roast (ButcherBox -- rubbed and vac-sealed Sunday, sous vide Thursday, see WEEKEND.md)
-
-### Dairy
-
-- [ ] Heavy cream - 1 pint (Monday)
-- [ ] Milk - for the mash (Thursday)
-- [ ] Butter
-- [ ] Parmesan - a wedge or shaker (Wednesday)
+- [x] Whole chicken (deep freezer -- defrost tonight)
+- [x] Ground beef, ~1 lb (deep freezer -- move to fridge Tuesday)
+- [x] Firm tofu - 14 oz (fridge, split: half for Thursday dinner, half for Zoe's Wednesday bento)
+- [x] Gigante beans - 12 oz dry (soak tonight, simmer tomorrow)
+- [x] Red lentils - 16 oz (Wednesday soup, no soaking)
+- [x] Smoked salmon - 4 oz (Zoe's bentos only)
+- [x] Skipjack tuna - 2 cans unsalted, 2 cans albacore (bentos + pantry)
 
 ### Pantry
 
-- [ ] Egg noodles - 12 oz (Monday)
-- [ ] Orzo - 2 cups (Wednesday)
-- [ ] Frozen peas - 1 bag (Wednesday, Thursday)
+- [x] Bianco DiNapoli whole peeled tomatoes - 2 cans
+- [x] Coconut milk - 2 cans
+- [x] Pumpkin puree - 2 cans
+- [x] Penne or spaghetti
+- [x] Miso paste
+- [x] Kimchi
+- [x] Olive salad bar (olives, tomato, mushroom, giardiniera, artichoke)
+- [x] Seaweed snacks
+- [x] Mt. Athos Fire Sourdough
+- [x] Chili crunch, dried guajillo powder
 - [x] White rice
-- [x] Cornstarch
-- [x] Canned peeled tomatoes, tomato paste
-- [x] Better Than Bouillon - chicken and vegetable, beef if you have it
 
-### Flavor Cabinet
+### Freezer (used this week)
 
-- [ ] Whole grain or Dijon mustard (Thursday)
-- [ ] Honey (Thursday)
-- [ ] Worcestershire sauce (Wednesday, Monday)
-- [x] Olive oil, salt, black pepper
-- [x] Cumin, paprika, smoked paprika, red pepper flake
+- [x] Brussels sprouts - 1 bag (Thursday, straight to oven)
 
 ---
 
-## Creamy Mushroom Beef
+## Roasted Eggplant & Heirloom Tomato Pasta
 
-##### Prep&Heat
-###### 8:00am defrost + 5:00 prep + 5:15 noodles
+##### SheetPan+Pasta
+###### 5:00 prep + 5:30 roast + 6:00 toss
 
 #### Anchor:
-**Flat iron**, sliced thin and seared hard, pulled out while **mushrooms** brown in the same pan with **garlic** and **thyme**, then a splash of stock and **heavy cream** simmered down into a sauce the steak goes back into. Stroganoff-shaped, not a glaze -- the mushrooms and cream are the dish, not a side of it.
+**Eggplant** rounds and **heirloom tomato** halves, roasted hard at 425 with smashed **garlic** cloves and olive oil until the eggplant collapses and the tomatoes go jammy. Tossed with al dente **penne**, pasta water, and more olive oil. The tomatoes become the sauce -- no canned tomatoes, no extra steps. The eggplant is silky against the firm pasta.
 
 #### Cai:
-**Garlic green beans** -- blanched, then finished in butter and garlic. Simple, bright against the cream.
+**Gigante bean salad** -- simmered gigantes (from last night's soak), diced raw heirloom tomato, lemon juice, olive oil, scallion greens. Substantial enough to carry real protein into the meal, bright enough to contrast the roasted anchor.
 
-**Side salad** -- whatever bagged greens look good, a basic vinaigrette (olive oil, vinegar, mustard, salt).
+**Garlic dino kale with lemon** -- stripped, rough-chopped, wilted fast in a hot pan with sliced garlic, finished with a hard squeeze of lemon. One head, used while it's alive.
 
 ### Already Prepped
 
-- Sliced **mushrooms**, diced **onion**, and minced **garlic** from Sunday's batch prep.
+- **Gigante beans**, soaked overnight, simmered until tender earlier today. Drained and cooled.
 
 ### Sous Chef - Prep (5:00)
 
-- [ ] Pull the mushroom, onion, and garlic bags from the fridge.
-- [ ] Trim *1 lb* **green beans** (or pull Sunday's trimmed bag).
-- [ ] Bring a pot of salted water to a boil for the noodles and the green beans.
+- [ ] Slice the **eggplant** into 1/2" rounds.
+- [ ] Salt the rounds on both sides and lay on a rack or paper towels. Let them drain *20 min*.
+- [ ] Halve *1 lb* of the **heirloom tomatoes** through the equator.
+- [ ] Smash *6* **garlic** cloves, skins off.
+- [ ] Dice *1/2 lb* raw heirloom tomato small for the bean salad.
+- [ ] Slice *3* **scallions** -- whites and greens separated.
+- [ ] Strip the **kale** off the stems, rough chop, wash and spin dry.
+- [ ] Bring a large pot of salted water to a boil for the pasta.
 
-### Sous Chef - Assembly (5:15)
+### Sous Chef - Assembly (5:20)
 
-- [ ] Blanch the **green beans** *3 min* in the boiling water, pull with tongs into ice water, drain.
-- [ ] Whisk the vinaigrette: *3 tbsp* olive oil, *1 tbsp* vinegar, *1 tsp* mustard, **salt**, **pepper**.
-- [ ] Boil the **egg noodles** to package time in the same pot, drain, toss with a little butter so they don't stick.
-- [ ] Stage the stove: the mushrooms, onion, garlic, thyme, a splash of **Worcestershire**, the **heavy cream**.
-- [ ] Leave the **flat iron** in the fridge. The chef slices it.
-
-### Chef - Cooking (when home)
-
-Slice the **flat iron** thin against the grain, on a bias, cutting around the seam of connective tissue rather than through it. Season with **salt** and **pepper**.
-
-Cast iron or wide skillet, *high*, oil until it shimmers. Steak in a single layer, *90 seconds* a side for a real crust. Pull to a plate -- it finishes cooking later in the sauce.
-
-Drop heat to *medium*, more oil if the pan's dry. **Mushrooms** in, don't stir for *2 min* to let them brown, then toss and give them *3 more min* until deeply golden.
-
-**Onion** and **garlic** in, *2 min* until soft. *1 tsp* chopped **thyme**. A splash of **Worcestershire**.
-
-*1/2 cup* stock or water to deglaze, scrape the bottom, let it reduce by half, *2 min*.
-
-*3/4 cup* **heavy cream** in, simmer *3-4 min* until it coats the back of a spoon. ***Taste***: salt, pepper, more thyme if it's flat.
-
-Steak and its resting juices back in, toss just to warm through, *1 min* -- don't let it overcook now.
-
-**Table**: noodles in bowls, beef and mushroom sauce spooned over. Green beans and salad alongside.
-
----
-
-## Garlic Butter Shrimp & Green Beans
-
-##### WokNight
-###### 4:30 thaw + 5:15 prep + 5:30 rice
-
-#### Anchor:
-**Shrimp** seared hard in **butter** and **garlic**, **green beans** cooked in the same pan so they pick up the same fat, finished with **lemon** and a scatter of parsley. One pan, shrimp and vegetable together.
-
-#### Cai:
-**Sliced tomato** -- roma tomatoes, olive oil, salt, black pepper.
-
-**Buttered corn** -- a can or bag of corn, butter, salt, pepper.
-
-### Already Prepped
-
-- **Green beans**, trimmed, and minced **garlic** from Sunday's batch prep.
-
-### Sous Chef - Prep (5:15)
-
-- [ ] Put the sealed **shrimp** in a bowl of cold water at *4:30*. Weigh it down with a plate. *15-20 min*.
-- [ ] Slice *3* **roma tomatoes** onto a plate.
-- [ ] Pull the green bean and garlic bags from the fridge.
-- [ ] Drain the thawed **shrimp**, pat *very* dry on paper towel.
-
-### Sous Chef - Assembly (5:30)
-
-- [ ] Start the **white rice** in the rice cooker.
-- [ ] Dress the tomatoes: olive oil, **salt**, **pepper**.
-- [ ] Stage the stove: **butter**, the garlic, the green beans, a **lemon**, red pepper flake, chopped parsley if you have it.
+- [ ] Pat the drained **eggplant** dry.
+- [ ] Lay eggplant rounds and tomato halves cut-side up on a sheet pan. Tuck the smashed garlic between them.
+- [ ] Drizzle everything generously with olive oil. Salt and pepper the tomatoes.
+- [ ] Dress the **bean salad**: gigantes, diced raw tomato, juice of *1* lemon, good olive oil, scallion greens, salt. Toss gently -- gigantes break if you're rough. Set aside at room temp.
+- [ ] Oven to *425F*.
 
 ### Chef - Cooking (when home)
 
-Wide skillet, *medium-high*, a big knob of **butter**. **Green beans** in first, *4-5 min*, tossing occasionally, until they're blistered and just tender.
+Sheet pan in at *425F*, *25-30 min*. The tomatoes should be collapsing and starting to char at the edges; the eggplant should be completely soft when you press it. If the garlic is browning too fast, tuck it under a tomato.
 
-Push the beans to one side, more **butter**, **shrimp** in a single layer. *90 seconds* a side, until curled into a loose C and opaque.
+Boil the **penne** to *1 min short* of package time. Reserve *1 cup* pasta water before draining.
 
-**Garlic** and a pinch of **red pepper flake** in, *30 seconds* -- garlic burns fast, keep it moving.
+While the pasta drains, wilt the **kale**: wide pan, *medium-high*, sliced garlic in cold olive oil, let it heat together until the garlic is fragrant but not brown, kale in, toss *2-3 min* until just wilted but still bright. Squeeze of **lemon**, salt. Off heat.
 
-Off heat, squeeze in the **lemon**, toss everything together, scatter parsley. ***Taste***: salt, and more lemon than feels right.
+Toss the drained pasta with the roasted eggplant and tomatoes right on the sheet pan or in the pot -- break the tomatoes apart as you toss, they become the sauce. Splash pasta water to loosen. More olive oil. ***Taste***: salt, and more lemon than feels right.
 
-Warm the **corn** in a small pot with butter, salt, and pepper, *2-3 min*.
-
-**Table**: rice in bowls, shrimp and green beans over. Tomatoes and corn alongside.
+**Table**: pasta in a wide bowl, kale and bean salad alongside.
 
 ---
 
-## Tomato Beef Orzo
-
-##### EarlyHold
-###### 1:00 prep + 1:30 cook + hold
-
-**Standing Wednesday pattern:** Mom and Zoe leave early. This is one pot, orzo instead of rice -- the pasta cooks straight in the tomato sauce like a quick risotto, so fan and cai merge into a single dish that holds on low or reheats clean whenever the door opens. No rice cooker, no last-minute stir-fry, nothing to wilt.
-
-**The technique, generally:** brown the protein and aromatics, stir in the dry orzo for a minute to toast it, then add liquid at roughly *2:1* by volume (broth, tomato, wine, whatever's on hand) and simmer *10-15 min*, stirring more as it thickens, adding water if it dries out before the orzo's soft. Finish with something frozen and green at the very end -- peas, edamame -- and a handful of grated cheese if you want it richer. This works with almost any protein and pantry scraps; it is the fallback for any week that needs an early-hold dinner.
-
-#### Anchor + Fan, together:
-**Ground beef**, browned with **onion** and **garlic**, built into a tomato sauce with a splash of **Worcestershire**, then **orzo** stirred in and simmered directly in the sauce until it's thick and creamy. Frozen peas go in at the end for color and snap, **parmesan** stirred in to finish.
-
-#### Cai:
-**Cucumber onion salad** -- whatever's left from Saturday's jar, or a fast version: sliced cucumber, vinegar, sugar, salt. Already cold, zero day-of work if there's leftover.
-
-### Already Prepped
-
-- **Ground beef** thawed in the fridge since Monday.
-
-### Sous Chef - Prep (1:00)
-
-- [ ] Dice *1* **yellow onion**.
-- [ ] Mince *4* **garlic** cloves.
-
-### Chef/Sous Chef - Cooking (1:00-2:30, before she leaves)
-
-Brown the **ground beef** in a wide pot over *medium-high*, breaking it up, *5-6 min*. Drain excess fat if heavy.
-
-**Onion** and **garlic** in, *3 min* until soft.
-
-*1 tbsp* **tomato paste**, fry *1 min* until it darkens.
-
-*2 cups* **orzo** in, stir *1 min* to toast the grains in the fat.
-
-**Diced tomatoes**, a can of **crushed tomatoes**, *1 tbsp* **Worcestershire**, a spoonful of **bouillon**, and enough water to hit roughly *2:1* liquid to orzo by volume -- start with *4 cups*, more if it looks dry.
-
-Simmer *uncovered*, *medium-low*, *10-15 min*, stirring more often as it thickens. ***Taste and add water*** if the orzo isn't soft yet and the pot's gone dry -- it's forgiving, unlike rice, so don't panic.
-
-When the orzo is soft, stir in *1 cup* **frozen peas** off the heat, then a big handful of grated **parmesan**.
-
-***Taste***: more Worcestershire for depth, more parmesan if it needs body.
-
-Turn off, lid on. It holds for hours -- reheat gently over low with a splash of water when it's time to eat.
-
-**Table**: pot straight to a trivet, bowls out. Cucumber salad alongside.
-
----
-
-## Sous Vide Honey Mustard Pork
+## Sous Vide Spatchcock Chicken
 
 ##### SousVidePrep+
-###### 12:00pm bath + 5:00 prep + 5:30 mash
+###### 7:00am bath + 5:30 broiler + 5:50 table
 
 #### Anchor:
-Sunday's herb-rubbed, vacuum-sealed **pork loin**, sous vide to temperature, seared hard for a crust, then glazed with **honey**, **whole grain mustard**, and **butter**. The bath does the doneness; the glaze does the flavor -- an English pub plate, not a stir-fry.
+**Whole chicken**, spatchcocked and bagged last night, sous vide at 150F all day. Pulled, patted bone-dry, finished skin-up under the broiler until the skin is crackling and golden. The bath does the doneness -- every part is juicy, white and dark alike. The broiler does the texture. Carved at the table. Reserve leftover meat -- shredded, it feeds Zoe's bentos the rest of the week.
 
 #### Cai:
-**Apple cabbage slaw** -- Sunday's shredded cabbage, apple matchsticks, mayo, cider vinegar, a spoon of the same mustard.
+**Composed salad** -- thick heirloom tomato wedges, English cucumber half-moons, the Whole Foods olive salad bar (olives, giardiniera, artichoke, mushroom) spooned over the top. Lemon-olive oil dressing. This is the tomato-cucumber-olive salad that needs to happen while the heirloom tomatoes are still at their peak.
 
-**Buttered peas** -- frozen peas, butter, salt, pepper. Ninety seconds, done.
+**Roasted sweet potato coins** -- peeled, sliced into 1/2" coins, tossed with olive oil and salt, roasted at 425 while the chicken finishes. The long ones peel and coin fast.
 
 ### Already Prepped
 
-- **Pork loin**, rubbed and vacuum sealed since Sunday. **Cabbage**, shredded from Saturday's batch.
+- **Chicken**, spatchcocked, dry-salted, bagged last night. Ready for the bath.
 
-### Sous Chef - Prep (12:00pm)
+### Sous Chef - Prep (night before -- one task, 15 min)
 
-- [ ] **Start the sous vide bath at *140F*** and drop the sealed pork loin bag in straight from the fridge. *2.5-3 hours* depending on thickness. (The circulator has a remote app -- this can be started from work if nobody's home yet.)
-- [ ] Later, at *5:00*: peel and cube *2 lb* **potatoes** for the mash.
-- [ ] Cut *2* **apples** into matchsticks for the slaw.
+- [ ] **Spatchcock the chicken**: flip it breast-down, cut along both sides of the backbone with kitchen shears, remove the backbone. Flip, press flat until the breastbone cracks.
+- [ ] Pat dry, salt generously on both sides.
+- [ ] Bag it flat. Into the fridge.
+
+### Sous Chef - Prep (morning, 7:00am)
+
+- [ ] Fill the sous vide vessel, set to *150F*.
+- [ ] Drop the bagged chicken in straight from the fridge. It runs all day -- *6-8 hours* is fine at this temp.
 
 ### Sous Chef - Assembly (5:15)
 
-- [ ] Boil the **potatoes** in salted water until fork-tender, *15-18 min*.
-- [ ] Toss the **cabbage** and **apple** with *1/4 cup* **mayo**, *1 tbsp* **cider vinegar**, *1 tsp* **mustard**, **salt**. ***Taste.*** Refrigerate.
-- [ ] Stage the stove: **honey**, **whole grain mustard**, **butter**.
+- [ ] Peel the **sweet potatoes**, slice into 1/2" coins.
+- [ ] Toss with olive oil and salt on a sheet pan.
+- [ ] Cut the **heirloom tomatoes** into thick wedges.
+- [ ] Slice *1* **English cucumber** into half-moons.
+- [ ] Arrange the tomato and cucumber on a platter, spoon the **olive salad** over the top.
+- [ ] Dress with olive oil and a squeeze of lemon.
+- [ ] Oven to *425F* for the sweet potatoes.
 
-### Chef - Cooking (when home)
+### Chef - Cooking (5:30)
 
-Drain the **potatoes**, mash with **butter** and warm **milk** until smooth. **Salt** and **pepper** to taste. Keep covered and warm.
+**Sweet potatoes** in at *425F*, *25-30 min*, flipping once.
 
-Pull the pork loin from the bath, out of the bag, and pat it *very* dry.
+Pull the **chicken** from the bath. Out of the bag, pat the skin *very* dry -- this is the step that matters. Paper towels, both sides, press hard.
 
-Cast iron, *very hot*, thin film of oil. Sear the loin hard on all sides, *2-3 min* total, just to build real crust -- it's already cooked through.
+Switch the oven to **broil**. Chicken on a sheet pan or wire rack, skin-side up. Broiler, *6-8 min*, watching carefully -- the skin should blister and crackle. It goes fast.
 
-Drop heat to *low*, pan still hot. *2 tbsp* **honey**, *2 tbsp* **whole grain mustard**, *1 tbsp* **butter**, melted together and bubbling, *1-2 min*. Brush or spoon over the pork, turning to coat.
+Rest *10 min*, carve.
 
-Rest *5 min*, then slice thin.
+***Taste***: the meat should need almost nothing -- it was salted before the bag. If the skin wants it, hit it with flaky salt right off the broiler.
 
-Warm the **frozen peas** in a small pot with butter, salt, and pepper, *90 seconds*.
+**After dinner**: shred remaining chicken into a container, refrigerate. This is Zoe's bento protein for the rest of the week.
 
-**Table**: mash in bowls, pork sliced and drizzled with the pan glaze. Slaw and peas alongside.
+**Also tonight**: move **ground beef** from deep freezer to fridge for Thursday.
+
+**Table**: carved chicken on a board, composed salad on its platter, sweet potatoes from the pan. Rice in the cooker.
+
+---
+
+## Red Lentil, Pumpkin & Coconut Soup + Bread
+
+##### OnePot
+###### 4:00 start + 4:30 done + hold
+
+**Mom cooks this one solo.** One pot, one cai, the sourdough is the fan. Red lentils dissolve into a thick, creamy soup in under twenty minutes -- no soaking, no blender, no technique beyond dicing an onion. The soup holds on low or off-heat for hours.
+
+#### Anchor + Fan, together:
+**Red lentils** simmered with **coconut milk**, **pumpkin puree**, diced **onion**, and **garlic** until the lentils dissolve into a thick, golden stew. Finished with a squeeze of **lemon** and salt. Served with thick-sliced **Mt. Athos Fire Sourdough** for dipping and scooping -- the bread is the fan tonight.
+
+#### Cai:
+**Greens and carrot salad** -- the salad greens and carrots already in the fridge, shaved or sliced thin, dressed with olive oil, lemon, and salt. Tossed while the soup simmers.
+
+### Already Prepped
+
+- Nothing. Mom starts from scratch. Everything is pantry and fridge.
+
+### Chef (Mom) - Cooking (4:00, or whenever)
+
+Dice *1* **onion** and mince *3-4* **garlic** cloves.
+
+Wide pot, *medium*, olive oil. **Onion** in, *4-5 min* until soft. **Garlic** in, *1 min*.
+
+Add *1 cup* **red lentils** (rinsed), *1 can* **coconut milk**, *1 can* **pumpkin puree**, and *2 cups* water. Stir.
+
+Bring to a simmer, then *medium-low*, *15-18 min*, stirring occasionally. The lentils will dissolve on their own -- the soup thickens as they break down. Add water if it gets too thick before the lentils are soft.
+
+**Salt** generously. Squeeze of **lemon**. ***Taste***: it should be rich and slightly sweet from the pumpkin, with enough salt and acid to keep it from going flat.
+
+Lid on, heat off. It holds.
+
+### Cai Assembly (whenever, before dinner)
+
+- [ ] Wash the **greens**, tear or chop if needed.
+- [ ] Shave or slice the **carrots** thin.
+- [ ] Toss with olive oil, lemon juice, salt.
+
+### Serving
+
+- [ ] Slice the **sourdough** thick.
+- [ ] Reheat the soup gently if it's been sitting -- splash of water if it's thickened further.
+
+**Table**: pot on a trivet, bread on a board, salad in a bowl.
+
+---
+
+## Mapo Tofu
+
+##### WokNight
+###### 5:15 prep + 5:30 wok + 5:45 table
+
+#### Anchor:
+**Ground beef** rendered and broken up, built into a fast mapo with **miso** (fermented backbone), **guajillo powder** (smoky depth), and **chili crunch** (heat and texture). **Firm tofu** cubed and folded in gently at the end so it heats through without breaking apart. Finished with **scallion** greens. Fifteen minutes, one wok.
+
+#### Cai:
+**Roasted Brussels sprouts** -- frozen bag dumped onto a sheet pan, olive oil, salt, *425F* for *25 min*. They roast while you prep and wok. A real vegetable dish, charred and nutty.
+
+**Roasted sweet potato coins** -- same method as Tuesday, same sheet pan timing. Peeled, coined, oiled, salted, roasted alongside the sprouts. Finished with a drizzle of sesame oil and scallion.
+
+### Already Prepped
+
+- **Ground beef** thawed in the fridge since Tuesday night.
+- **Tofu** -- half the block, cubed. (Other half went to Zoe's Wednesday bento.)
+
+### Sous Chef - Prep (5:00)
+
+- [ ] Dump the frozen **Brussels sprouts** onto one half of a large sheet pan. Toss with olive oil and salt.
+- [ ] Peel remaining **sweet potatoes**, coin into 1/2" rounds. Toss with olive oil and salt on the other half of the pan.
+- [ ] Oven to *425F*, both vegetables in.
+- [ ] Cube the **tofu** into 3/4" pieces. Lay on paper towels to drain.
+- [ ] Mince *4* **garlic** cloves.
+- [ ] Slice *2* **scallions** -- whites minced, greens sliced on a bias for finishing.
+
+### Sous Chef - Assembly (5:15)
+
+- [ ] Stage next to the wok: miso paste (*2 tbsp*), guajillo powder (*1 tsp*), chili crunch, soy sauce if you have it, the garlic, scallion whites.
+- [ ] Start the **rice** in the cooker.
+- [ ] Have a splash of water or stock ready for loosening the sauce.
+
+### Chef - Cooking (5:30)
+
+Wok, *high*, oil until it shimmers. **Ground beef** in, break it up, let it render and get some color, *4-5 min*. Don't crowd it -- let the fond build.
+
+Push the beef to the sides, **scallion whites** and **garlic** in the center, *30 seconds*.
+
+**Miso paste** in, stir it into the fat, *1 min* -- it should smell toasty and deep. **Guajillo powder** in, stir.
+
+Splash of water or stock, *1/4 cup*, scrape the bottom. Let it bubble and reduce slightly.
+
+**Tofu** in, fold gently -- don't stir hard or the cubes break. Let it sit in the sauce *2-3 min* to heat through.
+
+Off heat. Spoonful of **chili crunch** on top. **Scallion greens** scattered.
+
+***Taste***: the miso should carry the salt, but check. More chili crunch if you want more heat and crunch.
+
+**Table**: mapo in the wok or a wide bowl, rice from the cooker, Brussels sprouts and sweet potatoes from the sheet pan.
+
+---
+
+## Tonight's Prep
+
+Before bed:
+
+- [ ] **Quick-pickle Korean radish**: peel, slice into thin coins or matchsticks. Brine: rice vinegar, sugar, salt, splash of water. Bright, sweet, refreshing -- no heat. Jar it, fridge. Ready by morning.
+- [ ] **Soak gigante beans** in a large bowl of cold water. They cook tomorrow.
+- [ ] **Move the whole chicken** from deep freezer to fridge.
+
+## Defrost Chain
+
+| Night | Move | Prep |
+|---|---|---|
+| Tonight | Chicken to fridge | Pickle radish, soak gigantes |
+| Tomorrow night | -- | Spatchcock + bag chicken, simmer gigantes earlier in the day |
+| Tuesday night | Ground beef to fridge | Shred leftover chicken for Zoe |
+| Wednesday | -- | Cube and drain half the tofu for Thursday |
