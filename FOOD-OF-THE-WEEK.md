@@ -58,7 +58,7 @@
 
 ---
 
-## Roasted Eggplant & Heirloom Tomato Pasta
+## Eggplant Tomato Pasta
 
 ##### SheetPan+Pasta
 ###### 5:00 prep + 5:30 roast + 6:00 toss
@@ -74,6 +74,8 @@
 ### Already Prepped
 
 - **Gigante beans**, soaked overnight, simmered until tender earlier today. Drained and cooled.
+- **Korean radish**, quick-pickled last night (rice vinegar, sugar, salt -- bright and sweet). In the fridge.
+- **Whole chicken**, moved from deep freezer to fridge last night. Defrosting.
 
 ### Sous Chef - Prep (5:00)
 
@@ -108,7 +110,7 @@ Toss the drained pasta with the roasted eggplant and tomatoes right on the sheet
 
 ---
 
-## Sous Vide Spatchcock Chicken
+## Spatchcock Chicken
 
 ##### SousVidePrep+
 ###### 7:00am bath + 5:30 broiler + 5:50 table
@@ -167,7 +169,7 @@ Rest *10 min*, carve.
 
 ---
 
-## Red Lentil, Pumpkin & Coconut Soup + Bread
+## Lentil Pumpkin Soup
 
 ##### OnePot
 ###### 4:00 start + 4:30 done + holds
@@ -266,19 +268,3 @@ Off heat. Spoonful of **chili crunch** on top. **Scallion greens** scattered.
 
 **Table**: mapo in the wok or a wide bowl, rice from the cooker, Brussels sprouts and sweet potatoes from the sheet pan.
 
----
-
-## Tonight's Prep
-
-- [ ] **Quick-pickle Korean radish**: peel, slice into thin coins or matchsticks. Brine: rice vinegar, sugar, salt, splash of water. Bright, sweet, refreshing -- no heat. Jar it, fridge. Ready by morning.
-- [ ] **Soak gigante beans** in a large bowl of cold water. They cook tomorrow.
-- [ ] **Move the whole chicken** from deep freezer to fridge.
-
-## Defrost Chain
-
-| Night | Move | Prep |
-|---|---|---|
-| Tonight | Chicken to fridge | Pickle radish, soak gigantes |
-| Tomorrow night | -- | Spatchcock + bag chicken, simmer gigantes earlier in the day |
-| Tuesday night | Ground beef to fridge | Shred leftover chicken for Zoe |
-| Wednesday | -- | Cube and drain half the tofu for Thursday |
