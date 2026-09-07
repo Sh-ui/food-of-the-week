@@ -114,20 +114,21 @@ Toss the drained pasta with the roasted eggplant and tomatoes right on the sheet
 ###### 7:00am bath + 5:30 broiler + 5:50 table
 
 #### Anchor:
-**Whole chicken**, spatchcocked and bagged last night, sous vide at 150F all day. Pulled, patted bone-dry, finished skin-up under the broiler until the skin is crackling and golden. The bath does the doneness -- every part is juicy, white and dark alike. The broiler does the texture. Carved at the table. Reserve leftover meat -- shredded, it feeds Zoe's bentos the rest of the week.
+**Whole chicken**, spatchcocked and bagged the night before, sous vide at 150F all day. Pulled, patted bone-dry, finished skin-up under the broiler until the skin is crackling and golden. The bath does the doneness -- every part is juicy, white and dark alike. The broiler does the texture. Carved at the table. Reserve leftover meat -- shredded, it feeds Zoe's bentos the rest of the week.
 
 #### Cai:
-**Composed salad** -- thick heirloom tomato wedges, English cucumber half-moons, the Whole Foods olive salad bar (olives, giardiniera, artichoke, mushroom) spooned over the top. Lemon-olive oil dressing. This is the tomato-cucumber-olive salad that needs to happen while the heirloom tomatoes are still at their peak.
+**Composed salad** -- thick heirloom tomato wedges, English cucumber half-moons, the olive salad bar (olives, giardiniera, artichoke, mushroom) spooned over the top. Lemon-olive oil dressing. The tomato-cucumber-olive salad, while the heirloom tomatoes are still at their peak.
 
 **Roasted sweet potato coins** -- peeled, sliced into 1/2" coins, tossed with olive oil and salt, roasted at 425 while the chicken finishes. The long ones peel and coin fast.
 
 ### Already Prepped
 
-- **Chicken**, spatchcocked, dry-salted, bagged last night. Ready for the bath.
+- **Chicken**, spatchcocked, dry-salted, bagged the night before. Ready for the bath.
 
-### Sous Chef - Prep (night before -- one task, 15 min)
+### Sous Chef - Prep (night before, 15 min)
 
-- [ ] **Spatchcock the chicken**: flip it breast-down, cut along both sides of the backbone with kitchen shears, remove the backbone. Flip, press flat until the breastbone cracks.
+- [ ] **Spatchcock the chicken**: flip it breast-down, cut along both sides of the backbone with kitchen shears, remove the backbone.
+- [ ] Flip, press flat until the breastbone cracks.
 - [ ] Pat dry, salt generously on both sides.
 - [ ] Bag it flat. Into the fridge.
 
@@ -169,11 +170,11 @@ Rest *10 min*, carve.
 ## Red Lentil, Pumpkin & Coconut Soup + Bread
 
 ##### OnePot
-###### 4:00 start + 4:30 done + hold
+###### 4:00 start + 4:30 done + holds
 
 **Mom cooks this one solo.** One pot, one cai, the sourdough is the fan. Red lentils dissolve into a thick, creamy soup in under twenty minutes -- no soaking, no blender, no technique beyond dicing an onion. The soup holds on low or off-heat for hours.
 
-#### Anchor + Fan, together:
+#### Anchor:
 **Red lentils** simmered with **coconut milk**, **pumpkin puree**, diced **onion**, and **garlic** until the lentils dissolve into a thick, golden stew. Finished with a squeeze of **lemon** and salt. Served with thick-sliced **Mt. Athos Fire Sourdough** for dipping and scooping -- the bread is the fan tonight.
 
 #### Cai:
@@ -183,30 +184,29 @@ Rest *10 min*, carve.
 
 - Nothing. Mom starts from scratch. Everything is pantry and fridge.
 
-### Chef (Mom) - Cooking (4:00, or whenever)
+### Sous Chef - Prep (4:00)
 
-Dice *1* **onion** and mince *3-4* **garlic** cloves.
+- [ ] Dice *1* **onion**.
+- [ ] Mince *3-4* **garlic** cloves.
+- [ ] Rinse *1 cup* **red lentils**.
 
-Wide pot, *medium*, olive oil. **Onion** in, *4-5 min* until soft. **Garlic** in, *1 min*.
+### Sous Chef - Assembly (4:10)
 
-Add *1 cup* **red lentils** (rinsed), *1 can* **coconut milk**, *1 can* **pumpkin puree**, and *2 cups* water. Stir.
+- [ ] Wide pot, *medium*, olive oil. **Onion** in, *4-5 min* until soft. **Garlic** in, *1 min*.
+- [ ] Add the **red lentils**, *1 can* **coconut milk**, *1 can* **pumpkin puree**, and *2 cups* water. Stir.
+- [ ] Bring to a simmer, then *medium-low*, lid slightly ajar.
 
-Bring to a simmer, then *medium-low*, *15-18 min*, stirring occasionally. The lentils will dissolve on their own -- the soup thickens as they break down. Add water if it gets too thick before the lentils are soft.
+### Chef - Cooking (4:10-4:30, all mom)
+
+Simmer *15-18 min*, stirring occasionally. The lentils dissolve on their own -- the soup thickens as they break down. Add water if it gets too thick before the lentils are soft.
 
 **Salt** generously. Squeeze of **lemon**. ***Taste***: it should be rich and slightly sweet from the pumpkin, with enough salt and acid to keep it from going flat.
 
-Lid on, heat off. It holds.
+Lid on, heat off. It holds for hours -- reheat gently with a splash of water when it's time to eat.
 
-### Cai Assembly (whenever, before dinner)
+Wash the **greens**, shave or slice the **carrots** thin. Toss with olive oil, lemon juice, salt.
 
-- [ ] Wash the **greens**, tear or chop if needed.
-- [ ] Shave or slice the **carrots** thin.
-- [ ] Toss with olive oil, lemon juice, salt.
-
-### Serving
-
-- [ ] Slice the **sourdough** thick.
-- [ ] Reheat the soup gently if it's been sitting -- splash of water if it's thickened further.
+Slice the **sourdough** thick.
 
 **Table**: pot on a trivet, bread on a board, salad in a bowl.
 
@@ -221,9 +221,9 @@ Lid on, heat off. It holds.
 **Ground beef** rendered and broken up, built into a fast mapo with **miso** (fermented backbone), **guajillo powder** (smoky depth), and **chili crunch** (heat and texture). **Firm tofu** cubed and folded in gently at the end so it heats through without breaking apart. Finished with **scallion** greens. Fifteen minutes, one wok.
 
 #### Cai:
-**Roasted Brussels sprouts** -- frozen bag dumped onto a sheet pan, olive oil, salt, *425F* for *25 min*. They roast while you prep and wok. A real vegetable dish, charred and nutty.
+**Roasted Brussels sprouts** -- frozen bag dumped onto a sheet pan, olive oil, salt, *425F* for *25 min*. They roast while you prep and wok. Charred and nutty.
 
-**Roasted sweet potato coins** -- same method as Tuesday, same sheet pan timing. Peeled, coined, oiled, salted, roasted alongside the sprouts. Finished with a drizzle of sesame oil and scallion.
+**Roasted sweet potato coins** -- same method as Tuesday. Peeled, coined, oiled, salted, roasted alongside the sprouts. Finished with a drizzle of sesame oil and scallion.
 
 ### Already Prepped
 
@@ -232,10 +232,13 @@ Lid on, heat off. It holds.
 
 ### Sous Chef - Prep (5:00)
 
-- [ ] Dump the frozen **Brussels sprouts** onto one half of a large sheet pan. Toss with olive oil and salt.
-- [ ] Peel remaining **sweet potatoes**, coin into 1/2" rounds. Toss with olive oil and salt on the other half of the pan.
+- [ ] Dump the frozen **Brussels sprouts** onto one half of a large sheet pan.
+- [ ] Toss with olive oil and salt.
+- [ ] Peel remaining **sweet potatoes**, coin into 1/2" rounds.
+- [ ] Toss with olive oil and salt on the other half of the pan.
 - [ ] Oven to *425F*, both vegetables in.
-- [ ] Cube the **tofu** into 3/4" pieces. Lay on paper towels to drain.
+- [ ] Cube the **tofu** into 3/4" pieces.
+- [ ] Lay on paper towels to drain.
 - [ ] Mince *4* **garlic** cloves.
 - [ ] Slice *2* **scallions** -- whites minced, greens sliced on a bias for finishing.
 
@@ -266,8 +269,6 @@ Off heat. Spoonful of **chili crunch** on top. **Scallion greens** scattered.
 ---
 
 ## Tonight's Prep
-
-Before bed:
 
 - [ ] **Quick-pickle Korean radish**: peel, slice into thin coins or matchsticks. Brine: rice vinegar, sugar, salt, splash of water. Bright, sweet, refreshing -- no heat. Jar it, fridge. Ready by morning.
 - [ ] **Soak gigante beans** in a large bowl of cold water. They cook tomorrow.
