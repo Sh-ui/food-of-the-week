@@ -2,7 +2,7 @@
 
 # Week of September 7-11, 2026
 
-> Whole Foods haul plus a deep freezer dig -- heirloom tomatoes, eggplant, dino kale, and Korean radish are the fresh clock, and the whole chicken, pork loin, and a pound of ground beef are the protein backbone. Fan/cai structure throughout: Monday and Tuesday lean Mediterranean and pan-Asian respectively, Wednesday is a one-pot for mom to handle solo, Thursday is a fast wok night. The sous vide runs Tuesday for the spatchcock chicken. Bread is fan once, rice the other three. Quick-pickled radish and the olive bar salad stretch across dinners and Zoe's bentos all week.
+> Whole Foods haul plus a deep freezer dig -- heirloom tomatoes, eggplant, dino kale, and Korean radish are the fresh clock. The whole chicken sous vides Tuesday after defrosting overnight, ground beef thaws for Thursday's mapo. Wednesday is mom's solo night: one pot of lentil soup, bread, and a salad she can handle start to finish. Pickled radish goes in the jar tonight and stretches across dinners and Zoe's bentos all week.
 
 ## Grocery List
 
@@ -64,7 +64,10 @@
 ###### 5:00 prep + 5:30 roast + 6:00 toss
 
 #### Anchor:
-**Eggplant** rounds and **heirloom tomato** halves, roasted hard at 425 with smashed **garlic** cloves and olive oil until the eggplant collapses and the tomatoes go jammy. Tossed with al dente **penne**, pasta water, and more olive oil. The tomatoes become the sauce -- no canned tomatoes, no extra steps. The eggplant is silky against the firm pasta.
+**Eggplant** rounds and **heirloom tomato** halves, roasted hard at 425 with smashed **garlic** cloves and olive oil until the eggplant collapses and the tomatoes go jammy. Tossed with al dente **penne**, pasta water, and more olive oil. The tomatoes become the sauce -- no canned tomatoes, no extra steps.
+
+#### Fan:
+Penne.
 
 #### Cai:
 **Gigante bean salad** -- simmered gigantes (from last night's soak), diced raw heirloom tomato, lemon juice, olive oil, scallion greens. Substantial enough to carry real protein into the meal, bright enough to contrast the roasted anchor.
@@ -79,6 +82,9 @@
 
 ### Sous Chef - Prep (5:00)
 
+- [ ] **Quick-pickle Korean radish** if not done last night: peel, slice into thin coins or matchsticks. Brine: **rice vinegar**, **sugar**, **salt**, splash of water. Bright, sweet, refreshing -- no heat. Jar it, fridge.
+- [ ] **Soak gigante beans** if not done last night: large bowl of cold water. They simmer tomorrow.
+- [ ] **Move the whole chicken from the deep freezer to the fridge** if not done last night. Tuesday's dinner depends on it.
 - [ ] Slice the **eggplant** into 1/2" rounds.
 - [ ] Salt the rounds on both sides and lay on a rack or paper towels. Let them drain *20 min*.
 - [ ] Halve *1 lb* of the **heirloom tomatoes** through the equator.
@@ -116,16 +122,19 @@ Toss the drained pasta with the roasted eggplant and tomatoes right on the sheet
 ###### 7:00am bath + 5:30 broiler + 5:50 table
 
 #### Anchor:
-**Whole chicken**, spatchcocked and bagged the night before, sous vide at 150F all day. Pulled, patted bone-dry, finished skin-up under the broiler until the skin is crackling and golden. The bath does the doneness -- every part is juicy, white and dark alike. The broiler does the texture. Carved at the table. Reserve leftover meat -- shredded, it feeds Zoe's bentos the rest of the week.
+**Whole chicken**, spatchcocked and bagged the night before, sous vide at 150F all day. Pulled, patted bone-dry, finished skin-up under the broiler until the skin is crackling and golden. The bath does the doneness -- every part is juicy, white and dark alike. The broiler does the texture. Reserve leftover meat -- shredded, it feeds Zoe's bentos the rest of the week.
+
+#### Fan:
+White rice.
 
 #### Cai:
-**Composed salad** -- thick heirloom tomato wedges, English cucumber half-moons, the olive salad bar (olives, giardiniera, artichoke, mushroom) spooned over the top. Lemon-olive oil dressing. The tomato-cucumber-olive salad, while the heirloom tomatoes are still at their peak.
+**Composed salad** -- thick heirloom tomato wedges, English cucumber half-moons, the olive salad bar (olives, giardiniera, artichoke, mushroom) spooned over the top. Lemon-olive oil dressing.
 
-**Roasted sweet potato coins** -- peeled, sliced into 1/2" coins, tossed with olive oil and salt, roasted at 425 while the chicken finishes. The long ones peel and coin fast.
+**Roasted sweet potato coins** -- peeled, sliced into 1/2" coins, tossed with olive oil and salt, roasted at 425 while the chicken finishes.
 
 ### Already Prepped
 
-- **Chicken**, spatchcocked, dry-salted, bagged the night before. Ready for the bath.
+- **Chicken**, spatchcocked, dry-salted, and bagged the night before. Ready for the bath.
 
 ### Sous Chef - Prep (night before, 15 min)
 
@@ -141,6 +150,7 @@ Toss the drained pasta with the roasted eggplant and tomatoes right on the sheet
 
 ### Sous Chef - Assembly (5:15)
 
+- [ ] **Move the ground beef from the deep freezer to the fridge.** Thursday's mapo needs the full day.
 - [ ] Peel the **sweet potatoes**, slice into 1/2" coins.
 - [ ] Toss with olive oil and salt on a sheet pan.
 - [ ] Cut the **heirloom tomatoes** into thick wedges.
@@ -163,8 +173,6 @@ Rest *10 min*, carve.
 
 **After dinner**: shred remaining chicken into a container, refrigerate. This is Zoe's bento protein for the rest of the week.
 
-**Also tonight**: move **ground beef** from deep freezer to fridge for Thursday.
-
 **Table**: carved chicken on a board, composed salad on its platter, sweet potatoes from the pan. Rice in the cooker.
 
 ---
@@ -177,7 +185,10 @@ Rest *10 min*, carve.
 **Mom cooks this one solo.** One pot, one cai, the sourdough is the fan. Red lentils dissolve into a thick, creamy soup in under twenty minutes -- no soaking, no blender, no technique beyond dicing an onion. The soup holds on low or off-heat for hours.
 
 #### Anchor:
-**Red lentils** simmered with **coconut milk**, **pumpkin puree**, diced **onion**, and **garlic** until the lentils dissolve into a thick, golden stew. Finished with a squeeze of **lemon** and salt. Served with thick-sliced **Mt. Athos Fire Sourdough** for dipping and scooping -- the bread is the fan tonight.
+**Red lentils** simmered with **coconut milk**, **pumpkin puree**, diced **onion**, and **garlic** until the lentils dissolve into a thick, golden stew. Finished with a squeeze of **lemon** and salt.
+
+#### Fan:
+Mt. Athos Fire Sourdough, sliced thick.
 
 #### Cai:
 **Greens and carrot salad** -- the salad greens and carrots already in the fridge, shaved or sliced thin, dressed with olive oil, lemon, and salt. Tossed while the soup simmers.
@@ -221,6 +232,9 @@ Slice the **sourdough** thick.
 
 #### Anchor:
 **Ground beef** rendered and broken up, built into a fast mapo with **miso** (fermented backbone), **guajillo powder** (smoky depth), and **chili crunch** (heat and texture). **Firm tofu** cubed and folded in gently at the end so it heats through without breaking apart. Finished with **scallion** greens. Fifteen minutes, one wok.
+
+#### Fan:
+White rice.
 
 #### Cai:
 **Roasted Brussels sprouts** -- frozen bag dumped onto a sheet pan, olive oil, salt, *425F* for *25 min*. They roast while you prep and wok. Charred and nutty.
@@ -267,4 +281,3 @@ Off heat. Spoonful of **chili crunch** on top. **Scallion greens** scattered.
 ***Taste***: the miso should carry the salt, but check. More chili crunch if you want more heat and crunch.
 
 **Table**: mapo in the wok or a wide bowl, rice from the cooker, Brussels sprouts and sweet potatoes from the sheet pan.
-
