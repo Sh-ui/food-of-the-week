@@ -1,9 +1,5 @@
 <!-- https://sh-ui.github.io/food-of-the-week/ -->
 
-# Week of September 7-10, 2026
-
-> Whole Foods haul landed this morning. Heirloom tomatoes, eggplant, dino kale, and Korean radish set the fresh clock -- use them early and hard. Tonight is eggplant tomato pasta with a garbanzo bean salad and garlic kale. The chicken goes into the fridge to defrost and gets spatchcocked after dinner for tomorrow's sous vide. Ground beef moves to the fridge tomorrow night for Thursday's mapo. Wednesday is mom's solo night: one pot of lentil pumpkin soup, sourdough, and a green salad she handles start to finish. Korean radish gets pickled tonight -- bright, sweet, no heat -- and rides through dinners and Zoe's bentos all week.
-
 ## Grocery List
 
 ### Produce
@@ -82,23 +78,18 @@ Penne.
 ### Sous Chef - Prep (5:00)
 
 - [ ] **Move the whole chicken from the deep freezer to the fridge.** Tomorrow's dinner depends on it.
-- [ ] **Quick-pickle Korean radish**: peel, slice into thin coins or matchsticks. Brine: **rice vinegar**, **sugar**, **salt**, splash of water. Bright, sweet, refreshing -- no heat. Jar it, fridge. Do this first so it has all evening.
 - [ ] Slice the **eggplant** into 1/2" rounds.
-- [ ] Salt the rounds on both sides and lay on a rack or paper towels. Let them drain *20 min*.
-- [ ] Halve *1 lb* of the **heirloom tomatoes** through the equator.
+- [ ] cut the biggest **heirloom** into quarters.
 - [ ] Smash *6* **garlic** cloves, skins off.
-- [ ] Dice *1/2 lb* raw heirloom tomato small for the bean salad.
-- [ ] Drain and rinse *2 cans* **garbanzo beans**.
+- [ ] Drain and rinse *1 cans* **garbanzo beans**.
 - [ ] Slice *3* **scallions** -- whites and greens separated.
 - [ ] Strip the **kale** off the stems, rough chop, wash and spin dry.
-- [ ] Bring a large pot of salted water to a boil for the pasta.
 
 ### Sous Chef - Assembly (5:20)
 
-- [ ] Pat the drained **eggplant** dry.
 - [ ] Lay eggplant rounds and tomato halves cut-side up on a sheet pan. Tuck the smashed garlic between them.
 - [ ] Drizzle everything generously with olive oil. Salt and pepper the tomatoes.
-- [ ] Dress the **bean salad**: garbanzos, diced raw tomato, juice of *1* lemon, good olive oil, scallion greens, salt. Toss. Set aside at room temp.
+- [ ] Dress the **bean salad**: garbanzos, juice of *1* lemon, good olive oil, scallion greens, salt. Toss. Set aside at room temp.
 - [ ] Oven to *425F*.
 
 ### Chef - Cooking (when home)
