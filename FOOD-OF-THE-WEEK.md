@@ -1,8 +1,8 @@
 <!-- https://sh-ui.github.io/food-of-the-week/ -->
 
-# Week of September 7-11, 2026
+# Week of September 7-10, 2026
 
-> Whole Foods haul plus a deep freezer dig -- heirloom tomatoes, eggplant, dino kale, and Korean radish are the fresh clock. The whole chicken sous vides Tuesday after defrosting overnight, ground beef thaws for Thursday's mapo. Wednesday is mom's solo night: one pot of lentil soup, bread, and a salad she can handle start to finish. Pickled radish goes in the jar tonight and stretches across dinners and Zoe's bentos all week.
+> Whole Foods haul landed this morning. Heirloom tomatoes, eggplant, dino kale, and Korean radish set the fresh clock -- use them early and hard. Tonight is eggplant tomato pasta with a garbanzo bean salad and garlic kale. The chicken goes into the fridge to defrost and gets spatchcocked after dinner for tomorrow's sous vide. Ground beef moves to the fridge tomorrow night for Thursday's mapo. Wednesday is mom's solo night: one pot of lentil pumpkin soup, sourdough, and a green salad she handles start to finish. Korean radish gets pickled tonight -- bright, sweet, no heat -- and rides through dinners and Zoe's bentos all week.
 
 ## Grocery List
 
@@ -33,7 +33,8 @@
 - [x] Whole chicken (deep freezer -- defrost tonight)
 - [x] Ground beef, ~1 lb (deep freezer -- move to fridge Tuesday)
 - [x] Firm tofu - 14 oz (fridge, split: half for Thursday dinner, half for Zoe's Wednesday bento)
-- [x] Gigante beans - 12 oz dry (soak tonight, simmer tomorrow)
+- [x] Garbanzo beans - 2 cans (Monday salad)
+- [x] Gigante beans - 12 oz dry (pantry, future use)
 - [x] Red lentils - 16 oz (Wednesday soup, no soaking)
 - [x] Smoked salmon - 4 oz (Zoe's bentos only)
 - [x] Skipjack tuna - 2 cans unsalted, 2 cans albacore (bentos + pantry)
@@ -70,26 +71,24 @@
 Penne.
 
 #### Cai:
-**Gigante bean salad** -- simmered gigantes (from last night's soak), diced raw heirloom tomato, lemon juice, olive oil, scallion greens. Substantial enough to carry real protein into the meal, bright enough to contrast the roasted anchor.
+**Garbanzo bean salad** -- canned garbanzos drained and rinsed, diced raw heirloom tomato, lemon juice, olive oil, scallion greens. Substantial enough to carry real protein into the meal, bright enough to contrast the roasted anchor.
 
 **Garlic dino kale with lemon** -- stripped, rough-chopped, wilted fast in a hot pan with sliced garlic, finished with a hard squeeze of lemon. One head, used while it's alive.
 
 ### Already Prepped
 
-- **Gigante beans**, soaked overnight, simmered until tender earlier today. Drained and cooled.
-- **Korean radish**, quick-pickled last night (rice vinegar, sugar, salt -- bright and sweet). In the fridge.
-- **Whole chicken**, moved from deep freezer to fridge last night. Defrosting.
+- Nothing. This is tonight -- everything starts now.
 
 ### Sous Chef - Prep (5:00)
 
-- [ ] **Quick-pickle Korean radish** if not done last night: peel, slice into thin coins or matchsticks. Brine: **rice vinegar**, **sugar**, **salt**, splash of water. Bright, sweet, refreshing -- no heat. Jar it, fridge.
-- [ ] **Soak gigante beans** if not done last night: large bowl of cold water. They simmer tomorrow.
-- [ ] **Move the whole chicken from the deep freezer to the fridge** if not done last night. Tuesday's dinner depends on it.
+- [ ] **Move the whole chicken from the deep freezer to the fridge.** Tomorrow's dinner depends on it.
+- [ ] **Quick-pickle Korean radish**: peel, slice into thin coins or matchsticks. Brine: **rice vinegar**, **sugar**, **salt**, splash of water. Bright, sweet, refreshing -- no heat. Jar it, fridge. Do this first so it has all evening.
 - [ ] Slice the **eggplant** into 1/2" rounds.
 - [ ] Salt the rounds on both sides and lay on a rack or paper towels. Let them drain *20 min*.
 - [ ] Halve *1 lb* of the **heirloom tomatoes** through the equator.
 - [ ] Smash *6* **garlic** cloves, skins off.
 - [ ] Dice *1/2 lb* raw heirloom tomato small for the bean salad.
+- [ ] Drain and rinse *2 cans* **garbanzo beans**.
 - [ ] Slice *3* **scallions** -- whites and greens separated.
 - [ ] Strip the **kale** off the stems, rough chop, wash and spin dry.
 - [ ] Bring a large pot of salted water to a boil for the pasta.
@@ -99,7 +98,7 @@ Penne.
 - [ ] Pat the drained **eggplant** dry.
 - [ ] Lay eggplant rounds and tomato halves cut-side up on a sheet pan. Tuck the smashed garlic between them.
 - [ ] Drizzle everything generously with olive oil. Salt and pepper the tomatoes.
-- [ ] Dress the **bean salad**: gigantes, diced raw tomato, juice of *1* lemon, good olive oil, scallion greens, salt. Toss gently -- gigantes break if you're rough. Set aside at room temp.
+- [ ] Dress the **bean salad**: garbanzos, diced raw tomato, juice of *1* lemon, good olive oil, scallion greens, salt. Toss. Set aside at room temp.
 - [ ] Oven to *425F*.
 
 ### Chef - Cooking (when home)
@@ -113,6 +112,8 @@ While the pasta drains, wilt the **kale**: wide pan, *medium-high*, sliced garli
 Toss the drained pasta with the roasted eggplant and tomatoes right on the sheet pan or in the pot -- break the tomatoes apart as you toss, they become the sauce. Splash pasta water to loosen. More olive oil. ***Taste***: salt, and more lemon than feels right.
 
 **Table**: pasta in a wide bowl, kale and bean salad alongside.
+
+**After dinner** (15 min): spatchcock the chicken for tomorrow. See the Sous Chef - Prep (night before) section below.
 
 ---
 
