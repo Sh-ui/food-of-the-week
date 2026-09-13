@@ -133,6 +133,18 @@
         "cheese-crackers-grapes",
         "almondbutter-celery"
       ]
+    },
+    {
+      "weekStart": "2026-09-13",
+      "items": [
+        "cucumber-hummus",
+        "animalcrackers-pb",
+        "tuna-packet-peppers",
+        "deviled-eggs",
+        "edamame-clementine",
+        "stringcheese-apple",
+        "yogurt-dressing-eggs-crackers"
+      ]
     }
   ]
 }
