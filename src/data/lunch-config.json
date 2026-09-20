@@ -10,7 +10,7 @@
   "itemsPerWeek": 7,
   "_itemsPerWeek": "How many lunches per week (one per day = 7). Lower it for fewer days; the page shows that many, starting Sunday.",
 
-  "autoGrocery": true,
+  "autoGrocery": false,
   "_autoGrocery": "Default state of the green 'Lunch' grocery section on the home page. true = auto-added/shown by default. (Each browser can still toggle it.)",
 
   "exclude": [],
