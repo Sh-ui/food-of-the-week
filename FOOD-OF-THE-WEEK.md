@@ -18,7 +18,7 @@
 - [ ] Jalapeno - 1 (Meal 2)
 - [ ] Cilantro - 2 bunches (Meal 2, 4)
 - [ ] Parsley - 1 bunch (Meal 1, Lunch)
-- [ ] Lemons - 1 bag (Meal 2, 3, 4, Lunch)
+- [ ] Lemons - 1 bag (Meal 3, Lunch)
 - [ ] English cucumbers - 3 (Meal 2, Lunch)
 - [ ] Snap peas - 1 bag (Lunch)
 - [ ] Pineapple - 1 whole (Meal 2, Lunch)
@@ -31,6 +31,7 @@
 **Already in the house:**
 
 - [x] White sweet potatoes (Meal 2)
+- [x] Limes (Meal 2, 4)
 
 ### Protein
 
@@ -158,20 +159,20 @@ Sunday's **chicken breast**, seared for color and sliced, with **white sweet pot
 Jasmine rice.
 
 #### Cai:
-**Fresh pineapple relish** -- pineapple, red onion, jalapeno, cilantro, lemon. Made tonight so it stays bright; part topping, part side.
+**Fresh pineapple relish** -- pineapple, red onion, jalapeno, cilantro, lime. Made tonight so it stays bright; part topping, part side.
 
-**Smashed cucumber** with lemon and crushed peanuts.
+**Smashed cucumber** with lime and crushed peanuts.
 
 ### Already Prepped
 - Chicken and sweet potato bags from Sunday, *1 cup* stock, cut pineapple.
 
 ### Sous Chef - Prep (5:00)
-- [ ] Relish: *2 cups* pineapple diced small, *1/2* red onion, *1* jalapeno, cilantro, juice of *1* lemon, salt.
+- [ ] Relish: *2 cups* pineapple diced small, *1/2* red onion, *1* jalapeno, cilantro, juice of *2* limes, salt.
 - [ ] Smash and salt *1* English cucumber. Crush the peanuts.
 - [ ] *5:30* start the rice. Dress the cucumbers.
 
 ### Chef - Cooking
-Pat everything dry. Sweet potato cut-side down until deep brown. Chicken *90 seconds* a side, color only. *1/2 can* coconut milk plus the stock, reduce hard to a glaze. ***Taste*** for salt and lemon.
+Pat everything dry. Sweet potato cut-side down until deep brown. Chicken *90 seconds* a side, color only. *1/2 can* coconut milk plus the stock, reduce hard to a glaze. ***Taste*** for salt and lime.
 
 **Table**: skillet in the middle, relish with a spoon, cucumbers, rice.
 
@@ -220,7 +221,7 @@ Brown the sausage. Onion and shred *5 min*. Orzo in, toast *1 min*. *4 cups* sto
 Tostadas.
 
 #### Cai:
-**Slaw** with lemon, cilantro and a can of corn.
+**Slaw** with lime, cilantro and a can of corn.
 
 **Refried beans** baked with cheese on top.
 
@@ -229,11 +230,11 @@ Tostadas.
 
 ### Sous Chef - Prep (5:00)
 - [ ] Soften *1* onion and *3* garlic cloves, *2 tbsp* taco seasoning, *2 cups* lentils, the stock. Simmer *25-30 min* until thick.
-- [ ] *5:20* slaw: *5 cups* shred, drained corn, *1* lemon, cilantro, oil, salt.
+- [ ] *5:20* slaw: *5 cups* shred, drained corn, *2* limes, cilantro, oil, salt.
 - [ ] Refried beans into a dish, cheese over, *375F* about *15 min*.
 - [ ] **Move the bagged pork loin from the freezer to the fridge.**
 
 ### Chef - Cooking
-***Taste*** the lentils for salt, lemon and heat. Warm the tostadas *3 min*.
+***Taste*** the lentils for salt, lime and heat. Warm the tostadas *3 min*.
 
-**Table**: lentils, beans, slaw, tostadas, cheese, lemon wedges, hot sauce.
+**Table**: lentils, beans, slaw, tostadas, cheese, limes, hot sauce.
