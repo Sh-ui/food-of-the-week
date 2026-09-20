@@ -145,6 +145,18 @@
         "stringcheese-apple",
         "yogurt-dressing-eggs-crackers"
       ]
+    },
+    {
+      "weekStart": "2026-09-20",
+      "items": [
+        "crackers-cheese",
+        "pepper-hummus",
+        "snap-peas-hummus",
+        "cottage-tomato-toast",
+        "avocado-egg-toast",
+        "deli-rolls-yogurt",
+        "carrots-ranch"
+      ]
     }
   ]
 }
