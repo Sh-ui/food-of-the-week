@@ -3,7 +3,7 @@
   "weekTitle": "Week of September 20-26, 2026",
   "poolSize": 52,
   "activePoolSize": 52,
-  "autoGrocery": true,
+  "autoGrocery": false,
   "carbServingNote": "carbServings is an approximate count of 15 g carb servings, estimated from the nutritionist handout. Always check the food label.",
   "days": [
     {
