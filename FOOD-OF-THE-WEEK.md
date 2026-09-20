@@ -10,27 +10,23 @@
 
 - [ ] Green cabbage - 1 large (Meal 1, 3, 4, Lunch)
 - [ ] Carrots - 2 lb bag (Meal 1, 3, 4, Lunch, stock)
-- [ ] Baby / new potatoes - 3 lb (Meal 1)
-- [ ] Russet potatoes - 5 lb bag (Saturday)
+- [ ] Baby / new potatoes - 2 bags (Meal 1, Saturday)
 - [ ] Yellow onions - 3 lb bag (every meal, stock)
 - [ ] Red onion - 1 (Meal 2)
 - [ ] Garlic - 2 heads
-- [ ] Celery - 1 bunch (stock)
 - [ ] Scallions - 1 bunch (Meal 1)
 - [ ] Jalapeno - 1 (Meal 2)
 - [ ] Cilantro - 2 bunches (Meal 2, 4)
 - [ ] Parsley - 1 bunch (Meal 1, Lunch)
-- [ ] Limes - 1 bag (Meal 2, 4)
-- [ ] Lemons - 1 bag (Meal 3, Lunch)
-- [ ] Mini cucumbers - 2 packs (Meal 2, Lunch)
+- [ ] Lemons - 1 bag (Meal 2, 3, 4, Lunch)
+- [ ] English cucumbers - 3 (Meal 2, Lunch)
 - [ ] Snap peas - 1 bag (Lunch)
 - [ ] Pineapple - 1 whole (Meal 2, Lunch)
 - [ ] Strawberries - 1 lb (Lunch, early week)
 - [ ] Grapes - 2 lb (Lunch)
 - [ ] Clementines - 1 bag (Lunch, late week)
 - [ ] Apples - 1 bag (Lunch, Saturday)
-- [ ] Chopped salad kits - 2 (Meal 3)
-- [ ] Bag salad - 2 (tonight, Saturday)
+- [ ] Bag salad - 3, one per dinner (tonight, Meal 3, Saturday)
 
 **Already in the house:**
 
@@ -72,11 +68,7 @@
 
 - [ ] Tostadas - 2 packs (Meal 4)
 - [ ] Refried beans - 2 cans (Meal 4)
-- [ ] Fire-roasted corn - 1 can; plain canned corn if Aldi has none (Meal 4)
-- [ ] Breadcrumbs - 1 canister (Meal 1)
-- [ ] Ketchup - if low (Meal 1 glaze)
-- [ ] Roasted peanuts - 1 small jar (Meal 2)
-- [ ] Olives - 1 jar (Lunch pasta salad)
+- [ ] Canned corn - 1 can, fire-roasted if they have it, plain if not (Meal 4)
 - [ ] Sandwich bread - 1 loaf (Lunch)
 - [ ] Crackers - 1 box (Lunch)
 - [ ] Pretzels - 1 bag (Lunch)
@@ -88,6 +80,9 @@
 - [x] Orzo (Meal 3)
 - [x] Rotini or other short pasta (Lunch)
 - [x] Jasmine rice, sushi rice
+- [x] Breadcrumbs, ketchup (Meal 1)
+- [x] Peanuts (Meal 2)
+- [x] Olives (Lunch pasta salad)
 - [x] Flavor cabinet: soy, mirin, sesame oil, rice vinegar, cider vinegar, Dijon, honey, taco seasoning, thyme, garlic powder, flour
 - [x] Sous vide additives, vacuum bags
 
@@ -101,7 +96,7 @@
 About two hours of hands while the pot and the bath run themselves.
 
 ### Stock pot
-- [ ] Chicken parts, onion, carrot ends, celery, peppercorns. Bare simmer *3 hours*. Strain and jar.
+- [ ] Chicken parts, onion, carrot ends, peppercorns. Bare simmer *3 hours*. Strain and jar.
 
 ### Bath
 - [ ] Chicken breasts, two bags (Tuesday, lunches), *150F*, *90 min*.
@@ -163,20 +158,20 @@ Sunday's **chicken breast**, seared for color and sliced, with **white sweet pot
 Jasmine rice.
 
 #### Cai:
-**Fresh pineapple relish** -- pineapple, red onion, jalapeno, cilantro, lime. Made tonight so it stays bright; part topping, part side.
+**Fresh pineapple relish** -- pineapple, red onion, jalapeno, cilantro, lemon. Made tonight so it stays bright; part topping, part side.
 
-**Smashed cucumber** with lime and crushed peanuts.
+**Smashed cucumber** with lemon and crushed peanuts.
 
 ### Already Prepped
 - Chicken and sweet potato bags from Sunday, *1 cup* stock, cut pineapple.
 
 ### Sous Chef - Prep (5:00)
-- [ ] Relish: *2 cups* pineapple diced small, *1/2* red onion, *1* jalapeno, cilantro, juice of *2* limes, salt.
-- [ ] Smash and salt *4* mini cucumbers. Crush the peanuts.
+- [ ] Relish: *2 cups* pineapple diced small, *1/2* red onion, *1* jalapeno, cilantro, juice of *1* lemon, salt.
+- [ ] Smash and salt *1* English cucumber. Crush the peanuts.
 - [ ] *5:30* start the rice. Dress the cucumbers.
 
 ### Chef - Cooking
-Pat everything dry. Sweet potato cut-side down until deep brown. Chicken *90 seconds* a side, color only. *1/2 can* coconut milk plus the stock, reduce hard to a glaze. ***Taste*** for salt and lime.
+Pat everything dry. Sweet potato cut-side down until deep brown. Chicken *90 seconds* a side, color only. *1/2 can* coconut milk plus the stock, reduce hard to a glaze. ***Taste*** for salt and lemon.
 
 **Table**: skillet in the middle, relish with a spoon, cucumbers, rice.
 
@@ -198,7 +193,7 @@ The orzo, in the pot.
 #### Cai:
 **Marinated white beans** from Sunday.
 
-**Chopped salad kit.**
+**Bag salad.**
 
 ### Already Prepped
 - *5 cups* stock, *2 cups* fine shred, white beans.
@@ -225,7 +220,7 @@ Brown the sausage. Onion and shred *5 min*. Orzo in, toast *1 min*. *4 cups* sto
 Tostadas.
 
 #### Cai:
-**Slaw** with lime, cilantro and a can of fire-roasted corn.
+**Slaw** with lemon, cilantro and a can of corn.
 
 **Refried beans** baked with cheese on top.
 
@@ -234,11 +229,11 @@ Tostadas.
 
 ### Sous Chef - Prep (5:00)
 - [ ] Soften *1* onion and *3* garlic cloves, *2 tbsp* taco seasoning, *2 cups* lentils, the stock. Simmer *25-30 min* until thick.
-- [ ] *5:20* slaw: *5 cups* shred, drained corn, *2* limes, cilantro, oil, salt.
+- [ ] *5:20* slaw: *5 cups* shred, drained corn, *1* lemon, cilantro, oil, salt.
 - [ ] Refried beans into a dish, cheese over, *375F* about *15 min*.
 - [ ] **Move the bagged pork loin from the freezer to the fridge.**
 
 ### Chef - Cooking
-***Taste*** the lentils for salt, lime and heat. Warm the tostadas *3 min*.
+***Taste*** the lentils for salt, lemon and heat. Warm the tostadas *3 min*.
 
-**Table**: lentils, beans, slaw, tostadas, cheese, limes, hot sauce.
+**Table**: lentils, beans, slaw, tostadas, cheese, lemon wedges, hot sauce.
