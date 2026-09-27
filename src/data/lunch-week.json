@@ -1,148 +1,150 @@
 {
-  "weekStart": "2026-09-20",
-  "weekTitle": "Week of September 20-26, 2026",
+  "weekStart": "2026-09-27",
+  "weekTitle": "Week of September 27 - October 3, 2026",
   "poolSize": 52,
   "activePoolSize": 52,
   "autoGrocery": false,
   "carbServingNote": "carbServings is an approximate count of 15 g carb servings, estimated from the nutritionist handout. Always check the food label.",
   "days": [
     {
-      "date": "2026-09-20",
+      "date": "2026-09-27",
       "dow": "Sunday",
-      "id": "crackers-cheese",
-      "name": "Whole-grain crackers + low-fat cheese",
+      "id": "celery-pb-raisins",
+      "name": "Celery + peanut butter + raisins (ants on a log)",
       "fridge": [
-        "4–5 whole-grain crackers",
-        "Low-fat cheese slices"
+        "2–3 celery sticks",
+        "1 Tbsp peanut butter",
+        "1 Tbsp raisins"
       ],
       "carbServings": "≈1",
       "effort": "easy",
       "soft": false,
-      "protein": "cheese"
+      "protein": "peanut_butter"
     },
     {
-      "date": "2026-09-21",
+      "date": "2026-09-28",
       "dow": "Monday",
-      "id": "pepper-hummus",
-      "name": "Sweet pepper + hummus",
+      "id": "ricecake-pb",
+      "name": "Rice cake + peanut butter (or low-sugar jam)",
       "fridge": [
-        "1 sweet pepper, sliced",
-        "2 Tbsp hummus"
+        "1 rice cake",
+        "1 Tbsp peanut butter or low-sugar jam"
       ],
       "carbServings": "≈1",
       "effort": "easy",
       "soft": false,
-      "protein": "hummus"
+      "protein": "peanut_butter"
     },
     {
-      "date": "2026-09-22",
+      "date": "2026-09-29",
       "dow": "Tuesday",
-      "id": "snap-peas-hummus",
-      "name": "Sugar snap peas + hummus",
+      "id": "popcorn-nuts",
+      "name": "Popcorn + mixed nuts",
       "fridge": [
-        "½ cup sugar snap peas",
-        "2 Tbsp hummus"
+        "3 cups popcorn",
+        "3 Tbsp mixed nuts"
       ],
       "carbServings": "≈1",
       "effort": "easy",
       "soft": false,
-      "protein": "hummus"
+      "protein": "nuts"
     },
     {
-      "date": "2026-09-23",
+      "date": "2026-09-30",
       "dow": "Wednesday",
-      "id": "cottage-tomato-toast",
-      "name": "Cottage cheese + tomato on whole-grain toast",
+      "id": "tuna-salad-pita",
+      "name": "Tuna or egg salad + ½ whole-wheat pita",
       "fridge": [
-        "1 slice whole-grain toast",
-        "½ cup cottage cheese",
-        "Tomato slices"
+        "½ cup tuna or egg salad",
+        "½ whole-wheat pita (or 4–5 crackers)"
       ],
       "carbServings": "≈1",
-      "effort": "some",
+      "effort": "easy",
       "soft": true,
-      "protein": "cottage_cheese"
+      "protein": "tuna"
     },
     {
-      "date": "2026-09-24",
+      "date": "2026-10-01",
       "dow": "Thursday",
-      "id": "avocado-egg-toast",
-      "name": "Avocado + hard-boiled egg on whole-grain toast",
+      "id": "turkey-pita-romaine",
+      "name": "Deli turkey + pita + romaine + yogurt dressing",
       "fridge": [
-        "1 slice whole-grain toast",
-        "¼ avocado, mashed",
-        "1 hard-boiled egg, sliced"
-      ],
-      "carbServings": "≈1",
-      "effort": "some",
-      "soft": true,
-      "protein": "egg"
-    },
-    {
-      "date": "2026-09-25",
-      "dow": "Friday",
-      "id": "deli-rolls-yogurt",
-      "name": "Deli meat + cheese roll-ups + light yogurt",
-      "fridge": [
-        "Rolled-up deli meat + cheese",
-        "4 oz light yogurt",
-        "2 Tbsp salsa"
+        "Deli turkey",
+        "½ whole-wheat pita",
+        "Romaine",
+        "Yogurt dressing"
       ],
       "carbServings": "≈1",
       "effort": "easy",
       "soft": false,
-      "protein": "deli"
+      "protein": "turkey"
     },
     {
-      "date": "2026-09-26",
-      "dow": "Saturday",
-      "id": "carrots-ranch",
-      "name": "Carrots + light ranch dip",
+      "date": "2026-10-02",
+      "dow": "Friday",
+      "id": "eggs-celery-carrots",
+      "name": "Hard-boiled eggs + celery + baby carrots",
       "fridge": [
-        "½ cup carrots",
-        "2 Tbsp light ranch dip"
+        "2 hard-boiled eggs",
+        "Celery sticks",
+        "Baby carrots"
       ],
       "carbServings": "≈0–1",
       "effort": "easy",
       "soft": false,
-      "protein": "dairy_dip"
+      "protein": "egg"
+    },
+    {
+      "date": "2026-10-03",
+      "dow": "Saturday",
+      "id": "egg-muffin-cups",
+      "name": "Egg muffin cups (meat, spinach, cheese)",
+      "fridge": [
+        "2 baked egg muffin cups"
+      ],
+      "carbServings": "≈0",
+      "effort": "some",
+      "soft": true,
+      "protein": "egg"
     }
   ],
   "grocery": [
     {
       "name": "Produce",
       "items": [
-        "Avocado",
         "Baby carrots",
-        "Salsa",
-        "Sugar snap peas",
-        "Sweet bell peppers",
-        "Tomatoes"
+        "Celery",
+        "Romaine",
+        "Spinach"
       ]
     },
     {
       "name": "Protein",
       "items": [
-        "Deli meat",
-        "Hard-boiled eggs"
+        "Cooked meat",
+        "Deli turkey",
+        "Eggs",
+        "Hard-boiled eggs (or eggs to boil)",
+        "Tuna pouches (or eggs)"
       ]
     },
     {
       "name": "Dairy",
       "items": [
-        "Cheese slices",
-        "Cottage cheese",
-        "Hummus",
-        "Light ranch dip",
-        "Light yogurt",
-        "Low-fat cheese slices"
+        "Greek yogurt dressing",
+        "Light mayo",
+        "Shredded cheese"
       ]
     },
     {
       "name": "Pantry",
       "items": [
-        "Whole-grain bread",
-        "Whole-grain crackers"
+        "Mixed nuts",
+        "Peanut butter",
+        "Popcorn (plain / light)",
+        "Raisins",
+        "Rice cakes",
+        "Whole-wheat pita"
       ]
     }
   ]

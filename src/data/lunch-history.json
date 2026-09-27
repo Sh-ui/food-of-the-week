@@ -157,6 +157,18 @@
         "deli-rolls-yogurt",
         "carrots-ranch"
       ]
+    },
+    {
+      "weekStart": "2026-09-27",
+      "items": [
+        "celery-pb-raisins",
+        "ricecake-pb",
+        "popcorn-nuts",
+        "tuna-salad-pita",
+        "turkey-pita-romaine",
+        "eggs-celery-carrots",
+        "egg-muffin-cups"
+      ]
     }
   ]
 }
