@@ -169,6 +169,18 @@
         "eggs-celery-carrots",
         "egg-muffin-cups"
       ]
+    },
+    {
+      "weekStart": "2026-10-04",
+      "items": [
+        "chicken-kale-cold",
+        "flatout-veggie-wrap",
+        "wheatthins-stringcheese",
+        "applesauce-nuts",
+        "hummus-pita-cucumber",
+        "apple-pb",
+        "jerky-trailmix"
+      ]
     }
   ]
 }
