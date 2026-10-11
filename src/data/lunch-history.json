@@ -181,6 +181,18 @@
         "apple-pb",
         "jerky-trailmix"
       ]
+    },
+    {
+      "weekStart": "2026-10-11",
+      "items": [
+        "turkey-cheese-sandwich",
+        "toast-cheese-egg",
+        "waffle-nutbutter",
+        "greekyogurt-nuts",
+        "tuna-avocado-crackers",
+        "cottage-cheese-fruitcup",
+        "cottage-celery"
+      ]
     }
   ]
 }

@@ -1,155 +1,155 @@
 {
-  "weekStart": "2026-10-04",
-  "weekTitle": "Week of October 4-10, 2026",
+  "weekStart": "2026-10-11",
+  "weekTitle": "Week of October 11-17, 2026",
   "poolSize": 52,
   "activePoolSize": 52,
   "autoGrocery": false,
   "carbServingNote": "carbServings is an approximate count of 15 g carb servings, estimated from the nutritionist handout. Always check the food label.",
   "days": [
     {
-      "date": "2026-10-04",
+      "date": "2026-10-11",
       "dow": "Sunday",
-      "id": "chicken-kale-cold",
-      "name": "Chilled chicken + baby kale + a few crackers",
+      "id": "turkey-cheese-sandwich",
+      "name": "Open turkey + cheese on whole-grain bread",
       "fridge": [
-        "Pre-cooked chicken",
-        "Baby kale",
-        "4–5 whole-wheat crackers"
+        "1 slice whole-grain bread",
+        "Slice of turkey",
+        "Slice of cheese",
+        "Mustard"
       ],
       "carbServings": "≈1",
       "effort": "easy",
       "soft": false,
-      "protein": "chicken"
+      "protein": "turkey"
     },
     {
-      "date": "2026-10-05",
+      "date": "2026-10-12",
       "dow": "Monday",
-      "id": "flatout-veggie-wrap",
-      "name": "Flatout wrap with veggies + meat",
+      "id": "toast-cheese-egg",
+      "name": "Whole-wheat toast + cheese + hard-cooked egg",
       "fridge": [
-        "1 Flatout wrap",
-        "Veggies",
-        "Deli meat or cheese"
+        "1 slice whole-wheat toast",
+        "1 slice cheese",
+        "1 hard-cooked egg"
       ],
       "carbServings": "≈1",
-      "effort": "easy",
+      "effort": "some",
       "soft": false,
-      "protein": "deli"
+      "protein": "egg"
     },
     {
-      "date": "2026-10-06",
+      "date": "2026-10-13",
       "dow": "Tuesday",
-      "id": "wheatthins-stringcheese",
-      "name": "Wheat Thins + string cheese",
+      "id": "waffle-nutbutter",
+      "name": "Eggo waffle + nut butter",
       "fridge": [
-        "10 multigrain Wheat Thins",
-        "1 string cheese"
-      ],
-      "carbServings": "≈1",
-      "effort": "easy",
-      "soft": false,
-      "protein": "cheese"
-    },
-    {
-      "date": "2026-10-07",
-      "dow": "Wednesday",
-      "id": "applesauce-nuts",
-      "name": "Applesauce + mixed nuts",
-      "fridge": [
-        "½ cup applesauce",
-        "2 Tbsp mixed nuts"
-      ],
-      "carbServings": "≈1",
-      "effort": "easy",
-      "soft": true,
-      "protein": "nuts"
-    },
-    {
-      "date": "2026-10-08",
-      "dow": "Thursday",
-      "id": "hummus-pita-cucumber",
-      "name": "Hummus + whole-wheat pita + cucumber",
-      "fridge": [
-        "2 Tbsp hummus",
-        "½ whole-wheat pita",
-        "Cucumber slices"
-      ],
-      "carbServings": "≈1",
-      "effort": "easy",
-      "soft": true,
-      "protein": "hummus"
-    },
-    {
-      "date": "2026-10-09",
-      "dow": "Friday",
-      "id": "apple-pb",
-      "name": "Apple slices + peanut butter",
-      "fridge": [
-        "1 small apple, sliced",
-        "1 Tbsp peanut butter"
+        "1 Eggo waffle (toasted)",
+        "1 Tbsp nut butter"
       ],
       "carbServings": "≈1–2",
-      "effort": "easy",
+      "effort": "some",
       "soft": false,
       "protein": "peanut_butter"
     },
     {
-      "date": "2026-10-10",
-      "dow": "Saturday",
-      "id": "jerky-trailmix",
-      "name": "Beef jerky trail mix",
+      "date": "2026-10-14",
+      "dow": "Wednesday",
+      "id": "greekyogurt-nuts",
+      "name": "Greek yogurt + nuts",
       "fridge": [
-        "Beef jerky",
-        "Almonds, cashews, walnuts, pecans",
-        "Edamame"
+        "¾ cup plain Greek yogurt",
+        "2 Tbsp nuts"
+      ],
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": true,
+      "protein": "yogurt"
+    },
+    {
+      "date": "2026-10-15",
+      "dow": "Thursday",
+      "id": "tuna-avocado-crackers",
+      "name": "Tuna + avocado + whole-wheat crackers",
+      "fridge": [
+        "1 tuna pouch",
+        "¼ avocado",
+        "4–5 whole-wheat crackers"
+      ],
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": true,
+      "protein": "tuna"
+    },
+    {
+      "date": "2026-10-16",
+      "dow": "Friday",
+      "id": "cottage-cheese-fruitcup",
+      "name": "Cottage cheese + small fruit cup",
+      "fridge": [
+        "½ cup low-fat cottage cheese",
+        "1 small fruit cup (in juice/water)"
+      ],
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": true,
+      "protein": "cottage_cheese"
+    },
+    {
+      "date": "2026-10-17",
+      "dow": "Saturday",
+      "id": "cottage-celery",
+      "name": "Cottage cheese + celery",
+      "fridge": [
+        "½ cup cottage cheese",
+        "Celery sticks"
       ],
       "carbServings": "≈0–1",
       "effort": "easy",
-      "soft": false,
-      "protein": "beef_jerky"
+      "soft": true,
+      "protein": "cottage_cheese"
     }
   ],
   "grocery": [
     {
       "name": "Produce",
       "items": [
-        "Apples",
-        "Baby kale",
-        "Cucumber",
-        "Mixed veggies"
+        "Avocado",
+        "Celery"
       ]
     },
     {
       "name": "Protein",
       "items": [
-        "Beef jerky",
-        "Deli meat",
-        "Pre-cooked chicken"
+        "Deli turkey",
+        "Eggs",
+        "Tuna pouches"
       ]
     },
     {
       "name": "Dairy",
       "items": [
-        "Hummus",
-        "String cheese"
+        "Cheese slices",
+        "Cottage cheese",
+        "Low-fat cottage cheese",
+        "Plain Greek yogurt"
       ]
     },
     {
       "name": "Frozen",
       "items": [
-        "Shelled edamame"
+        "Eggo waffles"
       ]
     },
     {
       "name": "Pantry",
       "items": [
-        "Flatout / low-carb wraps",
-        "Mixed nuts",
-        "Multigrain Wheat Thins",
-        "Peanut butter",
-        "Unsweetened applesauce",
-        "Whole-wheat crackers",
-        "Whole-wheat pita"
+        "Fruit cups (in juice/water)",
+        "Mustard",
+        "Nut butter",
+        "Nuts",
+        "Whole-grain bread",
+        "Whole-wheat bread",
+        "Whole-wheat crackers"
       ]
     }
   ]
