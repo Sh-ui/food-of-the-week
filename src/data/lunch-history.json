@@ -205,6 +205,18 @@
         "greekyogurt-celery",
         "jello-fruit-cottage"
       ]
+    },
+    {
+      "weekStart": "2026-10-25",
+      "items": [
+        "banana-pb",
+        "saltines-pb",
+        "salmon-crackers-cucumber",
+        "egg-fruit",
+        "greekyogurt-berries",
+        "med-hummus-rollup",
+        "broccoli-cheese-kale"
+      ]
     }
   ]
 }
