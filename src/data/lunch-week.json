@@ -1,111 +1,107 @@
 {
-  "weekStart": "2026-10-25",
-  "weekTitle": "Week of October 25-31, 2026",
+  "weekStart": "2026-11-01",
+  "weekTitle": "Week of November 1-7, 2026",
   "poolSize": 52,
   "activePoolSize": 52,
   "autoGrocery": false,
   "carbServingNote": "carbServings is an approximate count of 15 g carb servings, estimated from the nutritionist handout. Always check the food label.",
   "days": [
     {
-      "date": "2026-10-25",
+      "date": "2026-11-01",
       "dow": "Sunday",
-      "id": "banana-pb",
-      "name": "½ banana + peanut butter",
+      "id": "cracker-pb-banana",
+      "name": "Whole-wheat crackers + peanut butter + ½ banana",
       "fridge": [
-        "½ banana",
-        "1 Tbsp peanut butter"
+        "3–5 whole-wheat crackers",
+        "1 Tbsp peanut butter",
+        "½ banana"
       ],
-      "carbServings": "≈1",
+      "carbServings": "≈2",
       "effort": "easy",
       "soft": true,
       "protein": "peanut_butter"
     },
     {
-      "date": "2026-10-26",
+      "date": "2026-11-02",
       "dow": "Monday",
-      "id": "saltines-pb",
-      "name": "Saltine crackers + peanut butter",
+      "id": "cheese-crackers-grapes",
+      "name": "Cheese cubes + whole-grain crackers + grapes",
       "fridge": [
-        "6 saltine crackers",
-        "1 Tbsp peanut butter"
+        "Cheese cubes",
+        "4–5 whole-grain crackers",
+        "17 grapes"
       ],
-      "carbServings": "≈1",
+      "carbServings": "≈2",
       "effort": "easy",
-      "soft": true,
-      "protein": "peanut_butter"
+      "soft": false,
+      "protein": "cheese"
     },
     {
-      "date": "2026-10-27",
+      "date": "2026-11-03",
       "dow": "Tuesday",
-      "id": "salmon-crackers-cucumber",
-      "name": "Smoked salmon + whole-wheat crackers + cucumber",
+      "id": "almondbutter-celery",
+      "name": "Celery + almond butter",
       "fridge": [
-        "Smoked salmon",
-        "4–5 whole-wheat crackers",
-        "Cucumber slices"
+        "Celery sticks",
+        "1 Tbsp almond butter"
       ],
-      "carbServings": "≈1",
+      "carbServings": "≈0–1",
       "effort": "easy",
-      "soft": true,
-      "protein": "salmon"
+      "soft": false,
+      "protein": "nuts"
     },
     {
-      "date": "2026-10-28",
+      "date": "2026-11-04",
       "dow": "Wednesday",
-      "id": "egg-fruit",
-      "name": "Hard-boiled egg + a small piece of fruit",
+      "id": "deviled-eggs",
+      "name": "Deviled eggs (add tuna for a change)",
       "fridge": [
-        "1 hard-boiled egg",
-        "1 small piece of fruit"
+        "2–3 deviled egg halves",
+        "Optional: tuna in the center"
       ],
-      "carbServings": "≈1",
-      "effort": "easy",
+      "carbServings": "≈0",
+      "effort": "some",
       "soft": true,
       "protein": "egg"
     },
     {
-      "date": "2026-10-29",
+      "date": "2026-11-05",
       "dow": "Thursday",
-      "id": "greekyogurt-berries",
-      "name": "Greek yogurt + berries",
+      "id": "cucumber-hummus",
+      "name": "Cucumber + hummus",
       "fridge": [
-        "¾ cup plain Greek yogurt",
-        "½ cup berries"
+        "1 cup cucumber slices",
+        "2 Tbsp hummus"
       ],
       "carbServings": "≈1",
       "effort": "easy",
-      "soft": true,
-      "protein": "yogurt"
-    },
-    {
-      "date": "2026-10-30",
-      "dow": "Friday",
-      "id": "med-hummus-rollup",
-      "name": "Mediterranean hummus roll-up",
-      "fridge": [
-        "Whole-wheat tortilla",
-        "Hummus",
-        "Spinach",
-        "Cucumber",
-        "Roasted red pepper"
-      ],
-      "carbServings": "≈1–2",
-      "effort": "easy",
-      "soft": true,
+      "soft": false,
       "protein": "hummus"
     },
     {
-      "date": "2026-10-31",
-      "dow": "Saturday",
-      "id": "broccoli-cheese-kale",
-      "name": "Broccoli + cheese cubes + baby kale + yogurt dressing",
+      "date": "2026-11-06",
+      "dow": "Friday",
+      "id": "animalcrackers-pb",
+      "name": "Animal crackers (or pretzel rods) + peanut butter",
       "fridge": [
-        "Broccoli florets",
-        "Cheese cubes",
-        "Baby kale",
-        "Yogurt dressing"
+        "8 animal crackers or 2 pretzel rods",
+        "1 Tbsp peanut butter"
       ],
-      "carbServings": "≈0–1",
+      "carbServings": "≈1",
+      "effort": "easy",
+      "soft": false,
+      "protein": "peanut_butter"
+    },
+    {
+      "date": "2026-11-07",
+      "dow": "Saturday",
+      "id": "stringcheese-apple",
+      "name": "String cheese + apple",
+      "fridge": [
+        "1 string cheese",
+        "1 small apple"
+      ],
+      "carbServings": "≈1",
       "effort": "easy",
       "soft": false,
       "protein": "cheese"
@@ -115,39 +111,37 @@
     {
       "name": "Produce",
       "items": [
-        "Apples / small fruit",
-        "Baby kale",
+        "Apples",
         "Bananas",
-        "Berries",
-        "Broccoli",
+        "Celery",
         "Cucumber",
-        "Spinach"
+        "Grapes"
       ]
     },
     {
       "name": "Protein",
       "items": [
-        "Hard-boiled eggs (or eggs to boil)",
-        "Smoked salmon"
+        "Eggs",
+        "Tuna pouch (optional)"
       ]
     },
     {
       "name": "Dairy",
       "items": [
         "Cheese cubes",
-        "Greek yogurt dressing",
         "Hummus",
-        "Plain Greek yogurt"
+        "Light mayo",
+        "String cheese"
       ]
     },
     {
       "name": "Pantry",
       "items": [
+        "Almond butter",
+        "Animal crackers / pretzel rods",
         "Peanut butter",
-        "Roasted red peppers (jar)",
-        "Saltine crackers",
-        "Whole-wheat crackers",
-        "Whole-wheat tortillas"
+        "Whole-grain crackers",
+        "Whole-wheat crackers"
       ]
     }
   ]
