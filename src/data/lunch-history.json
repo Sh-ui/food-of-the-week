@@ -229,6 +229,18 @@
         "animalcrackers-pb",
         "stringcheese-apple"
       ]
+    },
+    {
+      "weekStart": "2026-11-08",
+      "items": [
+        "tuna-packet-peppers",
+        "yogurt-dressing-eggs-crackers",
+        "edamame-clementine",
+        "avocado-egg-toast",
+        "deli-rolls-yogurt",
+        "pepper-hummus",
+        "crackers-cheese"
+      ]
     }
   ]
 }
